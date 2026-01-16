@@ -1,0 +1,98 @@
+:root{
+  --font-body: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --tracking-display: 0.04em;
+  --lh-body: 1.45;
+  --lh-heading: 0.8;
+
+  --size-body: 23px;
+  --size-lg: clamp(24px, 2.8vw, 34px);
+  --size-xl: clamp(38px, 6.2vw, 77px);
+  --size-hero: clamp(52px, 9vw, 110px);
+  --size-headline: clamp(34px, 5.2vw, 64px);
+  --size-section-heading: clamp(34px, 5vw, 56px);
+}
+
+body{
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+}
+
+h1, h2, h3{
+  margin: 0;
+  font-weight: 700;
+}
+
+h1{
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  font-size: calc(var(--size-hero) * 1.2);
+  line-height: 1.2;
+}
+
+h2{
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  font-size: var(--size-xl);
+  line-height: var(--lh-heading);
+}
+
+h3{
+  font-family: var(--font-body);
+  font-size: var(--size-lg);
+  line-height: var(--lh-body);
+}
+
+.section-banner h2,
+.content-banner h2,
+.curriculum-banner h2,
+.deploy-banner h2,
+.math-banner h2,
+.openbook-banner h2,
+.quickfacts-banner h2,
+.reserve-banner h2,
+.teachers-banner h2,
+.why-banner h2,
+.section-title h2{
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  font-size: var(--size-section-heading);
+  line-height: var(--lh-heading);
+}
+
+.lede{
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+}
+
+@media (max-width: 980px){
+  html, body{ overflow-x: hidden; }
+
+  :root{
+    --size-section-heading: clamp(48.96px, 7.2vw, 80.64px);
+  }
+
+  h1, h2, h3{
+    font-size: 26.5px;
+    line-height: 1.2;
+  }
+
+  h2{
+    line-height: var(--lh-heading);
+  }
+
+  .reservation-card,
+  .confirmation-card,
+  .form-success{
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
+}

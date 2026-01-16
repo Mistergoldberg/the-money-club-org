@@ -666,6 +666,17 @@
       .topbar .btn{ display: none; }
     }
   </style>
+  <link rel="stylesheet" href="assets/typography.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GXP7Z3K0YK');
+  </script>
+
 </head>
 
 <body>
@@ -687,7 +698,7 @@
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
-                <a class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -701,7 +712,7 @@
         <a href="faq.html">FAQ</a>
       </nav>
 
-      <a class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
+      <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
     </div>
   </header>
 
@@ -715,13 +726,13 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <p><strong>The Money Club is a paid summer opportunity for university students to run a real, community-based entrepreneurship program.</strong></p>
+            <p>The Money Club is a paid summer opportunity for university students to run a real, community-based entrepreneurship program.</p>
             <p>You'll help young people build and sell real products, manage real budgets, and make real decisions while gaining hands-on experience in economics, public policy, education, and social impact.</p>
             <p>This isn't tutoring and it's not volunteering. It's operational leadership in a supervised, closed-loop system with pay, responsibility, and measurable outcomes.</p>
           </div>
           <div class="cta-stack">
-            <a class="btn purple cta-standard" href="instructors-learn-more.html">Learn More</a>
-            <a class="btn teal cta-standard" href="instructor-apply.html">Apply Today</a>
+            <a data-cta-label="Learn more" class="btn purple cta-standard" href="instructors-learn-more.html">Learn More</a>
+            <a data-cta-label="Apply today" class="btn teal cta-standard" href="instructor-apply.html">Apply Today</a>
           </div>
         </div>
       </div>
@@ -736,7 +747,7 @@
       <div class="section-content">
         <div class="split reverse">
           <div class="section-copy">
-            <div><strong>This opportunity is well-suited for students studying or interested in:</strong></div>
+            <div>This opportunity is well-suited for students studying or interested in:</div>
             <ul class="bullet-list">
               <li>Economics</li>
               <li>Public policy</li>
@@ -754,7 +765,7 @@
             <div class="section-image">
               <img src="assets/instruct-mobile-packing-crop-2.jpg" alt="Students packaging products together" />
             </div>
-            <a class="btn purple cta-standard" href="instructors-learn-more.html">Learn More</a>
+            <a data-cta-label="Learn more" class="btn purple cta-standard" href="instructors-learn-more.html">Learn More</a>
           </div>
         </div>
       </div>
@@ -801,8 +812,8 @@
                 <h3>Run something real</h3>
                 <p class="cta-note">You're not analyzing case studies -- you're operating a live program with real budgets, timelines, and outcomes.</p>
                 <div class="cta-row">
-                  <a class="btn purple share-opportunity cta-standard" href="mailto:?subject=Share%20The%20Opportunity&body=Check%20out%20this%20opportunity%20at%20The%20Money%20Club:%20">Share the Opportunity</a>
-                  <a class="btn teal cta-standard" href="instructor-apply.html">Apply Today</a>
+                  <a data-cta-label="Share the opportunity" class="btn purple share-opportunity cta-standard" href="mailto:?subject=Share%20The%20Opportunity&body=Check%20out%20this%20opportunity%20at%20The%20Money%20Club:%20">Share the Opportunity</a>
+                  <a data-cta-label="Apply today" class="btn teal cta-standard" href="instructor-apply.html">Apply Today</a>
                 </div>
               </div>
             </div>
@@ -899,5 +910,50 @@
       }
     })();
   </script>
+  <script>
+    (function(){
+      function getLabel(el){
+        if (!el){
+          return '';
+        }
+        var label = el.getAttribute('data-cta-label');
+        if (label){
+          return label;
+        }
+        label = el.textContent || '';
+        return label.trim().replace(/\s+/g, ' ');
+      }
+
+      function trackCta(target){
+        if (!window.gtag){
+          return;
+        }
+        var label = getLabel(target);
+        var href = target.getAttribute('href') || '';
+        var locationPath = window.location.pathname || '';
+        window.gtag('event', 'cta_click', {
+          cta_label: label,
+          cta_href: href,
+          cta_page: locationPath
+        });
+      }
+
+      document.addEventListener('click', function(event){
+        var target = event.target.closest('a, button');
+        if (!target){
+          return;
+        }
+        if (!(
+          target.classList.contains('btn') ||
+          target.classList.contains('cta-large') ||
+          target.classList.contains('cta-standard')
+        )){
+          return;
+        }
+        trackCta(target);
+      });
+    })();
+  </script>
+
 </body>
 </html>

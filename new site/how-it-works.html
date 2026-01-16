@@ -1083,6 +1083,17 @@ nav{
       .topbar .btn{ display: none; }
     }
   </style>
+  <link rel="stylesheet" href="assets/typography.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GXP7Z3K0YK');
+  </script>
+
 </head>
 
 <body>
@@ -1105,7 +1116,7 @@ nav{
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
-                <a class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -1119,7 +1130,7 @@ nav{
         <a href="faq.html">FAQ</a>
       </nav>
 
-      <a class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
+      <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
     </div>
   </header>
 
@@ -1145,7 +1156,7 @@ nav{
     <section class="curriculum-section">
       <div class="curriculum-banner">
         <div class="wrap">
-          <h2>Built like a business — because that’s how learning sticks.</h2>
+          <h2>A real-world learning system.</h2>
         </div>
       </div>
       <div class="curriculum-content">
@@ -1157,7 +1168,6 @@ nav{
           </div>
 
           <div class="curriculum-copy">
-            <div><strong>This is a real-world learning system.</strong></div>
             <div style="margin-top:10px;">During the summer session, students:</div>
             <ul class="why-list">
               <li>Create a product or service</li>
@@ -1166,10 +1176,10 @@ nav{
               <li>Practice communication and leadership</li>
               <li>Prepare and present at a community pitch night</li>
             </ul>
-            <div><strong>Students also learn how to make decisions under constraints — because real businesses have limited resources.</strong></div>
+            <div>Students also learn how to make decisions under constraints — because real businesses have limited resources.</div>
             <div style="margin-top:10px;">By the end of the program, every student can explain how value and thus money is created — and speak confidently about their decisions.</div>
             <div style="margin-top:14px;">
-              <a class="btn teal cta-standard" href="curriculum.html">Explore the curriculum</a>
+              <a data-cta-label="Explore the curriculum" class="btn teal cta-standard" href="curriculum.html">Explore the curriculum</a>
             </div>
           </div>
         </div>
@@ -1244,7 +1254,7 @@ nav{
         <div class="quickfacts-card">
           <h3>Ready for details?</h3>
           <p class="quickfacts-note">See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
-          <a class="btn purple block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
+          <a data-cta-label="View schedule &amp; pricing" class="btn purple block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
         </div>
       </div>
     </section>
@@ -1321,5 +1331,50 @@ nav{
       });
     })();
   </script>
+  <script>
+    (function(){
+      function getLabel(el){
+        if (!el){
+          return '';
+        }
+        var label = el.getAttribute('data-cta-label');
+        if (label){
+          return label;
+        }
+        label = el.textContent || '';
+        return label.trim().replace(/\s+/g, ' ');
+      }
+
+      function trackCta(target){
+        if (!window.gtag){
+          return;
+        }
+        var label = getLabel(target);
+        var href = target.getAttribute('href') || '';
+        var locationPath = window.location.pathname || '';
+        window.gtag('event', 'cta_click', {
+          cta_label: label,
+          cta_href: href,
+          cta_page: locationPath
+        });
+      }
+
+      document.addEventListener('click', function(event){
+        var target = event.target.closest('a, button');
+        if (!target){
+          return;
+        }
+        if (!(
+          target.classList.contains('btn') ||
+          target.classList.contains('cta-large') ||
+          target.classList.contains('cta-standard')
+        )){
+          return;
+        }
+        trackCta(target);
+      });
+    })();
+  </script>
+
 </body>
 </html>

@@ -695,14 +695,15 @@ nav{
       border: 1px solid var(--line);
       background: #ffffff;
       padding: 16px;
+      display: grid;
+      gap: 12px;
     }
     .openbook-subheading{
       margin: 0 0 10px;
       text-align: center;
     }
     .openbook-pie{
-      width: 100%;
-      max-width: 360px;
+      width: min(360px, 100%);
       aspect-ratio: 1 / 1;
       border-radius: 50%;
       margin: 0 auto 14px;
@@ -713,24 +714,62 @@ nav{
           var(--gold) 50% 90%,
           var(--ink) 90% 100%
         );
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+    .openbook-pie::after{
+      content: "";
+      position: absolute;
+      inset: 18%;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+    .openbook-pie-center{
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      display: grid;
+      gap: 4px;
+    }
+    .openbook-pie-center .label{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+    }
+    .openbook-pie-center .value{
+      font-family: var(--font-display);
+      font-size: clamp(32px, 7vw, 52px);
+      letter-spacing: var(--tracking-display);
+      color: var(--ink);
     }
     .openbook-legend{
-      display:grid;
-      gap: 6px;
-      font-size: 18px;
+      list-style: none;
       margin: 0;
       padding: 0;
-      list-style: none;
-      text-align: right;
-      justify-items: end;
-      margin-left: auto;
-      width: fit-content;
+      display: grid;
+      gap: 10px;
     }
     .openbook-legend li{
-      display:flex;
-      align-items:center;
-      gap: 8px;
-      justify-content: flex-end;
+      display: grid;
+      grid-template-columns: 12px minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+    }
+    .openbook-legend .legend-label{
+      color: var(--ink);
+    }
+    .openbook-legend .legend-value{
+      font-weight: 600;
+      text-align: right;
+      color: var(--ink);
+    }
+    .openbook-legend .legend-value small{
+      font-weight: 500;
+      color: var(--muted);
+      margin-left: 6px;
     }
     .legend-dot{
       width: 12px;
@@ -868,14 +907,58 @@ nav{
       box-shadow: 0 18px 30px rgba(240,180,58,0.25);
     }
     .math-card.revenue{
-      text-align: center;
+      text-align: left;
     }
     .math-card.revenue ul{
       list-style: none;
       padding: 0;
       margin: 0;
+    }
+    .revenue-title{
+      margin: 0;
+      text-align: center;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.1;
+    }
+    .revenue-list{
+      margin: 12px 0 0;
+      display:grid;
+      gap: 10px;
+    }
+    .revenue-list li{
+      display:grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 6px 12px;
+      align-items: baseline;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #ffffff;
+    }
+    .revenue-list .value{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .revenue-list small{
+      grid-column: 1 / -1;
+      color: var(--muted);
+      font-size: 0.9em;
+    }
+    .revenue-total{
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #ffffff;
       display:grid;
       gap: 6px;
+      text-align: center;
+    }
+    .revenue-total .label{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--muted);
     }
     .math-card h3,
     .math-subhead,
@@ -1167,6 +1250,7 @@ nav{
         --btn-size: 35.04px;
         --btn-size-lg: 35.04px;
       }
+      html, body{ overflow-x: hidden; }
       .section-banner h2,
       .content-banner h2,
       .curriculum-banner h2,
@@ -1195,6 +1279,48 @@ nav{
       .openbook-side{ display: none; }
       .openbook-visual.mobile-visual{ display: block; }
       .math-layout{ grid-template-columns: 1fr; }
+      .math-layout > *{ min-width: 0; }
+      .math-card{
+        max-width: 100%;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+        overflow-wrap: normal;
+        word-break: normal;
+      }
+      .openbook-summary,
+      .openbook-summary.standout,
+      .openbook-pie-card{
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+      }
+      .openbook-content,
+      .math-content,
+      .openbook-grid,
+      .math-layout,
+      .openbook-summary,
+      .openbook-pie-card{
+        max-width: 100%;
+      }
+      .openbook-table{
+        table-layout: auto;
+        width: 100%;
+      }
+      .openbook-table th,
+      .openbook-table td{
+        border: 0;
+        padding: 8px 0;
+        overflow-wrap: normal;
+        word-break: normal;
+      }
+      .openbook-table tr + tr{
+        border-top: 1px solid var(--line);
+      }
       .teachers-grid{ grid-template-columns: 1fr; }
       .quickfacts-content{ grid-template-columns: 1fr; }
       .reserve-content{ grid-template-columns: 1fr; }
@@ -1265,6 +1391,17 @@ nav{
       .topbar .btn{ display: none; }
     }
   </style>
+  <link rel="stylesheet" href="assets/typography.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GXP7Z3K0YK');
+  </script>
+
 </head>
 
 <body>
@@ -1287,7 +1424,7 @@ nav{
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
-                <a class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -1301,7 +1438,7 @@ nav{
         <a href="faq.html">FAQ</a>
       </nav>
 
-      <a class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
+      <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
     </div>
   </header>
 
@@ -1334,7 +1471,7 @@ nav{
           <div class="openbook-copy">
             <div class="openbook-intro">
               <p>This program is designed as a closed-loop self sustaining learning system.</p>
-              <p><strong>Family tuition funds instruction, materials, and student projects — any remaining proceeds are reinvested back into the program itself. Nothing is extracted. Nothing is hidden.</strong></p>
+              <p>Family tuition funds instruction, materials, and student projects — any remaining proceeds are reinvested back into the program itself. Nothing is extracted. Nothing is hidden.</p>
               <div class="openbook-visual mobile-visual">
                 <img src="assets/flywheel.jpg" alt="The Money Club flywheel graphic" />
               </div>
@@ -1342,8 +1479,8 @@ nav{
             </div>
 
             <div class="openbook-cta-row">
-              <a class="btn purple block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
-              <a class="btn gold block cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
+              <a data-cta-label="View schedule &amp; pricing" class="btn purple block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
+              <a data-cta-label="Reserve a spot" class="btn gold block cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
             </div>
           </div>
 
@@ -1372,13 +1509,23 @@ nav{
           </div>
 
           <div class="math-card revenue">
-            <h3>Revenue In: Student Tuition (4-week program)</h3>
-            <ul>
-              <li>10 students per cohort</li>
-              <li>$1,000 per student ($250/week)</li>
+            <h3 class="revenue-title">Revenue In (Group of 10)</h3>
+            <ul class="revenue-list">
+              <li>
+                <span>Students per cohort</span>
+                <span class="value">10</span>
+              </li>
+              <li>
+                <span>Tuition per student</span>
+                <span class="value">$1,000</span>
+                <small>($250/week)</small>
+              </li>
             </ul>
-            <div class="math-figure">$10,000</div>
-            <p class="math-note">This tuition funds everything required to run the program safely, professionally, and sustainably.</p>
+            <div class="revenue-total">
+              <span class="label">Total revenue</span>
+              <div class="math-figure">$10,000</div>
+            </div>
+            <p class="math-note">This tuition funds everything required to run the group with one instructor, venue, and materials.</p>
           </div>
         </div>
         <div class="openbook-grid openbook-expenses">
@@ -1393,7 +1540,7 @@ nav{
               </thead>
               <tbody>
                 <tr>
-                  <td>Instructors (base pay $4,000/month)</td>
+                  <td>Instructor (base pay $4,000/month)</td>
                   <td>$4,000</td>
                 </tr>
                 <tr>
@@ -1416,13 +1563,34 @@ nav{
             </table>
           </div>
           <div class="openbook-pie-card" aria-label="Program budget distribution chart">
-            <h3 class="openbook-subheading">Expenses explained</h3>
-            <div class="openbook-pie" role="img" aria-label="Pie chart showing budget distribution"></div>
+            <h3 class="openbook-subheading">Expense Visualization</h3>
+            <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 40%, Materials 10%, Space rental 40%, Insurance 10%">
+              <div class="openbook-pie-center">
+                <span class="label">Total</span>
+                <span class="value">$10,000</span>
+              </div>
+            </div>
             <ul class="openbook-legend">
-              <li><span class="legend-dot" style="background: var(--purple);"></span>Instructors $4,000</li>
-              <li><span class="legend-dot" style="background: var(--teal);"></span>Materials $1,000</li>
-              <li><span class="legend-dot" style="background: var(--gold);"></span>Space rental $4,000</li>
-              <li><span class="legend-dot" style="background: var(--ink);"></span>Insurance $1,000</li>
+              <li>
+                <span class="legend-dot" style="background: var(--purple);"></span>
+                <span class="legend-label">Instructors</span>
+                <span class="legend-value">$4,000 <small>40%</small></span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--teal);"></span>
+                <span class="legend-label">Materials</span>
+                <span class="legend-value">$1,000 <small>10%</small></span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--gold);"></span>
+                <span class="legend-label">Space rental</span>
+                <span class="legend-value">$4,000 <small>40%</small></span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--ink);"></span>
+                <span class="legend-label">Insurance</span>
+                <span class="legend-value">$1,000 <small>10%</small></span>
+              </li>
             </ul>
           </div>
         </div>
@@ -1452,7 +1620,7 @@ nav{
         <div class="quickfacts-card">
           <h3>Ready for details?</h3>
           <p class="quickfacts-note">See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
-          <a class="btn purple block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
+          <a data-cta-label="View schedule &amp; pricing" class="btn purple block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
         </div>
       </div>
     </section>
@@ -1529,5 +1697,50 @@ nav{
       });
     })();
   </script>
+  <script>
+    (function(){
+      function getLabel(el){
+        if (!el){
+          return '';
+        }
+        var label = el.getAttribute('data-cta-label');
+        if (label){
+          return label;
+        }
+        label = el.textContent || '';
+        return label.trim().replace(/\s+/g, ' ');
+      }
+
+      function trackCta(target){
+        if (!window.gtag){
+          return;
+        }
+        var label = getLabel(target);
+        var href = target.getAttribute('href') || '';
+        var locationPath = window.location.pathname || '';
+        window.gtag('event', 'cta_click', {
+          cta_label: label,
+          cta_href: href,
+          cta_page: locationPath
+        });
+      }
+
+      document.addEventListener('click', function(event){
+        var target = event.target.closest('a, button');
+        if (!target){
+          return;
+        }
+        if (!(
+          target.classList.contains('btn') ||
+          target.classList.contains('cta-large') ||
+          target.classList.contains('cta-standard')
+        )){
+          return;
+        }
+        trackCta(target);
+      });
+    })();
+  </script>
+
 </body>
 </html>

@@ -1236,6 +1236,17 @@ nav{
       .topbar .btn{ display: none; }
     }
   </style>
+  <link rel="stylesheet" href="assets/typography.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GXP7Z3K0YK');
+  </script>
+
 </head>
 
 <body>
@@ -1257,7 +1268,7 @@ nav{
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
-                <a class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -1271,7 +1282,7 @@ nav{
         <a href="faq.html">FAQ</a>
       </nav>
 
-      <a class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
+      <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
     </div>
   </header>
 
@@ -1316,7 +1327,7 @@ nav{
               </div>
 
               <div class="reservation-cta">
-                <button class="btn purple cta-standard" type="submit">Submit</button>
+                <button data-cta-label="Submit" class="btn purple cta-standard" type="submit">Submit</button>
               </div>
             </form>
           </div>
@@ -1444,5 +1455,50 @@ nav{
       }
     })();
   </script>
+  <script>
+    (function(){
+      function getLabel(el){
+        if (!el){
+          return '';
+        }
+        var label = el.getAttribute('data-cta-label');
+        if (label){
+          return label;
+        }
+        label = el.textContent || '';
+        return label.trim().replace(/\s+/g, ' ');
+      }
+
+      function trackCta(target){
+        if (!window.gtag){
+          return;
+        }
+        var label = getLabel(target);
+        var href = target.getAttribute('href') || '';
+        var locationPath = window.location.pathname || '';
+        window.gtag('event', 'cta_click', {
+          cta_label: label,
+          cta_href: href,
+          cta_page: locationPath
+        });
+      }
+
+      document.addEventListener('click', function(event){
+        var target = event.target.closest('a, button');
+        if (!target){
+          return;
+        }
+        if (!(
+          target.classList.contains('btn') ||
+          target.classList.contains('cta-large') ||
+          target.classList.contains('cta-standard')
+        )){
+          return;
+        }
+        trackCta(target);
+      });
+    })();
+  </script>
+
 </body>
 </html>

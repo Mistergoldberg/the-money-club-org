@@ -902,6 +902,12 @@ nav{
     .deploy-intro-card p:last-child{
       margin-bottom: 0;
     }
+    .deploy-bullets{
+      margin: 4px 0 12px;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .deploy-bullets li{ margin: 6px 0; }
     .deploy-list{
       list-style: none;
       margin: 0;
@@ -1142,6 +1148,17 @@ nav{
       .topbar .btn{ display: none; }
     }
   </style>
+  <link rel="stylesheet" href="assets/typography.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GXP7Z3K0YK');
+  </script>
+
 </head>
 
 <body>
@@ -1164,7 +1181,7 @@ nav{
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
-                <a class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -1178,7 +1195,7 @@ nav{
         <a href="faq.html">FAQ</a>
       </nav>
 
-      <a class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
+      <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
     </div>
   </header>
 
@@ -1209,9 +1226,42 @@ nav{
       <div class="deploy-content">
         <div class="deploy-item deploy-intro-card">
           <div class="deploy-title">🚀 What We Deploy</div>
-          <p class="deploy-copy">Each Money Club module is a business-in-a-box learning system, engineered to produce real outcomes.</p>
-          <p class="deploy-copy">Students work through a structured set of modules while building an instructor-led product or service from start to finish. The front half of the program focuses on hands-on creation: students design, fabricate, market, and sell real products. The back half pairs those initiatives with targeted learning modules that support student-led decision-making.</p>
-          <p class="deploy-copy">The program culminates in a TED-style community pitch night, where every student presents what they built, how it works, what it costs, how it’s priced, and why someone would pay for it — clearly and confidently.</p>
+          <p class="deploy-copy">Each Money Club module is a business-in-a-box learning system — designed to produce real understanding, not pretend startups.</p>
+          <p class="deploy-copy">The program is deliberately structured in two phases, so students build competence before they’re asked to invent.</p>
+          <div class="deploy-title">⚙️ Phase 1 — Learn by Operating</div>
+          <p class="deploy-copy">In the first half of the program, students work on a programmed, instructor-guided product or service.</p>
+          <p class="deploy-copy">While contributing to a real, shared project, students move step-by-step through the core curriculum:</p>
+          <ul class="deploy-bullets">
+            <li>How money flows</li>
+            <li>How costs accumulate</li>
+            <li>How pricing decisions are made</li>
+            <li>How sourcing, design, and demand interact</li>
+          </ul>
+          <p class="deploy-copy">This phase removes guesswork.</p>
+          <p class="deploy-copy">Students learn the mechanics of business inside a working system, with instructors guiding decisions and explaining trade-offs as they happen.</p>
+          <p class="deploy-copy">They don’t just “brainstorm ideas” — they learn how real decisions get made.</p>
+          <div class="deploy-title">🛠 Phase 2 — Build Your Own</div>
+          <p class="deploy-copy">In the second half of the program, students apply those skills to their own product or service ideas.</p>
+          <p class="deploy-copy">Working in small, instructor-led teams, students:</p>
+          <ul class="deploy-bullets">
+            <li>Identify real problems using design thinking</li>
+            <li>Define success criteria</li>
+            <li>Stress-test assumptions</li>
+            <li>Map costs, pricing, and feasibility</li>
+            <li>Translate ideas into viable business models</li>
+          </ul>
+          <div class="deploy-title">🎤 The Outcome</div>
+          <p class="deploy-copy">The program culminates in a TED-style community pitch night.</p>
+          <p class="deploy-copy">Every student presents:</p>
+          <ul class="deploy-bullets">
+            <li>What they built</li>
+            <li>Who it’s for</li>
+            <li>How it works</li>
+            <li>What it costs</li>
+            <li>How it’s priced</li>
+            <li>Why someone would pay for it</li>
+          </ul>
+          <p class="deploy-copy">Everything in The Money Club is designed to teach by doing. The following instructor-led modules are the systems students work inside — each one engineered to build competence before creativity, and judgment before confidence.</p>
         </div>
         <ul class="deploy-list">
           <li class="deploy-item">
@@ -1281,7 +1331,7 @@ nav{
         <div class="quickfacts-card">
           <h3>Ready for details?</h3>
           <p class="quickfacts-note">See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
-          <a class="btn purple block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
+          <a data-cta-label="View schedule &amp; pricing" class="btn purple block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
         </div>
       </div>
     </section>
@@ -1358,5 +1408,50 @@ nav{
       });
     })();
   </script>
+  <script>
+    (function(){
+      function getLabel(el){
+        if (!el){
+          return '';
+        }
+        var label = el.getAttribute('data-cta-label');
+        if (label){
+          return label;
+        }
+        label = el.textContent || '';
+        return label.trim().replace(/\s+/g, ' ');
+      }
+
+      function trackCta(target){
+        if (!window.gtag){
+          return;
+        }
+        var label = getLabel(target);
+        var href = target.getAttribute('href') || '';
+        var locationPath = window.location.pathname || '';
+        window.gtag('event', 'cta_click', {
+          cta_label: label,
+          cta_href: href,
+          cta_page: locationPath
+        });
+      }
+
+      document.addEventListener('click', function(event){
+        var target = event.target.closest('a, button');
+        if (!target){
+          return;
+        }
+        if (!(
+          target.classList.contains('btn') ||
+          target.classList.contains('cta-large') ||
+          target.classList.contains('cta-standard')
+        )){
+          return;
+        }
+        trackCta(target);
+      });
+    })();
+  </script>
+
 </body>
 </html>

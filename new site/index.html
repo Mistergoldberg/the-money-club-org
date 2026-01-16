@@ -757,6 +757,17 @@
       .topbar .btn{ display: none; }
     }
   </style>
+  <link rel="stylesheet" href="assets/typography.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GXP7Z3K0YK');
+  </script>
+
 </head>
 
 <body>
@@ -778,7 +789,7 @@
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
-                <a class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -792,7 +803,7 @@
         <a href="faq.html">FAQ</a>
       </nav>
 
-      <a class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
+      <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
     </div>
   </header>
 
@@ -816,25 +827,24 @@
     <section class="section" id="built-like-a-business">
       <div class="section-banner gold">
         <div class="wrap">
-          <h2>Built Like a Business</h2>
+          <h2>This Isn’t just a Summer Camp. It’s Economic Literacy.</h2>
         </div>
       </div>
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <p><strong>A close-looped community business summer program for kids and parents who want to understand how money actually works.</strong></p>
+            <p>Most kids leave school without understanding:</p>
             <ul class="bullet-list">
-              <li>Ages 11-17</li>
-              <li>4-week summer day program</li>
-              <li>July &amp; August 2026</li>
-              <li>Community-based venues in the GTA</li>
-              <li>Small cohorts, instructor-led teams</li>
-              <li>Real budgets, real decisions, real outcomes</li>
+              <li>how money moves</li>
+              <li>how products are priced</li>
+              <li>or how decisions turn into consequences</li>
             </ul>
+            <p>The Money Club is a 4-week, instructor-led summer program that teaches kids how real systems work — by building one.</p>
+            <p>Students don’t simulate business. They run one.</p>
           </div>
           <div class="cta-stack">
-            <a class="btn purple cta-standard" href="how-it-works.html">Learn more</a>
-            <a class="btn teal cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
+            <a data-cta-label="Learn more" class="btn purple cta-standard" href="how-it-works.html">Learn more</a>
+            <a data-cta-label="Reserve a spot" class="btn teal cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
           </div>
         </div>
       </div>
@@ -852,16 +862,16 @@
             <div class="section-image">
               <img src="assets/kid-presents-larg-class.jpg" alt="Students presenting product ideas" />
             </div>
-            <a class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
+            <a data-cta-label="Learn more" class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
           </div>
           <div class="section-copy">
             <p><strong supervised, real-world learning program where kids run a small business project from idea to pitch.></strong></p>
             <div class="fact-list">
-              <div><strong>How long?</strong> 4-week summer day program</div>
               <div><strong>When?</strong> July &amp; August 2026</div>
-              <div><strong>Where?</strong> Community-based venues in the GTA</div>
+              <div><strong>How long?</strong> 4-week summer day program</div>
+                <div><strong>Where?</strong> Community-based venues in the GTA</div>
               <div><strong>How much?</strong> $1,000 per student ($250/week)</div>
-              <div><strong>Who is it for?</strong> Curious kids who want to build, think, and speak - not just sit through lectures.</div>
+              <div><strong>Who is it for?</strong> Curious kids aged 11–17</div>
             </div>
           </div>
         </div>
@@ -877,7 +887,7 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <p><strong>During the program, students will:</strong></p>
+            <p>During the program, students will:</p>
             <ul class="bullet-list">
               <li>Create a product or service</li>
               <li>Learn basic business math (costs, pricing, margin)</li>
@@ -885,13 +895,13 @@
               <li>Practice communication and leadership</li>
               <li>Prepare and present at a community pitch night</li>
             </ul>
-            <p><strong>By the end, every student can confidently explain what they built, how it works, and why it matters.</strong></p>
+            <p>By the end, every student can confidently explain what they built, how it works, and why it matters.</p>
           </div>
           <div class="section-media">
             <div class="section-image">
               <img src="assets/banner-cb-kids.jpg" alt="Students presenting a UX design" />
             </div>
-            <a class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
+            <a data-cta-label="Learn more" class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
           </div>
         </div>
       </div>
@@ -940,7 +950,7 @@
             <div class="section-image">
               <img src="assets/banner-kid-presents.jpg" alt="Students presenting a UX design" />
             </div>
-            <a class="btn teal cta-standard" href="open-book-hook.html">View open-book financials</a>
+            <a data-cta-label="View open-book financials" class="btn teal cta-standard" href="open-book-hook.html">View open-book financials</a>
           </div>
         </div>
       </div>
@@ -989,7 +999,7 @@
           </div>
           <div class="section-media">
             <img class="profile-photo" src="assets/Jared-Profile.png" alt="Jared Goldberg" />
-            <a class="btn purple cta-standard" href="who-runs-it.html">Learn more</a>
+            <a data-cta-label="Learn more" class="btn purple cta-standard" href="who-runs-it.html">Learn more</a>
           </div>
         </div>
       </div>
@@ -1035,8 +1045,8 @@
             <p class="cta-note">July &amp; August 2026 | Downtown Toronto</p>
             <p class="cta-note">$1,000 for 4 weeks | All materials included</p>
             <div class="cta-row">
-              <a class="btn purple cta-standard" href="schedule-pricing.html">Share the opportunity</a>
-              <a class="btn gold cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
+              <a data-cta-label="Share the opportunity" class="btn purple cta-standard" href="schedule-pricing.html">Share the opportunity</a>
+              <a data-cta-label="Reserve a spot" class="btn gold cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
             </div>
           </div>
         </div>
@@ -1114,5 +1124,50 @@
       });
     })();
   </script>
+  <script>
+    (function(){
+      function getLabel(el){
+        if (!el){
+          return '';
+        }
+        var label = el.getAttribute('data-cta-label');
+        if (label){
+          return label;
+        }
+        label = el.textContent || '';
+        return label.trim().replace(/\s+/g, ' ');
+      }
+
+      function trackCta(target){
+        if (!window.gtag){
+          return;
+        }
+        var label = getLabel(target);
+        var href = target.getAttribute('href') || '';
+        var locationPath = window.location.pathname || '';
+        window.gtag('event', 'cta_click', {
+          cta_label: label,
+          cta_href: href,
+          cta_page: locationPath
+        });
+      }
+
+      document.addEventListener('click', function(event){
+        var target = event.target.closest('a, button');
+        if (!target){
+          return;
+        }
+        if (!(
+          target.classList.contains('btn') ||
+          target.classList.contains('cta-large') ||
+          target.classList.contains('cta-standard')
+        )){
+          return;
+        }
+        trackCta(target);
+      });
+    })();
+  </script>
+
 </body>
 </html>
