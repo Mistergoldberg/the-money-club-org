@@ -3,10 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Instructors — The Money Club</title>
+  <title>Instructors | Toronto Kids Summer Camp 2026</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Paid summer instructor roles for university students running a real, community-based entrepreneurship program." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <meta name="description" content="Paid instructor roles for the Toronto kids summer camp 2026. Lead real-world projects and build leadership experience." />
+  <meta property="og:title" content="Instructors | Toronto Kids Summer Camp 2026" />
+  <meta property="og:description" content="Paid instructor roles for the Toronto kids summer camp 2026. Lead real-world projects and build leadership experience." />
+  <meta property="og:url" content="https://the-money-club.org/instructors.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Instructors | Toronto Kids Summer Camp 2026" />
+  <meta name="twitter:description" content="Paid instructor roles for the Toronto kids summer camp 2026. Lead real-world projects and build leadership experience." />
+  <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+    <link rel="canonical" href="https://the-money-club.org/instructors.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
@@ -611,6 +621,13 @@
       .cta-stack{ width: min(100%, 360px); justify-self: center; }
 
       /* Mobile standards */
+      .hero-logo{ display: none !important; }
+      .hero-title{ display: none !important; }
+      .hero-logo-mobile{ display: block !important; margin: 0 auto; }
+
+      .hero-title{ font-size: 60px !important; line-height: 0.9 !important; letter-spacing: -0.02em !important; }
+      .hero-title .org{ font-size: 28px !important; }
+
       body{ font-size: 23px; }
       h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
       .hero-title{ font-size: var(--size-hero); }
@@ -666,7 +683,7 @@
       .topbar .btn{ display: none; }
     }
   </style>
-  <link rel="stylesheet" href="assets/typography.css" />
+  <link rel="stylesheet" href="assets/typography.css?v=5" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
   <script>
@@ -726,7 +743,7 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <p>The Money Club is a paid summer opportunity for university students to run a real, community-based entrepreneurship program.</p>
+            <p>The Money Club.Org is a paid summer opportunity for university students to run a real, community-based entrepreneurship program.</p>
             <p>You'll help young people build and sell real products, manage real budgets, and make real decisions while gaining hands-on experience in economics, public policy, education, and social impact.</p>
             <p>This isn't tutoring and it's not volunteering. It's operational leadership in a supervised, closed-loop system with pay, responsibility, and measurable outcomes.</p>
           </div>
@@ -825,8 +842,8 @@
 
   <footer class="site-footer">
     <div class="inner">
-      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club logo" />
-      <div class="footer-title">The Money Club</div>
+      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+      <div class="footer-title">The Money Club<span class="org">.Org</span></div>
       <div class="footer-tagline">Teaching financial literacy, design thinking, &amp; public speaking</div>
     </div>
   </footer>
@@ -895,8 +912,8 @@
       var shareBtn = document.querySelector('.share-opportunity');
       if (shareBtn){
         var shareData = {
-          title: 'The Money Club',
-          text: 'Check out this instructor opportunity at The Money Club.',
+          title: 'The Money Club.Org',
+          text: 'Check out this instructor opportunity at The Money Club.Org.',
           url: window.location.href
         };
         shareBtn.setAttribute('href', shareBtn.getAttribute('href') + encodeURIComponent(window.location.href));

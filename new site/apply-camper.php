@@ -37,7 +37,7 @@ if (!in_array($return_to, $allowed_returns, true)) {
 }
 
 $to = 'me@mistergoldberg.com';
-$subject = 'Reserve a Spot: The Money Club';
+$subject = 'Reserve a Spot: The Money Club.Org';
 $from = 'info@the-money-club.org';
 
 $lines = [];

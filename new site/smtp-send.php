@@ -1,5 +1,5 @@
 <?php
-function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name = 'The Money Club') {
+function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name = 'The Money Club.Org') {
     $config = require __DIR__ . '/smtp-config.php';
 
     $host = $config['host'] ?? '';

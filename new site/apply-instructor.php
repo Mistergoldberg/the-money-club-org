@@ -29,7 +29,7 @@ if ($background_check !== 'Yes') {
 }
 
 $to = 'me@mistergoldberg.com';
-$subject = 'Instructor Application: The Money Club';
+$subject = 'Instructor Application: The Money Club.Org';
 $from = 'info@the-money-club.org';
 
 $lines = [];

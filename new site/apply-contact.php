@@ -23,7 +23,7 @@ if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 $to = 'me@mistergoldberg.com';
-$subject = 'Contact Us: The Money Club';
+$subject = 'Contact Us: The Money Club.Org';
 $from = 'info@the-money-club.org';
 
 $lines = [];

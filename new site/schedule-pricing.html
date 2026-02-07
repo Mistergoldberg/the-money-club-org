@@ -3,10 +3,91 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Schedule &amp; Pricing — The Money Club</title>
+  <title>Schedule & Pricing | Toronto Kids Summer Camp 2026</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Schedule and pricing details for the Money Club summer session in Toronto, plus daily schedule, dates, and what’s included." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <meta name="description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students' Union." />
+  <meta property="og:title" content="Schedule &amp; Pricing | Toronto Kids Summer Camp 2026" />
+  <meta property="og:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students&#x27; Union." />
+  <meta property="og:url" content="https://the-money-club.org/schedule-pricing.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Schedule &amp; Pricing | Toronto Kids Summer Camp 2026" />
+  <meta name="twitter:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students&#x27; Union." />
+  <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <link rel="canonical" href="https://the-money-club.org/schedule-pricing.html" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationEvent",
+          "name": "The Money Club.Org Summer Session 1",
+          "startDate": "2026-07-06",
+          "endDate": "2026-07-31",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "The University of Toronto Students' Union",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "230 College Street",
+              "addressLocality": "Toronto",
+              "addressRegion": "ON",
+              "postalCode": "M5T 1R2",
+              "addressCountry": "CA"
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "CAD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://the-money-club.org/reserve-a-spot.html"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "The Money Club.Org",
+            "url": "https://the-money-club.org/"
+          }
+        },
+        {
+          "@type": "EducationEvent",
+          "name": "The Money Club.Org Summer Session 2",
+          "startDate": "2026-08-04",
+          "endDate": "2026-08-28",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "The University of Toronto Students' Union",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "230 College Street",
+              "addressLocality": "Toronto",
+              "addressRegion": "ON",
+              "postalCode": "M5T 1R2",
+              "addressCountry": "CA"
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "CAD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://the-money-club.org/reserve-a-spot.html"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "The Money Club.Org",
+            "url": "https://the-money-club.org/"
+          }
+        }
+      ]
+    }
+  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
@@ -1039,6 +1120,48 @@ nav{
     .tight-stack .content-list + p{
       margin-top: 0;
     }
+    .schedule-block{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #ffffff;
+      display: grid;
+      gap: 6px;
+    }
+    .schedule-block h3{
+      margin: 0;
+      font-size: clamp(20px, 2.6vw, 26px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .schedule-block p{
+      margin: 0;
+    }
+    .table-wrap{
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow-x: auto;
+      background: #ffffff;
+    }
+    .table-wrap table{
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+    }
+    .table-wrap th,
+    .table-wrap td{
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      font-size: clamp(16px, 1.8vw, 20px);
+    }
+    .table-wrap th{
+      background: #f9f7f3;
+    }
     .pricing-grid{
       display:grid;
       grid-template-columns: 1.2fr 0.8fr;
@@ -1056,6 +1179,39 @@ nav{
       padding: 14px;
       background: #ffffff;
       box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .pricing-details{
+      margin-top: 16px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .pricing-detail-card{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: #ffffff;
+      display: grid;
+      gap: 8px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .pricing-detail-card h3{
+      margin: 0;
+      font-size: clamp(22px, 3vw, 30px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .location-layout{
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: start;
+    }
+    .location-text{
+      flex: 1;
+      min-width: 0;
     }
     .pricing-action-card .btn{
       width: 100%;
@@ -1211,9 +1367,21 @@ nav{
       .reserve-content{ grid-template-columns: 1fr; }
       .reservation-row.two-col{ grid-template-columns: 1fr; }
       .pricing-grid{ grid-template-columns: 1fr; }
+      .pricing-details{ grid-template-columns: 1fr; }
       .confirmation-grid{ grid-template-columns: 1fr; }
+      .pricing-grid{ display: contents; }
+      .tight-stack{ order: 1; }
+      .pricing-details{ order: 2; }
+      .pricing-actions{ order: 3; }
 
       /* Mobile standards */
+      .hero-logo{ display: none !important; }
+      .hero-title{ display: none !important; }
+      .hero-logo-mobile{ display: block !important; margin: 0 auto; }
+
+      .hero-title{ font-size: 60px !important; line-height: 0.9 !important; letter-spacing: -0.02em !important; }
+      .hero-title .org{ font-size: 28px !important; }
+
       body{ font-size: 23px; }
       h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
@@ -1279,7 +1447,7 @@ nav{
       .topbar .btn{ display: none; }
     }
   </style>
-  <link rel="stylesheet" href="assets/typography.css" />
+  <link rel="stylesheet" href="assets/typography.css?v=5" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
   <script>
@@ -1332,7 +1500,7 @@ nav{
   <main>
     <section class="section-banner gold">
       <div class="wrap">
-        <h2>2026 Summer Session<span>The Money Club, Toronto</span></h2>
+        <h2>2026 Summer Sessions</span></h2>
       </div>
     </section>
 
@@ -1345,23 +1513,41 @@ nav{
             <div class="pricing-grid">
               <div class="tight-stack">
                 <p><strong>Pricing</strong></p>
-                <p><strong>$1,000 for four week</strong><br />($250 per week)</p>
+                <p><strong>$1,500 for four weeks</strong><br/></p>
                 <p>These fees reflect:</p>
                 <ul class="content-list">
                   <li>Instructor pay</li>
                   <li>Space and insurance</li>
                   <li>Materials and learning capital</li>
                   <li>Small cohort size</li>
+                  <li>Full pricing is shown during registration so families can make an informed decision.</li>
                 </ul>
-                <p>Full pricing is shown during registration so families can make an informed decision.</p>
               </div>
               <div class="pricing-actions">
                 <div class="pricing-action-card">
-                  <a data-cta-label="Reserve a spot" class="btn purple" href="reserve-a-spot.html">Reserve a Spot</a>
+                  <a data-cta-label="Reserve a spot" class="btn purple" href="#reserve">Reserve a Spot</a>
                 </div>
                 <div class="pricing-action-card">
                   <a data-cta-label="How it works" class="btn teal" href="how-it-works.html">How it works</a>
                 </div>
+              </div>
+            </div>
+            <div class="pricing-details">
+              <div class="pricing-detail-card">
+                <h3>📍 Location</h3>
+                <div class="location-layout">
+                  <p class="location-text"><strong>UTSU Student Commons</strong><br />
+                    230 College Street<br />
+                    Toronto, ON <strong>M5T 1R2</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="pricing-detail-card">
+                <h3>📅 Session Dates</h3>
+                <ul class="content-list">
+                  <li><strong>Session 1:</strong> July 6, 2026 → <strong>July 31, 2026</strong></li>
+                  <li><strong>Session 2:</strong> <strong>August 4, 2026</strong> → August 28, 2026</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1372,12 +1558,12 @@ nav{
             <h2>🧭 Program Overview</h2>
             <p>You’ve seen how the system works. Here’s how the program runs — day to day.</p>
             <ul class="content-list">
-              <li>Format: Summer day program</li>
-              <li>Schedule: Monday to Friday</li>
-              <li>Hours: 9:30am – 3:30pm</li>
-              <li>Ages: 11–17</li>
-              <li>Cohort size: Small, limited seats by design</li>
-              <li>Experience required: None</li>
+              <li><strong>Format:</strong> Summer day program</li>
+              <li><strong>Schedule:</strong> Monday to Friday</li>
+              <li><strong>Hours:</strong> 9:30am – 3:30pm</li>
+              <li><strong>Ages:</strong> 11–17</li>
+              <li><strong>Cohort size:</strong> Small, limited seats by design</li>
+              <li><strong>Experience required:</strong> None</li>
             </ul>
             <p>This is a structured, instructor-led program designed to feel focused, calm, and productive — not chaotic or overstimulating.</p>
           </div>
@@ -1385,114 +1571,252 @@ nav{
 
         <div class="reservation-row">
           <div class="reservation-card">
-            <h2>⏰ Daily Schedule</h2>
+            <h2>⏰ Daily Rhythm</h2>
             <p>Every day follows a consistent rhythm so students know what to expect and parents know how time is spent.</p>
             <div class="tight-stack">
-              <div>
-                <strong>9:30 – 10:00</strong><br />
-                Arrival &amp; warm-up
+              <div class="schedule-block">
+                <h3>9:30 – 10:00 — Morning standup (groups of ~10)</h3>
+                <p>A quick update on:</p>
                 <ul class="content-list">
-                  <li>Settle in</li>
-                  <li>Light discussion</li>
-                  <li>Agenda for the day</li>
+                  <li>what you’re working on</li>
+                  <li>what you’re excited about</li>
+                  <li>what you need help with</li>
                 </ul>
               </div>
-              <div>
-                <strong>10:00 – 11:30</strong><br />
-                Core workshop
+              <div class="schedule-block">
+                <h3>10:00 – 11:30 — Core workshop</h3>
                 <ul class="content-list">
                   <li>Business fundamentals</li>
                   <li>Design thinking exercises</li>
                   <li>Group discussion and examples</li>
+                  <li>(Topic changes by week)</li>
                 </ul>
               </div>
-              <div>
-                <strong>11:30 – 12:15</strong><br />
-                Build time
+              <div class="schedule-block">
+                <h3>11:30 – 12:15 — Build time</h3>
                 <ul class="content-list">
                   <li>Product creation</li>
                   <li>Packaging, pricing, or planning</li>
                   <li>Instructor guidance and check-ins</li>
                 </ul>
               </div>
-              <div>
-                <strong>12:15 – 1:00</strong><br />
-                Lunch break
+              <div class="schedule-block">
+                <h3>12:15 – 1:00 — Lunch break</h3>
                 <ul class="content-list">
                   <li>Bring your own lunch</li>
                   <li>Supervised, relaxed environment</li>
                 </ul>
               </div>
-              <div>
-                <strong>1:00 – 2:30</strong><br />
-                Project work &amp; market testing
+              <div class="schedule-block">
+                <h3>1:00 – 2:30 — Project work &amp; market testing</h3>
                 <ul class="content-list">
                   <li>Team collaboration</li>
                   <li>Refining ideas</li>
                   <li>Preparing messaging and visuals</li>
                 </ul>
               </div>
-              <div>
-                <strong>2:30 – 3:30</strong><br />
-                Communication &amp; reflection
+              <div class="schedule-block">
+                <h3>2:30 – 3:30 — Communication &amp; reflection</h3>
                 <ul class="content-list">
                   <li>Practice explaining decisions</li>
                   <li>Pitch preparation</li>
                   <li>Daily wrap-up</li>
+                  <li>(Weeks 2–4 also include an afternoon standup/check-in.)</li>
                 </ul>
               </div>
             </div>
-            <p>Each day builds toward the community pitch night, where students present what they built and what they learned.</p>
+            <p>Each day builds toward presentations where students show what they built and what they learned.</p>
           </div>
         </div>
 
         <div class="reservation-row">
           <div class="reservation-card">
-            <h2>📅 Dates &amp; Sessions</h2>
-            <p>Summer sessions are offered in monthly cohorts and updated regularly based on demand and space availability.</p>
-            <p><strong>Upcoming cohorts:</strong></p>
-            <ul class="content-list">
-              <li>June sessions</li>
-              <li>July sessions</li>
-              <li>August sessions</li>
-            </ul>
-            <p>Exact dates are shared during registration and confirmation.</p>
-            <p>We intentionally cap enrollment to maintain quality and instructor attention.</p>
+            <h2>🗓️ Weekly Modules</h2>
+
+            <h3>Week 1 — Foundations (What We Deploy)</h3>
+            <div class="table-wrap" role="region" aria-label="Week 1 schedule table" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>What We Deploy</strong><br />
+                      ⚙️ Phase 1 — Learn by Operating<br />
+                      🛠️ Phase 2 — Build Your Own<br />
+                      🧾 The Outcome
+                    </td>
+                    <td>
+                      💰 Financial Literacy as Survival Gear<br />
+                      🏭 Sourcing 101: Where Value Is Actually Made<br />
+                      🗂️ Control Brand Playbook
+                    </td>
+                    <td>
+                      📊 Market Research: Follow the Money &amp; Problems<br />
+                      🎨 Design Thinking &amp; Human Factor Research<br />
+                      📋 Cambridge Business Model Canvas
+                    </td>
+                    <td>
+                      🚀 Go-To-Market: Blast Off Without Burning Fuel<br />
+                      📸 Creative Fundamentals: Photography, Design &amp; Visual Clarity<br />
+                      📣 Marketing: Ride Existing Channels Before Building Your Own
+                    </td>
+                    <td>
+                      🎙️ Guest Speaker<br />
+                      💰 Market Research: Follow the Money Field Trip<br />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Week 2 — Control Brand Sprint</h3>
+            <div class="table-wrap" role="region" aria-label="Week 2 schedule table" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Control Brand Project Kickoff</strong><br />
+                      Example option: <strong>garbage bags</strong><br />
+                      Spin up a fully baked control brand product by repackaging commodities
+                    </td>
+                    <td>
+                      <strong>Build Loop</strong><br />
+                      Morning Standup<br />
+                      Afternoon Standup
+                    </td>
+                    <td>
+                      <strong>Build Loop</strong><br />
+                      Morning Standup<br />
+                      Afternoon Standup
+                    </td>
+                    <td>
+                      <strong>Build Loop</strong><br />
+                      Morning Standup<br />
+                      Afternoon Standup
+                    </td>
+                    <td>
+                      <strong>Presentation Day</strong><br />
+                      Standup<br />
+                      Presentation
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Week 3 — Marketplace Build (Independent Projects)</h3>
+            <div class="table-wrap" role="region" aria-label="Week 3 schedule table" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Market Place Kickoff</strong><br />
+                      Isolate an opportunity + hypothesis<br />
+                      Create a survey to validate assumptions<br />
+                      Stage Gate 1: review results with peers<br />
+                      Define offering (5W &amp; H)<br />
+                      Quantify COGS + margin<br />
+                      Source products + packaging<br />
+                      Stage Gate 2: present business case<br />
+                      If approved: buy commodities, package goods, sell
+                    </td>
+                    <td>
+                      <strong>Execution Loop</strong><br />
+                      Morning Standup<br />
+                      Afternoon Standup
+                    </td>
+                    <td>
+                      <strong>Execution Loop</strong><br />
+                      Morning Standup<br />
+                      Afternoon Standup
+                    </td>
+                    <td>
+                      <strong>Execution Loop</strong><br />
+                      Morning Standup<br />
+                      Afternoon Standup
+                    </td>
+                    <td>
+                      <strong>Presentation Day</strong><br />
+                      Standup<br />
+                      Presentation
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Week 4 — Rehearsal + Final Showcase</h3>
+            <div class="table-wrap" role="region" aria-label="Week 4 schedule table" tabindex="0">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Choose a Path</strong><br />
+                      Option 1: Develop Winning Marketplace Ideas<br />
+                      Option 2: Continue on Control Brand
+                    </td>
+                    <td>
+                      Morning Standup<br />
+                      Afternoon Standup<br />
+                      <strong>Rehearsal</strong>
+                    </td>
+                    <td>
+                      Morning Standup<br />
+                      Afternoon Standup<br />
+                      <strong>Rehearsal</strong>
+                    </td>
+                    <td>
+                      Morning Standup<br />
+                      Afternoon Standup<br />
+                      <strong>Rehearsal</strong>
+                    </td>
+                    <td>
+                      <strong>Club Money Presentation</strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
           </div>
         </div>
 
-        <div class="reservation-row">
-          <div class="reservation-card">
-            <h2>📍 Location</h2>
-            <p>All sessions take place at:</p>
-            <p><strong>Morningside-High Park Presbyterian Church</strong></p>
-            <p><strong>Why this location:</strong></p>
-            <ul class="content-list">
-              <li>Trusted community space</li>
-              <li>Quiet, safe, and accessible</li>
-              <li>Suitable for small-group learning</li>
-              <li>Fully insured and supervised</li>
-            </ul>
-            <p>Detailed arrival, pickup, and access instructions are shared after registration.</p>
-          </div>
-        </div>
-
-        <div class="reservation-row">
-          <div class="reservation-card">
-            <h2>🎒 What’s Included</h2>
-            <p>Tuition covers:</p>
-            <ul class="content-list">
-              <li>All instruction</li>
-              <li>Materials and student project inputs</li>
-              <li>Use of shared learning capital</li>
-              <li>Supervision and insurance</li>
-              <li>Community pitch night event</li>
-            </ul>
-            <p>There are no hidden fees and no add-ons required.</p>
-          </div>
-        </div>
-
-        <div class="reservation-row">
+        <div class="reservation-row" id="reserve">
           <div class="reservation-card">
             <h2>Reserve a Spot</h2>
             <form class="form-grid" action="apply-camper.php" method="post" novalidate>
@@ -1548,8 +1872,8 @@ nav{
 
   <footer class="site-footer">
     <div class="inner">
-      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club logo" />
-      <div class="footer-title">The Money Club</div>
+      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+      <div class="footer-title">The Money Club<span class="org">.Org</span></div>
       <div class="footer-tagline">Teaching financial literacy, design thinking, &amp; public speaking</div>
     </div>
   </footer>

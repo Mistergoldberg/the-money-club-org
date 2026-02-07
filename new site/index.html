@@ -3,10 +3,97 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Money Club — Summer Session</title>
+  <title>Toronto Kids Summer Camp 2026 | July & August | The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="The Money Club — Summer Session. Financial literacy, design thinking, and public speaking for ages 11-17. Open-book economics and student seed pool." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <meta name="description" content="Toronto kids summer camp 2026 at the University of Toronto Students' Union. 4-week July &amp; August day program for ages 11–17 focused on financial literacy, design thinking, and public speaking." />
+  <meta property="og:title" content="Toronto Kids Summer Camp 2026 | July &amp; August | The Money Club.Org" />
+  <meta property="og:description" content="Toronto kids summer camp 2026 at the University of Toronto Students&#x27; Union. 4-week July &amp; August day program for ages 11–17 focused on financial literacy, design thinking, and public speaking." />
+  <meta property="og:url" content="https://the-money-club.org/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Toronto Kids Summer Camp 2026 | July &amp; August | The Money Club.Org" />
+  <meta name="twitter:description" content="Toronto kids summer camp 2026 at the University of Toronto Students&#x27; Union. 4-week July &amp; August day program for ages 11–17 focused on financial literacy, design thinking, and public speaking." />
+  <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <link rel="canonical" href="https://the-money-club.org/" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "The Money Club.Org",
+          "url": "https://the-money-club.org/",
+          "logo": "https://the-money-club.org/assets/logo-500.png"
+        },
+        {
+          "@type": "EducationEvent",
+          "name": "The Money Club.Org Summer Session 1",
+          "startDate": "2026-07-06",
+          "endDate": "2026-07-31",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "The University of Toronto Students' Union",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "230 College Street",
+              "addressLocality": "Toronto",
+              "addressRegion": "ON",
+              "postalCode": "M5T 1R2",
+              "addressCountry": "CA"
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "CAD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://the-money-club.org/reserve-a-spot.html"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "The Money Club.Org",
+            "url": "https://the-money-club.org/"
+          }
+        },
+        {
+          "@type": "EducationEvent",
+          "name": "The Money Club.Org Summer Session 2",
+          "startDate": "2026-08-04",
+          "endDate": "2026-08-28",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "The University of Toronto Students' Union",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "230 College Street",
+              "addressLocality": "Toronto",
+              "addressRegion": "ON",
+              "postalCode": "M5T 1R2",
+              "addressCountry": "CA"
+            }
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "CAD",
+            "availability": "https://schema.org/InStock",
+            "url": "https://the-money-club.org/reserve-a-spot.html"
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "The Money Club.Org",
+            "url": "https://the-money-club.org/"
+          }
+        }
+      ]
+    }
+  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
@@ -418,9 +505,9 @@
     .cta-stack{
       display:grid;
       gap: 14px;
-      width: min(100%, 520px);
+      width: 100%;
       align-items: stretch;
-      justify-self: end;
+      justify-self: stretch;
     }
     .cta-stack .btn{
       width: 100%;
@@ -582,6 +669,15 @@
       font-weight: 600;
     }
 
+    .cta-right{
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .cta-right .btn{
+      width: min(100%, 360px);
+    }
+
     .cta-row{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -692,7 +788,7 @@
       .split,
       .split.reverse{ grid-template-columns: 1fr; }
       .cta-row{ grid-template-columns: 1fr; }
-      .cta-stack{ width: min(100%, 360px); justify-self: center; }
+      .cta-stack{ width: 100%; justify-self: stretch; }
       .radical-grid{ grid-template-columns: 1fr; }
       .radical-side{
         justify-items: stretch;
@@ -701,12 +797,48 @@
       .radical-side .section-image{ width: 100%; }
 
       /* Mobile standards */
+      .hero-logo{ display: none !important; }
+      .hero-title{ display: none !important; }
+      .hero-logo-mobile{ display: block !important; margin: 0 auto; }
+
+      .hero-title{ font-size: 60px !important; line-height: 0.9 !important; letter-spacing: -0.02em !important; }
+      .hero-title .org{ font-size: 28px !important; }
+
       body{ font-size: 23px; }
       h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
       .hero-title{ font-size: var(--size-hero); }
       .hero-sub{ font-size: inherit; line-height: 1.05; }
-      #what-is-this .section-copy{ order: 1; }
-      #what-is-this .section-media{ order: 2; }
+      .split > .section-media,
+      .split > .section-image{
+        order: 1;
+      }
+      .split > .section-copy{
+        order: 2;
+      }
+      .split > .cta-stack{
+        order: 3;
+      }
+      .radical-grid{
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+      }
+      .radical-side{
+        display: contents;
+      }
+      .radical-side .section-image{
+        order: 1;
+      }
+      .radical-copy{
+        order: 2;
+      }
+      .radical-side h3,
+      .radical-side .radical-list,
+      .radical-side .radical-notes{
+        order: 3;
+      }
+      .radical-side .btn{
+        order: 4;
+      }
       .btn{
         font-family: var(--font-display);
         font-size: 35.04px;
@@ -757,7 +889,7 @@
       .topbar .btn{ display: none; }
     }
   </style>
-  <link rel="stylesheet" href="assets/typography.css" />
+  <link rel="stylesheet" href="assets/typography.css?v=5" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
   <script>
@@ -811,11 +943,12 @@
     <section class="hero">
       <div class="wrap">
         <div class="hero-top">
-          <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club logo" />
+          <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
           <div class="hero-title-block">
-            <h1 class="hero-title">The Money Club</h1>
+            <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
+            <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             <div class="hero-sub">Teaching financial literacy, design thinking, &amp; public speaking</div>
-          </div>
+</div>
         </div>
 
         <div class="hero-image banner">
@@ -827,7 +960,7 @@
     <section class="section" id="built-like-a-business">
       <div class="section-banner gold">
         <div class="wrap">
-          <h2>This Isn’t just a Summer Camp. It’s Economic Literacy.</h2>
+        <h2>Toronto Kids Summer Camp 2026: Economic Literacy</h2>
         </div>
       </div>
       <div class="section-content">
@@ -839,9 +972,8 @@
               <li>how products are priced</li>
               <li>or how decisions turn into consequences</li>
             </ul>
-            <p>The Money Club is a 4-week, instructor-led summer program that teaches kids how real systems work — by building one.</p>
-            <p>Students don’t simulate business. They run one.</p>
-          </div>
+            <p>The Money Club is a 4-week, instructor-led summer program at the University of Toronto Students’ Union that teaches kids how money, incentives, and real-world systems actually work.</p>
+           </div>
           <div class="cta-stack">
             <a data-cta-label="Learn more" class="btn purple cta-standard" href="how-it-works.html">Learn more</a>
             <a data-cta-label="Reserve a spot" class="btn teal cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
@@ -862,16 +994,18 @@
             <div class="section-image">
               <img src="assets/kid-presents-larg-class.jpg" alt="Students presenting product ideas" />
             </div>
-            <a data-cta-label="Learn more" class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
           </div>
           <div class="section-copy">
             <p><strong supervised, real-world learning program where kids run a small business project from idea to pitch.></strong></p>
             <div class="fact-list">
-              <div><strong>When?</strong> July &amp; August 2026</div>
-              <div><strong>How long?</strong> 4-week summer day program</div>
-                <div><strong>Where?</strong> Community-based venues in the GTA</div>
-              <div><strong>How much?</strong> $1,000 per student ($250/week)</div>
               <div><strong>Who is it for?</strong> Curious kids aged 11–17</div>
+              <div><strong>How much?</strong> $1,500 per student</div>
+              <div><strong>How long?</strong> 4-week summer day program</div>
+              <div><strong>Where?</strong> University of Toronto Students' Union, 230 College Street, Toronto, ON M5T 1R2</div>
+              <div><strong>When?</strong> Session 1: July 6–July 31, 2026 &amp; Session 2: August 4–August 28, 2026</div>
+            </div>
+            <div class="cta-right">
+              <a data-cta-label="Learn more" class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
             </div>
           </div>
         </div>
@@ -896,12 +1030,14 @@
               <li>Prepare and present at a community pitch night</li>
             </ul>
             <p>By the end, every student can confidently explain what they built, how it works, and why it matters.</p>
+            <div class="cta-right">
+              <a data-cta-label="Learn more" class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
+            </div>
           </div>
           <div class="section-media">
             <div class="section-image">
               <img src="assets/banner-cb-kids.jpg" alt="Students presenting a UX design" />
             </div>
-            <a data-cta-label="Learn more" class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
           </div>
         </div>
       </div>
@@ -916,7 +1052,7 @@
       <div class="section-content">
         <div class="radical-grid">
           <div class="radical-copy">
-            <h3>The Money Club is a community-first program.</h3>
+            <h3>The Money Club.Org is a community-first program.</h3>
             <p>It is not designed to maximize profit. It is designed to teach financial literacy by example.</p>
             <p>That's why we run the program using open-book financials — so families can see exactly where tuition goes, and students can learn by watching money move through a real system.</p>
 
@@ -965,7 +1101,7 @@
       <div class="section-content">
         <div class="split reverse">
           <div class="section-image">
-            <img src="assets/flywheel.jpg" alt="The Money Club flywheel" />
+            <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel" />
           </div>
           <div class="section-copy">
             <div><strong>How the system sustains itself</strong></div>
@@ -989,17 +1125,21 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
+            <div><strong>Student operated</strong></div>
+            <p>The Money Club.Org is operated day-to-day by its student leadership team: Sarah Duong and Alex Goldberg, both students at Humberside Collegiate Institute.</p>
             <div><strong>Designed by a practitioner</strong></div>
-            <p>The Money Club was designed by Jared Goldberg — a product strategist, systems designer, and educator with 15+ years building real-world business platforms.</p>
+            <p>The Money Club.Org was designed by Jared Goldberg — a product strategist, systems designer, and educator with 15+ years building real-world business platforms.</p>
             <ul class="bullet-list">
               <li>Walmart, Loblaw, and Canadian Tire</li>
               <li>10+ years in China-based manufacturing ecosystems</li>
               <li>Economics, incentives, design thinking, and human behavior</li>
             </ul>
+            <div class="cta-right">
+              <a data-cta-label="Learn more" class="btn purple cta-standard" href="who-runs-it.html">Learn more</a>
+            </div>
           </div>
           <div class="section-media">
             <img class="profile-photo" src="assets/Jared-Profile.png" alt="Jared Goldberg" />
-            <a data-cta-label="Learn more" class="btn purple cta-standard" href="who-runs-it.html">Learn more</a>
           </div>
         </div>
       </div>
@@ -1042,11 +1182,11 @@
           </div>
           <div class="section-copy cta-block">
             <h3>Ready to reserve a spot?</h3>
-            <p class="cta-note">July &amp; August 2026 | Downtown Toronto</p>
-            <p class="cta-note">$1,000 for 4 weeks | All materials included</p>
+            <p class="cta-note">July &amp; August 2026 | University of Toronto Students' Union</p>
+            <p class="cta-note">$1,500 for 4 weeks | All materials included</p>
             <div class="cta-row">
-              <a data-cta-label="Share the opportunity" class="btn purple cta-standard" href="schedule-pricing.html">Share the opportunity</a>
-              <a data-cta-label="Reserve a spot" class="btn gold cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
+              <a data-cta-label="View schedule &amp; pricing" class="btn purple cta-standard" href="/schedule-pricing.html">View Schedule &amp; Pricing</a>
+              <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
             </div>
           </div>
         </div>
@@ -1056,8 +1196,8 @@
 
   <footer class="site-footer">
     <div class="inner">
-      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club logo" />
-      <div class="footer-title">The Money Club</div>
+      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+      <div class="footer-title">The Money Club<span class="org">.Org</span></div>
       <div class="footer-tagline">Teaching financial literacy, design thinking, &amp; public speaking</div>
     </div>
   </footer>

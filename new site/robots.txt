@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://the-money-club.org/sitemap.xml
