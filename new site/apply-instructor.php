@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $name = isset($_POST['applicant-name']) ? trim($_POST['applicant-name']) : '';
 $email = isset($_POST['applicant-email']) ? trim($_POST['applicant-email']) : '';
 $phone = isset($_POST['applicant-phone']) ? trim($_POST['applicant-phone']) : '';
-$notes = isset($_POST['applicant-notes']) ? trim($_POST['applicant-notes']) : '';
+$link = isset($_POST['applicant-link']) ? trim($_POST['applicant-link']) : '';
 $background_check = isset($_POST['background-check']) ? 'Yes' : 'No';
 
 if ($name === '' || $phone === '') {
@@ -23,12 +23,17 @@ if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit('Please provide a valid email.');
 }
 
+if ($link === '' || !filter_var($link, FILTER_VALIDATE_URL)) {
+    http_response_code(400);
+    exit('Please provide a valid LinkedIn or resume link.');
+}
+
 if ($background_check !== 'Yes') {
     http_response_code(400);
     exit('Please acknowledge the background check requirement.');
 }
 
-$to = 'me@mistergoldberg.com';
+$to = ['alex@the-money-club.org', 'jared@the-money-club.org'];
 $subject = 'Instructor Application: The Money Club.Org';
 $from = 'info@the-money-club.org';
 
@@ -37,7 +42,7 @@ $lines[] = 'Name: ' . ($name !== '' ? $name : '(not provided)');
 $lines[] = 'Email: ' . $email;
 $lines[] = 'Phone: ' . ($phone !== '' ? $phone : '(not provided)');
 $lines[] = 'Background check acknowledged: ' . $background_check;
-$lines[] = 'Notes: ' . ($notes !== '' ? $notes : '(none)');
+$lines[] = 'LinkedIn/Resume: ' . ($link !== '' ? $link : '(none)');
 
 $message = implode("\n", $lines);
 

@@ -312,6 +312,18 @@ nav{
       background: var(--gold);
       color: var(--ink);
     }
+    .section-banner.sticky-banner{
+      position: sticky;
+      top: 0;
+      z-index: 1200;
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+    }
+    .section-banner.heading-white{
+      color: #ffffff;
+    }
+    .section-banner.heading-white h2{
+      color: #ffffff;
+    }
     .section-banner h2,
     .content-banner h2,
     .curriculum-banner h2,
@@ -1304,9 +1316,9 @@ nav{
   </header>
 
   <main>
-    <section class="section-banner gold">
+    <section class="section-banner gold heading-white sticky-banner">
       <div class="wrap">
-        <h2>Apply Today, 2026 Summer Session<span>The Money Club.Org, Toronto</span></h2>
+        <h2>Apply Today, Summer 2026</h2>
       </div>
     </section>
 
@@ -1332,8 +1344,9 @@ nav{
                 <small class="field-error">Phone number is required.</small>
               </div>
               <div class="field">
-                <label for="applicant-notes">Anything you want us to know? (optional)</label>
-                <textarea id="applicant-notes" name="applicant-notes" rows="4"></textarea>
+                <label for="applicant-link">LinkedIn profile or resume link</label>
+                <input id="applicant-link" name="applicant-link" type="url" placeholder="https://linkedin.com/in/..." required />
+                <small class="field-error">Please provide a valid link.</small>
               </div>
               <div class="confirmation-card">
                 <h2>🛡️ Background Check Requirement</h2>
