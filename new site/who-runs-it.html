@@ -580,8 +580,27 @@ nav{
       gap: 12px;
       box-shadow: 0 18px 30px rgba(0,0,0,0.08);
     }
+    .ops-card{
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+      gap: clamp(16px, 3vw, 28px);
+      align-items:start;
+    }
+    .ops-media{
+      display:grid;
+      gap: 12px;
+    }
+    .ops-media img{
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      object-fit: cover;
+      display:block;
+      box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+      background: #ffffff;
+    }
     .architect-card{
-      grid-template-columns: minmax(0, 180px) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
       gap: clamp(16px, 3vw, 28px);
       align-items:start;
     }
@@ -599,6 +618,10 @@ nav{
       display:block;
     }
     .architect-body{
+      display:grid;
+      gap: 12px;
+    }
+    .ops-body{
       display:grid;
       gap: 12px;
     }
@@ -773,6 +796,7 @@ nav{
       .hero-cta{ width: 100%; }
       .roles-grid{ grid-template-columns: 1fr; }
       .role-card.feature{ grid-template-columns: 1fr; }
+      .ops-card{ grid-template-columns: 1fr; }
       .architect-card{ grid-template-columns: 1fr; }
       .funding-grid{ grid-template-columns: 1fr; }
       .facts-grid{ grid-template-columns: 1fr; }
@@ -922,41 +946,24 @@ nav{
         </div>
       </div>
     </section>
-
-    <section class="section system">
-      <div class="wrap">
-        <div class="system-grid">
-          <div class="system-art">
-            <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel graphic" />
-          </div>
-          <div class="system-copy">
-            <div class="section-title">
-              <div class="eyebrow">The flywheel</div>
-              <h2>A system that sustains itself</h2>
-              <p class="lede">The Money Club.Org is a closed-loop economic engine — built to create jobs, not just ideas.</p>
-            </div>
-            <p>We activate community-led initiatives using real-world design thinking: identifying problems, stress-testing solutions, and launching projects with real accountability.</p>
-            <p>No grants. No gimmicks. It’s self-funded, radically transparent, and powered by one core mission: 📖 Open-book financial reporting — so every participant sees exactly how money works.</p>
-            <p>This isn’t theory. It’s practice.</p>
-            <p>And it’s how the next generation learns to lead with clarity, confidence, and capital.</p>
-            <p>At its core, The Money Club.Org runs on a simple flywheel — one designed to keep quality high, incentives aligned, and outcomes real.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section operators">
       <div class="wrap">
         <div class="section-title">
           <div class="eyebrow">Who Actually Runs the Program</div>
           <h2>Student Operators, Real Responsibility</h2>
         </div>
-        <div class="stack-card">
-          <p>The Money Club.Org is operated day-to-day by its student leadership team: Sarah Duong and Alex Goldberg, both students at Humberside Collegiate Institute.</p>
-          <p>They support the full setup and operation of the organization—researching and securing quotes, building an understanding of the program budget and balance sheet, assisting with instructor outreach and interviews, and contributing to marketing and enrollment efforts.</p>
-          <p>During the summer program, Sarah and Alex support daily operations by coordinating instructor schedules, managing student cohorts, and ensuring sessions run smoothly from start to finish. They work inside real constraints, handle real logistics, and are accountable for execution.</p>
-          <p>This is intentional.</p>
-          <p>The Money Club.Org is designed to teach how real organizations function: through planning, trade-offs, and follow-through. Sarah and Alex represent the model in action—learning by operating and developing the skills required to run real systems well before university.</p>
+        <div class="stack-card ops-card">
+          <div class="ops-media">
+            <img src="assets/sarah.png" alt="Portrait of Sarah Duong" />
+            <img src="assets/alex.png" alt="Portrait of Alex Goldberg" />
+          </div>
+          <div class="ops-body">
+            <p>The Money Club.Org is operated day-to-day by its student leadership team: Sarah Duong and Alex Goldberg, both students at Humberside Collegiate Institute.</p>
+            <p>They support the full setup and operation of the organization—researching and securing quotes, building an understanding of the program budget and balance sheet, assisting with instructor outreach and interviews, and contributing to marketing and enrollment efforts.</p>
+            <p>During the summer program, Sarah and Alex support daily operations by coordinating instructor schedules, managing student cohorts, and ensuring sessions run smoothly from start to finish. They work inside real constraints, handle real logistics, and are accountable for execution.</p>
+            <p>This is intentional.</p>
+            <p>The Money Club.Org is designed to teach how real organizations function: through planning, trade-offs, and follow-through. Sarah and Alex represent the model in action—learning by operating and developing the skills required to run real systems well before university.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -972,7 +979,6 @@ nav{
             <img src="assets/Jared-Profile.png" alt="Portrait of Jared Goldberg" />
           </div>
           <div class="architect-body">
-            <h3>The Program Architect</h3>
             <p>The Money Club.Org was designed by Jared Goldberg — a product strategist, systems designer, and educator who has spent 15+ years building and operating real-world business platforms.</p>
             <p>Jared has designed consumer goods, digital services, and supply-chain systems across Walmart, Loblaw, and Canadian Tire, and spent over a decade working directly inside China-based manufacturing ecosystems — where cost, quality, incentives, and execution collide in real time. His work sits at the intersection of economics, incentives, design thinking, and human behavior.</p>
             <p>This program reflects how businesses actually function — with constraints, trade-offs, and accountability — not how they’re described in textbooks.</p>
@@ -983,6 +989,29 @@ nav{
         </div>
       </div>
     </section>
+
+    <section class="section system">
+      <div class="wrap">
+        <div class="system-grid">
+          <div class="system-copy">
+            <div class="section-title">
+              <div class="eyebrow">The flywheel</div>
+              <h2>A system that sustains itself</h2>
+              <p class="lede">The Money Club.Org is a closed-loop economic engine — built to create jobs, not just ideas.</p>
+            </div>
+            <p>We activate community-led initiatives using real-world design thinking: identifying problems, stress-testing solutions, and launching projects with real accountability.</p>
+            <p>No grants. No gimmicks. It’s self-funded, radically transparent, and powered by one core mission: 📖 Open-book financial reporting — so every participant sees exactly how money works.</p>
+            <p>This isn’t theory. It’s practice.</p>
+            <p>And it’s how the next generation learns to lead with clarity, confidence, and capital.</p>
+            <p>At its core, The Money Club.Org runs on a simple flywheel — one designed to keep quality high, incentives aligned, and outcomes real.</p>
+          </div>
+          <div class="system-art">
+            <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel graphic" />
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <section class="section funding">
       <div class="wrap funding-grid">
@@ -1018,7 +1047,6 @@ nav{
             </ul>
             <p>But scale comes after proof — not before.</p>
             <div class="role-links">
-              <a data-cta-label="View schedule &amp; pricing" class="btn secondary gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
               <a data-cta-label="Interested in supporting our mission?" class="btn purple cta-standard" href="support-our-mission.html">Interested in supporting our mission?</a>
             </div>
           </div>

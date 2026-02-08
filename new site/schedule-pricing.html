@@ -1110,6 +1110,21 @@ nav{
       border-color: var(--teal);
       box-shadow: 0 10px 18px rgba(0,0,0,0.08);
     }
+    .session-grid.is-locked .session-card{
+      background: #f4f4f4;
+      border-color: #dddddd;
+      color: #9b9b9b;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+    .session-grid.is-locked .session-card:hover{
+      border-color: #dddddd;
+      box-shadow: none;
+    }
+    .session-grid.is-locked .session-title,
+    .session-grid.is-locked .session-availability{
+      color: #9b9b9b;
+    }
     .session-card input{
       position: absolute;
       opacity: 0;
@@ -1421,6 +1436,9 @@ nav{
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
       margin-top: 16px;
+    }
+    .confirmation-grid.is-hidden{
+      display: none;
     }
     .confirmation-card{
       border: 1px solid var(--line);
@@ -2056,13 +2074,13 @@ nav{
                 </div>
                 <div class="field">
                   <label for="student-age">Child’s Age</label>
-                  <input id="student-age" name="student-age" type="text" required />
+                  <input id="student-age" name="student-age" type="number" min="11" max="17" step="1" inputmode="numeric" required />
                   <small class="field-error">Child’s age is required.</small>
                 </div>
               </div>
               <div class="field">
                 <label class="section-heading">Choose A Session</label>
-                <div class="session-grid gloss-active">
+                <div class="session-grid gloss-active is-locked">
                   <label class="session-card">
                     <input type="radio" name="preferred-session" value="session1" required />
                     <div class="session-card-body">
@@ -2086,18 +2104,18 @@ nav{
               <div class="payment-section">
                 <h2>Make Payment</h2>
                 <div class="payment-grid">
-                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true" disabled>
-                    <div class="payment-title">Credit Card</div>
-                    <div class="payment-body">A 2.4% credit card surcharge applies to help cover card processing costs. This surcharge is shown before you pay and appears as a separate line item on your receipt. Not applied to e-Transfer payments.</div>
-                  </button>
                   <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true" disabled>
                     <div class="payment-title">e-Transfer</div>
                     <div class="payment-body">No surcharge. Pay by e-Transfer to avoid the credit card processing surcharge. We’ll email confirmation once received.</div>
                   </button>
+                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true" disabled>
+                    <div class="payment-title">Credit Card</div>
+                    <div class="payment-body">A 2.4% credit card surcharge applies to help cover card processing costs. This surcharge is shown before you pay and appears as a separate line item on your receipt. Not applied to e-Transfer payments.</div>
+                  </button>
                 </div>
                 <small class="field-error">Please choose a payment method.</small>
               </div>
-              <div class="confirmation-grid">
+              <div class="confirmation-grid is-hidden">
                 <div class="confirmation-card">
                   <h2>Next Steps</h2>
                   <div class="tight-stack">
@@ -2212,13 +2230,15 @@ nav{
           }
         });
 
-        form.addEventListener('input', function(e){
-          updateFieldState(e.target.closest('.field'));
-        });
+      form.addEventListener('input', function(e){
+        updateFieldState(e.target.closest('.field'));
+        updateFlowState();
+      });
 
-        form.addEventListener('change', function(e){
-          updateFieldState(e.target.closest('.field'));
-        });
+      form.addEventListener('change', function(e){
+        updateFieldState(e.target.closest('.field'));
+        updateFlowState();
+      });
       });
 
       var params = new URLSearchParams(window.location.search);
@@ -2260,6 +2280,33 @@ nav{
       var sessionRadios = document.querySelectorAll('input[name="preferred-session"]');
       var paymentButtons = document.querySelectorAll('.payment-option');
       var sessionGrid = document.querySelector('.session-grid');
+      var requiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
+
+      function requiredFieldsValid(){
+        return Array.prototype.every.call(requiredInputs, function(input){
+          return input.checkValidity();
+        });
+      }
+
+      function sessionSelected(){
+        return Array.prototype.some.call(sessionRadios, function(radio){
+          return radio.checked;
+        });
+      }
+
+      function setSessionState(){
+        var canSelectSession = requiredFieldsValid();
+        if (sessionGrid){
+          sessionGrid.classList.toggle('is-locked', !canSelectSession);
+          sessionGrid.classList.toggle('gloss-active', canSelectSession && !sessionSelected());
+        }
+        sessionRadios.forEach(function(radio){
+          var card = radio.closest('.session-card');
+          var isFull = card && card.classList.contains('is-full');
+          radio.disabled = !canSelectSession || isFull;
+        });
+      }
+
       function setPaymentState(enabled){
         paymentButtons.forEach(function(btn){
           btn.classList.toggle('is-disabled', !enabled);
@@ -2267,19 +2314,64 @@ nav{
           btn.setAttribute('aria-disabled', String(!enabled));
           btn.disabled = !enabled;
         });
-        if (sessionGrid){
-          sessionGrid.classList.toggle('gloss-active', !enabled);
+      }
+
+      function showFirstInvalidField(){
+        var fields = document.querySelectorAll('.field');
+        fields.forEach(function(field){
+          updateFieldState(field);
+        });
+        var firstInvalid = document.querySelector('.field.is-invalid');
+        if (firstInvalid){
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }
-      function sessionSelected(){
-        return Array.prototype.some.call(sessionRadios, function(radio){
-          return radio.checked;
-        });
+
+      function showSessionError(){
+        var sessionField = document.querySelector('.field .session-grid');
+        if (sessionField){
+          var field = sessionField.closest('.field');
+          if (field){
+            field.classList.add('is-invalid');
+          }
+          sessionField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
       }
-      setPaymentState(sessionSelected());
+
+      function updateFlowState(){
+        setSessionState();
+        var canPay = requiredFieldsValid() && sessionSelected();
+        setPaymentState(canPay);
+      }
+
+      updateFlowState();
+
       sessionRadios.forEach(function(radio){
         radio.addEventListener('change', function(){
-          setPaymentState(sessionSelected());
+          updateFlowState();
+        });
+      });
+
+      if (sessionGrid){
+        sessionGrid.addEventListener('click', function(e){
+          if (sessionGrid.classList.contains('is-locked')){
+            e.preventDefault();
+            showFirstInvalidField();
+          }
+        });
+      }
+
+      paymentButtons.forEach(function(btn){
+        btn.addEventListener('click', function(e){
+          if (!requiredFieldsValid()){
+            e.preventDefault();
+            showFirstInvalidField();
+            return;
+          }
+          if (!sessionSelected()){
+            e.preventDefault();
+            showSessionError();
+          }
         });
       });
     })();
