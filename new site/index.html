@@ -7,13 +7,13 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="description" content="Toronto kids summer camp 2026 at the University of Toronto Students' Union. 4-week July &amp; August day program for ages 11–17 focused on financial literacy, design thinking, and public speaking." />
   <meta property="og:title" content="Toronto Kids Summer Camp 2026 | July &amp; August | The Money Club.Org" />
-  <meta property="og:description" content="Toronto kids summer camp 2026 at the University of Toronto Students&#x27; Union. 4-week July &amp; August day program for ages 11–17 focused on financial literacy, design thinking, and public speaking." />
+  <meta property="og:description" content="Toronto kids summer camp 2026 at the University of Toronto Students' Union. 4-week July &amp; August day program for ages 11–17 focused on financial literacy, design thinking, and public speaking." />
   <meta property="og:url" content="https://the-money-club.org/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Toronto Kids Summer Camp 2026 | July &amp; August | The Money Club.Org" />
-  <meta name="twitter:description" content="Toronto kids summer camp 2026 at the University of Toronto Students&#x27; Union. 4-week July &amp; August day program for ages 11–17 focused on financial literacy, design thinking, and public speaking." />
+  <meta name="twitter:description" content="Toronto kids summer camp 2026 at the University of Toronto Students' Union. 4-week July &amp; August day program for ages 11–17 focused on financial literacy, design thinking, and public speaking." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/" />
   <script type="application/ld+json">
@@ -655,13 +655,42 @@
     }
 
     .profile-photo{
-      width: min(100%, 240px);
+      width: min(100%, 210px);
       aspect-ratio: 1 / 1;
       border-radius: 50%;
       border: 1px solid var(--line);
       object-fit: cover;
       display:block;
       justify-self: center;
+      margin-bottom: 16px;
+    }
+    .profile-stack{
+      position: relative;
+      width: min(100%, 320px);
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
+    }
+    .profile-stack .profile-photo{
+      position: absolute;
+      width: 62%;
+      margin: 0;
+      box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+      background: #ffffff;
+    }
+    .profile-photo.jared{
+      left: -10%;
+      bottom: -6%;
+      z-index: 1;
+    }
+    .profile-photo.sarah{
+      top: -12%;
+      left: 24%;
+      z-index: 3;
+    }
+    .profile-photo.alex{
+      right: -10%;
+      bottom: -6%;
+      z-index: 2;
     }
 
     .note{
@@ -921,7 +950,7 @@
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
-                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -1036,7 +1065,7 @@
           </div>
           <div class="section-media">
             <div class="section-image">
-              <img src="assets/banner-cb-kids.jpg" alt="Students presenting a UX design" />
+              <img src="assets/instruct-presents-1.jpg" alt="Students presenting a UX design" />
             </div>
           </div>
         </div>
@@ -1139,7 +1168,11 @@
             </div>
           </div>
           <div class="section-media">
-            <img class="profile-photo" src="assets/Jared-Profile.png" alt="Jared Goldberg" />
+            <div class="profile-stack" aria-label="Jared Goldberg, Sarah Duong, and Alex Goldberg">
+              <img class="profile-photo jared" src="assets/Jared-Profile.png" alt="Jared Goldberg" />
+              <img class="profile-photo sarah" src="assets/sarah.png" alt="Sarah Duong" />
+              <img class="profile-photo alex" src="assets/alex.png" alt="Alex Goldberg" />
+            </div>
           </div>
         </div>
       </div>

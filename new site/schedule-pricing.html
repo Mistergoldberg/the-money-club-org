@@ -7,13 +7,13 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students' Union." />
   <meta property="og:title" content="Schedule &amp; Pricing | Toronto Kids Summer Camp 2026" />
-  <meta property="og:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students&#x27; Union." />
+  <meta property="og:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students' Union." />
   <meta property="og:url" content="https://the-money-club.org/schedule-pricing.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Schedule &amp; Pricing | Toronto Kids Summer Camp 2026" />
-  <meta name="twitter:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students&#x27; Union." />
+  <meta name="twitter:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students' Union." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/schedule-pricing.html" />
   <script type="application/ld+json">
@@ -380,8 +380,8 @@ nav{
       border-bottom: 1px solid var(--line);
     }
     .section-banner.gold{
-      background: var(--teal);
-      color: #ffffff;
+      background: var(--gold);
+      color: var(--ink);
     }
     .section-banner h2,
     .content-banner h2,
@@ -966,8 +966,8 @@ nav{
       scroll-margin-top: var(--scroll-offset);
     }
     .content-banner{
-      background: var(--teal);
-      color: #ffffff;
+      background: var(--gold);
+      color: var(--ink);
       padding: 26px 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
@@ -1006,6 +1006,16 @@ nav{
       gap: 16px;
       max-width: var(--content-max);
     }
+    .field-row{
+      display:grid;
+      gap: 16px;
+    }
+    .field-row.three-col{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .field-row.two-col{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
     .field{
       display:grid;
       gap: 6px;
@@ -1013,6 +1023,20 @@ nav{
     .field label{
       font-weight: 600;
       color: var(--ink);
+    }
+    .section-heading{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+      font-weight: 700;
+      color: var(--ink);
+      display: block;
+    }
+    .field label.section-heading{
+      font-weight: 700;
     }
     .field input,
     .field select,
@@ -1049,6 +1073,177 @@ nav{
       align-items:center;
       gap: 10px;
       font-weight: 600;
+    }
+    .session-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .session-card{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: #f6f4ef;
+      display: grid;
+      gap: 10px;
+      cursor: pointer;
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+      position: relative;
+      min-height: 140px;
+      overflow: hidden;
+    }
+    .session-card::after{
+      content: "";
+      position: absolute;
+      inset: -40% -20%;
+      background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.65) 50%, transparent 65%);
+      transform: translateX(-140%);
+      opacity: 0;
+      pointer-events: none;
+      animation: none;
+    }
+    .session-grid.gloss-active .session-card::after{
+      opacity: 0.7;
+      animation: gloss-sweep 2.8s ease-in-out infinite;
+    }
+    .session-card:hover{
+      border-color: var(--teal);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+    }
+    .session-card input{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .session-card-body{
+      display: grid;
+      gap: 6px;
+      text-align: center;
+    }
+    .session-title{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .session-availability{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .session-card:has(input:checked){
+      border-color: var(--gold);
+      box-shadow: 0 12px 24px rgba(240,180,58,0.25);
+      background: var(--gold);
+    }
+    .session-card:has(input:checked) .session-title,
+    .session-card:has(input:checked) .session-availability{
+      color: #ffffff;
+    }
+    .session-card.is-full{
+      opacity: 0.6;
+    }
+    .availability-note{
+      color: var(--muted);
+    }
+    .payment-section{
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+    .payment-section h2{
+      margin: 0;
+    }
+    .payment-section .field-error{
+      display: none;
+      color: #b00020;
+      font-size: 14px;
+    }
+    .payment-section.is-invalid .field-error{
+      display: block;
+    }
+    .payment-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .payment-option{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #ffffff;
+      padding: 18px;
+      display: grid;
+      gap: 8px;
+      text-align: left;
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .payment-option::after{
+      content: "";
+      position: absolute;
+      inset: -40% -20%;
+      background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.65) 50%, transparent 65%);
+      transform: translateX(-140%);
+      opacity: 0;
+      pointer-events: none;
+      animation: none;
+    }
+    .payment-option.is-enabled::after{
+      opacity: 0.7;
+      animation: gloss-sweep 2.8s ease-in-out infinite;
+    }
+    .payment-option:hover,
+    .payment-option:focus-visible{
+      border-color: var(--teal);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+      transform: translateY(-1px);
+    }
+    .payment-option.is-enabled:hover,
+    .payment-option.is-enabled:focus-visible{
+      background: var(--purple);
+      border-color: var(--purple);
+      color: #ffffff;
+    }
+    .payment-option.is-enabled:hover .payment-title,
+    .payment-option.is-enabled:hover .payment-body,
+    .payment-option.is-enabled:focus-visible .payment-title,
+    .payment-option.is-enabled:focus-visible .payment-body{
+      color: #ffffff;
+    }
+    .payment-option.is-disabled{
+      background: #f4f4f4;
+      color: #9b9b9b;
+      border-color: #dddddd;
+      box-shadow: none;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+    .payment-option.is-disabled .payment-title,
+    .payment-option.is-disabled .payment-body{
+      color: #9b9b9b;
+    }
+    .payment-title{
+      font-weight: 700;
+      font-size: clamp(22px, 3vw, 30px);
+    }
+    .payment-body{
+      color: var(--ink);
+    }
+    .payment-option.is-enabled .payment-title,
+    .payment-option.is-enabled .payment-body{
+      color: var(--ink);
+    }
+    .meeting-link{
+      color: #1a5cff;
+      font-weight: 600;
+    }
+    .meeting-link:hover,
+    .meeting-link:focus-visible{
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
     }
     .reservation-steps{
       margin-top: var(--space-6);
@@ -1229,12 +1424,12 @@ nav{
     }
     .confirmation-card{
       border: 1px solid var(--line);
-      border-radius: 16px;
+      border-radius: 14px;
       background: #ffffff;
-      padding: 18px 20px;
+      padding: 16px;
       display:grid;
       gap: 10px;
-      box-shadow: 0 12px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
     }
     .confirmation-grid h2{
       margin-top: 0;
@@ -1366,6 +1561,22 @@ nav{
       .quickfacts-content{ grid-template-columns: 1fr; }
       .reserve-content{ grid-template-columns: 1fr; }
       .reservation-row.two-col{ grid-template-columns: 1fr; }
+      .session-grid{ grid-template-columns: 1fr; }
+      .session-card{ padding: 10px; min-height: 0; }
+      .session-title{
+        font-size: clamp(16px, 4.4vw, 20px);
+        font-weight: 600;
+        color: #3a3a3a;
+      }
+      .session-availability{
+        font-size: clamp(15px, 4vw, 18px);
+        font-weight: 600;
+        color: #3a3a3a;
+      }
+      .field-row.three-col,
+      .field-row.two-col{
+        grid-template-columns: 1fr;
+      }
       .pricing-grid{ grid-template-columns: 1fr; }
       .pricing-details{ grid-template-columns: 1fr; }
       .confirmation-grid{ grid-template-columns: 1fr; }
@@ -1373,6 +1584,7 @@ nav{
       .tight-stack{ order: 1; }
       .pricing-details{ order: 2; }
       .pricing-actions{ order: 3; }
+      .payment-grid{ grid-template-columns: 1fr; }
 
       /* Mobile standards */
       .hero-logo{ display: none !important; }
@@ -1479,7 +1691,7 @@ nav{
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
-                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -1500,7 +1712,7 @@ nav{
   <main>
     <section class="section-banner gold">
       <div class="wrap">
-        <h2>2026 Summer Sessions</span></h2>
+        <h2>Toronto Kids Summer Camp 2026: Economic Literacy</span></h2>
       </div>
     </section>
 
@@ -1536,10 +1748,7 @@ nav{
               <div class="pricing-detail-card">
                 <h3>📍 Location</h3>
                 <div class="location-layout">
-                  <p class="location-text"><strong>UTSU Student Commons</strong><br />
-                    230 College Street<br />
-                    Toronto, ON <strong>M5T 1R2</strong>
-                  </p>
+                  <p class="location-text">University of Toronto Students' Union, 230 College Street, Toronto, ON M5T 1R2</p>
                 </div>
               </div>
               <div class="pricing-detail-card">
@@ -1818,65 +2027,95 @@ nav{
 
         <div class="reservation-row" id="reserve">
           <div class="reservation-card">
-            <h2>Reserve a Spot</h2>
+            <h2>Reserve a Spot, Summer 2026</h2>
             <form class="form-grid" action="apply-camper.php" method="post" novalidate>
-              <input type="hidden" name="return-to" value="schedule-pricing.html" />
-              <div class="field">
-                <label for="parent-name">Parent / Guardian Name</label>
-                <input id="parent-name" name="parent-name" type="text" required />
-                <small class="field-error">Parent/guardian name is required.</small>
-              </div>
-              <div class="field">
-                <label for="parent-email">Email Address</label>
-                <input id="parent-email" name="parent-email" type="email" required />
-                <small class="field-error">Enter a valid email address.</small>
-              </div>
-              <div class="field">
-                <label for="parent-phone">Phone Number</label>
-                <input id="parent-phone" name="parent-phone" type="tel" required />
-                <small class="field-error">Phone number is required.</small>
-              </div>
-              <div class="field">
-                <label for="student-name">Child’s Name</label>
-                <input id="student-name" name="student-name" type="text" required />
-                <small class="field-error">Child’s name is required.</small>
-              </div>
-              <div class="field">
-                <label for="student-age">Child’s Age</label>
-                <input id="student-age" name="student-age" type="text" required />
-                <small class="field-error">Child’s age is required.</small>
-              </div>
-              <div class="field">
-                <label>Choose Month</label>
-                <div class="radio-group">
-                  <label class="radio-option"><input type="radio" name="preferred-month" value="July" required /> July</label>
-                  <label class="radio-option"><input type="radio" name="preferred-month" value="August" /> August</label>
+              <input type="hidden" name="return-to" value="thank-you.html" />
+              <input type="hidden" name="return-error" value="schedule-pricing.html" />
+              <div class="field-row three-col">
+                <div class="field">
+                  <label for="parent-name">Parent / Guardian Name</label>
+                  <input id="parent-name" name="parent-name" type="text" required />
+                  <small class="field-error">Parent/guardian name is required.</small>
                 </div>
-                <small>Select one only.</small>
-                <small class="field-error">Please select a month.</small>
+                <div class="field">
+                  <label for="parent-email">Email Address</label>
+                  <input id="parent-email" name="parent-email" type="email" required />
+                  <small class="field-error">Enter a valid email address.</small>
+                </div>
+                <div class="field">
+                  <label for="parent-phone">Phone Number</label>
+                  <input id="parent-phone" name="parent-phone" type="tel" required />
+                  <small class="field-error">Phone number is required.</small>
+                </div>
+              </div>
+              <div class="field-row two-col">
+                <div class="field">
+                  <label for="student-name">Child’s Name</label>
+                  <input id="student-name" name="student-name" type="text" required />
+                  <small class="field-error">Child’s name is required.</small>
+                </div>
+                <div class="field">
+                  <label for="student-age">Child’s Age</label>
+                  <input id="student-age" name="student-age" type="text" required />
+                  <small class="field-error">Child’s age is required.</small>
+                </div>
               </div>
               <div class="field">
-                <label for="student-notes">Anything you want us to know? (optional)</label>
-                <textarea id="student-notes" name="student-notes" rows="4"></textarea>
+                <label class="section-heading">Choose A Session</label>
+                <div class="session-grid gloss-active">
+                  <label class="session-card">
+                    <input type="radio" name="preferred-session" value="session1" required />
+                    <div class="session-card-body">
+                      <div class="session-title">Session 1: July 6, 2026 → July 31, 2026</div>
+                      <div class="session-availability" data-session="session1">30 of 30 Spots Available</div>
+                    </div>
+                  </label>
+                  <label class="session-card">
+                    <input type="radio" name="preferred-session" value="session2" />
+                    <div class="session-card-body">
+                      <div class="session-title">Session 2: August 4, 2026 → August 28, 2026</div>
+                      <div class="session-availability" data-session="session2">30 of 30 Spots Available</div>
+                    </div>
+                  </label>
+                </div>
+                <small>Select one session only.</small>
+                <small class="availability-note">Spots are updated as reservations come in.</small>
+                <small class="field-error">Please select a session.</small>
               </div>
 
-            <div class="reservation-cta">
-              <button data-cta-label="Submit" class="btn purple cta-standard" type="submit">Submit</button>
-            </div>
+              <div class="payment-section">
+                <h2>Make Payment</h2>
+                <div class="payment-grid">
+                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true" disabled>
+                    <div class="payment-title">Credit Card</div>
+                    <div class="payment-body">A 2.4% credit card surcharge applies to help cover card processing costs. This surcharge is shown before you pay and appears as a separate line item on your receipt. Not applied to e-Transfer payments.</div>
+                  </button>
+                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true" disabled>
+                    <div class="payment-title">e-Transfer</div>
+                    <div class="payment-body">No surcharge. Pay by e-Transfer to avoid the credit card processing surcharge. We’ll email confirmation once received.</div>
+                  </button>
+                </div>
+                <small class="field-error">Please choose a payment method.</small>
+              </div>
+              <div class="confirmation-grid">
+                <div class="confirmation-card">
+                  <h2>Next Steps</h2>
+                  <div class="tight-stack">
+                    <p>Thank you — your spot is confirmed once payment is received. Next, you’ll receive an email with your permission forms and your receipt/confirmation.</p>
+                  </div>
+                </div>
+                <div class="confirmation-card">
+                  <h2>Need more information?</h2>
+                  <p><a class="meeting-link" href="https://calendly.com/me-mistergoldberg/30min">Book a meeting</a> and we’ll be happy to answer any questions.</p>
+                  <p><a class="meeting-link" href="schedule-pricing.html">View daily schedule &amp; 4-week program details</a></p>
+                </div>
+              </div>
             </form>
           </div>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="inner">
-      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
-      <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">Teaching financial literacy, design thinking, &amp; public speaking</div>
-    </div>
-  </footer>
 
   <script>
     (function(){
@@ -1987,6 +2226,91 @@ nav{
       if (success && params.get('status') === 'sent') {
         success.classList.add('is-visible');
       }
+      if (params.get('status') === 'error') {
+        var fieldName = params.get('field');
+        var message = params.get('message') || 'Please check the highlighted field.';
+        if (fieldName) {
+          if (fieldName === 'payment-method') {
+            var paymentSection = document.querySelector('.payment-section');
+            if (paymentSection) {
+              paymentSection.classList.add('is-invalid');
+              var paymentError = paymentSection.querySelector('.field-error');
+              if (paymentError) {
+                paymentError.textContent = message;
+              }
+              paymentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          } else {
+            var input = document.querySelector('[name=\"' + fieldName + '\"]');
+            if (input) {
+              var field = input.closest('.field');
+              if (field) {
+                field.classList.add('is-invalid');
+                var errorEl = field.querySelector('.field-error');
+                if (errorEl) {
+                  errorEl.textContent = message;
+                }
+                field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }
+          }
+        }
+      }
+
+      var sessionRadios = document.querySelectorAll('input[name="preferred-session"]');
+      var paymentButtons = document.querySelectorAll('.payment-option');
+      var sessionGrid = document.querySelector('.session-grid');
+      function setPaymentState(enabled){
+        paymentButtons.forEach(function(btn){
+          btn.classList.toggle('is-disabled', !enabled);
+          btn.classList.toggle('is-enabled', enabled);
+          btn.setAttribute('aria-disabled', String(!enabled));
+          btn.disabled = !enabled;
+        });
+        if (sessionGrid){
+          sessionGrid.classList.toggle('gloss-active', !enabled);
+        }
+      }
+      function sessionSelected(){
+        return Array.prototype.some.call(sessionRadios, function(radio){
+          return radio.checked;
+        });
+      }
+      setPaymentState(sessionSelected());
+      sessionRadios.forEach(function(radio){
+        radio.addEventListener('change', function(){
+          setPaymentState(sessionSelected());
+        });
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      var spotEls = document.querySelectorAll('.session-availability');
+      if (!spotEls.length){ return; }
+
+      function updateSpots(data){
+        spotEls.forEach(function(el){
+          var key = el.getAttribute('data-session');
+          if (!key || typeof data[key] !== 'number'){ return; }
+          var count = data[key];
+          var capacity = typeof data.capacity === 'number' ? data.capacity : 30;
+          el.textContent = count + ' of ' + capacity + ' Spots Available';
+          var row = el.closest('.session-card');
+          if (row){
+            row.classList.toggle('is-full', count <= 0);
+            var input = row.querySelector('input[type="radio"]');
+            if (input){
+              input.disabled = count <= 0;
+            }
+          }
+        });
+      }
+
+      fetch('availability.php', { cache: 'no-store' })
+        .then(function(res){ return res.json(); })
+        .then(updateSpots)
+        .catch(function(){});
     })();
   </script>
   <script>

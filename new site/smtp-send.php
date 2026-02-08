@@ -14,7 +14,11 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
         return trim(str_replace(["\r", "\n"], '', $value));
     };
 
-    $to = $sanitize_header($to);
+    $recipients = is_array($to) ? $to : preg_split('/\s*[;,]\s*/', (string) $to);
+    $recipients = array_values(array_filter(array_map($sanitize_header, $recipients)));
+    if (!$recipients) {
+        return false;
+    }
     $subject = $sanitize_header($subject);
     $from_email = $sanitize_header($from_email);
     $reply_to = $sanitize_header($reply_to);
@@ -100,10 +104,12 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
         return false;
     }
 
-    $response = $send_cmd('RCPT TO:<' . $to . '>');
-    if (!$expect_code($response, 250) && !$expect_code($response, 251)) {
-        fclose($socket);
-        return false;
+    foreach ($recipients as $recipient) {
+        $response = $send_cmd('RCPT TO:<' . $recipient . '>');
+        if (!$expect_code($response, 250) && !$expect_code($response, 251)) {
+            fclose($socket);
+            return false;
+        }
     }
 
     $response = $send_cmd('DATA');
@@ -113,10 +119,11 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
     }
 
     $from_header = $from_name !== '' ? $from_name . ' <' . $from_email . '>' : $from_email;
+    $to_header = implode(', ', $recipients);
     $headers = [
         'From: ' . $from_header,
         'Reply-To: ' . $reply_to,
-        'To: ' . $to,
+        'To: ' . $to_header,
         'Subject: ' . $subject,
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
