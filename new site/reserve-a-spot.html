@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Reserve a Spot | Toronto Kids Summer Camp 2026</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Reserve a spot for the Toronto kids summer camp 2026. July &amp; August sessions, ages 11–17." />
+  <meta name="description" content="Reserve a spot for the Toronto kids summer camp 2026. July &amp; August sessions, ages 11–16." />
   <meta property="og:title" content="Reserve a Spot | Toronto Kids Summer Camp 2026" />
-  <meta property="og:description" content="Reserve a spot for the Toronto kids summer camp 2026. July &amp; August sessions, ages 11–17." />
+  <meta property="og:description" content="Reserve a spot for the Toronto kids summer camp 2026. July &amp; August sessions, ages 11–16." />
   <meta property="og:url" content="https://the-money-club.org/reserve-a-spot.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Reserve a Spot | Toronto Kids Summer Camp 2026" />
-  <meta name="twitter:description" content="Reserve a spot for the Toronto kids summer camp 2026. July &amp; August sessions, ages 11–17." />
+  <meta name="twitter:description" content="Reserve a spot for the Toronto kids summer camp 2026. July &amp; August sessions, ages 11–16." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
     <link rel="canonical" href="https://the-money-club.org/reserve-a-spot.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1055,8 +1055,14 @@ nav{
       animation: gloss-sweep 2.8s ease-in-out infinite;
     }
     .session-card:hover{
-      border-color: var(--teal);
-      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+      border-color: var(--gold);
+      background: var(--gold);
+      box-shadow: 0 12px 22px rgba(240,180,58,0.25);
+      color: #ffffff;
+    }
+    .session-card:hover .session-title,
+    .session-card:hover .session-availability{
+      color: #ffffff;
     }
     .session-grid.is-locked .session-card{
       background: #f4f4f4;
@@ -1217,6 +1223,45 @@ nav{
       display: grid;
       gap: 12px;
     }
+    .payment-meta{
+      display: grid;
+      gap: 6px;
+      font-size: inherit;
+      color: #222222;
+      font-family: var(--font-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+    .payment-meta a{
+      color: #1a5cff;
+      text-decoration: underline;
+    }
+    .terms-consent{
+      display: grid;
+      gap: 6px;
+    }
+    .terms-consent label{
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: inherit;
+      color: #222222;
+      font-family: var(--font-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+    .terms-consent a{
+      color: #1a5cff;
+      text-decoration: underline;
+    }
+    .terms-consent input{
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+    }
+    .terms-consent .field-error{
+      margin-left: 28px;
+    }
     .payment-section h2{
       margin: 0;
     }
@@ -1269,7 +1314,6 @@ nav{
       border-color: #dddddd;
       box-shadow: none;
       cursor: not-allowed;
-      pointer-events: none;
     }
     .payment-option.is-disabled .payment-title,
     .payment-option.is-disabled .payment-body{
@@ -1302,6 +1346,19 @@ nav{
     .payment-body{
       color: var(--ink);
       line-height: 1.3;
+    }
+    .payment-body .payment-total{
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .payment-body ul{
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+    .payment-body li{
+      margin: 0;
     }
     .payment-option.is-enabled .payment-title,
     .payment-option.is-enabled .payment-body{
@@ -1563,24 +1620,24 @@ nav{
               <div class="field-row three-col">
                 <div class="field">
                   <label for="parent-name">Parent / Guardian Name</label>
-                  <input id="parent-name" name="parent-name" type="text" required />
+                  <input id="parent-name" name="parent-name" data-next="parent-email" type="text" autocomplete="name" required />
                   <small class="field-error">Parent/guardian name is required.</small>
                 </div>
                 <div class="field">
                   <label for="parent-email">Email Address</label>
-                  <input id="parent-email" name="parent-email" type="email" required />
+                  <input id="parent-email" name="parent-email" data-next="parent-phone" type="email" autocomplete="email" required />
                   <small class="field-error">Enter a valid email address.</small>
                 </div>
                 <div class="field">
                   <label for="parent-phone">Phone Number</label>
-                  <input id="parent-phone" name="parent-phone" type="tel" required />
+                  <input id="parent-phone" name="parent-phone" data-next="student-name" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
                   <small class="field-error">Phone number is required.</small>
                 </div>
               </div>
               <div class="field-row two-col">
                 <div class="field">
                   <label for="student-name">Child’s Name</label>
-                  <input id="student-name" name="student-name" type="text" required />
+                  <input id="student-name" name="student-name" data-next="student-age" type="text" autocomplete="name" required />
                   <small class="field-error">Child’s name is required.</small>
                 </div>
                 <div class="field">
@@ -1607,22 +1664,45 @@ nav{
                     </div>
                   </label>
                 </div>
-                <small>Select one session only.</small>
-                <small class="availability-note">Spots are updated as reservations come in.</small>
                 <small class="field-error">Please select a session.</small>
               </div>
               <div class="payment-section">
                 <h2>Make Payment</h2>
-              <div class="payment-grid">
-                <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true" disabled>
-                  <div class="payment-title">e-Transfer</div>
-                  <div class="payment-body">No surcharge. Pay by e-Transfer to avoid the credit card processing surcharge. We’ll email confirmation once received.</div>
-                </button>
-                <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true" disabled>
-                  <div class="payment-title">Credit Card</div>
-                  <div class="payment-body">A 2.4% credit card surcharge applies to help cover card processing costs. This surcharge is shown before you pay and appears as a separate line item on your receipt. Not applied to e-Transfer payments.</div>
-                </button>
-              </div>
+                <div class="payment-meta">
+                  <div>Program fee: $1,500 + 13% HST</div>
+                  <div>Refunds available until June 1, 2026.</div>
+                </div>
+                <div class="field terms-consent">
+                  <label for="terms-agree">
+                    <input id="terms-agree" name="terms-agree" type="checkbox" required />
+                    <span>I agree to the <a href="program-terms.html">Terms &amp; Payment Policy</a> and I acknowledge the <a href="privacy-policy.html">Privacy Policy.</a></span>
+                  </label>
+                  <small class="field-error">Please confirm you agree to the terms and policies.</small>
+                </div>
+                <div class="payment-grid">
+                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true">
+                    <div class="payment-title">e-Transfer</div>
+                    <div class="payment-body">
+                      <div class="payment-total">Total: $1,695.00 CAD (includes HST)</div>
+                      <ul>
+                        <li>No processing fee. Pay by e-Transfer to avoid the credit card surcharge.</li>
+                        <li>Refunds available until June 1, 2026.</li>
+                        <li>We’ll email confirmation within 24 hours of receiving your transfer.</li>
+                      </ul>
+                    </div>
+                  </button>
+                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true">
+                    <div class="payment-title">Credit Card</div>
+                    <div class="payment-body">
+                      <div class="payment-total">Total: $1,735.68 CAD (Includes HST + 2.4% surcharge)</div>
+                      <ul>
+                        <li>A 2.4% credit card surcharge applies to help cover card processing costs.</li>
+                        <li>Refunds available until June 1, 2026 — the credit card processing surcharge is non-refundable.</li>
+                        <li>Instant confirmation after payment.</li>
+                      </ul>
+                    </div>
+                  </button>
+                </div>
                 <small class="field-error">Please choose a payment method.</small>
               </div>
             <div class="confirmation-grid is-hidden">
@@ -1790,12 +1870,17 @@ nav{
       var sessionRadios = document.querySelectorAll('input[name="preferred-session"]');
       var paymentButtons = document.querySelectorAll('.payment-option');
       var sessionGrid = document.querySelector('.session-grid');
-      var requiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
+      var baseRequiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
+      var termsAgree = document.getElementById('terms-agree');
 
-      function requiredFieldsValid(){
-        return Array.prototype.every.call(requiredInputs, function(input){
+      function baseFieldsValid(){
+        return Array.prototype.every.call(baseRequiredInputs, function(input){
           return input.checkValidity();
         });
+      }
+
+      function termsAgreed(){
+        return !termsAgree || termsAgree.checked;
       }
 
       function sessionSelected(){
@@ -1805,7 +1890,7 @@ nav{
       }
 
       function setSessionState(){
-        var canSelectSession = requiredFieldsValid();
+        var canSelectSession = baseFieldsValid();
         if (sessionGrid){
           sessionGrid.classList.toggle('is-locked', !canSelectSession);
           sessionGrid.classList.toggle('gloss-active', canSelectSession && !sessionSelected());
@@ -1822,7 +1907,6 @@ nav{
           btn.classList.toggle('is-disabled', !enabled);
           btn.classList.toggle('is-enabled', enabled);
           btn.setAttribute('aria-disabled', String(!enabled));
-          btn.disabled = !enabled;
         });
       }
 
@@ -1850,7 +1934,7 @@ nav{
 
       function updateFlowState(){
         setSessionState();
-        var canPay = requiredFieldsValid() && sessionSelected();
+        var canPay = baseFieldsValid() && sessionSelected() && termsAgreed();
         setPaymentState(canPay);
       }
 
@@ -1873,7 +1957,15 @@ nav{
 
       paymentButtons.forEach(function(btn){
         btn.addEventListener('click', function(e){
-          if (!requiredFieldsValid()){
+          var form = btn.form;
+          if (form) {
+            if (btn.value === 'Credit Card') {
+              form.setAttribute('action', 'stripe-checkout.php');
+            } else {
+              form.setAttribute('action', 'apply-camper.php');
+            }
+          }
+          if (!baseFieldsValid()){
             e.preventDefault();
             showFirstInvalidField();
             return;
@@ -1881,6 +1973,11 @@ nav{
           if (!sessionSelected()){
             e.preventDefault();
             showSessionError();
+            return;
+          }
+          if (!termsAgreed()){
+            e.preventDefault();
+            showFirstInvalidField();
           }
         });
       });
@@ -1909,10 +2006,22 @@ nav{
         });
       }
 
-      fetch('availability.php', { cache: 'no-store' })
-        .then(function(res){ return res.json(); })
+      function fetchAvailability(url){
+        return fetch(url, { cache: 'no-store' }).then(function(res){
+          if (!res.ok){
+            throw new Error('bad response');
+          }
+          return res.json();
+        });
+      }
+
+      fetchAvailability('availability.php')
         .then(updateSpots)
-        .catch(function(){});
+        .catch(function(){
+          fetchAvailability('data/availability.json')
+            .then(updateSpots)
+            .catch(function(){});
+        });
     })();
   </script>
   <script>
@@ -1959,6 +2068,29 @@ nav{
       });
     })();
   </script>
+  <script>
+    (function(){
+      var inputs = document.querySelectorAll('[data-next]');
+      function focusNext(input){
+        var nextId = input.getAttribute('data-next');
+        if (!nextId){ return; }
+        var next = document.getElementById(nextId);
+        if (next){
+          next.focus();
+        }
+      }
+      inputs.forEach(function(input){
+        input.addEventListener('keydown', function(e){
+          if (e.key !== 'Enter'){ return; }
+          if (input.checkValidity()){
+            e.preventDefault();
+            focusNext(input);
+          }
+        });
+      });
+    })();
+  </script>
+
 
 </body>
 </html>

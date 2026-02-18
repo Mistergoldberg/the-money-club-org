@@ -1,16 +1,31 @@
 <?php
 header('Content-Type: application/json');
 
-$path = __DIR__ . '/data/availability.json';
+function get_data_dir() {
+    $outside = dirname(__DIR__) . '/data';
+    if (is_dir($outside) && is_writable($outside)) {
+        return $outside;
+    }
+    $inside = __DIR__ . '/data';
+    if (is_dir($inside) && is_writable($inside)) {
+        return $inside;
+    }
+    return $inside;
+}
+
 $defaults = [
     'session1' => 30,
     'session2' => 30
 ];
 
+$path = get_data_dir() . '/availability.json';
 $fp = fopen($path, 'c+');
 if (!$fp) {
-    http_response_code(500);
-    echo json_encode(['error' => 'Unable to read availability.']);
+    echo json_encode([
+        'session1' => $defaults['session1'],
+        'session2' => $defaults['session2'],
+        'capacity' => 30
+    ]);
     exit;
 }
 

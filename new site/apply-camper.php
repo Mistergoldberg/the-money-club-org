@@ -1,10 +1,30 @@
 <?php
 require_once __DIR__ . '/smtp-send.php';
 
+function get_data_dir() {
+    $outside = dirname(__DIR__) . '/data';
+    if (is_dir($outside) && is_writable($outside)) {
+        return $outside;
+    }
+    $inside = __DIR__ . '/data';
+    if (is_dir($inside) && is_writable($inside)) {
+        return $inside;
+    }
+    return $inside;
+}
+
 // Simple form handler for camper reservations.
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: reserve-a-spot.html');
     exit;
+}
+
+$data_dir = get_data_dir();
+$log_path = $data_dir . '/apply-camper.log';
+function log_debug($message) {
+    $timestamp = date('Y-m-d H:i:s');
+    $line = '[' . $timestamp . '] ' . $message . "\n";
+    @file_put_contents($GLOBALS['log_path'], $line, FILE_APPEND);
 }
 
 $parent_name = isset($_POST['parent-name']) ? trim($_POST['parent-name']) : '';
@@ -15,6 +35,7 @@ $student_age = isset($_POST['student-age']) ? trim($_POST['student-age']) : '';
 $preferred_session = isset($_POST['preferred-session']) ? trim($_POST['preferred-session']) : '';
 $preferred_month = isset($_POST['preferred-month']) ? trim($_POST['preferred-month']) : '';
 $payment_method = isset($_POST['payment-method']) ? trim($_POST['payment-method']) : '';
+$terms_agree = isset($_POST['terms-agree']) ? trim($_POST['terms-agree']) : '';
 $notes = isset($_POST['student-notes']) ? trim($_POST['student-notes']) : '';
 
 $return_to = isset($_POST['return-to']) ? trim($_POST['return-to']) : 'reserve-a-spot.html';
@@ -29,6 +50,7 @@ if (!in_array($error_return, $allowed_returns, true)) {
 }
 
 function redirect_with_error($return_to, $field, $message) {
+    log_debug('redirect_with_error field=' . $field . ' message=' . $message . ' return=' . $return_to);
     $params = [
         'status' => 'error',
         'field' => $field,
@@ -38,6 +60,8 @@ function redirect_with_error($return_to, $field, $message) {
     header('Location: ' . $return_to . $separator . http_build_query($params));
     exit;
 }
+
+log_debug('apply-camper POST email=' . $parent_email . ' phone=' . $parent_phone . ' age=' . $student_age . ' session=' . $preferred_session . ' payment=' . $payment_method . ' terms=' . ($terms_agree !== '' ? 'yes' : 'no') . ' return=' . $return_to);
 
 if ($parent_name === '') {
     redirect_with_error($error_return, 'parent-name', 'Parent/guardian name is required.');
@@ -80,11 +104,15 @@ if (!array_key_exists($preferred_session, $session_map)) {
     redirect_with_error($error_return, 'preferred-session', 'Please select a session.');
 }
 
+if ($terms_agree === '') {
+    redirect_with_error($error_return, 'terms-agree', 'Please agree to the program terms and privacy policy.');
+}
+
 if ($payment_method === '' || !in_array($payment_method, ['Credit Card', 'e-Transfer'], true)) {
     redirect_with_error($error_return, 'payment-method', 'Please choose a payment method.');
 }
 
-$availability_path = __DIR__ . '/data/availability.json';
+$availability_path = $data_dir . '/availability.json';
 $availability_defaults = [
     'session1' => 30,
     'session2' => 30
@@ -128,10 +156,16 @@ $reserve_result = update_availability($availability_path, $availability_defaults
 });
 
 if (!$reserve_result['ok']) {
-    redirect_with_error($error_return, 'preferred-session', 'Selected session is full. Please choose another session or contact us.');
+    if (isset($reserve_result['error'])) {
+        log_debug('availability error: ' . $reserve_result['error']);
+        $reserve_result = ['ok' => true, 'remaining' => 'unknown'];
+    } else {
+        log_debug('session full: ' . $preferred_session);
+        redirect_with_error($error_return, 'preferred-session', 'Selected session is full. Please choose another session or contact us.');
+    }
 }
 
-$to = ['jared@the-money-club.org', 'sarah@the-money-club.org'];
+$to = ['jared@the-money-club.org', 'alex@the-money-club.org', 'sarah@the-money-club.org'];
 $subject = 'Reserve a Spot: The Money Club.Org';
 $from = 'info@the-money-club.org';
 
@@ -143,12 +177,14 @@ $lines[] = 'Child Name: ' . ($student_name !== '' ? $student_name : '(not provid
 $lines[] = 'Child Age: ' . ($student_age !== '' ? $student_age : '(not provided)');
 $lines[] = 'Session: ' . $session_map[$preferred_session];
 $lines[] = 'Session spots remaining: ' . (string)$reserve_result['remaining'];
+$lines[] = 'Terms agreed: ' . ($terms_agree !== '' ? 'Yes' : 'No');
 $lines[] = 'Payment method: ' . ($payment_method !== '' ? $payment_method : '(not specified)');
 $lines[] = 'Notes: ' . ($notes !== '' ? $notes : '(none)');
 
 $message = implode("\n", $lines);
 
 if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
+    log_debug('smtp_send_mail failed for ' . $parent_email);
     update_availability($availability_path, $availability_defaults, function (&$data) use ($preferred_session) {
         $data[$preferred_session] = (int)$data[$preferred_session] + 1;
         return ['ok' => true];
@@ -156,9 +192,53 @@ if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
     redirect_with_error($error_return, 'payment-method', 'Unable to send confirmation email. Please try again.');
 }
 
+log_debug('smtp_send_mail success for ' . $parent_email . ' session=' . $preferred_session . ' payment=' . $payment_method);
+
+$csv_path = $data_dir . '/apply-camper-submissions.csv';
+$csv_headers = [
+    'submitted_at',
+    'parent_name',
+    'parent_email',
+    'parent_phone',
+    'student_name',
+    'student_age',
+    'session',
+    'terms_agreed',
+    'payment_method',
+    'spots_remaining'
+];
+$csv_row = [
+    date('Y-m-d H:i:s'),
+    $parent_name,
+    $parent_email,
+    $parent_phone,
+    $student_name,
+    $student_age,
+    $session_map[$preferred_session],
+    ($terms_agree !== '' ? 'Yes' : 'No'),
+    $payment_method,
+    (string)$reserve_result['remaining']
+];
+
+$csv_fp = fopen($csv_path, 'a+');
+if ($csv_fp) {
+    if (flock($csv_fp, LOCK_EX)) {
+        $is_empty = (filesize($csv_path) === 0);
+        if ($is_empty) {
+            fputcsv($csv_fp, $csv_headers);
+        }
+        fputcsv($csv_fp, $csv_row);
+        fflush($csv_fp);
+        flock($csv_fp, LOCK_UN);
+    }
+    fclose($csv_fp);
+}
+
 if ($return_to === 'thank-you.html') {
+    log_debug('redirect success to thank-you.html');
     header('Location: ' . $return_to);
 } else {
+    log_debug('redirect success to return_to=' . $return_to);
     header('Location: ' . $return_to . '?status=sent');
 }
 exit;

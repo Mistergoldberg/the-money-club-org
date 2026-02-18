@@ -1160,6 +1160,11 @@ nav{
         --btn-size: 35.04px;
         --btn-size-lg: 35.04px;
       }
+      .section-banner.sticky-banner{
+        position: static;
+        top: auto;
+        box-shadow: none;
+      }
       .section-banner h2,
       .content-banner h2,
       .curriculum-banner h2,
@@ -1293,7 +1298,7 @@ nav{
         <a class="nav-hiring" href="instructors.html">We're hiring</a>
         <a href="how-it-works.html">How it works</a>
         <a href="open-book-hook.html">Open-book financials</a>
-        <a href="curriculum.html">Curriculum</a>
+        <a href="schedule-pricing.html">Curriculum</a>
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
@@ -1306,7 +1311,7 @@ nav{
         <a class="nav-hiring" href="instructors.html">We're hiring</a>
         <a href="how-it-works.html">How it works</a>
         <a href="open-book-hook.html">Open-book financials</a>
-        <a href="curriculum.html">Curriculum</a>
+        <a href="schedule-pricing.html">Curriculum</a>
         <a href="who-runs-it.html">Who runs it</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -1347,6 +1352,11 @@ nav{
                 <label for="applicant-link">LinkedIn profile or resume link</label>
                 <input id="applicant-link" name="applicant-link" type="url" placeholder="https://linkedin.com/in/..." required />
                 <small class="field-error">Please provide a valid link.</small>
+              </div>
+              <div class="field">
+                <label for="applicant-interest">Tell us why you are interested in leading this program (5–8 sentences):</label>
+                <textarea id="applicant-interest" name="applicant-interest" rows="6" required></textarea>
+                <small class="field-error">Please share 5–8 sentences about your interest in leading the program.</small>
               </div>
               <div class="confirmation-card">
                 <h2>🛡️ Background Check Requirement</h2>

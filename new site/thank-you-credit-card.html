@@ -3,19 +3,27 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Open-Book Financials | Toronto Kids Summer Camp 2026</title>
+  <title>Thank You | The Money Club</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Open-book financials for the Toronto kids summer camp 2026. See how tuition funds instruction, materials, and the learning system." />
-  <meta property="og:title" content="Open-Book Financials | Toronto Kids Summer Camp 2026" />
-  <meta property="og:description" content="Open-book financials for the Toronto kids summer camp 2026. See how tuition funds instruction, materials, and the learning system." />
-  <meta property="og:url" content="https://the-money-club.org/open-book-hook.html" />
+  <meta name="description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
+  <meta property="og:title" content="You just invested in the local economy." />
+  <meta property="og:description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
+  <meta property="og:url" content="https://the-money-club.org/thank-you.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://the-money-club.org/assets/banner-kid-presents.jpg" />
+  <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Open-Book Financials | Toronto Kids Summer Camp 2026" />
-  <meta name="twitter:description" content="Open-book financials for the Toronto kids summer camp 2026. See how tuition funds instruction, materials, and the learning system." />
-  <meta name="twitter:image" content="https://the-money-club.org/assets/banner-kid-presents.jpg" />
-  <link rel="canonical" href="https://the-money-club.org/open-book-hook.html" />
+  <meta name="twitter:title" content="You just invested in the local economy." />
+  <meta name="twitter:description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
+  <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <link rel="canonical" href="https://the-money-club.org/thank-you.html" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "You just invested in the local economy.",
+      "url": "https://the-money-club.org/thank-you.html"
+    }
+  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -30,8 +38,6 @@
       --purple: #8c62a7;
       --gold: #f0b43a;
       --ink: #1a1a1a;
-      --rose: #d8697a;
-      --slate: #5f6f7a;
 
       --font-body: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       --font-display: "Bebas Neue", sans-serif;
@@ -304,71 +310,33 @@ nav{
       box-shadow: 0 10px 20px rgba(240,180,58,0.25);
     }
 
-    /* Hero */
-    .hero{
-      padding: 18px 0 6px;
+    /* Banner */
+    .section-banner{
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
-    .hero-top{
-      display:flex;
-      align-items: center;
-      gap: 28px;
-      justify-content: center;
-      margin: 0 auto;
-      width: fit-content;
-    }
-    .hero-logo{
-      width: 152px;
-      height: 152px;
-      display: block;
-    }
-    .hero-title-block{
-      width: 100%;
-      text-align: left;
-    }
-    .hero-title{
-      color: var(--teal);
-      line-height: 0.85;
-      letter-spacing: normal;
-      text-align: left;
-    }
-    .hero-sub{
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: inherit;
+    .section-banner.gold{
+      background: var(--gold);
       color: var(--ink);
-      margin: 2px 0 0;
-      line-height: 1.05;
-      text-align: left;
     }
-    .hero-copy{
-      font-family: var(--font-display);
-      font-size: clamp(26px, 3.2vw, 40px);
-      text-transform: uppercase;
-      letter-spacing: var(--tracking-display);
-      margin: 12px 0 12px;
-      width: 100%;
-    }
-    .hero-image{
-      width: 100%;
-      border-radius: 22px;
-      overflow-y: auto;
-      border: 1px solid var(--line);
-      margin-top: 12px;
-    }
-    .hero-image img{
-      display:block;
-      width: 100%;
-      height: auto;
-    }
-    .hero-image.banner img{
-      height: clamp(220px, 32vw, 420px);
-      object-fit: cover;
-      object-position: center 35%;
+    .section-banner h2,
+    .content-banner h2,
+    .curriculum-banner h2,
+    .deploy-banner h2,
+    .math-banner h2,
+    .openbook-banner h2,
+    .quickfacts-banner h2,
+    .reserve-banner h2,
+    .teachers-banner h2,
+    .why-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .section-banner h2 span{
+      display: block;
     }
 
     /* Below hero */
     .headline{
-      margin: 16px auto 12px;
+      margin: 16px auto 0;
       font-size: var(--size-headline);
       line-height: 1.05;
       position: relative;
@@ -387,11 +355,15 @@ nav{
       100%{ background-position: 0% 50%; }
     }
     .subhead{
-      font-size: inherit;
+      font-size: var(--size-headline);
       color: var(--muted);
       line-height: inherit;
-      margin-top: 6px;
+      font-family: var(--font-display);
+      margin-top: 0.15rem;
       max-width: var(--content-max);
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
     .below{
       margin-top: 10px;
@@ -602,7 +574,7 @@ nav{
     }
     .openbook-banner{
       background: var(--gold);
-      color: #ffffff;
+      color: var(--ink);
       padding: 26px 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
@@ -665,125 +637,42 @@ nav{
       gap: 18px;
       height: 100%;
     }
-    .openbook-visual{
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      overflow-y: auto;
-      background: #ffffff;
-    }
-    .openbook-visual.mobile-visual{
-      display: none;
-    }
-    .openbook-visual img{
-      display:block;
-      width: 100%;
-      height: auto;
-    }
-    .openbook-summary{
-      margin-top: 18px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-      padding: 18px;
-      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
-    }
-    .openbook-summary.standout{
-      background: #ffffff;
-      border-color: var(--line);
-      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
-    }
-    .openbook-expenses{
-      margin-top: 28px;
-    }
-    .openbook-expenses .openbook-summary{
-      margin-top: 0;
-    }
-    .openbook-summary h3{
-      margin: 0 0 10px;
-      text-align: center;
-    }
     .openbook-pie-card{
       border-radius: 18px;
       border: 1px solid var(--line);
       background: #ffffff;
       padding: 16px;
-      display: grid;
-      gap: 12px;
     }
     .openbook-subheading{
       margin: 0 0 10px;
       text-align: center;
     }
     .openbook-pie{
-      width: min(360px, 100%);
+      width: 100%;
+      max-width: 360px;
       aspect-ratio: 1 / 1;
       border-radius: 50%;
       margin: 0 auto 14px;
       background:
         conic-gradient(
-          var(--purple) 0% 33.6%,
-          var(--teal) 33.6% 57.3%,
-          var(--gold) 57.3% 79.3%,
-          var(--ink) 79.3% 82%,
-          var(--slate) 82% 90%,
-          var(--rose) 90% 100%
+          var(--purple) 0% 35%,
+          var(--teal) 35% 40%,
+          var(--gold) 40% 80%,
+          var(--ink) 80% 100%
         );
-      position: relative;
-      display: grid;
-      place-items: center;
-    }
-    .openbook-pie::after{
-      content: "";
-      position: absolute;
-      inset: 18%;
-      background: #ffffff;
-      border-radius: 50%;
-      box-shadow: inset 0 0 0 1px var(--line);
-    }
-    .openbook-pie-center{
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      display: grid;
-      gap: 4px;
-    }
-    .openbook-pie-center .label{
-      font-size: var(--size-sm);
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: var(--muted);
-    }
-    .openbook-pie-center .value{
-      font-family: var(--font-display);
-      font-size: clamp(32px, 7vw, 52px);
-      letter-spacing: var(--tracking-display);
-      color: var(--ink);
     }
     .openbook-legend{
-      list-style: none;
+      display:grid;
+      gap: 6px;
+      font-size: 18px;
       margin: 0;
       padding: 0;
-      display: grid;
-      gap: 10px;
+      list-style: none;
     }
     .openbook-legend li{
-      display: grid;
-      grid-template-columns: 12px minmax(0, 1fr) auto;
-      gap: 10px;
-      align-items: center;
-    }
-    .openbook-legend .legend-label{
-      color: var(--ink);
-    }
-    .openbook-legend .legend-value{
-      font-weight: 600;
-      text-align: right;
-      color: var(--ink);
-    }
-    .openbook-legend .legend-value small{
-      font-weight: 500;
-      color: var(--muted);
-      margin-left: 6px;
+      display:flex;
+      align-items:center;
+      gap: 8px;
     }
     .legend-dot{
       width: 12px;
@@ -799,13 +688,6 @@ nav{
     .openbook-heading{
       margin: 0 0 8px;
     }
-    .openbook-statement{
-      font-family: var(--font-body);
-      font-weight: 400;
-      text-transform: none;
-      letter-spacing: 0;
-      line-height: var(--lh-body);
-    }
     .openbook-center{
       text-align: center;
     }
@@ -814,22 +696,6 @@ nav{
       grid-template-columns: 1fr 1fr;
       gap: 16px;
       margin-top: 12px;
-    }
-    .openbook-cta-row{
-      display:grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 18px;
-      margin-top: 28px;
-      justify-items: start;
-    }
-    .openbook-cta-row .btn{
-      font-family: var(--font-display);
-      font-size: var(--btn-size-lg);
-      letter-spacing: var(--tracking-display);
-      text-transform: uppercase;
-      border-radius: 16px;
-      padding: 22px 24px;
-      width: 100%;
     }
     .openbook-copy{
       display:flex;
@@ -863,167 +729,6 @@ nav{
       text-transform: uppercase;
       border-radius: 16px;
       padding: 26px 24px;
-    }
-
-    .math-section{
-      margin-top: var(--space-6);
-    }
-    .math-banner{
-      background: var(--purple);
-      color: #ffffff;
-      padding: 26px 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .math-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
-    .math-content{
-      max-width: var(--max-wide);
-      margin: 0 auto;
-      padding: 24px var(--pad) 10px;
-      display:grid;
-      gap: 28px;
-    }
-    .math-layout{
-      display:grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 28px;
-      align-items:stretch;
-    }
-    .math-col{
-      display:grid;
-      gap: 18px;
-    }
-    .math-card{
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-      padding: 16px 18px;
-      display:grid;
-      gap: 12px;
-      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
-    }
-    .math-card p{
-      margin: 0;
-    }
-    .math-card ul{
-      margin: 0;
-      padding-left: 20px;
-    }
-    .math-card ul li:first-child{
-      margin-top: 0;
-    }
-    .math-row-full{
-      grid-column: 1 / -1;
-    }
-    .math-card.standout{
-      background: #fff6e1;
-      border-color: var(--gold);
-      box-shadow: 0 18px 30px rgba(240,180,58,0.25);
-    }
-    .math-card.revenue{
-      text-align: left;
-    }
-    .math-card.revenue ul{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .revenue-title{
-      margin: 0;
-      text-align: center;
-      font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.1;
-    }
-    .revenue-list{
-      margin: 12px 0 0;
-      display:grid;
-      gap: 10px;
-    }
-    .revenue-list li{
-      display:grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 6px 12px;
-      align-items: baseline;
-      padding: 12px 14px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #ffffff;
-    }
-    .revenue-list .value{
-      font-weight: 700;
-      color: var(--ink);
-    }
-    .revenue-list small{
-      grid-column: 1 / -1;
-      color: var(--muted);
-      font-size: 0.9em;
-    }
-    .revenue-total{
-      margin-top: 12px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-      display:grid;
-      gap: 6px;
-      text-align: center;
-    }
-    .revenue-total .label{
-      font-size: var(--size-sm);
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: var(--muted);
-    }
-    .math-card h3,
-    .math-subhead,
-    .math-minihead,
-    .openbook-summary h3{
-      font-family: var(--font-body);
-      text-transform: none;
-      letter-spacing: 0;
-      line-height: var(--lh-body);
-      font-weight: 700;
-    }
-    .math-subhead{
-      margin: 0;
-      font-size: clamp(20px, 2.4vw, 26px);
-    }
-    .math-subtitle{
-      font-size: inherit;
-      color: var(--muted);
-    }
-    .math-note{
-      font-size: inherit;
-      color: var(--muted);
-      margin: 0;
-    }
-    .math-figure{
-      font-family: var(--font-display);
-      font-size: clamp(34px, 6vw, 56px);
-      letter-spacing: var(--tracking-display);
-      color: var(--ink);
-    }
-    .math-divider{
-      height: 1px;
-      background: var(--line);
-      width: 100%;
-    }
-    .math-quote{
-      border-left: 4px solid var(--purple);
-      padding: 10px 14px;
-      margin: 0;
-      background: #faf7fb;
-      font-weight: 600;
-    }
-    .math-mini{
-      display:grid;
-      gap: 10px;
-    }
-    .math-minihead{
-      margin: 0;
-      font-size: inherit;
-      font-weight: 700;
-      color: var(--ink);
     }
 
     .teachers-section{
@@ -1119,6 +824,9 @@ nav{
       gap: 20px;
       align-items: stretch;
     }
+    .quickfacts-content > div:first-child{
+      max-width: var(--content-max);
+    }
     .quickfacts-list{
       margin: 12px 0 0;
       padding-left: 18px;
@@ -1137,16 +845,6 @@ nav{
       box-shadow: 0 12px 22px rgba(0,0,0,0.08);
       height: 100%;
     }
-    .quickfacts-card.essentials{
-      text-align: left;
-      justify-items: start;
-      align-content: start;
-    }
-    .quickfacts-card.essentials .quickfacts-list{ margin-top: 8px; }
-    .quickfacts-note{
-      margin: 0;
-      color: var(--muted);
-    }
     .quickfacts-card .btn{
       width: 100%;
       max-width: 420px;
@@ -1154,7 +852,6 @@ nav{
       font-size: var(--btn-size-lg);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      color: #ffffff;
     }
 
     .reserve-section{
@@ -1201,32 +898,46 @@ nav{
       padding: 22px 22px;
     }
 
-    /* Banner */
-    .section-banner{
+    .content-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .content-banner{
+      background: var(--gold);
+      color: var(--ink);
       padding: 26px 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
-    .section-banner.full-bleed{
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      margin-right: calc(50% - 50vw);
-    }
-    .section-banner.purple{
+    .content-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .content-section.purple .content-banner{
       background: var(--purple);
       color: #ffffff;
     }
-    .section-banner.heading-white{
-      color: #ffffff;
+    .content-section.gold .content-banner{
+      background: var(--gold);
+      color: #fff;
     }
-    .section-banner.heading-white h2{
-      color: #ffffff;
+    .content-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 10px;
     }
-    .section-banner h2{
-      font-size: clamp(34px, 5vw, 56px);
-      line-height: 0.8;
+    .content-copy{
+      max-width: var(--content-max);
+      display:grid;
+      gap: 12px;
     }
-
+    .content-copy p{
+      margin: 0;
+    }
+    .content-list{
+      margin: 0;
+      padding-left: 20px;
+    }
+    .content-list li{
+      margin: 6px 0;
+    }
     .form-grid{
       display:grid;
       gap: 16px;
@@ -1249,20 +960,6 @@ nav{
     .field label{
       font-weight: 600;
       color: var(--ink);
-    }
-    .section-heading{
-      margin: 0;
-      font-size: clamp(24px, 3.4vw, 34px);
-      font-family: var(--font-body);
-      text-transform: none;
-      letter-spacing: 0;
-      line-height: var(--lh-body);
-      font-weight: 700;
-      color: var(--ink);
-      display: block;
-    }
-    .field label.section-heading{
-      font-weight: 700;
     }
     .field input,
     .field select,
@@ -1290,6 +987,16 @@ nav{
     .field.is-invalid textarea{
       border-color: #b00020;
     }
+    .radio-group{
+      display:grid;
+      gap: 8px;
+    }
+    .radio-option{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 600;
+    }
     .session-grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1314,38 +1021,13 @@ nav{
       inset: -40% -20%;
       background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.65) 50%, transparent 65%);
       transform: translateX(-140%);
-      opacity: 0;
-      pointer-events: none;
-      animation: none;
-    }
-    .session-grid.gloss-active .session-card::after{
       opacity: 0.7;
+      pointer-events: none;
       animation: gloss-sweep 2.8s ease-in-out infinite;
     }
     .session-card:hover{
-      border-color: var(--gold);
-      background: var(--gold);
-      box-shadow: 0 12px 22px rgba(240,180,58,0.25);
-      color: #ffffff;
-    }
-    .session-card:hover .session-title,
-    .session-card:hover .session-availability{
-      color: #ffffff;
-    }
-    .session-grid.is-locked .session-card{
-      background: #f4f4f4;
-      border-color: #dddddd;
-      color: #9b9b9b;
-      box-shadow: none;
-      cursor: not-allowed;
-    }
-    .session-grid.is-locked .session-card:hover{
-      border-color: #dddddd;
-      box-shadow: none;
-    }
-    .session-grid.is-locked .session-title,
-    .session-grid.is-locked .session-availability{
-      color: #9b9b9b;
+      border-color: var(--teal);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
     }
     .session-card input{
       position: absolute;
@@ -1377,148 +1059,8 @@ nav{
     .session-card.is-full{
       opacity: 0.6;
     }
-    .payment-section{
-      margin-top: 18px;
-      display: grid;
-      gap: 12px;
-    }
-    .payment-meta{
-      display: grid;
-      gap: 6px;
-      font-size: inherit;
-      color: #222222;
-      font-family: var(--font-body);
-      line-height: var(--lh-body);
-      font-weight: 400;
-    }
-    .payment-meta a{
-      color: #1a5cff;
-      text-decoration: underline;
-    }
-    .terms-consent{
-      display: grid;
-      gap: 6px;
-    }
-    .terms-consent label{
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      font-size: inherit;
-      color: #222222;
-      font-family: var(--font-body);
-      line-height: var(--lh-body);
-      font-weight: 400;
-    }
-    .terms-consent a{
-      color: #1a5cff;
-      text-decoration: underline;
-    }
-    .terms-consent input{
-      margin-top: 3px;
-      width: 18px;
-      height: 18px;
-    }
-    .terms-consent .field-error{
-      margin-left: 28px;
-    }
-    .payment-section h2{
-      margin: 0;
-    }
-    .payment-section .field-error{
-      display: none;
-      color: #b00020;
-      font-size: 14px;
-    }
-    .payment-section.is-invalid .field-error{
-      display: block;
-    }
-    .payment-grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-    .payment-option{
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: #ffffff;
-      padding: 18px;
-      display: grid;
-      gap: 8px;
-      text-align: left;
-      font: inherit;
-      color: inherit;
-      cursor: pointer;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
-      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .payment-option::after{
-      content: "";
-      position: absolute;
-      inset: -40% -20%;
-      background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.65) 50%, transparent 65%);
-      transform: translateX(-140%);
-      opacity: 0;
-      pointer-events: none;
-      animation: none;
-    }
-    .payment-option.is-enabled::after{
-      opacity: 0.7;
-      animation: gloss-sweep 2.8s ease-in-out infinite;
-    }
-    .payment-option:hover,
-    .payment-option:focus-visible{
-      border-color: var(--teal);
-      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
-      transform: translateY(-1px);
-    }
-    .payment-option.is-enabled:hover,
-    .payment-option.is-enabled:focus-visible{
-      background: var(--purple);
-      border-color: var(--purple);
-      color: #ffffff;
-    }
-    .payment-option.is-enabled:hover .payment-title,
-    .payment-option.is-enabled:hover .payment-body,
-    .payment-option.is-enabled:focus-visible .payment-title,
-    .payment-option.is-enabled:focus-visible .payment-body{
-      color: #ffffff;
-    }
-    .payment-option.is-disabled{
-      background: #f4f4f4;
-      color: #9b9b9b;
-      border-color: #dddddd;
-      box-shadow: none;
-      cursor: not-allowed;
-    }
-    .payment-option.is-disabled .payment-title,
-    .payment-option.is-disabled .payment-body{
-      color: #9b9b9b;
-    }
-    .payment-title{
-      font-weight: 700;
-      font-size: clamp(22px, 3vw, 30px);
-    }
-    .payment-body{
-      color: var(--ink);
-    }
-    .payment-body .payment-total{
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-    .payment-body ul{
-      margin: 0;
-      padding-left: 18px;
-      display: grid;
-      gap: 6px;
-    }
-    .payment-body li{
-      margin: 0;
-    }
-    .payment-option.is-enabled .payment-title,
-    .payment-option.is-enabled .payment-body{
-      color: var(--ink);
+    .availability-note{
+      color: var(--muted);
     }
     .meeting-link{
       color: #1a5cff;
@@ -1551,6 +1093,8 @@ nav{
       gap: 12px;
       box-shadow: 0 18px 30px rgba(0,0,0,0.06);
     }
+
+
     .form-success{
       border: 1px solid var(--line);
       border-left: 6px solid var(--teal);
@@ -1567,6 +1111,13 @@ nav{
     .reservation-card p{
       margin: 0;
     }
+    .reservation-card p + p{
+      margin-top: 8px;
+    }
+    .reservation-card p + .content-list,
+    .reservation-card .content-list + p{
+      margin-top: 8px;
+    }
     .reservation-card h2{
       margin: 0;
       font-size: clamp(24px, 3.4vw, 34px);
@@ -1582,17 +1133,121 @@ nav{
       display:grid;
       gap: 6px;
     }
-    .tight-stack p{
+    .tight-stack p,
+    .tight-stack .content-list{
       margin: 0;
+    }
+    .tight-stack p + p,
+    .tight-stack p + .content-list,
+    .tight-stack .content-list + p{
+      margin-top: 0;
+    }
+    .schedule-block{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #ffffff;
+      display: grid;
+      gap: 6px;
+    }
+    .schedule-block h3{
+      margin: 0;
+      font-size: clamp(20px, 2.6vw, 26px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .schedule-block p{
+      margin: 0;
+    }
+    .table-wrap{
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow-x: auto;
+      background: #ffffff;
+    }
+    .table-wrap table{
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+    }
+    .table-wrap th,
+    .table-wrap td{
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      font-size: clamp(16px, 1.8vw, 20px);
+    }
+    .table-wrap th{
+      background: #f9f7f3;
+    }
+    .pricing-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .pricing-actions{
+      display:grid;
+      gap: 12px;
+      align-content: start;
+    }
+    .pricing-action-card{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .pricing-details{
+      margin-top: 16px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .pricing-detail-card{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: #ffffff;
+      display: grid;
+      gap: 8px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .pricing-detail-card h3{
+      margin: 0;
+      font-size: clamp(22px, 3vw, 30px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .location-layout{
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: start;
+    }
+    .location-text{
+      flex: 1;
+      min-width: 0;
+    }
+    .pricing-action-card .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      border-radius: 14px;
     }
     .confirmation-grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
       margin-top: 16px;
-    }
-    .confirmation-grid.is-hidden{
-      display: none;
     }
     .confirmation-card{
       border: 1px solid var(--line);
@@ -1608,6 +1263,36 @@ nav{
     }
     .reservation-card .form-grid{
       max-width: 100%;
+    }
+    .reservation-cta{
+      display:flex;
+      justify-content:center;
+      margin-top: 18px;
+    }
+    .reservation-cta .btn{
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      padding: 22px 22px;
+      text-transform: uppercase;
+      border-radius: 16px;
+      width: min(100%, 520px);
+      box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+    }
+    .cta-block{
+      display:grid;
+      gap: 12px;
+      width: min(100%, 520px);
+    }
+    .cta-block .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 22px 24px;
+      border-radius: 22px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.12);
     }
 
     footer.site-footer{
@@ -1662,6 +1347,42 @@ nav{
       line-height: 0.95;
       text-align: center;
     }
+    .thankyou-card{
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .thankyou-card .btn{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .thankyou-title{
+      text-align: center;
+    }
+    .thankyou-card h2{
+      font-size: clamp(30px, 4vw, 46px);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: var(--lh-heading);
+    }
+    .thankyou-card h3{
+      margin: 18px 0 6px;
+      font-size: clamp(22px, 3vw, 30px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .share-btn{
+      width: min(100%, 320px);
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-top: 8px;
+    }
 
     @media (min-width: 981px){
       .menu-btn{ display:none; }
@@ -1673,7 +1394,6 @@ nav{
         --btn-size: 35.04px;
         --btn-size-lg: 35.04px;
       }
-      html, body{ overflow-x: hidden; }
       .section-banner h2,
       .content-banner h2,
       .curriculum-banner h2,
@@ -1699,61 +1419,23 @@ nav{
       .openbook-grid{ grid-template-columns: 1fr; }
       .openbook-columns{ grid-template-columns: 1fr; }
       .openbook-cta-row{ grid-template-columns: 1fr; }
-      .openbook-side{ display: none; }
-      .openbook-visual.mobile-visual{ display: block; }
       .math-layout{ grid-template-columns: 1fr; }
-      .math-layout > *{ min-width: 0; }
+      .teachers-grid{ grid-template-columns: 1fr; }
+      .quickfacts-content{ grid-template-columns: 1fr; }
+      .reserve-content{ grid-template-columns: 1fr; }
+      .reservation-row.two-col{ grid-template-columns: 1fr; }
+      .session-grid{ grid-template-columns: 1fr; }
       .field-row.three-col,
       .field-row.two-col{
         grid-template-columns: 1fr;
       }
-      .session-grid{ grid-template-columns: 1fr; }
-      .payment-grid{ grid-template-columns: 1fr; }
+      .pricing-grid{ grid-template-columns: 1fr; }
+      .pricing-details{ grid-template-columns: 1fr; }
       .confirmation-grid{ grid-template-columns: 1fr; }
-      .math-card{
-        max-width: 100%;
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
-        background: transparent;
-        padding: 0;
-        overflow-wrap: normal;
-        word-break: normal;
-      }
-      .openbook-summary,
-      .openbook-summary.standout,
-      .openbook-pie-card{
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
-        background: transparent;
-        padding: 0;
-      }
-      .openbook-content,
-      .math-content,
-      .openbook-grid,
-      .math-layout,
-      .openbook-summary,
-      .openbook-pie-card{
-        max-width: 100%;
-      }
-      .openbook-table{
-        table-layout: auto;
-        width: 100%;
-      }
-      .openbook-table th,
-      .openbook-table td{
-        border: 0;
-        padding: 8px 0;
-        overflow-wrap: normal;
-        word-break: normal;
-      }
-      .openbook-table tr + tr{
-        border-top: 1px solid var(--line);
-      }
-      .teachers-grid{ grid-template-columns: 1fr; }
-      .quickfacts-content{ grid-template-columns: 1fr; }
-      .reserve-content{ grid-template-columns: 1fr; }
+      .pricing-grid{ display: contents; }
+      .tight-stack{ order: 1; }
+      .pricing-details{ order: 2; }
+      .pricing-actions{ order: 3; }
 
       /* Mobile standards */
       .hero-logo{ display: none !important; }
@@ -1849,7 +1531,6 @@ nav{
         <span></span>
         <span></span>
       </div>
-
       
       <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
@@ -1880,301 +1561,25 @@ nav{
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-top">
-          <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
-          <div class="hero-title-block">
-            <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
-            <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            <div class="hero-sub">Teaching financial literacy, design thinking, &amp; public speaking</div>
-</div>
-        </div>
-
-        <div class="hero-image banner">
-          <img src="assets/banner-cb-kids.jpg" alt="Students collaborating" />
-        </div>
-
-      </div>
-    </section>
-
-    <section class="math-section h3-raleway">
-      <div class="math-banner">
+    <section class="content-section gold">
+      <div class="content-banner gold">
         <div class="wrap">
-          <h2>Open-Book Financials</h2>
+          <h2 class="thankyou-title">You just invested in the local economy.</h2>
         </div>
       </div>
-      <div class="math-content">
-        <div class="math-layout">
-          <div class="math-card">
-            <h3>Why We Share the Math</h3>
-            <p>The Money Club.Org does not exist to generate profit. It exists to allocate money responsibly so students can learn how real systems work.</p>
-            <p>Every dollar that enters the program has a job. Nothing is speculative. Nothing is hidden.</p>
-            <p>This is not a balance sheet designed to extract value — it’s a balance sheet designed to hold the system steady.</p>
-          </div>
+      <div class="content-content">
+        <div class="reservation-card thankyou-card">
+          <p>The Money Club exists to teach youth financial literacy and to strengthen our local community by helping the next generation understand how businesses grow, hire, and create opportunity.</p>
 
-          <div class="math-card revenue">
-            <h3 class="revenue-title">Revenue In</h3>
-            <ul class="revenue-list">
-              <li>
-                <span>Students per cohort</span>
-                <span class="value">10</span>
-              </li>
-              <li>
-                <span>Tuition per student</span>
-                <span class="value">$1,500</span>
-              </li>
-            </ul>
-            <div class="revenue-total">
-              <span class="label">Total revenue</span>
-              <div class="math-figure">$15,000</div>
-            </div>
-            <p class="math-note">This tuition funds everything required to run the group with one instructor, venue, and materials.</p>
-          </div>
-        </div>
-        <div class="openbook-grid openbook-expenses">
-          <div class="openbook-summary standout">
-            <h3>Expense Summary</h3>
-            <table class="openbook-table" aria-label="Program expense summary">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th>Sums</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Insurance</td>
-                  <td>$417</td>
-                </tr>
-                <tr>
-                  <td>Venue rental</td>
-                  <td>$3,345</td>
-                </tr>
-                <tr>
-                  <td>Instructor</td>
-                  <td>$5,093</td>
-                </tr>
-                <tr>
-                  <td>Materials</td>
-                  <td>$3,600</td>
-                </tr>
-                <tr>
-                  <td>Overhead</td>
-                  <td>$1,209</td>
-                </tr>
-                <tr>
-                  <td>Incidentals (10%)</td>
-                  <td>$1,337</td>
-                </tr>
-                <tr>
-                  <td><strong>Total expenses</strong></td>
-                  <td><strong>$15,000*</strong></td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="math-note">* Estimated total (includes 10% contingency). Final costs may change as vendor quotes are confirmed.</p>
-          </div>
-          <div class="openbook-pie-card" aria-label="Program budget distribution chart">
-            <h3 class="openbook-subheading">Expense Visualization</h3>
-            <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 33.6%, Materials 23.7%, Venue rental 22.0%, Insurance 2.7%, Overhead 8.0%, Incidentals 10.0%">
-              <div class="openbook-pie-center">
-                <span class="label">Total</span>
-                <span class="value">$15,000</span>
-              </div>
-            </div>
-            <ul class="openbook-legend">
-              <li>
-                <span class="legend-dot" style="background: var(--purple);"></span>
-                <span class="legend-label">Instructor</span>
-                <span class="legend-value">$5,093 <small>33.6%</small></span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--teal);"></span>
-                <span class="legend-label">Materials</span>
-                <span class="legend-value">$3,600 <small>23.7%</small></span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--gold);"></span>
-                <span class="legend-label">Venue rental</span>
-                <span class="legend-value">$3,345 <small>22.0%</small></span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--ink);"></span>
-                <span class="legend-label">Insurance</span>
-                <span class="legend-value">$417 <small>2.7%</small></span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--slate);"></span>
-                <span class="legend-label">Overhead</span>
-                <span class="legend-value">$1,209 <small>8.0%</small></span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--rose);"></span>
-                <span class="legend-label">Incidentals</span>
-                <span class="legend-value">$1,337 <small>10.0%</small></span>
-              </li>
-            </ul>
-          </div>
+          <h3>Next</h3>
+          <p>We’ll email you the permission forms and your receipt/confirmation.</p>
+
+          <h3>Share</h3>
+          <p>If you want to help this initiative reach more families, please forward the link to family and friends.</p>
+          <button id="share-button" class="btn purple gloss share-btn" type="button">Share now</button>
         </div>
       </div>
     </section>
-
-
-    <section class="openbook-section">
-      <div class="openbook-banner">
-        <div class="wrap">
-          <h2>Built for learning — not profit</h2>
-        </div>
-      </div>
-      <div class="openbook-content">
-        <div class="openbook-grid">
-          <div class="openbook-copy">
-            <div class="openbook-intro">
-              <p>This program is designed as a closed-loop self sustaining learning system.</p>
-              <p>Family tuition funds instruction, materials, and student projects — any remaining proceeds are reinvested back into the program itself. Nothing is extracted. Nothing is hidden.</p>
-              <div class="openbook-visual mobile-visual">
-                <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel graphic" />
-              </div>
-              <p>The result is a self-sustaining model where students learn financial literacy by participating in a real, transparent economic system.</p>
-            </div>
-
-            <div class="openbook-cta-row">
-              <a data-cta-label="View schedule &amp; pricing" class="btn gold block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
-              <a data-cta-label="Reserve a spot" class="btn gold block cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
-            </div>
-          </div>
-
-          <div class="openbook-side">
-            <div class="openbook-visual">
-              <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel graphic" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-banner full-bleed purple heading-white" id="reserve">
-      <div class="wrap">
-        <h2>Reserve a Spot</h2>
-      </div>
-    </section>
-    <section class="reservation-steps">
-      <div class="wrap">
-        <div class="reservation-row">
-          <div class="reservation-card">
-            <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
-            <form class="form-grid" action="apply-camper.php" method="post" novalidate>
-              <input type="hidden" name="return-to" value="thank-you.html" />
-              <input type="hidden" name="return-error" value="open-book-hook.html" />
-              <div class="field-row three-col">
-                <div class="field">
-                  <label for="parent-name">Parent / Guardian Name</label>
-                  <input id="parent-name" name="parent-name" data-next="parent-email" type="text" autocomplete="name" required />
-                  <small class="field-error">Parent/guardian name is required.</small>
-                </div>
-                <div class="field">
-                  <label for="parent-email">Email Address</label>
-                  <input id="parent-email" name="parent-email" data-next="parent-phone" type="email" autocomplete="email" required />
-                  <small class="field-error">Enter a valid email address.</small>
-                </div>
-                <div class="field">
-                  <label for="parent-phone">Phone Number</label>
-                  <input id="parent-phone" name="parent-phone" data-next="student-name" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
-                  <small class="field-error">Phone number is required.</small>
-                </div>
-              </div>
-              <div class="field-row two-col">
-                <div class="field">
-                  <label for="student-name">Child’s Name</label>
-                  <input id="student-name" name="student-name" data-next="student-age" type="text" autocomplete="name" required />
-                  <small class="field-error">Child’s name is required.</small>
-                </div>
-                <div class="field">
-                  <label for="student-age">Child’s Age</label>
-                  <input id="student-age" name="student-age" type="number" min="11" max="17" step="1" inputmode="numeric" required />
-                  <small class="field-error">Child’s age is required.</small>
-                </div>
-              </div>
-              <div class="field">
-                <label class="section-heading">Choose A Session</label>
-                <div class="session-grid gloss-active is-locked">
-                  <label class="session-card">
-                    <input type="radio" name="preferred-session" value="session1" required />
-                    <div class="session-card-body">
-                      <div class="session-title">Session 1: July 6, 2026 → July 31, 2026</div>
-                      <div class="session-availability" data-session="session1">30 of 30 Spots Available</div>
-                    </div>
-                  </label>
-                  <label class="session-card">
-                    <input type="radio" name="preferred-session" value="session2" />
-                    <div class="session-card-body">
-                      <div class="session-title">Session 2: August 4, 2026 → August 28, 2026</div>
-                      <div class="session-availability" data-session="session2">30 of 30 Spots Available</div>
-                    </div>
-                  </label>
-                </div>
-                <small class="field-error">Please select a session.</small>
-              </div>
-
-              <div class="payment-section">
-                <h2>Make Payment</h2>
-                <div class="payment-meta">
-                  <div>Program fee: $1,500 + 13% HST</div>
-                  <div>Refunds available until June 1, 2026.</div>
-                </div>
-                <div class="field terms-consent">
-                  <label for="terms-agree">
-                    <input id="terms-agree" name="terms-agree" type="checkbox" required />
-                    <span>I agree to the <a href="program-terms.html">Terms &amp; Payment Policy</a> and I acknowledge the <a href="privacy-policy.html">Privacy Policy</a>.</span>
-                  </label>
-                  <small class="field-error">Please confirm you agree to the terms and policies.</small>
-                </div>
-                <div class="payment-grid">
-                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true">
-                    <div class="payment-title">e-Transfer</div>
-                    <div class="payment-body">
-                      <div class="payment-total">Total: $1,695.00 CAD (includes HST)</div>
-                      <ul>
-                        <li>No processing fee. Pay by e-Transfer to avoid the credit card surcharge.</li>
-                        <li>Refunds available until June 1, 2026.</li>
-                        <li>We’ll email confirmation within 24 hours of receiving your transfer.</li>
-                      </ul>
-                    </div>
-                  </button>
-                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true">
-                    <div class="payment-title">Credit Card</div>
-                    <div class="payment-body">
-                      <div class="payment-total">Total: $1,735.68 CAD (Includes HST + 2.4% surcharge)</div>
-                      <ul>
-                        <li>A 2.4% credit card surcharge applies to help cover card processing costs.</li>
-                        <li>Refunds available until June 1, 2026 — the credit card processing surcharge is non-refundable.</li>
-                        <li>Instant confirmation after payment.</li>
-                      </ul>
-                    </div>
-                  </button>
-                </div>
-                <small class="field-error">Please choose a payment method.</small>
-              </div>
-              <div class="confirmation-grid is-hidden">
-                <div class="confirmation-card">
-                  <h2>Next Steps</h2>
-                  <div class="tight-stack">
-                    <p>Thank you — your spot is confirmed once payment is received. Next, you’ll receive an email with your permission forms and your receipt/confirmation.</p>
-                  </div>
-                </div>
-                <div class="confirmation-card">
-                  <h2>Need more information?</h2>
-                  <p><a class="meeting-link" href="https://calendly.com/me-mistergoldberg/30min">Book a meeting</a> and we’ll be happy to answer any questions.</p>
-                  <p><a class="meeting-link" href="schedule-pricing.html">View daily schedule &amp; 4-week program details</a></p>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <footer class="site-footer">
@@ -2245,10 +1650,7 @@ nav{
           closeMenu();
         }
       });
-    })();
-  </script>
-  <script>
-    (function(){
+
       function updateFieldState(field){
         if (!field){ return; }
         var radios = field.querySelectorAll('input[type="radio"]');
@@ -2285,12 +1687,10 @@ nav{
 
         form.addEventListener('input', function(e){
           updateFieldState(e.target.closest('.field'));
-          updateFlowState();
         });
 
         form.addEventListener('change', function(e){
           updateFieldState(e.target.closest('.field'));
-          updateFlowState();
         });
       });
 
@@ -2299,150 +1699,37 @@ nav{
       if (success && params.get('status') === 'sent') {
         success.classList.add('is-visible');
       }
-      if (params.get('status') === 'error') {
-        var fieldName = params.get('field');
-        var message = params.get('message') || 'Please check the highlighted field.';
-        if (fieldName) {
-          if (fieldName === 'payment-method') {
-            var paymentSection = document.querySelector('.payment-section');
-            if (paymentSection) {
-              paymentSection.classList.add('is-invalid');
-              var paymentError = paymentSection.querySelector('.field-error');
-              if (paymentError) {
-                paymentError.textContent = message;
-              }
-              paymentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-          } else {
-            var input = document.querySelector('[name=\"' + fieldName + '\"]');
-            if (input) {
-              var field = input.closest('.field');
-              if (field) {
-                field.classList.add('is-invalid');
-                var errorEl = field.querySelector('.field-error');
-                if (errorEl) {
-                  errorEl.textContent = message;
-                }
-                field.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              }
-            }
-          }
+    })();
+  </script>
+  <script>
+    (function(){
+      var shareBtn = document.getElementById('share-button');
+      if (!shareBtn){ return; }
+
+      var shareData = {
+        title: 'The Money Club',
+        text: 'The Money Club exists to teach youth financial literacy and strengthen our local community.',
+        url: 'https://the-money-club.org/'
+      };
+
+      function copyLink(){
+        if (navigator.clipboard && window.isSecureContext){
+          navigator.clipboard.writeText(shareData.url).then(function(){
+            var original = shareBtn.textContent;
+            shareBtn.textContent = 'Link copied';
+            setTimeout(function(){ shareBtn.textContent = original; }, 2000);
+          });
+          return;
         }
+        window.prompt('Copy this link:', shareData.url);
       }
 
-      var sessionRadios = document.querySelectorAll('input[name="preferred-session"]');
-      var paymentButtons = document.querySelectorAll('.payment-option');
-      var sessionGrid = document.querySelector('.session-grid');
-      var baseRequiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
-      var termsAgree = document.getElementById('terms-agree');
-
-      function baseFieldsValid(){
-        return Array.prototype.every.call(baseRequiredInputs, function(input){
-          return input.checkValidity();
-        });
-      }
-
-      function termsAgreed(){
-        return !termsAgree || termsAgree.checked;
-      }
-
-      function sessionSelected(){
-        return Array.prototype.some.call(sessionRadios, function(radio){
-          return radio.checked;
-        });
-      }
-
-      function setSessionState(){
-        var canSelectSession = baseFieldsValid();
-        if (sessionGrid){
-          sessionGrid.classList.toggle('is-locked', !canSelectSession);
-          sessionGrid.classList.toggle('gloss-active', canSelectSession && !sessionSelected());
+      shareBtn.addEventListener('click', function(){
+        if (navigator.share){
+          navigator.share(shareData).catch(function(){});
+          return;
         }
-        sessionRadios.forEach(function(radio){
-          var card = radio.closest('.session-card');
-          var isFull = card && card.classList.contains('is-full');
-          radio.disabled = !canSelectSession || isFull;
-        });
-      }
-
-      function setPaymentState(enabled){
-        paymentButtons.forEach(function(btn){
-          btn.classList.toggle('is-disabled', !enabled);
-          btn.classList.toggle('is-enabled', enabled);
-          btn.setAttribute('aria-disabled', String(!enabled));
-        });
-      }
-
-      function showFirstInvalidField(){
-        var fields = document.querySelectorAll('.field');
-        fields.forEach(function(field){
-          updateFieldState(field);
-        });
-        var firstInvalid = document.querySelector('.field.is-invalid');
-        if (firstInvalid){
-          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }
-
-      function showSessionError(){
-        var sessionField = document.querySelector('.field .session-grid');
-        if (sessionField){
-          var field = sessionField.closest('.field');
-          if (field){
-            field.classList.add('is-invalid');
-          }
-          sessionField.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }
-
-      function updateFlowState(){
-        setSessionState();
-        var canPay = baseFieldsValid() && sessionSelected() && termsAgreed();
-        setPaymentState(canPay);
-      }
-
-      updateFlowState();
-
-      sessionRadios.forEach(function(radio){
-        radio.addEventListener('change', function(){
-          updateFlowState();
-        });
-      });
-
-      if (sessionGrid){
-        sessionGrid.addEventListener('click', function(e){
-          if (sessionGrid.classList.contains('is-locked')){
-            e.preventDefault();
-            showFirstInvalidField();
-          }
-        });
-      }
-
-      paymentButtons.forEach(function(btn){
-        btn.addEventListener('click', function(e){
-          var form = btn.form;
-          if (form) {
-            if (btn.value === 'Credit Card') {
-              form.setAttribute('action', 'stripe-checkout.php');
-            } else {
-              form.setAttribute('action', 'apply-camper.php');
-            }
-          }
-          if (!baseFieldsValid()){
-            e.preventDefault();
-            showFirstInvalidField();
-            return;
-          }
-          if (!sessionSelected()){
-            e.preventDefault();
-            showSessionError();
-            return;
-          }
-          if (!termsAgreed()){
-            e.preventDefault();
-            showFirstInvalidField();
-          }
-        });
+        copyLink();
       });
     })();
   </script>
@@ -2469,22 +1756,10 @@ nav{
         });
       }
 
-      function fetchAvailability(url){
-        return fetch(url, { cache: 'no-store' }).then(function(res){
-          if (!res.ok){
-            throw new Error('bad response');
-          }
-          return res.json();
-        });
-      }
-
-      fetchAvailability('availability.php')
+      fetch('availability.php', { cache: 'no-store' })
+        .then(function(res){ return res.json(); })
         .then(updateSpots)
-        .catch(function(){
-          fetchAvailability('data/availability.json')
-            .then(updateSpots)
-            .catch(function(){});
-        });
+        .catch(function(){});
     })();
   </script>
   <script>

@@ -11,6 +11,7 @@ $name = isset($_POST['applicant-name']) ? trim($_POST['applicant-name']) : '';
 $email = isset($_POST['applicant-email']) ? trim($_POST['applicant-email']) : '';
 $phone = isset($_POST['applicant-phone']) ? trim($_POST['applicant-phone']) : '';
 $link = isset($_POST['applicant-link']) ? trim($_POST['applicant-link']) : '';
+$interest = isset($_POST['applicant-interest']) ? trim($_POST['applicant-interest']) : '';
 $background_check = isset($_POST['background-check']) ? 'Yes' : 'No';
 
 if ($name === '' || $phone === '') {
@@ -28,6 +29,11 @@ if ($link === '' || !filter_var($link, FILTER_VALIDATE_URL)) {
     exit('Please provide a valid LinkedIn or resume link.');
 }
 
+if ($interest === '') {
+    http_response_code(400);
+    exit('Please share why you are interested in leading the program.');
+}
+
 if ($background_check !== 'Yes') {
     http_response_code(400);
     exit('Please acknowledge the background check requirement.');
@@ -43,6 +49,7 @@ $lines[] = 'Email: ' . $email;
 $lines[] = 'Phone: ' . ($phone !== '' ? $phone : '(not provided)');
 $lines[] = 'Background check acknowledged: ' . $background_check;
 $lines[] = 'LinkedIn/Resume: ' . ($link !== '' ? $link : '(none)');
+$lines[] = 'Why interested: ' . ($interest !== '' ? $interest : '(not provided)');
 
 $message = implode("\n", $lines);
 

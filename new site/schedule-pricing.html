@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Schedule & Pricing | Toronto Kids Summer Camp 2026</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students' Union." />
+  <meta name="description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–16, $1,500, University of Toronto Students' Union." />
   <meta property="og:title" content="Schedule &amp; Pricing | Toronto Kids Summer Camp 2026" />
-  <meta property="og:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students' Union." />
+  <meta property="og:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–16, $1,500, University of Toronto Students' Union." />
   <meta property="og:url" content="https://the-money-club.org/schedule-pricing.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Schedule &amp; Pricing | Toronto Kids Summer Camp 2026" />
-  <meta name="twitter:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–17, $1,500, University of Toronto Students' Union." />
+  <meta name="twitter:description" content="Toronto kids summer camp 2026 schedule &amp; pricing. July/August sessions, ages 11–16, $1,500, University of Toronto Students' Union." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/schedule-pricing.html" />
   <script type="application/ld+json">
@@ -373,15 +373,81 @@ nav{
       box-shadow: 0 10px 20px rgba(240,180,58,0.25);
     }
 
+    /* Hero */
+    .hero{
+      padding: 18px 0 6px;
+    }
+    .hero-top{
+      display:flex;
+      align-items: center;
+      gap: 28px;
+      justify-content: center;
+      margin: 0 auto;
+      width: fit-content;
+    }
+    .hero-logo{
+      width: 152px;
+      height: 152px;
+      display: block;
+    }
+    .hero-logo-mobile{
+      display: none;
+    }
+    .hero-title-block{
+      width: 100%;
+      text-align: left;
+    }
+    .hero-title{
+      color: var(--teal);
+      line-height: 0.85;
+      letter-spacing: normal;
+      text-align: left;
+    }
+    .hero-sub{
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: inherit;
+      color: var(--ink);
+      margin: 2px 0 0;
+      line-height: 1.05;
+      text-align: left;
+    }
+    .hero-image{
+      width: 100%;
+      border-radius: 22px;
+      overflow-y: auto;
+      border: 1px solid var(--line);
+      margin-top: 12px;
+    }
+    .hero-image img{
+      display:block;
+      width: 100%;
+      height: auto;
+    }
+    .hero-image.banner img{
+      height: clamp(220px, 32vw, 420px);
+      object-fit: cover;
+      object-position: center 35%;
+    }
+
     /* Banner */
     .section-banner{
       padding: 26px 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
+    .section-banner.full-bleed{
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
     .section-banner.gold{
       background: var(--gold);
       color: var(--ink);
+    }
+    .section-banner.purple{
+      background: var(--purple);
+      color: #ffffff;
     }
     .section-banner.heading-white{
       color: #ffffff;
@@ -1113,8 +1179,14 @@ nav{
       animation: gloss-sweep 2.8s ease-in-out infinite;
     }
     .session-card:hover{
-      border-color: var(--teal);
-      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+      border-color: var(--gold);
+      background: var(--gold);
+      box-shadow: 0 12px 22px rgba(240,180,58,0.25);
+      color: #ffffff;
+    }
+    .session-card:hover .session-title,
+    .session-card:hover .session-availability{
+      color: #ffffff;
     }
     .session-grid.is-locked .session-card{
       background: #f4f4f4;
@@ -1168,6 +1240,45 @@ nav{
       margin-top: 18px;
       display: grid;
       gap: 12px;
+    }
+    .payment-meta{
+      display: grid;
+      gap: 6px;
+      font-size: inherit;
+      color: #222222;
+      font-family: var(--font-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+    .payment-meta a{
+      color: #1a5cff;
+      text-decoration: underline;
+    }
+    .terms-consent{
+      display: grid;
+      gap: 6px;
+    }
+    .terms-consent label{
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: inherit;
+      color: #222222;
+      font-family: var(--font-body);
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+    .terms-consent a{
+      color: #1a5cff;
+      text-decoration: underline;
+    }
+    .terms-consent input{
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+    }
+    .terms-consent .field-error{
+      margin-left: 28px;
     }
     .payment-section h2{
       margin: 0;
@@ -1239,7 +1350,6 @@ nav{
       border-color: #dddddd;
       box-shadow: none;
       cursor: not-allowed;
-      pointer-events: none;
     }
     .payment-option.is-disabled .payment-title,
     .payment-option.is-disabled .payment-body{
@@ -1251,6 +1361,19 @@ nav{
     }
     .payment-body{
       color: var(--ink);
+    }
+    .payment-body .payment-total{
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .payment-body ul{
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+    .payment-body li{
+      margin: 0;
     }
     .payment-option.is-enabled .payment-title,
     .payment-option.is-enabled .payment-body{
@@ -1711,7 +1834,7 @@ nav{
         <a class="nav-hiring" href="instructors.html">We're hiring</a>
         <a href="how-it-works.html">How it works</a>
         <a href="open-book-hook.html">Open-book financials</a>
-        <a href="curriculum.html">Curriculum</a>
+        <a href="schedule-pricing.html">Curriculum</a>
         <a href="who-runs-it.html">Who runs it</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
@@ -1724,7 +1847,7 @@ nav{
         <a class="nav-hiring" href="instructors.html">We're hiring</a>
         <a href="how-it-works.html">How it works</a>
         <a href="open-book-hook.html">Open-book financials</a>
-        <a href="curriculum.html">Curriculum</a>
+        <a href="schedule-pricing.html">Curriculum</a>
         <a href="who-runs-it.html">Who runs it</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -1734,9 +1857,26 @@ nav{
   </header>
 
   <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-top">
+          <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+          <div class="hero-title-block">
+            <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
+            <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
+            <div class="hero-sub">Teaching financial literacy, design thinking, &amp; public speaking</div>
+          </div>
+        </div>
+
+        <div class="hero-image banner">
+          <img src="assets/banner-kid-presents.jpg" alt="Student presenting at a whiteboard" />
+        </div>
+      </div>
+    </section>
+
     <section class="section-banner gold heading-white">
       <div class="wrap">
-        <h2>Toronto Kids Summer Camp 2026: Economic Literacy</span></h2>
+        <h2>Curriculum</h2>
       </div>
     </section>
 
@@ -1744,338 +1884,175 @@ nav{
       <div class="wrap">
         <div class="reservation-row">
           <div class="reservation-card">
-            <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
-            <h2>💵 Schedule &amp; Pricing</h2>
-            <div class="pricing-grid">
-              <div class="tight-stack">
-                <p><strong>Pricing</strong></p>
-                <p><strong>$1,500 for four weeks</strong><br/></p>
-                <p>These fees reflect:</p>
-                <ul class="content-list">
-                  <li>Instructor pay</li>
-                  <li>Space and insurance</li>
-                  <li>Materials and learning capital</li>
-                  <li>Small cohort size</li>
-                  <li>Full pricing is shown during registration so families can make an informed decision.</li>
-                </ul>
-              </div>
-              <div class="pricing-actions">
-                <div class="pricing-action-card">
-                  <a data-cta-label="Reserve a spot" class="btn purple" href="#reserve">Reserve a Spot</a>
-                </div>
-                <div class="pricing-action-card">
-                  <a data-cta-label="How it works" class="btn teal" href="how-it-works.html">How it works</a>
-                </div>
-              </div>
-            </div>
-            <div class="pricing-details">
-              <div class="pricing-detail-card">
-                <h3>📍 Location</h3>
-                <div class="location-layout">
-                  <p class="location-text">University of Toronto Students' Union, 230 College Street, Toronto, ON M5T 1R2</p>
-                </div>
-              </div>
-              <div class="pricing-detail-card">
-                <h3>📅 Session Dates</h3>
-                <ul class="content-list">
-                  <li><strong>Session 1:</strong> July 6, 2026 → <strong>July 31, 2026</strong></li>
-                  <li><strong>Session 2:</strong> <strong>August 4, 2026</strong> → August 28, 2026</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="reservation-row">
-          <div class="reservation-card">
-            <h2>🧭 Program Overview</h2>
-            <p>You’ve seen how the system works. Here’s how the program runs — day to day.</p>
-            <ul class="content-list">
-              <li><strong>Format:</strong> Summer day program</li>
-              <li><strong>Schedule:</strong> Monday to Friday</li>
-              <li><strong>Hours:</strong> 9:30am – 3:30pm</li>
-              <li><strong>Ages:</strong> 11–17</li>
-              <li><strong>Cohort size:</strong> Small, limited seats by design</li>
-              <li><strong>Experience required:</strong> None</li>
-            </ul>
-            <p>This is a structured, instructor-led program designed to feel focused, calm, and productive — not chaotic or overstimulating.</p>
-          </div>
-        </div>
-
-        <div class="reservation-row">
-          <div class="reservation-card">
-            <h2>⏰ Daily Rhythm</h2>
-            <p>Every day follows a consistent rhythm so students know what to expect and parents know how time is spent.</p>
+            <h2>🕘 A Typical Day</h2>
+            <p>Every day follows a predictable rhythm—so students can focus on learning and building.</p>
             <div class="tight-stack">
               <div class="schedule-block">
-                <h3>9:30 – 10:00 — Morning standup (groups of ~10)</h3>
-                <p>A quick update on:</p>
-                <ul class="content-list">
-                  <li>what you’re working on</li>
-                  <li>what you’re excited about</li>
-                  <li>what you need help with</li>
-                </ul>
+                <h3>9:30-9:45 — Standup</h3>
+                <p>Goals for the day, quick wins, what’s stuck, who needs help.</p>
               </div>
               <div class="schedule-block">
-                <h3>10:00 – 11:30 — Core workshop</h3>
-                <ul class="content-list">
-                  <li>Business fundamentals</li>
-                  <li>Design thinking exercises</li>
-                  <li>Group discussion and examples</li>
-                  <li>(Topic changes by week)</li>
-                </ul>
+                <h3>10:00-10:30 — Instructor Presents</h3>
+                <p>The “one new idea” for the day—money, pricing, sourcing, marketing, or storytelling.</p>
               </div>
               <div class="schedule-block">
-                <h3>11:30 – 12:15 — Build time</h3>
-                <ul class="content-list">
-                  <li>Product creation</li>
-                  <li>Packaging, pricing, or planning</li>
-                  <li>Instructor guidance and check-ins</li>
-                </ul>
+                <h3>10:30-12:00 — Build Time</h3>
+                <p>Students build: spreadsheets, research, prototypes, copy, packaging, pricing.</p>
               </div>
               <div class="schedule-block">
-                <h3>12:15 – 1:00 — Lunch break</h3>
-                <ul class="content-list">
-                  <li>Bring your own lunch</li>
-                  <li>Supervised, relaxed environment</li>
-                </ul>
+                <h3>12:00-12:45 — Lunch</h3>
               </div>
               <div class="schedule-block">
-                <h3>1:00 – 2:30 — Project work &amp; market testing</h3>
-                <ul class="content-list">
-                  <li>Team collaboration</li>
-                  <li>Refining ideas</li>
-                  <li>Preparing messaging and visuals</li>
-                </ul>
+                <h3>12:45-2:15 — Project Work</h3>
+                <p>Teams execute. Instructors run mini check-ins, reviews, and stage-gates.</p>
               </div>
               <div class="schedule-block">
-                <h3>2:30 – 3:30 — Communication &amp; reflection</h3>
-                <ul class="content-list">
-                  <li>Practice explaining decisions</li>
-                  <li>Pitch preparation</li>
-                  <li>Daily wrap-up</li>
-                  <li>(Weeks 2–4 also include an afternoon standup/check-in.)</li>
-                </ul>
+                <h3>2:15-2:45 — Standup</h3>
+                <p>Short pitches, product explainers, and “talking like an operator.”</p>
+              </div>
+              <div class="schedule-block">
+                <h3>2:45-3:30 — Build Time</h3>
+                <p>Advance insights gained from standup.</p>
               </div>
             </div>
-            <p>Each day builds toward presentations where students show what they built and what they learned.</p>
           </div>
         </div>
 
         <div class="reservation-row">
           <div class="reservation-card">
-            <h2>🗓️ Weekly Modules</h2>
+            <h3>🚀 Week 1 — Decision Bootcamp</h3>
+            <p>Week 1 is a guided crash course in how money and work actually function—so students can build with confidence in Weeks 2–4.</p>
+            <p><strong>Themes</strong></p>
+            <ul class="content-list">
+              <li>Reading real-world agreements</li>
+              <li>How wages work (and what life costs)</li>
+              <li>How businesses survive (rent, labour, margins)</li>
+              <li>The basics of pricing, unit economics, and break-even</li>
+              <li>Evidence-based market research (field trip + data capture)</li>
+            </ul>
+            <p><strong>Core Workshops (samples)</strong></p>
+            <ul class="content-list">
+              <li>Contract Reading Lab: How to spot “red flags,” understand obligations, and ask smart questions</li>
+              <li>Job Reality Lab: Compare jobs (grocery clerk vs barista vs gallery attendant) and model take-home pay</li>
+              <li>Business Breakdown Lab: Deconstruct a restaurant’s economics (rent, labour, insurance, volume, margins)</li>
+              <li>Unit Economics Lab: Fixed vs variable cost, COGS, pricing ladders, break-even</li>
+              <li>Market Research Field Trip: Observe products, pricing, packaging, and private-label strategy in the wild</li>
+            </ul>
+            <p><strong>Skills Earned</strong></p>
+            <ul class="content-list">
+              <li>Money math without fear</li>
+              <li>Asking better questions</li>
+              <li>Turning confusion into a simple spreadsheet</li>
+              <li>Building “proof” before committing time and budget</li>
+            </ul>
+            <p><strong>Outputs by Friday</strong></p>
+            <ul class="content-list">
+              <li>A simple personal budget model</li>
+              <li>A break-even / unit economics sheet</li>
+              <li>A market research evidence board (notes + photos + insights)</li>
+            </ul>
 
-            <h3>Week 1 — Foundations (What We Deploy)</h3>
-            <div class="table-wrap" role="region" aria-label="Week 1 schedule table" tabindex="0">
-              <table>
-                <thead>
-                  <tr>
-                    <th scope="col">Monday</th>
-                    <th scope="col">Tuesday</th>
-                    <th scope="col">Wednesday</th>
-                    <th scope="col">Thursday</th>
-                    <th scope="col">Friday</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <strong>What We Deploy</strong><br />
-                      ⚙️ Phase 1 — Learn by Operating<br />
-                      🛠️ Phase 2 — Build Your Own<br />
-                      🧾 The Outcome
-                    </td>
-                    <td>
-                      💰 Financial Literacy as Survival Gear<br />
-                      🏭 Sourcing 101: Where Value Is Actually Made<br />
-                      🗂️ Control Brand Playbook
-                    </td>
-                    <td>
-                      📊 Market Research: Follow the Money &amp; Problems<br />
-                      🎨 Design Thinking &amp; Human Factor Research<br />
-                      📋 Cambridge Business Model Canvas
-                    </td>
-                    <td>
-                      🚀 Go-To-Market: Blast Off Without Burning Fuel<br />
-                      📸 Creative Fundamentals: Photography, Design &amp; Visual Clarity<br />
-                      📣 Marketing: Ride Existing Channels Before Building Your Own
-                    </td>
-                    <td>
-                      🎙️ Guest Speaker<br />
-                      💰 Market Research: Follow the Money Field Trip<br />
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <h3>🧪 Week 2 — Control Brand Sprint</h3>
+            <p>Students build a “control brand” version of an existing product category—so they learn how real operators make decisions: positioning, packaging, price, and margin.</p>
+            <p><strong>What students do</strong></p>
+            <ul class="content-list">
+              <li>Choose a category (example: garbage bags)</li>
+              <li>Study competitive sets (store brand vs premium vs value)</li>
+              <li>Build a product concept with a clear customer promise</li>
+              <li>Cost it, price it, and justify why it wins</li>
+            </ul>
+            <p><strong>Skills Earned</strong></p>
+            <ul class="content-list">
+              <li>Packaging + positioning</li>
+              <li>Pricing ladders + margin thinking</li>
+              <li>Simple sourcing and BOM logic</li>
+              <li>Presenting a product like a founder</li>
+            </ul>
+            <p><strong>Outputs by Friday</strong></p>
+            <ul class="content-list">
+              <li>Product concept + positioning statement</li>
+              <li>Cost model + pricing rationale</li>
+              <li>Packaging / messaging draft</li>
+              <li>Presentation Day: short pitch + Q&amp;A</li>
+            </ul>
 
-            <h3>Week 2 — Control Brand Sprint</h3>
-            <div class="table-wrap" role="region" aria-label="Week 2 schedule table" tabindex="0">
-              <table>
-                <thead>
-                  <tr>
-                    <th scope="col">Monday</th>
-                    <th scope="col">Tuesday</th>
-                    <th scope="col">Wednesday</th>
-                    <th scope="col">Thursday</th>
-                    <th scope="col">Friday</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <strong>Control Brand Project Kickoff</strong><br />
-                      Example option: <strong>garbage bags</strong><br />
-                      Spin up a fully baked control brand product by repackaging commodities
-                    </td>
-                    <td>
-                      <strong>Build Loop</strong><br />
-                      Morning Standup<br />
-                      Afternoon Standup
-                    </td>
-                    <td>
-                      <strong>Build Loop</strong><br />
-                      Morning Standup<br />
-                      Afternoon Standup
-                    </td>
-                    <td>
-                      <strong>Build Loop</strong><br />
-                      Morning Standup<br />
-                      Afternoon Standup
-                    </td>
-                    <td>
-                      <strong>Presentation Day</strong><br />
-                      Standup<br />
-                      Presentation
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <h3>🛒 Week 3 — Marketplace Build</h3>
+            <p>Week 3 is a student-driven build and sell experience. Students create their own product idea and prepare it for a controlled marketplace simulation.</p>
+            <p><strong>What students do</strong></p>
+            <ul class="content-list">
+              <li>Identify a customer + problem (or desire)</li>
+              <li>Validate with quick research (survey, interviews, observation)</li>
+              <li>Pass stage gates (evidence → economics → build plan)</li>
+              <li>Prototype, cost, price, and prepare to sell</li>
+            </ul>
+            <p><strong>Skills Earned</strong></p>
+            <ul class="content-list">
+              <li>Market research and validation</li>
+              <li>Procurement + packaging thinking</li>
+              <li>Margin discipline</li>
+              <li>Sales, persuasion, and iteration</li>
+            </ul>
+            <p><strong>Outputs by Friday</strong></p>
+            <ul class="content-list">
+              <li>A validated product concept</li>
+              <li>A cost + pricing plan</li>
+              <li>A launch plan (how it sells + to whom + why)</li>
+              <li>Presentation Day: product pitch + operator review</li>
+            </ul>
 
-            <h3>Week 3 — Marketplace Build (Independent Projects)</h3>
-            <div class="table-wrap" role="region" aria-label="Week 3 schedule table" tabindex="0">
-              <table>
-                <thead>
-                  <tr>
-                    <th scope="col">Monday</th>
-                    <th scope="col">Tuesday</th>
-                    <th scope="col">Wednesday</th>
-                    <th scope="col">Thursday</th>
-                    <th scope="col">Friday</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <strong>Market Place Kickoff</strong><br />
-                      Isolate an opportunity + hypothesis<br />
-                      Create a survey to validate assumptions<br />
-                      Stage Gate 1: review results with peers<br />
-                      Define offering (5W &amp; H)<br />
-                      Quantify COGS + margin<br />
-                      Source products + packaging<br />
-                      Stage Gate 2: present business case<br />
-                      If approved: buy commodities, package goods, sell
-                    </td>
-                    <td>
-                      <strong>Execution Loop</strong><br />
-                      Morning Standup<br />
-                      Afternoon Standup
-                    </td>
-                    <td>
-                      <strong>Execution Loop</strong><br />
-                      Morning Standup<br />
-                      Afternoon Standup
-                    </td>
-                    <td>
-                      <strong>Execution Loop</strong><br />
-                      Morning Standup<br />
-                      Afternoon Standup
-                    </td>
-                    <td>
-                      <strong>Presentation Day</strong><br />
-                      Standup<br />
-                      Presentation
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <h3>Week 4 — Rehearsal + Final Showcase</h3>
-            <div class="table-wrap" role="region" aria-label="Week 4 schedule table" tabindex="0">
-              <table>
-                <thead>
-                  <tr>
-                    <th scope="col">Monday</th>
-                    <th scope="col">Tuesday</th>
-                    <th scope="col">Wednesday</th>
-                    <th scope="col">Thursday</th>
-                    <th scope="col">Friday</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <strong>Choose a Path</strong><br />
-                      Option 1: Develop Winning Marketplace Ideas<br />
-                      Option 2: Continue on Control Brand
-                    </td>
-                    <td>
-                      Morning Standup<br />
-                      Afternoon Standup<br />
-                      <strong>Rehearsal</strong>
-                    </td>
-                    <td>
-                      Morning Standup<br />
-                      Afternoon Standup<br />
-                      <strong>Rehearsal</strong>
-                    </td>
-                    <td>
-                      Morning Standup<br />
-                      Afternoon Standup<br />
-                      <strong>Rehearsal</strong>
-                    </td>
-                    <td>
-                      <strong>Club Money Presentation</strong>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
+            <h3>🎤 Week 4 — Scale + Showcase</h3>
+            <p>Week 4 is where students level up: refine, improve, and prepare a final showcase that proves they can explain what they built and why it works.</p>
+            <p><strong>Two Paths (students choose)</strong></p>
+            <p>Path A — Scale a proven idea<br />Improve packaging, pricing, or positioning based on feedback and results.</p>
+            <p>Path B — Build a new idea using the system<br />Use Week 2/3 lessons to design a new offer with stronger economics and clearer demand.</p>
+            <p><strong>Skills Earned</strong></p>
+            <ul class="content-list">
+              <li>Iteration and decision-making under constraints</li>
+              <li>Storytelling + public speaking</li>
+              <li>Ownership and leadership</li>
+              <li>“Operator thinking” (what to do next and why)</li>
+            </ul>
+            <p><strong>Outputs by Friday</strong></p>
+            <ul class="content-list">
+              <li>A refined product story (what changed + why)</li>
+              <li>A simple “next steps” plan (how to improve or scale)</li>
+              <li>Final Showcase: students present to parents/guests with Q&amp;A</li>
+            </ul>
           </div>
         </div>
 
-        <div class="reservation-row" id="reserve">
-          <div class="reservation-card">
+        <section class="section-banner full-bleed purple heading-white" id="reserve">
+          <div class="wrap">
             <h2>Reserve a Spot</h2>
+          </div>
+        </section>
+        <div class="reservation-row">
+          <div class="reservation-card">
+            <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
             <form class="form-grid" action="apply-camper.php" method="post" novalidate>
               <input type="hidden" name="return-to" value="thank-you.html" />
               <input type="hidden" name="return-error" value="schedule-pricing.html" />
               <div class="field-row three-col">
                 <div class="field">
                   <label for="parent-name">Parent / Guardian Name</label>
-                  <input id="parent-name" name="parent-name" type="text" required />
+                  <input id="parent-name" name="parent-name" data-next="parent-email" type="text" autocomplete="name" required />
                   <small class="field-error">Parent/guardian name is required.</small>
                 </div>
                 <div class="field">
                   <label for="parent-email">Email Address</label>
-                  <input id="parent-email" name="parent-email" type="email" required />
+                  <input id="parent-email" name="parent-email" data-next="parent-phone" type="email" autocomplete="email" required />
                   <small class="field-error">Enter a valid email address.</small>
                 </div>
                 <div class="field">
                   <label for="parent-phone">Phone Number</label>
-                  <input id="parent-phone" name="parent-phone" type="tel" required />
+                  <input id="parent-phone" name="parent-phone" data-next="student-name" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
                   <small class="field-error">Phone number is required.</small>
                 </div>
               </div>
               <div class="field-row two-col">
                 <div class="field">
                   <label for="student-name">Child’s Name</label>
-                  <input id="student-name" name="student-name" type="text" required />
+                  <input id="student-name" name="student-name" data-next="student-age" type="text" autocomplete="name" required />
                   <small class="field-error">Child’s name is required.</small>
                 </div>
                 <div class="field">
@@ -2102,21 +2079,44 @@ nav{
                     </div>
                   </label>
                 </div>
-                <small>Select one session only.</small>
-                <small class="availability-note">Spots are updated as reservations come in.</small>
                 <small class="field-error">Please select a session.</small>
               </div>
 
               <div class="payment-section">
                 <h2>Make Payment</h2>
+                <div class="payment-meta">
+                  <div>Program fee: $1,500 + 13% HST</div>
+                  <div>Refunds available until June 1, 2026.</div>
+                </div>
+                <div class="field terms-consent">
+                  <label for="terms-agree">
+                    <input id="terms-agree" name="terms-agree" type="checkbox" required />
+                    <span>I agree to the <a href="program-terms.html">Terms &amp; Payment Policy</a> and I acknowledge the <a href="privacy-policy.html">Privacy Policy</a>.</span>
+                  </label>
+                  <small class="field-error">Please confirm you agree to the terms and policies.</small>
+                </div>
                 <div class="payment-grid">
-                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true" disabled>
+                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true">
                     <div class="payment-title">e-Transfer</div>
-                    <div class="payment-body">No surcharge. Pay by e-Transfer to avoid the credit card processing surcharge. We’ll email confirmation once received.</div>
+                    <div class="payment-body">
+                      <div class="payment-total">Total: $1,695.00 CAD (includes HST)</div>
+                      <ul>
+                        <li>No processing fee. Pay by e-Transfer to avoid the credit card surcharge.</li>
+                        <li>Refunds available until June 1, 2026.</li>
+                        <li>We’ll email confirmation within 24 hours of receiving your transfer.</li>
+                      </ul>
+                    </div>
                   </button>
-                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true" disabled>
+                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true">
                     <div class="payment-title">Credit Card</div>
-                    <div class="payment-body">A 2.4% credit card surcharge applies to help cover card processing costs. This surcharge is shown before you pay and appears as a separate line item on your receipt. Not applied to e-Transfer payments.</div>
+                    <div class="payment-body">
+                      <div class="payment-total">Total: $1,735.68 CAD (Includes HST + 2.4% surcharge)</div>
+                      <ul>
+                        <li>A 2.4% credit card surcharge applies to help cover card processing costs.</li>
+                        <li>Refunds available until June 1, 2026 — the credit card processing surcharge is non-refundable.</li>
+                        <li>Instant confirmation after payment.</li>
+                      </ul>
+                    </div>
                   </button>
                 </div>
                 <small class="field-error">Please choose a payment method.</small>
@@ -2156,12 +2156,14 @@ nav{
         menuPanel.classList.remove('is-open');
         menuPanel.setAttribute('aria-hidden', 'true');
         menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
       }
 
       function openMenu(){
         menuPanel.classList.add('is-open');
         menuPanel.setAttribute('aria-hidden', 'false');
         menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
       }
 
       function toggleMenu(){
@@ -2286,13 +2288,18 @@ nav{
       var sessionRadios = document.querySelectorAll('input[name="preferred-session"]');
       var paymentButtons = document.querySelectorAll('.payment-option');
       var sessionGrid = document.querySelector('.session-grid');
-      var requiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
+            var baseRequiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
+            var termsAgree = document.getElementById('terms-agree');
 
-      function requiredFieldsValid(){
-        return Array.prototype.every.call(requiredInputs, function(input){
-          return input.checkValidity();
-        });
-      }
+            function baseFieldsValid(){
+              return Array.prototype.every.call(baseRequiredInputs, function(input){
+                return input.checkValidity();
+              });
+            }
+
+            function termsAgreed(){
+              return !termsAgree || termsAgree.checked;
+            }
 
       function sessionSelected(){
         return Array.prototype.some.call(sessionRadios, function(radio){
@@ -2301,7 +2308,7 @@ nav{
       }
 
       function setSessionState(){
-        var canSelectSession = requiredFieldsValid();
+              var canSelectSession = baseFieldsValid();
         if (sessionGrid){
           sessionGrid.classList.toggle('is-locked', !canSelectSession);
           sessionGrid.classList.toggle('gloss-active', canSelectSession && !sessionSelected());
@@ -2318,7 +2325,6 @@ nav{
           btn.classList.toggle('is-disabled', !enabled);
           btn.classList.toggle('is-enabled', enabled);
           btn.setAttribute('aria-disabled', String(!enabled));
-          btn.disabled = !enabled;
         });
       }
 
@@ -2346,7 +2352,7 @@ nav{
 
       function updateFlowState(){
         setSessionState();
-        var canPay = requiredFieldsValid() && sessionSelected();
+              var canPay = baseFieldsValid() && sessionSelected() && termsAgreed();
         setPaymentState(canPay);
       }
 
@@ -2369,17 +2375,30 @@ nav{
 
       paymentButtons.forEach(function(btn){
         btn.addEventListener('click', function(e){
-          if (!requiredFieldsValid()){
-            e.preventDefault();
-            showFirstInvalidField();
-            return;
+          var form = btn.form;
+          if (form) {
+            if (btn.value === 'Credit Card') {
+              form.setAttribute('action', 'stripe-checkout.php');
+            } else {
+              form.setAttribute('action', 'apply-camper.php');
+            }
           }
-          if (!sessionSelected()){
-            e.preventDefault();
-            showSessionError();
-          }
-        });
-      });
+              if (!baseFieldsValid()){
+                e.preventDefault();
+                showFirstInvalidField();
+                return;
+              }
+              if (!sessionSelected()){
+                e.preventDefault();
+                showSessionError();
+                return;
+              }
+              if (!termsAgreed()){
+                e.preventDefault();
+                showFirstInvalidField();
+              }
+            });
+          });
     })();
   </script>
   <script>
@@ -2405,10 +2424,22 @@ nav{
         });
       }
 
-      fetch('availability.php', { cache: 'no-store' })
-        .then(function(res){ return res.json(); })
+      function fetchAvailability(url){
+        return fetch(url, { cache: 'no-store' }).then(function(res){
+          if (!res.ok){
+            throw new Error('bad response');
+          }
+          return res.json();
+        });
+      }
+
+      fetchAvailability('availability.php')
         .then(updateSpots)
-        .catch(function(){});
+        .catch(function(){
+          fetchAvailability('data/availability.json')
+            .then(updateSpots)
+            .catch(function(){});
+        });
     })();
   </script>
   <script>
@@ -2455,6 +2486,29 @@ nav{
       });
     })();
   </script>
+  <script>
+    (function(){
+      var inputs = document.querySelectorAll('[data-next]');
+      function focusNext(input){
+        var nextId = input.getAttribute('data-next');
+        if (!nextId){ return; }
+        var next = document.getElementById(nextId);
+        if (next){
+          next.focus();
+        }
+      }
+      inputs.forEach(function(input){
+        input.addEventListener('keydown', function(e){
+          if (e.key !== 'Enter'){ return; }
+          if (input.checkValidity()){
+            e.preventDefault();
+            focusNext(input);
+          }
+        });
+      });
+    })();
+  </script>
+
 
 </body>
 </html>
