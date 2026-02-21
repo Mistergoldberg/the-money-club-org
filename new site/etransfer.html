@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Program Terms &amp; Payment Policy | The Money Club.Org</title>
+  <title>Thank You | The Money Club</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Program terms, payment policy, refunds, and cancellations for The Money Club." />
-  <meta property="og:title" content="Program Terms &amp; Payment Policy (Ontario)" />
-  <meta property="og:description" content="Program terms, payment policy, refunds, and cancellations for The Money Club." />
-  <meta property="og:url" content="https://the-money-club.org/program-terms.html" />
+  <meta name="description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
+  <meta property="og:title" content="e-Transfer Payment Instructions" />
+  <meta property="og:description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
+  <meta property="og:url" content="https://the-money-club.org/thank-you.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Program Terms &amp; Payment Policy (Ontario)" />
-  <meta name="twitter:description" content="Program terms, payment policy, refunds, and cancellations for The Money Club." />
+  <meta name="twitter:title" content="e-Transfer Payment Instructions" />
+  <meta name="twitter:description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
-  <link rel="canonical" href="https://the-money-club.org/program-terms.html" />
+  <link rel="canonical" href="https://the-money-club.org/thank-you.html" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Program Terms & Payment Policy (Ontario)",
-      "url": "https://the-money-club.org/program-terms.html"
+      "name": "e-Transfer Payment Instructions",
+      "url": "https://the-money-club.org/thank-you.html"
     }
   </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -916,7 +916,7 @@ nav{
     }
     .content-section.gold .content-banner{
       background: var(--gold);
-      color: #fff;
+      color: var(--ink);
     }
     .content-content{
       max-width: var(--max-wide);
@@ -1348,7 +1348,7 @@ nav{
       text-align: center;
     }
     .thankyou-card{
-      max-width: var(--max-wide);
+      max-width: 900px;
       margin: 0 auto;
     }
     .thankyou-card .btn{
@@ -1373,6 +1373,68 @@ nav{
       letter-spacing: 0;
       line-height: var(--lh-body);
     }
+    .copy-grid{
+      display: grid;
+      gap: 12px;
+      margin: 8px 0 4px;
+    }
+    .copy-row{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #ffffff;
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: var(--size-body);
+      text-align: left;
+      cursor: pointer;
+    }
+    .copy-row:focus-visible{
+      outline: 3px solid rgba(120, 110, 197, 0.35);
+      outline-offset: 2px;
+    }
+    .copy-label{
+      font-weight: 700;
+      min-width: 90px;
+    }
+    .copy-value{
+      font-weight: 600;
+      flex: 1;
+    }
+    .copy-hint{
+      font-weight: 600;
+      color: var(--purple);
+      white-space: nowrap;
+    }
+    .copy-row.is-copied{
+      border-color: rgba(120, 110, 197, 0.6);
+      box-shadow: 0 10px 18px rgba(120, 110, 197, 0.18);
+    }
+    @media (max-width: 640px){
+      .copy-row{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "label hint"
+          "value hint";
+        align-items: center;
+        row-gap: 6px;
+      }
+      .copy-label{
+        min-width: 0;
+        grid-area: label;
+      }
+      .copy-value{ grid-area: value; }
+      .copy-hint{
+        grid-area: hint;
+        align-self: center;
+      }
+    }
     .share-btn{
       width: min(100%, 320px);
       font-family: var(--font-display);
@@ -1383,72 +1445,9 @@ nav{
       padding: 20px 22px;
       margin-top: 8px;
     }
-    .extra-section{
-      margin-top: var(--space-6);
-    }
-    .extra-grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
-    .extra-card{
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: #ffffff;
-      padding: 20px;
-      display:grid;
-      gap: 12px;
-      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
-    }
-    .extra-card img{
-      width: 100%;
-      border-radius: 16px;
-      display: block;
-    }
-    .extra-card h3{
-      margin: 0;
-      font-size: clamp(26px, 3.4vw, 40px);
-      font-family: var(--font-body);
-      text-transform: none;
-      letter-spacing: 0;
-      line-height: 1.15;
-      font-weight: 700;
-    }
-    .extra-card p,
-    .extra-card ul{
-      margin: 0;
-      line-height: 1.3;
-    }
-    .extra-card p + p,
-    .extra-card p + ul,
-    .extra-card ul + p{
-      margin-top: 8px;
-    }
-    .extra-card ul{
-      padding-left: 18px;
-      display: grid;
-      gap: 6px;
-    }
-    .extra-card li{
-      margin: 0;
-    }
-    .extra-card .btn{
-      width: 100%;
-      font-family: var(--font-display);
-      font-size: var(--btn-size-lg);
-      letter-spacing: var(--tracking-display);
-      text-transform: uppercase;
-      padding: 20px 24px;
-      border-radius: 16px;
-      text-align: center;
-    }
 
     @media (min-width: 981px){
       .menu-btn{ display:none; }
-    }
-  
-    @media (max-width: 900px){
-      .extra-grid{ grid-template-columns: 1fr; }
     }
 
 
@@ -1631,138 +1630,66 @@ nav{
     <section class="content-section gold">
       <div class="content-banner gold">
         <div class="wrap">
-          <h2 class="thankyou-title">📜 Program Terms &amp; Payment Policy (Ontario)</h2>
+          <h2 class="thankyou-title">e-Transfer Payment Instructions</h2>
         </div>
       </div>
       <div class="content-content">
         <div class="reservation-card thankyou-card">
-          <p><strong>Last updated:</strong> February 8, 2026</p>
-          <p>These Program Terms &amp; Payment Policy (“Terms”) apply to registrations for <strong>The Money Club.Org</strong> (“we”, “us”, “our”). By registering and/or making a payment, you (“Parent/Guardian”, “you”) agree to these Terms.</p>
+<p><strong>Amount Due</strong><br />
+<strong>$1,695.00 CAD</strong> (includes 13% HST)</p>
 
-          <h3>🚀 Program Overview</h3>
-          <p><strong>Who is it for?</strong> Curious kids ages <strong>11–17</strong></p>
-          <p><strong>How much?</strong> <strong>$1,500 per student</strong> (plus 13% HST)</p>
-          <p><strong>How long?</strong> <strong>4-week</strong> summer day program</p>
-          <p><strong>Where?</strong> <strong>Student Commons</strong>, 230 College Street, Toronto, ON M5T 1R2 (University of Toronto campus)</p>
-          <p><strong>When?</strong></p>
-          <ul>
-            <li><strong>Session 1:</strong> July 6–July 31, 2026</li>
-            <li><strong>Session 2:</strong> August 4–August 28, 2026</li>
-          </ul>
+<p><strong>Send e-Transfer To</strong><br />
+<strong>info@the-money-club.org</strong></p>
 
-          <h3>✅ Registration &amp; Seat Confirmation</h3>
-          <ul>
-            <li>Submitting the reservation form indicates your intent to enroll.</li>
-            <li>A seat is <strong>confirmed only when payment is received</strong>:
-              <ul>
-                <li><strong>Credit card:</strong> confirmed once payment is successfully completed</li>
-                <li><strong>e-Transfer:</strong> confirmed once the transfer is received and matched to your registration code</li>
-              </ul>
-            </li>
-            <li>If we cannot match a payment to a registration (for example, missing code), confirmation may be delayed.</li>
-          </ul>
+<p><strong>Message / Note (Required)</strong><br />
+<strong><span data-child-name>[Child’s Name]</span></strong></p>
 
-          <h3>💰 Program Fee + HST</h3>
-          <ul>
-            <li><strong>Program fee:</strong> <strong>$1,500 CAD</strong> per student, per session</li>
-            <li><strong>HST:</strong> <strong>13% (Ontario)</strong> is added to the program fee</li>
-          </ul>
-          <p>Program fees are <strong>not charitable donations</strong> and are <strong>not eligible for donation tax receipts</strong>.</p>
 
-          <h3>💳 Payment Methods</h3>
-          <p>You can pay by:</p>
-          <ol>
-            <li><strong>Interac e-Transfer</strong> (no processing surcharge)</li>
-            <li><strong>Credit Card</strong> (credit card surcharge applies)</li>
-          </ol>
+<div class="copy-grid">
+  <button class="copy-row" type="button" data-copy-target="copy-recipient">
+    <span class="copy-label">Recipient</span>
+    <span class="copy-value" id="copy-recipient">info@the-money-club.org</span>
+    <span class="copy-hint">Tap to copy</span>
+  </button>
+  <button class="copy-row" type="button" data-copy-target="copy-amount">
+    <span class="copy-label">Amount</span>
+    <span class="copy-value" id="copy-amount">1,695.00</span>
+    <span class="copy-hint">Tap to copy</span>
+  </button>
+  <button class="copy-row" type="button" data-copy-target="copy-message">
+    <span class="copy-label">Message</span>
+    <span class="copy-value" id="copy-message"><span data-child-name>Ava</span></span>
+    <span class="copy-hint">Tap to copy</span>
+  </button>
+</div>
 
-          <h3>⚠️ Credit Card Surcharge (2.4%)</h3>
-          <p>If you choose to pay by credit card, a <strong>2.4% credit card surcharge</strong> applies to help cover card processing costs.</p>
-          <ul>
-            <li>The surcharge is <strong>shown before you pay</strong> and appears as a <strong>separate line item</strong> on your receipt.</li>
-            <li>The surcharge applies to <strong>credit card payments only</strong> (not e-Transfer).</li>
-            <li>The surcharge will not exceed applicable network caps (maximum 2.4%) or our actual cost of credit card acceptance.</li>
-          </ul>
 
-          <h3>🔁 Refunds &amp; Cancellations</h3>
-          <p><strong>✅ Refunds requested on or before June 1, 2026</strong><br />
-            Refund requests must be emailed to <a href="mailto:info@the-money-club.org">info@the-money-club.org</a> from the same email address used to register.</p>
-          <ul>
-            <li><strong>e-Transfer payments:</strong> full refund of the <strong>program fee + HST</strong></li>
-            <li><strong>Credit card payments:</strong> refund of the <strong>program fee + HST</strong><br />
-              The <strong>credit card processing surcharge is non-refundable</strong> (it covers processing costs already incurred)
-            </li>
-          </ul>
-          <p><strong>❌ After June 1, 2026</strong><br />Program fees are <strong>non-refundable</strong>.</p>
-          <p><strong>🛑 If we cancel a session</strong><br />
-            If The Money Club.Org cancels a session (for example, safety issues, venue issues, or insufficient enrollment), we will offer <strong>your choice</strong> of:</p>
-          <ul>
-            <li>a <strong>full refund of amounts paid</strong> (including HST and any credit card surcharge), or</li>
-            <li>a <strong>transfer to another session</strong> (if space is available)</li>
-          </ul>
+<h3>How to Pay (1 minute)</h3>
+<ol class="content-list">
+  <li>Open your mobile banking app</li>
+  <li>Choose <strong>Interac e-Transfer</strong> → <strong>Send</strong></li>
+  <li>Enter the recipient email: <strong>info@the-money-club.org</strong></li>
+  <li>Enter the amount: <strong>$1,695.00 CAD</strong></li>
+  <li>Paste the message: <strong><span data-child-name>[Child’s Name]</span></strong></li>
+  <li>Send the transfer</li>
+</ol>
 
-          <h3>🔄 Transfers Between Sessions</h3>
-          <p>Transfers between Session 1 and Session 2 may be possible <strong>only if space is available</strong> and must be requested in writing at <a href="mailto:info@the-money-club.org">info@the-money-club.org</a>.</p>
+<h3>Confirmation</h3>
+<p>We’ll email confirmation <strong>within 24 hours of receiving your transfer</strong>.</p>
 
-          <h3>📝 Student Registration &amp; Consent Form Required</h3>
-          <p>After payment, you will receive our <strong>Student Registration &amp; Consent Form</strong> (including emergency contact details and permissions).<br />
-            <strong>Students may not participate</strong> until the completed form is received.</p>
+<h3>Refunds</h3>
+<p>Refunds are available until <strong>June 1, 2026</strong>.<br />
+e-Transfer payments have <strong>no processing fee</strong>, so approved refunds (before June 1) are returned in full.</p>
 
-          <h3>🗓️ Attendance, Missed Days, &amp; Illness</h3>
-          <ul>
-            <li>Missed days do not create an entitlement to a refund.</li>
-            <li>If a student is sick, please keep them home and notify us by email.</li>
-          </ul>
+<h3>Need help?</h3>
+<p>Email: <strong>info@the-money-club.org</strong><br />
+Phone: <strong>437-239-8602</strong></p>
 
-          <h3>🤝 Code of Conduct &amp; Safety</h3>
-          <p>Students are expected to:</p>
-          <ul>
-            <li>follow instructor directions and safety rules,</li>
-            <li>treat others respectfully,</li>
-            <li>use materials and spaces responsibly.</li>
-          </ul>
-          <p>We may contact a parent/guardian for early pickup if needed. In serious cases, we reserve the right to remove a student from the program for safety or behavioural reasons. <em>(Fees remain non-refundable.)</em></p>
+<hr />
 
-          <h3>📸 Photos, Video, &amp; Communications</h3>
-          <p>Media preferences (photo/video consent) are collected in the Student Registration &amp; Consent Form.</p>
-          <p>We may contact you by email or phone regarding program operations, scheduling, receipts, refunds, and required forms.</p>
+<button id="share-button" class="btn purple gloss share-btn" type="button">Share now</button>
 
-          <h3>🧩 Changes to the Program</h3>
-          <p>We may make reasonable changes to scheduling, instructors, activities, or materials. Any significant changes will be communicated by email.</p>
-
-          <h3>📬 Contact</h3>
-          <p><strong>Support email:</strong> <a href="mailto:info@the-money-club.org">info@the-money-club.org</a><br />
-            <strong>Schedule a meeting:</strong> <a href="https://calendly.com/me-mistergoldberg/30min">Calendar</a></p>
-          <h3>⚖️ Governing Law</h3>
-          <p>These Terms are governed by the laws of <strong>Ontario and Canada</strong> applicable in Ontario.</p>
-        </div>
-        <div class="extra-section">
-          <div class="extra-grid">
-            <div class="extra-card">
-              <h3>Where This Leads</h3>
-              <p>Today, The Money Club.Org runs as:</p>
-              <ul>
-                <li>Small local cohorts</li>
-                <li>Earned-revenue pilots</li>
-                <li>Carefully managed programs</li>
-              </ul>
-              <p>Over time, demonstrated results can enable:</p>
-              <ul>
-                <li>Sponsorships</li>
-                <li>Grants</li>
-                <li>Institutional partnerships</li>
-              </ul>
-              <p>But scale comes after proof — not before.</p>
-              <a class="btn purple gloss" href="support-our-mission.html">Interested in supporting our mission?</a>
-            </div>
-            <div class="extra-card">
-              <img src="assets/banner-kid-presents.jpg" alt="Students presenting in class" />
-              <h3>Ready for details?</h3>
-              <p>See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
-              <a class="btn gold gloss" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
-            </div>
-          </div>
-        </div>
+</div>
       </div>
     </section>
   </main>
@@ -1988,6 +1915,69 @@ nav{
           return;
         }
         trackCta(target);
+      });
+    })();
+  </script>
+
+
+  <script>
+    (function(){
+      var params = new URLSearchParams(window.location.search);
+      var name = params.get('child') || params.get('child_name') || params.get('student-name') || localStorage.getItem('tmc_child_name') || '';
+      if (!name){ return; }
+      document.querySelectorAll('[data-child-name]').forEach(function(el){
+        el.textContent = name;
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      var rows = document.querySelectorAll('.copy-row');
+      if (!rows.length){ return; }
+
+      function copyText(value){
+        if (navigator.clipboard && navigator.clipboard.writeText){
+          return navigator.clipboard.writeText(value);
+        }
+        return new Promise(function(resolve, reject){
+          var textarea = document.createElement('textarea');
+          textarea.value = value;
+          textarea.setAttribute('readonly', '');
+          textarea.style.position = 'absolute';
+          textarea.style.left = '-9999px';
+          document.body.appendChild(textarea);
+          textarea.select();
+          try{
+            document.execCommand('copy');
+            resolve();
+          } catch (err){
+            reject(err);
+          } finally {
+            document.body.removeChild(textarea);
+          }
+        });
+      }
+
+      rows.forEach(function(row){
+        row.addEventListener('click', function(){
+          var targetId = row.getAttribute('data-copy-target');
+          var target = targetId ? document.getElementById(targetId) : null;
+          if (!target){ return; }
+          var value = target.textContent.trim();
+          copyText(value).then(function(){
+            row.classList.add('is-copied');
+            var hint = row.querySelector('.copy-hint');
+            if (hint){
+              hint.textContent = 'Copied';
+            }
+            setTimeout(function(){
+              row.classList.remove('is-copied');
+              if (hint){
+                hint.textContent = 'Tap to copy';
+              }
+            }, 1600);
+          }).catch(function(){});
+        });
       });
     })();
   </script>

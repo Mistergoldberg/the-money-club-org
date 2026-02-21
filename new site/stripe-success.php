@@ -133,7 +133,7 @@ if (isset($session_map[$preferred_session])) {
     });
 }
 
-$to = ['jared@the-money-club.org', 'alex@the-money-club.org', 'sarah@the-money-club.org'];
+$to = ['info@the-money-club.org', 'alex@the-money-club.org', 'sarah@the-money-club.org'];
 $subject = 'Reserve a Spot (Paid): The Money Club.Org';
 $from = 'info@the-money-club.org';
 

@@ -39,7 +39,7 @@ if ($background_check !== 'Yes') {
     exit('Please acknowledge the background check requirement.');
 }
 
-$to = ['alex@the-money-club.org', 'jared@the-money-club.org'];
+$to = ['alex@the-money-club.org', 'info@the-money-club.org'];
 $subject = 'Instructor Application: The Money Club.Org';
 $from = 'info@the-money-club.org';
 

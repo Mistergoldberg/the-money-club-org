@@ -985,9 +985,9 @@ nav{
     .field label.section-heading{
       font-weight: 700;
     }
-    .field input,
-    .field select,
-    .field textarea{
+      .field input,
+      .field select,
+      .field textarea{
       font: inherit;
       padding: 12px 14px;
       border-radius: 12px;
@@ -1489,6 +1489,38 @@ nav{
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
       .hero-sub{ font-size: inherit; line-height: 1.05; }
+      .form-grid{ gap: 20px; }
+      .field{ gap: 8px; }
+      .field label{ font-size: 22px; }
+      .field input[type="text"],
+      .field input[type="email"],
+      .field input[type="tel"],
+      .field input[type="number"],
+      .field input[type="url"],
+      .field select,
+      .field textarea{
+        font-size: 20px;
+        line-height: 1.2;
+        padding: 16px 18px;
+        min-height: 58px;
+        border-radius: 18px;
+        border: 2px solid #d6d2c9;
+        background: #ffffff;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .field input[type="text"]:focus,
+      .field input[type="email"]:focus,
+      .field input[type="tel"]:focus,
+      .field input[type="number"]:focus,
+      .field input[type="url"]:focus,
+      .field select:focus,
+      .field textarea:focus{
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+      }
       .btn{
         font-family: var(--font-display);
         font-size: 35.04px;
@@ -1582,6 +1614,10 @@ nav{
     }
   
     @media (max-width: 640px){
+      :root{
+        --lh-body: 1.38;
+      }
+
       .topbar .btn{ display: none; }
     }
   </style>
@@ -1786,7 +1822,7 @@ nav{
         });
       }
 
-      function updateFieldState(field){
+      function updateFieldState(field, force){
         if (!field){ return; }
         var radios = field.querySelectorAll('input[type="radio"]');
         var checkbox = field.querySelector('input[type="checkbox"]');
@@ -1801,7 +1837,12 @@ nav{
         } else if (input){
           valid = input.checkValidity();
         }
-        field.classList.toggle('is-invalid', !valid);
+        if (valid){
+          field.classList.remove('is-invalid');
+          return;
+        }
+        var showErrors = force || field.dataset.touched === 'true';
+        field.classList.toggle('is-invalid', showErrors);
       }
 
       var forms = document.querySelectorAll('.form-grid');
@@ -1809,7 +1850,8 @@ nav{
         form.addEventListener('submit', function(e){
           var fields = form.querySelectorAll('.field');
           fields.forEach(function(field){
-            updateFieldState(field);
+            field.dataset.touched = 'true';
+            updateFieldState(field, true);
           });
           if (!form.checkValidity()){
             e.preventDefault();
@@ -1821,13 +1863,21 @@ nav{
         });
 
       form.addEventListener('input', function(e){
-        updateFieldState(e.target.closest('.field'));
+        updateFieldState(e.target.closest('.field'), false);
         updateFlowState();
       });
 
       form.addEventListener('change', function(e){
-        updateFieldState(e.target.closest('.field'));
+        updateFieldState(e.target.closest('.field'), false);
         updateFlowState();
+      });
+
+      form.addEventListener('focusout', function(e){
+        var field = e.target.closest('.field');
+        if (field){
+          field.dataset.touched = 'true';
+          updateFieldState(field, true);
+        }
       });
       });
 
@@ -1872,6 +1922,17 @@ nav{
       var sessionGrid = document.querySelector('.session-grid');
       var baseRequiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
       var termsAgree = document.getElementById('terms-agree');
+
+
+      var childNameInput = document.getElementById('student-name');
+      if (childNameInput){
+        childNameInput.addEventListener('input', function(){
+          try {
+            localStorage.setItem('tmc_child_name', childNameInput.value.trim());
+          } catch (e) {}
+        });
+      }
+
 
       function baseFieldsValid(){
         return Array.prototype.every.call(baseRequiredInputs, function(input){
@@ -1959,10 +2020,13 @@ nav{
         btn.addEventListener('click', function(e){
           var form = btn.form;
           if (form) {
+            var returnTo = form.querySelector('[name="return-to"]');
             if (btn.value === 'Credit Card') {
               form.setAttribute('action', 'stripe-checkout.php');
+              if (returnTo){ returnTo.value = 'thank-you-credit-card.html'; }
             } else {
               form.setAttribute('action', 'apply-camper.php');
+              if (returnTo){ returnTo.value = 'etransfer.html'; }
             }
           }
           if (!baseFieldsValid()){

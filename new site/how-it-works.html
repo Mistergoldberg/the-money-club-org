@@ -1512,6 +1512,10 @@ nav{
     }
   
     @media (max-width: 640px){
+      :root{
+        --lh-body: 1.38;
+      }
+
       .topbar .btn{ display: none; }
     }
   </style>
@@ -1574,7 +1578,7 @@ nav{
           <div class="hero-title-block">
             <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
             <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            <div class="hero-sub">Teaching financial literacy, design thinking, &amp; public speaking</div>
+            <div class="hero-sub">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
 </div>
         </div>
 
@@ -1791,7 +1795,7 @@ nav{
     <div class="inner">
       <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">Teaching financial literacy, design thinking, &amp; public speaking</div>
+      <div class="footer-tagline">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
     </div>
   </footer>
 
@@ -1946,6 +1950,17 @@ nav{
       var baseRequiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
       var termsAgree = document.getElementById('terms-agree');
 
+
+      var childNameInput = document.getElementById('student-name');
+      if (childNameInput){
+        childNameInput.addEventListener('input', function(){
+          try {
+            localStorage.setItem('tmc_child_name', childNameInput.value.trim());
+          } catch (e) {}
+        });
+      }
+
+
       function baseFieldsValid(){
         return Array.prototype.every.call(baseRequiredInputs, function(input){
           return input.checkValidity();
@@ -2032,10 +2047,13 @@ nav{
         btn.addEventListener('click', function(e){
           var form = btn.form;
           if (form) {
+            var returnTo = form.querySelector('[name="return-to"]');
             if (btn.value === 'Credit Card') {
               form.setAttribute('action', 'stripe-checkout.php');
+              if (returnTo){ returnTo.value = 'thank-you-credit-card.html'; }
             } else {
               form.setAttribute('action', 'apply-camper.php');
+              if (returnTo){ returnTo.value = 'etransfer.html'; }
             }
           }
           if (!baseFieldsValid()){

@@ -1746,6 +1746,10 @@ nav{
     }
   
     @media (max-width: 640px){
+      :root{
+        --lh-body: 1.38;
+      }
+
       .topbar .btn{ display: none; }
     }
   </style>
@@ -1838,7 +1842,7 @@ nav{
               <div class="pricing-detail-card">
                 <h3>📍 Location</h3>
                 <div class="location-layout">
-                  <p class="location-text">University of Toronto Students' Union, 230 College Street, Toronto, ON M5T 1R2</p>
+                  <p class="location-text">Student Commons, 230 College Street, Toronto, ON M5T 1R2 (University of Toronto campus)</p>
                 </div>
               </div>
               <div class="pricing-detail-card">
@@ -2259,6 +2263,17 @@ nav{
             var baseRequiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
             var termsAgree = document.getElementById('terms-agree');
 
+
+      var childNameInput = document.getElementById('student-name');
+      if (childNameInput){
+        childNameInput.addEventListener('input', function(){
+          try {
+            localStorage.setItem('tmc_child_name', childNameInput.value.trim());
+          } catch (e) {}
+        });
+      }
+
+
             function baseFieldsValid(){
               return Array.prototype.every.call(baseRequiredInputs, function(input){
                 return input.checkValidity();
@@ -2345,10 +2360,13 @@ nav{
         btn.addEventListener('click', function(e){
           var form = btn.form;
           if (form) {
+            var returnTo = form.querySelector('[name="return-to"]');
             if (btn.value === 'Credit Card') {
               form.setAttribute('action', 'stripe-checkout.php');
+              if (returnTo){ returnTo.value = 'thank-you-credit-card.html'; }
             } else {
               form.setAttribute('action', 'apply-camper.php');
+              if (returnTo){ returnTo.value = 'etransfer.html'; }
             }
           }
               if (!baseFieldsValid()){

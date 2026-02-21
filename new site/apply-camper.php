@@ -39,7 +39,15 @@ $terms_agree = isset($_POST['terms-agree']) ? trim($_POST['terms-agree']) : '';
 $notes = isset($_POST['student-notes']) ? trim($_POST['student-notes']) : '';
 
 $return_to = isset($_POST['return-to']) ? trim($_POST['return-to']) : 'reserve-a-spot.html';
-$allowed_returns = ['reserve-a-spot.html', 'schedule-pricing.html', 'thank-you.html'];
+$allowed_returns = [
+    'reserve-a-spot.html',
+    'schedule-pricing.html',
+    'how-it-works.html',
+    'open-book-hook.html',
+    'curriculum.html',
+    'thank-you.html',
+    'etransfer.html'
+];
 if (!in_array($return_to, $allowed_returns, true)) {
     $return_to = 'reserve-a-spot.html';
 }
@@ -165,7 +173,7 @@ if (!$reserve_result['ok']) {
     }
 }
 
-$to = ['jared@the-money-club.org', 'alex@the-money-club.org', 'sarah@the-money-club.org'];
+$to = ['info@the-money-club.org', 'alex@the-money-club.org', 'sarah@the-money-club.org'];
 $subject = 'Reserve a Spot: The Money Club.Org';
 $from = 'info@the-money-club.org';
 

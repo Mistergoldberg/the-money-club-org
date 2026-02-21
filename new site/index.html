@@ -106,6 +106,8 @@
       --teal: #1e8a95;
       --purple: #8c62a7;
       --gold: #f0b43a;
+      --rose: #d8697a;
+      --slate: #5f6f7a;
       --ink: #1a1a1a;
 
       --font-body: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -518,6 +520,18 @@
       padding: 22px 22px;
       border-radius: 16px;
     }
+    .cta-stack--hero{
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+    }
+    .cta-stack--hero .cta-fill{
+      width: 100%;
+      padding: 32px 32px;
+      font-size: clamp(30px, 2.6vw, 44px);
+      border-radius: 22px;
+      box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+    }
 
     .bullet-list{
       margin: 8px 0 0;
@@ -653,7 +667,87 @@
       border: 1px solid var(--line);
       overflow: hidden;
     }
-
+    .openbook-pie-card{
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+    .openbook-subheading{
+      margin: 0 0 10px;
+      text-align: center;
+    }
+    .openbook-pie{
+      width: min(360px, 100%);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      background:
+        conic-gradient(
+          var(--purple) 0% 34%,
+          var(--teal) 34% 58%,
+          var(--gold) 58% 80%,
+          var(--ink) 80% 82%,
+          var(--slate) 82% 90%,
+          var(--rose) 90% 100%
+        );
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+    .openbook-pie::after{
+      content: "";
+      position: absolute;
+      inset: 18%;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+    .openbook-pie-center{
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      display: grid;
+      gap: 4px;
+    }
+    .openbook-pie-center .label{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+    }
+    .openbook-pie-center .value{
+      font-family: var(--font-display);
+      font-size: clamp(32px, 7vw, 52px);
+      letter-spacing: var(--tracking-display);
+      color: var(--ink);
+    }
+    .openbook-legend{
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+      width: min(360px, 100%);
+    }
+    .openbook-legend li{
+      display: grid;
+      grid-template-columns: 12px minmax(0, 1fr) minmax(0, 90px);
+      gap: 12px;
+      align-items: center;
+      text-align: left;
+    }
+    .openbook-legend .legend-label{
+      color: var(--ink);
+    }
+    .openbook-legend .legend-value{
+      font-weight: 600;
+      text-align: left;
+      justify-self: start;
+      font-variant-numeric: tabular-nums;
+    }
     .profile-photo{
       width: min(100%, 210px);
       aspect-ratio: 1 / 1;
@@ -865,6 +959,12 @@
       .radical-side .radical-notes{
         order: 3;
       }
+      .radical-side h3.openbook-subheading{
+        order: 0;
+      }
+      .openbook-pie-card{
+        order: 4;
+      }
       .radical-side .btn{
         order: 4;
       }
@@ -915,7 +1015,24 @@
     }
   
     @media (max-width: 640px){
+      :root{
+        --lh-body: 1.38;
+      }
       .topbar .btn{ display: none; }
+      .openbook-pie{
+        width: min(280px, 100%);
+      }
+      .openbook-legend{
+        width: 100%;
+        margin: 0;
+      }
+      .openbook-legend li{
+        grid-template-columns: 12px minmax(0, 1fr) 72px;
+      }
+      .openbook-legend .legend-value{
+        text-align: left;
+        justify-self: start;
+      }
     }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
@@ -976,7 +1093,7 @@
           <div class="hero-title-block">
             <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
             <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            <div class="hero-sub">Teaching financial literacy, design thinking, &amp; public speaking</div>
+            <div class="hero-sub">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
 </div>
         </div>
 
@@ -1001,11 +1118,10 @@
               <li>how products are priced</li>
               <li>or how decisions turn into consequences</li>
             </ul>
-            <p>The Money Club is a 4-week, instructor-led summer program at the University of Toronto Students’ Union that teaches kids how money, incentives, and real-world systems actually work.</p>
+            <p>The Money Club is a 4-week, instructor-led summer program that teaches kids how money, incentives, and real-world systems actually work.</p>
            </div>
-          <div class="cta-stack">
-            <a data-cta-label="Learn more" class="btn purple cta-standard" href="how-it-works.html">Learn more</a>
-            <a data-cta-label="Reserve a spot" class="btn teal cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
+          <div class="cta-stack cta-stack--hero">
+            <a data-cta-label="Reserve a spot" class="btn teal gloss cta-standard cta-fill" href="reserve-a-spot.html">Reserve a spot</a>
           </div>
         </div>
       </div>
@@ -1030,42 +1146,9 @@
               <div><strong>Who is it for?</strong> Curious kids ages 11–16</div>
               <div><strong>How much?</strong> $1,500 per student</div>
               <div><strong>How long?</strong> 4-week summer day program</div>
-              <div><strong>Where?</strong> University of Toronto Students' Union, 230 College Street, Toronto, ON M5T 1R2</div>
+              <div><strong>Where?</strong> Hosted at Student Commons, 230 College Street, Toronto, ON M5T 1R2 (University of Toronto campus*)</div>
               <div><strong>When?</strong> Session 1: July 6–July 31, 2026 &amp; Session 2: August 4–August 28, 2026</div>
-            </div>
-            <div class="cta-right">
-              <a data-cta-label="Learn more" class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="how-it-works">
-      <div class="section-banner teal">
-        <div class="wrap">
-          <h2>How It Works</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="split">
-          <div class="section-copy">
-            <p>During the program, students will:</p>
-            <ul class="bullet-list">
-              <li>Create a product or service</li>
-              <li>Learn basic business math (costs, pricing, margin)</li>
-              <li>Work in teams</li>
-              <li>Practice communication and leadership</li>
-              <li>Prepare and present at a community pitch night</li>
-            </ul>
-            <p>By the end, every student can confidently explain what they built, how it works, and why it matters.</p>
-            <div class="cta-right">
-              <a data-cta-label="Learn more" class="btn gold cta-standard" href="how-it-works.html">Learn more</a>
-            </div>
-          </div>
-          <div class="section-media">
-            <div class="section-image">
-              <img src="assets/instruct-presents-1.jpg" alt="Students presenting a UX design" />
+              <div><small>*Independent program — not run by, endorsed by, or sponsored by the University of Toronto.</small></div>
             </div>
           </div>
         </div>
@@ -1073,7 +1156,7 @@
     </section>
 
     <section class="section" id="radical-transparency">
-      <div class="section-banner purple">
+      <div class="section-banner teal">
         <div class="wrap">
           <h2>Built for learning — not profit</h2>
         </div>
@@ -1100,22 +1183,76 @@
             </div>
           </div>
           <div class="radical-side">
-            <h3>Where Tuition Goes</h3>
-            <ul class="radical-list">
-              <li>Instructors — Paid, trained university leaders</li>
-              <li>Materials — Product inputs and shared project supplies</li>
-              <li>Space — Safe, supervised community venues</li>
-              <li>Insurance — Full program coverage</li>
+            <div class="openbook-pie-card" aria-label="Program budget distribution chart">
+              <h3 class="openbook-subheading">Expense Visualization</h3>
+              <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 34%, Materials 24%, Venue rental 22%, Insurance 2%, Overhead 8%, Incidentals 10%">
+                <div class="openbook-pie-center">
+                  <span class="label">Total</span>
+                  <span class="value">100%</span>
+                </div>
+              </div>
+              <ul class="openbook-legend">
+                <li>
+                  <span class="legend-dot" style="background: var(--purple);"></span>
+                  <span class="legend-label">Instructor</span>
+                  <span class="legend-value">34%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--teal);"></span>
+                  <span class="legend-label">Materials</span>
+                  <span class="legend-value">24%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--gold);"></span>
+                  <span class="legend-label">Venue rental</span>
+                  <span class="legend-value">22%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--rose);"></span>
+                  <span class="legend-label">Incidentals</span>
+                  <span class="legend-value">10%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--slate);"></span>
+                  <span class="legend-label">Overhead</span>
+                  <span class="legend-value">8%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--ink);"></span>
+                  <span class="legend-label">Insurance</span>
+                  <span class="legend-value">2%</span>
+                </li>
+              </ul>
+              <a data-cta-label="Audit the books" class="btn gold cta-standard" href="open-book-hook.html">Audit Our Books</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>How It Works</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="split">
+          <div class="section-copy">
+            <p>During the program, students will:</p>
+            <ul class="bullet-list">
+              <li>Create a product or service</li>
+              <li>Learn basic business math (costs, pricing, margin)</li>
+              <li>Work in teams</li>
+              <li>Practice communication and leadership</li>
+              <li>Prepare and present at a community pitch night</li>
             </ul>
-            <div class="radical-notes">
-              <p>Every dollar has a job.</p>
-              <p>Nothing is hidden.</p>
-              <p>Nothing is extracted.</p>
-            </div>
+            <p>By the end, every student can confidently explain what they built, how it works, and why it matters.</p>
+          </div>
+          <div class="section-media">
             <div class="section-image">
-              <img src="assets/banner-kid-presents.jpg" alt="Students presenting a UX design" />
+              <img src="assets/instruct-presents-1.jpg" alt="Students presenting a UX design" />
             </div>
-            <a data-cta-label="View open-book financials" class="btn teal cta-standard" href="open-book-hook.html">View open-book financials</a>
           </div>
         </div>
       </div>
@@ -1215,7 +1352,7 @@
           </div>
           <div class="section-copy cta-block">
             <h3>Ready to reserve a spot?</h3>
-            <p class="cta-note">July &amp; August 2026 | University of Toronto Students' Union</p>
+            <p class="cta-note">July &amp; August 2026 | Student Commons, Downtown Toronto</p>
             <p class="cta-note">$1,500 for 4 weeks | All materials included</p>
             <div class="cta-row">
               <a data-cta-label="View schedule &amp; pricing" class="btn purple cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
@@ -1231,7 +1368,7 @@
     <div class="inner">
       <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">Teaching financial literacy, design thinking, &amp; public speaking</div>
+      <div class="footer-tagline">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
     </div>
   </footer>
 

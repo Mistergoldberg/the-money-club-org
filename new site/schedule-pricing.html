@@ -1746,6 +1746,38 @@ nav{
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
       .hero-sub{ font-size: inherit; line-height: 1.05; }
+      .form-grid{ gap: 20px; }
+      .field{ gap: 8px; }
+      .field label{ font-size: 22px; }
+      .field input[type="text"],
+      .field input[type="email"],
+      .field input[type="tel"],
+      .field input[type="number"],
+      .field input[type="url"],
+      .field select,
+      .field textarea{
+        font-size: 20px;
+        line-height: 1.2;
+        padding: 16px 18px;
+        min-height: 58px;
+        border-radius: 18px;
+        border: 2px solid #d6d2c9;
+        background: #ffffff;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      .field input[type="text"]:focus,
+      .field input[type="email"]:focus,
+      .field input[type="tel"]:focus,
+      .field input[type="number"]:focus,
+      .field input[type="url"]:focus,
+      .field select:focus,
+      .field textarea:focus{
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+      }
       .btn{
         font-family: var(--font-display);
         font-size: 35.04px;
@@ -1803,6 +1835,10 @@ nav{
     }
   
     @media (max-width: 640px){
+      :root{
+        --lh-body: 1.38;
+      }
+
       .topbar .btn{ display: none; }
     }
   </style>
@@ -1864,7 +1900,7 @@ nav{
           <div class="hero-title-block">
             <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
             <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            <div class="hero-sub">Teaching financial literacy, design thinking, &amp; public speaking</div>
+            <div class="hero-sub">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
           </div>
         </div>
 
@@ -2291,6 +2327,17 @@ nav{
             var baseRequiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
             var termsAgree = document.getElementById('terms-agree');
 
+
+      var childNameInput = document.getElementById('student-name');
+      if (childNameInput){
+        childNameInput.addEventListener('input', function(){
+          try {
+            localStorage.setItem('tmc_child_name', childNameInput.value.trim());
+          } catch (e) {}
+        });
+      }
+
+
             function baseFieldsValid(){
               return Array.prototype.every.call(baseRequiredInputs, function(input){
                 return input.checkValidity();
@@ -2377,10 +2424,13 @@ nav{
         btn.addEventListener('click', function(e){
           var form = btn.form;
           if (form) {
+            var returnTo = form.querySelector('[name="return-to"]');
             if (btn.value === 'Credit Card') {
               form.setAttribute('action', 'stripe-checkout.php');
+              if (returnTo){ returnTo.value = 'thank-you-credit-card.html'; }
             } else {
               form.setAttribute('action', 'apply-camper.php');
+              if (returnTo){ returnTo.value = 'etransfer.html'; }
             }
           }
               if (!baseFieldsValid()){
