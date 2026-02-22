@@ -155,6 +155,10 @@ if ($session_product_id === null) {
     redirect_with_error($return_error, 'preferred-session', 'Please select a valid session.');
 }
 
+$program_fee_cents = 150000;
+$hst_cents = (int) round($program_fee_cents * 0.13);
+$card_surcharge_cents = 4068;
+
 $data = [
     'mode' => 'payment',
     'payment_method_types' => ['card'],
@@ -167,7 +171,17 @@ $data = [
             'price_data' => [
                 'currency' => 'cad',
                 'product' => $session_product_id,
-                'unit_amount' => 169500,
+                'unit_amount' => $program_fee_cents,
+            ],
+            'quantity' => 1,
+        ],
+        [
+            'price_data' => [
+                'currency' => 'cad',
+                'product_data' => [
+                    'name' => 'HST (13%)',
+                ],
+                'unit_amount' => $hst_cents,
             ],
             'quantity' => 1,
         ],
@@ -175,7 +189,7 @@ $data = [
             'price_data' => [
                 'currency' => 'cad',
                 'product' => $surcharge_product_id,
-                'unit_amount' => 4068,
+                'unit_amount' => $card_surcharge_cents,
             ],
             'quantity' => 1,
         ]
