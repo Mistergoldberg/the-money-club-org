@@ -2068,6 +2068,7 @@ nav{
             <form class="form-grid" action="apply-camper.php" method="post" novalidate>
               <input type="hidden" name="return-to" value="thank-you.html" />
               <input type="hidden" name="return-error" value="schedule-pricing.html" />
+              <input type="hidden" name="return-cancel" value="schedule-pricing.html" />
               <div class="field-row three-col">
                 <div class="field">
                   <label for="parent-name">Parent / Guardian Name</label>
@@ -2425,6 +2426,10 @@ nav{
           var form = btn.form;
           if (form) {
             var returnTo = form.querySelector('[name="return-to"]');
+          var returnCancel = form.querySelector('[name="return-cancel"]');
+          var currentPage = window.location.pathname.split('/').pop() || 'reserve-a-spot.html';
+          if (returnCancel){ returnCancel.value = currentPage; }
+
             if (btn.value === 'Credit Card') {
               form.setAttribute('action', 'stripe-checkout.php');
               if (returnTo){ returnTo.value = 'thank-you-credit-card.html'; }

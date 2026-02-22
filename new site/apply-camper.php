@@ -45,6 +45,7 @@ $allowed_returns = [
     'how-it-works.html',
     'open-book-hook.html',
     'curriculum.html',
+    'index.html',
     'thank-you.html',
     'etransfer.html'
 ];

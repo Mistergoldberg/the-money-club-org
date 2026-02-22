@@ -48,7 +48,14 @@ $payment_method = isset($_POST['payment-method']) ? trim($_POST['payment-method'
 $terms_agree = isset($_POST['terms-agree']) ? trim($_POST['terms-agree']) : '';
 
 $return_error = isset($_POST['return-error']) ? trim($_POST['return-error']) : 'reserve-a-spot.html';
-$allowed_returns = ['reserve-a-spot.html', 'schedule-pricing.html', 'how-it-works.html', 'open-book-hook.html', 'curriculum.html'];
+$allowed_returns = [
+    'reserve-a-spot.html',
+    'schedule-pricing.html',
+    'how-it-works.html',
+    'open-book-hook.html',
+    'curriculum.html',
+    'index.html'
+];
 if (!in_array($return_error, $allowed_returns, true)) {
     $return_error = 'reserve-a-spot.html';
 }
@@ -124,13 +131,25 @@ if ($stripe_secret === false || $stripe_secret === '') {
 
 $base_url = base_url();
 $success_url = $base_url . '/stripe-success.php?session_id={CHECKOUT_SESSION_ID}&return=thank-you-credit-card.html';
-$cancel_url = $base_url . '/reserve-a-spot.html?payment=cancelled';
+$cancel_return = isset($_POST['return-cancel']) ? basename(trim($_POST['return-cancel'])) : 'reserve-a-spot.html';
+$allowed_returns = [
+    'reserve-a-spot.html',
+    'schedule-pricing.html',
+    'how-it-works.html',
+    'open-book-hook.html',
+    'curriculum.html',
+    'index.html'
+];
+if (!in_array($cancel_return, $allowed_returns, true)) {
+    $cancel_return = 'reserve-a-spot.html';
+}
+$cancel_url = $base_url . '/' . $cancel_return . '?payment=cancelled';
 
 $session_product_map = [
-    'session1' => 'prod_Tz6mqrvbL2AH8d',
-    'session2' => 'prod_TzPO7QT4J8ZvC0'
+    'session1' => 'prod_U0Kd1JWTTeNs6L',
+    'session2' => 'prod_U0KdEfczdJUihI'
 ];
-$surcharge_product_id = 'prod_TzB2I57zaMGpY2';
+$surcharge_product_id = 'prod_U0Kd6qahHtdbbU';
 $session_product_id = $session_product_map[$preferred_session] ?? null;
 if ($session_product_id === null) {
     redirect_with_error($return_error, 'preferred-session', 'Please select a valid session.');
@@ -195,6 +214,27 @@ if ($status < 200 || $status >= 300 || !isset($result['url'])) {
 }
 
 log_debug('Stripe checkout created session_id=' . ($result['id'] ?? '') . ' email=' . $parent_email);
+
+$to = ['info@the-money-club.org', 'alex@the-money-club.org', 'sarah@the-money-club.org'];
+$subject = 'Reserve a Spot (Payment Started): The Money Club.Org';
+$from = 'info@the-money-club.org';
+$lines = [];
+$lines[] = 'Parent/Guardian Name: ' . ($parent_name !== '' ? $parent_name : '(not provided)');
+$lines[] = 'Email: ' . $parent_email;
+$lines[] = 'Phone: ' . ($parent_phone !== '' ? $parent_phone : '(not provided)');
+$lines[] = 'Child Name: ' . ($student_name !== '' ? $student_name : '(not provided)');
+$lines[] = 'Child Age: ' . ($student_age !== '' ? $student_age : '(not provided)');
+$lines[] = 'Session: ' . ($session_map[$preferred_session] ?? $preferred_session);
+$lines[] = 'Payment method: Credit Card (Stripe checkout started)';
+$lines[] = 'Stripe session id: ' . ($result['id'] ?? '(unknown)');
+$lines[] = 'Checkout URL: ' . ($result['url'] ?? '(unknown)');
+$lines[] = 'Payment status: Pending (not yet confirmed)';
+$message = implode("\n", $lines);
+
+if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
+    log_debug('Stripe checkout email failed for session_id=' . ($result['id'] ?? ''));
+}
+
 header('Location: ' . $result['url']);
 exit;
 ?>
