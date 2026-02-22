@@ -1358,6 +1358,9 @@ nav{
     .thankyou-title{
       text-align: center;
     }
+    .etransfer-banner h2{
+      color: #ffffff;
+    }
     .thankyou-card h2{
       font-size: clamp(30px, 4vw, 46px);
       font-family: var(--font-display);
@@ -1414,6 +1417,34 @@ nav{
     .copy-row.is-copied{
       border-color: rgba(120, 110, 197, 0.6);
       box-shadow: 0 10px 18px rgba(120, 110, 197, 0.18);
+    }
+    .copy-inline{
+      border: none;
+      background: none;
+      color: var(--purple);
+      font: inherit;
+      padding: 0;
+      margin-left: 6px;
+      cursor: pointer;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+      white-space: nowrap;
+    }
+    .copy-inline:focus-visible{
+      outline: 2px solid rgba(120, 110, 197, 0.45);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+    .visually-hidden{
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
     }
     @media (max-width: 640px){
       .copy-row{
@@ -1628,49 +1659,31 @@ nav{
 
   <main>
     <section class="content-section gold">
-      <div class="content-banner gold">
+      <div class="content-banner gold etransfer-banner">
         <div class="wrap">
           <h2 class="thankyou-title">e-Transfer Payment Instructions</h2>
         </div>
       </div>
       <div class="content-content">
         <div class="reservation-card thankyou-card">
-<p><strong>Amount Due</strong><br />
-<strong>$1,695.00 CAD</strong> (includes 13% HST)</p>
-
-<p><strong>Send e-Transfer To</strong><br />
-<strong>info@the-money-club.org</strong></p>
-
-<p><strong>Message / Note (Required)</strong><br />
-<strong><span data-child-name>[Child’s Name]</span></strong></p>
-
-
-<div class="copy-grid">
-  <button class="copy-row" type="button" data-copy-target="copy-recipient">
-    <span class="copy-label">Recipient</span>
-    <span class="copy-value" id="copy-recipient">info@the-money-club.org</span>
-    <span class="copy-hint">Tap to copy</span>
-  </button>
-  <button class="copy-row" type="button" data-copy-target="copy-amount">
-    <span class="copy-label">Amount</span>
-    <span class="copy-value" id="copy-amount">1,695.00</span>
-    <span class="copy-hint">Tap to copy</span>
-  </button>
-  <button class="copy-row" type="button" data-copy-target="copy-message">
-    <span class="copy-label">Message</span>
-    <span class="copy-value" id="copy-message"><span data-child-name>Ava</span></span>
-    <span class="copy-hint">Tap to copy</span>
-  </button>
-</div>
+<span id="copy-recipient" class="visually-hidden">info@the-money-club.org</span>
+<span id="copy-amount" class="visually-hidden">$1,695.00 CAD</span>
+<span id="copy-message" class="visually-hidden" data-child-name>Sally Smith</span>
 
 
 <h3>How to Pay (1 minute)</h3>
 <ol class="content-list">
   <li>Open your mobile banking app</li>
   <li>Choose <strong>Interac e-Transfer</strong> → <strong>Send</strong></li>
-  <li>Enter the recipient email: <strong>info@the-money-club.org</strong></li>
-  <li>Enter the amount: <strong>$1,695.00 CAD</strong></li>
-  <li>Paste the message: <strong><span data-child-name>[Child’s Name]</span></strong></li>
+  <li>Enter the recipient email: <strong>info@the-money-club.org</strong>
+    <button class="copy-inline" type="button" data-copy-target="copy-recipient">Tap to copy</button>
+  </li>
+  <li>Enter the amount: <strong>$1,695.00 CAD</strong>
+    <button class="copy-inline" type="button" data-copy-target="copy-amount">Tap to copy</button>
+  </li>
+  <li>Paste the message: <strong><span data-child-name>Sally Smith</span></strong>
+    <button class="copy-inline" type="button" data-copy-target="copy-message">Tap to copy</button>
+  </li>
   <li>Send the transfer</li>
 </ol>
 
@@ -1679,7 +1692,6 @@ nav{
 
 <h3>Refunds</h3>
 <p>Refunds are available until <strong>June 1, 2026</strong>.<br />
-e-Transfer payments have <strong>no processing fee</strong>, so approved refunds (before June 1) are returned in full.</p>
 
 <h3>Need help?</h3>
 <p>Email: <strong>info@the-money-club.org</strong><br />
@@ -1687,7 +1699,7 @@ Phone: <strong>437-239-8602</strong></p>
 
 <hr />
 
-<button id="share-button" class="btn purple gloss share-btn" type="button">Share now</button>
+<button id="share-button" class="btn purple gloss share-btn" type="button">Share with friends</button>
 
 </div>
       </div>
@@ -1932,7 +1944,7 @@ Phone: <strong>437-239-8602</strong></p>
   </script>
   <script>
     (function(){
-      var rows = document.querySelectorAll('.copy-row');
+      var rows = document.querySelectorAll('.copy-row, .copy-inline');
       if (!rows.length){ return; }
 
       function copyText(value){
@@ -1964,16 +1976,21 @@ Phone: <strong>437-239-8602</strong></p>
           var target = targetId ? document.getElementById(targetId) : null;
           if (!target){ return; }
           var value = target.textContent.trim();
+          var hint = row.querySelector('.copy-hint');
+          var originalText = hint ? hint.textContent : row.textContent;
           copyText(value).then(function(){
             row.classList.add('is-copied');
-            var hint = row.querySelector('.copy-hint');
             if (hint){
               hint.textContent = 'Copied';
+            } else {
+              row.textContent = 'Copied';
             }
             setTimeout(function(){
               row.classList.remove('is-copied');
               if (hint){
-                hint.textContent = 'Tap to copy';
+                hint.textContent = originalText;
+              } else {
+                row.textContent = originalText;
               }
             }, 1600);
           }).catch(function(){});

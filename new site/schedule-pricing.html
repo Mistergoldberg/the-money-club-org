@@ -1841,6 +1841,36 @@ nav{
 
       .topbar .btn{ display: none; }
     }
+  
+    @media (max-width: 980px){
+      /* Mobile form tightening */
+      .reservation-steps{ font-size: 19px; }
+      .reservation-steps .form-grid{ gap: 16px; }
+      .reservation-steps .field{ gap: 6px; }
+      .reservation-steps .field label{ font-size: 18px; font-weight: 600; line-height: 1.15; }
+      .reservation-steps .section-heading{ font-size: 20px; line-height: 1.1; }
+      .reservation-steps .field input[type="text"],
+      .reservation-steps .field input[type="email"],
+      .reservation-steps .field input[type="tel"],
+      .reservation-steps .field input[type="number"],
+      .reservation-steps .field input[type="url"],
+      .reservation-steps .field select,
+      .reservation-steps .field textarea{
+        font-size: 18px;
+        line-height: 1.2;
+        padding: 12px 14px;
+        min-height: 48px;
+        border-radius: 14px;
+      }
+      .reservation-steps .payment-section h2{ font-size: 24px; line-height: 1.1; }
+      .reservation-steps .payment-meta{ font-size: 18px; line-height: 1.2; }
+      .reservation-steps .payment-title{ font-size: 18px; }
+      .reservation-steps .payment-total{ font-size: 17px; font-weight: 600; }
+      .reservation-steps .payment-body{ font-size: 16px; line-height: 1.2; }
+      .reservation-steps .payment-note{ font-size: 16px; line-height: 1.2; }
+      .reservation-steps .payment-option{ padding: 14px; }
+    }
+
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
   <!-- Google tag (gtag.js) -->
@@ -2137,22 +2167,14 @@ nav{
                     <div class="payment-title">e-Transfer</div>
                     <div class="payment-body">
                       <div class="payment-total">Total: $1,695.00 CAD (includes HST)</div>
-                      <ul>
-                        <li>No processing fee. Pay by e-Transfer to avoid the credit card surcharge.</li>
-                        <li>Refunds available until June 1, 2026.</li>
-                        <li>We’ll email confirmation within 24 hours of receiving your transfer.</li>
-                      </ul>
+                      <div class="payment-note">No processing fee.</div>
                     </div>
                   </button>
                   <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true">
                     <div class="payment-title">Credit Card</div>
                     <div class="payment-body">
                       <div class="payment-total">Total: $1,735.68 CAD (Includes HST + 2.4% surcharge)</div>
-                      <ul>
-                        <li>A 2.4% credit card surcharge applies to help cover card processing costs.</li>
-                        <li>Refunds available until June 1, 2026 — the credit card processing surcharge is non-refundable.</li>
-                        <li>Instant confirmation after payment.</li>
-                      </ul>
+                      <div class="payment-note">A 2.4% credit card surcharge applies to help cover card processing costs.</div>
                     </div>
                   </button>
                 </div>
