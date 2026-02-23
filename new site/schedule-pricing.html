@@ -2095,6 +2095,11 @@ nav{
         <div class="reservation-row">
           <div class="reservation-card">
             <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
+<div class="form-loading" role="status" aria-live="polite">
+  <div class="spinner" aria-hidden="true"></div>
+  <div class="loading-text">Processing…</div>
+</div>
+
             <form class="form-grid" action="apply-camper.php" method="post" novalidate>
               <input type="hidden" name="return-to" value="thank-you.html" />
               <input type="hidden" name="return-error" value="schedule-pricing.html" />
@@ -2586,6 +2591,29 @@ nav{
     })();
   </script>
 
+
+<script>
+    (function(){
+      function showLoader(form){
+        if (!form.checkValidity || !form.checkValidity()){
+          return;
+        }
+        var card = form.closest('.reservation-card');
+        if (!card){ return; }
+        var loader = card.querySelector('.form-loading');
+        if (loader){ loader.classList.add('is-visible'); }
+        card.classList.add('is-processing');
+      }
+
+      document.addEventListener('submit', function(e){
+        var form = e.target;
+        if (!form || !form.classList || !form.classList.contains('form-grid')){
+          return;
+        }
+        showLoader(form);
+      }, true);
+    })();
+  </script>
 
 </body>
 </html>

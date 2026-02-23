@@ -249,6 +249,46 @@ if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
     log_debug('Stripe checkout email failed for session_id=' . ($result['id'] ?? ''));
 }
 
+$parent_subject = 'The Money Club.Org reservation — Payment Instructions';
+$parent_lines = [];
+$parent_lines[] = 'Hi ' . $parent_name . ',';
+$parent_lines[] = '';
+$parent_lines[] = 'Thanks — we’ve received your reservation details for The Money Club.';
+$parent_lines[] = '';
+$parent_lines[] = 'Student: ' . $student_name . ' (Age ' . $student_age . ')';
+$parent_lines[] = 'Session: ' . ($session_map[$preferred_session] ?? $preferred_session);
+$parent_lines[] = '';
+$parent_lines[] = "If you've already made payment - thank you for investing in the local economy.";
+$parent_lines[] = '';
+$parent_lines[] = 'To confirm your seat, please complete your payment using one of the options below:';
+$parent_lines[] = '';
+$parent_lines[] = 'Option 1: Credit Card (instant confirmation)';
+$parent_lines[] = ($result['url'] ?? '');
+$parent_lines[] = '';
+$parent_lines[] = 'Total by credit card: $1,735.68 CAD (includes HST + 2.4% surcharge)';
+$parent_lines[] = 'Note: The 2.4% credit card processing surcharge is non-refundable (refunds available until June 1, 2026).';
+$parent_lines[] = '';
+$parent_lines[] = 'Option 2: Interac e-Transfer (no processing fee)';
+$parent_lines[] = 'To avoid the 2.4% credit card processing surcharge, you can pay by e-Transfer instead:';
+$parent_lines[] = '';
+$parent_lines[] = 'Send to: info@the-money-club.org';
+$parent_lines[] = 'Amount: $1,695.00 CAD (includes HST)';
+$parent_lines[] = 'Message / Note (required): ' . $student_name;
+$parent_lines[] = '';
+$parent_lines[] = 'We’ll email confirmation within 24 hours of receiving your transfer.';
+$parent_lines[] = '';
+$parent_lines[] = 'After payment, you’ll receive a receipt/confirmation and we’ll send the Student Registration & Consent Form.';
+$parent_lines[] = '';
+$parent_lines[] = 'Questions? Reply to this email or contact us at info@the-money-club.org / 437-239-8602.';
+$parent_lines[] = '';
+$parent_lines[] = '— The Money Club Team';
+$parent_message = implode("\n", $parent_lines);
+if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
+    log_debug('Stripe parent payment instructions email failed for session_id=' . ($result['id'] ?? ''));
+} else {
+    log_debug('Stripe parent payment instructions email sent to ' . $parent_email);
+}
+
 header('Location: ' . $result['url']);
 exit;
 ?>

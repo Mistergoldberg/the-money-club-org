@@ -98,6 +98,45 @@ h3{
   line-height: var(--lh-body);
 }
 
+.reservation-card{
+  position: relative;
+}
+.reservation-card.is-processing{
+  pointer-events: none;
+}
+.form-loading{
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255,255,255,0.88);
+  border-radius: inherit;
+  text-align: center;
+  padding: 18px;
+  z-index: 5;
+}
+.form-loading.is-visible{
+  display: flex;
+}
+.form-loading .spinner{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid rgba(0,0,0,0.15);
+  border-top-color: rgba(0,0,0,0.55);
+  animation: spin 0.9s linear infinite;
+}
+.form-loading .loading-text{
+  font-weight: 600;
+  font-size: 18px;
+}
+@keyframes spin{
+  to{ transform: rotate(360deg); }
+}
+
 @media (max-width: 980px){
   html, body{ overflow-x: hidden; }
   body{ -webkit-text-size-adjust: 100%; }

@@ -622,6 +622,27 @@ nav{
       display:grid;
       gap: 12px;
     }
+    .instructors-card{
+      grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+      gap: clamp(16px, 3vw, 28px);
+      align-items: center;
+    }
+    .instructors-media{
+      aspect-ratio: 1 / 1;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: #ffffff;
+      justify-self: center;
+      width: 100%;
+    }
+    .instructors-media img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transform: scaleX(-1);
+    }
     .stack-column{
       display:grid;
       gap: 16px;
@@ -794,6 +815,8 @@ nav{
       .roles-grid{ grid-template-columns: 1fr; }
       .role-card.feature{ grid-template-columns: 1fr; }
       .ops-card{ grid-template-columns: 1fr; }
+      .instructors-card{ grid-template-columns: 1fr; }
+      .instructors-media{ max-width: 160px; }
       .architect-card{ grid-template-columns: 1fr; }
       .funding-grid{ grid-template-columns: 1fr; }
       .facts-grid{ grid-template-columns: 1fr; }
@@ -982,15 +1005,14 @@ nav{
       <div class="wrap">
         <div class="section-title">
           <div class="eyebrow">Who Actually Runs the Program</div>
-          <h2>Student Operators, Real Responsibility</h2>
+          <h2>Student Leadership, Real Responsibility</h2>
         </div>
         <div class="stack-card ops-card">
           <div class="ops-body">
-            <p>The Money Club.Org is operated day-to-day by its student leadership team: Sarah Duong and Alex Goldberg, both students at Humberside Collegiate Institute.</p>
-            <p>They support the full setup and operation of the organization—researching and securing quotes, building an understanding of the program budget and balance sheet, assisting with instructor outreach and interviews, and contributing to marketing and enrollment efforts.</p>
-            <p>During the summer program, Sarah and Alex support daily operations by coordinating instructor schedules and ensuring sessions run smoothly. They work inside real constraints, handle real logistics, and are accountable for execution.</p>
-            <p>This is intentional.</p>
-            <p>The Money Club.Org is designed to teach how real organizations function: through planning, trade-offs, and follow-through. Sarah and Alex represent the model in action—learning by operating and developing the skills required to run real systems well before they head off to university.</p>
+            <p>The Money Club.Org is supported day-to-day by its student leadership team: Sarah Duong and Alex Goldberg (Humberside Collegiate Institute). They take on real work—within a clear structure and under adult oversight—because operating a system is the fastest way to learn how it works.</p>
+            <p>They help with real tasks such as gathering quotes, building familiarity with the program budget, supporting instructor outreach, and contributing to marketing and enrollment.</p>
+            <p>During the summer program, Sarah and Alex support daily operations by helping coordinate schedules and logistics so sessions run smoothly. They work inside real constraints and follow through on execution—with supervision and final accountability held by program leadership.</p>
+            <p>This is intentional. The Money Club.Org teaches how real organizations function: planning, trade-offs, and follow-through. Sarah and Alex represent the model in action—learning by operating and building practical capability before university.</p>
           </div>
           <div class="ops-media">
             <div class="ops-portrait">
@@ -1004,10 +1026,27 @@ nav{
       </div>
     </section>
 
+    <section class="section instructors-mentors">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="eyebrow">Who Are the Instructors?</div>
+          <h2>Paid University Mentors</h2>
+        </div>
+        <div class="stack-card instructors-card">
+          <div class="instructors-media">
+            <img src="assets/university-of-toronto-instructor.png" alt="University of Toronto instructor" />
+          </div>
+          <div class="instructors-body">
+            <p>University of Toronto students are hired and paid as instructors and mentors. They lead workshops within a structured, supervised program—helping students learn how real decisions get made inside real budgets and constraints.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section architect-section">
       <div class="wrap">
         <div class="section-title">
-          <div class="eyebrow">Who Designed the Program</div>
+          <div class="eyebrow">Who Designed the Program?</div>
           <h2>The Program Architect</h2>
         </div>
         <div class="stack-card architect-card">
@@ -1015,9 +1054,9 @@ nav{
             <img src="assets/Jared-Profile.png" alt="Portrait of Jared Goldberg" />
           </div>
           <div class="architect-body">
-            <p>The Money Club.Org was designed by Jared Goldberg — a product strategist, systems designer, and educator who has spent 15+ years building and operating real-world business platforms.</p>
-            <p>Jared has designed consumer goods, digital services, and supply-chain systems across Walmart, Loblaw, and Canadian Tire, and spent over a decade working directly inside China-based manufacturing ecosystems — where cost, quality, incentives, and execution collide in real time. His work sits at the intersection of economics, incentives, design thinking, and human behavior.</p>
-            <p>This program reflects how businesses actually function — with constraints, trade-offs, and accountability — not how they’re described in textbooks.</p>
+            <p>The Money Club.Org was designed and is overseen by Jared Goldberg — a product strategist, systems designer, and educator with 15+ years building and operating real-world business platforms.</p>
+            <p>Jared has worked across Walmart, Loblaw, and Canadian Tire, and spent over a decade inside China-based manufacturing ecosystems, where cost, quality, incentives, and execution collide in real time. His work sits at the intersection of economics, incentives, design thinking, and human behavior.</p>
+            <p>This program reflects how organizations actually function—constraints, trade-offs, and accountability—not how they’re described in textbooks.</p>
             <div class="role-links">
               <a data-cta-label="Learn more about the curriculum" class="btn secondary cta-standard" href="schedule-pricing.html">Learn more about the curriculum</a>
             </div>

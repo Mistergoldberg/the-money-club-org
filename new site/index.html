@@ -1512,6 +1512,7 @@
   
     @media (max-width: 980px){
       /* Mobile form tightening */
+      #sign-up-today{ display: none; }
       .reservation-steps{ font-size: 19px; }
       .reservation-steps .form-grid{ gap: 16px; }
       .reservation-steps .field{ gap: 6px; }
@@ -1651,9 +1652,8 @@
               <div><strong>Who is it for?</strong> Curious kids ages 11–16</div>
               <div><strong>How much?</strong> $1,500 per student</div>
               <div><strong>How long?</strong> 4-week summer day program</div>
-              <div><strong>Where?</strong> Hosted at Student Commons, 230 College Street, Toronto, ON M5T 1R2 (University of Toronto campus*)</div>
+              <div><strong>Where?</strong> Hosted at Student Commons, 230 College Street, Toronto, ON M5T 1R2 (University of Toronto campus. <small>Independent program — not endorsed by the University.</small>)</div>
               <div><strong>When?</strong> Session 1: July 6–July 31, 2026 &amp; Session 2: August 4–August 28, 2026</div>
-              <div><small>*Independent program — not run by, endorsed by, or sponsored by the University of Toronto.</small></div>
             </div>
             <div class="mobile-reserve-btn">
               <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1802,8 +1802,8 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <div><strong>Student operated</strong></div>
-            <p>The Money Club.Org is operated day-to-day by its student leadership team: Sarah Duong and Alex Goldberg, both students at Humberside Collegiate Institute.</p>
+            <div><strong>Student-led support (adult-supervised)</strong></div>
+            <p>The Money Club.Org is operated by its student leadership team: Sarah Duong and Alex Goldberg, both students at Humberside Collegiate Institute.</p>
             <div><strong>Designed by a practitioner</strong></div>
             <p>The Money Club.Org was designed by Jared Goldberg — a product strategist, systems designer, and educator with 15+ years building real-world business platforms.</p>
             <ul class="bullet-list">
@@ -1850,29 +1850,6 @@
       </div>
     </section>
 
-    <section class="section" id="sign-up-today">
-      <div class="section-banner teal">
-        <div class="wrap">
-          <h2>Sign Up Today</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="split reverse">
-          <div class="section-image">
-            <img src="assets/Banner-School-Real-Life.jpg" alt="Student presenting at a whiteboard" />
-          </div>
-          <div class="section-copy cta-block">
-            <h3>Ready to reserve a spot?</h3>
-            <p class="cta-note">July &amp; August 2026 | Student Commons, Downtown Toronto</p>
-            <p class="cta-note">$1,500 for 4 weeks | All materials included</p>
-            <div class="cta-row">
-              <a data-cta-label="View schedule &amp; pricing" class="btn purple cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
         <h2>Reserve a Spot</h2>
@@ -1883,6 +1860,11 @@
         <div class="reservation-row">
           <div class="reservation-card">
             <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
+<div class="form-loading" role="status" aria-live="polite">
+  <div class="spinner" aria-hidden="true"></div>
+  <div class="loading-text">Processing…</div>
+</div>
+
             <form class="form-grid" action="apply-camper.php" method="post" novalidate>
               <input type="hidden" name="return-to" value="thank-you.html" />
               <input type="hidden" name="return-error" value="index.html" />
@@ -2370,6 +2352,29 @@
         }
         trackCta(target);
       });
+    })();
+  </script>
+
+<script>
+    (function(){
+      function showLoader(form){
+        if (!form.checkValidity || !form.checkValidity()){
+          return;
+        }
+        var card = form.closest('.reservation-card');
+        if (!card){ return; }
+        var loader = card.querySelector('.form-loading');
+        if (loader){ loader.classList.add('is-visible'); }
+        card.classList.add('is-processing');
+      }
+
+      document.addEventListener('submit', function(e){
+        var form = e.target;
+        if (!form || !form.classList || !form.classList.contains('form-grid')){
+          return;
+        }
+        showLoader(form);
+      }, true);
     })();
   </script>
 
