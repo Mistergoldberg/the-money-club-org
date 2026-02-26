@@ -1,5 +1,5 @@
 <?php
-function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name = 'The Money Club.Org') {
+function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name = 'The Money Club.Org', $is_html = false) {
     $config = require __DIR__ . '/smtp-config.php';
 
     $host = $config['host'] ?? '';
@@ -120,13 +120,14 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
 
     $from_header = $from_name !== '' ? $from_name . ' <' . $from_email . '>' : $from_email;
     $to_header = implode(', ', $recipients);
+    $content_type = $is_html ? 'text/html; charset=UTF-8' : 'text/plain; charset=UTF-8';
     $headers = [
         'From: ' . $from_header,
         'Reply-To: ' . $reply_to,
         'To: ' . $to_header,
         'Subject: ' . $subject,
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
+        'Content-Type: ' . $content_type,
     ];
 
     $message = implode("\r\n", $headers) . "\r\n\r\n" . $body;

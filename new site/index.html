@@ -994,17 +994,16 @@
       margin: 0;
       padding: 0;
       display: grid;
-      gap: 6px;
+      gap: 12px;
       font-size: 18px;
-      justify-items: end;
-      width: fit-content;
-      margin-left: auto;
+      width: 100%;
+      justify-items: stretch;
     }
     .openbook-legend li{
-      display:flex;
-      align-items:center;
-      gap: 8px;
-      justify-content: flex-end;
+      display: grid;
+      grid-template-columns: 12px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
     }
     .legend-dot{
       width: 12px;
@@ -1076,6 +1075,15 @@
       margin: 0 0 10px;
       text-align: center;
     }
+    .openbook-subtitle{
+      display: block;
+      font-size: clamp(14px, 2vw, 18px);
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: 4px;
+    }
     .openbook-pie{
       width: min(360px, 100%);
       aspect-ratio: 1 / 1;
@@ -1123,15 +1131,18 @@
     }
     .openbook-legend{
       list-style: none;
-      margin: 0 auto;
+      margin: 0;
       padding: 0;
       display: grid;
       gap: 12px;
-      width: min(360px, 100%);
+      width: 100%;
+      max-width: 100%;
+      justify-self: stretch;
+      align-self: start;
     }
     .openbook-legend li{
       display: grid;
-      grid-template-columns: 12px minmax(0, 1fr) minmax(0, 90px);
+      grid-template-columns: 12px minmax(0, 1fr) minmax(0, 88px);
       gap: 12px;
       align-items: center;
       text-align: left;
@@ -1141,8 +1152,8 @@
     }
     .openbook-legend .legend-value{
       font-weight: 600;
-      text-align: left;
-      justify-self: start;
+      text-align: right;
+      justify-self: end;
       font-variant-numeric: tabular-nums;
     }
     .profile-photo{
@@ -1505,8 +1516,8 @@
         grid-template-columns: 12px minmax(0, 1fr) 72px;
       }
       .openbook-legend .legend-value{
-        text-align: left;
-        justify-self: start;
+        text-align: right;
+        justify-self: end;
       }
     }
   
@@ -1624,7 +1635,7 @@
               <li>how products are priced</li>
               <li>or how decisions turn into consequences</li>
             </ul>
-            <p>The Money Club is a 4-week, instructor-led summer program that teaches kids how money, incentives, and real-world systems actually work.</p>
+            <p>The Money Club.Org is a 4-week, instructor-led summer program that teaches kids how money, incentives, and real-world systems actually work.</p>
            </div>
           <div class="cta-stack cta-stack--hero">
             <a data-cta-label="Reserve a spot" class="btn teal gloss cta-standard cta-fill" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1692,7 +1703,7 @@
           </div>
           <div class="radical-side">
             <div class="openbook-pie-card" aria-label="Program budget distribution chart">
-              <h3 class="openbook-subheading">Expense Visualization</h3>
+              <h3 class="openbook-subheading">Expenses <span class="openbook-subtitle">(10 Students + 1 Lecturer)</span></h3>
               <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 34%, Materials 24%, Venue rental 22%, Insurance 2%, Overhead 8%, Incidentals 10%">
                 <div class="openbook-pie-center">
                   <span class="label">Total</span>
