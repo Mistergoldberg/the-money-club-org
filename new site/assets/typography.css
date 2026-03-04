@@ -179,6 +179,19 @@ h3{
   .hero-title{ display: none !important; }
   .hero-logo-mobile{ display: block; margin: 0 auto; }
   .hero-top{ width: 100%; }
+
+  .menu-btn{
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+
+  :root{
+    --topbar-height: 51px;
+  }
+  .topbar .inner{
+    min-height: var(--topbar-height);
+    padding: 5px var(--pad);
+  }
 }
 
 @media (min-width: 981px){

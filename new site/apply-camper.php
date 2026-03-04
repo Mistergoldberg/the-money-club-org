@@ -227,7 +227,7 @@ $parent_message = 'Hi ' . $safe_parent_name . ',<br><br>'
     . "If you've already made payment - thank you for investing in the local economy.<br><br>"
     . 'To confirm your seat, please complete your payment using one of the options below:<br><br>'
     . '<strong>Option 1: Credit Card (instant confirmation)</strong><br>'
-    . '<a href="' . $credit_card_link . '">' . $credit_card_link . '</a><br><br>'
+    . '<a href="' . $credit_card_link . '">Click here to pay by credit card</a><br><br>'
     . 'Total by credit card: $1,735.68 CAD (includes HST + 2.4% surcharge)<br>'
     . 'Note: The 2.4% credit card processing surcharge is non-refundable (refunds available until June 1, 2026).<br><br>'
     . '<strong>Option 2: Interac e-Transfer (no processing fee)</strong><br>'
