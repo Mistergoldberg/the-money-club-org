@@ -671,6 +671,7 @@
     }
     .session-card:hover .session-title,
     .session-card:hover .session-availability{
+      display:none !important;
       color: #ffffff;
     }
     .session-grid.is-locked .session-card{
@@ -686,6 +687,7 @@
     }
     .session-grid.is-locked .session-title,
     .session-grid.is-locked .session-availability{
+      display:none !important;
       color: #9b9b9b;
     }
     .session-card input{
@@ -703,6 +705,7 @@
       color: var(--ink);
     }
     .session-availability{
+      display:none !important;
       font-weight: 700;
       color: var(--ink);
     }
@@ -713,6 +716,7 @@
     }
     .session-card:has(input:checked) .session-title,
     .session-card:has(input:checked) .session-availability{
+      display:none !important;
       color: #ffffff;
     }
     .session-card.is-full{
@@ -1418,6 +1422,7 @@
         color: #3a3a3a;
       }
       .session-availability{
+      display:none !important;
         font-size: clamp(15px, 4vw, 18px);
         font-weight: 600;
         color: #3a3a3a;
@@ -1471,15 +1476,15 @@
       footer.site-footer .footer-title,
       footer.site-footer .footer-tagline{ font-size: 23px; }
 
-      /* Mobile color sequencing: teal -> gold -> purple */
-      #built-like-a-business .section-banner{ background: var(--teal); color: #ffffff; }
-      #what-is-this .section-banner{ background: var(--gold); color: #ffffff; }
+      /* Mobile color sequencing: gold -> teal -> purple */
+      #built-like-a-business .section-banner{ background: var(--gold); color: #ffffff; }
+      #what-is-this .section-banner{ background: var(--teal); color: #ffffff; }
       #radical-transparency .section-banner{ background: var(--purple); color: #ffffff; }
-      #how-it-works .section-banner{ background: var(--teal); color: #ffffff; }
-      #the-flywheel .section-banner{ background: var(--gold); color: #ffffff; }
+      #how-it-works .section-banner{ background: var(--gold); color: #ffffff; }
+      #the-flywheel .section-banner{ background: var(--teal); color: #ffffff; }
       #who-runs-it .section-banner{ background: var(--purple); color: #ffffff; }
-      #curriculum .section-banner{ background: var(--teal); color: #ffffff; }
-      #sign-up-today .section-banner{ background: var(--gold); color: #ffffff; }
+      #curriculum .section-banner{ background: var(--gold); color: #ffffff; }
+      #sign-up-today .section-banner{ background: var(--teal); color: #ffffff; }
       #reserve.section-banner{ background: var(--purple); color: #ffffff; }
 
       #built-like-a-business .section-banner h2,
@@ -1663,8 +1668,11 @@
               <div><strong>Who is it for?</strong> Curious kids ages 11–16</div>
               <div><strong>How much?</strong> $1,500 per student</div>
               <div><strong>How long?</strong> 4-week summer day program</div>
-              <div><strong>Where?</strong> Hosted at Student Commons, 230 College Street, Toronto, ON M5T 1R2 (University of Toronto campus. <small>Independent program — not endorsed by the University.</small>)</div>
-              <div><strong>When?</strong> Session 1: July 6–July 31, 2026 &amp; Session 2: August 4–August 28, 2026</div>
+              <div><strong>Where?</strong> UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</div>
+              <div><strong>When?</strong></div>
+              <div>Daily: 9:30pm-3:30pm</div>
+              <div>Session 1: July 6–31</div>
+              <div>Session 2: August 4–28</div>
             </div>
             <div class="mobile-reserve-btn">
               <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
