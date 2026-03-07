@@ -1,21 +1,44 @@
+<?php
+session_start();
+$verified_purchase = $_SESSION['tmc_verified_purchase'] ?? null;
+unset($_SESSION['tmc_verified_purchase']);
+$purchase_payload = null;
+if (is_array($verified_purchase)) {
+    $purchase_payload = [
+        'event' => 'purchase',
+        'transaction_id' => (string)($verified_purchase['transaction_id'] ?? ''),
+        'currency' => (string)($verified_purchase['currency'] ?? 'CAD'),
+        'value' => isset($verified_purchase['value']) ? (float)$verified_purchase['value'] : 0,
+        'items' => isset($verified_purchase['items']) && is_array($verified_purchase['items']) ? $verified_purchase['items'] : []
+    ];
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Curriculum | Toronto Kids Summer Camp 2026</title>
+  <title>Thank You | The Money Club</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Curriculum for the Toronto kids summer camp 2026: real-world business math, team collaboration, and confident presentations." />
-  <meta property="og:title" content="Curriculum | Toronto Kids Summer Camp 2026" />
-  <meta property="og:description" content="Curriculum for the Toronto kids summer camp 2026: real-world business math, team collaboration, and confident presentations." />
-  <meta property="og:url" content="https://the-money-club.org/curriculum-details.html" />
+  <meta name="description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
+  <meta property="og:title" content="You just invested in the local economy." />
+  <meta property="og:description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
+  <meta property="og:url" content="https://the-money-club.org/thank-you.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://the-money-club.org/assets/kid-presents-larg-class.jpg" />
+  <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Curriculum | Toronto Kids Summer Camp 2026" />
-  <meta name="twitter:description" content="Curriculum for the Toronto kids summer camp 2026: real-world business math, team collaboration, and confident presentations." />
-  <meta name="twitter:image" content="https://the-money-club.org/assets/kid-presents-larg-class.jpg" />
-  <link rel="canonical" href="https://the-money-club.org/curriculum-details.html" />
+  <meta name="twitter:title" content="You just invested in the local economy." />
+  <meta name="twitter:description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
+  <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <link rel="canonical" href="https://the-money-club.org/thank-you.html" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "You just invested in the local economy.",
+      "url": "https://the-money-club.org/thank-you.html"
+    }
+  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -302,71 +325,33 @@ nav{
       box-shadow: 0 10px 20px rgba(240,180,58,0.25);
     }
 
-    /* Hero */
-    .hero{
-      padding: 18px 0 6px;
+    /* Banner */
+    .section-banner{
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
-    .hero-top{
-      display:flex;
-      align-items: center;
-      gap: 28px;
-      justify-content: center;
-      margin: 0 auto;
-      width: fit-content;
-    }
-    .hero-logo{
-      width: 152px;
-      height: 152px;
-      display: block;
-    }
-    .hero-title-block{
-      width: 100%;
-      text-align: left;
-    }
-    .hero-title{
-      color: var(--teal);
-      line-height: 0.85;
-      letter-spacing: normal;
-      text-align: left;
-    }
-    .hero-sub{
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: inherit;
+    .section-banner.gold{
+      background: var(--gold);
       color: var(--ink);
-      margin: 2px 0 0;
-      line-height: 1.05;
-      text-align: left;
     }
-    .hero-copy{
-      font-family: var(--font-display);
-      font-size: clamp(26px, 3.2vw, 40px);
-      text-transform: uppercase;
-      letter-spacing: var(--tracking-display);
-      margin: 12px 0 12px;
-      width: 100%;
-    }
-    .hero-image{
-      width: 100%;
-      border-radius: 22px;
-      overflow-y: auto;
-      border: 1px solid var(--line);
-      margin-top: 12px;
-    }
-    .hero-image img{
-      display:block;
-      width: 100%;
-      height: auto;
-    }
-    .hero-image.banner img{
-      height: clamp(220px, 32vw, 420px);
-      object-fit: cover;
-      object-position: center 35%;
+    .section-banner h2,
+    .content-banner h2,
+    .curriculum-banner h2,
+    .deploy-banner h2,
+    .math-banner h2,
+    .openbook-banner h2,
+    .quickfacts-banner h2,
+    .reserve-banner h2,
+    .teachers-banner h2,
+    .why-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .section-banner h2 span{
+      display: block;
     }
 
     /* Below hero */
     .headline{
-      margin: 16px auto 12px;
+      margin: 16px auto 0;
       font-size: var(--size-headline);
       line-height: 1.05;
       position: relative;
@@ -385,11 +370,15 @@ nav{
       100%{ background-position: 0% 50%; }
     }
     .subhead{
-      font-size: inherit;
+      font-size: var(--size-headline);
       color: var(--muted);
       line-height: inherit;
-      margin-top: 6px;
+      font-family: var(--font-display);
+      margin-top: 0.15rem;
       max-width: var(--content-max);
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
     }
     .below{
       margin-top: 10px;
@@ -850,6 +839,9 @@ nav{
       gap: 20px;
       align-items: stretch;
     }
+    .quickfacts-content > div:first-child{
+      max-width: var(--content-max);
+    }
     .quickfacts-list{
       margin: 12px 0 0;
       padding-left: 18px;
@@ -868,81 +860,6 @@ nav{
       box-shadow: 0 12px 22px rgba(0,0,0,0.08);
       height: 100%;
     }
-    .quickfacts-card.essentials{
-      text-align: left;
-      justify-items: start;
-      align-content: start;
-    }
-    .quickfacts-card.essentials .quickfacts-list{ margin-top: 8px; }
-    .quickfacts-note{
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .deploy-section{
-      margin-top: var(--space-6);
-    }
-    .deploy-banner{
-      background: var(--teal);
-      color: #ffffff;
-      padding: 26px 0;
-    }
-    .deploy-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
-    .deploy-content{
-      max-width: var(--max-wide);
-      margin: 0 auto;
-      padding: 24px var(--pad) 10px;
-    }
-    .deploy-intro{
-      max-width: var(--content-max);
-      margin: 0 0 16px;
-      color: var(--ink);
-    }
-    .deploy-intro-title{
-      max-width: var(--content-max);
-      margin: 0 0 12px;
-    }
-    .deploy-intro-card{
-      margin: 0 0 18px;
-    }
-    .deploy-intro-card p{
-      margin: 0 0 12px;
-      color: var(--muted);
-    }
-    .deploy-intro-card p:last-child{
-      margin-bottom: 0;
-    }
-    .deploy-bullets{
-      margin: 4px 0 12px;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-    .deploy-bullets li{ margin: 6px 0; }
-    .deploy-list{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display:grid;
-      gap: 16px;
-    }
-    .deploy-item{
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px 18px;
-      background: #ffffff;
-      box-shadow: 0 10px 18px rgba(0,0,0,0.06);
-    }
-    .deploy-title{
-      font-weight: 700;
-      font-size: var(--size-lg);
-      line-height: 1.2;
-      margin: 0 0 8px;
-      color: var(--ink);
-    }
-    .deploy-copy{
-      margin: 0;
-      color: var(--muted);
-    }
     .quickfacts-card .btn{
       width: 100%;
       max-width: 420px;
@@ -950,7 +867,6 @@ nav{
       font-size: var(--btn-size-lg);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      color: #ffffff;
     }
 
     .reserve-section{
@@ -995,6 +911,403 @@ nav{
       text-transform: uppercase;
       border-radius: 16px;
       padding: 22px 22px;
+    }
+
+    .content-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .content-banner{
+      background: var(--gold);
+      color: var(--ink);
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .content-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .content-section.purple .content-banner{
+      background: var(--purple);
+      color: #ffffff;
+    }
+    .content-section.gold .content-banner{
+      background: var(--gold);
+      color: #fff;
+    }
+    .content-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 10px;
+    }
+    .content-copy{
+      max-width: var(--content-max);
+      display:grid;
+      gap: 12px;
+    }
+    .content-copy p{
+      margin: 0;
+    }
+    .content-list{
+      margin: 0;
+      padding-left: 20px;
+    }
+    .content-list li{
+      margin: 6px 0;
+    }
+    .form-grid{
+      display:grid;
+      gap: 16px;
+      max-width: var(--content-max);
+    }
+    .field-row{
+      display:grid;
+      gap: 16px;
+    }
+    .field-row.three-col{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .field-row.two-col{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .field{
+      display:grid;
+      gap: 6px;
+    }
+    .field label{
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .field input,
+    .field select,
+    .field textarea{
+      font: inherit;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--ink);
+    }
+    .field small{
+      color: var(--muted);
+    }
+    .field-error{
+      display: none;
+      color: #b00020;
+      font-size: 14px;
+    }
+    .field.is-invalid .field-error{
+      display: block;
+    }
+    .field.is-invalid input,
+    .field.is-invalid select,
+    .field.is-invalid textarea{
+      border-color: #b00020;
+    }
+    .radio-group{
+      display:grid;
+      gap: 8px;
+    }
+    .radio-option{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 600;
+    }
+    .session-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .session-card{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: #f6f4ef;
+      display: grid;
+      gap: 10px;
+      cursor: pointer;
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+      position: relative;
+      min-height: 140px;
+      overflow: hidden;
+    }
+    .session-card::after{
+      content: "";
+      position: absolute;
+      inset: -40% -20%;
+      background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.65) 50%, transparent 65%);
+      transform: translateX(-140%);
+      opacity: 0.7;
+      pointer-events: none;
+      animation: gloss-sweep 2.8s ease-in-out infinite;
+    }
+    .session-card:hover{
+      border-color: var(--teal);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+    }
+    .session-card input{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .session-card-body{
+      display: grid;
+      gap: 6px;
+      text-align: center;
+    }
+    .session-title{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .session-availability{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .session-card:has(input:checked){
+      border-color: var(--gold);
+      box-shadow: 0 12px 24px rgba(240,180,58,0.25);
+      background: var(--gold);
+    }
+    .session-card:has(input:checked) .session-title,
+    .session-card:has(input:checked) .session-availability{
+      color: #ffffff;
+    }
+    .session-card.is-full{
+      opacity: 0.6;
+    }
+    .availability-note{
+      color: var(--muted);
+    }
+    .meeting-link{
+      color: #1a5cff;
+      font-weight: 600;
+    }
+    .meeting-link:hover,
+    .meeting-link:focus-visible{
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    .reservation-steps{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .reservation-row{
+      display:grid;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .reservation-row.two-col{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .reservation-card{
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #ffffff;
+      padding: 20px;
+      display:grid;
+      gap: 12px;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
+    }
+
+
+    .form-success{
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--teal);
+      background: #f6fbfc;
+      padding: 14px 16px;
+      border-radius: 14px;
+      color: var(--ink);
+      font-weight: 600;
+      display: none;
+    }
+    .form-success.is-visible{
+      display: block;
+    }
+    .reservation-card p{
+      margin: 0;
+    }
+    .reservation-card p + p{
+      margin-top: 8px;
+    }
+    .reservation-card p + .content-list,
+    .reservation-card .content-list + p{
+      margin-top: 8px;
+    }
+    .reservation-card h2{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .reservation-card h2:not(:first-child){
+      margin-top: 16px;
+    }
+    .tight-stack{
+      display:grid;
+      gap: 6px;
+    }
+    .tight-stack p,
+    .tight-stack .content-list{
+      margin: 0;
+    }
+    .tight-stack p + p,
+    .tight-stack p + .content-list,
+    .tight-stack .content-list + p{
+      margin-top: 0;
+    }
+    .schedule-block{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #ffffff;
+      display: grid;
+      gap: 6px;
+    }
+    .schedule-block h3{
+      margin: 0;
+      font-size: clamp(20px, 2.6vw, 26px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .schedule-block p{
+      margin: 0;
+    }
+    .table-wrap{
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow-x: auto;
+      background: #ffffff;
+    }
+    .table-wrap table{
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+    }
+    .table-wrap th,
+    .table-wrap td{
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      font-size: clamp(16px, 1.8vw, 20px);
+    }
+    .table-wrap th{
+      background: #f9f7f3;
+    }
+    .pricing-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .pricing-actions{
+      display:grid;
+      gap: 12px;
+      align-content: start;
+    }
+    .pricing-action-card{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .pricing-details{
+      margin-top: 16px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .pricing-detail-card{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: #ffffff;
+      display: grid;
+      gap: 8px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .pricing-detail-card h3{
+      margin: 0;
+      font-size: clamp(22px, 3vw, 30px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .location-layout{
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: start;
+    }
+    .location-text{
+      flex: 1;
+      min-width: 0;
+    }
+    .pricing-action-card .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      border-radius: 14px;
+    }
+    .confirmation-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .confirmation-card{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #ffffff;
+      padding: 16px;
+      display:grid;
+      gap: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+    .confirmation-grid h2{
+      margin-top: 0;
+    }
+    .reservation-card .form-grid{
+      max-width: 100%;
+    }
+    .reservation-cta{
+      display:flex;
+      justify-content:center;
+      margin-top: 18px;
+    }
+    .reservation-cta .btn{
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      padding: 22px 22px;
+      text-transform: uppercase;
+      border-radius: 16px;
+      width: min(100%, 520px);
+      box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+    }
+    .cta-block{
+      display:grid;
+      gap: 12px;
+      width: min(100%, 520px);
+    }
+    .cta-block .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 22px 24px;
+      border-radius: 22px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.12);
     }
 
     footer.site-footer{
@@ -1049,6 +1362,42 @@ nav{
       line-height: 0.95;
       text-align: center;
     }
+    .thankyou-card{
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .thankyou-card .btn{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .thankyou-title{
+      text-align: center;
+    }
+    .thankyou-card h2{
+      font-size: clamp(30px, 4vw, 46px);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: var(--lh-heading);
+    }
+    .thankyou-card h3{
+      margin: 18px 0 6px;
+      font-size: clamp(22px, 3vw, 30px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .share-btn{
+      width: min(100%, 320px);
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-top: 8px;
+    }
 
     @media (min-width: 981px){
       .menu-btn{ display:none; }
@@ -1073,10 +1422,6 @@ nav{
         font-size: clamp(48.96px, 7.2vw, 80.64px);
         line-height: 0.8;
       }
-      .deploy-banner h2{
-        font-size: clamp(48.96px, 7.2vw, 80.64px);
-        line-height: 0.8;
-      }
 
       .btn.cta-standard{
         font-size: 35.04px;
@@ -1088,9 +1433,24 @@ nav{
       .curriculum-grid{ grid-template-columns: 1fr; }
       .openbook-grid{ grid-template-columns: 1fr; }
       .openbook-columns{ grid-template-columns: 1fr; }
+      .openbook-cta-row{ grid-template-columns: 1fr; }
+      .math-layout{ grid-template-columns: 1fr; }
       .teachers-grid{ grid-template-columns: 1fr; }
       .quickfacts-content{ grid-template-columns: 1fr; }
       .reserve-content{ grid-template-columns: 1fr; }
+      .reservation-row.two-col{ grid-template-columns: 1fr; }
+      .session-grid{ grid-template-columns: 1fr; }
+      .field-row.three-col,
+      .field-row.two-col{
+        grid-template-columns: 1fr;
+      }
+      .pricing-grid{ grid-template-columns: 1fr; }
+      .pricing-details{ grid-template-columns: 1fr; }
+      .confirmation-grid{ grid-template-columns: 1fr; }
+      .pricing-grid{ display: contents; }
+      .tight-stack{ order: 1; }
+      .pricing-details{ order: 2; }
+      .pricing-actions{ order: 3; }
 
       /* Mobile standards */
       .hero-logo{ display: none !important; }
@@ -1192,7 +1552,6 @@ nav{
         <span></span>
         <span></span>
       </div>
-
       
       <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
@@ -1223,143 +1582,25 @@ nav{
   </header>
 
   <main>
-    <section class="hero">
-      <div class="wrap">
-        <div class="hero-top">
-          <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
-          <div class="hero-title-block">
-            <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
-            <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            <div class="hero-sub">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
-</div>
-        </div>
-
-        <div class="hero-image banner">
-          <img src="assets/banner-kid-presents.jpg" alt="Student presenting at a whiteboard" />
-        </div>
-
-      </div>
-    </section>
-
-    <section class="deploy-section">
-      <div class="deploy-banner">
+    <section class="content-section gold">
+      <div class="content-banner gold">
         <div class="wrap">
-          <h2>Curriculum</h2>
+          <h2 class="thankyou-title">You just invested in the local economy.</h2>
         </div>
       </div>
-      <div class="deploy-content">
-        <div class="deploy-item deploy-intro-card">
-          <div class="deploy-title">🚀 What We Deploy</div>
-          <p class="deploy-copy">Each Money Club module is a business-in-a-box learning system — designed to produce real understanding, not pretend startups.</p>
-          <p class="deploy-copy">The program is deliberately structured in two phases, so students build competence before they’re asked to invent.</p>
-          <div class="deploy-title">⚙️ Phase 1 — Learn by Operating</div>
-          <p class="deploy-copy">In the first half of the program, students work on a programmed, instructor-guided product or service.</p>
-          <p class="deploy-copy">While contributing to a real, shared project, students move step-by-step through the core curriculum:</p>
-          <ul class="deploy-bullets">
-            <li>How money flows</li>
-            <li>How costs accumulate</li>
-            <li>How pricing decisions are made</li>
-            <li>How sourcing, design, and demand interact</li>
-          </ul>
-          <p class="deploy-copy">This phase removes guesswork.</p>
-          <p class="deploy-copy">Students learn the mechanics of business inside a working system, with instructors guiding decisions and explaining trade-offs as they happen.</p>
-          <p class="deploy-copy">They don’t just “brainstorm ideas” — they learn how real decisions get made.</p>
-          <div class="deploy-title">🛠 Phase 2 — Build Your Own</div>
-          <p class="deploy-copy">In the second half of the program, students apply those skills to their own product or service ideas.</p>
-          <p class="deploy-copy">Working in small, instructor-led teams, students:</p>
-          <ul class="deploy-bullets">
-            <li>Identify real problems using design thinking</li>
-            <li>Define success criteria</li>
-            <li>Stress-test assumptions</li>
-            <li>Map costs, pricing, and feasibility</li>
-            <li>Translate ideas into viable business models</li>
-          </ul>
-          <div class="deploy-title">🎤 The Outcome</div>
-          <p class="deploy-copy">The program culminates in a TED-style community pitch night.</p>
-          <p class="deploy-copy">Every student presents:</p>
-          <ul class="deploy-bullets">
-            <li>What they built</li>
-            <li>Who it’s for</li>
-            <li>How it works</li>
-            <li>What it costs</li>
-            <li>How it’s priced</li>
-            <li>Why someone would pay for it</li>
-          </ul>
-          <p class="deploy-copy">Everything in The Money Club.Org is designed to teach by doing. The following instructor-led modules are the systems students work inside — each one engineered to build competence before creativity, and judgment before confidence.</p>
-        </div>
-        <ul class="deploy-list">
-          <li class="deploy-item">
-            <div class="deploy-title">💰 Financial Literacy as Survival Gear</div>
-            <p class="deploy-copy">Understanding gross margin, cash flow, sourcing, and unit economics — because passion doesn’t pay rent. Participants learn how money actually moves through a business: contribution margin vs profit, fixed vs variable costs, break-even points, and why most businesses fail from running out of cash, not lack of sales.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">🏭 Sourcing 101: Where Value Is Actually Made</div>
-            <p class="deploy-copy">How products are sourced, priced, bundled, and scaled — and why most businesses fail before they ever sell. This module demystifies suppliers, minimum order quantities, lead times, logistics, and pricing leverage — showing entrepreneurs how small sourcing decisions quietly determine whether a business can scale.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">📊 Market Research: Follow the Money &amp; Problems</div>
-            <p class="deploy-copy">Not surveys. Signals. Demand mapping, retailer economics, and spotting who already wants to pay. Participants are trained to look for evidence of demand — existing spend, substitutes, complaints, workarounds, inefficiencies — and map real problems people are already spending money to solve.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">🏷 Control Brand Playbook</div>
-            <p class="deploy-copy">How retailers systematically copy national brands, extract margin, and dominate categories — and how local entrepreneurs can ethically apply the same structural advantages. This module teaches value shifts from brand to distribution, how private labels win, and how entrepreneurs can design products that control pricing power instead of competing on features.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">🎨 Design Thinking &amp; Human Factor Research</div>
-            <p class="deploy-copy">Your job isn’t to have ideas. Your job is to find friction. Participants learn to observe behavior, isolate problems, and design solutions people actually adopt. Entrepreneurs watch what people do, not what they say, identify frustration, wasted time, or unnecessary cost, and turn those insights into testable business opportunities.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">📋 Cambridge Business Model Canvas</div>
-            <p class="deploy-copy">Once a real opportunity is identified, this is where ideas turn into revenue — translating insight into a functioning business model financial institutions can believe in. Participants connect customer problems → value propositions → revenue streams → cost structures → key partners — ensuring every business model is grounded in economic reality, not assumptions.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">🚀 Go-To-Market: Blast Off Without Burning Fuel</div>
-            <p class="deploy-copy">The Lean Startup mindset — maximize learning while minimizing cash burn. Participants learn to launch fast, test cheaply, and avoid premature scaling by focusing on smallest viable launches, early traction signals, and revenue before perfection.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">📸 Creative Fundamentals: Photography, Design &amp; Visual Clarity</div>
-            <p class="deploy-copy">Participants learn how basic photography, simple design systems, and lightweight tools like Photoshop dramatically increase perceived value, trust, and conversion — without agency-level budgets.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">📣 Marketing: Ride Existing Channels Before Building Your Own</div>
-            <p class="deploy-copy">Entrepreneurs learn when to use marketplaces, retailers, social platforms, and partners instead of sinking time and money into standalone ecommerce sites too early. Focus: speed to revenue, not platform ownership.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">🕵️‍♂️ Staying Ahead of the Game: Always-On Market Research</div>
-            <p class="deploy-copy">Participants are trained to continuously monitor competitors, pricing shifts, customer behavior, and trends — treating market research as an ongoing habit, not a one-time task. This creates businesses that adapt faster than the market changes.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <div class="content-content">
+        <div class="reservation-card thankyou-card">
+          <p>The Money Club exists to teach youth financial literacy and to strengthen our local community by helping the next generation understand how businesses grow, hire, and create opportunity.</p>
 
-    <section class="quickfacts-section">
-      <div class="quickfacts-banner">
-        <div class="wrap">
-          <h2>Everything parents need to know</h2>
-        </div>
-      </div>
-      <div class="quickfacts-content">
-        <div class="quickfacts-card essentials">
-          <h3>Program essentials</h3>
-          <ul class="quickfacts-list">
-            <li>Ages: 11–17</li>
-            <li>Format: Summer day program</li>
-            <li>Duration: 4 weeks</li>
-            <li>When: July & August</li>
-            <li>Cost: $1,500 per student</li>
-            <li>Location: The UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
-            <li>Materials: Included (including student project inputs)</li>
-            <li>Experience: None required</li>
-          </ul>
-        </div>
-        <div class="quickfacts-card">
-          <h3>Ready for details?</h3>
-          <p class="quickfacts-note">See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
-          <a data-cta-label="View schedule &amp; pricing" class="btn purple block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
+          <h3>Next</h3>
+          <p>We’ll email you the permission forms and your receipt/confirmation.</p>
+
+          <h3>Share</h3>
+          <p>If you want to help this initiative reach more families, please forward the link to family and friends.</p>
+          <button id="share-button" class="btn purple gloss share-btn" type="button">Share now</button>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
@@ -1370,6 +1611,17 @@ nav{
     </div>
   </footer>
 
+  <script>
+    (function(){
+      var purchasePayload = <?php echo json_encode($purchase_payload, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
+      if (purchasePayload && purchasePayload.transaction_id){
+        window.dataLayer = window.dataLayer || [];
+        purchasePayload.page_path = window.location.pathname || '';
+        purchasePayload.page_title = document.title || '';
+        window.dataLayer.push(purchasePayload);
+      }
+    })();
+  </script>
   <script>
     (function(){
       var menuBtn = document.querySelector('.menu-btn');
@@ -1430,6 +1682,116 @@ nav{
           closeMenu();
         }
       });
+
+      function updateFieldState(field){
+        if (!field){ return; }
+        var radios = field.querySelectorAll('input[type="radio"]');
+        var checkbox = field.querySelector('input[type="checkbox"]');
+        var input = field.querySelector('input, select, textarea');
+        var valid = true;
+        if (radios.length){
+          valid = Array.prototype.some.call(radios, function(radio){
+            return radio.checked;
+          });
+        } else if (checkbox){
+          valid = !checkbox.required || checkbox.checked;
+        } else if (input){
+          valid = input.checkValidity();
+        }
+        field.classList.toggle('is-invalid', !valid);
+      }
+
+      var forms = document.querySelectorAll('.form-grid');
+      forms.forEach(function(form){
+        form.addEventListener('submit', function(e){
+          var fields = form.querySelectorAll('.field');
+          fields.forEach(function(field){
+            updateFieldState(field);
+          });
+          if (!form.checkValidity()){
+            e.preventDefault();
+            var firstInvalid = form.querySelector(':invalid');
+            if (firstInvalid){
+              firstInvalid.focus();
+            }
+          }
+        });
+
+        form.addEventListener('input', function(e){
+          updateFieldState(e.target.closest('.field'));
+        });
+
+        form.addEventListener('change', function(e){
+          updateFieldState(e.target.closest('.field'));
+        });
+      });
+
+      var params = new URLSearchParams(window.location.search);
+      var success = document.getElementById('form-success');
+      if (success && params.get('status') === 'sent') {
+        success.classList.add('is-visible');
+      }
+    })();
+  </script>
+  <script>
+    (function(){
+      var shareBtn = document.getElementById('share-button');
+      if (!shareBtn){ return; }
+
+      var shareData = {
+        title: 'The Money Club',
+        text: 'The Money Club exists to teach youth financial literacy and strengthen our local community.',
+        url: 'https://the-money-club.org/'
+      };
+
+      function copyLink(){
+        if (navigator.clipboard && window.isSecureContext){
+          navigator.clipboard.writeText(shareData.url).then(function(){
+            var original = shareBtn.textContent;
+            shareBtn.textContent = 'Link copied';
+            setTimeout(function(){ shareBtn.textContent = original; }, 2000);
+          });
+          return;
+        }
+        window.prompt('Copy this link:', shareData.url);
+      }
+
+      shareBtn.addEventListener('click', function(){
+        if (navigator.share){
+          navigator.share(shareData).catch(function(){});
+          return;
+        }
+        copyLink();
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      var spotEls = document.querySelectorAll('.session-availability');
+      if (!spotEls.length){ return; }
+
+      function updateSpots(data){
+        spotEls.forEach(function(el){
+          var key = el.getAttribute('data-session');
+          if (!key || typeof data[key] !== 'number'){ return; }
+          var count = data[key];
+          var capacity = typeof data.capacity === 'number' ? data.capacity : 30;
+          el.textContent = count + ' of ' + capacity + ' Spots Available';
+          var row = el.closest('.session-card');
+          if (row){
+            row.classList.toggle('is-full', count <= 0);
+            var input = row.querySelector('input[type="radio"]');
+            if (input){
+              input.disabled = count <= 0;
+            }
+          }
+        });
+      }
+
+      fetch('availability.php', { cache: 'no-store' })
+        .then(function(res){ return res.json(); })
+        .then(updateSpots)
+        .catch(function(){});
     })();
   </script>
   <script>

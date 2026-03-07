@@ -103,8 +103,8 @@ if ($student_name === '') {
 }
 
 $session_map = [
-    'session1' => 'Session 1: July 6, 2026 → July 31, 2026',
-    'session2' => 'Session 2: August 4, 2026 → August 28, 2026'
+    'session1' => 'Session 1: July 6-31, 2026',
+    'session2' => 'Session 2: August 4-28, 2026'
 ];
 
 if ($preferred_session === '' && $preferred_month !== '') {
@@ -130,7 +130,7 @@ if ($stripe_secret === false || $stripe_secret === '') {
 }
 
 $base_url = base_url();
-$success_url = $base_url . '/stripe-success.php?session_id={CHECKOUT_SESSION_ID}&return=thank-you-credit-card.html';
+$success_url = $base_url . '/stripe-success.php?session_id={CHECKOUT_SESSION_ID}&return=thank-you-credit-card.php';
 $cancel_return = isset($_POST['return-cancel']) ? basename(trim($_POST['return-cancel'])) : 'reserve-a-spot.html';
 $allowed_returns = [
     'reserve-a-spot.html',

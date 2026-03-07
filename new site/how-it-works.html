@@ -1550,19 +1550,21 @@ nav{
 
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-GXP7Z3K0YK');
-  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T243W4XM');</script>
+  <!-- End Google Tag Manager -->
 
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T243W4XM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="topbar">
     <div class="inner">
       <div class="menu-btn" aria-label="Menu" role="button">
@@ -1703,7 +1705,7 @@ nav{
         <h2>Reserve a Spot</h2>
       </div>
     </section>
-    <section class="reservation-steps">
+    <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
       <div class="wrap">
         <div class="reservation-row">
           <div class="reservation-card">
@@ -1752,14 +1754,14 @@ nav{
                   <label class="session-card">
                     <input type="radio" name="preferred-session" value="session1" required />
                     <div class="session-card-body">
-                      <div class="session-title">Session 1: July 6, 2026 → July 31, 2026</div>
+                      <div class="session-title">Session 1: July 6-31, 2026</div>
                       <div class="session-availability" data-session="session1">30 of 30 Spots Available</div>
                     </div>
                   </label>
                   <label class="session-card">
                     <input type="radio" name="preferred-session" value="session2" />
                     <div class="session-card-body">
-                      <div class="session-title">Session 2: August 4, 2026 → August 28, 2026</div>
+                      <div class="session-title">Session 2: August 4-28, 2026</div>
                       <div class="session-availability" data-session="session2">30 of 30 Spots Available</div>
                     </div>
                   </label>
@@ -2056,6 +2058,42 @@ nav{
 
       updateFlowState();
 
+      function getProgramFeeValue(form){
+        var paymentMeta = form ? form.querySelector('.payment-meta') : null;
+        var sourceText = paymentMeta ? paymentMeta.textContent : '';
+        var match = sourceText.match(/\$([0-9][0-9,]*(?:\.[0-9]{2})?)/);
+        if (!match){
+          return 1500;
+        }
+        var value = parseFloat(match[1].replace(/,/g, ''));
+        return isNaN(value) ? 1500 : value;
+      }
+
+      function pushBeginCheckout(form){
+        if (!form || form.dataset.beginCheckoutTracked === 'true'){
+          return;
+        }
+        form.dataset.beginCheckoutTracked = 'true';
+        window.dataLayer = window.dataLayer || [];
+        var value = getProgramFeeValue(form);
+        window.dataLayer.push({
+          event: 'begin_checkout',
+          currency: 'CAD',
+          value: value,
+          items: [
+            {
+              item_id: 'money-club-summer-camp',
+              item_name: 'The Money Club Summer Camp',
+              item_category: 'Summer Camp',
+              price: value,
+              quantity: 1
+            }
+          ],
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
       sessionRadios.forEach(function(radio){
         radio.addEventListener('change', function(){
           updateFlowState();
@@ -2076,13 +2114,13 @@ nav{
           var form = btn.form;
           if (form) {
             var returnTo = form.querySelector('[name="return-to"]');
-          var returnCancel = form.querySelector('[name="return-cancel"]');
-          var currentPage = window.location.pathname.split('/').pop() || 'reserve-a-spot.html';
-          if (returnCancel){ returnCancel.value = currentPage; }
+            var returnCancel = form.querySelector('[name="return-cancel"]');
+            var currentPage = window.location.pathname.split('/').pop() || 'reserve-a-spot.html';
+            if (returnCancel){ returnCancel.value = currentPage; }
 
             if (btn.value === 'Credit Card') {
               form.setAttribute('action', 'stripe-checkout.php');
-              if (returnTo){ returnTo.value = 'thank-you-credit-card.html'; }
+              if (returnTo){ returnTo.value = 'thank-you-credit-card.php'; }
             } else {
               form.setAttribute('action', 'apply-camper.php');
               if (returnTo){ returnTo.value = 'etransfer.html'; }
@@ -2101,6 +2139,10 @@ nav{
           if (!termsAgreed()){
             e.preventDefault();
             showFirstInvalidField();
+            return;
+          }
+          if (btn.value === 'Credit Card') {
+            pushBeginCheckout(form);
           }
         });
       });
@@ -2149,30 +2191,106 @@ nav{
   </script>
   <script>
     (function(){
+      function normalizeText(value){
+        return (value || '')
+          .toLowerCase()
+          .replace(/&/g, ' and ')
+          .replace(/[^a-z0-9]+/g, ' ')
+          .trim();
+      }
+
       function getLabel(el){
         if (!el){
           return '';
         }
-        var label = el.getAttribute('data-cta-label');
-        if (label){
-          return label;
+        var explicitLabel = el.getAttribute('data-cta-label');
+        if (explicitLabel){
+          return explicitLabel;
         }
-        label = el.textContent || '';
-        return label.trim().replace(/\s+/g, ' ');
+        var text = el.textContent || '';
+        return text.trim().replace(/\s+/g, ' ');
+      }
+
+      function getText(el){
+        if (!el){
+          return '';
+        }
+        var text = el.textContent || '';
+        return text.trim().replace(/\s+/g, ' ');
+      }
+
+      function getLocation(el){
+        if (!el){
+          return '';
+        }
+        var container = el.closest('[data-cta-location], section[id], header, footer, nav, form');
+        if (!container){
+          return '';
+        }
+        return (
+          container.getAttribute('data-cta-location') ||
+          container.id ||
+          container.getAttribute('aria-label') ||
+          container.tagName.toLowerCase()
+        );
+      }
+
+      function isReserveCopy(value){
+        var normalized = normalizeText(value);
+        return normalized.indexOf('reserve a spot') !== -1 || normalized.indexOf('reserve spot') !== -1;
+      }
+
+      function isReserveHref(href){
+        if (!href){
+          return false;
+        }
+        var normalizedHref = href.toLowerCase();
+        return normalizedHref === '#reserve' ||
+          normalizedHref === '#reserve-a-spot' ||
+          normalizedHref.indexOf('#reserve-a-spot') !== -1 ||
+          normalizedHref.indexOf('#reserve') !== -1 ||
+          normalizedHref.indexOf('reserve-a-spot.html') !== -1;
+      }
+
+      function buildCtaPayload(target, eventName){
+        var label = getLabel(target);
+        var text = getText(target);
+        var href = target.getAttribute('href') || '';
+        var pagePath = window.location.pathname || '';
+        return {
+          event: eventName,
+          cta_label: label,
+          cta_text: text,
+          cta_href: href,
+          cta_url: href,
+          cta_type: target.tagName.toLowerCase() === 'a' ? 'link' : (target.type || 'button'),
+          cta_location: getLocation(target),
+          cta_page: pagePath,
+          page_path: pagePath,
+          page_title: document.title || ''
+        };
+      }
+
+      function isReserveCta(target){
+        if (!target){
+          return false;
+        }
+        var explicitLabel = target.getAttribute('data-cta-label') || '';
+        var label = getLabel(target);
+        var text = getText(target);
+        var href = target.getAttribute('href') || '';
+        return isReserveCopy(explicitLabel) ||
+          isReserveCopy(label) ||
+          isReserveCopy(text) ||
+          isReserveHref(href);
       }
 
       function trackCta(target){
-        if (!window.gtag){
-          return;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
+        if (isReserveCta(target)){
+          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
         }
-        var label = getLabel(target);
-        var href = target.getAttribute('href') || '';
-        var locationPath = window.location.pathname || '';
-        window.gtag('event', 'cta_click', {
-          cta_label: label,
-          cta_href: href,
-          cta_page: locationPath
-        });
       }
 
       document.addEventListener('click', function(event){
@@ -2183,7 +2301,8 @@ nav{
         if (!(
           target.classList.contains('btn') ||
           target.classList.contains('cta-large') ||
-          target.classList.contains('cta-standard')
+          target.classList.contains('cta-standard') ||
+          target.hasAttribute('data-cta-label')
         )){
           return;
         }

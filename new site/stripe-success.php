@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/smtp-send.php';
+session_start();
 
 function get_data_dir() {
     $outside = dirname(__DIR__) . '/data';
@@ -73,6 +74,11 @@ if ($payment_status !== 'paid') {
 }
 
 $metadata = isset($session['metadata']) && is_array($session['metadata']) ? $session['metadata'] : [];
+$transaction_id = isset($session['payment_intent']) && is_string($session['payment_intent']) && $session['payment_intent'] !== ''
+    ? $session['payment_intent']
+    : $session_id;
+$purchase_currency = strtoupper((string)($session['currency'] ?? 'cad'));
+$purchase_value = isset($session['amount_total']) ? round(((int)$session['amount_total']) / 100, 2) : 0.0;
 
 $parent_name = $metadata['parent_name'] ?? '';
 $parent_email = $metadata['parent_email'] ?? '';
@@ -83,8 +89,8 @@ $preferred_session = $metadata['preferred_session'] ?? '';
 $terms_agree = $metadata['terms_agree'] ?? 'Yes';
 
 $session_map = [
-    'session1' => 'Session 1: July 6, 2026 → July 31, 2026',
-    'session2' => 'Session 2: August 4, 2026 → August 28, 2026'
+    'session1' => 'Session 1: July 6-31, 2026',
+    'session2' => 'Session 2: August 4-28, 2026'
 ];
 
 $availability_path = $data_dir . '/availability.json';
@@ -198,10 +204,24 @@ if ($csv_fp) {
     fclose($csv_fp);
 }
 
-$return_page = isset($_GET['return']) ? basename(trim($_GET['return'])) : 'thank-you-credit-card.html';
-if ($return_page !== 'thank-you-credit-card.html') {
-    $return_page = 'thank-you-credit-card.html';
+$return_page = isset($_GET['return']) ? basename(trim($_GET['return'])) : 'thank-you-credit-card.php';
+if ($return_page !== 'thank-you-credit-card.php') {
+    $return_page = 'thank-you-credit-card.php';
 }
+$_SESSION['tmc_verified_purchase'] = [
+    'transaction_id' => $transaction_id,
+    'currency' => $purchase_currency,
+    'value' => $purchase_value,
+    'items' => [
+        [
+            'item_id' => 'money-club-summer-camp',
+            'item_name' => 'The Money Club Summer Camp',
+            'item_category' => 'Summer Camp',
+            'price' => 1500,
+            'quantity' => 1
+        ]
+    ]
+];
 header('Location: ' . base_url() . '/' . $return_page);
 exit;
 ?>

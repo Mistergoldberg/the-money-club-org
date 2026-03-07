@@ -1608,19 +1608,21 @@ nav{
     }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GXP7Z3K0YK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-GXP7Z3K0YK');
-  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T243W4XM');</script>
+  <!-- End Google Tag Manager -->
 
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T243W4XM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="topbar">
     <div class="inner">
       <div class="menu-btn" aria-label="Menu" role="button">
@@ -1888,30 +1890,106 @@ Phone: <strong>437-239-8602</strong></p>
   </script>
   <script>
     (function(){
+      function normalizeText(value){
+        return (value || '')
+          .toLowerCase()
+          .replace(/&/g, ' and ')
+          .replace(/[^a-z0-9]+/g, ' ')
+          .trim();
+      }
+
       function getLabel(el){
         if (!el){
           return '';
         }
-        var label = el.getAttribute('data-cta-label');
-        if (label){
-          return label;
+        var explicitLabel = el.getAttribute('data-cta-label');
+        if (explicitLabel){
+          return explicitLabel;
         }
-        label = el.textContent || '';
-        return label.trim().replace(/\s+/g, ' ');
+        var text = el.textContent || '';
+        return text.trim().replace(/\s+/g, ' ');
+      }
+
+      function getText(el){
+        if (!el){
+          return '';
+        }
+        var text = el.textContent || '';
+        return text.trim().replace(/\s+/g, ' ');
+      }
+
+      function getLocation(el){
+        if (!el){
+          return '';
+        }
+        var container = el.closest('[data-cta-location], section[id], header, footer, nav, form');
+        if (!container){
+          return '';
+        }
+        return (
+          container.getAttribute('data-cta-location') ||
+          container.id ||
+          container.getAttribute('aria-label') ||
+          container.tagName.toLowerCase()
+        );
+      }
+
+      function isReserveCopy(value){
+        var normalized = normalizeText(value);
+        return normalized.indexOf('reserve a spot') !== -1 || normalized.indexOf('reserve spot') !== -1;
+      }
+
+      function isReserveHref(href){
+        if (!href){
+          return false;
+        }
+        var normalizedHref = href.toLowerCase();
+        return normalizedHref === '#reserve' ||
+          normalizedHref === '#reserve-a-spot' ||
+          normalizedHref.indexOf('#reserve-a-spot') !== -1 ||
+          normalizedHref.indexOf('#reserve') !== -1 ||
+          normalizedHref.indexOf('reserve-a-spot.html') !== -1;
+      }
+
+      function buildCtaPayload(target, eventName){
+        var label = getLabel(target);
+        var text = getText(target);
+        var href = target.getAttribute('href') || '';
+        var pagePath = window.location.pathname || '';
+        return {
+          event: eventName,
+          cta_label: label,
+          cta_text: text,
+          cta_href: href,
+          cta_url: href,
+          cta_type: target.tagName.toLowerCase() === 'a' ? 'link' : (target.type || 'button'),
+          cta_location: getLocation(target),
+          cta_page: pagePath,
+          page_path: pagePath,
+          page_title: document.title || ''
+        };
+      }
+
+      function isReserveCta(target){
+        if (!target){
+          return false;
+        }
+        var explicitLabel = target.getAttribute('data-cta-label') || '';
+        var label = getLabel(target);
+        var text = getText(target);
+        var href = target.getAttribute('href') || '';
+        return isReserveCopy(explicitLabel) ||
+          isReserveCopy(label) ||
+          isReserveCopy(text) ||
+          isReserveHref(href);
       }
 
       function trackCta(target){
-        if (!window.gtag){
-          return;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
+        if (isReserveCta(target)){
+          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
         }
-        var label = getLabel(target);
-        var href = target.getAttribute('href') || '';
-        var locationPath = window.location.pathname || '';
-        window.gtag('event', 'cta_click', {
-          cta_label: label,
-          cta_href: href,
-          cta_page: locationPath
-        });
       }
 
       document.addEventListener('click', function(event){
@@ -1922,7 +2000,8 @@ Phone: <strong>437-239-8602</strong></p>
         if (!(
           target.classList.contains('btn') ||
           target.classList.contains('cta-large') ||
-          target.classList.contains('cta-standard')
+          target.classList.contains('cta-standard') ||
+          target.hasAttribute('data-cta-label')
         )){
           return;
         }
@@ -1932,6 +2011,28 @@ Phone: <strong>437-239-8602</strong></p>
   </script>
 
 
+  <script>
+    (function(){
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('status') !== 'sent'){
+        return;
+      }
+      try {
+        var dedupeKey = 'tmc_generate_lead_' + window.location.pathname + window.location.search;
+        if (sessionStorage.getItem(dedupeKey) === '1'){
+          return;
+        }
+        sessionStorage.setItem(dedupeKey, '1');
+      } catch (e) {}
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'generate_lead',
+        form_name: 'reserve_a_spot',
+        page_path: window.location.pathname || '',
+        page_title: document.title || ''
+      });
+    })();
+  </script>
   <script>
     (function(){
       var params = new URLSearchParams(window.location.search);
