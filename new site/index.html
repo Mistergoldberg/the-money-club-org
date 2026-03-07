@@ -539,6 +539,50 @@
       border-radius: 22px;
       box-shadow: 0 16px 32px rgba(0,0,0,0.18);
     }
+    #built-like-a-business .split{
+      align-items: start;
+      gap: clamp(32px, 4vw, 64px);
+    }
+    #built-like-a-business .cta-stack--hero{
+      align-self: start;
+      align-items: flex-start;
+    }
+    #built-like-a-business .program-summary{
+      width: 100%;
+      max-width: 36rem;
+      margin: 0;
+      padding: clamp(24px, 2.4vw, 34px);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 14px 28px rgba(17,17,17,0.08);
+      text-align: left;
+      font-size: inherit;
+      line-height: var(--lh-body);
+    }
+    #built-like-a-business .program-summary-title{
+      margin: 0 0 8px;
+      font-size: 1.3em;
+      font-weight: 700;
+      line-height: 1.1;
+      text-wrap: balance;
+    }
+    #built-like-a-business .program-summary-meta{
+      margin: 0 0 18px;
+      font-size: 1.08em;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    #built-like-a-business .program-summary-points{
+      display: grid;
+      gap: 12px;
+      margin: 0 0 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+    #built-like-a-business .program-summary-point{
+      line-height: 1.28;
+    }
 
     .bullet-list{
       margin: 8px 0 0;
@@ -957,6 +1001,9 @@
       display: block;
       font-weight: 700;
     }
+    .guide-links a{
+      font-weight: 700;
+    }
 
     .openbook-card{
       border-radius: 18px;
@@ -1349,6 +1396,20 @@
       .split > .cta-stack{
         order: 3;
       }
+      #built-like-a-business .cta-stack--hero{
+        order: 1;
+      }
+      #built-like-a-business .section-copy{
+        order: 2;
+      }
+      #built-like-a-business .program-summary{
+        max-width: none;
+        padding: 22px;
+      }
+      #built-like-a-business .program-summary-title,
+      #built-like-a-business .program-summary-meta{
+        text-wrap: initial;
+      }
       .radical-grid{
         grid-template-columns: 1fr;
         grid-auto-flow: row;
@@ -1476,7 +1537,7 @@
       #what-is-this .section-banner{ background: var(--gold); color: #ffffff; }
       #radical-transparency .section-banner{ background: var(--purple); color: #ffffff; }
       #how-it-works .section-banner{ background: var(--teal); color: #ffffff; }
-      #the-flywheel .section-banner{ background: var(--gold); color: #ffffff; }
+      #camp-guides .section-banner{ background: var(--gold); color: #ffffff; }
       #who-runs-it .section-banner{ background: var(--purple); color: #ffffff; }
       #curriculum .section-banner{ background: var(--teal); color: #ffffff; }
       #sign-up-today .section-banner{ background: var(--gold); color: #ffffff; }
@@ -1486,7 +1547,7 @@
       #what-is-this .section-banner h2,
       #radical-transparency .section-banner h2,
       #how-it-works .section-banner h2,
-      #the-flywheel .section-banner h2,
+      #camp-guides .section-banner h2,
       #who-runs-it .section-banner h2,
       #curriculum .section-banner h2,
       #sign-up-today .section-banner h2,
@@ -1640,7 +1701,16 @@
             <p>The Money Club.Org is a 4-week, instructor-led summer program that teaches kids how money, incentives, and real-world systems actually work.</p>
            </div>
           <div class="cta-stack cta-stack--hero">
-            <a data-cta-label="Reserve a spot" class="btn teal gloss cta-standard cta-fill" href="reserve-a-spot.html">Reserve a spot</a>
+            <div class="program-summary">
+              <div class="program-summary-meta">Ages 11–16 | Downtown Toronto | 4 Weeks</div>
+              <div class="program-summary-points">
+                <div class="program-summary-point">📍 UTSU Student Commons (University of Toronto campus)</div>
+                <div class="program-summary-point">📅 July 6–31 or Aug 4–28</div>
+                <div class="program-summary-point">💰 $1500</div>
+                <div class="program-summary-point">🧠 Build and launch real projects</div>
+              </div>
+              <a data-cta-label="Reserve a spot" class="btn teal gloss cta-standard cta-fill" href="reserve-a-spot.html">Reserve a Spot</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1782,26 +1852,23 @@
       </div>
     </section>
 
-    <section class="section" id="the-flywheel">
+    <section class="section" id="camp-guides">
       <div class="section-banner gold">
         <div class="wrap">
-          <h2>The Flywheel</h2>
+          <h2>Guide to Summer Camps in Toronto</h2>
         </div>
       </div>
       <div class="section-content">
-        <div class="split reverse">
-          <div class="section-image">
-            <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel" />
-          </div>
-          <div class="section-copy">
-            <div><strong>How the system sustains itself</strong></div>
-            <ul class="bullet-list">
-              <li>Parents fund the program</li>
-              <li>Students operate real projects</li>
-              <li>Tuition recirculates into materials and instruction</li>
-              <li>Learning compounds each cohort</li>
-            </ul>
-          </div>
+        <div class="section-copy">
+          <p>Toronto parents often ask how to choose the right summer camp for their child. We&apos;ve created a few simple guides to help families explore different types of programs from broad camp options to STEM and entrepreneurship-focused learning.</p>
+          <ul class="module-list guide-links">
+            <li><a href="article-best-summer-camps.html">Best Summer Camps in Toronto for Curious Kids (2026 Guide)</a></li>
+            <li><a href="article-econ-summer-camps.html">Entrepreneurship Summer Camps for Teens (Canada Guide)</a></li>
+            <li><a href="article-stem-summer-camps.html">STEM Summer Camps in Toronto (2026 Guide)</a></li>
+            <li><a href="article-uni-summer-camps.html">Summer Programs Near the University of Toronto for Kids Guide</a></li>
+            <li><a href="article-older-kids-summer-camps.html">Summer Camps for Older Kids &amp; Teens in Toronto (Ages 11-16)</a></li>
+          </ul>
+          <p>These guides are designed to help families compare options and find a program that fits their child&apos;s interests.</p>
         </div>
       </div>
     </section>
@@ -1815,7 +1882,7 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <div><strong>Student-led support (adult-supervised)</strong></div>
+            <div><strong>Student-led support</strong></div>
             <p>The Money Club.Org is operated by its student leadership team: Sarah Duong and Alex Goldberg, both students at Humberside Collegiate Institute.</p>
             <div><strong>Designed by a practitioner</strong></div>
             <p>The Money Club.Org was designed by Jared Goldberg — a product strategist, systems designer, and educator with 15+ years building real-world business platforms.</p>
