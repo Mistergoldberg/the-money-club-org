@@ -104,6 +104,27 @@ h3{
 .reservation-card.is-processing{
   pointer-events: none;
 }
+/*
+Session availability text temporarily hidden.
+
+To re-enable it:
+remove class="hide-session-availability" from the <body> tag
+on pages that embed the reserve form.
+*/
+.hide-session-availability .session-availability{
+  display: none !important;
+}
+.hide-session-availability .session-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hide-session-availability .session-card-body{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .form-loading{
   position: absolute;
   inset: 0;
