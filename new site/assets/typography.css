@@ -105,25 +105,15 @@ h3{
   pointer-events: none;
 }
 /*
-Session availability text temporarily hidden.
+Registration form temporarily hidden because the embedded form
+shows live availability messaging that is not ready for display.
 
-To re-enable it:
-remove class="hide-session-availability" from the <body> tag
-on pages that embed the reserve form.
+To re-enable the form site-wide:
+remove this rule or remove class="hide-registration" from the
+<body> tag on pages that embed the reserve form.
 */
-.hide-session-availability .session-availability{
+.hide-registration .registration-form-container{
   display: none !important;
-}
-.hide-session-availability .session-card{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hide-session-availability .session-card-body{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .form-loading{
   position: absolute;

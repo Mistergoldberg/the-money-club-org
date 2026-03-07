@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Toronto Kids Summer Camp 2026 | July & August | The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Toronto kids summer camp 2026 at the University of Toronto Students' Union. 4-week July &amp; August day program for ages 11–16 focused on financial literacy, design thinking, and public speaking." />
+  <meta name="description" content="Toronto summer camp for ages 11–16 at UTSU Student Commons in downtown Toronto. In-person, project-based program in financial literacy, entrepreneurship, design thinking, and public speaking." />
   <meta property="og:title" content="Toronto Kids Summer Camp 2026 | July &amp; August | The Money Club.Org" />
-  <meta property="og:description" content="Toronto kids summer camp 2026 at the University of Toronto Students' Union. 4-week July &amp; August day program for ages 11–16 focused on financial literacy, design thinking, and public speaking." />
+  <meta property="og:description" content="Toronto summer camp for ages 11–16 at UTSU Student Commons in downtown Toronto. In-person, project-based program in financial literacy, entrepreneurship, design thinking, and public speaking." />
   <meta property="og:url" content="https://the-money-club.org/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Toronto Kids Summer Camp 2026 | July &amp; August | The Money Club.Org" />
-  <meta name="twitter:description" content="Toronto kids summer camp 2026 at the University of Toronto Students' Union. 4-week July &amp; August day program for ages 11–16 focused on financial literacy, design thinking, and public speaking." />
+  <meta name="twitter:description" content="Toronto summer camp for ages 11–16 at UTSU Student Commons in downtown Toronto. In-person, project-based program in financial literacy, entrepreneurship, design thinking, and public speaking." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/" />
   <script type="application/ld+json">
@@ -21,74 +21,203 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "name": "The Money Club.Org",
-          "url": "https://the-money-club.org/",
-          "logo": "https://the-money-club.org/assets/logo-500.png"
+          "@type": "EducationalOrganization",
+          "@id": "https://the-money-club.org/#organization",
+          "name": "The Money Club",
+          "url": "https://the-money-club.org",
+          "logo": "https://the-money-club.org/assets/logo-500.png",
+          "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 11–16.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "230 College St",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "postalCode": "M5T 1R2",
+            "addressCountry": "CA"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Toronto"
+          },
+          "knowsAbout": [
+            "Financial literacy",
+            "Entrepreneurship",
+            "Design thinking",
+            "Public speaking",
+            "Project-based learning"
+          ],
+          "audience": {
+            "@type": "PeopleAudience",
+            "suggestedMinAge": 11,
+            "suggestedMaxAge": 16
+          }
+        },
+        {
+          "@type": "Course",
+          "@id": "https://the-money-club.org/#summer-program",
+          "name": "The Money Club Summer Program 2026",
+          "description": "In-person Toronto summer program for students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects.",
+          "provider": {
+            "@id": "https://the-money-club.org/#organization"
+          },
+          "courseMode": "InPerson",
+          "inLanguage": "en",
+          "keywords": "Toronto summer camp, financial literacy, entrepreneurship, design thinking, public speaking, ages 11-16",
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "Financial literacy"
+            },
+            {
+              "@type": "Thing",
+              "name": "Entrepreneurship"
+            },
+            {
+              "@type": "Thing",
+              "name": "Design thinking"
+            },
+            {
+              "@type": "Thing",
+              "name": "Public speaking"
+            }
+          ],
+          "audience": {
+            "@type": "PeopleAudience",
+            "suggestedMinAge": 11,
+            "suggestedMaxAge": 16
+          },
+          "hasCourseInstance": [
+            {
+              "@id": "https://the-money-club.org/#session-1"
+            },
+            {
+              "@id": "https://the-money-club.org/#session-2"
+            }
+          ]
         },
         {
           "@type": "EducationEvent",
-          "name": "The Money Club.Org Summer Session 1",
+          "@id": "https://the-money-club.org/#session-1",
+          "name": "The Money Club Summer Program Session 1",
+          "description": "In-person 4-week Toronto summer program for students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.",
           "startDate": "2026-07-06",
           "endDate": "2026-07-31",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
             "@type": "Place",
-            "name": "The University of Toronto Students' Union",
+            "name": "UTSU Student Commons",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "230 College Street",
+              "streetAddress": "230 College St",
               "addressLocality": "Toronto",
               "addressRegion": "ON",
               "postalCode": "M5T 1R2",
               "addressCountry": "CA"
             }
           },
+          "organizer": {
+            "@id": "https://the-money-club.org/#organization"
+          },
           "offers": {
             "@type": "Offer",
             "price": "1500",
             "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
             "url": "https://the-money-club.org/reserve-a-spot.html"
-          },
-          "organizer": {
-            "@type": "Organization",
-            "name": "The Money Club.Org",
-            "url": "https://the-money-club.org/"
           }
         },
         {
           "@type": "EducationEvent",
-          "name": "The Money Club.Org Summer Session 2",
+          "@id": "https://the-money-club.org/#session-2",
+          "name": "The Money Club Summer Program Session 2",
+          "description": "In-person 4-week Toronto summer program for students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.",
           "startDate": "2026-08-04",
           "endDate": "2026-08-28",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
             "@type": "Place",
-            "name": "The University of Toronto Students' Union",
+            "name": "UTSU Student Commons",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "230 College Street",
+              "streetAddress": "230 College St",
               "addressLocality": "Toronto",
               "addressRegion": "ON",
               "postalCode": "M5T 1R2",
               "addressCountry": "CA"
             }
           },
+          "organizer": {
+            "@id": "https://the-money-club.org/#organization"
+          },
           "offers": {
             "@type": "Offer",
             "price": "1500",
             "priceCurrency": "CAD",
-            "availability": "https://schema.org/InStock",
             "url": "https://the-money-club.org/reserve-a-spot.html"
-          },
-          "organizer": {
-            "@type": "Organization",
-            "name": "The Money Club.Org",
-            "url": "https://the-money-club.org/"
           }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://the-money-club.org/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What age is the program for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The program is designed for students ages 11–16."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where is the program located?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The program takes place at UTSU Student Commons, 230 College St, Toronto, ON M5T 1R2, Canada, in downtown Toronto."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "When does the program run?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Session 1 runs from July 6, 2026 to July 31, 2026. Session 2 runs from August 4, 2026 to August 28, 2026."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does it cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The program costs CAD 1500 per student."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What do students learn?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Students learn financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it a sports or coding camp?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The Money Club is an in-person educational summer program focused on financial literacy, entrepreneurship, design thinking, public speaking, and real-world project work."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it affiliated with the University of Toronto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The program takes place at UTSU Student Commons in downtown Toronto near campus, but it is independently organized by The Money Club and should not be interpreted as University of Toronto sponsorship or endorsement."
+              }
+            }
+          ]
         }
       ]
     }
@@ -1004,6 +1133,14 @@
     .guide-links a{
       font-weight: 700;
     }
+    .faq-home-list li{
+      display: grid;
+      gap: 6px;
+    }
+    .faq-home-list p{
+      margin: 0;
+      color: var(--muted);
+    }
 
     .openbook-card{
       border-radius: 18px;
@@ -1624,7 +1761,13 @@
 
 </head>
 
-<body class="hide-session-availability">
+<!--
+Registration form temporarily hidden.
+
+To re-enable it:
+remove class="hide-registration" from the <body> tag
+-->
+<body class="hide-registration">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T243W4XM"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1673,7 +1816,7 @@
           <div class="hero-title-block">
             <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
             <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            <div class="hero-sub">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
+            <div class="hero-sub">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
 </div>
         </div>
 
@@ -1698,13 +1841,13 @@
               <li>how products are priced</li>
               <li>or how decisions turn into consequences</li>
             </ul>
-            <p>The Money Club.Org is a 4-week, instructor-led summer program that teaches kids how money, incentives, and real-world systems actually work.</p>
+            <p>The Money Club.Org is a 4-week, instructor-led Toronto summer program that teaches kids how money, incentives, and real-world systems actually work through project-based learning.</p>
            </div>
           <div class="cta-stack cta-stack--hero">
             <div class="program-summary">
               <div class="program-summary-meta">Ages 11–16 | Downtown Toronto | 4 Weeks</div>
               <div class="program-summary-points">
-                <div class="program-summary-point">📍 UTSU Student Commons (University of Toronto campus)</div>
+                <div class="program-summary-point">📍 UTSU Student Commons, downtown Toronto</div>
                 <div class="program-summary-point">📅 July 6–31 or Aug 4–28</div>
                 <div class="program-summary-point">💰 $1500</div>
                 <div class="program-summary-point">🧠 Build and launch real projects</div>
@@ -1730,12 +1873,12 @@
             </div>
           </div>
           <div class="section-copy">
-            <p><strong supervised, real-world learning program where kids run a small business project from idea to pitch.></strong></p>
+            <p><strong>A supervised, project-based learning program where students build a real project from idea to pitch.</strong></p>
             <div class="fact-list">
               <div><strong>Who is it for?</strong> Curious kids ages 11–16</div>
               <div><strong>How much?</strong> $1,500 per student</div>
               <div><strong>How long?</strong> 4-week summer day program</div>
-              <div><strong>Where?</strong> Hosted at Student Commons, 230 College Street, Toronto, ON M5T 1R2 (University of Toronto campus. <small>Independent program — not endorsed by the University.</small>)</div>
+              <div><strong>Where?</strong> Hosted at UTSU Student Commons, 230 College Street, downtown Toronto, near the University of Toronto. <small>Independent program — not affiliated with or endorsed by the University.</small></div>
               <div><strong>When?</strong> Session 1: July 6–July 31, 2026 &amp; Session 2: August 4–August 28, 2026</div>
             </div>
             <div class="mobile-reserve-btn">
@@ -1830,7 +1973,7 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <p>During the program, students will:</p>
+            <p>During the 4-week Toronto summer program, students will:</p>
             <ul class="bullet-list">
               <li>Create a product or service</li>
               <li>Learn basic business math (costs, pricing, margin)</li>
@@ -1838,7 +1981,7 @@
               <li>Practice communication and leadership</li>
               <li>Prepare and present at a community pitch night</li>
             </ul>
-            <p>By the end, every student can confidently explain what they built, how it works, and why it matters.</p>
+            <p>By the end, every student can confidently explain what they built, how it works, and why it matters through pricing, teamwork, and public speaking.</p>
             <div class="mobile-reserve-btn">
               <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
             </div>
@@ -1860,7 +2003,7 @@
       </div>
       <div class="section-content">
         <div class="section-copy">
-          <p>Toronto parents often ask how to choose the right summer camp for their child. We&apos;ve created a few simple guides to help families explore different types of programs from broad camp options to STEM and entrepreneurship-focused learning.</p>
+          <p>Toronto parents often ask how to choose the right summer camp for their child. We&apos;ve created a few simple guides to help families explore different types of programs, from broad camp options to STEM and entrepreneurship-focused learning.</p>
           <ul class="module-list guide-links">
             <li><a href="article-best-summer-camps.html">Best Summer Camps in Toronto for Curious Kids (2026 Guide)</a></li>
             <li><a href="article-econ-summer-camps.html">Entrepreneurship Summer Camps for Teens (Canada Guide)</a></li>
@@ -1869,6 +2012,49 @@
             <li><a href="article-older-kids-summer-camps.html">Summer Camps for Older Kids &amp; Teens in Toronto (Ages 11-16)</a></li>
           </ul>
           <p>These guides are designed to help families compare options and find a program that fits their child&apos;s interests.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="program-faq">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>Program FAQ</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="section-copy">
+          <ul class="module-list faq-home-list">
+            <li>
+              <strong>What age is the program for?</strong>
+              <p>The program is designed for students ages 11–16.</p>
+            </li>
+            <li>
+              <strong>Where is the program located?</strong>
+              <p>The program takes place at UTSU Student Commons, 230 College St, Toronto, ON M5T 1R2, Canada, in downtown Toronto.</p>
+            </li>
+            <li>
+              <strong>When does the program run?</strong>
+              <p>Session 1 runs from July 6, 2026 to July 31, 2026. Session 2 runs from August 4, 2026 to August 28, 2026.</p>
+            </li>
+            <li>
+              <strong>How much does it cost?</strong>
+              <p>The program costs CAD 1500 per student.</p>
+            </li>
+            <li>
+              <strong>What do students learn?</strong>
+              <p>Students learn financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects.</p>
+            </li>
+            <li>
+              <strong>Is it a sports or coding camp?</strong>
+              <p>No. The Money Club is an in-person educational summer program focused on financial literacy, entrepreneurship, design thinking, public speaking, and real-world project work.</p>
+            </li>
+            <li>
+              <strong>Is it affiliated with the University of Toronto?</strong>
+              <p>No. The program takes place at UTSU Student Commons in downtown Toronto near campus, but it is independently organized by The Money Club and should not be interpreted as University of Toronto sponsorship or endorsement.</p>
+            </li>
+          </ul>
+          <p><a href="faq.html">See the full FAQ</a></p>
         </div>
       </div>
     </section>
@@ -1937,7 +2123,7 @@
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
       <div class="wrap">
-        <div class="reservation-row">
+        <div class="reservation-row registration-form-container">
           <div class="reservation-card">
             <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
 <div class="form-loading" role="status" aria-live="polite">
