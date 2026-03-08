@@ -627,6 +627,24 @@
     .section-banner.teal{ background: var(--teal); color: #ffffff; }
     .section-banner.heading-white{ color: #ffffff; }
     .section-banner.heading-white h2{ color: #ffffff; }
+    .section-banner h2 a{
+      color: inherit;
+      text-decoration: none;
+    }
+    .section-banner h2 a:hover,
+    .section-banner h2 a:focus-visible{
+      color: inherit;
+      text-decoration: none;
+    }
+    #camp-guides .section-banner h2 a,
+    #camp-guides .section-banner h2 a:hover,
+    #camp-guides .section-banner h2 a:focus-visible,
+    #camp-guides .section-banner h2 a:visited{
+      color: inherit !important;
+      text-decoration: none !important;
+      border-bottom: 0 !important;
+      box-shadow: none !important;
+    }
 
     .section-content{
       max-width: var(--max-wide);
@@ -748,6 +766,39 @@
     #who-runs-it .split{
       align-items: start;
       gap: clamp(24px, 4vw, 44px);
+    }
+    #what-is-this .section-copy{
+      gap: 16px;
+      max-width: none;
+    }
+    #what-is-this .section-copy h3{
+      margin: 0;
+      font-size: clamp(28px, 3.2vw, 42px);
+      line-height: 1.05;
+    }
+    #what-is-this .fact-list{
+      gap: 12px;
+    }
+    #what-is-this .fact-list > div{
+      display: grid;
+      gap: 4px;
+    }
+    #what-is-this .fact-subline{
+      padding-left: 0;
+    }
+    #what-is-this .location-map-card{
+      margin-top: 6px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(17,17,17,0.06);
+    }
+    #what-is-this .location-map{
+      display: block;
+      width: 100%;
+      min-height: 300px;
+      border: 0;
     }
     #what-students-leave-with .stem-grid{
       display: grid;
@@ -1865,6 +1916,15 @@
         padding: 18px;
       }
       .mobile-reserve-btn{ display: block; }
+      #what-is-this .section-copy{
+        gap: 14px;
+      }
+      #what-is-this .section-copy h3{
+        font-size: clamp(30px, 8vw, 38px);
+      }
+      #what-is-this .location-map{
+        min-height: 240px;
+      }
       .section{
         margin-top: var(--space-5);
       }
@@ -2447,7 +2507,7 @@
             <div class="program-summary">
               <div class="program-summary-meta">Ages 11–16 | Downtown Toronto | 4 Weeks</div>
               <div class="program-summary-points">
-                <div class="program-summary-point">📍 UTSU Student Commons, downtown Toronto</div>
+                <div class="program-summary-point">📍 UTSU Student Commons, 230 College Street — Downtown Toronto (near UofT)</div>
                 <div class="program-summary-point">📅 July 6–31 or Aug 4–28</div>
                 <div class="program-summary-point">💰 $1500</div>
                 <div class="program-summary-point">🧠 Build and launch real projects</div>
@@ -2462,7 +2522,7 @@
     <section class="section" id="what-is-this">
       <div class="section-banner purple">
         <div class="wrap">
-          <h2>What Is This?</h2>
+          <h2>Where the Program Happens</h2>
         </div>
       </div>
       <div class="section-content">
@@ -2471,15 +2531,29 @@
             <div class="section-image">
               <img src="assets/kid-presents-larg-class.jpg" alt="Students presenting product ideas" />
             </div>
+            <div class="location-map-card">
+              <iframe
+                class="location-map"
+                title="Map showing UTSU Student Commons at 230 College Street in Toronto"
+                src="https://www.google.com/maps?q=UTSU%20Student%20Commons%2C%20230%20College%20Street%2C%20Toronto%2C%20ON%20M5T%201R2&z=15&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
           <div class="section-copy">
-            <p><strong>A supervised, project-based learning program where students turn a real idea into a product concept, simple business model, and final pitch.</strong></p>
+            <h3>Where It Happens</h3>
+            <p>The Money Club runs at the UTSU Student Commons, located at 230 College Street in downtown Toronto, near the University of Toronto campus.</p>
+            <p>The location is convenient for families across central Toronto, including the Annex, Kensington Market, Chinatown, and surrounding downtown neighborhoods.</p>
+            <p>Students meet in a supervised classroom environment where they develop real projects, collaborate with peers, and present their final ideas.</p>
             <div class="fact-list">
               <div><strong>Who is it for?</strong> Curious kids ages 11–16</div>
-              <div><strong>How much?</strong> $1,500 per student</div>
               <div><strong>How long?</strong> 4-week summer day program</div>
-              <div><strong>Where?</strong> UTSU Student Commons, 230 College Street, downtown Toronto, University of Toronto</div>
-              <div><strong>When?</strong> Session 1: July 6–31 &amp; Session 2: August 4–28</div>
+              <div>
+                <strong>When?</strong>
+                <div class="fact-subline">Session 1: July 6–31</div>
+                <div class="fact-subline">Session 2: August 4–28</div>
+              </div>
             </div>
             <div class="mobile-reserve-btn">
               <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
@@ -2678,7 +2752,7 @@
     <section class="section" id="camp-guides">
       <div class="section-banner purple">
         <div class="wrap">
-          <h2>Guide to Summer Camps in Toronto</h2>
+          <h2><a href="article-best-summer-camps.html">Guide to Summer Camps in Toronto</a></h2>
         </div>
       </div>
       <div class="section-content">
