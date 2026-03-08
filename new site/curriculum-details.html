@@ -16,6 +16,85 @@
   <meta name="twitter:description" content="Curriculum for the Toronto kids summer camp 2026: real-world business math, team collaboration, and confident presentations." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/kid-presents-larg-class.jpg" />
   <link rel="canonical" href="https://the-money-club.org/curriculum-details.html" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://the-money-club.org/curriculum-details.html#webpage",
+          "url": "https://the-money-club.org/curriculum-details.html",
+          "name": "Curriculum | Toronto Kids Summer Camp 2026",
+          "description": "Curriculum for the Toronto kids summer camp 2026: real-world business math, team collaboration, and confident presentations.",
+          "about": [
+            {
+              "@id": "https://the-money-club.org/#organization"
+            },
+            {
+              "@id": "https://the-money-club.org/#summer-program"
+            }
+          ],
+          "mainEntity": {
+            "@id": "https://the-money-club.org/#summer-program"
+          }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://the-money-club.org/#organization",
+          "name": "The Money Club",
+          "url": "https://the-money-club.org/",
+          "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 11-16.",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://the-money-club.org/assets/logo-500.png"
+          },
+          "email": "info@the-money-club.org",
+          "telephone": "+1-437-239-8602",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "230 College Street",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "postalCode": "M5T 1R2",
+            "addressCountry": "CA"
+          }
+        },
+        {
+          "@type": "Place",
+          "@id": "https://the-money-club.org/#location",
+          "name": "UTSU Student Commons",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "230 College Street",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "postalCode": "M5T 1R2",
+            "addressCountry": "CA"
+          }
+        },
+        {
+          "@type": "Course",
+          "@id": "https://the-money-club.org/#summer-program",
+          "name": "The Money Club Summer Program 2026",
+          "description": "In-person Toronto summer program for students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects.",
+          "provider": {
+            "@id": "https://the-money-club.org/#organization"
+          },
+          "typicalAgeRange": "11-16",
+          "courseMode": "InPerson",
+          "inLanguage": "en-CA",
+          "location": {
+            "@id": "https://the-money-club.org/#location"
+          },
+          "audience": {
+            "@type": "PeopleAudience",
+            "suggestedMinAge": 11,
+            "suggestedMaxAge": 16
+          }
+        }
+      ]
+    }
+  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -307,12 +386,17 @@ nav{
       padding: 18px 0 6px;
     }
     .hero-top{
+      display:grid;
+      gap: 10px;
+      justify-items: center;
+      margin: 0 auto;
+      width: fit-content;
+    }
+    .hero-brand-row{
       display:flex;
       align-items: center;
       gap: 28px;
       justify-content: center;
-      margin: 0 auto;
-      width: fit-content;
     }
     .hero-logo{
       width: 152px;
@@ -320,7 +404,9 @@ nav{
       display: block;
     }
     .hero-title-block{
-      width: 100%;
+      display:grid;
+      gap: 2px;
+      width: auto;
       text-align: left;
     }
     .hero-title{
@@ -334,7 +420,7 @@ nav{
       font-weight: 700;
       font-size: inherit;
       color: var(--ink);
-      margin: 2px 0 0;
+      margin: 0;
       line-height: 1.05;
       text-align: left;
     }
@@ -1226,12 +1312,14 @@ nav{
     <section class="hero">
       <div class="wrap">
         <div class="hero-top">
-          <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
-          <div class="hero-title-block">
-            <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
-            <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            <div class="hero-sub">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
-</div>
+          <div class="hero-brand-row">
+            <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+            <div class="hero-title-block">
+              <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
+              <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
+            </div>
+          </div>
+          <div class="hero-sub">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
         </div>
 
         <div class="hero-image banner">
@@ -1366,7 +1454,7 @@ nav{
     <div class="inner">
       <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
+      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
     </div>
   </footer>
 

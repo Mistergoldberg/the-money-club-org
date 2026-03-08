@@ -21,23 +21,92 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "CollectionPage",
+          "@id": "https://the-money-club.org/schedule-pricing.html#webpage",
+          "url": "https://the-money-club.org/schedule-pricing.html",
+          "name": "Schedule & Pricing | Toronto Kids Summer Camp 2026",
+          "description": "Toronto summer camp schedule and pricing for ages 11–16. Two 4-week sessions at UTSU Student Commons in downtown Toronto, focused on financial literacy, entrepreneurship, design thinking, and public speaking.",
+          "about": [
+            {
+              "@id": "https://the-money-club.org/#organization"
+            },
+            {
+              "@id": "https://the-money-club.org/#summer-program"
+            }
+          ],
+          "mainEntity": [
+            {
+              "@id": "https://the-money-club.org/schedule-pricing.html#session-1"
+            },
+            {
+              "@id": "https://the-money-club.org/schedule-pricing.html#session-2"
+            }
+          ]
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://the-money-club.org/#organization",
+          "name": "The Money Club",
+          "url": "https://the-money-club.org/",
+          "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 11-16.",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://the-money-club.org/assets/logo-500.png"
+          },
+          "email": "info@the-money-club.org",
+          "telephone": "+1-437-239-8602",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "230 College Street",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "postalCode": "M5T 1R2",
+            "addressCountry": "CA"
+          }
+        },
+        {
+          "@type": "Place",
+          "@id": "https://the-money-club.org/#location",
+          "name": "UTSU Student Commons",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "230 College Street",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "postalCode": "M5T 1R2",
+            "addressCountry": "CA"
+          }
+        },
+        {
+          "@type": "Course",
+          "@id": "https://the-money-club.org/#summer-program",
+          "name": "The Money Club Summer Program 2026",
+          "description": "In-person Toronto summer program for students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects.",
+          "provider": {
+            "@id": "https://the-money-club.org/#organization"
+          },
+          "typicalAgeRange": "11-16",
+          "courseMode": "InPerson",
+          "inLanguage": "en-CA",
+          "location": {
+            "@id": "https://the-money-club.org/#location"
+          },
+          "audience": {
+            "@type": "PeopleAudience",
+            "suggestedMinAge": 11,
+            "suggestedMaxAge": 16
+          }
+        },
+        {
           "@type": "EducationEvent",
-          "name": "The Money Club.Org Summer Session 1",
+          "@id": "https://the-money-club.org/schedule-pricing.html#session-1",
+          "name": "The Money Club Summer Program Session 1",
           "startDate": "2026-07-06",
           "endDate": "2026-07-31",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
-            "@type": "Place",
-            "name": "UTSU Student Commons",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "230 College Street",
-              "addressLocality": "Toronto",
-              "addressRegion": "ON",
-              "postalCode": "M5T 1R2",
-              "addressCountry": "CA"
-            }
+            "@id": "https://the-money-club.org/#location"
           },
           "offers": {
             "@type": "Offer",
@@ -46,29 +115,19 @@
             "url": "https://the-money-club.org/reserve-a-spot.html"
           },
           "organizer": {
-            "@type": "Organization",
-            "name": "The Money Club.Org",
-            "url": "https://the-money-club.org/"
+            "@id": "https://the-money-club.org/#organization"
           }
         },
         {
           "@type": "EducationEvent",
-          "name": "The Money Club.Org Summer Session 2",
+          "@id": "https://the-money-club.org/schedule-pricing.html#session-2",
+          "name": "The Money Club Summer Program Session 2",
           "startDate": "2026-08-04",
           "endDate": "2026-08-28",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
-            "@type": "Place",
-            "name": "UTSU Student Commons",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "230 College Street",
-              "addressLocality": "Toronto",
-              "addressRegion": "ON",
-              "postalCode": "M5T 1R2",
-              "addressCountry": "CA"
-            }
+            "@id": "https://the-money-club.org/#location"
           },
           "offers": {
             "@type": "Offer",
@@ -77,9 +136,7 @@
             "url": "https://the-money-club.org/reserve-a-spot.html"
           },
           "organizer": {
-            "@type": "Organization",
-            "name": "The Money Club.Org",
-            "url": "https://the-money-club.org/"
+            "@id": "https://the-money-club.org/#organization"
           }
         }
       ]
@@ -376,12 +433,17 @@ nav{
       padding: 18px 0 6px;
     }
     .hero-top{
+      display:grid;
+      gap: 10px;
+      justify-items: center;
+      margin: 0 auto;
+      width: fit-content;
+    }
+    .hero-brand-row{
       display:flex;
       align-items: center;
       gap: 28px;
       justify-content: center;
-      margin: 0 auto;
-      width: fit-content;
     }
     .hero-logo{
       width: 152px;
@@ -392,7 +454,9 @@ nav{
       display: none;
     }
     .hero-title-block{
-      width: 100%;
+      display:grid;
+      gap: 2px;
+      width: auto;
       text-align: left;
     }
     .hero-title{
@@ -406,7 +470,7 @@ nav{
       font-weight: 700;
       font-size: inherit;
       color: var(--ink);
-      margin: 2px 0 0;
+      margin: 0;
       line-height: 1.05;
       text-align: left;
     }
@@ -1926,12 +1990,14 @@ nav{
     <section class="hero">
       <div class="wrap">
         <div class="hero-top">
-          <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
-          <div class="hero-title-block">
-            <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
-            <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            <div class="hero-sub">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
+          <div class="hero-brand-row">
+            <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+            <div class="hero-title-block">
+              <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
+              <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
+            </div>
           </div>
+          <div class="hero-sub">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
         </div>
 
         <div class="hero-image banner">
@@ -2115,9 +2181,9 @@ nav{
                 <div class="field terms-consent">
                   <label for="terms-agree">
                     <input id="terms-agree" name="terms-agree" type="checkbox" required />
-                    <span>I agree to the <a href="program-terms.html">Terms &amp; Payment Policy</a> and I acknowledge the <a href="privacy-policy.html">Privacy Policy</a>.</span>
+                    <span>I agree to the <a href="/terms.html">program terms</a> and <a href="/privacy.html">refund policy</a>.</span>
                   </label>
-                  <small class="field-error">Please confirm you agree to the terms and policies.</small>
+                  <small class="field-error">Please agree to the program terms and refund policy.</small>
                 </div>
                 <div class="payment-grid">
                   <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true">

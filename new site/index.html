@@ -21,20 +21,100 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebSite",
+          "@id": "https://the-money-club.org/#website",
+          "url": "https://the-money-club.org/",
+          "name": "The Money Club",
+          "publisher": {
+            "@id": "https://the-money-club.org/#organization"
+          },
+          "inLanguage": "en-CA"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://the-money-club.org/#webpage",
+          "url": "https://the-money-club.org/",
+          "name": "Toronto Kids Summer Camp 2026 | July & August | The Money Club.Org",
+          "description": "Toronto summer camp for ages 11–16 at UTSU Student Commons in downtown Toronto. In-person, project-based program in financial literacy, entrepreneurship, design thinking, and public speaking.",
+          "isPartOf": {
+            "@id": "https://the-money-club.org/#website"
+          },
+          "about": [
+            {
+              "@id": "https://the-money-club.org/#organization"
+            },
+            {
+              "@id": "https://the-money-club.org/#summer-program"
+            }
+          ],
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://the-money-club.org/assets/Kids-Index.jpg"
+          }
+        },
+        {
+          "@type": "Place",
+          "@id": "https://the-money-club.org/#location",
+          "name": "UTSU Student Commons",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "230 College Street",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "postalCode": "M5T 1R2",
+            "addressCountry": "CA"
+          }
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://the-money-club.org/#session-1-offer",
+          "price": "1500",
+          "priceCurrency": "CAD",
+          "url": "https://the-money-club.org/reserve-a-spot.html"
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://the-money-club.org/#session-2-offer",
+          "price": "1500",
+          "priceCurrency": "CAD",
+          "url": "https://the-money-club.org/reserve-a-spot.html"
+        },
+        {
           "@type": "EducationalOrganization",
           "@id": "https://the-money-club.org/#organization",
           "name": "The Money Club",
-          "url": "https://the-money-club.org",
-          "logo": "https://the-money-club.org/assets/logo-500.png",
+          "url": "https://the-money-club.org/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://the-money-club.org/assets/logo-500.png"
+          },
+          "image": "https://the-money-club.org/assets/Kids-Index.jpg",
           "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 11–16.",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "230 College St",
+            "streetAddress": "230 College Street",
             "addressLocality": "Toronto",
             "addressRegion": "ON",
             "postalCode": "M5T 1R2",
             "addressCountry": "CA"
           },
+          "location": {
+            "@id": "https://the-money-club.org/#location"
+          },
+          "email": "info@the-money-club.org",
+          "telephone": "+1-437-239-8602",
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "email": "info@the-money-club.org",
+              "telephone": "+1-437-239-8602",
+              "areaServed": "CA",
+              "availableLanguage": [
+                "en"
+              ]
+            }
+          ],
           "areaServed": {
             "@type": "City",
             "name": "Toronto"
@@ -57,12 +137,26 @@
           "@id": "https://the-money-club.org/#summer-program",
           "name": "The Money Club Summer Program 2026",
           "description": "In-person Toronto summer program for students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects.",
+          "mainEntityOfPage": {
+            "@id": "https://the-money-club.org/#webpage"
+          },
           "provider": {
             "@id": "https://the-money-club.org/#organization"
           },
+          "typicalAgeRange": "11-16",
           "courseMode": "InPerson",
-          "inLanguage": "en",
-          "keywords": "Toronto summer camp, financial literacy, entrepreneurship, design thinking, public speaking, ages 11-16",
+          "inLanguage": "en-CA",
+          "keywords": [
+            "Toronto summer camp",
+            "financial literacy",
+            "entrepreneurship",
+            "design thinking",
+            "public speaking",
+            "ages 11-16"
+          ],
+          "location": {
+            "@id": "https://the-money-club.org/#location"
+          },
           "about": [
             {
               "@type": "Thing",
@@ -105,25 +199,13 @@
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
-            "@type": "Place",
-            "name": "UTSU Student Commons",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "230 College St",
-              "addressLocality": "Toronto",
-              "addressRegion": "ON",
-              "postalCode": "M5T 1R2",
-              "addressCountry": "CA"
-            }
+            "@id": "https://the-money-club.org/#location"
           },
           "organizer": {
             "@id": "https://the-money-club.org/#organization"
           },
           "offers": {
-            "@type": "Offer",
-            "price": "1500",
-            "priceCurrency": "CAD",
-            "url": "https://the-money-club.org/reserve-a-spot.html"
+            "@id": "https://the-money-club.org/#session-1-offer"
           }
         },
         {
@@ -136,25 +218,13 @@
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
-            "@type": "Place",
-            "name": "UTSU Student Commons",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "230 College St",
-              "addressLocality": "Toronto",
-              "addressRegion": "ON",
-              "postalCode": "M5T 1R2",
-              "addressCountry": "CA"
-            }
+            "@id": "https://the-money-club.org/#location"
           },
           "organizer": {
             "@id": "https://the-money-club.org/#organization"
           },
           "offers": {
-            "@type": "Offer",
-            "price": "1500",
-            "priceCurrency": "CAD",
-            "url": "https://the-money-club.org/reserve-a-spot.html"
+            "@id": "https://the-money-club.org/#session-2-offer"
           }
         }
       ]
@@ -473,19 +543,29 @@
     /* Hero */
     .hero{ padding: 18px 0 6px; }
     .hero-top{
+      display:grid;
+      gap: 10px;
+      justify-items: center;
+      margin: 0 auto;
+      width: fit-content;
+    }
+    .hero-brand-row{
       display:flex;
       align-items: center;
       gap: 28px;
       justify-content: center;
-      margin: 0 auto;
-      width: fit-content;
     }
     .hero-logo{
       width: 152px;
       height: 152px;
       display: block;
     }
-    .hero-title-block{ text-align: left; }
+    .hero-title-block{
+      display:grid;
+      gap: 2px;
+      width: auto;
+      text-align: left;
+    }
     .hero-title{
       color: var(--teal);
       line-height: 0.85;
@@ -497,24 +577,25 @@
       font-weight: 700;
       font-size: inherit;
       color: var(--ink);
-      margin: 2px 0 0;
+      margin: 0;
       line-height: 1.05;
       text-align: left;
     }
     .hero-image{
       width: 100%;
+      aspect-ratio: 1920 / 877;
       border-radius: 22px;
-      overflow-y: auto;
+      overflow: hidden;
       border: 1px solid var(--line);
       margin-top: 12px;
     }
     .hero-image img{
-      display:block;
+      display: block;
       width: 100%;
       height: auto;
     }
     .hero-image.banner img{
-      height: clamp(220px, 32vw, 420px);
+      height: 100%;
       object-fit: cover;
       object-position: center 35%;
     }
@@ -1939,8 +2020,7 @@
         margin-top: 8px;
       }
       .hero-image.banner img{
-        height: clamp(180px, 54vw, 260px);
-        aspect-ratio: auto;
+        height: 100%;
       }
       .hero-image img,
       .section-image img{
@@ -1979,8 +2059,8 @@
       #how-it-works .section-banner{ background: var(--teal); color: #ffffff; }
       #what-students-leave-with .section-banner{ background: var(--gold); color: #ffffff; }
       #who-runs-it .section-banner{ background: var(--purple); color: #ffffff; }
-      #radical-transparency .section-banner{ background: var(--teal); color: #ffffff; }
-      #camp-guides .section-banner{ background: var(--gold); color: #ffffff; }
+      #radical-transparency .section-banner{ background: var(--gold); color: #ffffff; }
+      #camp-guides .section-banner{ background: var(--purple); color: #ffffff; }
       #curriculum .section-banner{ background: var(--teal); color: #ffffff; }
       #sign-up-today .section-banner{ background: var(--gold); color: #ffffff; }
       #reserve.section-banner{ background: var(--purple); color: #ffffff; }
@@ -2015,11 +2095,10 @@
       main > #how-it-works{ order: 40; }
       main > #radical-transparency{ order: 50; }
       main > #who-runs-it{ order: 60; }
-      main > #curriculum{ order: 70; }
-      main > #what-students-leave-with{ order: 80; }
-      main > #camp-guides{ order: 90; }
-      main > #reserve.section-banner{ order: 100; }
-      main > #reserve-a-spot{ order: 110; }
+      main > #what-students-leave-with{ order: 70; }
+      main > #camp-guides{ order: 80; }
+      main > #reserve.section-banner{ order: 90; }
+      main > #reserve-a-spot{ order: 100; }
 
       .section{
         margin-top: 40px;
@@ -2043,7 +2122,7 @@
         max-width: 24ch;
       }
       .hero-image.banner img{
-        height: clamp(175px, 50vw, 240px);
+        height: 100%;
       }
       .split,
       .split.reverse{
@@ -2179,7 +2258,7 @@
         font-size: 0.92em;
       }
       .hero-image.banner img{
-        height: clamp(170px, 52vw, 220px);
+        height: 100%;
       }
       .section-content{
         padding: 20px var(--pad) 8px;
@@ -2324,22 +2403,31 @@
     <section class="hero">
       <div class="wrap">
         <div class="hero-top">
-          <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
-          <div class="hero-title-block">
-            <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
-            <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            <div class="hero-sub">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
-</div>
+          <div class="hero-brand-row">
+            <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+            <div class="hero-title-block">
+              <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
+              <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
+            </div>
+          </div>
+          <div class="hero-sub">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
         </div>
 
         <div class="hero-image banner">
-          <img src="assets/Kids-Index.jpg" alt="Students watching a classroom presentation" />
+          <img
+            src="assets/Kids-Index.jpg"
+            alt="Students watching a classroom presentation"
+            width="1920"
+            height="877"
+            loading="eager"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
 
     <section class="section" id="built-like-a-business">
-      <div class="section-banner gold">
+      <div class="section-banner purple">
         <div class="wrap">
         <h2>Toronto Kids Summer Camp 2026: Financial Literacy &amp; Entrepreneurship</h2>
         </div>
@@ -2402,7 +2490,7 @@
     </section>
 
     <section class="section" id="how-it-works">
-      <div class="section-banner teal">
+      <div class="section-banner purple">
         <div class="wrap">
           <h2>What do students actually build or create?</h2>
         </div>
@@ -2588,7 +2676,7 @@
     </section>
 
     <section class="section" id="camp-guides">
-      <div class="section-banner gold">
+      <div class="section-banner purple">
         <div class="wrap">
           <h2>Guide to Summer Camps in Toronto</h2>
         </div>
@@ -2604,30 +2692,6 @@
             <li><a href="article-older-kids-summer-camps.html">Summer Camps for Older Kids &amp; Teens in Toronto (Ages 11-16)</a></li>
           </ul>
           <p>These guides are designed to help families compare options and find a program that fits their child&apos;s interests.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="curriculum">
-      <div class="section-banner teal">
-        <div class="wrap">
-          <h2>Curriculum</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="section-copy">
-          <ul class="module-list">
-            <li><strong>Financial Literacy as Survival Gear</strong> Understand gross margin, cash flow, sourcing, and unit economics.</li>
-            <li><strong>Sourcing 101: Where Value Is Actually Made</strong> How products are sourced, priced, bundled, and scaled.</li>
-            <li><strong>Market Research: Follow the Money &amp; Problems</strong> Find real demand signals and paid problems.</li>
-            <li><strong>Control Brand Playbook</strong> Learn how private labels create pricing power.</li>
-            <li><strong>Design Thinking &amp; Human Factor Research</strong> Observe behavior and turn friction into opportunities.</li>
-            <li><strong>Cambridge Business Model Canvas</strong> Turn insight into a real business model.</li>
-            <li><strong>Go-To-Market: Blast Off Without Burning Fuel</strong> Launch fast, test cheaply, and avoid premature scaling.</li>
-            <li><strong>Creative Fundamentals</strong> Simple design, photography, and visual clarity that raise perceived value.</li>
-            <li><strong>Marketing: Ride Existing Channels</strong> Use marketplaces and partners before building your own platform.</li>
-            <li><strong>Always-On Market Research</strong> Track competitors, pricing shifts, and trends.</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -2710,9 +2774,9 @@
                 <div class="field terms-consent">
                   <label for="terms-agree">
                     <input id="terms-agree" name="terms-agree" type="checkbox" required />
-                    <span>I agree to the <a href="program-terms.html">Terms &amp; Payment Policy</a> and I acknowledge the <a href="privacy-policy.html">Privacy Policy</a>.</span>
+                    <span>I agree to the <a href="/terms.html">program terms</a> and <a href="/privacy.html">refund policy</a>.</span>
                   </label>
-                  <small class="field-error">Please confirm you agree to the terms and policies.</small>
+                  <small class="field-error">Please agree to the program terms and refund policy.</small>
                 </div>
                 <div class="payment-grid">
                   <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true">

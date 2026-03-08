@@ -18,25 +18,25 @@ if (is_array($verified_purchase)) {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Thank You | The Money Club</title>
+  <title>Payment Confirmation | The Money Club</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
-  <meta property="og:title" content="You just invested in the local economy." />
+  <meta property="og:title" content="Payment Confirmation | The Money Club" />
   <meta property="og:description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
-  <meta property="og:url" content="https://the-money-club.org/thank-you.html" />
+  <meta property="og:url" content="https://the-money-club.org/thank-you-credit-card.php" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="You just invested in the local economy." />
+  <meta name="twitter:title" content="Payment Confirmation | The Money Club" />
   <meta name="twitter:description" content="Thank you for supporting The Money Club. You’ll receive permission forms and your confirmation by email." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
-  <link rel="canonical" href="https://the-money-club.org/thank-you.html" />
+  <link rel="canonical" href="https://the-money-club.org/thank-you-credit-card.php" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "You just invested in the local economy.",
-      "url": "https://the-money-club.org/thank-you.html"
+      "name": "Payment Confirmation | The Money Club",
+      "url": "https://the-money-club.org/thank-you-credit-card.php"
     }
   </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
