@@ -115,6 +115,21 @@ remove this rule or remove class="hide-registration" from the
 .hide-registration .registration-form-container{
   display: none !important;
 }
+/* Remove .hide-session-availability from <body> to show the counter again. */
+.hide-session-availability .session-availability{
+  display: none !important;
+}
+.hide-session-availability .session-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hide-session-availability .session-card-body{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .form-loading{
   position: absolute;
   inset: 0;

@@ -156,68 +156,6 @@
             "priceCurrency": "CAD",
             "url": "https://the-money-club.org/reserve-a-spot.html"
           }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://the-money-club.org/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What age is the program for?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The program is designed for students ages 11–16."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Where is the program located?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The program takes place at UTSU Student Commons, 230 College St, Toronto, ON M5T 1R2, Canada, in downtown Toronto."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "When does the program run?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Session 1 runs from July 6, 2026 to July 31, 2026. Session 2 runs from August 4, 2026 to August 28, 2026."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How much does it cost?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The program costs CAD 1500 per student."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What do students learn?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Students learn financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is it a sports or coding camp?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. The Money Club is an in-person educational summer program focused on financial literacy, entrepreneurship, design thinking, public speaking, and real-world project work."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is it affiliated with the University of Toronto?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. The program takes place at UTSU Student Commons in downtown Toronto near the University of Toronto, but it is independently organized by The Money Club and should not be interpreted as University of Toronto sponsorship or endorsement."
-              }
-            }
-          ]
         }
       ]
     }
@@ -726,14 +664,87 @@
     }
     #what-is-this .split,
     #how-it-works .split,
-    #what-students-leave-with .split,
     #who-runs-it .split{
       align-items: start;
       gap: clamp(24px, 4vw, 44px);
     }
-    #camp-guides .section-copy,
-    #program-faq .section-copy{
+    #what-students-leave-with .stem-grid{
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
+      gap: clamp(28px, 3vw, 46px);
+      align-items: start;
+    }
+    #what-students-leave-with .section-copy{
+      display: grid;
+      gap: 22px;
+      max-width: none;
+    }
+    #what-students-leave-with .section-copy p{
+      margin: 0;
+    }
+    #what-students-leave-with .stem-copy{
+      max-width: 44rem;
+    }
+    #what-students-leave-with .stem-visuals{
+      display: grid;
+      gap: 18px;
+      align-self: start;
+    }
+    #what-students-leave-with .stem-visuals .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 22px 24px;
+      border-radius: 18px;
+      min-height: 96px;
+      line-height: 0.95;
+      text-align: center;
+    }
+    #what-students-leave-with .stem-visual .section-image{
+      border-radius: 18px;
+      aspect-ratio: 16 / 10;
+    }
+    #what-students-leave-with .stem-visual img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    #what-students-leave-with .bullet-list{
+      margin-top: -2px;
+      padding-left: 24px;
+    }
+    #what-students-leave-with .bullet-list li{
+      margin: 8px 0;
+    }
+    #camp-guides .section-copy{
       max-width: min(100%, 72rem);
+    }
+    #who-runs-it .section-copy{
+      max-width: min(100%, 78rem);
+    }
+    .week-list{
+      gap: 14px;
+    }
+    .week-list li{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(17,17,17,0.06);
+      padding: clamp(22px, 2.4vw, 30px);
+      display: grid;
+      gap: 10px;
+    }
+    .week-list li strong{
+      display: block;
+      margin: 0;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.08;
+    }
+    .week-list li p{
+      margin: 0;
     }
     .outcomes-card{
       border: 1px solid var(--line);
@@ -1605,6 +1616,16 @@
       nav{ display:none; }
       .split,
       .split.reverse{ grid-template-columns: 1fr; }
+      #what-students-leave-with .stem-grid{
+        grid-template-columns: 1fr;
+      }
+      #what-students-leave-with .stem-visuals{
+        display: none;
+      }
+      #what-students-leave-with .mobile-reserve-btn .btn{
+        background: var(--teal);
+        color: #ffffff;
+      }
       .cta-row{ grid-template-columns: 1fr; }
       .cta-stack{ width: 100%; justify-self: stretch; }
       .radical-grid{ grid-template-columns: 1fr; }
@@ -1940,12 +1961,6 @@
       #who-runs-it .section-media{
         order: 2;
       }
-      #program-faq .section-copy > p:last-child a{
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-        font-weight: 700;
-      }
       #curriculum .module-list li strong,
       .faq-home-list li strong{
         line-height: 1.15;
@@ -1966,7 +1981,6 @@
       #who-runs-it .section-banner{ background: var(--purple); color: #ffffff; }
       #radical-transparency .section-banner{ background: var(--teal); color: #ffffff; }
       #camp-guides .section-banner{ background: var(--gold); color: #ffffff; }
-      #program-faq .section-banner{ background: var(--purple); color: #ffffff; }
       #curriculum .section-banner{ background: var(--teal); color: #ffffff; }
       #sign-up-today .section-banner{ background: var(--gold); color: #ffffff; }
       #reserve.section-banner{ background: var(--purple); color: #ffffff; }
@@ -1977,7 +1991,6 @@
       #what-students-leave-with .section-banner h2,
       #radical-transparency .section-banner h2,
       #camp-guides .section-banner h2,
-      #program-faq .section-banner h2,
       #who-runs-it .section-banner h2,
       #curriculum .section-banner h2,
       #sign-up-today .section-banner h2,
@@ -2000,14 +2013,13 @@
       main > #built-like-a-business{ order: 20; }
       main > #what-is-this{ order: 30; }
       main > #how-it-works{ order: 40; }
-      main > #what-students-leave-with{ order: 50; }
+      main > #radical-transparency{ order: 50; }
       main > #who-runs-it{ order: 60; }
-      main > #program-faq{ order: 70; }
-      main > #curriculum{ order: 80; }
-      main > #radical-transparency{ order: 90; }
-      main > #camp-guides{ order: 100; }
-      main > #reserve.section-banner{ order: 110; }
-      main > #reserve-a-spot{ order: 120; }
+      main > #curriculum{ order: 70; }
+      main > #what-students-leave-with{ order: 80; }
+      main > #camp-guides{ order: 90; }
+      main > #reserve.section-banner{ order: 100; }
+      main > #reserve-a-spot{ order: 110; }
 
       .section{
         margin-top: 40px;
@@ -2036,12 +2048,6 @@
       .split,
       .split.reverse{
         gap: 18px;
-      }
-      #what-students-leave-with .section-copy{
-        order: 1;
-      }
-      #what-students-leave-with .outcomes-card{
-        order: 2;
       }
       .outcomes-card,
       .trust-card,
@@ -2398,21 +2404,23 @@
     <section class="section" id="how-it-works">
       <div class="section-banner teal">
         <div class="wrap">
-          <h2>How It Works</h2>
+          <h2>What do students actually build or create?</h2>
         </div>
       </div>
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <p>During the 4-week, in-person downtown Toronto summer program, students will:</p>
+            <p>Students work on real projects, not hypothetical exercises.</p>
             <ul class="bullet-list">
-              <li>Create a product or service</li>
-              <li>Learn basic business math (costs, pricing, margin)</li>
-              <li>Work in teams</li>
-              <li>Practice communication and leadership</li>
-              <li>Prepare and present at a community pitch night</li>
+              <li>design a new product or service</li>
+              <li>build a simple app or digital tool</li>
+              <li>prototype ideas using design thinking</li>
+              <li>create marketing materials or visual assets</li>
+              <li>conduct interviews with potential users</li>
+              <li>test pricing and demand for their idea</li>
+              <li>present their work at the final pitch session</li>
             </ul>
-            <p>By the end, every student can confidently explain what they built, how it works, how it is priced, and why it matters through teamwork and public speaking.</p>
+            <p>The emphasis is on building something useful in the real world, not just completing assignments.</p>
             <div class="mobile-reserve-btn">
               <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
             </div>
@@ -2420,82 +2428,6 @@
           <div class="section-media">
             <div class="section-image">
               <img src="assets/instruct-presents-1.jpg" alt="Students presenting a UX design" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="what-students-leave-with">
-      <div class="section-banner gold">
-        <div class="wrap">
-          <h2>What Students Leave With</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="split">
-          <div class="section-copy">
-            <p>By the end of the program, students don’t just learn concepts — they leave with practical tools they can use right away.</p>
-            <p>The goal is not just to keep students busy for four weeks. It’s to help them think more clearly, communicate more confidently, and understand the systems shaping everyday life.</p>
-          </div>
-          <div class="outcomes-card">
-            <ul class="module-list outcomes-list">
-              <li>A clearer understanding of how money, pricing, and profit actually work</li>
-              <li>Experience developing and presenting a real product or service idea</li>
-              <li>Basic business math, including costs, margins, and simple unit economics</li>
-              <li>Stronger communication, teamwork, and public speaking skills</li>
-              <li>A more confident understanding of how ideas move through the real world</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="who-runs-it">
-      <div class="section-banner purple">
-        <div class="wrap">
-          <h2>Who Runs It</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="split">
-          <div class="section-copy">
-            <div class="trust-stack">
-              <div class="trust-card">
-                <h3>Designed and led by Jared Goldberg</h3>
-                <p>The Money Club.Org was designed by Jared Goldberg — a product strategist, systems designer, and educator with 15+ years of experience building real-world business platforms and teaching how systems, incentives, and markets work.</p>
-                <ul class="bullet-list">
-                  <li>Walmart, Loblaw, and Canadian Tire</li>
-                  <li>10+ years in China-based manufacturing ecosystems</li>
-                  <li>Economics, incentives, design thinking, and human behavior</li>
-                </ul>
-              </div>
-              <div class="trust-card">
-                <h3>Student support team</h3>
-                <p>The program is also supported by student team members Sarah Duong and Alex Goldberg, who help bring the experience to life for younger students in a near-peer mentorship model.</p>
-              </div>
-              <div class="mobile-reserve-btn">
-                <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
-              </div>
-            </div>
-          </div>
-          <div class="section-media">
-            <div class="who-runs-gallery" aria-label="Jared Goldberg, Sarah Duong, and Alex Goldberg">
-              <figure class="team-card team-card-lead">
-                <img class="team-photo" src="assets/Jared-Profile.png" alt="Jared Goldberg" />
-                <figcaption>Jared Goldberg</figcaption>
-                <p>Program designer and lead</p>
-              </figure>
-              <figure class="team-card team-card-sarah">
-                <img class="team-photo" src="assets/sarah.png" alt="Sarah Duong" />
-                <figcaption>Sarah Duong</figcaption>
-                <p>Student support</p>
-              </figure>
-              <figure class="team-card team-card-alex">
-                <img class="team-photo" src="assets/alex.png" alt="Alex Goldberg" />
-                <figcaption>Alex Goldberg</figcaption>
-                <p>Student support</p>
-              </figure>
             </div>
           </div>
         </div>
@@ -2570,8 +2502,86 @@
                   <span class="legend-value">2%</span>
                 </li>
               </ul>
-              <a data-cta-label="Audit the books" class="btn gold cta-standard" href="open-book-hook.html">Audit Our Books</a>
+              <a data-cta-label="Audit the books" class="btn purple cta-standard" href="open-book-hook.html">Audit Our Books</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="who-runs-it">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>How the 4 Weeks Work</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="section-copy">
+          <p>Each week builds on the last. Students move from understanding how money and businesses work → to designing products → to building and testing their own ideas.</p>
+          <ul class="module-list week-list">
+            <li>
+              <strong>Week 1 — Decision Bootcamp</strong>
+              <p>Students learn how money and work actually function in the real world—reading simple agreements, modeling wages and costs, breaking down how businesses survive, and running their first market research field study so they can build ideas based on evidence, not guesswork.</p>
+            </li>
+            <li>
+              <strong>Week 2 — Control Brand Sprint</strong>
+              <p>Students reverse-engineer a real product category (like garbage bags or snacks), studying competitors, designing their own “control brand,” and learning how packaging, pricing, sourcing, and positioning combine to create a product that can actually compete.</p>
+            </li>
+            <li>
+              <strong>Week 3 — Marketplace Build</strong>
+              <p>Students identify a real customer problem, validate the idea through interviews and quick research, then prototype, cost, and price their own product or service while preparing a launch plan for a simulated marketplace.</p>
+            </li>
+            <li>
+              <strong>Week 4 — Scale + Showcase</strong>
+              <p>Students refine their product based on feedback, improve the economics and story behind it, and present their work at the final showcase—explaining not just what they built, but why the idea works and what they would do next.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="what-students-leave-with">
+      <div class="section-banner gold">
+        <div class="wrap">
+          <h2>Is This a STEM Program?</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="stem-grid">
+          <div class="section-copy stem-copy">
+            <p>Not exactly — but it works well alongside STEM.</p>
+            <p>A lot of STEM camps teach kids how to code, build robots, or engineer projects.</p>
+            <p>The Money Club adds the next layer:</p>
+            <p><strong>What should you build — and why would anyone want it?</strong></p>
+            <p>Students learn to spot real problems, talk to users, test ideas, and build something people actually need.</p>
+            <p>That might mean:</p>
+            <ul class="bullet-list">
+              <li>designing a product or service</li>
+              <li>building a simple app or digital tool</li>
+              <li>prototyping an idea</li>
+              <li>interviewing potential users</li>
+              <li>testing pricing and demand</li>
+              <li>creating branding, photography, or marketing materials</li>
+              <li>pitching the idea clearly</li>
+            </ul>
+            <p>For kids who already like coding, robotics, or making things, this gives those skills a real-world context.</p>
+            <p>It’s less about building for the sake of building — and more about building something that works in the real world.</p>
+            <div class="mobile-reserve-btn">
+              <a data-cta-label="Reserve a spot" class="btn teal gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
+            </div>
+          </div>
+          <div class="stem-visuals" aria-hidden="true">
+            <div class="stem-visual">
+              <div class="section-image">
+                <img src="assets/student-ux.jpg" alt="" />
+              </div>
+            </div>
+            <div class="stem-visual">
+              <div class="section-image">
+                <img src="assets/student-present-1.jpg" alt="" />
+              </div>
+            </div>
+            <a data-cta-label="Reserve a spot" class="btn teal gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
           </div>
         </div>
       </div>
@@ -2594,49 +2604,6 @@
             <li><a href="article-older-kids-summer-camps.html">Summer Camps for Older Kids &amp; Teens in Toronto (Ages 11-16)</a></li>
           </ul>
           <p>These guides are designed to help families compare options and find a program that fits their child&apos;s interests.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="program-faq">
-      <div class="section-banner purple">
-        <div class="wrap">
-          <h2>Program FAQ</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="section-copy">
-          <ul class="module-list faq-home-list">
-            <li>
-              <strong>What age is the program for?</strong>
-              <p>The program is designed for students ages 11–16.</p>
-            </li>
-            <li>
-              <strong>Where is the program located?</strong>
-              <p>The program takes place at UTSU Student Commons, 230 College St, Toronto, ON M5T 1R2, Canada, in downtown Toronto.</p>
-            </li>
-            <li>
-              <strong>When does the program run?</strong>
-              <p>Session 1 runs from July 6, 2026 to July 31, 2026. Session 2 runs from August 4, 2026 to August 28, 2026.</p>
-            </li>
-            <li>
-              <strong>How much does it cost?</strong>
-              <p>The program costs CAD 1500 per student.</p>
-            </li>
-            <li>
-              <strong>What do students learn?</strong>
-              <p>Students learn financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects.</p>
-            </li>
-            <li>
-              <strong>Is it a sports or coding camp?</strong>
-              <p>No. The Money Club is an in-person educational summer program focused on financial literacy, entrepreneurship, design thinking, public speaking, and real-world project work.</p>
-            </li>
-            <li>
-              <strong>Is it affiliated with the University of Toronto?</strong>
-              <p>No. The program takes place at UTSU Student Commons in downtown Toronto near the University of Toronto, but it is independently organized by The Money Club and should not be interpreted as University of Toronto sponsorship or endorsement.</p>
-            </li>
-          </ul>
-          <p><a href="faq.html">See the full FAQ</a></p>
         </div>
       </div>
     </section>
