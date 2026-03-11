@@ -1388,6 +1388,22 @@ nav{
       letter-spacing: var(--tracking-display);
       line-height: var(--lh-heading);
     }
+    .thankyou-card h2.article-band-heading{
+      display: block;
+      margin: 32px calc(50% - 50vw) 18px;
+      padding: 22px max(var(--pad), calc((100vw - var(--max-wide)) / 2 + var(--pad)));
+      color: #ffffff;
+      text-align: center;
+      line-height: 0.82;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .thankyou-card h2.article-band-heading:first-of-type{
+      margin-top: 24px;
+    }
+    .thankyou-card h2.article-band-purple{ background: var(--purple); }
+    .thankyou-card h2.article-band-gold{ background: var(--gold); }
+    .thankyou-card h2.article-band-teal{ background: var(--teal); }
     .thankyou-card h3{
       margin: 18px 0 6px;
       font-size: clamp(22px, 3vw, 30px);
@@ -1395,6 +1411,115 @@ nav{
       text-transform: none;
       letter-spacing: 0;
       line-height: var(--lh-body);
+    }
+    .article-intro-module{
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.18fr);
+      gap: 0;
+      margin: 22px 0 26px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
+    }
+    .article-intro-media{
+      min-height: 100%;
+      background: #efe9df;
+    }
+    .article-intro-media img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      aspect-ratio: 5 / 4;
+    }
+    .article-intro-summary{
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      background: #fffdf8;
+    }
+    .article-intro-label{
+      background: var(--purple);
+      color: #ffffff;
+      padding: 18px 26px 16px;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+    .article-intro-body{
+      display: grid;
+      gap: 18px;
+      padding: 0 26px 26px;
+    }
+    .article-intro-heading{
+      display: grid;
+      gap: 8px;
+    }
+    .article-intro-heading h1,
+    .article-intro-heading h3{
+      margin: 0;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 0.92;
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+    .article-intro-heading p{
+      margin: 0;
+      color: var(--muted);
+    }
+    .article-intro-meta{
+      display: grid;
+      gap: 0;
+      border-top: 2px solid rgba(140,98,167,0.24);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-intro-meta-row{
+      display: grid;
+      grid-template-columns: 148px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .article-intro-meta-row:first-child{
+      border-top: 0;
+    }
+    .article-intro-meta-label{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .article-intro-meta-row p{
+      margin: 0;
+    }
+    .article-intro-links{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+    .article-intro-links a{
+      font-weight: 600;
+    }
+    .article-read-time{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.6vw, 38px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+      justify-self: start;
+      box-shadow: 0 12px 22px rgba(240,180,58,0.24);
     }
     .share-btn{
       width: min(100%, 320px);
@@ -1492,11 +1617,11 @@ nav{
     }
     .article-facts-card h3{
       margin: 0;
-      font-size: clamp(28px, 3.8vw, 48px);
+      font-size: clamp(22px, 3vw, 30px);
       font-family: var(--font-body);
       text-transform: none;
       letter-spacing: 0;
-      line-height: 1.08;
+      line-height: var(--lh-body);
       font-weight: 700;
     }
     .article-facts-card ul{
@@ -1521,6 +1646,31 @@ nav{
       object-fit: cover;
       display: block;
     }
+    .article-facts-shell{
+      display: grid;
+      gap: 20px;
+      max-width: var(--max-wide);
+      margin: 24px auto 0;
+    }
+    .article-facts-intro{
+      display: grid;
+      gap: 8px;
+    }
+    .article-facts-kicker{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .article-facts-shell .article-facts-heading{
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: 0.8;
+    }
     .article-facts-copy{
       display: grid;
       gap: 12px;
@@ -1534,13 +1684,15 @@ nav{
       width: 100%;
       margin-top: 6px;
       font-family: var(--font-display);
-      font-size: var(--btn-size-lg);
+      font-size: clamp(30px, 2.6vw, 44px);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      padding: 20px 24px;
+      padding: 24px 22px;
       border-radius: 18px;
       text-align: center;
       box-shadow: 0 14px 26px rgba(240,180,58,0.22);
+      line-height: 0.9;
+      min-height: 88px;
     }
 
     @media (min-width: 981px){
@@ -1611,6 +1763,40 @@ nav{
 
       body{ font-size: 23px; }
       h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
+      .thankyou-card h2.article-band-heading{
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding-left: var(--pad);
+        padding-right: var(--pad);
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-shell .article-facts-heading{
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-card .btn{
+        font-size: clamp(24px, 7vw, 34px);
+        min-height: 82px;
+        padding: 22px 20px;
+      }
+      .article-intro-module{
+        grid-template-columns: 1fr;
+      }
+      .article-intro-media img{
+        aspect-ratio: 4 / 3;
+      }
+      .article-intro-body{
+        padding: 0 22px 22px;
+      }
+      .article-intro-meta-row{
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .article-read-time{
+        width: 100%;
+        justify-self: stretch;
+      }
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
       .hero-sub{ font-size: inherit; line-height: 1.05; }
@@ -1732,18 +1918,53 @@ nav{
 
   <main>
     <section class="content-section purple">
-      <div class="content-banner purple">
-        <div class="wrap">
-          <h1 class="thankyou-title">🏛️ Summer Programs Near the University of Toronto for Kids (2026 Guide)</h1>
-        </div>
-      </div>
       <div class="content-content">
         <div class="reservation-card thankyou-card">
+          <section class="article-intro-module" aria-labelledby="article-intro-heading">
+            <div class="article-intro-media">
+              <picture>
+                <source media="(min-width: 769px)" srcset="assets/kid-presents.jpg" />
+                <img src="assets/kids-campus-1.jpg" alt="Students participating in a Money Club session" />
+              </picture>
+            </div>
+            <div class="article-intro-summary">
+              <div class="article-intro-label">At a Glance</div>
+              <div class="article-intro-body">
+                <div class="article-intro-heading">
+                  <h1 id="article-intro-heading">🏛️ Summer Programs Near the University of Toronto for Kids (2026 Guide)</h1>
+                  <p>A fast orientation for families prioritizing location, transit, and a university-area learning environment.</p>
+                </div>
+                <div class="article-intro-meta">
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Best for</div>
+                    <p>Parents comparing downtown Toronto programs near the University of Toronto area.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Age range</div>
+                    <p>Ages 11–16, especially students who benefit from a more academic-feeling setting.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Covers</div>
+                    <p>Location advantages, supervision, transit convenience, and program types near UofT.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Related guides</div>
+                    <div class="article-intro-links">
+                      <a href="article-best-summer-camps.html">Best Summer Camps in Toronto</a>
+                      <a href="article-teens-summer-camps.html">Summer Camps for Teens in Toronto</a>
+                      <a href="article-stem-summer-camps.html">STEM Summer Camps in Toronto</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="article-read-time">Read Time: 6 Minutes</div>
+              </div>
+            </div>
+          </section>
           <p>For many parents, location matters almost as much as curriculum.</p>
           <p>Summer programs on or near a university campus often feel more structured, more educational, and more inspiring. They give students a chance to learn in an environment built around curiosity and growth.</p>
-          <p>This guide looks at the kinds of summer programs families may find near the University of Toronto and what makes that setting appealing to so many parents. For a broader comparison, start with <a href="article-best-summer-camps.html">the best summer camps in Toronto for curious kids</a>.</p>
+          <p>This guide looks at the kinds of summer programs families may find near the University of Toronto and what makes that setting appealing to so many parents. For a broader comparison, start with <a href="article-best-summer-camps.html">the best summer camps in Toronto for curious kids</a> or the main <a href="index.html">Toronto summer camp for teens</a> page.</p>
 
-          <h3>🎓 Why Parents Like University-Area Programs</h3>
+          <h2 class="article-band-heading article-band-purple">Why Parents Like University-Area Programs</h2>
           <p>Parents often value:</p>
           <ul class="content-list">
             <li>a learning-focused atmosphere</li>
@@ -1752,8 +1973,24 @@ nav{
             <li>a setting that feels aspirational</li>
             <li>a more mature environment for pre-teens and teens</li>
           </ul>
+          <p>Even when a program is not formally run by a university, being close to that kind of environment can change how the experience feels. Students often take the work more seriously, and parents often feel more confident about the overall setting.</p>
 
-          <h3>🔬 Common Types of Programs</h3>
+          <h2 class="article-band-heading article-band-gold">Why a Downtown Toronto Setting Can Be a Real Advantage</h2>
+          <p>For many families, downtown Toronto offers a practical advantage: easier transit access, clearer landmarks, and a stronger connection to the city students actually move through every day.</p>
+          <p>Programs near the University of Toronto area also benefit from being close to neighborhoods like the Annex, Kensington Market, Chinatown, and central Toronto transit routes. That can make drop-off and pickup easier, especially for families who do not want a long drive to an isolated camp location.</p>
+          <p>Beyond convenience, the setting itself can matter. A student who is learning about products, systems, design, or communication often benefits from being in a part of the city that feels active, connected, and real.</p>
+
+          <h2 class="article-band-heading article-band-teal">What Families Often Look For Near UofT</h2>
+          <p>Programs near the University of Toronto usually attract parents who want a little more academic or future-facing energy than a standard camp setting might offer.</p>
+          <p>They may be looking for:</p>
+          <ul class="content-list">
+            <li>strong adult supervision in a structured environment</li>
+            <li>older kids and pre-teens rather than only young children</li>
+            <li>topic-focused programs rather than generic activity rotations</li>
+            <li>a setting that feels educational without feeling like school</li>
+          </ul>
+
+          <h2 class="article-band-heading article-band-purple">Common Types of Programs</h2>
           <p>Programs near universities may include:</p>
           <ul class="content-list">
             <li>STEM and technology programs</li>
@@ -1761,80 +1998,107 @@ nav{
             <li>leadership or debate programs</li>
             <li>innovation and entrepreneurship programs</li>
           </ul>
+          <p>That makes this category a little different from a generic roundup. The main filter is not the subject alone. It is the combination of subject, age fit, location, and the feel of the environment.</p>
 
-          <h3>💸 Spotlight: The Money Club</h3>
+          <h2 class="article-band-heading article-band-gold">How to Evaluate Safety, Structure, and Supervision</h2>
+          <p>When a program is in downtown Toronto, parents often want reassurance about logistics as much as curriculum.</p>
+          <p>A strong program should make it easy to understand:</p>
+          <ul class="content-list">
+            <li>where students are based during the day</li>
+            <li>who is supervising them</li>
+            <li>how structured the daily rhythm is</li>
+            <li>whether the program feels organized and intentional</li>
+          </ul>
+          <p>Those details matter more in a city setting because parents are not just choosing a subject. They are choosing an environment and a daily routine.</p>
+
+          <h2 class="article-band-heading article-band-teal">Why University-Adjacent Environments Feel Energizing</h2>
+          <p>Part of the appeal of university-area programs is emotional, not just logistical. Students often feel that they are stepping into a setting associated with learning, ambition, and future possibilities.</p>
+          <p>That shift in tone can matter, especially for students ages 11–16. At that stage, many kids are ready for something that feels a little more serious and a little less like a generic camp day.</p>
+
+          <h2 class="article-band-heading article-band-purple">Spotlight: The Money Club</h2>
           <p>The Money Club takes place at the UTSU Student Commons in downtown Toronto, near the University of Toronto campus.</p>
           <p>It is designed for students ages 11–16 and focuses on financial literacy, entrepreneurship, design thinking, pricing, incentives, and public speaking.</p>
           <p>Students develop ideas, explore simple business concepts, and present their work at the end of the program.</p>
-          <p>While the program is not affiliated with the University of Toronto, its location gives students the energy of a university-area setting while they work on real-world ideas. You can <a href="curriculum.html">see the curriculum</a>, <a href="faq.html">read the FAQ</a>, or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
+          <p>While the program is not affiliated with the University of Toronto, its location gives students the energy of a university-area setting while they work on real-world ideas. Families can <a href="schedule-pricing.html">see the curriculum</a>, learn <a href="how-it-works.html">how the program works</a>, review the <a href="schedule-pricing.html">schedule and pricing</a>, <a href="faq.html">read the FAQ</a>, or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
 
-          <h3>🌟 Final Thought</h3>
+          <h2 class="article-band-heading article-band-gold">How This Page Differs from a General Camp Roundup</h2>
+          <p>This page is really about setting first. If your main question is “what type of camp should my child do?”, the better starting point is <a href="article-best-summer-camps.html">the broader Toronto summer camp guide</a>.</p>
+          <p>If your question is more specific — “what are the strongest summer programs near the University of Toronto area?” — then location, neighborhood, transit convenience, and setting quality matter much more.</p>
+          <p>Families also comparing topic-specific options may want to look at <a href="article-stem-summer-camps.html">STEM summer camps in Toronto</a> or <a href="article-older-kids-summer-camps.html">summer camps for older kids and teens in Toronto</a>.</p>
+
+          <h2 class="article-band-heading article-band-teal">Transit, Convenience, and Everyday Practicality</h2>
+          <p>For parents, location is never just a branding detail. It affects the entire daily rhythm of summer. A program in the University of Toronto area can be appealing because it is easier to connect to by TTC, easier to place on a mental map, and easier to combine with the rest of a downtown workday.</p>
+          <p>That matters especially for families in central Toronto. A convenient location often means less friction, less uncertainty, and a more sustainable routine across four full weeks.</p>
+
+          <h2 class="article-band-heading article-band-purple">Why Setting Can Influence Student Motivation</h2>
+          <p>Students notice environment. A program that takes place near a university or in a supervised downtown learning space can feel different from the moment they arrive. It often feels more intentional, more future-facing, and more aligned with the idea that their work matters.</p>
+          <p>That does not automatically make one camp better than another, but it can change how seriously students approach the day. For pre-teens and teens, that shift in tone can be meaningful.</p>
+
+          <h2 class="article-band-heading article-band-gold">What Parents Can Compare Beyond the Map Pin</h2>
+          <p>When evaluating summer programs near the University of Toronto, it helps to compare more than just the address. Parents can ask whether the program has a clear daily structure, whether the age range is appropriate, and whether students are doing real work or just following a schedule of activities.</p>
+          <p>Location may open the door, but quality still depends on supervision, curriculum, adult leadership, and whether the program gives students a meaningful reason to stay engaged over multiple weeks.</p>
+
+          <h2 class="article-band-heading article-band-teal">Why This Setting Can Work Especially Well for Ages 11–16</h2>
+          <p>Pre-teens and teens often respond strongly to environments that feel a little more grown-up. A university-area setting can help bridge the gap between a traditional children’s camp and a more serious learning program.</p>
+          <p>For students ages 11–16, that can make a real difference. The setting feels more aligned with the kinds of bigger questions, projects, and peer interactions that this age group often wants. It is one reason many families look for downtown Toronto programs that feel structured, supervised, and future-facing without becoming too formal.</p>
+
+          <h2 class="article-band-heading article-band-purple">Final Thought</h2>
           <p>For many students, spending time near a university campus changes the tone of summer learning.</p>
-          <p>It feels a little more serious, a little more future-facing, and a little more exciting.</p>
+          <p>It feels a little more serious, a little more future-facing, and a little more exciting. For parents who care about both location and educational atmosphere, that can be a meaningful reason to choose a downtown Toronto program over a more generic option. In the end, the best fit is the one where setting, supervision, and substance all support each other.</p>
 
           <h3>Related Guides</h3>
           <ul class="content-list">
             <li><a href="article-best-summer-camps.html">Best summer camps in Toronto for curious kids</a></li>
             <li><a href="article-stem-summer-camps.html">STEM summer camps in Toronto</a></li>
-            <li><a href="article-older-kids-summer-camps.html">summer camps for older kids and teens in Toronto</a></li>
-            <li><a href="article-econ-summer-camps.html">entrepreneurship summer camps for teens</a></li>
+            <li><a href="article-older-kids-summer-camps.html">Summer camps for older kids and teens in Toronto</a></li>
+            <li><a href="article-econ-summer-camps.html">Entrepreneurship summer camps for teens</a></li>
+            <li><a href="article-uni-summer-camps.html">Summer programs near the University of Toronto</a></li>
+            <li><a href="article-teens-summer-camps.html">Summer camps for teens in Toronto</a></li>
+            <li><a href="article-financial-literacy-camps.html">Financial literacy camps for kids</a></li>
+            <li><a href="article-entrepreneurship-camps-toronto.html">Entrepreneurship camps in Toronto</a></li>
           </ul>
 
-          <h3>Ready to Explore The Money Club?</h3>
-          <p>The Money Club is a Toronto summer program for curious students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.</p>
-          <ul class="content-list">
-            <li><a href="curriculum.html">See the curriculum</a></li>
-            <li><a href="faq.html">Read frequently asked questions</a></li>
-            <li><a href="reserve-a-spot.html">Reserve a spot for Summer 2026</a></li>
-          </ul>
-          <div class="cta-block">
-            <a data-cta-label="Reserve a spot for Summer 2026" class="btn teal gloss cta-standard" href="reserve-a-spot.html">Reserve a Spot for Summer 2026</a>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="content-section gold article-program-section">
-      <div class="content-banner gold">
-        <div class="wrap">
-          <h2 class="thankyou-title">Toronto Kids Summer Camp 2026: Economic Literacy</h2>
-        </div>
-      </div>
-      <div class="content-content">
-        <div class="article-facts-grid">
-          <div class="article-facts-card">
-            <h3>Program essentials</h3>
-            <ul>
-              <li>Ages: 11–16</li>
-              <li>Format: Summer day program</li>
-              <li>Duration: 4 weeks</li>
-              <li>When: Weekdays 9:30am-3:30pm, July 6–31 or August 4–28</li>
-              <li>Cost: $1500 per student</li>
-              <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
-              <li>Materials: Included (including student project inputs)</li>
-              <li>Experience: None required</li>
-            </ul>
+        <section class="article-facts-shell" aria-labelledby="article-quick-facts-heading">
+          <div class="article-facts-intro">
+            <div class="article-facts-kicker">Ready to Explore The Money Club?</div>
+            <h3 class="article-facts-heading" id="article-quick-facts-heading">Everything parents need to know</h3>
           </div>
-          <div class="article-facts-card">
-            <div class="article-facts-media">
-              <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+          <div class="article-facts-grid">
+            <div class="article-facts-card">
+              <h3>Program essentials</h3>
+              <ul>
+                <li>Ages: 11–16</li>
+                <li>Format: Summer day program</li>
+                <li>Duration: 4 weeks</li>
+                <li>When: Weekdays 9:30am-3:30pm, July &amp; August</li>
+                <li>Cost: $1,500 per student</li>
+                <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
+                <li>Materials: Included (including student project inputs)</li>
+                <li>Experience: None required</li>
+              </ul>
             </div>
-            <div class="article-facts-copy">
-              <h3>Ready for details?</h3>
-              <p>See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
+            <div class="article-facts-card">
+              <div class="article-facts-media">
+                <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+              </div>
+              <div class="article-facts-copy">
+                <h3>Ready for details?</h3>
+                <p>See exact dates, tuition, and cohort size.</p>
+              </div>
+              <a data-cta-label="View schedule &amp; pricing" class="btn gold gloss" href="how-it-works.html">View Schedule &amp; Pricing</a>
             </div>
-            <a data-cta-label="View schedule &amp; pricing" class="btn purple gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
           </div>
-        </div>
+        </section>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="inner">
-      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+      <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
+      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, design thinking, and public speaking.</div>
     </div>
   </footer>
 

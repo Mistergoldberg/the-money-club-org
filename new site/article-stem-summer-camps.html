@@ -1388,6 +1388,22 @@ nav{
       letter-spacing: var(--tracking-display);
       line-height: var(--lh-heading);
     }
+    .thankyou-card h2.article-band-heading{
+      display: block;
+      margin: 32px calc(50% - 50vw) 18px;
+      padding: 22px max(var(--pad), calc((100vw - var(--max-wide)) / 2 + var(--pad)));
+      color: #ffffff;
+      text-align: center;
+      line-height: 0.82;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .thankyou-card h2.article-band-heading:first-of-type{
+      margin-top: 24px;
+    }
+    .thankyou-card h2.article-band-purple{ background: var(--purple); }
+    .thankyou-card h2.article-band-gold{ background: var(--gold); }
+    .thankyou-card h2.article-band-teal{ background: var(--teal); }
     .thankyou-card h3{
       margin: 18px 0 6px;
       font-size: clamp(22px, 3vw, 30px);
@@ -1395,6 +1411,115 @@ nav{
       text-transform: none;
       letter-spacing: 0;
       line-height: var(--lh-body);
+    }
+    .article-intro-module{
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.18fr);
+      gap: 0;
+      margin: 22px 0 26px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
+    }
+    .article-intro-media{
+      min-height: 100%;
+      background: #efe9df;
+    }
+    .article-intro-media img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      aspect-ratio: 5 / 4;
+    }
+    .article-intro-summary{
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      background: #fffdf8;
+    }
+    .article-intro-label{
+      background: var(--purple);
+      color: #ffffff;
+      padding: 18px 26px 16px;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+    .article-intro-body{
+      display: grid;
+      gap: 18px;
+      padding: 0 26px 26px;
+    }
+    .article-intro-heading{
+      display: grid;
+      gap: 8px;
+    }
+    .article-intro-heading h1,
+    .article-intro-heading h3{
+      margin: 0;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 0.92;
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+    .article-intro-heading p{
+      margin: 0;
+      color: var(--muted);
+    }
+    .article-intro-meta{
+      display: grid;
+      gap: 0;
+      border-top: 2px solid rgba(140,98,167,0.24);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-intro-meta-row{
+      display: grid;
+      grid-template-columns: 148px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .article-intro-meta-row:first-child{
+      border-top: 0;
+    }
+    .article-intro-meta-label{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .article-intro-meta-row p{
+      margin: 0;
+    }
+    .article-intro-links{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+    .article-intro-links a{
+      font-weight: 600;
+    }
+    .article-read-time{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.6vw, 38px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+      justify-self: start;
+      box-shadow: 0 12px 22px rgba(240,180,58,0.24);
     }
     .share-btn{
       width: min(100%, 320px);
@@ -1492,11 +1617,11 @@ nav{
     }
     .article-facts-card h3{
       margin: 0;
-      font-size: clamp(28px, 3.8vw, 48px);
+      font-size: clamp(22px, 3vw, 30px);
       font-family: var(--font-body);
       text-transform: none;
       letter-spacing: 0;
-      line-height: 1.08;
+      line-height: var(--lh-body);
       font-weight: 700;
     }
     .article-facts-card ul{
@@ -1521,6 +1646,31 @@ nav{
       object-fit: cover;
       display: block;
     }
+    .article-facts-shell{
+      display: grid;
+      gap: 20px;
+      max-width: var(--max-wide);
+      margin: 24px auto 0;
+    }
+    .article-facts-intro{
+      display: grid;
+      gap: 8px;
+    }
+    .article-facts-kicker{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .article-facts-shell .article-facts-heading{
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: 0.8;
+    }
     .article-facts-copy{
       display: grid;
       gap: 12px;
@@ -1534,13 +1684,15 @@ nav{
       width: 100%;
       margin-top: 6px;
       font-family: var(--font-display);
-      font-size: var(--btn-size-lg);
+      font-size: clamp(30px, 2.6vw, 44px);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      padding: 20px 24px;
+      padding: 24px 22px;
       border-radius: 18px;
       text-align: center;
       box-shadow: 0 14px 26px rgba(240,180,58,0.22);
+      line-height: 0.9;
+      min-height: 88px;
     }
 
     @media (min-width: 981px){
@@ -1611,6 +1763,40 @@ nav{
 
       body{ font-size: 23px; }
       h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
+      .thankyou-card h2.article-band-heading{
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding-left: var(--pad);
+        padding-right: var(--pad);
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-shell .article-facts-heading{
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-card .btn{
+        font-size: clamp(24px, 7vw, 34px);
+        min-height: 82px;
+        padding: 22px 20px;
+      }
+      .article-intro-module{
+        grid-template-columns: 1fr;
+      }
+      .article-intro-media img{
+        aspect-ratio: 4 / 3;
+      }
+      .article-intro-body{
+        padding: 0 22px 22px;
+      }
+      .article-intro-meta-row{
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .article-read-time{
+        width: 100%;
+        justify-self: stretch;
+      }
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
       .hero-sub{ font-size: inherit; line-height: 1.05; }
@@ -1732,18 +1918,53 @@ nav{
 
   <main>
     <section class="content-section purple">
-      <div class="content-banner purple">
-        <div class="wrap">
-          <h1 class="thankyou-title">🧪 STEM Summer Camps in Toronto (2026 Guide)</h1>
-        </div>
-      </div>
       <div class="content-content">
         <div class="reservation-card thankyou-card">
+          <section class="article-intro-module" aria-labelledby="article-intro-heading">
+            <div class="article-intro-media">
+              <picture>
+                <source media="(min-width: 769px)" srcset="assets/kid-presents.jpg" />
+                <img src="assets/kids-campus-1.jpg" alt="Students participating in a Money Club session" />
+              </picture>
+            </div>
+            <div class="article-intro-summary">
+              <div class="article-intro-label">At a Glance</div>
+              <div class="article-intro-body">
+                <div class="article-intro-heading">
+                  <h1 id="article-intro-heading">🧪 STEM Summer Camps in Toronto (2026 Guide)</h1>
+                  <p>A fast orientation for families comparing robotics, coding, engineering, and more applied innovation programs.</p>
+                </div>
+                <div class="article-intro-meta">
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Best for</div>
+                    <p>Parents looking for technical or problem-solving programs with hands-on STEM learning.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Age range</div>
+                    <p>Ages 11–16, especially curious builders and analytical kids.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Covers</div>
+                    <p>Robotics, coding, engineering, science, and real-world problem-solving.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Related guides</div>
+                    <div class="article-intro-links">
+                      <a href="article-best-summer-camps.html">Best Summer Camps in Toronto</a>
+                      <a href="article-teens-summer-camps.html">Summer Camps for Teens in Toronto</a>
+                      <a href="article-uni-summer-camps.html">Summer Programs Near the University of Toronto</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="article-read-time">Read Time: 6 Minutes</div>
+              </div>
+            </div>
+          </section>
           <p>For many Toronto parents, STEM camps feel like the obvious place to start.</p>
           <p>They promise hands-on learning, problem-solving, and real skills in science, technology, engineering, and math. For curious kids, that can be a strong fit.</p>
-          <p>This guide explains the different kinds of STEM camps in Toronto, what each type tends to offer, and how to tell which one matches your child’s interests. If you want the bigger picture first, start with our roundup of <a href="article-best-summer-camps.html">the best summer camps in Toronto for curious kids</a>.</p>
+          <p>This guide explains the different kinds of STEM camps in Toronto, what each type tends to offer, and how to tell which one matches your child’s interests. If you want the bigger picture first, start with our roundup of <a href="article-best-summer-camps.html">the best summer camps in Toronto for curious kids</a>, then use this page to compare the STEM side of the market more carefully.</p>
 
-          <h3>🔍 What Parents Usually Mean by “STEM Camp”</h3>
+          <h2 class="article-band-heading article-band-purple">What Parents Usually Mean by “STEM Camp”</h2>
           <p>In practice, STEM camps tend to fall into a few categories:</p>
           <ul class="content-list">
             <li>robotics camps</li>
@@ -1751,97 +1972,140 @@ nav{
             <li>engineering and science camps</li>
             <li>innovation-based programs that combine STEM thinking with real-world problem-solving</li>
           </ul>
-          <p>The label is broad, so it helps to compare the style of learning, not just the label.</p>
+          <p>The label is broad, so it helps to compare the style of learning, not just the label. One STEM camp may feel like structured kit-building. Another may feel like software design. Another may be science-heavy and experimental. Parents who compare only the headline often miss the real difference.</p>
+
+          <h2 class="article-band-heading article-band-gold">How Robotics, Coding, Science, and Engineering Camps Differ</h2>
+          <p>STEM is useful as a category, but it hides real differences in what children actually do all day.</p>
 
           <h3>🤖 Robotics Camps</h3>
           <p>Best for kids who like machines, systems, and building tangible things.</p>
-          <p>Robotics camps often involve assembling kits, programming movements, and solving design challenges in teams.</p>
+          <p>Robotics camps often involve assembling kits, programming movements, and solving design challenges in teams. They are especially appealing for students who like seeing a physical object respond to their instructions.</p>
 
           <h3>💻 Coding Camps</h3>
           <p>Best for kids curious about computers, games, and software.</p>
-          <p>Coding camps usually introduce programming through beginner-friendly projects such as games, animations, websites, or simple apps.</p>
+          <p>Coding camps usually introduce programming through beginner-friendly projects such as games, animations, websites, or simple apps. They often work well for students who enjoy screen-based building and logical sequences.</p>
 
           <h3>⚙️ Engineering &amp; Science Camps</h3>
           <p>Best for kids who enjoy experiments, testing ideas, and understanding how physical systems work.</p>
-          <p>These camps may include structural design challenges, physics activities, chemistry demos, or renewable energy projects.</p>
+          <p>These camps may include structural design challenges, physics activities, chemistry demos, or renewable energy projects. They often appeal to students who like evidence, experiments, and seeing how cause and effect work in the physical world.</p>
 
-          <h3>💡 STEM-Adjacent Innovation Programs</h3>
+          <h2 class="article-band-heading article-band-teal">What Kinds of Kids Thrive in STEM Camps</h2>
+          <p>Not every child who is “smart” wants a STEM camp. The best fit usually depends on how they like to think and work.</p>
+          <p>Kids who thrive in STEM environments often enjoy:</p>
+          <ul class="content-list">
+            <li>taking things apart and figuring out how they work</li>
+            <li>solving problems through trial and error</li>
+            <li>building systems step by step</li>
+            <li>working with rules, patterns, and testable ideas</li>
+            <li>seeing a result they can measure or improve</li>
+          </ul>
+          <p>Some children also like STEM because it gives them an alternative to performance-heavy or verbally driven settings. Others enjoy it because they like collaboration that has a visible task attached to it.</p>
+
+          <h2 class="article-band-heading article-band-purple">How to Tell Whether a STEM Camp Is Truly Hands-On</h2>
+          <p>One of the most useful questions a parent can ask is simple: what percentage of the day is spent actively building, testing, or solving something?</p>
+          <p>A strong STEM camp usually includes:</p>
+          <ul class="content-list">
+            <li>a clear project or experiment to work toward</li>
+            <li>small-team or individual build time</li>
+            <li>feedback loops where students revise what they made</li>
+            <li>instructors who help students reason through problems instead of just demoing solutions</li>
+          </ul>
+          <p>A weaker version may still sound impressive in a brochure, but rely too much on passive watching, kit instructions, or surface-level activities that do not build toward anything meaningful.</p>
+
+          <h2 class="article-band-heading article-band-gold">Why Some Families Want STEM Plus Communication Skills</h2>
+          <p>Traditional STEM programs often do a good job teaching how to build something. They are not always as strong at teaching how to explain an idea, test it with real people, or persuade others that it matters.</p>
+          <p>For many parents, that is the next step. They want a program that keeps the hands-on problem-solving of STEM but also develops communication, teamwork, and presentation skills.</p>
+          <p>That is especially relevant for older kids. By ages 11–16, students often benefit from learning not just how to make something technically, but how to talk about why it should exist.</p>
+
+          <h2 class="article-band-heading article-band-teal">STEM and Real-World Problem Solving</h2>
           <p>Some programs expand beyond classic STEM and ask a bigger question:</p>
           <p><strong>How do ideas move from concept to the real world?</strong></p>
-          <p>That can include product design, testing, economics, communication, and decision-making.</p>
+          <p>That can include product design, testing, economics, communication, and decision-making. It can also include identifying a real user need, interviewing people, adjusting an idea based on feedback, and thinking about whether the final result is actually useful.</p>
+          <p>This is where STEM begins to overlap with design thinking, entrepreneurship, and systems thinking. For some students, that overlap is exactly what makes a program engaging.</p>
 
-          <h3>💸 Spotlight: The Money Club</h3>
+          <h2 class="article-band-heading article-band-purple">Spotlight: The Money Club</h2>
           <p>The Money Club is not a robotics camp or a coding camp. It focuses on the systems side of innovation.</p>
           <p>Students ages 11–16 explore financial literacy, entrepreneurship, design thinking, pricing, incentives, and communication. They develop product ideas, test simple business concepts, and present their work at the end of the program.</p>
-          <p>For students interested in the bigger picture behind products, markets, and real-world decisions, this can be a strong complement to more traditional STEM offerings. You can <a href="curriculum.html">see the curriculum</a> or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
+          <p>For students interested in the bigger picture behind products, markets, and real-world decisions, this can be a strong complement to more traditional STEM offerings. Families can <a href="schedule-pricing.html">see the full program curriculum</a>, read <a href="how-it-works.html">how the program works</a>, check the <a href="schedule-pricing.html">schedule and pricing</a>, or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
 
-          <h3>🌟 Final Thought</h3>
+          <h2 class="article-band-heading article-band-gold">How to Compare a Traditional STEM Camp with an Innovation Program</h2>
+          <p>If your child already enjoys coding, robotics, or engineering, the real question may not be whether they should do STEM at all. It may be what kind of STEM-adjacent learning will help them grow next.</p>
+          <p>A traditional STEM camp may be strongest for a student who wants more technical practice. An innovation-oriented program may be stronger for a student who wants to connect technical curiosity to users, products, communication, and decision-making.</p>
+          <p>Parents comparing those options may also want to read about <a href="article-older-kids-summer-camps.html">summer camps for older kids and teens in Toronto</a> and <a href="article-econ-summer-camps.html">entrepreneurship summer camps for teens</a>, since those pages describe the skills overlap more directly.</p>
+
+          <h2 class="article-band-heading article-band-teal">Questions Parents Can Ask Before Choosing a STEM Camp</h2>
+          <p>When two STEM camps sound similar on paper, the best differentiator is usually not the label. It is the learning experience students actually get once they arrive.</p>
+          <p>Useful questions include:</p>
+          <ul class="content-list">
+            <li>Will my child be building something every day, or mostly following instructions?</li>
+            <li>Does the camp encourage students to solve problems independently?</li>
+            <li>Is the material better for beginners, or for kids who already have experience?</li>
+            <li>Do students explain and present what they made, or only complete the activity?</li>
+            <li>Will this feel exciting for my child’s age and maturity level?</li>
+          </ul>
+          <p>Those questions make it much easier to tell whether a STEM camp is truly hands-on, appropriately challenging, and worth the time.</p>
+
+          <h2 class="article-band-heading article-band-purple">When a STEM Camp Is a Great Fit</h2>
+          <p>A strong STEM camp is usually a great fit when a child is energized by building systems, solving technical problems, and improving ideas through testing. It may be less effective when a child is really looking for broader creative ownership, social communication, or the “why” behind products and markets.</p>
+          <p>That is why some families compare STEM programs with innovation-oriented options instead of choosing one category automatically. The real goal is not to pick the most impressive label. It is to find the format that matches the child in front of you.</p>
+
+          <h2 class="article-band-heading article-band-gold">Final Thought</h2>
           <p>The best STEM camp is not always the one with the flashiest label.</p>
-          <p>It’s the one that matches your child’s actual curiosity — whether that’s robots, code, engineering, or the deeper systems behind how ideas become real.</p>
+          <p>It’s the one that matches your child’s actual curiosity — whether that’s robots, code, engineering, or the deeper systems behind how ideas become real. If you want to compare options more broadly, go back to <a href="index.html">the Toronto summer camp for teens homepage</a> or the full roundup of <a href="article-best-summer-camps.html">the best summer camps in Toronto for curious kids</a>.</p>
 
           <h3>Related Guides</h3>
           <ul class="content-list">
             <li><a href="article-best-summer-camps.html">Best summer camps in Toronto for curious kids</a></li>
-            <li><a href="article-older-kids-summer-camps.html">summer camps for older kids and teens in Toronto</a></li>
-            <li><a href="article-uni-summer-camps.html">summer programs near the University of Toronto</a></li>
-            <li><a href="article-econ-summer-camps.html">entrepreneurship summer camps for teens</a></li>
+            <li><a href="article-stem-summer-camps.html">STEM summer camps in Toronto</a></li>
+            <li><a href="article-older-kids-summer-camps.html">Summer camps for older kids and teens in Toronto</a></li>
+            <li><a href="article-econ-summer-camps.html">Entrepreneurship summer camps for teens</a></li>
+            <li><a href="article-uni-summer-camps.html">Summer programs near the University of Toronto</a></li>
+            <li><a href="article-teens-summer-camps.html">Summer camps for teens in Toronto</a></li>
+            <li><a href="article-financial-literacy-camps.html">Financial literacy camps for kids</a></li>
+            <li><a href="article-entrepreneurship-camps-toronto.html">Entrepreneurship camps in Toronto</a></li>
           </ul>
 
-          <h3>Ready to Explore The Money Club?</h3>
-          <p>The Money Club is a Toronto summer program for curious students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.</p>
-          <ul class="content-list">
-            <li><a href="curriculum.html">See the curriculum</a></li>
-            <li><a href="faq.html">Read frequently asked questions</a></li>
-            <li><a href="reserve-a-spot.html">Reserve a spot for Summer 2026</a></li>
-          </ul>
-          <div class="cta-block">
-            <a data-cta-label="Reserve a spot for Summer 2026" class="btn teal gloss cta-standard" href="reserve-a-spot.html">Reserve a Spot for Summer 2026</a>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="content-section gold article-program-section">
-      <div class="content-banner gold">
-        <div class="wrap">
-          <h2 class="thankyou-title">Toronto Kids Summer Camp 2026: Economic Literacy</h2>
-        </div>
-      </div>
-      <div class="content-content">
-        <div class="article-facts-grid">
-          <div class="article-facts-card">
-            <h3>Program essentials</h3>
-            <ul>
-              <li>Ages: 11–16</li>
-              <li>Format: Summer day program</li>
-              <li>Duration: 4 weeks</li>
-              <li>When: Weekdays 9:30am-3:30pm, July 6–31 or August 4–28</li>
-              <li>Cost: $1500 per student</li>
-              <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
-              <li>Materials: Included (including student project inputs)</li>
-              <li>Experience: None required</li>
-            </ul>
+        <section class="article-facts-shell" aria-labelledby="article-quick-facts-heading">
+          <div class="article-facts-intro">
+            <div class="article-facts-kicker">Ready to Explore The Money Club?</div>
+            <h3 class="article-facts-heading" id="article-quick-facts-heading">Everything parents need to know</h3>
           </div>
-          <div class="article-facts-card">
-            <div class="article-facts-media">
-              <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+          <div class="article-facts-grid">
+            <div class="article-facts-card">
+              <h3>Program essentials</h3>
+              <ul>
+                <li>Ages: 11–16</li>
+                <li>Format: Summer day program</li>
+                <li>Duration: 4 weeks</li>
+                <li>When: Weekdays 9:30am-3:30pm, July &amp; August</li>
+                <li>Cost: $1,500 per student</li>
+                <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
+                <li>Materials: Included (including student project inputs)</li>
+                <li>Experience: None required</li>
+              </ul>
             </div>
-            <div class="article-facts-copy">
-              <h3>Ready for details?</h3>
-              <p>See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
+            <div class="article-facts-card">
+              <div class="article-facts-media">
+                <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+              </div>
+              <div class="article-facts-copy">
+                <h3>Ready for details?</h3>
+                <p>See exact dates, tuition, and cohort size.</p>
+              </div>
+              <a data-cta-label="View schedule &amp; pricing" class="btn gold gloss" href="how-it-works.html">View Schedule &amp; Pricing</a>
             </div>
-            <a data-cta-label="View schedule &amp; pricing" class="btn purple gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
           </div>
-        </div>
+        </section>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="inner">
-      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+      <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
+      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, design thinking, and public speaking.</div>
     </div>
   </footer>
 

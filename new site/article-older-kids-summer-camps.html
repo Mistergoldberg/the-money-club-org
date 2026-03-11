@@ -1388,6 +1388,22 @@ nav{
       letter-spacing: var(--tracking-display);
       line-height: var(--lh-heading);
     }
+    .thankyou-card h2.article-band-heading{
+      display: block;
+      margin: 32px calc(50% - 50vw) 18px;
+      padding: 22px max(var(--pad), calc((100vw - var(--max-wide)) / 2 + var(--pad)));
+      color: #ffffff;
+      text-align: center;
+      line-height: 0.82;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .thankyou-card h2.article-band-heading:first-of-type{
+      margin-top: 24px;
+    }
+    .thankyou-card h2.article-band-purple{ background: var(--purple); }
+    .thankyou-card h2.article-band-gold{ background: var(--gold); }
+    .thankyou-card h2.article-band-teal{ background: var(--teal); }
     .thankyou-card h3{
       margin: 18px 0 6px;
       font-size: clamp(22px, 3vw, 30px);
@@ -1395,6 +1411,115 @@ nav{
       text-transform: none;
       letter-spacing: 0;
       line-height: var(--lh-body);
+    }
+    .article-intro-module{
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.18fr);
+      gap: 0;
+      margin: 22px 0 26px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
+    }
+    .article-intro-media{
+      min-height: 100%;
+      background: #efe9df;
+    }
+    .article-intro-media img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      aspect-ratio: 5 / 4;
+    }
+    .article-intro-summary{
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      background: #fffdf8;
+    }
+    .article-intro-label{
+      background: var(--purple);
+      color: #ffffff;
+      padding: 18px 26px 16px;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+    .article-intro-body{
+      display: grid;
+      gap: 18px;
+      padding: 0 26px 26px;
+    }
+    .article-intro-heading{
+      display: grid;
+      gap: 8px;
+    }
+    .article-intro-heading h1,
+    .article-intro-heading h3{
+      margin: 0;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 0.92;
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+    .article-intro-heading p{
+      margin: 0;
+      color: var(--muted);
+    }
+    .article-intro-meta{
+      display: grid;
+      gap: 0;
+      border-top: 2px solid rgba(140,98,167,0.24);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-intro-meta-row{
+      display: grid;
+      grid-template-columns: 148px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .article-intro-meta-row:first-child{
+      border-top: 0;
+    }
+    .article-intro-meta-label{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .article-intro-meta-row p{
+      margin: 0;
+    }
+    .article-intro-links{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+    .article-intro-links a{
+      font-weight: 600;
+    }
+    .article-read-time{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.6vw, 38px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+      justify-self: start;
+      box-shadow: 0 12px 22px rgba(240,180,58,0.24);
     }
     .share-btn{
       width: min(100%, 320px);
@@ -1492,11 +1617,11 @@ nav{
     }
     .article-facts-card h3{
       margin: 0;
-      font-size: clamp(28px, 3.8vw, 48px);
+      font-size: clamp(22px, 3vw, 30px);
       font-family: var(--font-body);
       text-transform: none;
       letter-spacing: 0;
-      line-height: 1.08;
+      line-height: var(--lh-body);
       font-weight: 700;
     }
     .article-facts-card ul{
@@ -1521,6 +1646,31 @@ nav{
       object-fit: cover;
       display: block;
     }
+    .article-facts-shell{
+      display: grid;
+      gap: 20px;
+      max-width: var(--max-wide);
+      margin: 24px auto 0;
+    }
+    .article-facts-intro{
+      display: grid;
+      gap: 8px;
+    }
+    .article-facts-kicker{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .article-facts-shell .article-facts-heading{
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: 0.8;
+    }
     .article-facts-copy{
       display: grid;
       gap: 12px;
@@ -1534,13 +1684,15 @@ nav{
       width: 100%;
       margin-top: 6px;
       font-family: var(--font-display);
-      font-size: var(--btn-size-lg);
+      font-size: clamp(30px, 2.6vw, 44px);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      padding: 20px 24px;
+      padding: 24px 22px;
       border-radius: 18px;
       text-align: center;
       box-shadow: 0 14px 26px rgba(240,180,58,0.22);
+      line-height: 0.9;
+      min-height: 88px;
     }
 
     @media (min-width: 981px){
@@ -1611,6 +1763,40 @@ nav{
 
       body{ font-size: 23px; }
       h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
+      .thankyou-card h2.article-band-heading{
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding-left: var(--pad);
+        padding-right: var(--pad);
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-shell .article-facts-heading{
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-card .btn{
+        font-size: clamp(24px, 7vw, 34px);
+        min-height: 82px;
+        padding: 22px 20px;
+      }
+      .article-intro-module{
+        grid-template-columns: 1fr;
+      }
+      .article-intro-media img{
+        aspect-ratio: 4 / 3;
+      }
+      .article-intro-body{
+        padding: 0 22px 22px;
+      }
+      .article-intro-meta-row{
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .article-read-time{
+        width: 100%;
+        justify-self: stretch;
+      }
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
       .hero-sub{ font-size: inherit; line-height: 1.05; }
@@ -1732,18 +1918,53 @@ nav{
 
   <main>
     <section class="content-section purple">
-      <div class="content-banner purple">
-        <div class="wrap">
-          <h1 class="thankyou-title">🧑‍🎓 Summer Camps for Older Kids &amp; Teens in Toronto (Ages 11–16)</h1>
-        </div>
-      </div>
       <div class="content-content">
         <div class="reservation-card thankyou-card">
+          <section class="article-intro-module" aria-labelledby="article-intro-heading">
+            <div class="article-intro-media">
+              <picture>
+                <source media="(min-width: 769px)" srcset="assets/kid-presents.jpg" />
+                <img src="assets/kids-campus-1.jpg" alt="Students participating in a Money Club session" />
+              </picture>
+            </div>
+            <div class="article-intro-summary">
+              <div class="article-intro-label">At a Glance</div>
+              <div class="article-intro-body">
+                <div class="article-intro-heading">
+                  <h1 id="article-intro-heading">🧑‍🎓 Summer Camps for Older Kids &amp; Teens in Toronto (Ages 11–16)</h1>
+                  <p>A fast orientation for families looking for summer programs that feel mature enough for ages 11–16.</p>
+                </div>
+                <div class="article-intro-meta">
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Best for</div>
+                    <p>Parents comparing teen-ready camps that feel more purposeful than a traditional day camp.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Age range</div>
+                    <p>Ages 11–16.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Covers</div>
+                    <p>Age fit, project-based learning, peer culture, and how to compare older-kid programs in Toronto.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Related guides</div>
+                    <div class="article-intro-links">
+                      <a href="article-best-summer-camps.html">Best Summer Camps in Toronto</a>
+                      <a href="article-teens-summer-camps.html">Summer Camps for Teens in Toronto</a>
+                      <a href="article-entrepreneurship-camps-toronto.html">Entrepreneurship Camps in Toronto</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="article-read-time">Read Time: 6 Minutes</div>
+              </div>
+            </div>
+          </section>
           <p>One of the first things Toronto parents notice is that many summer camps are built for younger children.</p>
           <p>Once kids hit 11, 12, 13, and beyond, the options narrow quickly. At that age, many students want something more challenging, more social, and more meaningful than a traditional camp routine.</p>
-          <p>This guide covers the kinds of summer programs that tend to work best for older kids and early teens in Toronto. For a broader overview, you can also start with <a href="article-best-summer-camps.html">the best summer camps in Toronto for curious kids</a>.</p>
+          <p>This guide covers the kinds of summer programs that tend to work best for older kids and early teens in Toronto. For a broader overview, you can also start with <a href="article-best-summer-camps.html">the best summer camps in Toronto for curious kids</a> or visit the main <a href="index.html">Toronto summer camp for teens</a> page.</p>
 
-          <h3>🌱 Why This Age Group Needs Something Different</h3>
+          <h2 class="article-band-heading article-band-purple">Why This Age Group Needs Something Different</h2>
           <p>Older kids usually want:</p>
           <ul class="content-list">
             <li>more independence</li>
@@ -1753,88 +1974,138 @@ nav{
             <li>more real-world relevance</li>
           </ul>
           <p>That is why programs for ages 11–16 often work best when they include projects, presentations, teamwork, and deeper ideas.</p>
+          <p>At this age, students are often in a transition period. They are no longer looking for a camp that feels childish, but they are also not ready for a dry academic program that feels like summer school. The strongest options sit between those two extremes.</p>
+
+          <h2 class="article-band-heading article-band-gold">Why Many Camps Skew Too Young</h2>
+          <p>Many camp programs are designed around the needs of younger children: lots of transitions, lots of supervision, broad group activities, and a heavy emphasis on keeping energy managed.</p>
+          <p>That structure makes sense for younger campers. It often stops making sense around middle school. Older kids usually want more ownership over their work and more respect for their ability to think independently.</p>
+          <p>When a program does not adapt to that maturity level, students often describe it in simple terms: boring, childish, repetitive, or not worth their time.</p>
+
+          <h2 class="article-band-heading article-band-teal">What Families Usually Want for Ages 11–16</h2>
+          <p>Parents of older kids tend to look for a different mix of qualities than parents of younger campers. They often want a program that feels:</p>
+          <ul class="content-list">
+            <li>more intellectually engaging</li>
+            <li>more collaborative than babysitting-oriented</li>
+            <li>structured, but not overly controlling</li>
+            <li>serious enough to feel worthwhile</li>
+            <li>social without being chaotic</li>
+          </ul>
+          <p>That usually points toward camps with projects, challenges, presentations, creative ownership, or topic depth rather than simple rotation-based activities.</p>
+
+          <h2 class="article-band-heading article-band-purple">Good Summer Program Formats for Older Kids</h2>
+          <p>Not every teen-oriented camp needs to look the same. The best format depends on the student.</p>
 
           <h3>🤖 STEM and Technology Programs</h3>
-          <p>These appeal to students who enjoy building, coding, or solving technical problems.</p>
+          <p>These appeal to students who enjoy building, coding, or solving technical problems. They can be a strong fit for kids who want hands-on structure and measurable progress.</p>
 
           <h3>🎨 Arts and Creative Programs</h3>
-          <p>These are often a strong fit for students who want expression, identity, and creative voice.</p>
+          <p>These are often a strong fit for students who want expression, identity, and creative voice. They can work especially well for students who like making things and sharing finished work.</p>
 
           <h3>💡 Leadership and Innovation Programs</h3>
-          <p>These appeal to students who are ready for larger questions about teamwork, decision-making, communication, business, and how the world works.</p>
+          <p>These appeal to students who are ready for larger questions about teamwork, decision-making, communication, business, and how the world works. They often feel more mature because students are asked to think, explain, and revise rather than simply participate.</p>
 
-          <h3>💸 Spotlight: The Money Club</h3>
+          <h2 class="article-band-heading article-band-gold">Why Project-Based Learning Works Better for This Age Group</h2>
+          <p>Project-based learning is often the sweet spot for ages 11–16. It gives students something concrete to build, but it also asks them to make choices, work with peers, and explain their thinking.</p>
+          <p>That matters because older kids often care as much about autonomy as they do about the subject itself. A project gives them a reason to stay engaged. It also gives the program a natural rhythm: research, build, feedback, revision, presentation.</p>
+          <p>For many students, that feels much more serious and satisfying than passively moving from one activity to another.</p>
+
+          <h2 class="article-band-heading article-band-teal">How to Choose a Camp Without It Feeling Childish or Too Academic</h2>
+          <p>A good question for families is not simply “Is this educational?” It is “What kind of learning experience is this actually going to feel like?”</p>
+          <p>The best programs for this age range usually avoid two traps:</p>
+          <ul class="content-list">
+            <li>they do not feel like babysitting with a theme</li>
+            <li>they do not feel like summer school in disguise</li>
+          </ul>
+          <p>Instead, they combine structure with challenge. They give students adult guidance, but also enough room to think, test, make decisions, and contribute something real.</p>
+
+          <h2 class="article-band-heading article-band-purple">Spotlight: The Money Club</h2>
           <p>The Money Club is built specifically for curious students ages 11–16.</p>
           <p>Hosted in downtown Toronto at the UTSU Student Commons, the four-week program explores financial literacy, entrepreneurship, pricing, product development, and public speaking through hands-on projects.</p>
-          <p>Students work with peers in a similar stage of development, develop ideas, test simple concepts, and present their thinking clearly. To go deeper, <a href="curriculum.html">see the curriculum</a>, <a href="faq.html">read the FAQ</a>, or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
+          <p>Students work with peers in a similar stage of development, develop ideas, test simple concepts, and present their thinking clearly. Families can <a href="schedule-pricing.html">see the full curriculum</a>, read <a href="how-it-works.html">how the program works</a>, review the <a href="schedule-pricing.html">schedule and pricing</a>, <a href="faq.html">read the FAQ</a>, or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
+          <p>For this age group, that matters. Students are old enough to handle bigger questions about products, money, incentives, and communication. They are also young enough to benefit from a guided, supervised environment where adults keep the pace clear and the expectations high.</p>
 
-          <h3>🌟 Final Thought</h3>
+          <h2 class="article-band-heading article-band-gold">Why This Age Band Is Easy to Overlook</h2>
+          <p>Many camp websites use broad phrases like “kids and teens,” but the actual experience often still skews young. That makes ages 11–16 easy to overlook in practice, even when they are listed in the marketing copy.</p>
+          <p>Parents comparing programs should look for real proof that the camp understands this age band: project depth, peer collaboration, presentation expectations, and language that treats students as emerging thinkers rather than just campers.</p>
+          <p>If your child also enjoys technical or topic-based learning, it may help to compare this page with our guides to <a href="article-stem-summer-camps.html">STEM summer camps in Toronto</a> and <a href="article-econ-summer-camps.html">entrepreneurship summer camps for teens</a>.</p>
+
+          <h2 class="article-band-heading article-band-teal">What a Good Peer Group Looks Like at This Age</h2>
+          <p>For older kids, peer fit matters almost as much as topic fit. A strong program brings together students who are ready for a similar level of responsibility, curiosity, and collaboration.</p>
+          <p>That often creates a better atmosphere right away. Students feel less self-conscious, more willing to share ideas, and more likely to take projects seriously when the rest of the group is doing the same.</p>
+          <p>That is one reason age-targeted camps often feel more valuable than broad “kids and teens” programming. They create a stronger social and intellectual match.</p>
+
+          <h2 class="article-band-heading article-band-purple">Questions Parents Can Ask Before Enrolling</h2>
+          <p>If you are comparing options for ages 11–16, it helps to ask:</p>
+          <ul class="content-list">
+            <li>Will this program feel mature enough for my child?</li>
+            <li>What do students actually produce by the end?</li>
+            <li>How much collaboration is built into the day?</li>
+            <li>Does the camp challenge students without feeling overly academic?</li>
+            <li>Would my child describe this as interesting, or just “something to do”?</li>
+          </ul>
+          <p>Those questions usually lead to better decisions than comparing camp labels alone.</p>
+
+          <h2 class="article-band-heading article-band-gold">Why This Age Range Often Benefits from Real Responsibilities</h2>
+          <p>Many students in this age band respond well when adults expect something real from them. That could be a presentation, a prototype, a research task, or a group responsibility. The specific task matters less than the signal it sends: you are capable of more than just showing up.</p>
+          <p>Programs that build in that kind of responsibility often feel more motivating for older kids because they make the work feel consequential. That is a major difference between a camp that simply occupies time and one that actually helps a student grow.</p>
+
+          <h2 class="article-band-heading article-band-teal">Final Thought</h2>
           <p>For ages 11–16, the right summer program can do a lot more than fill the calendar.</p>
-          <p>It can give students the chance to take themselves seriously, explore bigger ideas, and spend time with peers who are ready for the same thing.</p>
+          <p>It can give students the chance to take themselves seriously, explore bigger ideas, and spend time with peers who are ready for the same thing. The best options are not just “older kid versions” of younger camps. They are programs designed around the way pre-teens and teens actually learn.</p>
 
           <h3>Related Guides</h3>
           <ul class="content-list">
             <li><a href="article-best-summer-camps.html">Best summer camps in Toronto for curious kids</a></li>
             <li><a href="article-stem-summer-camps.html">STEM summer camps in Toronto</a></li>
-            <li><a href="article-econ-summer-camps.html">entrepreneurship summer camps for teens</a></li>
-            <li><a href="article-uni-summer-camps.html">summer programs near the University of Toronto</a></li>
+            <li><a href="article-older-kids-summer-camps.html">Summer camps for older kids and teens in Toronto</a></li>
+            <li><a href="article-econ-summer-camps.html">Entrepreneurship summer camps for teens</a></li>
+            <li><a href="article-uni-summer-camps.html">Summer programs near the University of Toronto</a></li>
+            <li><a href="article-teens-summer-camps.html">Summer camps for teens in Toronto</a></li>
+            <li><a href="article-financial-literacy-camps.html">Financial literacy camps for kids</a></li>
+            <li><a href="article-entrepreneurship-camps-toronto.html">Entrepreneurship camps in Toronto</a></li>
           </ul>
 
-          <h3>Ready to Explore The Money Club?</h3>
-          <p>The Money Club is a Toronto summer program for curious students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.</p>
-          <ul class="content-list">
-            <li><a href="curriculum.html">See the curriculum</a></li>
-            <li><a href="faq.html">Read frequently asked questions</a></li>
-            <li><a href="reserve-a-spot.html">Reserve a spot for Summer 2026</a></li>
-          </ul>
-          <div class="cta-block">
-            <a data-cta-label="Reserve a spot for Summer 2026" class="btn teal gloss cta-standard" href="reserve-a-spot.html">Reserve a Spot for Summer 2026</a>
-          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="content-section gold article-program-section">
-      <div class="content-banner gold">
-        <div class="wrap">
-          <h2 class="thankyou-title">Toronto Kids Summer Camp 2026: Economic Literacy</h2>
-        </div>
-      </div>
-      <div class="content-content">
-        <div class="article-facts-grid">
-          <div class="article-facts-card">
-            <h3>Program essentials</h3>
-            <ul>
-              <li>Ages: 11–16</li>
-              <li>Format: Summer day program</li>
-              <li>Duration: 4 weeks</li>
-              <li>When: Weekdays 9:30am-3:30pm, July 6–31 or August 4–28</li>
-              <li>Cost: $1500 per student</li>
-              <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
-              <li>Materials: Included (including student project inputs)</li>
-              <li>Experience: None required</li>
-            </ul>
+        <section class="article-facts-shell" aria-labelledby="article-quick-facts-heading">
+          <div class="article-facts-intro">
+            <div class="article-facts-kicker">Ready to Explore The Money Club?</div>
+            <h3 class="article-facts-heading" id="article-quick-facts-heading">Everything parents need to know</h3>
           </div>
-          <div class="article-facts-card">
-            <div class="article-facts-media">
-              <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+          <div class="article-facts-grid">
+            <div class="article-facts-card">
+              <h3>Program essentials</h3>
+              <ul>
+                <li>Ages: 11–16</li>
+                <li>Format: Summer day program</li>
+                <li>Duration: 4 weeks</li>
+                <li>When: Weekdays 9:30am-3:30pm, July &amp; August</li>
+                <li>Cost: $1,500 per student</li>
+                <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
+                <li>Materials: Included (including student project inputs)</li>
+                <li>Experience: None required</li>
+              </ul>
             </div>
-            <div class="article-facts-copy">
-              <h3>Ready for details?</h3>
-              <p>See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
+            <div class="article-facts-card">
+              <div class="article-facts-media">
+                <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+              </div>
+              <div class="article-facts-copy">
+                <h3>Ready for details?</h3>
+                <p>See exact dates, tuition, and cohort size.</p>
+              </div>
+              <a data-cta-label="View schedule &amp; pricing" class="btn gold gloss" href="how-it-works.html">View Schedule &amp; Pricing</a>
             </div>
-            <a data-cta-label="View schedule &amp; pricing" class="btn purple gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
           </div>
-        </div>
+        </section>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="inner">
-      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+      <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
+      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, design thinking, and public speaking.</div>
     </div>
   </footer>
 

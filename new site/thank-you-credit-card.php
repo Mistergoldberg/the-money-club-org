@@ -1605,7 +1605,7 @@ nav{
 
   <footer class="site-footer">
     <div class="inner">
-      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+      <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
       <div class="footer-tagline">A nonprofit teaching financial literacy, design thinking, and public speaking.</div>
     </div>

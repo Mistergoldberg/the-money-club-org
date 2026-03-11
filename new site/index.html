@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Toronto Kids Summer Camp 2026 | July & August | The Money Club.Org</title>
+  <title>Toronto Summer Camp for Teens (Ages 11–16) | Financial Literacy &amp; Entrepreneurship | The Money Club</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Toronto summer camp for ages 11–16 at UTSU Student Commons in downtown Toronto. In-person, project-based program in financial literacy, entrepreneurship, design thinking, and public speaking." />
-  <meta property="og:title" content="Toronto Kids Summer Camp 2026 | July &amp; August | The Money Club.Org" />
-  <meta property="og:description" content="Toronto summer camp for ages 11–16 at UTSU Student Commons in downtown Toronto. In-person, project-based program in financial literacy, entrepreneurship, design thinking, and public speaking." />
+  <meta name="description" content="A 4-week Toronto summer camp for students ages 11–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Hosted at the University of Toronto." />
+  <meta property="og:title" content="Toronto Summer Camp for Teens (Ages 11–16) | Financial Literacy &amp; Entrepreneurship | The Money Club" />
+  <meta property="og:description" content="A 4-week Toronto summer camp for students ages 11–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Hosted at the University of Toronto." />
   <meta property="og:url" content="https://the-money-club.org/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Toronto Kids Summer Camp 2026 | July &amp; August | The Money Club.Org" />
-  <meta name="twitter:description" content="Toronto summer camp for ages 11–16 at UTSU Student Commons in downtown Toronto. In-person, project-based program in financial literacy, entrepreneurship, design thinking, and public speaking." />
+  <meta name="twitter:title" content="Toronto Summer Camp for Teens (Ages 11–16) | Financial Literacy &amp; Entrepreneurship | The Money Club" />
+  <meta name="twitter:description" content="A 4-week Toronto summer camp for students ages 11–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Hosted at the University of Toronto." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/" />
   <script type="application/ld+json">
@@ -295,6 +295,17 @@
       line-height: var(--lh-body);
       padding-top: var(--topbar-height);
     }
+    .visually-hidden{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0, 0, 0, 0);
+      white-space:nowrap;
+      border:0;
+    }
 
     a{ color: inherit; text-decoration: none; }
 
@@ -556,8 +567,8 @@
       justify-content: center;
     }
     .hero-logo{
-      width: 152px;
-      height: 152px;
+      width: 136px;
+      height: 136px;
       display: block;
     }
     .hero-title-block{
@@ -627,21 +638,18 @@
     .section-banner.teal{ background: var(--teal); color: #ffffff; }
     .section-banner.heading-white{ color: #ffffff; }
     .section-banner.heading-white h2{ color: #ffffff; }
-    .section-banner h2 a{
-      color: inherit;
-      text-decoration: none;
-    }
-    .section-banner h2 a:hover,
-    .section-banner h2 a:focus-visible{
-      color: inherit;
-      text-decoration: none;
-    }
-    #camp-guides .section-banner h2 a,
-    #camp-guides .section-banner h2 a:hover,
-    #camp-guides .section-banner h2 a:focus-visible,
-    #camp-guides .section-banner h2 a:visited{
+    #camp-guides .guide-heading-link,
+    #camp-guides .guide-heading-link:hover,
+    #camp-guides .guide-heading-link:focus,
+    #camp-guides .guide-heading-link:focus-visible,
+    #camp-guides .guide-heading-link:active,
+    #camp-guides .guide-heading-link:visited{
       color: inherit !important;
       text-decoration: none !important;
+      text-decoration-line: none !important;
+      text-decoration-color: transparent !important;
+      text-decoration-style: solid !important;
+      text-underline-offset: 0 !important;
       border-bottom: 0 !important;
       box-shadow: none !important;
     }
@@ -825,13 +833,13 @@
     #what-students-leave-with .stem-visuals .btn{
       width: 100%;
       font-family: var(--font-display);
-      font-size: var(--btn-size-lg);
+      font-size: clamp(30px, 2.6vw, 44px);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      padding: 22px 24px;
-      border-radius: 18px;
-      min-height: 96px;
-      line-height: 0.95;
+      padding: 28px 24px;
+      border-radius: 22px;
+      min-height: 104px;
+      line-height: 0.9;
       text-align: center;
     }
     #what-students-leave-with .stem-visual .section-image{
@@ -851,8 +859,46 @@
     #what-students-leave-with .bullet-list li{
       margin: 8px 0;
     }
+    #camp-guides .guide-grid{
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.72fr);
+      gap: clamp(28px, 3vw, 46px);
+      align-items: start;
+    }
     #camp-guides .section-copy{
-      max-width: min(100%, 72rem);
+      display: grid;
+      gap: 22px;
+      max-width: none;
+    }
+    #camp-guides .guide-intro{
+      max-width: 44rem;
+    }
+    #camp-guides .guide-intro p{
+      margin: 0;
+    }
+    #camp-guides .guide-cta{
+      display: grid;
+      gap: 18px;
+      align-self: start;
+    }
+    #camp-guides .guide-cta .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: clamp(30px, 2.6vw, 44px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 28px 24px;
+      border-radius: 22px;
+      min-height: 104px;
+      line-height: 0.9;
+      text-align: center;
+    }
+    #radical-transparency .openbook-pie-card .btn{
+      font-size: clamp(30px, 2.6vw, 44px);
+      padding: 28px 24px;
+      border-radius: 22px;
+      min-height: 104px;
+      line-height: 0.9;
     }
     #who-runs-it .section-copy{
       max-width: min(100%, 78rem);
@@ -1748,6 +1794,9 @@
       nav{ display:none; }
       .split,
       .split.reverse{ grid-template-columns: 1fr; }
+      #camp-guides .guide-grid{
+        grid-template-columns: 1fr;
+      }
       #what-students-leave-with .stem-grid{
         grid-template-columns: 1fr;
       }
@@ -1884,6 +1933,13 @@
         text-wrap: initial;
       }
       #built-like-a-business .cta-fill{
+        min-height: 82px;
+        padding: 22px 20px;
+        font-size: clamp(24px, 7vw, 34px);
+      }
+      #what-students-leave-with .stem-visuals .btn,
+      #camp-guides .guide-cta .btn,
+      #radical-transparency .openbook-pie-card .btn{
         min-height: 82px;
         padding: 22px 20px;
         font-size: clamp(24px, 7vw, 34px);
@@ -2470,7 +2526,7 @@
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
+          <div class="hero-sub">A Toronto nonprofit teaching financial literacy, design thinking, and public speaking.</div>
         </div>
 
         <div class="hero-image banner">
@@ -2507,7 +2563,7 @@
             <div class="program-summary">
               <div class="program-summary-meta">Ages 11–16 | Downtown Toronto | 4 Weeks</div>
               <div class="program-summary-points">
-                <div class="program-summary-point">📍 UTSU Student Commons, 230 College Street — Downtown Toronto (near UofT)</div>
+                <div class="program-summary-point">📍 UTSU Student Commons, 230 College Street</div>
                 <div class="program-summary-point">📅 July 6–31 or Aug 4–28</div>
                 <div class="program-summary-point">💰 $1500</div>
                 <div class="program-summary-point">🧠 Build and launch real projects</div>
@@ -2543,7 +2599,7 @@
           </div>
           <div class="section-copy">
             <h3>Where It Happens</h3>
-            <p>The Money Club runs at the UTSU Student Commons, located at 230 College Street in downtown Toronto, near the University of Toronto campus.</p>
+            <p>The Money Club runs at the UTSU Student Commons, located at 230 College Street in downtown Toronto, on the University of Toronto campus.</p>
             <p>The location is convenient for families across central Toronto, including the Annex, Kensington Market, Chinatown, and surrounding downtown neighborhoods.</p>
             <p>Students meet in a supervised classroom environment where they develop real projects, collaborate with peers, and present their final ideas.</p>
             <div class="fact-list">
@@ -2752,20 +2808,18 @@
     <section class="section" id="camp-guides">
       <div class="section-banner purple">
         <div class="wrap">
-          <h2><a href="article-best-summer-camps.html">Guide to Summer Camps in Toronto</a></h2>
+          <h2><a class="guide-heading-link" href="article-best-summer-camps.html">Guide to Summer Camps in Toronto</a></h2>
         </div>
       </div>
       <div class="section-content">
-        <div class="section-copy">
-          <p>Toronto parents often ask how to choose the right summer camp for their child. We&apos;ve created a few simple guides to help families explore different types of programs, from broad camp options to STEM and entrepreneurship-focused learning.</p>
-          <ul class="module-list guide-links">
-            <li><a href="article-best-summer-camps.html">Best Summer Camps in Toronto for Curious Kids (2026 Guide)</a></li>
-            <li><a href="article-econ-summer-camps.html">Entrepreneurship Summer Camps for Teens (Canada Guide)</a></li>
-            <li><a href="article-stem-summer-camps.html">STEM Summer Camps in Toronto (2026 Guide)</a></li>
-            <li><a href="article-uni-summer-camps.html">Summer Programs Near the University of Toronto for Kids Guide</a></li>
-            <li><a href="article-older-kids-summer-camps.html">Summer Camps for Older Kids &amp; Teens in Toronto (Ages 11-16)</a></li>
-          </ul>
-          <p>These guides are designed to help families compare options and find a program that fits their child&apos;s interests.</p>
+        <div class="guide-grid">
+          <div class="section-copy guide-intro">
+            <p>Toronto parents often ask how to choose the right summer camp for their child. We&apos;ve created a few simple guides to help families explore different types of programs, from broad camp options to STEM and entrepreneurship-focused learning.</p>
+            <p>These guides are designed to help families compare options and find a program that fits their child&apos;s interests.</p>
+          </div>
+          <div class="guide-cta">
+            <a class="btn gold gloss cta-standard" href="article-best-summer-camps.html">Check out the guides</a>
+          </div>
         </div>
       </div>
     </section>

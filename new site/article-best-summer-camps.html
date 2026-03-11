@@ -1388,6 +1388,22 @@ nav{
       letter-spacing: var(--tracking-display);
       line-height: var(--lh-heading);
     }
+    .thankyou-card h2.article-band-heading{
+      display: block;
+      margin: 32px calc(50% - 50vw) 18px;
+      padding: 22px max(var(--pad), calc((100vw - var(--max-wide)) / 2 + var(--pad)));
+      color: #ffffff;
+      text-align: center;
+      line-height: 0.82;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .thankyou-card h2.article-band-heading:first-of-type{
+      margin-top: 24px;
+    }
+    .thankyou-card h2.article-band-purple{ background: var(--purple); }
+    .thankyou-card h2.article-band-gold{ background: var(--gold); }
+    .thankyou-card h2.article-band-teal{ background: var(--teal); }
     .thankyou-card h3{
       margin: 18px 0 6px;
       font-size: clamp(22px, 3vw, 30px);
@@ -1395,6 +1411,115 @@ nav{
       text-transform: none;
       letter-spacing: 0;
       line-height: var(--lh-body);
+    }
+    .article-intro-module{
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.18fr);
+      gap: 0;
+      margin: 22px 0 26px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
+    }
+    .article-intro-media{
+      min-height: 100%;
+      background: #efe9df;
+    }
+    .article-intro-media img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      aspect-ratio: 5 / 4;
+    }
+    .article-intro-summary{
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      background: #fffdf8;
+    }
+    .article-intro-label{
+      background: var(--purple);
+      color: #ffffff;
+      padding: 18px 26px 16px;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+    .article-intro-body{
+      display: grid;
+      gap: 18px;
+      padding: 0 26px 26px;
+    }
+    .article-intro-heading{
+      display: grid;
+      gap: 8px;
+    }
+    .article-intro-heading h1,
+    .article-intro-heading h3{
+      margin: 0;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 0.92;
+      font-family: var(--font-body);
+      font-weight: 700;
+    }
+    .article-intro-heading p{
+      margin: 0;
+      color: var(--muted);
+    }
+    .article-intro-meta{
+      display: grid;
+      gap: 0;
+      border-top: 2px solid rgba(140,98,167,0.24);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-intro-meta-row{
+      display: grid;
+      grid-template-columns: 148px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .article-intro-meta-row:first-child{
+      border-top: 0;
+    }
+    .article-intro-meta-label{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .article-intro-meta-row p{
+      margin: 0;
+    }
+    .article-intro-links{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+    .article-intro-links a{
+      font-weight: 600;
+    }
+    .article-read-time{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.6vw, 38px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+      justify-self: start;
+      box-shadow: 0 12px 22px rgba(240,180,58,0.24);
     }
     .share-btn{
       width: min(100%, 320px);
@@ -1492,11 +1617,11 @@ nav{
     }
     .article-facts-card h3{
       margin: 0;
-      font-size: clamp(28px, 3.8vw, 48px);
+      font-size: clamp(22px, 3vw, 30px);
       font-family: var(--font-body);
       text-transform: none;
       letter-spacing: 0;
-      line-height: 1.08;
+      line-height: var(--lh-body);
       font-weight: 700;
     }
     .article-facts-card ul{
@@ -1525,6 +1650,31 @@ nav{
       display: grid;
       gap: 12px;
     }
+    .article-facts-shell{
+      display: grid;
+      gap: 20px;
+      max-width: var(--max-wide);
+      margin: 24px auto 0;
+    }
+    .article-facts-intro{
+      display: grid;
+      gap: 8px;
+    }
+    .article-facts-kicker{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .article-facts-shell .article-facts-heading{
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: 0.8;
+    }
     .article-facts-copy p{
       margin: 0;
       color: var(--muted);
@@ -1534,15 +1684,16 @@ nav{
       width: 100%;
       margin-top: 6px;
       font-family: var(--font-display);
-      font-size: var(--btn-size-lg);
+      font-size: clamp(30px, 2.6vw, 44px);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      padding: 20px 24px;
+      padding: 24px 22px;
       border-radius: 18px;
       text-align: center;
       box-shadow: 0 14px 26px rgba(240,180,58,0.22);
+      line-height: 0.9;
+      min-height: 88px;
     }
-
     @media (min-width: 981px){
       .menu-btn{ display:none; }
     }
@@ -1611,6 +1762,40 @@ nav{
 
       body{ font-size: 23px; }
       h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
+      .thankyou-card h2.article-band-heading{
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding-left: var(--pad);
+        padding-right: var(--pad);
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-shell .article-facts-heading{
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-card .btn{
+        font-size: clamp(24px, 7vw, 34px);
+        min-height: 82px;
+        padding: 22px 20px;
+      }
+      .article-intro-module{
+        grid-template-columns: 1fr;
+      }
+      .article-intro-media img{
+        aspect-ratio: 4 / 3;
+      }
+      .article-intro-body{
+        padding: 0 22px 22px;
+      }
+      .article-intro-meta-row{
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .article-read-time{
+        width: 100%;
+        justify-self: stretch;
+      }
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
       .hero-sub{ font-size: inherit; line-height: 1.05; }
@@ -1732,124 +1917,216 @@ nav{
 
   <main>
     <section class="content-section purple">
-      <div class="content-banner purple">
-        <div class="wrap">
-          <h1 class="thankyou-title">🌞 Best Summer Camps in Toronto for Curious Kids (2026 Guide)</h1>
-        </div>
-      </div>
       <div class="content-content">
         <div class="reservation-card thankyou-card">
+          <section class="article-intro-module" aria-labelledby="article-intro-heading">
+            <div class="article-intro-media">
+              <picture>
+                <source media="(min-width: 769px)" srcset="assets/kid-presents.jpg" />
+                <img src="assets/kids-campus-1.jpg" alt="Students participating in a Money Club session" />
+              </picture>
+            </div>
+            <div class="article-intro-summary">
+              <div class="article-intro-label">At a Glance</div>
+              <div class="article-intro-body">
+                <div class="article-intro-heading">
+                  <h1 id="article-intro-heading">Best Summer Camps in Toronto for Curious Kids (2026 Guide)</h1>
+                  <p>A fast orientation for families comparing Toronto camp categories before they dive into the full guide.</p>
+                </div>
+                <div class="article-intro-meta">
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Best for</div>
+                    <p>Parents comparing Toronto camp categories and trying to match a program to a child’s interests.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Age range</div>
+                    <p>Ages 11–16, especially students ready for more purposeful summer learning.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Covers</div>
+                    <p>STEM, arts, older-kid, entrepreneurship, and university-area programs across Toronto.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Related guides</div>
+                    <div class="article-intro-links">
+                      <a href="article-stem-summer-camps.html">STEM Summer Camps in Toronto</a>
+                      <a href="article-teens-summer-camps.html">Summer Camps for Teens in Toronto</a>
+                      <a href="article-entrepreneurship-camps-toronto.html">Entrepreneurship Camps in Toronto</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="article-read-time">Read Time: 8 Minutes</div>
+              </div>
+            </div>
+          </section>
+
           <p>Every summer, Toronto parents face the same question:</p>
           <p><strong>How do you choose a summer camp that does more than just fill time?</strong></p>
           <p>There are plenty of camps in the city, but they tend to fall into a few familiar categories. Some focus on sports. Others emphasize arts and creativity. Many center on STEM skills like robotics, coding, and engineering.</p>
           <p>For families looking for something engaging, educational, and genuinely memorable, the best choice usually comes down to one thing: what kind of curiosity your child already has.</p>
-          <p>This guide breaks down the main types of summer camps in Toronto, which kids tend to thrive in each, and what parents should look for when comparing programs.</p>
+          <p>This guide breaks down the main types of summer camps in Toronto, which kids tend to thrive in each, and what parents should look for when comparing programs. If you want the fastest overview of the main program behind this site, start with the <a href="index.html">Toronto summer camp for teens</a> homepage and then use this guide to compare the broader landscape.</p>
+
+          <h2 class="article-band-heading article-band-purple">What Parents Should Look For in a Toronto Summer Camp</h2>
+          <p>When parents say they want a “good camp,” they usually mean a few things at once. They want a program their child will actually enjoy, but they also want structure, safety, good supervision, and a sense that the time is being used well.</p>
+          <p>In a city like Toronto, those questions get even more specific. Families often compare commute time, neighborhood feel, age fit, daily schedule, and whether the program seems shallow or genuinely well designed.</p>
+          <p>A useful shortlist usually includes these questions:</p>
+          <ul class="content-list">
+            <li>Is the camp designed for my child’s age, or does it skew too young?</li>
+            <li>Will my child spend the day building, moving, making, or mostly waiting?</li>
+            <li>Does the program have a clear structure and real adult leadership?</li>
+            <li>Is the location practical for a downtown Toronto family?</li>
+            <li>Will my child leave with something more than a few fun memories?</li>
+          </ul>
+          <p>That last point matters more than many parents expect. A summer program can be fun and still feel forgettable. The strongest camps usually give students a clearer sense of confidence, capability, and direction.</p>
+
+          <h2 class="article-band-heading article-band-gold">Different Types of Summer Camps in Toronto</h2>
+          <p>Toronto has no shortage of options, but most camps fit into a handful of broad categories. Understanding those categories makes it much easier to compare programs without getting overwhelmed by marketing language.</p>
 
           <h3>⚽ Sports Camps</h3>
           <p>Best for kids who want movement, teamwork, and outdoor energy.</p>
-          <p>Sports camps remain one of the most common options in Toronto. They usually focus on structured physical activity, group confidence, and skill development through sports like soccer, basketball, tennis, swimming, or multi-sport play.</p>
-          <p>For kids who love being active all day, sports camps can be a great fit.</p>
+          <p>Sports camps remain one of the most common options in Toronto. They usually focus on structured physical activity, group confidence, and skill development through soccer, basketball, tennis, swimming, or multi-sport play.</p>
+          <p>For kids who love being active all day, sports camps can be a great fit. They often work especially well for younger campers or students who simply want an energetic, social summer routine.</p>
 
           <h3>🤖 STEM Camps</h3>
           <p>Best for kids who enjoy building, testing, coding, and figuring out how things work.</p>
-          <p>STEM camps often include robotics, beginner programming, engineering challenges, and science experiments. They appeal to kids who enjoy problem-solving and hands-on technical projects. If that sounds like your child, our guide to <a href="article-stem-summer-camps.html">STEM summer camps in Toronto</a> goes deeper.</p>
+          <p>STEM camps often include robotics, beginner programming, engineering challenges, and science experiments. They appeal to kids who enjoy problem-solving and hands-on technical projects.</p>
+          <p>If that sounds like your child, our guide to <a href="article-stem-summer-camps.html">STEM summer camps in Toronto</a> goes deeper into the differences between robotics, coding, engineering, and more applied innovation-based programs.</p>
 
           <h3>🎨 Arts &amp; Creative Camps</h3>
           <p>Best for imaginative kids who love expression, performance, and making things.</p>
           <p>Arts camps can include visual arts, theatre, music, dance, filmmaking, crafts, and design. They are often a strong fit for kids who learn best through creative exploration rather than structured academics.</p>
+          <p>They can also be a good choice for students who need a camp experience that feels expressive and open-ended rather than intensely competitive.</p>
 
           <h3>🧑‍🎓 Camps for Older Kids &amp; Teens</h3>
           <p>Best for ages 11–16 who want something more challenging than a traditional day camp.</p>
-          <p>Many Toronto camps skew younger. Once kids hit middle school, parents often discover that the field gets thinner. Older kids usually want programs that feel more mature, collaborative, and meaningful. Our guide to <a href="article-older-kids-summer-camps.html">summer camps for older kids and teens in Toronto</a> breaks that down further.</p>
+          <p>Many Toronto camps skew younger. Once kids hit middle school, parents often discover that the field gets thinner. Older kids usually want programs that feel more mature, collaborative, and meaningful.</p>
+          <p>Our guide to <a href="article-older-kids-summer-camps.html">summer camps for older kids and teens in Toronto</a> explains why age fit changes the whole experience.</p>
 
           <h3>💡 Entrepreneurship &amp; Innovation Camps</h3>
           <p>Best for kids who ask big questions like “how does the world work?” or “how do ideas become real?”</p>
-          <p>A newer category of camp focuses on innovation, entrepreneurship, financial literacy, and systems thinking. These programs often explore product ideas, pricing, problem-solving, communication, and decision-making. For a closer comparison, see our guide to <a href="article-econ-summer-camps.html">entrepreneurship summer camps for teens</a>.</p>
+          <p>A newer category of camp focuses on innovation, entrepreneurship, financial literacy, and systems thinking. These programs often explore product ideas, pricing, problem-solving, communication, and decision-making.</p>
+          <p>For a closer comparison, see our guide to <a href="article-econ-summer-camps.html">entrepreneurship summer camps for teens</a>, which focuses more directly on business, money, and real-world project work.</p>
 
           <h3>🏛️ University-Area Summer Programs</h3>
           <p>Best for parents who like the atmosphere of an educational setting.</p>
-          <p>Some Toronto summer programs run on or near university campuses, which can feel more structured, inspiring, and future-oriented for both parents and students. We cover that in more detail in our guide to <a href="article-uni-summer-camps.html">summer programs near the University of Toronto</a>.</p>
+          <p>Some Toronto summer programs run on or near university campuses, which can feel more structured, inspiring, and future-oriented for both parents and students.</p>
+          <p>We cover that in more detail in our guide to <a href="article-uni-summer-camps.html">summer programs near the University of Toronto</a>.</p>
 
-          <h3>💸 Spotlight: The Money Club</h3>
+          <h2 class="article-band-heading article-band-teal">How Camp Choice Changes by Age and Interest</h2>
+          <p>A camp that feels exciting at age eight may feel too young by age twelve. That is one reason parents often struggle to compare Toronto camps fairly. Age alone changes what students want from the day.</p>
+          <p>Younger children often respond well to movement, novelty, and variety. Older kids are usually looking for something else: more ownership, more challenge, and a stronger sense that the work matters.</p>
+          <p>That is why families of students ages 11–16 often end up comparing camps through a different lens:</p>
+          <ul class="content-list">
+            <li>Will this feel mature enough?</li>
+            <li>Will my child actually be building something?</li>
+            <li>Will the instructors treat them like thinkers, not just participants?</li>
+            <li>Will there be enough peer collaboration and discussion?</li>
+          </ul>
+          <p>If your child is already asking larger questions about products, technology, creativity, money, or the way organizations work, then a more project-based camp usually makes more sense than a generic activity schedule.</p>
+
+          <h2 class="article-band-heading article-band-purple">What Makes a Camp Worth the Time and Money</h2>
+          <p>Parents rarely choose a summer camp for one reason alone. Cost matters. Location matters. Daily logistics matter. But what often matters most after the program ends is whether the experience actually felt valuable.</p>
+          <p>A camp tends to feel worth the investment when students:</p>
+          <ul class="content-list">
+            <li>stay engaged rather than passively following instructions</li>
+            <li>learn skills they can describe afterward</li>
+            <li>produce work they feel proud of</li>
+            <li>gain confidence speaking, collaborating, or problem-solving</li>
+            <li>come home with stronger questions, not just completed worksheets</li>
+          </ul>
+          <p>In practical terms, that usually means looking for a camp with a clear daily structure, real instructor involvement, and activities that add up to something meaningful over time.</p>
+
+          <h2 class="article-band-heading article-band-gold">How to Compare STEM, Arts, Sports, and Entrepreneurship Camps</h2>
+          <p>One useful way to compare camps is to think less about labels and more about what students actually do for most of the day.</p>
+          <p>Sports camps usually emphasize motion, drills, games, and team energy. Arts camps often emphasize expression, performance, and experimentation. STEM camps tend to focus on technical building or scientific problem-solving. Entrepreneurship and innovation programs usually center on ideas, users, products, pricing, communication, and presentation.</p>
+          <p>None of those formats is automatically “better.” The question is which environment helps your child show up with the most energy and curiosity.</p>
+          <p>For some families, the right answer is a pure category camp. For others, the strongest fit is a hybrid program that combines creative thinking, problem-solving, and real-world application.</p>
+
+          <h2 class="article-band-heading article-band-teal">Why Some Families Prefer Downtown Toronto Programs</h2>
+          <p>Location can quietly shape the whole camp experience. Many families prefer downtown Toronto programs because the commute is more manageable, the environment feels more connected to the real city, and the surrounding neighborhoods add a sense of energy and relevance.</p>
+          <p>For parents in central Toronto, proximity to places like the Annex, Kensington Market, Chinatown, and the University of Toronto area can make pickup and drop-off far less stressful than a camp that requires a long drive across the city.</p>
+          <p>Downtown programs can also feel more grounded in the real world. When students are learning about products, services, users, or communication, being in a city setting often makes those ideas feel more concrete.</p>
+
+          <h2 class="article-band-heading article-band-purple">Spotlight: The Money Club</h2>
           <p>The Money Club is a Toronto summer program for students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.</p>
-          <p>Hosted at the UTSU Student Commons in downtown Toronto, the program is designed for curious students who want more than a traditional camp experience. Instead of just learning one isolated skill, students explore how ideas become products, how pricing works, how incentives shape decisions, and how to present ideas clearly.</p>
-          <p>Over four weeks, students develop product ideas, test simple business concepts, explore costs and pricing, and present their work in a final showcase. You can <a href="curriculum.html">see the curriculum</a> or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
+          <p>Hosted at the UTSU Student Commons in downtown Toronto, the program is designed for curious students who want more than a traditional camp experience. Instead of learning one isolated skill, students explore how ideas become products, how pricing works, how incentives shape decisions, and how to present ideas clearly.</p>
+          <p>Over four weeks, students develop product ideas, test simple business concepts, explore costs and pricing, and present their work in a final showcase. Families who want the specifics can <a href="schedule-pricing.html">see the full program curriculum</a>, review <a href="how-it-works.html">how the program works day to day</a>, check the <a href="schedule-pricing.html">schedule and pricing</a>, or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
 
-          <h3>🧭 How to Choose the Right Camp</h3>
+          <h2 class="article-band-heading article-band-gold">A Quick Comparison for Curious Families</h2>
+          <p>If you are narrowing the field, these shorter guides may help you compare specific angles more quickly:</p>
+          <ul class="content-list">
+            <li><a href="article-stem-summer-camps.html">STEM summer camps in Toronto</a> for families comparing robotics, coding, engineering, and innovation-focused learning</li>
+            <li><a href="article-older-kids-summer-camps.html">summer camps for older kids and teens in Toronto</a> for families focused on ages 11–16</li>
+            <li><a href="article-econ-summer-camps.html">entrepreneurship summer camps for teens</a> for families interested in innovation, money, product thinking, and communication</li>
+            <li><a href="article-uni-summer-camps.html">summer programs near the University of Toronto</a> for families who care most about setting and location</li>
+          </ul>
+
+          <h2 class="article-band-heading article-band-teal">How to Choose the Right Camp</h2>
           <p>A simple way to narrow the field is to ask:</p>
           <p><strong>Does my child want movement and teamwork?</strong><br />A sports camp may be the best fit.</p>
           <p><strong>Do they love building, coding, or engineering?</strong><br />A STEM camp may be ideal.</p>
           <p><strong>Do they thrive through creative expression?</strong><br />An arts-based program may be strongest.</p>
           <p><strong>Do they ask bigger questions about money, business, systems, or how ideas become real?</strong><br />An innovation or entrepreneurship program may be the most engaging.</p>
+          <p>It can also help to ask what your child will be doing most of the day. A camp can sound impressive on paper but still feel passive in practice. The strongest match is usually the one that fits your child’s energy, maturity, and natural kind of curiosity.</p>
 
-          <h3>🌟 Final Thought</h3>
+          <h2 class="article-band-heading article-band-purple">Final Thought</h2>
           <p>The best summer camps do more than keep kids occupied.</p>
           <p>They help students build confidence, discover new interests, and spend time in an environment that actually matches their curiosity.</p>
-          <p>Toronto has no shortage of options. The real win is finding the one that feels right for your child. If you want a closer look at one entrepreneurship-focused option, <a href="curriculum.html">see the curriculum</a>, <a href="faq.html">read the FAQ</a>, or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
+          <p>Toronto has no shortage of options. The real win is finding the one that feels right for your child. If you want a closer look at one entrepreneurship-focused option, you can <a href="schedule-pricing.html">see the curriculum</a>, learn <a href="how-it-works.html">how the program works</a>, check <a href="schedule-pricing.html">schedule and pricing</a>, <a href="faq.html">read the FAQ</a>, or <a href="reserve-a-spot.html">reserve a spot for Summer 2026</a>.</p>
 
           <h3>Related Guides</h3>
           <ul class="content-list">
+            <li><a href="article-best-summer-camps.html">Best summer camps in Toronto for curious kids</a></li>
             <li><a href="article-stem-summer-camps.html">STEM summer camps in Toronto</a></li>
-            <li><a href="article-older-kids-summer-camps.html">summer camps for older kids and teens in Toronto</a></li>
-            <li><a href="article-econ-summer-camps.html">entrepreneurship summer camps for teens</a></li>
-            <li><a href="article-uni-summer-camps.html">summer programs near the University of Toronto</a></li>
+            <li><a href="article-older-kids-summer-camps.html">Summer camps for older kids and teens in Toronto</a></li>
+            <li><a href="article-econ-summer-camps.html">Entrepreneurship summer camps for teens</a></li>
+            <li><a href="article-uni-summer-camps.html">Summer programs near the University of Toronto</a></li>
+            <li><a href="article-teens-summer-camps.html">Summer camps for teens in Toronto</a></li>
+            <li><a href="article-financial-literacy-camps.html">Financial literacy camps for kids</a></li>
+            <li><a href="article-entrepreneurship-camps-toronto.html">Entrepreneurship camps in Toronto</a></li>
           </ul>
-
-          <h3>Ready to Explore The Money Club?</h3>
-          <p>The Money Club is a Toronto summer program for curious students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.</p>
-          <ul class="content-list">
-            <li><a href="curriculum.html">See the curriculum</a></li>
-            <li><a href="faq.html">Read frequently asked questions</a></li>
-            <li><a href="reserve-a-spot.html">Reserve a spot for Summer 2026</a></li>
-          </ul>
-          <div class="cta-block">
-            <a data-cta-label="Reserve a spot for Summer 2026" class="btn teal gloss cta-standard" href="reserve-a-spot.html">Reserve a Spot for Summer 2026</a>
-          </div>
         </div>
+        <section class="article-facts-shell" aria-labelledby="article-quick-facts-heading">
+          <div class="article-facts-intro">
+            <div class="article-facts-kicker">Ready to Explore The Money Club?</div>
+            <h3 class="article-facts-heading" id="article-quick-facts-heading">Everything parents need to know</h3>
+          </div>
+          <div class="article-facts-grid">
+            <div class="article-facts-card">
+              <h3>Program essentials</h3>
+              <ul>
+                <li>Ages: 11–16</li>
+                <li>Format: Summer day program</li>
+                <li>Duration: 4 weeks</li>
+                <li>When: Weekdays 9:30am-3:30pm, July &amp; August</li>
+                <li>Cost: $1,500 per student</li>
+                <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
+                <li>Materials: Included (including student project inputs)</li>
+                <li>Experience: None required</li>
+              </ul>
+            </div>
+            <div class="article-facts-card">
+              <div class="article-facts-media">
+                <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+              </div>
+              <div class="article-facts-copy">
+                <h3>Ready for details?</h3>
+                <p>See exact dates, tuition, and cohort size.</p>
+              </div>
+              <a data-cta-label="View schedule &amp; pricing" class="btn gold gloss" href="how-it-works.html">View Schedule &amp; Pricing</a>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
 
-    <section class="content-section gold article-program-section">
-      <div class="content-banner gold">
-        <div class="wrap">
-          <h2 class="thankyou-title">Toronto Kids Summer Camp 2026: Economic Literacy</h2>
-        </div>
-      </div>
-      <div class="content-content">
-        <div class="article-facts-grid">
-          <div class="article-facts-card">
-            <h3>Program essentials</h3>
-            <ul>
-              <li>Ages: 11–16</li>
-              <li>Format: Summer day program</li>
-              <li>Duration: 4 weeks</li>
-              <li>When: Weekdays 9:30am-3:30pm, July 6–31 or August 4–28</li>
-              <li>Cost: $1500 per student</li>
-              <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
-              <li>Materials: Included (including student project inputs)</li>
-              <li>Experience: None required</li>
-            </ul>
-          </div>
-          <div class="article-facts-card">
-            <div class="article-facts-media">
-              <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
-            </div>
-            <div class="article-facts-copy">
-              <h3>Ready for details?</h3>
-              <p>See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
-            </div>
-            <a data-cta-label="View schedule &amp; pricing" class="btn purple gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
     <div class="inner">
-      <img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+      <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, entrepreneurship, design thinking, and public speaking.</div>
+      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, design thinking, and public speaking.</div>
     </div>
   </footer>
 
