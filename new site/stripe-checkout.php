@@ -53,7 +53,7 @@ $allowed_returns = [
     'schedule-pricing.html',
     'how-it-works.html',
     'open-book-hook.html',
-    'curriculum.html',
+    'schedule-pricing.html',
     'index.html'
 ];
 if (!in_array($return_error, $allowed_returns, true)) {
@@ -116,7 +116,7 @@ if (!array_key_exists($preferred_session, $session_map)) {
 }
 
 if ($terms_agree === '') {
-    redirect_with_error($return_error, 'terms-agree', 'Please agree to the program terms and privacy policy.');
+    redirect_with_error($return_error, 'terms-agree', 'Please agree to the program terms and refund policy.');
 }
 
 if ($payment_method !== 'Credit Card') {
@@ -137,7 +137,7 @@ $allowed_returns = [
     'schedule-pricing.html',
     'how-it-works.html',
     'open-book-hook.html',
-    'curriculum.html',
+    'schedule-pricing.html',
     'index.html'
 ];
 if (!in_array($cancel_return, $allowed_returns, true)) {

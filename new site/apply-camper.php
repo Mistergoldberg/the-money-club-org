@@ -55,7 +55,7 @@ $allowed_returns = [
     'schedule-pricing.html',
     'how-it-works.html',
     'open-book-hook.html',
-    'curriculum.html',
+    'schedule-pricing.html',
     'index.html',
     'thank-you.html',
     'etransfer.html'
@@ -112,8 +112,8 @@ if ($student_name === '') {
 }
 
 $session_map = [
-    'session1' => 'Session 1: July 6, 2026 → July 31, 2026',
-    'session2' => 'Session 2: August 4, 2026 → August 28, 2026'
+    'session1' => 'Session 1: July 6-31, 2026',
+    'session2' => 'Session 2: August 4-28, 2026'
 ];
 
 if ($preferred_session === '' && $preferred_month !== '') {
@@ -125,7 +125,7 @@ if (!array_key_exists($preferred_session, $session_map)) {
 }
 
 if ($terms_agree === '') {
-    redirect_with_error($error_return, 'terms-agree', 'Please agree to the program terms and privacy policy.');
+    redirect_with_error($error_return, 'terms-agree', 'Please agree to the program terms and refund policy.');
 }
 
 if ($payment_method === '' || !in_array($payment_method, ['Credit Card', 'e-Transfer'], true)) {

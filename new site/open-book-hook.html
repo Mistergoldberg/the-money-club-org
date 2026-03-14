@@ -40,7 +40,7 @@
           "@id": "https://the-money-club.org/#organization",
           "name": "The Money Club",
           "url": "https://the-money-club.org/",
-          "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 11-16.",
+          "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 10-16.",
           "logo": {
             "@type": "ImageObject",
             "url": "https://the-money-club.org/assets/logo-500.png"
@@ -76,11 +76,11 @@
           "@type": "Course",
           "@id": "https://the-money-club.org/#summer-program",
           "name": "The Money Club Summer Program 2026",
-          "description": "In-person Toronto summer program for students ages 11–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects.",
+          "description": "In-person Toronto summer program for students ages 10–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning and real projects.",
           "provider": {
             "@id": "https://the-money-club.org/#organization"
           },
-          "typicalAgeRange": "11-16",
+          "typicalAgeRange": "10-16",
           "courseMode": "InPerson",
           "inLanguage": "en-CA",
           "location": {
@@ -88,7 +88,7 @@
           },
           "audience": {
             "@type": "PeopleAudience",
-            "suggestedMinAge": 11,
+            "suggestedMinAge": 10,
             "suggestedMaxAge": 16
           }
         }
@@ -807,12 +807,12 @@ nav{
       margin: 0 auto 14px;
       background:
         conic-gradient(
-          var(--purple) 0% 33.6%,
-          var(--teal) 33.6% 57.3%,
-          var(--gold) 57.3% 79.3%,
-          var(--ink) 79.3% 82%,
-          var(--slate) 82% 90%,
-          var(--rose) 90% 100%
+          var(--purple) 0% 34.75%,
+          var(--teal) 34.75% 48.08%,
+          var(--gold) 48.08% 69.82%,
+          var(--ink) 69.82% 72.6%,
+          var(--slate) 72.6% 91.17%,
+          var(--rose) 91.17% 100%
         );
       position: relative;
       display: grid;
@@ -1723,11 +1723,16 @@ nav{
       color: #ffffff;
     }
     .site-footer .footer-tagline{
-      max-width: var(--content-max);
       margin: 0 auto;
       color: #ffffff;
       font-size: var(--size-body);
       line-height: var(--lh-body);
+    }
+    @media (min-width: 981px){
+      .site-footer .footer-tagline{
+        width: 100%;
+        max-width: none;
+      }
     }
     .btn.outline{
       background: transparent;
@@ -1980,7 +1985,7 @@ nav{
         <a href="how-it-works.html">How it works</a>
         <a href="open-book-hook.html">Open-book financials</a>
         <a href="schedule-pricing.html">Curriculum</a>
-        <a href="who-runs-it.html">Who runs it</a>
+        <a href="who-runs-it.html">Mission</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
                 <a data-cta-label="Reserve a spot" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1993,7 +1998,7 @@ nav{
         <a href="how-it-works.html">How it works</a>
         <a href="open-book-hook.html">Open-book financials</a>
         <a href="schedule-pricing.html">Curriculum</a>
-        <a href="who-runs-it.html">Who runs it</a>
+        <a href="who-runs-it.html">Mission</a>
         <a href="faq.html">FAQ</a>
       </nav>
 
@@ -2012,7 +2017,7 @@ nav{
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A Toronto nonprofit teaching financial literacy, design thinking, and public speaking.</div>
+          <div class="hero-sub">A Toronto nonprofit maker camp that teaches financial literacy, design thinking, and public speaking.</div>
         </div>
 
         <div class="hero-image banner">
@@ -2073,23 +2078,23 @@ nav{
                 </tr>
                 <tr>
                   <td>Venue rental</td>
-                  <td>$3,345</td>
+                  <td>$3,261</td>
                 </tr>
                 <tr>
                   <td>Instructor</td>
-                  <td>$5,093</td>
+                  <td>$5,212</td>
                 </tr>
                 <tr>
                   <td>Materials</td>
-                  <td>$3,600</td>
+                  <td>$2,000</td>
                 </tr>
                 <tr>
                   <td>Overhead</td>
-                  <td>$1,209</td>
+                  <td>$2,785</td>
                 </tr>
                 <tr>
                   <td>Incidentals (10%)</td>
-                  <td>$1,337</td>
+                  <td>$1,324</td>
                 </tr>
                 <tr>
                   <td><strong>Total expenses</strong></td>
@@ -2101,7 +2106,7 @@ nav{
           </div>
           <div class="openbook-pie-card" aria-label="Program budget distribution chart">
             <h3 class="openbook-subheading">Expense Visualization</h3>
-            <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 33.6%, Materials 23.7%, Venue rental 22.0%, Insurance 2.7%, Overhead 8.0%, Incidentals 10.0%">
+            <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 35%, Materials 13%, Venue rental 22%, Insurance 3%, Overhead 19%, Incidentals 9%">
               <div class="openbook-pie-center">
                 <span class="label">Total</span>
                 <span class="value">$15,000</span>
@@ -2111,32 +2116,32 @@ nav{
               <li>
                 <span class="legend-dot" style="background: var(--purple);"></span>
                 <span class="legend-label">Instructor</span>
-                <span class="legend-value">$5,093 <small>33.6%</small></span>
+                <span class="legend-value">35%</span>
               </li>
               <li>
                 <span class="legend-dot" style="background: var(--teal);"></span>
                 <span class="legend-label">Materials</span>
-                <span class="legend-value">$3,600 <small>23.7%</small></span>
+                <span class="legend-value">13%</span>
               </li>
               <li>
                 <span class="legend-dot" style="background: var(--gold);"></span>
                 <span class="legend-label">Venue rental</span>
-                <span class="legend-value">$3,345 <small>22.0%</small></span>
+                <span class="legend-value">22%</span>
               </li>
               <li>
                 <span class="legend-dot" style="background: var(--ink);"></span>
                 <span class="legend-label">Insurance</span>
-                <span class="legend-value">$417 <small>2.7%</small></span>
+                <span class="legend-value">3%</span>
               </li>
               <li>
                 <span class="legend-dot" style="background: var(--slate);"></span>
                 <span class="legend-label">Overhead</span>
-                <span class="legend-value">$1,209 <small>8.0%</small></span>
+                <span class="legend-value">19%</span>
               </li>
               <li>
                 <span class="legend-dot" style="background: var(--rose);"></span>
                 <span class="legend-label">Incidentals</span>
-                <span class="legend-value">$1,337 <small>10.0%</small></span>
+                <span class="legend-value">9%</span>
               </li>
             </ul>
           </div>
@@ -2222,7 +2227,7 @@ nav{
                 </div>
                 <div class="field">
                   <label for="student-age">Child’s Age</label>
-                  <input id="student-age" name="student-age" type="number" min="11" max="17" step="1" inputmode="numeric" required />
+                  <input id="student-age" name="student-age" type="number" min="10" max="16" step="1" inputmode="numeric" required />
                   <small class="field-error">Child’s age is required.</small>
                 </div>
               </div>
@@ -2256,7 +2261,7 @@ nav{
                 <div class="field terms-consent">
                   <label for="terms-agree">
                     <input id="terms-agree" name="terms-agree" type="checkbox" required />
-                    <span>I agree to the <a href="/terms.html">program terms</a> and <a href="/privacy.html">refund policy</a>.</span>
+                    <span>I agree to the <a href="/terms.html">program terms</a> and <a href="program-terms.html">refund policy</a>.</span>
                   </label>
                   <small class="field-error">Please agree to the program terms and refund policy.</small>
                 </div>
@@ -2303,7 +2308,7 @@ nav{
     <div class="inner">
       <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A Toronto nonprofit teaching financial literacy, design thinking, and public speaking.</div>
+      <div class="footer-tagline">A Toronto nonprofit maker camp that teaches financial literacy, design thinking, and public speaking.</div>
     </div>
   </footer>
 
