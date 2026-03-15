@@ -952,11 +952,14 @@ nav{
       align-items:start;
     }
     .why-copy{
+      display:grid;
+      gap: 10px;
       font-size: inherit;
       line-height: inherit;
       color: var(--ink);
       max-width: var(--content-max);
     }
+    .why-copy p{ margin: 0; }
     .why-copy .lead{
       font-size: inherit;
       line-height: inherit;
@@ -986,13 +989,16 @@ nav{
     .why-illustration{
       border-radius: 18px;
       border: 1px solid var(--line);
-      overflow-y: auto;
+      overflow: hidden;
       background: #f2ede6;
+      aspect-ratio: 4 / 5;
     }
     .why-illustration img{
       display:block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
     .cta-large{
       display:inline-flex;
@@ -1071,21 +1077,25 @@ nav{
       align-items:start;
     }
     .curriculum-copy{
+      display:grid;
+      gap: 10px;
       max-width: var(--content-max);
     }
+    .curriculum-copy p{ margin: 0; }
     .curriculum-media{
       display:grid;
       gap: 14px;
     }
     .curriculum-photo{
       border-radius: 18px;
-      overflow-y: auto;
+      overflow: hidden;
       border: 1px solid var(--line);
     }
     .curriculum-photo img{
       display:block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
     .btn.teal{
       background: var(--teal);
@@ -1105,12 +1115,16 @@ nav{
     }
     .openbook-banner{
       background: var(--gold);
-      color: var(--ink);
+      color: #ffffff;
       padding: 26px 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
-    .openbook-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .openbook-banner h2{
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 0.8;
+      color: #ffffff;
+    }
     .openbook-content{
       max-width: var(--max-wide);
       margin: 0 auto;
@@ -1118,9 +1132,9 @@ nav{
     }
     .openbook-grid{
       display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 20px;
-      align-items: stretch;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 18px;
+      align-items: start;
     }
     .openbook-table{
       width: 100%;
@@ -1152,15 +1166,17 @@ nav{
     .openbook-card{
       border-radius: 18px;
       border: 1px solid var(--line);
-      overflow-y: auto;
+      overflow: hidden;
       background: #ffffff;
-      padding: 14px;
+      padding: 0;
+      aspect-ratio: 4 / 3;
     }
     .openbook-card img{
       display:block;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center;
     }
     .openbook-side{
       display:flex;
@@ -1229,10 +1245,16 @@ nav{
       margin-top: 12px;
     }
     .openbook-copy{
-      display:flex;
-      flex-direction: column;
-      height: 100%;
+      display:grid;
+      gap: 10px;
       max-width: var(--content-max);
+    }
+    .process-copy,
+    .process-side{
+      display:grid;
+      gap: 12px;
+      align-content: start;
+      height: auto;
     }
     .openbook-box{
       border: 1px solid var(--line);
@@ -1248,6 +1270,27 @@ nav{
       padding-left: 18px;
     }
     .openbook-box li{ margin: 6px 0; }
+    .openbook-box.process-plain{
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .openbook-box.process-plain h3{
+      margin: 0 0 6px;
+    }
+    .process-copy p,
+    .process-side p{ margin: 0; }
+    .process-copy ul,
+    .process-side ul{
+      margin: 0;
+      padding-left: 18px;
+    }
+    .process-intro-heading{
+      font-size: inherit;
+      line-height: var(--lh-body);
+    }
     .openbook-cta{
       margin-top: auto;
       padding-top: 16px;
@@ -1403,12 +1446,16 @@ nav{
     }
     .reserve-banner{
       background: var(--gold);
-      color: var(--ink);
+      color: #ffffff;
       padding: 26px 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
-    .reserve-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .reserve-banner h2{
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 0.8;
+      color: #ffffff;
+    }
     .reserve-content{
       max-width: var(--max-wide);
       margin: 0 auto;
@@ -1422,6 +1469,119 @@ nav{
       display:grid;
       gap: 10px;
       max-width: var(--content-max);
+    }
+    .reserve-copy p{ margin: 0; }
+    .section-banner.teal{
+      background: var(--teal);
+      color: #ffffff;
+    }
+    .location-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .location-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 20px var(--pad) 10px;
+      display:grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .location-copy{
+      display:grid;
+      gap: 10px;
+      max-width: var(--content-max);
+    }
+    .location-copy p{
+      margin: 0;
+    }
+    .location-map-card{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(17,17,17,0.06);
+      min-height: 360px;
+    }
+    .location-map{
+      display: block;
+      width: 100%;
+      min-height: 360px;
+      height: 100%;
+      border: 0;
+    }
+    #reserve.section-banner{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .curriculum-section .curriculum-photo{
+      aspect-ratio: 1 / 1;
+    }
+    .curriculum-section .curriculum-photo img{
+      object-position: center;
+    }
+    .why-section .why-grid{
+      align-items: stretch;
+    }
+    .why-section .why-media{
+      height: 100%;
+    }
+    .why-section .why-illustration{
+      height: 100%;
+      aspect-ratio: auto;
+    }
+    .why-section .why-illustration img{
+      object-position: center;
+    }
+    .openbook-section .openbook-card{
+      margin-top: 2px;
+    }
+    .quickfacts-content > .curriculum-photo{
+      aspect-ratio: 4 / 5;
+    }
+    .quickfacts-content > .curriculum-photo img{
+      object-position: center top;
+    }
+    .skills-copy{
+      gap: 8px;
+    }
+    .skills-copy .skill-item{
+      display:grid;
+      gap: 4px;
+    }
+    .skills-copy h3{
+      margin: 4px 0 0;
+      font-size: inherit;
+      line-height: 1.15;
+    }
+    .teachers-section .curriculum-photo{
+      height: 100%;
+      aspect-ratio: auto;
+    }
+    .teachers-section .curriculum-photo img{
+      object-position: center;
+    }
+    .teachers-section .curriculum-grid{
+      align-items: stretch;
+    }
+    .teachers-section .curriculum-media{
+      height: 100%;
+    }
+    .reserve-section .curriculum-photo{
+      aspect-ratio: 4 / 3;
+    }
+    .reserve-section .curriculum-photo img{
+      object-position: center top;
+    }
+    .curriculum-content,
+    .why-content,
+    .openbook-content,
+    .quickfacts-content,
+    .teachers-content,
+    .reserve-content{
+      padding-top: 20px;
+      padding-bottom: 10px;
     }
     .reserve-cta{
       display:grid;
@@ -1536,6 +1696,7 @@ nav{
       .teachers-grid{ grid-template-columns: 1fr; }
       .quickfacts-content{ grid-template-columns: 1fr; }
       .reserve-content{ grid-template-columns: 1fr; }
+      .location-content{ grid-template-columns: 1fr; }
       .field-row.three-col,
       .field-row.two-col{
         grid-template-columns: 1fr;
@@ -1606,6 +1767,9 @@ nav{
       .facts-card img{
         aspect-ratio: 1 / 1;
         object-fit: cover;
+      }
+      .location-map{
+        min-height: 240px;
       }
       footer.site-footer .inner{ text-align: center; }
       footer.site-footer .footer-logo{ width: 72px; height: 72px; }
@@ -1679,11 +1843,11 @@ nav{
       <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
-        <a class="nav-hiring" href="instructors.html">We're hiring</a>
-        <a href="how-it-works.html">How it works</a>
-        <a href="open-book-hook.html">Open-book financials</a>
-        <a href="schedule-pricing.html">Curriculum</a>
-        <a href="who-runs-it.html">Mission</a>
+        <a class="nav-hiring" href="instructors.html">Hiring</a>
+        <a href="how-it-works.html">How it Works</a>
+        <a href="open-book-hook.html">Transparency</a>
+        <a href="schedule-pricing.html">Program</a>
+        <a href="who-runs-it.html">About</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
                 <a data-cta-label="Reserve a spot" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1692,11 +1856,11 @@ nav{
       </div>
 
       <nav aria-label="Primary">
-        <a class="nav-hiring" href="instructors.html">We're hiring</a>
-        <a href="how-it-works.html">How it works</a>
-        <a href="open-book-hook.html">Open-book financials</a>
-        <a href="schedule-pricing.html">Curriculum</a>
-        <a href="who-runs-it.html">Mission</a>
+        <a class="nav-hiring" href="instructors.html">Hiring</a>
+        <a href="how-it-works.html">How it Works</a>
+        <a href="open-book-hook.html">Transparency</a>
+        <a href="schedule-pricing.html">Program</a>
+        <a href="who-runs-it.html">About</a>
         <a href="faq.html">FAQ</a>
       </nav>
 
@@ -1729,77 +1893,241 @@ nav{
     <section class="curriculum-section">
       <div class="curriculum-banner">
         <div class="wrap">
-          <h2>A real-world learning system.</h2>
+          <h2>How It Works</h2>
         </div>
       </div>
       <div class="curriculum-content">
         <div class="curriculum-grid">
           <div class="curriculum-media">
             <div class="curriculum-photo">
-              <img src="assets/student-ux.jpg" alt="Student presenting at a whiteboard" />
+              <img src="assets/cb-kids.jpg" alt="Students working together at a table" />
             </div>
           </div>
 
           <div class="curriculum-copy">
-            <div style="margin-top:10px;">During the summer session, students:</div>
-            <ul class="why-list">
-              <li>Create a product or service</li>
-              <li>Learn basic business math (costs, pricing, margin)</li>
-              <li>Work in teams</li>
-              <li>Practice communication and leadership</li>
-              <li>Prepare and present at a community pitch night</li>
-            </ul>
-            <div>Students also learn how to make decisions under constraints — because real businesses have limited resources.</div>
-            <div style="margin-top:10px;">By the end of the program, every student can explain how value and thus money is created — and speak confidently about their decisions.</div>
-            <div style="margin-top:14px;">
-              <a data-cta-label="Explore the curriculum" class="btn teal cta-standard" href="schedule-pricing.html">Explore the curriculum</a>
-            </div>
+            <p><strong>For students who like figuring out how things work.</strong></p>
+            <p>Some students are naturally curious about the systems around them.</p>
+            <p>They wonder things like:</p>
+            <p>Why do some products succeed while others fail?<br />Why do businesses price things the way they do?<br />Why do some ideas spread while others disappear?</p>
+            <p>The Money Club is designed for students who enjoy asking questions like these.</p>
+            <p>Over four weeks, students work in small teams to explore problems, design solutions, and test their ideas in the real world.</p>
           </div>
         </div>
       </div>
     </section>
 
 
+    <section class="why-section">
+      <div class="why-banner">
+        <div class="wrap">
+          <h2>The Core Idea</h2>
+        </div>
+      </div>
+      <div class="why-content">
+        <div class="why-grid">
+          <div class="why-copy">
+            <p><strong>Most programs focus on learning subjects.</strong></p>
+            <p>This program focuses on learning a process.</p>
+            <p>Students learn how to:</p>
+            <ul class="why-list">
+              <li>notice problems</li>
+              <li>generate ideas</li>
+              <li>test solutions</li>
+              <li>learn from feedback</li>
+              <li>improve their thinking</li>
+            </ul>
+            <p>This approach is used by designers, engineers, and entrepreneurs around the world.</p>
+            <p>Instead of memorizing concepts, students learn by building and experimenting.</p>
+          </div>
+          <div class="why-media">
+            <div class="why-illustration">
+              <img src="assets/student-packing.jpg" alt="Students working on a hands-on packaging activity" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="openbook-section">
+      <div class="openbook-banner">
+        <div class="wrap">
+          <h2>The Process Students Use</h2>
+        </div>
+      </div>
+      <div class="openbook-content">
+        <div class="openbook-grid">
+          <div class="openbook-copy process-copy">
+            <h3 class="process-intro-heading">The program is built around a simple framework.</h3>
+            <p>Good ideas rarely appear fully formed.</p>
+            <p>They develop through testing.</p>
+            <div class="openbook-box process-plain">
+              <h3>1. Notice Problems</h3>
+              <p>Students begin by observing small frustrations in everyday life.</p>
+              <p>What feels inefficient?<br />What could work better?</p>
+            </div>
+            <div class="openbook-box process-plain">
+              <h3>2. Generate Possible Solutions</h3>
+              <p>Teams brainstorm many ideas before choosing one to explore.</p>
+              <p>The focus is on possibility, not perfection.</p>
+            </div>
+            <div class="openbook-box process-plain">
+              <h3>3. Build a Prototype</h3>
+              <p>Students sketch or model their idea.</p>
+              <p>This might be:</p>
+              <ul>
+                <li>a product concept</li>
+                <li>a service idea</li>
+                <li>a simple app concept</li>
+                <li>a community solution</li>
+              </ul>
+            </div>
+            <div class="openbook-box process-plain">
+              <h3>4. Test the Idea</h3>
+              <p>Students gather feedback from potential users.</p>
+              <p>They discover which assumptions were right and which were wrong.</p>
+            </div>
+          </div>
+          <div class="openbook-side process-side">
+            <div class="openbook-card">
+              <img src="assets/student-ux-2.jpg" alt="Students reviewing work together on a laptop" />
+            </div>
+            <div class="openbook-box process-plain">
+              <h3>5. Improve the Idea</h3>
+              <p>Teams adjust their ideas based on what they learned.</p>
+              <p>This step often leads to the most interesting discoveries.</p>
+            </div>
+            <div class="openbook-box process-plain">
+              <h3>6. Present What They Learned</h3>
+              <p>At the end of each stage students explain:</p>
+              <ul>
+                <li>what they tried</li>
+                <li>what worked</li>
+                <li>what surprised them</li>
+              </ul>
+              <p>Learning to explain their thinking is a key part of the process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quickfacts-section">
+      <div class="quickfacts-banner">
+        <div class="wrap">
+          <h2>Skills Students Develop</h2>
+        </div>
+      </div>
+      <div class="quickfacts-content">
+        <div class="curriculum-photo">
+          <img src="assets/cb-kids.jpg" alt="Students building and writing together at a table" />
+        </div>
+        <div class="reserve-copy skills-copy">
+          <p><strong>Most programs focus on learning subjects.</strong></p>
+          <p><strong>Students leave the program with more than a project.</strong></p>
+          <p>They leave with a set of tools for exploring ideas.</p>
+          <div class="skill-item">
+            <h3>Problem Finding</h3>
+            <p>Seeing opportunities where others see inconveniences.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Design Thinking</h3>
+            <p>Breaking complex challenges into smaller steps.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Financial Literacy</h3>
+            <p>Understanding how money, incentives, and pricing shape decisions.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Communication</h3>
+            <p>Explaining ideas clearly and presenting them with confidence.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Intellectual Independence</h3>
+            <p>Learning to question assumptions and test new ideas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="teachers-section">
       <div class="teachers-banner">
         <div class="wrap">
-          <h2>Who Teaches</h2>
+          <h2>Who Will Love This Program?</h2>
         </div>
       </div>
       <div class="teachers-content">
-        <div class="teachers-grid">
-          <div class="teachers-item">
-            <div class="teachers-copy">
-              <h3>Designed by a practitioner.</h3>
-              <div>The Money Club.Org curriculum was designed by Jared G., a product strategist, educator, and writer with experience across:</div>
-              <ul class="teachers-list">
-                <li>Walmart</li>
-                <li>Loblaw</li>
-                <li>Canadian Tire</li>
-                <li>10+ years working with China-based manufacturing</li>
-                <li>Design thinking and product strategy</li>
-                <li>Teaching and curriculum development</li>
-              </ul>
-            </div>
-            <div class="teachers-cta">
+        <div class="curriculum-grid">
+          <div class="curriculum-copy">
+            <p>This program tends to attract students who enjoy:</p>
+            <ul class="teachers-list">
+              <li>asking lots of questions</li>
+              <li>inventing things</li>
+              <li>figuring out how systems work</li>
+              <li>debating ideas with friends</li>
+              <li>building projects that solve real problems</li>
+            </ul>
+            <p>If your child enjoys understanding how the world works, they often thrive in this environment.</p>
+            <h3>What a Typical Day Looks Like</h3>
+            <p><strong>Morning</strong><br />Team project work and idea development.</p>
+            <p><strong>Midday</strong><br />Workshops exploring design, money, and product thinking.</p>
+            <p><strong>Afternoon</strong><br />Testing ideas, improving projects, and presenting progress.</p>
+            <p>The program runs more like a studio or innovation lab than a traditional classroom.</p>
+          </div>
+          <div class="curriculum-media">
+            <div class="curriculum-photo">
+              <img src="assets/student-packing.jpg" alt="Students working together on a hands-on project" />
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="teachers-item">
-            <div class="teachers-copy">
-              <h3>Delivered by near-peer mentors.</h3>
-              <div>The program is delivered by:</div>
-              <ul class="teachers-list">
-                <li>University students and early-career professionals</li>
-                <li>Trained facilitators, not lecturers</li>
-                <li>Mentors close enough to real-world business to make it relatable</li>
-                <li>High-quality</li>
-                <li>Human</li>
-                <li>Affordable</li>
-                <li>Grounded in reality</li>
-              </ul>
-            </div>
+    <section class="reserve-section">
+      <div class="reserve-banner">
+        <div class="wrap">
+          <h2>The Final Presentation</h2>
+        </div>
+      </div>
+      <div class="reserve-content">
+        <div class="curriculum-media">
+          <div class="curriculum-photo">
+            <img src="assets/cb-kids.jpg" alt="Students building and writing together at a table" />
           </div>
+        </div>
+        <div class="reserve-copy">
+          <p>At the end of the program each team presents their project.</p>
+          <p>They explain:</p>
+          <ul class="teachers-list">
+            <li>the problem they explored</li>
+            <li>the solution they designed</li>
+            <li>what they learned from testing it</li>
+            <li>how their idea evolved</li>
+          </ul>
+          <p>The goal is not to create perfect businesses.</p>
+          <p>The goal is to understand how ideas evolve through experimentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section">
+      <div class="section-banner full-bleed teal heading-white">
+        <div class="wrap">
+          <h2>Where the Program Happens</h2>
+        </div>
+      </div>
+      <div class="location-content">
+        <div class="location-copy">
+          <p>The Money Club runs at the UTSU Student Commons at 230 College Street in downtown Toronto, near the University of Toronto.</p>
+          <p>Students spend the day in a supervised classroom environment where they can focus on workshops, project work, and presentations. The space also gives them access to breakout areas, lounge seating near the cafe, and a lunch area, creating a setting that feels both structured and comfortable. The building is also steps from the TTC, which makes commuting easier for families.</p>
+        </div>
+        <div class="location-map-card">
+          <iframe
+            class="location-map"
+            title="Map showing UTSU Student Commons at 230 College Street in Toronto"
+            src="https://www.google.com/maps?q=UTSU%20Student%20Commons%2C%20230%20College%20Street%2C%20Toronto%2C%20ON%20M5T%201R2&z=15&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </section>
