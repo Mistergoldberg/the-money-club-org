@@ -960,6 +960,16 @@ nav{
       max-width: var(--content-max);
     }
     .why-copy p{ margin: 0; }
+    .why-copy .body-section-heading{
+      margin: 0;
+      font-size: clamp(30px, 3.1vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+    .why-copy .body-section-kicker{
+      font-weight: 700;
+      line-height: 1.18;
+    }
     .why-copy .lead{
       font-size: inherit;
       line-height: inherit;
@@ -1082,6 +1092,23 @@ nav{
       max-width: var(--content-max);
     }
     .curriculum-copy p{ margin: 0; }
+    .curriculum-copy.intro-copy{
+      gap: 18px;
+    }
+    .curriculum-copy.intro-copy > h3{
+      margin: 0;
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+    }
+    .curriculum-copy.intro-copy > p{
+      line-height: 1.32;
+    }
+    .curriculum-copy.intro-copy > p:first-of-type{
+      font-weight: 700;
+      font-size: clamp(24px, 2.7vw, 34px);
+      line-height: 1.18;
+    }
     .curriculum-media{
       display:grid;
       gap: 14px;
@@ -1288,8 +1315,15 @@ nav{
       padding-left: 18px;
     }
     .process-intro-heading{
-      font-size: inherit;
-      line-height: var(--lh-body);
+      font-size: clamp(32px, 3.4vw, 44px);
+      line-height: 1.04;
+      letter-spacing: -0.015em;
+    }
+    .process-step-heading{
+      margin: 0 0 4px;
+      font-size: clamp(22px, 2.1vw, 28px);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
     }
     .openbook-cta{
       margin-top: auto;
@@ -1515,21 +1549,28 @@ nav{
       margin-top: var(--space-6);
       scroll-margin-top: var(--scroll-offset);
     }
+    .curriculum-section .curriculum-grid{
+      align-items: start;
+    }
+    .curriculum-section .curriculum-media{
+      height: auto;
+    }
     .curriculum-section .curriculum-photo{
-      aspect-ratio: 1 / 1;
+      height: auto;
+      aspect-ratio: 0.9 / 1;
     }
     .curriculum-section .curriculum-photo img{
-      object-position: center;
+      object-position: center top;
     }
     .why-section .why-grid{
-      align-items: stretch;
+      align-items: start;
     }
     .why-section .why-media{
-      height: 100%;
+      height: auto;
     }
     .why-section .why-illustration{
-      height: 100%;
-      aspect-ratio: auto;
+      height: auto;
+      aspect-ratio: 0.92 / 1;
     }
     .why-section .why-illustration img{
       object-position: center;
@@ -1538,7 +1579,7 @@ nav{
       margin-top: 2px;
     }
     .quickfacts-content > .curriculum-photo{
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 0.95 / 1;
     }
     .quickfacts-content > .curriculum-photo img{
       object-position: center top;
@@ -1546,30 +1587,70 @@ nav{
     .skills-copy{
       gap: 8px;
     }
+    .skills-copy .body-section-kicker{
+      font-weight: 700;
+      line-height: 1.18;
+    }
+    .skills-copy .body-section-heading{
+      margin: 0;
+      font-size: clamp(30px, 3.1vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
     .skills-copy .skill-item{
       display:grid;
-      gap: 4px;
+      gap: 2px;
     }
-    .skills-copy h3{
-      margin: 4px 0 0;
-      font-size: inherit;
-      line-height: 1.15;
+    .skills-copy h4{
+      margin: 6px 0 0;
+      font-size: clamp(22px, 2.1vw, 28px);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+    .curriculum-section .curriculum-copy:not(.intro-copy) > h3,
+    .teachers-section .curriculum-copy > h3{
+      font-size: clamp(30px, 3.1vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin: 0 0 4px;
+    }
+    .openbook-box.process-plain h3{
+      font-size: clamp(24px, 2.3vw, 30px);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      margin: 0 0 4px;
+    }
+    .daypart{
+      display:grid;
+      gap: 2px;
+    }
+    .daypart h4{
+      margin: 0;
+      font-size: clamp(22px, 2.1vw, 28px);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+    .reserve-copy .body-section-heading{
+      margin: 0;
+      font-size: clamp(30px, 3.1vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
     }
     .teachers-section .curriculum-photo{
-      height: 100%;
-      aspect-ratio: auto;
+      height: auto;
+      aspect-ratio: 0.93 / 1;
     }
     .teachers-section .curriculum-photo img{
       object-position: center;
     }
     .teachers-section .curriculum-grid{
-      align-items: stretch;
+      align-items: start;
     }
     .teachers-section .curriculum-media{
-      height: 100%;
+      height: auto;
     }
     .reserve-section .curriculum-photo{
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 1.12 / 1;
     }
     .reserve-section .curriculum-photo img{
       object-position: center top;
@@ -1900,17 +1981,19 @@ nav{
         <div class="curriculum-grid">
           <div class="curriculum-media">
             <div class="curriculum-photo">
-              <img src="assets/cb-kids.jpg" alt="Students working together at a table" />
+              <img src="assets/n-kid-1-p.jpg" alt="Students working together" />
             </div>
           </div>
 
-          <div class="curriculum-copy">
-            <p><strong>For students who like figuring out how things work.</strong></p>
-            <p>Some students are naturally curious about the systems around them.</p>
-            <p>They wonder things like:</p>
-            <p>Why do some products succeed while others fail?<br />Why do businesses price things the way they do?<br />Why do some ideas spread while others disappear?</p>
-            <p>The Money Club is designed for students who enjoy asking questions like these.</p>
-            <p>Over four weeks, students work in small teams to explore problems, design solutions, and test their ideas in the real world.</p>
+          <div class="curriculum-copy intro-copy">
+            <h3>Try Building Something Real</h3>
+            <p>Babysitting. Tutoring. Swim lessons. Selling things online.</p>
+            <p>A lot of kids already try to make money in small, real ways. The Money Club starts there.</p>
+            <p>Students work in teams, get a project budget, and try to build something people might actually want — a product, a service, or a simple community app.</p>
+            <p>They test the idea, get feedback, make changes, and see what happens when a real person has to decide: is this worth paying for?</p>
+            <p>It’s not about pretending to be entrepreneurs.</p>
+            <p>It’s about learning how money, value, and decisions work in the real world.</p>
+            <p>The Money Club.Org is a 4-week, instructor-led Toronto summer program for ages 10–16 built around financial literacy, entrepreneurship, and project-based learning.</p>
           </div>
         </div>
       </div>
@@ -1926,9 +2009,9 @@ nav{
       <div class="why-content">
         <div class="why-grid">
           <div class="why-copy">
-            <p><strong>Most programs focus on learning subjects.</strong></p>
+            <h3 class="body-section-heading">Most programs focus on learning subjects.</h3>
             <p>This program focuses on learning a process.</p>
-            <p>Students learn how to:</p>
+            <p class="body-section-kicker">Students learn how to:</p>
             <ul class="why-list">
               <li>notice problems</li>
               <li>generate ideas</li>
@@ -1961,17 +2044,17 @@ nav{
             <p>Good ideas rarely appear fully formed.</p>
             <p>They develop through testing.</p>
             <div class="openbook-box process-plain">
-              <h3>1. Notice Problems</h3>
+              <h4 class="process-step-heading">1. Notice Problems</h4>
               <p>Students begin by observing small frustrations in everyday life.</p>
               <p>What feels inefficient?<br />What could work better?</p>
             </div>
             <div class="openbook-box process-plain">
-              <h3>2. Generate Possible Solutions</h3>
+              <h4 class="process-step-heading">2. Generate Possible Solutions</h4>
               <p>Teams brainstorm many ideas before choosing one to explore.</p>
               <p>The focus is on possibility, not perfection.</p>
             </div>
             <div class="openbook-box process-plain">
-              <h3>3. Build a Prototype</h3>
+              <h4 class="process-step-heading">3. Build a Prototype</h4>
               <p>Students sketch or model their idea.</p>
               <p>This might be:</p>
               <ul>
@@ -1982,7 +2065,7 @@ nav{
               </ul>
             </div>
             <div class="openbook-box process-plain">
-              <h3>4. Test the Idea</h3>
+              <h4 class="process-step-heading">4. Test the Idea</h4>
               <p>Students gather feedback from potential users.</p>
               <p>They discover which assumptions were right and which were wrong.</p>
             </div>
@@ -1992,12 +2075,12 @@ nav{
               <img src="assets/student-ux-2.jpg" alt="Students reviewing work together on a laptop" />
             </div>
             <div class="openbook-box process-plain">
-              <h3>5. Improve the Idea</h3>
+              <h4 class="process-step-heading">5. Improve the Idea</h4>
               <p>Teams adjust their ideas based on what they learned.</p>
               <p>This step often leads to the most interesting discoveries.</p>
             </div>
             <div class="openbook-box process-plain">
-              <h3>6. Present What They Learned</h3>
+              <h4 class="process-step-heading">6. Present What They Learned</h4>
               <p>At the end of each stage students explain:</p>
               <ul>
                 <li>what they tried</li>
@@ -2019,30 +2102,30 @@ nav{
       </div>
       <div class="quickfacts-content">
         <div class="curriculum-photo">
-          <img src="assets/cb-kids.jpg" alt="Students building and writing together at a table" />
+          <img src="assets/n-kid-5.jpg" alt="Students interviewing a customer at a table" />
         </div>
         <div class="reserve-copy skills-copy">
-          <p><strong>Most programs focus on learning subjects.</strong></p>
-          <p><strong>Students leave the program with more than a project.</strong></p>
+          <p class="body-section-kicker">Most programs focus on learning subjects.</p>
+          <h3 class="body-section-heading">Students leave the program with more than a project.</h3>
           <p>They leave with a set of tools for exploring ideas.</p>
           <div class="skill-item">
-            <h3>Problem Finding</h3>
+            <h4>Problem Finding</h4>
             <p>Seeing opportunities where others see inconveniences.</p>
           </div>
           <div class="skill-item">
-            <h3>Design Thinking</h3>
+            <h4>Design Thinking</h4>
             <p>Breaking complex challenges into smaller steps.</p>
           </div>
           <div class="skill-item">
-            <h3>Financial Literacy</h3>
+            <h4>Financial Literacy</h4>
             <p>Understanding how money, incentives, and pricing shape decisions.</p>
           </div>
           <div class="skill-item">
-            <h3>Communication</h3>
+            <h4>Communication</h4>
             <p>Explaining ideas clearly and presenting them with confidence.</p>
           </div>
           <div class="skill-item">
-            <h3>Intellectual Independence</h3>
+            <h4>Intellectual Independence</h4>
             <p>Learning to question assumptions and test new ideas.</p>
           </div>
         </div>
@@ -2068,14 +2151,23 @@ nav{
             </ul>
             <p>If your child enjoys understanding how the world works, they often thrive in this environment.</p>
             <h3>What a Typical Day Looks Like</h3>
-            <p><strong>Morning</strong><br />Team project work and idea development.</p>
-            <p><strong>Midday</strong><br />Workshops exploring design, money, and product thinking.</p>
-            <p><strong>Afternoon</strong><br />Testing ideas, improving projects, and presenting progress.</p>
+            <div class="daypart">
+              <h4>Morning</h4>
+              <p>Team project work and idea development.</p>
+            </div>
+            <div class="daypart">
+              <h4>Midday</h4>
+              <p>Workshops exploring design, money, and product thinking.</p>
+            </div>
+            <div class="daypart">
+              <h4>Afternoon</h4>
+              <p>Testing ideas, improving projects, and presenting progress.</p>
+            </div>
             <p>The program runs more like a studio or innovation lab than a traditional classroom.</p>
           </div>
           <div class="curriculum-media">
             <div class="curriculum-photo">
-              <img src="assets/student-packing.jpg" alt="Students working together on a hands-on project" />
+              <img src="assets/kid-presents-larg-class.jpg" alt="Students presenting project" />
             </div>
           </div>
         </div>
@@ -2091,11 +2183,11 @@ nav{
       <div class="reserve-content">
         <div class="curriculum-media">
           <div class="curriculum-photo">
-            <img src="assets/cb-kids.jpg" alt="Students building and writing together at a table" />
+            <img src="assets/maker-event.jpg" alt="Students building and writing together at a table" />
           </div>
         </div>
         <div class="reserve-copy">
-          <p>At the end of the program each team presents their project.</p>
+          <h3 class="body-section-heading">At the end of the program each team presents their project.</h3>
           <p>They explain:</p>
           <ul class="teachers-list">
             <li>the problem they explored</li>
