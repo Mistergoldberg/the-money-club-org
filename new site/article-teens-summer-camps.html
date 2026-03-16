@@ -1398,7 +1398,7 @@ nav{
       margin: 32px calc(50% - 50vw) 18px;
       padding: 22px max(var(--pad), calc((100vw - var(--max-wide)) / 2 + var(--pad)));
       color: #ffffff;
-      text-align: center;
+      text-align: left;
       line-height: 0.82;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
@@ -1468,8 +1468,9 @@ nav{
     .article-intro-heading h1,
     .article-intro-heading h3{
       margin: 0;
-      font-size: clamp(32px, 4vw, 52px);
-      line-height: 0.92;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
       font-family: var(--font-body);
       font-weight: 700;
     }

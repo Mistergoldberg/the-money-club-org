@@ -953,7 +953,7 @@ nav{
     }
     .why-copy{
       display:grid;
-      gap: 10px;
+      gap: 12px;
       font-size: inherit;
       line-height: inherit;
       color: var(--ink);
@@ -962,9 +962,9 @@ nav{
     .why-copy p{ margin: 0; }
     .why-copy .body-section-heading{
       margin: 0;
-      font-size: clamp(30px, 3.1vw, 40px);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
     }
     .why-copy .body-section-kicker{
       font-weight: 700;
@@ -1088,26 +1088,26 @@ nav{
     }
     .curriculum-copy{
       display:grid;
-      gap: 10px;
+      gap: 12px;
       max-width: var(--content-max);
     }
     .curriculum-copy p{ margin: 0; }
     .curriculum-copy.intro-copy{
-      gap: 18px;
+      gap: 12px;
     }
     .curriculum-copy.intro-copy > h3{
       margin: 0;
-      font-size: clamp(34px, 4.2vw, 56px);
-      line-height: 1.02;
-      letter-spacing: -0.02em;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
     }
     .curriculum-copy.intro-copy > p{
-      line-height: 1.32;
+      line-height: var(--lh-body);
     }
     .curriculum-copy.intro-copy > p:first-of-type{
       font-weight: 700;
-      font-size: clamp(24px, 2.7vw, 34px);
-      line-height: 1.18;
+      font-size: inherit;
+      line-height: var(--lh-body);
     }
     .curriculum-media{
       display:grid;
@@ -1273,7 +1273,7 @@ nav{
     }
     .openbook-copy{
       display:grid;
-      gap: 10px;
+      gap: 12px;
       max-width: var(--content-max);
     }
     .process-copy,
@@ -1315,9 +1315,9 @@ nav{
       padding-left: 18px;
     }
     .process-intro-heading{
-      font-size: clamp(32px, 3.4vw, 44px);
-      line-height: 1.04;
-      letter-spacing: -0.015em;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
     }
     .process-step-heading{
       margin: 0 0 4px;
@@ -1373,7 +1373,7 @@ nav{
     .teachers-copy{
       display:flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       max-width: var(--content-max);
     }
     .teachers-list{
@@ -1501,7 +1501,7 @@ nav{
     }
     .reserve-copy{
       display:grid;
-      gap: 10px;
+      gap: 12px;
       max-width: var(--content-max);
     }
     .reserve-copy p{ margin: 0; }
@@ -1524,11 +1524,22 @@ nav{
     }
     .location-copy{
       display:grid;
-      gap: 10px;
+      gap: 12px;
       max-width: var(--content-max);
     }
     .location-copy p{
       margin: 0;
+    }
+    .why-copy,
+    .curriculum-copy,
+    .openbook-copy,
+    .process-copy,
+    .process-side,
+    .teachers-copy,
+    .reserve-copy,
+    .location-copy{
+      font-size: inherit;
+      line-height: var(--lh-body);
     }
     .location-map-card{
       border: 1px solid var(--line);
@@ -1593,9 +1604,9 @@ nav{
     }
     .skills-copy .body-section-heading{
       margin: 0;
-      font-size: clamp(30px, 3.1vw, 40px);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
     }
     .skills-copy .skill-item{
       display:grid;
@@ -1609,10 +1620,10 @@ nav{
     }
     .curriculum-section .curriculum-copy:not(.intro-copy) > h3,
     .teachers-section .curriculum-copy > h3{
-      font-size: clamp(30px, 3.1vw, 40px);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      margin: 0 0 4px;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
+      margin: 0;
     }
     .openbook-box.process-plain h3{
       font-size: clamp(24px, 2.3vw, 30px);
@@ -1632,9 +1643,9 @@ nav{
     }
     .reserve-copy .body-section-heading{
       margin: 0;
-      font-size: clamp(30px, 3.1vw, 40px);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
     }
     .teachers-section .curriculum-photo{
       height: auto;
@@ -1778,6 +1789,31 @@ nav{
       .quickfacts-content{ grid-template-columns: 1fr; }
       .reserve-content{ grid-template-columns: 1fr; }
       .location-content{ grid-template-columns: 1fr; }
+      .why-copy,
+      .curriculum-copy,
+      .openbook-copy,
+      .process-copy,
+      .process-side,
+      .teachers-copy,
+      .reserve-copy,
+      .location-copy{
+        gap: 14px;
+        max-width: none;
+      }
+      .why-list,
+      .teachers-list,
+      .quickfacts-list,
+      .openbook-box ul,
+      .process-copy ul,
+      .process-side ul{
+        padding-left: 20px;
+      }
+      .why-list li,
+      .teachers-list li,
+      .quickfacts-list li,
+      .openbook-box li{
+        margin: 8px 0;
+      }
       .field-row.three-col,
       .field-row.two-col{
         grid-template-columns: 1fr;
@@ -1794,9 +1830,9 @@ nav{
       .hero-title{ font-size: 60px !important; line-height: 0.9 !important; letter-spacing: -0.02em !important; }
       .hero-title .org{ font-size: 28px !important; }
 
-      body{ font-size: 23px; }
-      h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
-      .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
+      body{ font-size: 20px; }
+      h1, h2, h3{ font-size: 24px; line-height: 1.2; }
+      .subhead, .lede{ font-size: 20px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
       .hero-sub{ font-size: inherit; line-height: 1.05; }
       .btn{
@@ -1862,6 +1898,7 @@ nav{
       :root{
         --lh-body: 1.38;
       }
+      body{ font-size: 19px; }
 
       .topbar .btn{ display: none; }
     }
@@ -2177,26 +2214,24 @@ nav{
     <section class="reserve-section">
       <div class="reserve-banner">
         <div class="wrap">
-          <h2>The Final Presentation</h2>
+          <h2>The Maker Market</h2>
         </div>
       </div>
       <div class="reserve-content">
         <div class="curriculum-media">
           <div class="curriculum-photo">
-            <img src="assets/maker-event.jpg" alt="Students building and writing together at a table" />
+            <img src="assets/maker-event.jpg" alt="Students presenting ideas at a live maker market" />
           </div>
         </div>
         <div class="reserve-copy">
-          <h3 class="body-section-heading">At the end of the program each team presents their project.</h3>
-          <p>They explain:</p>
-          <ul class="teachers-list">
-            <li>the problem they explored</li>
-            <li>the solution they designed</li>
-            <li>what they learned from testing it</li>
-            <li>how their idea evolved</li>
-          </ul>
-          <p>The goal is not to create perfect businesses.</p>
-          <p>The goal is to understand how ideas evolve through experimentation.</p>
+          <h3 class="body-section-heading">The program ends with a live Maker Market.</h3>
+          <p>Every team sets up their idea and pitches it in a market-style format.</p>
+          <p>Some students present products.</p>
+          <p>Some present services.</p>
+          <p>Some present apps or community ideas.</p>
+          <p>Each participant gets virtual cash to spend on the ideas they think are strongest.</p>
+          <p>That means every team has to answer a real question:</p>
+          <p><strong>Why will someone choose one idea over another?</strong></p>
         </div>
       </div>
     </section>
