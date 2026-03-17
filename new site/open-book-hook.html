@@ -199,6 +199,72 @@
       margin: 0 auto;
       padding: 0 var(--pad);
     }
+    .section{
+      padding: clamp(52px, 10vw, 112px) 0;
+      position: relative;
+    }
+    .section-title{
+      display:grid;
+      gap: 12px;
+      margin-bottom: clamp(24px, 4vw, 40px);
+      max-width: 70ch;
+    }
+    .section-title h2{
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 0.8;
+    }
+    .eyebrow{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .lede{
+      font-size: var(--size-body);
+      line-height: var(--lh-body);
+      max-width: var(--content-max);
+      color: var(--muted);
+    }
+    .facts-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .facts-card{
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 24px;
+      display:grid;
+      gap: 8px;
+      align-content: start;
+      box-shadow: 0 18px 32px rgba(0,0,0,0.08);
+    }
+    .facts-card h3{
+      margin-bottom: 0;
+    }
+    .facts-card ul{
+      margin: 0;
+      padding-left: 18px;
+    }
+    .facts-card .btn{
+      font-family: var(--font-display);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      font-size: var(--btn-size-lg);
+    }
+    .role-media{
+      border-radius: var(--radius-md);
+      overflow-y: auto;
+      border: 1px solid var(--line);
+    }
+    .role-media img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .measure{
       max-width: var(--content-max);
     }
@@ -1302,6 +1368,10 @@ nav{
       background: var(--purple);
       color: #ffffff;
     }
+    .section-banner.teal{
+      background: var(--teal);
+      color: #ffffff;
+    }
     .section-banner.heading-white{
       color: #ffffff;
     }
@@ -1845,6 +1915,7 @@ nav{
       .teachers-grid{ grid-template-columns: 1fr; }
       .quickfacts-content{ grid-template-columns: 1fr; }
       .reserve-content{ grid-template-columns: 1fr; }
+      .facts-grid{ grid-template-columns: 1fr; }
 
       /* Mobile standards */
       .hero-logo{ display: none !important; }
@@ -1913,6 +1984,7 @@ nav{
       footer.site-footer .footer-logo{ width: 72px; height: 72px; }
       footer.site-footer .footer-title,
       footer.site-footer .footer-tagline{ font-size: 23px; }
+      footer.site-footer .footer-tagline{ line-height: 1.1; }
     }
   
     @media (max-width: 640px){
@@ -1981,12 +2053,10 @@ nav{
       <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
-        <a class="nav-hiring" href="instructors.html">Hiring</a>
-        <a href="how-it-works.html">How it Works</a>
+        <a href="how-it-works.html">Build & Sell</a>
+        <a href="schedule-pricing.html">Maker Market</a>
+        <a href="pricing.html">Pricing</a>
         <a href="open-book-hook.html">Transparency</a>
-        <a href="schedule-pricing.html">Program</a>
-        <a href="who-runs-it.html">About</a>
-        <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
                 <a data-cta-label="Reserve a spot" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
@@ -1994,11 +2064,10 @@ nav{
       </div>
 
       <nav aria-label="Primary">
-        <a class="nav-hiring" href="instructors.html">Hiring</a>
-        <a href="how-it-works.html">How it Works</a>
+        <a href="how-it-works.html">Build & Sell</a>
+        <a href="schedule-pricing.html">Maker Market</a>
+        <a href="pricing.html">Pricing</a>
         <a href="open-book-hook.html">Transparency</a>
-        <a href="schedule-pricing.html">Program</a>
-        <a href="who-runs-it.html">About</a>
         <a href="faq.html">FAQ</a>
       </nav>
 
@@ -2150,153 +2219,79 @@ nav{
     </section>
 
 
-    <section class="openbook-section">
-      <div class="openbook-banner">
-        <div class="wrap">
-          <h2>Built for learning — not profit</h2>
-        </div>
+    <section class="section-banner full-bleed teal heading-white">
+      <div class="wrap">
+        <h2>Our Mission</h2>
       </div>
+    </section>
+    <section>
       <div class="openbook-content">
         <div class="openbook-grid">
           <div class="openbook-copy">
-            <div class="openbook-intro">
-              <p>This program is designed as a closed-loop self sustaining learning system.</p>
-              <p>Family tuition funds instruction, materials, and student projects — any remaining proceeds are reinvested back into the program itself. Nothing is extracted. Nothing is hidden.</p>
-              <div class="openbook-visual mobile-visual">
-                <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel graphic" />
-              </div>
-              <p>The result is a self-sustaining model where students learn financial literacy by participating in a real, transparent economic system.</p>
+            <p class="subhead">Helping young people understand how the real world works — and how they can contribute to it.</p>
+            <p>At The Money Club, we believe young people are capable of far more than most programs ask of them. Instead of slogans or abstract lessons, students need practical tools: how money moves, how ideas become products, how problems are structured, and how thoughtful people improve the systems around them.</p>
+            <p>A central part of the program is design thinking — learning to observe carefully, understand people’s needs, and identify the small points of friction that make everyday systems inefficient or frustrating. When students learn to see these problems clearly, they can begin to turn them into opportunities for improvement.</p>
+            <div class="openbook-visual mobile-visual">
+              <img src="assets/flywheel.jpg" alt="Flywheel diagram showing how the program connects confidence, capability, and contribution" />
             </div>
-
-            <div class="openbook-cta-row">
-              <a data-cta-label="View schedule &amp; pricing" class="btn gold block gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
-              <a data-cta-label="Reserve a spot" class="btn gold block cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
-            </div>
+            <p>Through hands-on projects, students research problems, test ideas, build prototypes, and present their thinking clearly. In the process they develop financial literacy, entrepreneurial thinking, and the confidence to communicate their ideas.</p>
+            <p>Our goal is simple: help students become more capable, more confident, and more ready to contribute to the world around them.</p>
           </div>
-
           <div class="openbook-side">
             <div class="openbook-visual">
-              <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel graphic" />
+              <img src="assets/flywheel.jpg" alt="Flywheel diagram showing how the program connects confidence, capability, and contribution" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-banner full-bleed purple heading-white" id="reserve">
+    <section class="section-banner full-bleed purple heading-white">
       <div class="wrap">
-        <h2>Reserve a Spot</h2>
+        <h2>What This Looks Like in Practice</h2>
       </div>
     </section>
-    <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
+    <section>
+      <div class="openbook-content">
+        <div class="openbook-summary standout">
+          <ul class="quickfacts-list">
+            <li>Project-based learning instead of passive instruction</li>
+            <li>Financial literacy taught through real systems and decisions</li>
+            <li>Small cohorts that encourage collaboration and confidence</li>
+            <li>Practical skills: problem solving, communication, and initiative</li>
+          </ul>
+          <p>The program is supported by University of Toronto student mentors — near-peer role models studying fields such as education, economics, and business. Their presence brings energy and perspective to the classroom while students learn in a supervised environment guided by experienced adult leadership.</p>
+          <p>Ultimately, we believe resilient communities depend on people who can observe clearly, understand others, and build practical solutions. Helping young people develop those abilities early is the purpose of The Money Club.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="wrap">
-        <div class="reservation-row registration-form-container">
-          <div class="reservation-card">
-            <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
-<div class="form-loading" role="status" aria-live="polite">
-  <div class="spinner" aria-hidden="true"></div>
-  <div class="loading-text">Processing…</div>
-</div>
-
-            <form class="form-grid" action="apply-camper.php" method="post" novalidate>
-              <input type="hidden" name="return-to" value="thank-you.html" />
-              <input type="hidden" name="return-error" value="open-book-hook.html" />
-              <input type="hidden" name="return-cancel" value="open-book-hook.html" />
-              <div class="field-row three-col">
-                <div class="field">
-                  <label for="parent-name">Parent / Guardian Name</label>
-                  <input id="parent-name" name="parent-name" data-next="parent-email" type="text" autocomplete="name" required />
-                  <small class="field-error">Parent/guardian name is required.</small>
-                </div>
-                <div class="field">
-                  <label for="parent-email">Email Address</label>
-                  <input id="parent-email" name="parent-email" data-next="parent-phone" type="email" autocomplete="email" required />
-                  <small class="field-error">Enter a valid email address.</small>
-                </div>
-                <div class="field">
-                  <label for="parent-phone">Phone Number</label>
-                  <input id="parent-phone" name="parent-phone" data-next="student-name" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
-                  <small class="field-error">Phone number is required.</small>
-                </div>
-              </div>
-              <div class="field-row two-col">
-                <div class="field">
-                  <label for="student-name">Child’s Name</label>
-                  <input id="student-name" name="student-name" data-next="student-age" type="text" autocomplete="name" required />
-                  <small class="field-error">Child’s name is required.</small>
-                </div>
-                <div class="field">
-                  <label for="student-age">Child’s Age</label>
-                  <input id="student-age" name="student-age" type="number" min="10" max="16" step="1" inputmode="numeric" required />
-                  <small class="field-error">Child’s age is required.</small>
-                </div>
-              </div>
-              <div class="field">
-                <label class="section-heading">Choose A Session</label>
-                <div class="session-grid gloss-active is-locked">
-                  <label class="session-card">
-                    <input type="radio" name="preferred-session" value="session1" required />
-                    <div class="session-card-body">
-                      <div class="session-title">Session 1: July 6-31, 2026</div>
-                      <div class="session-availability" data-session="session1">30 of 30 Spots Available</div>
-                    </div>
-                  </label>
-                  <label class="session-card">
-                    <input type="radio" name="preferred-session" value="session2" />
-                    <div class="session-card-body">
-                      <div class="session-title">Session 2: August 4-28, 2026</div>
-                      <div class="session-availability" data-session="session2">30 of 30 Spots Available</div>
-                    </div>
-                  </label>
-                </div>
-                <small class="field-error">Please select a session.</small>
-              </div>
-
-              <div class="payment-section">
-                <h2>Make Payment</h2>
-                <div class="payment-meta">
-                  <div>Program fee: $1,500 + 13% HST</div>
-                  <div>Refunds available until June 1, 2026.</div>
-                </div>
-                <div class="field terms-consent">
-                  <label for="terms-agree">
-                    <input id="terms-agree" name="terms-agree" type="checkbox" required />
-                    <span>I agree to the <a href="program-terms.html">program terms</a> and <a href="program-terms.html">refund policy</a>.</span>
-                  </label>
-                  <small class="field-error">Please agree to the program terms and refund policy.</small>
-                </div>
-                <div class="payment-grid">
-                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true">
-                    <div class="payment-title">e-Transfer</div>
-                    <div class="payment-body">
-                      <div class="payment-total">Total: $1,695.00 CAD (includes HST)</div>
-                      <div class="payment-note">No processing fee.</div>
-                    </div>
-                  </button>
-                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true">
-                    <div class="payment-title">Credit Card</div>
-                    <div class="payment-body">
-                      <div class="payment-total">Total: $1,735.68 CAD (Includes HST + 2.4% surcharge)</div>
-                      <div class="payment-note">A 2.4% credit card surcharge applies to help cover card processing costs.</div>
-                    </div>
-                  </button>
-                </div>
-                <small class="field-error">Please choose a payment method.</small>
-              </div>
-              <div class="confirmation-grid is-hidden">
-                <div class="confirmation-card">
-                  <h2>Next Steps</h2>
-                  <div class="tight-stack">
-                    <p>Thank you — your spot is confirmed once payment is received. Next, you’ll receive an email with your permission forms and your receipt/confirmation.</p>
-                  </div>
-                </div>
-                <div class="confirmation-card">
-                  <h2>Need more information?</h2>
-                  <p><a class="meeting-link" href="https://calendly.com/me-mistergoldberg/30min">Book a meeting</a> and we’ll be happy to answer any questions.</p>
-                  <p><a class="meeting-link" href="schedule-pricing.html">View daily schedule &amp; 4-week program details</a></p>
-                </div>
-              </div>
-            </form>
+        <div class="section-title">
+          <div class="eyebrow">Everything you need to know</div>
+          <h2>Quick Facts</h2>
+        </div>
+        <div class="facts-grid">
+          <div class="facts-card">
+            <h3>Program essentials</h3>
+            <ul>
+              <li>Ages: 10–16</li>
+              <li>Format: Summer day program</li>
+              <li>Duration: 4 weeks</li>
+              <li>When: July &amp; August, Weekdays 9-5pm, Instruction periods 9:30-3:30pm</li>
+              <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
+              <li>Cost: $1,500 per student</li>
+              <li>Materials: Included (including student project inputs)</li>
+              <li>Experience: None required</li>
+              <li>Why: Build a real product and potentialy earn money</li>
+            </ul>
+          </div>
+          <div class="facts-card">
+            <div class="role-media">
+              <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+            </div>
+            <a data-cta-label="View schedule &amp; pricing" class="btn purple gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
           </div>
         </div>
       </div>

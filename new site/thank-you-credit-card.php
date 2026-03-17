@@ -1565,8 +1565,7 @@ nav{
         <a href="how-it-works.html">How it works</a>
         <a href="open-book-hook.html">Open-book financials</a>
         <a href="schedule-pricing.html">Curriculum</a>
-        <a href="who-runs-it.html">Mission</a>
-        <a href="contact-us.html">Contact us</a>
+        <a href="pricing.html">Mission</a>
         <a href="faq.html">FAQ</a>
                 <a data-cta-label="Reserve a spot" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
@@ -1578,7 +1577,7 @@ nav{
         <a href="how-it-works.html">How it works</a>
         <a href="open-book-hook.html">Open-book financials</a>
         <a href="schedule-pricing.html">Curriculum</a>
-        <a href="who-runs-it.html">Mission</a>
+        <a href="pricing.html">Mission</a>
         <a href="faq.html">FAQ</a>
       </nav>
 
