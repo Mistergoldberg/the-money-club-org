@@ -80,13 +80,14 @@ $transaction_id = isset($session['payment_intent']) && is_string($session['payme
 $purchase_currency = strtoupper((string)($session['currency'] ?? 'cad'));
 $purchase_value = isset($session['amount_total']) ? round(((int)$session['amount_total']) / 100, 2) : 0.0;
 
-$parent_name = $metadata['parent_name'] ?? '';
-$parent_email = $metadata['parent_email'] ?? '';
-$parent_phone = $metadata['parent_phone'] ?? '';
-$student_name = $metadata['student_name'] ?? '';
-$student_age = $metadata['student_age'] ?? '';
-$preferred_session = $metadata['preferred_session'] ?? '';
-$terms_agree = $metadata['terms_agree'] ?? 'Yes';
+$parent_name = trim((string)($metadata['parent_name'] ?? ''));
+$parent_email_raw = trim((string)($metadata['parent_email'] ?? ''));
+$parent_email = filter_var($parent_email_raw, FILTER_VALIDATE_EMAIL) ? $parent_email_raw : '';
+$parent_phone = trim((string)($metadata['parent_phone'] ?? ''));
+$student_name = trim((string)($metadata['student_name'] ?? ''));
+$student_age = trim((string)($metadata['student_age'] ?? ''));
+$preferred_session = trim((string)($metadata['preferred_session'] ?? ''));
+$terms_agree = trim((string)($metadata['terms_agree'] ?? 'Yes'));
 
 $session_map = [
     'session1' => 'Session 1: July 6-31, 2026',
@@ -162,6 +163,58 @@ if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
     log_debug('smtp_send_mail failed for ' . $parent_email . ' session=' . $session_id);
 } else {
     log_debug('smtp_send_mail success for ' . $parent_email . ' session=' . $session_id);
+}
+
+if ($parent_email !== '') {
+    $parent_subject = 'You’re in — one final step';
+    $greeting = $parent_name !== '' ? 'Hi ' . $parent_name . ',' : 'Hi there,';
+    $parent_approval_link = base_url() . '/parent-approval.html';
+    $parent_lines = [];
+    $parent_lines[] = $greeting;
+    $parent_lines[] = '';
+    $parent_lines[] = 'Your child’s spot in The Money Club.Org is confirmed.';
+    $parent_lines[] = '';
+    $parent_lines[] = 'Thanks for registering.';
+    $parent_lines[] = '';
+    $parent_lines[] = '---';
+    $parent_lines[] = '';
+    $parent_lines[] = '🧭 One final step';
+    $parent_lines[] = '';
+    $parent_lines[] = 'Please complete the parent approval form:';
+    $parent_lines[] = '';
+    $parent_lines[] = '👉 ' . $parent_approval_link;
+    $parent_lines[] = '';
+    $parent_lines[] = 'This takes 2–3 minutes and helps us confirm safety and contact details.';
+    $parent_lines[] = '';
+    $parent_lines[] = '---';
+    $parent_lines[] = '';
+    $parent_lines[] = '📍 Program details';
+    $parent_lines[] = '';
+    $parent_lines[] = 'UTSU Student Commons';
+    $parent_lines[] = 'University of Toronto (downtown)';
+    $parent_lines[] = '';
+    $parent_lines[] = 'Daily 9–5';
+    $parent_lines[] = '';
+    $parent_lines[] = 'Sessions:';
+    $parent_lines[] = '- July 6–31';
+    $parent_lines[] = '- August 4–28';
+    $parent_lines[] = '';
+    $parent_lines[] = '---';
+    $parent_lines[] = '';
+    $parent_lines[] = 'Once the form is submitted, you’re fully set.';
+    $parent_lines[] = '';
+    $parent_lines[] = 'If you have any questions, just reply to this email.';
+    $parent_lines[] = '';
+    $parent_lines[] = '— The Money Club.Org';
+    $parent_message = implode("\n", $parent_lines);
+
+    if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
+        log_debug('post-payment parent email failed for ' . $parent_email . ' session=' . $session_id);
+    } else {
+        log_debug('post-payment parent email sent to ' . $parent_email . ' session=' . $session_id);
+    }
+} else {
+    log_debug('post-payment parent email skipped: missing valid parent email for session=' . $session_id);
 }
 
 $csv_path = $data_dir . '/apply-camper-submissions.csv';

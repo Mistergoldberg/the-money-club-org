@@ -63,7 +63,7 @@ if ($first_name === '') {
     $first_name = 'there';
 }
 $safe_first_name = htmlspecialchars($first_name, ENT_QUOTES, 'UTF-8');
-$applicant_subject = 'Thank you for applying — The Money Club';
+$applicant_subject = 'Thank you for applying — The Money Club.Org';
 $applicant_message = 'Hi ' . $safe_first_name . ',<br><br>'
     . 'Thanks for applying to join The Money Club as a university instructor/mentor. We really appreciate you putting your hand up.<br><br>'
     . 'Our program is built around mentorship in the real world — not just teaching concepts, but helping young people build judgment, confidence, and communication by working through real constraints and real decisions. We’re looking for educators who can lead with clarity, curiosity, and care — and help shape the next generation of leaders.<br><br>'

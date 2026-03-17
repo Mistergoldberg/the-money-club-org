@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Parent Approval Form | The Money Club</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <meta name="description" content="Final parent approval and consent form for The Money Club summer program." />
+  <meta property="og:title" content="Parent Approval Form | The Money Club" />
+  <meta property="og:description" content="Complete the final parent approval and consent form for program participation." />
+  <meta property="og:url" content="https://the-money-club.org/parent-approval.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Parent Approval Form | The Money Club" />
+  <meta name="twitter:description" content="Complete the final parent approval and consent form for program participation." />
+  <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <link rel="canonical" href="https://the-money-club.org/parent-approval.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg: #f7f7f7;
+      --text: #111111;
+      --muted: #3d3d3d;
+      --line: #e5e1da;
+      --teal: #1e8a95;
+      --purple: #8c62a7;
+      --gold: #f0b43a;
+      --ink: #1a1a1a;
+
+      --font-body: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      --font-display: "Bebas Neue", sans-serif;
+      --tracking-display: 0.04em;
+      --lh-body: 1.45;
+      --lh-heading: 1.05;
+
+      --size-body: 23px;
+      --size-sm: clamp(14px, 1.2vw, 16px);
+      --size-lg: clamp(24px, 2.8vw, 34px);
+      --size-xl: clamp(38px, 6.2vw, 77px);
+
+      --max-wide: 1320px;
+      --content-max: 74ch;
+      --pad: clamp(18px, 3.5vw, 34px);
+
+      --space-3: 16px;
+      --space-4: 24px;
+      --space-5: 36px;
+      --space-6: 56px;
+
+      --topbar-height: 72px;
+      --scroll-offset: calc(var(--topbar-height) + var(--space-3));
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    html{ scroll-padding-top: var(--scroll-offset); }
+    body{
+      margin:0;
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      font-size: var(--size-body);
+      line-height: var(--lh-body);
+      padding-top: var(--topbar-height);
+    }
+
+    a{ color: inherit; text-decoration: none; }
+
+    .wrap{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+
+    .topbar{
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+    .topbar .inner{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: var(--topbar-height);
+      padding: 10px var(--pad);
+      max-width: var(--max-wide);
+      margin: 0 auto;
+    }
+
+    .menu-btn{
+      width: 36px;
+      height: 28px;
+      display:grid;
+      gap: 6px;
+      align-content:center;
+      justify-items:start;
+      cursor: pointer;
+    }
+    .menu-btn span{
+      display:block;
+      width: 26px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--purple);
+    }
+
+    .menu-panel{
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.98);
+      border: 0;
+      padding: calc(var(--topbar-height) + 18px) var(--pad) 24px;
+      display: none;
+      z-index: 1200;
+      overflow-y: auto;
+    }
+    .menu-panel.is-open{
+      display: grid;
+      gap: 8px;
+      align-content: start;
+      justify-items: center;
+      text-align: center;
+    }
+    .menu-close{
+      position: absolute;
+      top: 16px;
+      right: max(var(--pad), env(safe-area-inset-right));
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 40px;
+      line-height: 1;
+      padding: 4px;
+      cursor: pointer;
+    }
+    .menu-links{
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      align-content: start;
+      width: 100%;
+    }
+    .menu-panel a{
+      padding: 6px 6px;
+      font-weight: 500;
+      line-height: 1.1;
+      font-size: clamp(26px, 3.2vw, 40px);
+    }
+
+    nav{
+      display:flex;
+      gap: 0;
+      flex-wrap: wrap;
+      align-items:center;
+      color: var(--ink);
+      font-size: 23px;
+      flex: 1;
+      justify-content: space-evenly;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-family: var(--font-display);
+      font-size: clamp(16px, 1.6vw, 18px);
+      border: 1px solid transparent;
+      text-align: center;
+      line-height: 0.9;
+      color: #ffffff;
+      background: var(--purple);
+    }
+
+    .section-banner{
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--purple);
+      color: #ffffff;
+    }
+    .section-banner h1{
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 0.86;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      font-weight: 400;
+    }
+
+    .intro{
+      margin: var(--space-4) auto 0;
+      max-width: var(--content-max);
+      color: var(--ink);
+    }
+    .intro p{ margin: 0 0 10px; }
+    .operator-line{
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .approval-shell{
+      margin: var(--space-4) auto var(--space-6);
+      max-width: var(--content-max);
+    }
+    .approval-card{
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #ffffff;
+      padding: clamp(18px, 3vw, 28px);
+      display: grid;
+      gap: 18px;
+      box-shadow: 0 16px 28px rgba(0,0,0,0.06);
+    }
+
+    .form-success{
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--teal);
+      background: #f6fbfc;
+      padding: 14px 16px;
+      border-radius: 14px;
+      color: var(--ink);
+      font-weight: 600;
+      display: none;
+    }
+    .form-success.is-visible{ display: block; }
+
+    .form-grid{ display:grid; gap: 16px; }
+    .field-row{ display:grid; gap: 16px; }
+    .field-row.two-col{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .field{ display:grid; gap: 6px; }
+    .field label{
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .field input,
+    .field select,
+    .field textarea{
+      font: inherit;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid #c7c0b4;
+      background: #fcfaf6;
+      color: var(--ink);
+      width: 100%;
+    }
+    .field textarea{ min-height: 110px; resize: vertical; }
+
+    .field-error{
+      display: none;
+      color: #b00020;
+      font-size: 14px;
+    }
+    .field.is-invalid .field-error{ display: block; }
+    .field.is-invalid input,
+    .field.is-invalid select,
+    .field.is-invalid textarea{ border-color: #b00020; }
+
+    .form-section{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: #fff;
+      display:grid;
+      gap: 10px;
+    }
+    .form-section h2{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-family: var(--font-body);
+      line-height: 1.15;
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+    .form-section p{ margin: 0; }
+
+    .consent-list,
+    .payment-list{
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .radio-row{
+      display:flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .radio-row label{
+      display:flex;
+      gap: 8px;
+      align-items:center;
+      font-weight: 500;
+    }
+
+    .signature-note{
+      color: var(--muted);
+      font-size: var(--size-sm);
+      margin: 0;
+    }
+
+    .consent-check{
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #222222;
+      font-weight: 500;
+    }
+    .consent-check input{
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+    }
+
+    .submit-wrap{ margin-top: 4px; }
+    .submit-btn{
+      width: 100%;
+      border-radius: 14px;
+      background: var(--teal);
+      font-size: clamp(28px, 3vw, 40px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 18px;
+      border: 0;
+      cursor: pointer;
+      color: #ffffff;
+      font-family: var(--font-display);
+    }
+
+    footer.site-footer{
+      margin-top: var(--space-6);
+      border-top: 1px solid var(--line);
+      background: var(--teal);
+    }
+    .site-footer .inner{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 36px;
+      display:grid;
+      gap: 8px;
+      align-items:center;
+      text-align: center;
+    }
+    .site-footer .footer-logo{
+      width: 96px;
+      height: 96px;
+      margin: 0 auto;
+    }
+    .site-footer .footer-title{
+      font-family: var(--font-display);
+      font-size: clamp(24px, 2.8vw, 34px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .site-footer .footer-tagline{
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: 23px;
+      line-height: 1.1;
+    }
+
+    @media (min-width: 981px){ .menu-btn{ display:none; } }
+
+    @media (max-width: 980px){
+      nav{ display:none; }
+      .topbar .btn{ display: none; }
+      .field-row.two-col{ grid-template-columns: 1fr; }
+      .section-banner h1{ font-size: clamp(48px, 7vw, 80px); }
+      body{ font-size: 19px; }
+      .site-footer .footer-logo{ width: 72px; height: 72px; }
+      .site-footer .footer-title,
+      .site-footer .footer-tagline{ font-size: 23px; }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/typography.css?v=5" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="inner">
+      <div class="menu-btn" role="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu-panel" id="mobile-menu" aria-hidden="true">
+        <button class="menu-close" type="button" aria-label="Close menu">&times;</button>
+        <div class="menu-links">
+          <a href="how-it-works.html">Build &amp; Sell</a>
+          <a href="schedule-pricing.html">Maker Market</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="open-book-hook.html">Transparency</a>
+          <a href="faq.html">FAQ</a>
+          <a class="btn" href="reserve-a-spot.html">Reserve a spot</a>
+        </div>
+      </div>
+
+      <nav aria-label="Primary">
+        <a href="how-it-works.html">Build &amp; Sell</a>
+        <a href="schedule-pricing.html">Maker Market</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="open-book-hook.html">Transparency</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <a class="btn" href="reserve-a-spot.html">Reserve a spot</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-banner">
+      <div class="wrap">
+        <h1>Parent Approval &amp; Consent Form</h1>
+      </div>
+    </section>
+
+    <section class="intro wrap">
+      <p>Please complete this final form so we can confirm your child&rsquo;s participation and keep the information we need for safety and communication.</p>
+      <p class="operator-line">Humanoid Community Development Platforms Corporation<br />Operating as The Money Club.Org</p>
+    </section>
+
+    <section class="approval-shell">
+      <div class="approval-card">
+        <div class="form-success" id="form-success" role="status">Thanks &mdash; we&rsquo;ve received your parent approval form.</div>
+
+        <form class="approval-form form-grid" action="apply-parent-approval.php" method="post" novalidate>
+          <input type="hidden" name="return-to" value="parent-approval.html" />
+          <input type="hidden" name="return-error" value="parent-approval.html" />
+
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="student-name">Student Name</label>
+              <input id="student-name" name="student-name" type="text" autocomplete="name" required />
+              <small class="field-error">Student name is required.</small>
+            </div>
+            <div class="field">
+              <label for="student-age">Student Age</label>
+              <input id="student-age" name="student-age" type="number" min="10" max="16" step="1" inputmode="numeric" required />
+              <small class="field-error">Student age must be between 10 and 16.</small>
+            </div>
+          </div>
+
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="parent-name">Parent / Guardian Name</label>
+              <input id="parent-name" name="parent-name" type="text" autocomplete="name" required />
+              <small class="field-error">Parent/guardian name is required.</small>
+            </div>
+            <div class="field">
+              <label for="parent-email">Parent Email</label>
+              <input id="parent-email" name="parent-email" type="email" autocomplete="email" required />
+              <small class="field-error">Enter a valid parent email.</small>
+            </div>
+          </div>
+
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="parent-phone">Parent Phone</label>
+              <input id="parent-phone" name="parent-phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
+              <small class="field-error">Enter a valid parent phone number.</small>
+            </div>
+            <div class="field">
+              <label for="session">Session</label>
+              <select id="session" name="session" required>
+                <option value="">Select a session</option>
+                <option value="session1">July 6 &ndash; July 31, 2026</option>
+                <option value="session2">August 4 &ndash; August 28, 2026</option>
+              </select>
+              <small class="field-error">Please select a session.</small>
+            </div>
+          </div>
+
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="emergency-contact-name">Emergency Contact Name</label>
+              <input id="emergency-contact-name" name="emergency-contact-name" type="text" autocomplete="name" required />
+              <small class="field-error">Emergency contact name is required.</small>
+            </div>
+            <div class="field">
+              <label for="emergency-contact-phone">Emergency Contact Phone</label>
+              <input id="emergency-contact-phone" name="emergency-contact-phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
+              <small class="field-error">Enter a valid emergency contact phone number.</small>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="medical-notes">Medical / Safety Notes (optional)</label>
+            <textarea id="medical-notes" name="medical-notes" maxlength="2000"></textarea>
+          </div>
+
+          <div class="form-section">
+            <h2>Optional Photo / Media Consent</h2>
+            <div class="radio-row">
+              <label><input type="radio" name="photo-consent" value="yes" /> Yes</label>
+              <label><input type="radio" name="photo-consent" value="no" /> No</label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Consent &amp; Acknowledgement</h2>
+            <p>By submitting this form, I confirm that:</p>
+            <ul class="consent-list">
+              <li>My child is participating in a supervised, in-person program involving group activities and local movement in the surrounding area.</li>
+              <li>I understand there are ordinary risks associated with participation, including minor injuries and local travel.</li>
+              <li>I authorize program staff to seek emergency medical care for my child if required.</li>
+            </ul>
+          </div>
+
+          <div class="form-section">
+            <h2>Payment &amp; Refunds</h2>
+            <ul class="payment-list">
+              <li>The program fee is $1,500 per student.</li>
+              <li>A spot is confirmed once payment is received.</li>
+              <li>Refunds are available until June 1, 2026.</li>
+            </ul>
+          </div>
+
+          <div class="form-section">
+            <h2>Privacy</h2>
+            <p>Information is collected only to operate the program safely and communicate with families. It is not shared beyond what is reasonably necessary.</p>
+          </div>
+
+          <div class="form-section">
+            <h2>Parent / Guardian Full Name</h2>
+            <div class="field">
+              <label for="parent-signature-name">Typed Signature</label>
+              <input id="parent-signature-name" name="parent-signature-name" type="text" autocomplete="name" required />
+              <small class="field-error">Typed parent/guardian full name is required.</small>
+            </div>
+            <p class="signature-note">Your typed name and submission timestamp are recorded as approval.</p>
+            <div class="field">
+              <label class="consent-check" for="consent-agree">
+                <input id="consent-agree" name="consent-agree" type="checkbox" required />
+                <span>I confirm that I am the parent/guardian of the participant and agree to the approvals and acknowledgements above.</span>
+              </label>
+              <small class="field-error">Please confirm parent/guardian approval.</small>
+            </div>
+          </div>
+
+          <div class="submit-wrap">
+            <button type="submit" class="submit-btn" data-cta-label="Submit Parent Approval">Submit Parent Approval</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
+      <div class="footer-title">The Money Club<span class="org">.Org</span></div>
+      <div class="footer-tagline">A Toronto nonprofit maker camp that teaches financial literacy, design thinking, and public speaking.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var menuBtn = document.querySelector('.menu-btn');
+      var menuPanel = document.querySelector('.menu-panel');
+      var menuClose = document.querySelector('.menu-close');
+      if (!menuBtn || !menuPanel){ return; }
+
+      function closeMenu(){
+        menuPanel.classList.remove('is-open');
+        menuPanel.setAttribute('aria-hidden', 'true');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      function openMenu(){
+        menuPanel.classList.add('is-open');
+        menuPanel.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+      }
+
+      function toggleMenu(){
+        if (menuPanel.classList.contains('is-open')){ closeMenu(); }
+        else { openMenu(); }
+      }
+
+      menuBtn.addEventListener('click', function(e){ e.stopPropagation(); toggleMenu(); });
+      menuBtn.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          toggleMenu();
+        }
+      });
+
+      if (menuClose){
+        menuClose.addEventListener('click', closeMenu);
+      }
+
+      document.addEventListener('click', function(e){
+        if (!menuPanel.contains(e.target) && !menuBtn.contains(e.target)){
+          closeMenu();
+        }
+      });
+      document.addEventListener('keydown', function(e){ if (e.key === 'Escape'){ closeMenu(); } });
+    })();
+  </script>
+
+  <script>
+    (function(){
+      function updateFieldState(field){
+        if (!field){ return; }
+        var radios = field.querySelectorAll('input[type="radio"]');
+        var checkbox = field.querySelector('input[type="checkbox"]');
+        var input = field.querySelector('input, select, textarea');
+        var valid = true;
+
+        if (radios.length){
+          var requiredRadio = Array.prototype.some.call(radios, function(r){ return r.required; });
+          valid = !requiredRadio || Array.prototype.some.call(radios, function(r){ return r.checked; });
+        } else if (checkbox){
+          valid = !checkbox.required || checkbox.checked;
+        } else if (input){
+          valid = input.checkValidity();
+        }
+
+        field.classList.toggle('is-invalid', !valid);
+      }
+
+      var form = document.querySelector('.approval-form');
+      if (!form){ return; }
+
+      form.addEventListener('submit', function(e){
+        var fields = form.querySelectorAll('.field');
+        fields.forEach(function(field){ updateFieldState(field); });
+        if (!form.checkValidity()){
+          e.preventDefault();
+          var firstInvalid = form.querySelector(':invalid');
+          if (firstInvalid){ firstInvalid.focus(); }
+        }
+      });
+
+      form.addEventListener('input', function(e){ updateFieldState(e.target.closest('.field')); });
+      form.addEventListener('change', function(e){ updateFieldState(e.target.closest('.field')); });
+
+      var params = new URLSearchParams(window.location.search);
+      var success = document.getElementById('form-success');
+      if (success && params.get('status') === 'sent'){
+        success.classList.add('is-visible');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      if (params.get('status') === 'error'){
+        var fieldName = params.get('field');
+        var message = params.get('message') || 'Please check the highlighted field.';
+        if (fieldName){
+          var input = document.querySelector('[name="' + fieldName + '"]');
+          if (input){
+            var field = input.closest('.field');
+            if (field){
+              field.classList.add('is-invalid');
+              var errorEl = field.querySelector('.field-error');
+              if (errorEl){ errorEl.textContent = message; }
+              field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          }
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

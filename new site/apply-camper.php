@@ -205,44 +205,56 @@ $message = implode("\n", $lines);
 
 if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
     log_debug('smtp_send_mail failed for ' . $parent_email);
-    update_availability($availability_path, $availability_defaults, function (&$data) use ($preferred_session) {
-        $data[$preferred_session] = (int)$data[$preferred_session] + 1;
-        return ['ok' => true];
-    });
-    redirect_with_error($error_return, 'payment-method', 'Unable to send confirmation email. Please try again.');
+} else {
+    log_debug('smtp_send_mail success for ' . $parent_email . ' session=' . $preferred_session . ' payment=' . $payment_method);
 }
 
-log_debug('smtp_send_mail success for ' . $parent_email . ' session=' . $preferred_session . ' payment=' . $payment_method);
+$parent_subject = 'You’re in — one final step';
+$greeting = $parent_name !== '' ? 'Hi ' . $parent_name . ',' : 'Hi there,';
+$parent_approval_link = base_url() . '/parent-approval.html';
+$parent_lines = [];
+$parent_lines[] = $greeting;
+$parent_lines[] = '';
+$parent_lines[] = 'Your child’s spot in The Money Club.Org is confirmed.';
+$parent_lines[] = '';
+$parent_lines[] = 'Thanks for registering.';
+$parent_lines[] = '';
+$parent_lines[] = '---';
+$parent_lines[] = '';
+$parent_lines[] = '🧭 One final step';
+$parent_lines[] = '';
+$parent_lines[] = 'Please complete the parent approval form:';
+$parent_lines[] = '';
+$parent_lines[] = '👉 ' . $parent_approval_link;
+$parent_lines[] = '';
+$parent_lines[] = 'This takes 2–3 minutes and helps us confirm safety and contact details.';
+$parent_lines[] = '';
+$parent_lines[] = '---';
+$parent_lines[] = '';
+$parent_lines[] = '📍 Program details';
+$parent_lines[] = '';
+$parent_lines[] = 'UTSU Student Commons';
+$parent_lines[] = 'University of Toronto (downtown)';
+$parent_lines[] = '';
+$parent_lines[] = 'Daily 9–5';
+$parent_lines[] = '';
+$parent_lines[] = 'Sessions:';
+$parent_lines[] = '- July 6–31';
+$parent_lines[] = '- August 4–28';
+$parent_lines[] = '';
+$parent_lines[] = '---';
+$parent_lines[] = '';
+$parent_lines[] = 'Once the form is submitted, you’re fully set.';
+$parent_lines[] = '';
+$parent_lines[] = 'If you have any questions, just reply to this email.';
+$parent_lines[] = '';
+$parent_lines[] = '— The Money Club.Org';
+$parent_message = implode("\n", $parent_lines);
 
-$parent_subject = 'The Money Club.Org reservation — Payment Instructions';
-$credit_card_link = 'https://checkout.stripe.com/c/pay/cs_live_b1RVNM06xWT2MiNRIovexSQB0sDZVqNTSr7LPxKKQUuN4s45FGBTW3Q1Zl#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdkdWxOYHwnPyd1blppbHNgWjA0VnxNN0c2TGJvdzQwYn1MYW5TPXw1PV12VGNMMlI2VUN1UHRcaG9Gck09UXRSdEJ0amw9RDNUdU5XTnB9YGFRM3w3S3NIN2hDYHx9b1dyNklzVFF8a001NTVsaG5LdV9RbCcpJ2N3amhWYHdzYHcnP3F3cGApJ2dkZm5id2pwa2FGamlqdyc%2FJyY1Nz1mPD0nKSdpZHxqcHFRfHVgJz8naHBpcWxabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl';
-$safe_parent_name = htmlspecialchars($parent_name !== '' ? $parent_name : 'Parent', ENT_QUOTES, 'UTF-8');
-$safe_student_name = htmlspecialchars($student_name, ENT_QUOTES, 'UTF-8');
-$safe_student_age = htmlspecialchars((string) $student_age, ENT_QUOTES, 'UTF-8');
-$safe_session_label = htmlspecialchars($session_map[$preferred_session], ENT_QUOTES, 'UTF-8');
-$parent_message = 'Hi ' . $safe_parent_name . ',<br><br>'
-    . '<strong>Thanks</strong> — we’ve received your reservation details for The Money Club.<br><br>'
-    . '<strong>Student:</strong> ' . $safe_student_name . ' (Age ' . $safe_student_age . ')<br>'
-    . '<strong>Session:</strong> ' . $safe_session_label . '<br><br>'
-    . "If you've already made payment - thank you for investing in the local economy.<br><br>"
-    . 'To confirm your seat, please complete your payment using one of the options below:<br><br>'
-    . '<strong>Option 1: Credit Card (instant confirmation)</strong><br>'
-    . '<a href="' . $credit_card_link . '">Click here to pay by credit card</a><br><br>'
-    . 'Total by credit card: $1,735.68 CAD (includes HST + 2.4% surcharge)<br>'
-    . 'Note: The 2.4% credit card processing surcharge is non-refundable (refunds available until June 1, 2026).<br><br>'
-    . '<strong>Option 2: Interac e-Transfer (no processing fee)</strong><br>'
-    . 'To avoid the 2.4% credit card processing surcharge, you can pay by e-Transfer instead:<br><br>'
-    . '<strong>Send to:</strong> <a href="mailto:info@the-money-club.org">info@the-money-club.org</a><br>'
-    . '<strong>Amount:</strong> $1,695.00 CAD (includes HST)<br>'
-    . '<strong>Message / Note (required):</strong> ' . $safe_student_name . '<br><br>'
-    . 'We’ll email confirmation within 24 hours of receiving your transfer.<br><br>'
-    . 'After payment, you’ll receive a receipt/confirmation and we’ll send the Student Registration & Consent Form.<br><br>'
-    . '<strong>Questions?</strong> Reply to this email or contact us at <a href="mailto:info@the-money-club.org">info@the-money-club.org</a> / 437-239-8602.<br><br>'
-    . '— The Money Club Team';
-if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from, 'The Money Club.Org', true)) {
-    log_debug('parent payment instructions email failed for ' . $parent_email);
+if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
+    log_debug('post-registration parent email failed for ' . $parent_email);
 } else {
-    log_debug('parent payment instructions email sent to ' . $parent_email);
+    log_debug('post-registration parent email sent to ' . $parent_email);
 }
 
 $csv_path = $data_dir . '/apply-camper-submissions.csv';
