@@ -257,10 +257,12 @@
     }
     .role-media{
       border-radius: var(--radius-md);
-      overflow-y: auto;
+      overflow: hidden;
       border: 1px solid var(--line);
+      aspect-ratio: 16 / 10;
     }
     .role-media img{
+      display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -1265,11 +1267,7 @@ nav{
     .quickfacts-content{
       max-width: var(--max-wide);
       margin: 0 auto;
-      padding: 24px var(--pad) 10px;
-      display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 20px;
-      align-items: stretch;
+      padding: clamp(42px, 6vw, 78px) var(--pad) 18px;
     }
     .quickfacts-list{
       margin: 12px 0 0;
@@ -1381,6 +1379,9 @@ nav{
     .section-banner h2{
       font-size: clamp(34px, 5vw, 56px);
       line-height: 0.8;
+    }
+    .stacked-section{
+      margin-top: var(--space-6);
     }
 
     .form-grid{
@@ -1913,7 +1914,6 @@ nav{
         border-top: 1px solid var(--line);
       }
       .teachers-grid{ grid-template-columns: 1fr; }
-      .quickfacts-content{ grid-template-columns: 1fr; }
       .reserve-content{ grid-template-columns: 1fr; }
       .facts-grid{ grid-template-columns: 1fr; }
 
@@ -2219,7 +2219,7 @@ nav{
     </section>
 
 
-    <section class="section-banner full-bleed teal heading-white">
+    <section class="section-banner full-bleed teal heading-white stacked-section">
       <div class="wrap">
         <h2>Our Mission</h2>
       </div>
@@ -2246,7 +2246,7 @@ nav{
       </div>
     </section>
 
-    <section class="section-banner full-bleed purple heading-white">
+    <section class="section-banner full-bleed purple heading-white stacked-section">
       <div class="wrap">
         <h2>What This Looks Like in Practice</h2>
       </div>
@@ -2266,12 +2266,13 @@ nav{
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="section-title">
-          <div class="eyebrow">Everything you need to know</div>
+    <section class="quickfacts-section">
+      <div class="section-banner full-bleed purple heading-white">
+        <div class="wrap">
           <h2>Quick Facts</h2>
         </div>
+      </div>
+      <div class="quickfacts-content">
         <div class="facts-grid">
           <div class="facts-card">
             <h3>Program essentials</h3>
@@ -2289,9 +2290,9 @@ nav{
           </div>
           <div class="facts-card">
             <div class="role-media">
-              <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+              <img src="assets/student-ux.jpg" alt="Students collaborating during a Money Club session" />
             </div>
-            <a data-cta-label="View schedule &amp; pricing" class="btn purple gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
+            <a data-cta-label="View schedule" class="btn purple gloss cta-standard" href="schedule-pricing.html">View Schedule</a>
           </div>
         </div>
       </div>

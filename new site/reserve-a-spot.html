@@ -991,28 +991,58 @@ nav{
     .reserve-banner{
       background: var(--teal);
       color: #ffffff;
-      height: var(--reserve-banner-height);
-      padding: 0;
+      padding: 26px 0 30px;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1200;
-      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
-      display: flex;
-      align-items: center;
+      position: static;
+      box-shadow: none;
     }
-    .reserve-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; color: #ffffff; }
-    .reserve-banner .wrap{ text-align: center; }
+    .reserve-banner h2{
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 0.86;
+      color: #ffffff;
+    }
+    .reserve-banner .wrap{
+      text-align: center;
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+    }
     .reserve-banner .logo-main{
-      width: clamp(50px, 8.4vw, 95px);
+      width: clamp(50px, 5.4vw, 72px);
       height: auto;
       margin: 0 auto 10px;
       display: block;
     }
-    main{ padding-top: var(--reserve-banner-height); }
+    .reserve-subheading{
+      margin: 0;
+      font-size: clamp(22px, 2.2vw, 32px);
+      line-height: 1.2;
+      max-width: 34ch;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    .reserve-support{
+      margin: 0;
+      font-size: clamp(16px, 1.4vw, 22px);
+      line-height: 1.25;
+      color: #ffffff;
+    }
+    .reserve-secondary-link{
+      margin: 0;
+      font-size: clamp(16px, 1.2vw, 20px);
+      line-height: 1.2;
+      color: #ffffff;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+      opacity: 0.95;
+    }
+    .reserve-secondary-link:hover,
+    .reserve-secondary-link:focus-visible{
+      opacity: 1;
+    }
+    main{ padding-top: 0; }
     .reserve-content{
       max-width: var(--max-wide);
       margin: 0 auto;
@@ -1340,6 +1370,25 @@ nav{
     .reservation-card .form-grid{
       max-width: 100%;
     }
+    .form-step-title{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: 1.15;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .step-block{
+      display: grid;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .step-note{
+      margin: 0;
+      color: var(--muted);
+    }
     .reservation-cta{
       display:flex;
       justify-content:center;
@@ -1368,6 +1417,24 @@ nav{
       font-family: var(--font-body);
       line-height: var(--lh-body);
       font-weight: 400;
+    }
+    .tuition-amount{
+      margin: 0;
+      font-size: clamp(36px, 4.6vw, 52px);
+      line-height: 1;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .payment-step-title{
+      margin-top: 2px;
+    }
+    .reassurance-list{
+      display: grid;
+      gap: 4px;
+      margin: 0;
+      color: var(--ink);
+      font-weight: 600;
+      line-height: 1.25;
     }
     .payment-meta a{
       color: #1a5cff;
@@ -1718,15 +1785,20 @@ nav{
       footer.site-footer .footer-title,
       footer.site-footer .footer-tagline{ font-size: 23px; }
       .reserve-banner{
-        position: static;
-        height: auto;
-        padding: 18px 0;
-        box-shadow: none;
+        padding: 20px 0 24px;
       }
-      main{ padding-top: 0; }
       .reserve-banner .logo-main{
         width: clamp(60px, 15.4vw, 100px);
         margin-bottom: 12px;
+      }
+      .reserve-subheading{
+        font-size: 23px;
+        line-height: 1.15;
+      }
+      .reserve-support,
+      .reserve-secondary-link{
+        font-size: 18px;
+        line-height: 1.15;
       }
       .session-grid{ grid-template-columns: 1fr; }
       .session-card{ padding: 10px; min-height: 0; }
@@ -1749,12 +1821,6 @@ nav{
       .payment-grid{ grid-template-columns: 1fr; }
     }
 
-    @media (min-width: 981px){
-      .reserve-banner{
-        padding: 90px 0;
-      }
-    }
-  
     @media (max-width: 640px){
       :root{
         --lh-body: 1.38;
@@ -1810,13 +1876,16 @@ nav{
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <main>
-    <h1 class="visually-hidden">Reserve a Spot</h1>
+    <h1 class="visually-hidden">Reserve a Spot &mdash; Summer 2026</h1>
     <section class="section-banner reserve-banner">
       <div class="wrap">
         <a href="index.html" aria-label="The Money Club.Org home">
           <img class="logo-main" src="assets/logo-500.png" alt="The Money Club.Org logo" />
         </a>
-        <h2>Reserve a Spot 2026</h2>
+        <h2>RESERVE A SPOT &mdash; SUMMER 2026</h2>
+        <p class="reserve-subheading">You're one step away from securing a spot. Complete registration below to confirm your child's place.</p>
+        <p class="reserve-support">Small groups • Ages 10&ndash;16 • UTSU Student Commons (Downtown Toronto)</p>
+        <a class="reserve-secondary-link" href="how-it-works.html">Not ready yet? Get program details first</a>
       </div>
     </section>
 
@@ -1825,16 +1894,41 @@ nav{
         <div class="reservation-row registration-form-container">
           <div class="reservation-card">
             <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
-<div class="form-loading" role="status" aria-live="polite">
+            <div class="form-loading" role="status" aria-live="polite">
   <div class="spinner" aria-hidden="true"></div>
   <div class="loading-text">Processing…</div>
 </div>
-            <p>Before you register, you can <a href="how-it-works.html">see how the program works</a> or <a href="schedule-pricing.html">review the curriculum</a>.</p>
-
             <form class="form-grid" action="apply-camper.php" method="post" novalidate>
               <input type="hidden" name="return-to" value="thank-you.html" />
               <input type="hidden" name="return-error" value="reserve-a-spot.html" />
               <input type="hidden" name="return-cancel" value="reserve-a-spot.html" />
+              <div class="step-block">
+                <h2 class="form-step-title">Step 1 &mdash; Choose Your Session</h2>
+                <p class="step-note">Limited spots per session.</p>
+              </div>
+              <div class="field">
+                <label class="section-heading">Available Sessions</label>
+                <div class="session-grid gloss-active">
+                  <label class="session-card">
+                    <input type="radio" name="preferred-session" value="session1" required />
+                    <div class="session-card-body">
+                      <div class="session-title">Session 1: July 6-31, 2026</div>
+                      <div class="session-availability" data-session="session1">30 of 30 Spots Available</div>
+                    </div>
+                  </label>
+                  <label class="session-card">
+                    <input type="radio" name="preferred-session" value="session2" />
+                    <div class="session-card-body">
+                      <div class="session-title">Session 2: August 4-28, 2026</div>
+                      <div class="session-availability" data-session="session2">30 of 30 Spots Available</div>
+                    </div>
+                  </label>
+                </div>
+                <small class="field-error">Please select a session.</small>
+              </div>
+              <div class="step-block">
+                <h2 class="form-step-title">Step 2 &mdash; Parent &amp; Student Details</h2>
+              </div>
               <div class="field-row three-col">
                 <div class="field">
                   <label for="parent-name">Parent / Guardian Name</label>
@@ -1864,31 +1958,18 @@ nav{
                   <small class="field-error">Child’s age is required.</small>
                 </div>
               </div>
-              <div class="field">
-                <label class="section-heading">Choose A Session</label>
-                <div class="session-grid gloss-active is-locked">
-                  <label class="session-card">
-                    <input type="radio" name="preferred-session" value="session1" required />
-                    <div class="session-card-body">
-                      <div class="session-title">Session 1: July 6-31, 2026</div>
-                      <div class="session-availability" data-session="session1">30 of 30 Spots Available</div>
-                    </div>
-                  </label>
-                  <label class="session-card">
-                    <input type="radio" name="preferred-session" value="session2" />
-                    <div class="session-card-body">
-                      <div class="session-title">Session 2: August 4-28, 2026</div>
-                      <div class="session-availability" data-session="session2">30 of 30 Spots Available</div>
-                    </div>
-                  </label>
-                </div>
-                <small class="field-error">Please select a session.</small>
-              </div>
               <div class="payment-section">
-                <h2>Make Payment</h2>
+                <h2 class="form-step-title">Step 3 &mdash; Program Tuition</h2>
+                <p class="tuition-amount">$1,500 per student</p>
                 <div class="payment-meta">
-                  <div>Program fee: $1,500 + 13% HST</div>
+                  <div>Includes the full 4-week program, materials, and final presentation event.</div>
                   <div>Refunds available until June 1, 2026.</div>
+                </div>
+                <h2 class="form-step-title payment-step-title">Step 4 &mdash; Payment Options</h2>
+                <div class="reassurance-list">
+                  <div>&#10003; Small groups</div>
+                  <div>&#10003; Downtown Toronto</div>
+                  <div>&#10003; Refunds available until June 1</div>
                 </div>
                 <div class="field terms-consent">
                   <label for="terms-agree">
@@ -1899,17 +1980,15 @@ nav{
                 </div>
                 <div class="payment-grid">
                   <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true">
-                    <div class="payment-title">e-Transfer</div>
+                    <div class="payment-title">e-Transfer (no processing fee)</div>
                     <div class="payment-body">
-                      <div class="payment-total">Total: $1,695.00 CAD (includes HST)</div>
-                      <div class="payment-note">No processing fee.</div>
+                      <div class="payment-total">Total: $1,695 CAD (includes HST)</div>
                     </div>
                   </button>
                   <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true">
-                    <div class="payment-title">Credit Card</div>
+                    <div class="payment-title">Credit Card (+2.4%)</div>
                     <div class="payment-body">
-                      <div class="payment-total">Total: $1,735.68 CAD (Includes HST + 2.4% surcharge)</div>
-                      <div class="payment-note">A 2.4% credit card surcharge applies to help cover card processing costs.</div>
+                      <div class="payment-total">Total: $1,735.68 CAD (includes HST and card surcharge)</div>
                     </div>
                   </button>
                 </div>
@@ -2125,7 +2204,7 @@ nav{
       }
 
       function setSessionState(){
-        var canSelectSession = baseFieldsValid();
+        var canSelectSession = true;
         if (sessionGrid){
           sessionGrid.classList.toggle('is-locked', !canSelectSession);
           sessionGrid.classList.toggle('gloss-active', canSelectSession && !sessionSelected());
@@ -2177,7 +2256,14 @@ nav{
 
       function getProgramFeeValue(form){
         var paymentMeta = form ? form.querySelector('.payment-meta') : null;
-        var sourceText = paymentMeta ? paymentMeta.textContent : '';
+        var tuitionAmount = form ? form.querySelector('.tuition-amount') : null;
+        var sourceText = '';
+        if (tuitionAmount){
+          sourceText += tuitionAmount.textContent + ' ';
+        }
+        if (paymentMeta){
+          sourceText += paymentMeta.textContent;
+        }
         var match = sourceText.match(/\$([0-9][0-9,]*(?:\.[0-9]{2})?)/);
         if (!match){
           return 1500;

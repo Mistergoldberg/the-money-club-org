@@ -1781,6 +1781,59 @@
       line-height: 0.95;
       text-align: center;
     }
+    .quickfacts-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .quickfacts-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: clamp(42px, 6vw, 78px) var(--pad) 18px;
+    }
+    .facts-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+    .facts-card{
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 24px;
+      display:grid;
+      gap: 8px;
+      align-content: start;
+      box-shadow: 0 18px 32px rgba(0,0,0,0.08);
+    }
+    .facts-card h3{
+      margin-bottom: 0;
+    }
+    .facts-card ul{
+      margin: 0;
+      padding-left: 18px;
+    }
+    .facts-card .btn{
+      font-family: var(--font-display);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      font-size: var(--btn-size-lg);
+    }
+    .facts-card .btn.cta-standard{
+      font-size: clamp(22px, 3vw, 40px);
+    }
+    .role-media{
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      aspect-ratio: 16 / 10;
+    }
+    .role-media img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
     .cta-note{
       max-width: 720px;
       margin: 0 auto;
@@ -2243,6 +2296,7 @@
       .openbook-legend li:last-child{
         border-bottom: 0;
       }
+      .facts-grid{ grid-template-columns: 1fr; }
 
       /* Mobile color sequencing: gold -> purple -> teal */
       #built-like-a-business .section-banner{ background: var(--gold); color: #ffffff; }
@@ -2662,125 +2716,46 @@
       </div>
     </section>
 
-    <section class="section-banner full-bleed purple heading-white" id="reserve">
-      <div class="wrap">
-        <h2>Reserve a Spot</h2>
+    <section class="quickfacts-section">
+      <div class="section-banner full-bleed purple heading-white">
+        <div class="wrap">
+          <h2>Quick Facts</h2>
+        </div>
       </div>
-    </section>
-    <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
-      <div class="wrap">
-        <div class="reservation-row registration-form-container">
-          <div class="reservation-card">
-            <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
-<div class="form-loading" role="status" aria-live="polite">
-  <div class="spinner" aria-hidden="true"></div>
-  <div class="loading-text">Processing…</div>
-</div>
-
-            <form class="form-grid" action="apply-camper.php" method="post" novalidate>
-              <input type="hidden" name="return-to" value="thank-you.html" />
-              <input type="hidden" name="return-error" value="index.html" />
-              <input type="hidden" name="return-cancel" value="index.html" />
-              <div class="field-row three-col">
-                <div class="field">
-                  <label for="parent-name">Parent / Guardian Name</label>
-                  <input id="parent-name" name="parent-name" data-next="parent-email" type="text" autocomplete="name" required />
-                  <small class="field-error">Parent/guardian name is required.</small>
-                </div>
-                <div class="field">
-                  <label for="parent-email">Email Address</label>
-                  <input id="parent-email" name="parent-email" data-next="parent-phone" type="email" autocomplete="email" required />
-                  <small class="field-error">Enter a valid email address.</small>
-                </div>
-                <div class="field">
-                  <label for="parent-phone">Phone Number</label>
-                  <input id="parent-phone" name="parent-phone" data-next="student-name" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
-                  <small class="field-error">Phone number is required.</small>
-                </div>
-              </div>
-              <div class="field-row two-col">
-                <div class="field">
-                  <label for="student-name">Child’s Name</label>
-                  <input id="student-name" name="student-name" data-next="student-age" type="text" autocomplete="name" required />
-                  <small class="field-error">Child’s name is required.</small>
-                </div>
-                <div class="field">
-                  <label for="student-age">Child’s Age</label>
-                  <input id="student-age" name="student-age" type="number" min="10" max="16" step="1" inputmode="numeric" required />
-                  <small class="field-error">Child’s age is required.</small>
-                </div>
-              </div>
-              <div class="field">
-                <label class="section-heading">Choose A Session</label>
-                <div class="session-grid gloss-active is-locked">
-                  <label class="session-card">
-                    <input type="radio" name="preferred-session" value="session1" required />
-                    <div class="session-card-body">
-                      <div class="session-title">Session 1: July 6-31, 2026</div>
-                      <div class="session-availability" data-session="session1">30 of 30 Spots Available</div>
-                    </div>
-                  </label>
-                  <label class="session-card">
-                    <input type="radio" name="preferred-session" value="session2" />
-                    <div class="session-card-body">
-                      <div class="session-title">Session 2: August 4-28, 2026</div>
-                      <div class="session-availability" data-session="session2">30 of 30 Spots Available</div>
-                    </div>
-                  </label>
-                </div>
-                <small class="field-error">Please select a session.</small>
-              </div>
-
-              <div class="payment-section">
-                <h2>Make Payment</h2>
-                <div class="payment-meta">
-                  <div>Program fee: $1,500 + 13% HST</div>
-                  <div>Refunds available until June 1, 2026.</div>
-                </div>
-                <div class="field terms-consent">
-                  <label for="terms-agree">
-                    <input id="terms-agree" name="terms-agree" type="checkbox" required />
-                    <span>I agree to the <a href="program-terms.html">program terms</a> and <a href="program-terms.html">refund policy</a>.</span>
-                  </label>
-                  <small class="field-error">Please agree to the program terms and refund policy.</small>
-                </div>
-                <div class="payment-grid">
-                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true">
-                    <div class="payment-title">e-Transfer</div>
-                    <div class="payment-body">
-                      <div class="payment-total">Total: $1,695.00 CAD (includes HST)</div>
-                      <div class="payment-note">No processing fee.</div>
-                    </div>
-                  </button>
-                  <button class="payment-option is-disabled" type="submit" name="payment-method" value="Credit Card" aria-disabled="true">
-                    <div class="payment-title">Credit Card</div>
-                    <div class="payment-body">
-                      <div class="payment-total">Total: $1,735.68 CAD (Includes HST + 2.4% surcharge)</div>
-                      <div class="payment-note">A 2.4% credit card surcharge applies to help cover card processing costs.</div>
-                    </div>
-                  </button>
-                </div>
-                <small class="field-error">Please choose a payment method.</small>
-              </div>
-              <div class="confirmation-grid is-hidden">
-                <div class="confirmation-card">
-                  <h2>Next Steps</h2>
-                  <div class="tight-stack">
-                    <p>Thank you — your spot is confirmed once payment is received. Next, you’ll receive an email with your permission forms and your receipt/confirmation.</p>
-                  </div>
-                </div>
-                <div class="confirmation-card">
-                  <h2>Need more information?</h2>
-                  <p><a class="meeting-link" href="https://calendly.com/me-mistergoldberg/30min">Book a meeting</a> and we’ll be happy to answer any questions.</p>
-                  <p><a class="meeting-link" href="schedule-pricing.html">View daily schedule &amp; 4-week program details</a></p>
-                </div>
-              </div>
-            </form>
+      <div class="quickfacts-content">
+        <div class="facts-grid">
+          <div class="facts-card">
+            <h3>Program essentials</h3>
+            <ul>
+              <li>Ages: 10–16</li>
+              <li>Format: Summer day program</li>
+              <li>Duration: 4 weeks</li>
+              <li>When: July &amp; August, Weekdays 9-5pm, Instruction periods 9:30-3:30pm</li>
+              <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
+              <li>Cost: $1,500 per student</li>
+              <li>Materials: Included (including student project inputs)</li>
+              <li>Experience: None required</li>
+              <li>Why: Build a real product and potentialy earn money</li>
+            </ul>
+          </div>
+          <div class="facts-card">
+            <div class="role-media">
+              <img src="assets/instruct-cb-packing.jpg" alt="Students collaborating during a Money Club session" />
+            </div>
+            <a data-cta-label="View schedule" class="btn purple gloss cta-standard" href="schedule-pricing.html">View Schedule</a>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
+      <div class="footer-title">The Money Club<span class="org">.Org</span></div>
+      <div class="footer-tagline">A Toronto nonprofit maker camp that teaches financial literacy, design thinking, and public speaking.</div>
+    </div>
+  </footer>
 
   <script>
     (function(){
