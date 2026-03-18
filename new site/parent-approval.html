@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Parent Approval Form | The Money Club</title>
+  <title>Parent Approval &amp; Consent Form | The Money Club</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="description" content="Final parent approval and consent form for The Money Club summer program." />
-  <meta property="og:title" content="Parent Approval Form | The Money Club" />
+  <meta property="og:title" content="Parent Approval &amp; Consent Form | The Money Club" />
   <meta property="og:description" content="Complete the final parent approval and consent form for program participation." />
   <meta property="og:url" content="https://the-money-club.org/parent-approval.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Parent Approval Form | The Money Club" />
+  <meta name="twitter:title" content="Parent Approval &amp; Consent Form | The Money Club" />
   <meta name="twitter:description" content="Complete the final parent approval and consent form for program participation." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/parent-approval.html" />
@@ -236,7 +236,8 @@
 
     .intro{
       margin: var(--space-4) auto 0;
-      max-width: var(--content-max);
+      max-width: var(--max-wide);
+      padding: 0 var(--pad);
       color: var(--ink);
     }
     .intro p{ margin: 0 0 10px; }
@@ -244,10 +245,16 @@
       font-weight: 600;
       margin-top: 10px;
     }
+    .fine-print{
+      color: var(--muted);
+      font-size: var(--size-sm);
+      margin-top: 10px;
+    }
 
     .approval-shell{
       margin: var(--space-4) auto var(--space-6);
-      max-width: var(--content-max);
+      max-width: var(--max-wide);
+      padding: 0 var(--pad);
     }
     .approval-card{
       border: 1px solid var(--line);
@@ -275,10 +282,22 @@
     .field-row{ display:grid; gap: 16px; }
     .field-row.two-col{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-    .field{ display:grid; gap: 6px; }
+    .field{
+      display:grid;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      min-inline-size: 0;
+    }
     .field label{
       font-weight: 600;
       color: var(--ink);
+    }
+    .field legend{
+      font-weight: 600;
+      color: var(--ink);
+      padding: 0;
     }
     .field input,
     .field select,
@@ -321,6 +340,10 @@
       font-weight: 700;
     }
     .form-section p{ margin: 0; }
+    .inline-policy-link{
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
 
     .consent-list,
     .payment-list{
@@ -478,8 +501,9 @@
     </section>
 
     <section class="intro wrap">
-      <p>Please complete this final form so we can confirm your child&rsquo;s participation and keep the information we need for safety and communication.</p>
+      <p>Please complete this form so we can confirm your child&rsquo;s participation and collect the information we need for safety, communication, and pickup.</p>
       <p class="operator-line">Humanoid Community Development Platforms Corporation<br />Operating as The Money Club.Org</p>
+      <p class="fine-print">The Money Club.Org is an independent program and is not affiliated with or endorsed by the University of Toronto.</p>
     </section>
 
     <section class="approval-shell">
@@ -489,6 +513,7 @@
         <form class="approval-form form-grid" action="apply-parent-approval.php" method="post" novalidate>
           <input type="hidden" name="return-to" value="parent-approval.html" />
           <input type="hidden" name="return-error" value="parent-approval.html" />
+          <p class="signature-note">All fields are required unless marked optional.</p>
 
           <div class="field-row two-col">
             <div class="field">
@@ -546,9 +571,64 @@
             </div>
           </div>
 
-          <div class="field">
-            <label for="medical-notes">Medical / Safety Notes (optional)</label>
-            <textarea id="medical-notes" name="medical-notes" maxlength="2000"></textarea>
+          <div class="form-section">
+            <h2>Authorized Pickup</h2>
+            <div class="field-row two-col">
+              <div class="field">
+                <label for="authorized-pickup-name-1">Authorized Pickup Name 1</label>
+                <input id="authorized-pickup-name-1" name="authorized-pickup-name-1" type="text" autocomplete="name" required />
+                <small class="field-error">Authorized pickup name is required.</small>
+              </div>
+              <div class="field">
+                <label for="authorized-pickup-phone-1">Authorized Pickup Phone 1</label>
+                <input id="authorized-pickup-phone-1" name="authorized-pickup-phone-1" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
+                <small class="field-error">Enter a valid authorized pickup phone number.</small>
+              </div>
+            </div>
+            <div class="field-row two-col">
+              <div class="field">
+                <label for="authorized-pickup-name-2">Authorized Pickup Name 2 (optional)</label>
+                <input id="authorized-pickup-name-2" name="authorized-pickup-name-2" type="text" autocomplete="name" />
+                <small class="field-error">Enter a name if Authorized Pickup Phone 2 is provided.</small>
+              </div>
+              <div class="field">
+                <label for="authorized-pickup-phone-2">Authorized Pickup Phone 2 (optional)</label>
+                <input id="authorized-pickup-phone-2" name="authorized-pickup-phone-2" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" />
+                <small class="field-error">Enter a valid phone number if Authorized Pickup Name 2 is provided.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Medical / Safety</h2>
+            <fieldset class="field">
+              <legend>Allergies</legend>
+              <div class="radio-row">
+                <label><input type="radio" name="medical-allergies" value="yes" required /> Yes</label>
+                <label><input type="radio" name="medical-allergies" value="no" /> No</label>
+              </div>
+              <small class="field-error">Please choose Yes or No for allergies.</small>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Medications or health concerns</legend>
+              <div class="radio-row">
+                <label><input type="radio" name="medical-medications" value="yes" required /> Yes</label>
+                <label><input type="radio" name="medical-medications" value="no" /> No</label>
+              </div>
+              <small class="field-error">Please choose Yes or No for medications or health concerns.</small>
+            </fieldset>
+            <fieldset class="field">
+              <legend>Accommodations we should know about</legend>
+              <div class="radio-row">
+                <label><input type="radio" name="medical-accommodations" value="yes" required /> Yes</label>
+                <label><input type="radio" name="medical-accommodations" value="no" /> No</label>
+              </div>
+              <small class="field-error">Please choose Yes or No for accommodations.</small>
+            </fieldset>
+            <div class="field">
+              <label for="medical-details">Details (optional)</label>
+              <textarea id="medical-details" name="medical-details" maxlength="2000"></textarea>
+            </div>
           </div>
 
           <div class="form-section">
@@ -563,24 +643,15 @@
             <h2>Consent &amp; Acknowledgement</h2>
             <p>By submitting this form, I confirm that:</p>
             <ul class="consent-list">
-              <li>My child is participating in a supervised, in-person program involving group activities and local movement in the surrounding area.</li>
+              <li>My child is participating in a supervised, in-person program involving group activities and supervised walking activities in the immediate area around the program venue.</li>
               <li>I understand there are ordinary risks associated with participation, including minor injuries and local travel.</li>
               <li>I authorize program staff to seek emergency medical care for my child if required.</li>
             </ul>
           </div>
 
           <div class="form-section">
-            <h2>Payment &amp; Refunds</h2>
-            <ul class="payment-list">
-              <li>The program fee is $1,500 per student.</li>
-              <li>A spot is confirmed once payment is received.</li>
-              <li>Refunds are available until June 1, 2026.</li>
-            </ul>
-          </div>
-
-          <div class="form-section">
             <h2>Privacy</h2>
-            <p>Information is collected only to operate the program safely and communicate with families. It is not shared beyond what is reasonably necessary.</p>
+            <p>We collect this information only to operate the program safely, communicate with families, and manage student pickup. See our <a class="inline-policy-link" href="privacy-policy.html">Privacy Policy</a> for details.</p>
           </div>
 
           <div class="form-section">
@@ -594,7 +665,7 @@
             <div class="field">
               <label class="consent-check" for="consent-agree">
                 <input id="consent-agree" name="consent-agree" type="checkbox" required />
-                <span>I confirm that I am the parent/guardian of the participant and agree to the approvals and acknowledgements above.</span>
+                <span>I confirm that I am the parent/guardian of the participant and agree to this Parent Approval &amp; Consent Form.</span>
               </label>
               <small class="field-error">Please confirm parent/guardian approval.</small>
             </div>
@@ -685,7 +756,26 @@
       var form = document.querySelector('.approval-form');
       if (!form){ return; }
 
+      function updatePickupPairValidity(){
+        var pickupName2 = document.getElementById('authorized-pickup-name-2');
+        var pickupPhone2 = document.getElementById('authorized-pickup-phone-2');
+        if (!pickupName2 || !pickupPhone2){ return; }
+
+        pickupName2.setCustomValidity('');
+        pickupPhone2.setCustomValidity('');
+
+        var hasName2 = pickupName2.value.trim() !== '';
+        var hasPhone2 = pickupPhone2.value.trim() !== '';
+
+        if (hasName2 && !hasPhone2){
+          pickupPhone2.setCustomValidity('Please provide a phone number for Authorized Pickup Name 2.');
+        } else if (!hasName2 && hasPhone2){
+          pickupName2.setCustomValidity('Please provide a name for Authorized Pickup Phone 2.');
+        }
+      }
+
       form.addEventListener('submit', function(e){
+        updatePickupPairValidity();
         var fields = form.querySelectorAll('.field');
         fields.forEach(function(field){ updateFieldState(field); });
         if (!form.checkValidity()){
@@ -695,8 +785,18 @@
         }
       });
 
-      form.addEventListener('input', function(e){ updateFieldState(e.target.closest('.field')); });
-      form.addEventListener('change', function(e){ updateFieldState(e.target.closest('.field')); });
+      form.addEventListener('input', function(e){
+        if (e.target && (e.target.id === 'authorized-pickup-name-2' || e.target.id === 'authorized-pickup-phone-2')){
+          updatePickupPairValidity();
+        }
+        updateFieldState(e.target.closest('.field'));
+      });
+      form.addEventListener('change', function(e){
+        if (e.target && (e.target.id === 'authorized-pickup-name-2' || e.target.id === 'authorized-pickup-phone-2')){
+          updatePickupPairValidity();
+        }
+        updateFieldState(e.target.closest('.field'));
+      });
 
       var params = new URLSearchParams(window.location.search);
       var success = document.getElementById('form-success');

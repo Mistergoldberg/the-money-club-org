@@ -90,7 +90,15 @@ $parent_phone = isset($_POST['parent-phone']) ? trim($_POST['parent-phone']) : '
 $session = isset($_POST['session']) ? trim($_POST['session']) : '';
 $emergency_contact_name = isset($_POST['emergency-contact-name']) ? trim($_POST['emergency-contact-name']) : '';
 $emergency_contact_phone = isset($_POST['emergency-contact-phone']) ? trim($_POST['emergency-contact-phone']) : '';
-$medical_notes = isset($_POST['medical-notes']) ? trim($_POST['medical-notes']) : '';
+$authorized_pickup_name_1 = isset($_POST['authorized-pickup-name-1']) ? trim($_POST['authorized-pickup-name-1']) : '';
+$authorized_pickup_phone_1 = isset($_POST['authorized-pickup-phone-1']) ? trim($_POST['authorized-pickup-phone-1']) : '';
+$authorized_pickup_name_2 = isset($_POST['authorized-pickup-name-2']) ? trim($_POST['authorized-pickup-name-2']) : '';
+$authorized_pickup_phone_2 = isset($_POST['authorized-pickup-phone-2']) ? trim($_POST['authorized-pickup-phone-2']) : '';
+$medical_allergies = isset($_POST['medical-allergies']) ? trim($_POST['medical-allergies']) : '';
+$medical_medications = isset($_POST['medical-medications']) ? trim($_POST['medical-medications']) : '';
+$medical_accommodations = isset($_POST['medical-accommodations']) ? trim($_POST['medical-accommodations']) : '';
+$medical_details = isset($_POST['medical-details']) ? trim($_POST['medical-details']) : '';
+$legacy_medical_notes = isset($_POST['medical-notes']) ? trim($_POST['medical-notes']) : '';
 $photo_consent = isset($_POST['photo-consent']) ? trim($_POST['photo-consent']) : '';
 $parent_signature_name = isset($_POST['parent-signature-name']) ? trim($_POST['parent-signature-name']) : '';
 $consent_agree = isset($_POST['consent-agree']) ? trim($_POST['consent-agree']) : '';
@@ -147,6 +155,35 @@ if ($emergency_contact_phone === '' || $emergency_phone_digits === '' || strlen(
     redirect_with_error($error_return, 'emergency-contact-phone', 'Please provide a valid emergency contact phone number.');
 }
 
+$authorized_pickup_1_phone_digits = preg_replace('/\D+/', '', $authorized_pickup_phone_1);
+if ($authorized_pickup_name_1 === '') {
+    redirect_with_error($error_return, 'authorized-pickup-name-1', 'Authorized pickup name is required.');
+}
+if ($authorized_pickup_phone_1 === '' || $authorized_pickup_1_phone_digits === '' || strlen($authorized_pickup_1_phone_digits) < 10 || strlen($authorized_pickup_1_phone_digits) > 15) {
+    redirect_with_error($error_return, 'authorized-pickup-phone-1', 'Please provide a valid authorized pickup phone number.');
+}
+
+$authorized_pickup_2_phone_digits = preg_replace('/\D+/', '', $authorized_pickup_phone_2);
+if (($authorized_pickup_name_2 !== '' && $authorized_pickup_phone_2 === '')) {
+    redirect_with_error($error_return, 'authorized-pickup-phone-2', 'Please provide a phone number for Authorized Pickup Name 2.');
+}
+if (($authorized_pickup_name_2 === '' && $authorized_pickup_phone_2 !== '')) {
+    redirect_with_error($error_return, 'authorized-pickup-name-2', 'Please provide a name for Authorized Pickup Phone 2.');
+}
+if ($authorized_pickup_phone_2 !== '' && ($authorized_pickup_2_phone_digits === '' || strlen($authorized_pickup_2_phone_digits) < 10 || strlen($authorized_pickup_2_phone_digits) > 15)) {
+    redirect_with_error($error_return, 'authorized-pickup-phone-2', 'Please provide a valid authorized pickup phone number.');
+}
+
+if (!in_array($medical_allergies, ['yes', 'no'], true)) {
+    redirect_with_error($error_return, 'medical-allergies', 'Please choose Yes or No for allergies.');
+}
+if (!in_array($medical_medications, ['yes', 'no'], true)) {
+    redirect_with_error($error_return, 'medical-medications', 'Please choose Yes or No for medications or health concerns.');
+}
+if (!in_array($medical_accommodations, ['yes', 'no'], true)) {
+    redirect_with_error($error_return, 'medical-accommodations', 'Please choose Yes or No for accommodations.');
+}
+
 if ($photo_consent !== '' && !in_array($photo_consent, ['yes', 'no'], true)) {
     redirect_with_error($error_return, 'photo-consent', 'Please choose Yes or No for photo/media consent.');
 }
@@ -159,8 +196,11 @@ if ($consent_agree === '') {
     redirect_with_error($error_return, 'consent-agree', 'Please confirm parent/guardian approval.');
 }
 
-if (strlen($medical_notes) > 4000) {
-    $medical_notes = substr($medical_notes, 0, 4000);
+if ($medical_details === '' && $legacy_medical_notes !== '') {
+    $medical_details = $legacy_medical_notes;
+}
+if (strlen($medical_details) > 4000) {
+    $medical_details = substr($medical_details, 0, 4000);
 }
 
 $submitted_at_utc = gmdate('c');
@@ -197,7 +237,14 @@ $hash_payload = [
     'session' => $session_map[$session],
     'emergency_contact_name' => $emergency_contact_name,
     'emergency_contact_phone' => $emergency_contact_phone,
-    'medical_notes' => $medical_notes,
+    'authorized_pickup_name_1' => $authorized_pickup_name_1,
+    'authorized_pickup_phone_1' => $authorized_pickup_phone_1,
+    'authorized_pickup_name_2' => $authorized_pickup_name_2,
+    'authorized_pickup_phone_2' => $authorized_pickup_phone_2,
+    'medical_allergies' => strtoupper($medical_allergies),
+    'medical_medications_or_health_concerns' => strtoupper($medical_medications),
+    'medical_accommodations' => strtoupper($medical_accommodations),
+    'medical_details' => $medical_details,
     'photo_consent' => $photo_consent_label,
     'typed_signature_name' => $parent_signature_name,
     'consent_confirmed' => 'Yes',
@@ -226,7 +273,14 @@ $csv_headers = [
     'session',
     'emergency_contact_name',
     'emergency_contact_phone',
-    'medical_notes',
+    'authorized_pickup_name_1',
+    'authorized_pickup_phone_1',
+    'authorized_pickup_name_2',
+    'authorized_pickup_phone_2',
+    'medical_allergies',
+    'medical_medications',
+    'medical_accommodations',
+    'medical_details',
     'photo_consent',
     'typed_signature_name',
     'consent_confirmed',
@@ -247,7 +301,14 @@ $csv_row = [
     $session_map[$session],
     $emergency_contact_name,
     $emergency_contact_phone,
-    $medical_notes,
+    $authorized_pickup_name_1,
+    $authorized_pickup_phone_1,
+    $authorized_pickup_name_2,
+    $authorized_pickup_phone_2,
+    strtoupper($medical_allergies),
+    strtoupper($medical_medications),
+    strtoupper($medical_accommodations),
+    $medical_details,
     $photo_consent_label,
     $parent_signature_name,
     'Yes',
@@ -272,7 +333,7 @@ if ($handle) {
 
 $from = 'info@the-money-club.org';
 $internal_to = ['info@the-money-club.org', 'alex@the-money-club.org', 'sarah@the-money-club.org'];
-$internal_subject = 'Parent Approval Form: The Money Club.Org';
+$internal_subject = 'Parent Approval & Consent Form: The Money Club.Org';
 $internal_lines = [];
 $internal_lines[] = 'Student Name: ' . $student_name;
 $internal_lines[] = 'Student Age: ' . (string)$age_value;
@@ -282,7 +343,14 @@ $internal_lines[] = 'Parent Phone: ' . $parent_phone;
 $internal_lines[] = 'Session: ' . $session_map[$session];
 $internal_lines[] = 'Emergency Contact Name: ' . $emergency_contact_name;
 $internal_lines[] = 'Emergency Contact Phone: ' . $emergency_contact_phone;
-$internal_lines[] = 'Medical / Safety Notes: ' . ($medical_notes !== '' ? $medical_notes : '(none)');
+$internal_lines[] = 'Authorized Pickup Name 1: ' . $authorized_pickup_name_1;
+$internal_lines[] = 'Authorized Pickup Phone 1: ' . $authorized_pickup_phone_1;
+$internal_lines[] = 'Authorized Pickup Name 2: ' . ($authorized_pickup_name_2 !== '' ? $authorized_pickup_name_2 : '(none)');
+$internal_lines[] = 'Authorized Pickup Phone 2: ' . ($authorized_pickup_phone_2 !== '' ? $authorized_pickup_phone_2 : '(none)');
+$internal_lines[] = 'Medical - Allergies: ' . strtoupper($medical_allergies);
+$internal_lines[] = 'Medical - Medications/Health Concerns: ' . strtoupper($medical_medications);
+$internal_lines[] = 'Medical - Accommodations: ' . strtoupper($medical_accommodations);
+$internal_lines[] = 'Medical - Details: ' . ($medical_details !== '' ? $medical_details : '(none)');
 $internal_lines[] = 'Photo / Media Consent: ' . $photo_consent_label;
 $internal_lines[] = 'Typed Parent Signature: ' . $parent_signature_name;
 $internal_lines[] = 'Consent Confirmed: Yes';
