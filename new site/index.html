@@ -437,9 +437,12 @@
       width: min(320px, 100%);
       justify-content: center;
       margin-top: 6px;
-      font-size: var(--btn-size-lg);
+      font-size: clamp(24px, 5.8vw, 31px);
+      line-height: 1.15;
+      font-weight: 500;
       border-radius: 16px;
       padding: 16px 26px;
+      min-height: 62px;
       justify-self: center;
     }
 
@@ -451,12 +454,13 @@
     nav{
       display:flex;
       gap: 0;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       align-items:center;
       color: var(--ink);
       font-size: 23px;
       flex: 1;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      margin-right: clamp(16px, 2vw, 30px);
     }
 
     .topbar nav a{
@@ -496,7 +500,7 @@
       filter: none;
     }
     .btn:active{ box-shadow: none; }
-    .topbar .btn{
+    .topbar .btn:not(.menu-cta){
       font-family: var(--font-body);
       font-weight: 500;
       text-transform: none;
@@ -1926,7 +1930,7 @@
       .menu-btn span{
         width: 28px;
       }
-      .topbar .btn{
+      .topbar .btn:not(.menu-cta){
         display: inline-flex;
         font-family: var(--font-body);
         font-size: 16px;
@@ -1965,8 +1969,10 @@
         margin-top: 18px;
         border-bottom: 0;
         justify-content: center;
-        font-size: 18px;
-        min-height: 52px;
+        font-size: clamp(24px, 5.8vw, 31px);
+        line-height: 1.15;
+        font-weight: 500;
+        min-height: 62px;
       }
       .hero{
         padding: 12px 0 0;
@@ -2182,7 +2188,7 @@
         margin-right: auto;
         text-align: center;
       }
-      .topbar .btn{
+      .topbar .btn:not(.menu-cta){
         font-family: var(--font-body);
         font-size: 16px;
         margin-left: 0;
@@ -2437,7 +2443,7 @@
       .topbar .inner{
         gap: 8px;
       }
-      .topbar .btn{
+      .topbar .btn:not(.menu-cta){
         font-size: 14px;
         padding: 10px 12px;
         min-height: 40px;
@@ -2571,6 +2577,7 @@
         <a href="pricing.html">Pricing</a>
         <a href="open-book-hook.html">Transparency</a>
         <a href="faq.html">FAQ</a>
+        <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -2582,6 +2589,7 @@
         <a href="pricing.html">Pricing</a>
         <a href="open-book-hook.html">Transparency</a>
         <a href="faq.html">FAQ</a>
+        <a href="/instructors.html">We're Hiring</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>

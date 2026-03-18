@@ -230,7 +230,7 @@
     .btn:active{
       box-shadow: none;
     }
-    .topbar .btn{
+    .topbar .btn:not(.menu-cta){
       font-family: var(--font-body);
       font-weight: 500;
       text-transform: none;
@@ -367,9 +367,12 @@
       width: min(320px, 100%);
       justify-content: center;
       margin-top: 6px;
-      font-size: var(--btn-size-lg);
+      font-size: clamp(24px, 5.8vw, 31px);
+      line-height: 1.15;
+      font-weight: 500;
       border-radius: 16px;
       padding: 16px 26px;
+      min-height: 62px;
       justify-self: center;
     }
 
@@ -381,12 +384,13 @@
 nav{
       display:flex;
       gap: 0;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       align-items:center;
       color: var(--ink);
       font-size: 23px;
       flex: 1;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      margin-right: clamp(16px, 2vw, 30px);
     }
 
     .topbar nav a{
@@ -970,7 +974,7 @@ nav{
         margin-right: auto;
         text-align: center;
       }
-      .topbar .btn{
+      .topbar .btn:not(.menu-cta){
         font-family: var(--font-body);
         font-size: 26.5px;
         margin-left: 0;
@@ -1028,7 +1032,7 @@ nav{
         --lh-body: 1.38;
       }
 
-      .topbar .btn{ display: none; }
+      .topbar .btn:not(.menu-cta){ display: none; }
     }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
@@ -1066,6 +1070,7 @@ nav{
         <a href="who-runs-it.html">Mission</a>
         <a href="contact-us.html">Contact us</a>
         <a href="faq.html">FAQ</a>
+        <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -1078,6 +1083,7 @@ nav{
         <a href="schedule-pricing.html">Curriculum</a>
         <a href="who-runs-it.html">Mission</a>
         <a href="faq.html">FAQ</a>
+        <a href="/instructors.html">We're Hiring</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
