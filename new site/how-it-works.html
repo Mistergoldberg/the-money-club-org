@@ -1566,10 +1566,21 @@ nav{
     .location-copy{
       display:grid;
       gap: 12px;
-      max-width: var(--content-max);
+      max-width: min(62ch, var(--content-max));
     }
     .location-copy p{
       margin: 0;
+      line-height: 1.36;
+      letter-spacing: -0.005em;
+    }
+    .location-copy p:first-child{
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+    .location-copy p + p{
+      font-weight: 400;
+      color: #222222;
+      line-height: 1.42;
     }
     .why-copy,
     .curriculum-copy,
@@ -2008,7 +2019,7 @@ nav{
         <a href="pricing.html">Pricing</a>
         <a href="open-book-hook.html">Transparency</a>
         <a href="faq.html">FAQ</a>
-                <a data-cta-label="Reserve a spot" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -2069,7 +2080,6 @@ nav{
             <p>They test the idea, get feedback, make changes, and see what happens when a real person has to decide: is this worth paying for?</p>
             <p>It’s not about pretending to be entrepreneurs.</p>
             <p>It’s about learning how money, value, and decisions work in the real world.</p>
-            <p>The Money Club.Org is a 4-week, instructor-led Toronto summer program for ages 10–16 built around financial literacy, entrepreneurship, and project-based learning.</p>
           </div>
         </div>
       </div>
@@ -2283,7 +2293,7 @@ nav{
       </div>
       <div class="location-content">
         <div class="location-copy">
-          <p>The Money Club runs at the UTSU Student Commons, 230 College Street, in downtown Toronto near the University of Toronto.</p>
+          <p>The Money Club runs at the UTSU Student Commons, 230 College Street, near the University of Toronto.</p>
           <p>Students learn in a supervised classroom setting with access to breakout space, lounge seating, and a lunch area. The location is also steps from the TTC, making commuting easier for families.</p>
         </div>
         <div class="location-map-card">

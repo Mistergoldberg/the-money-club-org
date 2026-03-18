@@ -9,6 +9,7 @@ if (is_array($verified_purchase)) {
         'transaction_id' => (string)($verified_purchase['transaction_id'] ?? ''),
         'currency' => (string)($verified_purchase['currency'] ?? 'CAD'),
         'value' => isset($verified_purchase['value']) ? (float)$verified_purchase['value'] : 0,
+        'tax' => isset($verified_purchase['tax']) ? (float)$verified_purchase['tax'] : null,
         'items' => isset($verified_purchase['items']) && is_array($verified_purchase['items']) ? $verified_purchase['items'] : []
     ];
 }
@@ -1567,7 +1568,7 @@ nav{
         <a href="schedule-pricing.html">Curriculum</a>
         <a href="pricing.html">Mission</a>
         <a href="faq.html">FAQ</a>
-                <a data-cta-label="Reserve a spot" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -1620,8 +1621,34 @@ nav{
       var purchasePayload = <?php echo json_encode($purchase_payload, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
       if (purchasePayload && purchasePayload.transaction_id){
         window.dataLayer = window.dataLayer || [];
-        purchasePayload.page_path = window.location.pathname || '';
-        purchasePayload.page_title = document.title || '';
+        var pagePath = window.location.pathname || '';
+        var pageTitle = document.title || '';
+
+        window.dataLayer.push({
+          event: 'tmc_registration_submitted',
+          ga4_event_name: 'registration_submitted',
+          form_name: 'reserve_a_spot',
+          payment_method: 'credit_card',
+          funnel_step: 'registration_payment',
+          transaction_id: purchasePayload.transaction_id,
+          page_path: pagePath,
+          page_title: pageTitle
+        });
+
+        window.dataLayer.push({
+          event: 'tmc_purchase_success',
+          ga4_event_name: 'purchase',
+          transaction_id: purchasePayload.transaction_id,
+          currency: purchasePayload.currency,
+          value: purchasePayload.value,
+          tax: purchasePayload.tax,
+          items: purchasePayload.items,
+          page_path: pagePath,
+          page_title: pageTitle
+        });
+
+        purchasePayload.page_path = pagePath;
+        purchasePayload.page_title = pageTitle;
         window.dataLayer.push(purchasePayload);
       }
     })();

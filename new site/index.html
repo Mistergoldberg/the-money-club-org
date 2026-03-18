@@ -2634,7 +2634,6 @@
             </ul>
             <p>It's not about getting rich.</p>
             <p>It's about discovering what happens when an idea meets the real world.</p>
-            <p>The Money Club.Org is a 4-week, instructor-led Toronto summer program for ages 10–16 that teaches financial literacy, entrepreneurship, and systems design through project-based learning.</p>
            </div>
           <div class="cta-stack cta-stack--hero">
             <div class="program-summary">
@@ -2716,8 +2715,6 @@
               <li>a simple app or digital tool</li>
               <li>the branding or marketing materials that help it stand out</li>
             </ul>
-            <p>Along the way, they interview potential users, test pricing, gather feedback, and improve their idea before presenting it at the Maker Market.</p>
-            <p>The goal is not just to make something interesting.</p>
             <p>It is to build something useful and see what happens when real people have to decide: is this worth paying for?</p>
             <div class="mobile-reserve-btn">
               <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
@@ -3501,6 +3498,45 @@
         }
         showLoader(form);
       }, true);
+    })();
+  </script>
+  <script>
+    (function(){
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('status') !== 'sent'){
+        return;
+      }
+      var interestForm = document.querySelector('form[action="apply-interest.php"]');
+      if (!interestForm){
+        return;
+      }
+
+      var dedupeKey = 'tmc_interest_form_success:' + (window.location.pathname || '') + ':' + window.location.search;
+      try {
+        if (sessionStorage.getItem(dedupeKey) === '1'){
+          return;
+        }
+        sessionStorage.setItem(dedupeKey, '1');
+      } catch (e) {}
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'tmc_interest_form_success',
+        ga4_event_name: 'generate_lead',
+        form_name: 'homepage_interest_list',
+        funnel_step: 'interest_list',
+        page_path: window.location.pathname || '',
+        page_title: document.title || ''
+      });
+
+      params.delete('status');
+      params.delete('field');
+      params.delete('message');
+      var cleanQuery = params.toString();
+      var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
+      try {
+        window.history.replaceState({}, document.title, cleanUrl);
+      } catch (e) {}
     })();
   </script>
 

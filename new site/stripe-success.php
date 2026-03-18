@@ -79,6 +79,10 @@ $transaction_id = isset($session['payment_intent']) && is_string($session['payme
     : $session_id;
 $purchase_currency = strtoupper((string)($session['currency'] ?? 'cad'));
 $purchase_value = isset($session['amount_total']) ? round(((int)$session['amount_total']) / 100, 2) : 0.0;
+$purchase_tax = null;
+if (isset($session['total_details']) && is_array($session['total_details']) && isset($session['total_details']['amount_tax'])) {
+    $purchase_tax = round(((int)$session['total_details']['amount_tax']) / 100, 2);
+}
 
 $parent_name = trim((string)($metadata['parent_name'] ?? ''));
 $parent_email_raw = trim((string)($metadata['parent_email'] ?? ''));
@@ -265,6 +269,7 @@ $_SESSION['tmc_verified_purchase'] = [
     'transaction_id' => $transaction_id,
     'currency' => $purchase_currency,
     'value' => $purchase_value,
+    'tax' => $purchase_tax,
     'items' => [
         [
             'item_id' => 'money-club-summer-camp',

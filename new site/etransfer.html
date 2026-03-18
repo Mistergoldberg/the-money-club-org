@@ -1646,7 +1646,7 @@ nav{
         <a href="pricing.html">Pricing</a>
         <a href="open-book-hook.html">Transparency</a>
         <a href="faq.html">FAQ</a>
-                <a data-cta-label="Reserve a spot" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
       </div>
@@ -2021,20 +2021,36 @@ Phone: <strong>437-239-8602</strong></p>
       if (params.get('status') !== 'sent'){
         return;
       }
+      var dedupeKey = 'tmc_registration_submitted:' + (window.location.pathname || '') + ':' + window.location.search;
+      var alreadyTracked = false;
       try {
-        var dedupeKey = 'tmc_generate_lead_' + window.location.pathname + window.location.search;
-        if (sessionStorage.getItem(dedupeKey) === '1'){
-          return;
+        alreadyTracked = sessionStorage.getItem(dedupeKey) === '1';
+        if (!alreadyTracked){
+          sessionStorage.setItem(dedupeKey, '1');
         }
-        sessionStorage.setItem(dedupeKey, '1');
       } catch (e) {}
+      if (alreadyTracked){
+        return;
+      }
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: 'generate_lead',
+        event: 'tmc_registration_submitted',
+        ga4_event_name: 'registration_submitted',
         form_name: 'reserve_a_spot',
+        payment_method: 'e_transfer',
+        funnel_step: 'registration_payment',
         page_path: window.location.pathname || '',
         page_title: document.title || ''
       });
+
+      params.delete('status');
+      params.delete('field');
+      params.delete('message');
+      var cleanQuery = params.toString();
+      var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
+      try {
+        window.history.replaceState({}, document.title, cleanUrl);
+      } catch (e) {}
     })();
   </script>
   <script>

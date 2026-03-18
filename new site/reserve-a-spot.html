@@ -2138,6 +2138,37 @@ nav{
       var success = document.getElementById('form-success');
       if (success && params.get('status') === 'sent') {
         success.classList.add('is-visible');
+
+        var dedupeKey = 'tmc_registration_submitted:' + (window.location.pathname || '') + ':' + window.location.search;
+        var alreadyTracked = false;
+        try {
+          alreadyTracked = sessionStorage.getItem(dedupeKey) === '1';
+          if (!alreadyTracked){
+            sessionStorage.setItem(dedupeKey, '1');
+          }
+        } catch (e) {}
+
+        if (!alreadyTracked){
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'tmc_registration_submitted',
+            ga4_event_name: 'registration_submitted',
+            form_name: 'reserve_a_spot',
+            payment_method: 'unspecified',
+            funnel_step: 'registration_payment',
+            page_path: window.location.pathname || '',
+            page_title: document.title || ''
+          });
+        }
+
+        params.delete('status');
+        params.delete('field');
+        params.delete('message');
+        var cleanQuery = params.toString();
+        var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
+        try {
+          window.history.replaceState({}, document.title, cleanUrl);
+        } catch (e) {}
       }
       if (params.get('status') === 'error') {
         var fieldName = params.get('field');

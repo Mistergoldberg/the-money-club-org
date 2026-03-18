@@ -13,6 +13,18 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
     $sanitize_header = function ($value) {
         return trim(str_replace(["\r", "\n"], '', $value));
     };
+    $is_ascii_header = function ($value) {
+        return preg_match('/^[\x20-\x7E]*$/', $value) === 1;
+    };
+    $encode_header = function ($value) use ($is_ascii_header) {
+        if ($value === '' || $is_ascii_header($value)) {
+            return $value;
+        }
+        if (function_exists('mb_encode_mimeheader')) {
+            return mb_encode_mimeheader($value, 'UTF-8', 'B', "\r\n");
+        }
+        return '=?UTF-8?B?' . base64_encode($value) . '?=';
+    };
 
     $recipients = is_array($to) ? $to : preg_split('/\s*[;,]\s*/', (string) $to);
     $recipients = array_values(array_filter(array_map($sanitize_header, $recipients)));
@@ -23,6 +35,8 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
     $from_email = $sanitize_header($from_email);
     $reply_to = $sanitize_header($reply_to);
     $from_name = $sanitize_header($from_name);
+    $subject_header = $encode_header($subject);
+    $from_name_header = $encode_header($from_name);
 
     $socket = fsockopen($host, $port, $errno, $errstr, 15);
     if (!$socket) {
@@ -118,14 +132,14 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
         return false;
     }
 
-    $from_header = $from_name !== '' ? $from_name . ' <' . $from_email . '>' : $from_email;
+    $from_header = $from_name_header !== '' ? $from_name_header . ' <' . $from_email . '>' : $from_email;
     $to_header = implode(', ', $recipients);
     $content_type = $is_html ? 'text/html; charset=UTF-8' : 'text/plain; charset=UTF-8';
     $headers = [
         'From: ' . $from_header,
         'Reply-To: ' . $reply_to,
         'To: ' . $to_header,
-        'Subject: ' . $subject,
+        'Subject: ' . $subject_header,
         'MIME-Version: 1.0',
         'Content-Type: ' . $content_type,
     ];

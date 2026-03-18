@@ -42,6 +42,7 @@
       --size-sm: clamp(14px, 1.2vw, 16px);
       --size-lg: clamp(24px, 2.8vw, 34px);
       --size-xl: clamp(38px, 6.2vw, 77px);
+      --btn-size-lg: clamp(31.2px, 5vw, 62.4px);
 
       --max-wide: 1320px;
       --content-max: 74ch;
@@ -152,9 +153,29 @@
     }
     .menu-panel a{
       padding: 6px 6px;
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
       font-weight: 500;
       line-height: 1.1;
       font-size: clamp(26px, 3.2vw, 40px);
+    }
+    .menu-panel .menu-cta{
+      text-transform: none;
+      letter-spacing: 0;
+      font-family: var(--font-body);
+      width: min(320px, 100%);
+      justify-content: center;
+      margin-top: 6px;
+      font-size: var(--btn-size-lg);
+      border-radius: 16px;
+      padding: 16px 26px;
+      justify-self: center;
+    }
+    .menu-panel .btn{
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
     }
 
     nav{
@@ -166,6 +187,18 @@
       font-size: 23px;
       flex: 1;
       justify-content: space-evenly;
+    }
+    .topbar nav a{
+      font-family: var(--font-body);
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .topbar .btn{
+      font-family: var(--font-body);
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0;
     }
 
     .btn{
@@ -392,8 +425,19 @@
     }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T243W4XM');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T243W4XM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header class="topbar">
     <div class="inner">
       <div class="menu-btn" role="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
@@ -410,7 +454,7 @@
           <a href="pricing.html">Pricing</a>
           <a href="open-book-hook.html">Transparency</a>
           <a href="faq.html">FAQ</a>
-          <a class="btn" href="reserve-a-spot.html">Reserve a spot</a>
+          <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
       </div>
 
@@ -422,7 +466,7 @@
         <a href="faq.html">FAQ</a>
       </nav>
 
-      <a class="btn" href="reserve-a-spot.html">Reserve a spot</a>
+      <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
     </div>
   </header>
 
@@ -659,6 +703,36 @@
       if (success && params.get('status') === 'sent'){
         success.classList.add('is-visible');
         success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        var dedupeKey = 'tmc_parent_approval_success:' + (window.location.pathname || '') + ':' + window.location.search;
+        var alreadyTracked = false;
+        try {
+          alreadyTracked = sessionStorage.getItem(dedupeKey) === '1';
+          if (!alreadyTracked){
+            sessionStorage.setItem(dedupeKey, '1');
+          }
+        } catch (e) {}
+
+        if (!alreadyTracked){
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'tmc_parent_approval_success',
+            ga4_event_name: 'parent_approval_submit',
+            form_name: 'parent_approval_form',
+            funnel_step: 'parent_approval',
+            page_path: window.location.pathname || '',
+            page_title: document.title || ''
+          });
+        }
+
+        params.delete('status');
+        params.delete('field');
+        params.delete('message');
+        var cleanQuery = params.toString();
+        var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
+        try {
+          window.history.replaceState({}, document.title, cleanUrl);
+        } catch (e) {}
       }
 
       if (params.get('status') === 'error'){
