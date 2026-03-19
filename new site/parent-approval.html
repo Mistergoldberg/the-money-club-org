@@ -442,7 +442,11 @@
 
     @media (max-width: 980px){
       nav{ display:none; }
-      .topbar .btn:not(.menu-cta){ display: none; }
+      .topbar .btn:not(.menu-cta){
+        font-size: 14px;
+        padding: 10px 12px;
+        min-height: 40px;
+      }
       .field-row.two-col{ grid-template-columns: 1fr; }
       .section-banner h1{ font-size: clamp(48px, 7vw, 80px); }
       body{ font-size: 19px; }
@@ -474,20 +478,22 @@
       </div>
 
       <div class="menu-panel" id="mobile-menu" aria-hidden="true">
-        <button class="menu-close" type="button" aria-label="Close menu">&times;</button>
+        <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
-          <a href="how-it-works.html">Build &amp; Sell</a>
-          <a href="schedule-pricing.html">Maker Market</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="open-book-hook.html">Transparency</a>
-          <a href="faq.html">FAQ</a>
+        <a href="how-it-works.html">Build & Sell</a>
+        <a href="schedule-pricing.html">Maker Market</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="open-book-hook.html">Transparency</a>
+        <a href="/article-best-summer-camps.html">Parent Resources</a>
+        <a href="faq.html">FAQ</a>
         <a href="/instructors.html">We're Hiring</a>
-          <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
+
       </div>
 
       <nav aria-label="Primary">
-        <a href="how-it-works.html">Build &amp; Sell</a>
+        <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
         <a href="open-book-hook.html">Transparency</a>

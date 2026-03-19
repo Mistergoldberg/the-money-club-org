@@ -617,6 +617,7 @@
 
     /* Sections */
     .section{ margin-top: var(--space-6); }
+    #reserve.section-banner{ margin-top: var(--space-6); }
     .section-banner{
       padding: 26px 0;
       border-top: 1px solid var(--line);
@@ -793,6 +794,31 @@
     #who-runs-it .split{
       align-items: start;
       gap: clamp(24px, 4vw, 44px);
+    }
+    #how-it-works .section-banner h2{
+      letter-spacing: 0.01em;
+    }
+    #how-it-works .section-copy{
+      gap: 14px;
+      max-width: 44rem;
+    }
+    #how-it-works .section-copy p{
+      margin: 0;
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+    #how-it-works .section-copy p:nth-of-type(3){
+      font-weight: 500;
+    }
+    #how-it-works .section-copy .bullet-list{
+      margin: 0;
+      padding-left: 1.05em;
+      display: grid;
+      gap: 8px;
+    }
+    #how-it-works .section-copy .bullet-list li{
+      margin: 0;
+      line-height: 1.28;
     }
     #what-is-this .section-copy{
       gap: 16px;
@@ -1846,6 +1872,46 @@
     @media (min-width: 981px){
       .menu-btn{ display:none; }
     }
+    @media (min-width: 981px){
+      #how-it-works .split{
+        align-items: start;
+      }
+      #how-it-works .section-copy{
+        max-width: 44rem;
+        font-size: 0.95em;
+        gap: 10px;
+      }
+      #how-it-works .section-media{
+        align-self: start;
+      }
+      #how-it-works .section-image{
+        height: clamp(380px, 34vw, 520px);
+        overflow: hidden;
+      }
+      #how-it-works .section-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 32%;
+      }
+      #radical-transparency .radical-grid{
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: clamp(28px, 4vw, 52px);
+      }
+      #radical-transparency .radical-side{
+        justify-items: center;
+        align-self: center;
+      }
+      #radical-transparency .radical-side .section-image{
+        width: min(100%, 448px);
+        justify-self: center;
+      }
+      #radical-transparency .radical-copy{
+        align-self: center;
+        max-width: 46rem;
+      }
+    }
 
 
     @media (max-width: 980px){
@@ -2065,6 +2131,9 @@
       .section{
         margin-top: var(--space-5);
       }
+      #reserve.section-banner{
+        margin-top: var(--space-5);
+      }
       .section-banner{
         padding: 18px 0;
       }
@@ -2224,6 +2293,12 @@
         aspect-ratio: 4 / 3;
         object-fit: cover;
       }
+      #radical-transparency .radical-side .section-image img{
+        aspect-ratio: auto;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+      }
       footer.site-footer .inner{ text-align: center; }
       footer.site-footer .footer-logo{ width: 72px; height: 72px; }
       footer.site-footer .footer-title,
@@ -2291,14 +2366,17 @@
       main > #built-like-a-business{ order: 20; }
       main > #what-is-this{ order: 30; }
       main > #how-it-works{ order: 40; }
-      main > #radical-transparency{ order: 50; }
-      main > #who-runs-it{ order: 60; }
+      main > #who-runs-it{ order: 50; }
+      main > #radical-transparency{ order: 60; }
       main > #what-students-leave-with{ order: 70; }
       main > #camp-guides{ order: 80; }
       main > #reserve.section-banner{ order: 90; }
       main > #reserve-a-spot{ order: 100; }
 
       .section{
+        margin-top: 40px;
+      }
+      #reserve.section-banner{
         margin-top: 40px;
       }
       .section-banner{
@@ -2464,6 +2542,9 @@
       .section{
         margin-top: 34px;
       }
+      #reserve.section-banner{
+        margin-top: 34px;
+      }
       .guide-links li,
       .faq-home-list li,
       #curriculum .module-list li{
@@ -2576,6 +2657,7 @@
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
         <a href="open-book-hook.html">Transparency</a>
+        <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
         <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
@@ -2632,7 +2714,7 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <h3>Try Building Something Real</h3>
+            <h3>Build an idea. Test it in the real world.</h3>
             <p><strong>Many kids already earn money in small ways — babysitting, teaching swim lessons, tutoring, or selling things online.</strong></p>
             <p>At The Money Club.Org, student teams receive a project budget and try something similar: design an idea and see if people will actually buy it.</p>
             <ul class="bullet-list">
@@ -2649,12 +2731,12 @@
               <div class="program-summary-points">
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧠</span><span class="program-summary-point-text">Build and launch real products</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text">Ages 10–16</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">Daily: 9-5</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July 6–31 or Aug 4–28</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">Cost: $1500 ($75/day)</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">Daily: 9-5</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">Cost: $1500</span></div>
               </div>
-              <a data-cta-label="Reserve a spot" class="btn teal gloss cta-standard cta-fill" href="reserve-a-spot.html">Reserve a Spot</a>
+              <a data-cta-label="Get program details" class="btn teal gloss cta-standard cta-fill" href="#join-the-interest-list">Get Program Details</a>
             </div>
           </div>
         </div>
@@ -2684,21 +2766,21 @@
             </div>
           </div>
           <div class="section-copy">
-            <p>The Money Club runs at the UTSU Student Commons, located at 230 College Street in downtown Toronto, near the University of Toronto.</p>
-            <p>The location is convenient for families across central Toronto, including the Annex, Kensington Market, Chinatown, and surrounding downtown neighborhoods.</p>
-            <p>Students meet in a supervised classroom environment where they develop real projects, collaborate with peers, and present their final ideas.</p>
+            <p>The Money Club runs at the UTSU Student Commons at 230 College Street in downtown Toronto.</p>
+            <p>Classes are led by University of Toronto instructors in a supervised, small-group classroom setting where students build projects, collaborate with peers, and present their ideas.</p>
+            <p>Students also have access to breakout space, lounge seating, and a lunch area. The building is steps from the TTC, making commuting easier for families across central Toronto.</p>
             <p>Light daily snacks are provided. Students should bring their own lunch and water bottle.</p>
             <div class="fact-list">
-              <div><strong>Who is it for?</strong> Curious kids ages 10–16</div>
-              <div><strong>How long?</strong> 4-week summer day program</div>
               <div>
-                <strong>When?</strong>
-                <div class="fact-subline">Session 1: July 6–31</div>
-                <div class="fact-subline">Session 2: August 4–28</div>
+                <strong>Schedule</strong>
+                <div class="fact-subline">Weekdays, 9:00 AM-5:00 PM</div>
+                <div class="fact-subline">Core instruction: 9:30 AM-3:30 PM</div>
               </div>
-            </div>
-            <div class="mobile-reserve-btn">
-              <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
+              <div>
+                <strong>Session Dates</strong>
+                <div class="fact-subline">Session 1: July 6-31</div>
+                <div class="fact-subline">Session 2: August 4-28</div>
+              </div>
             </div>
           </div>
         </div>
@@ -2715,6 +2797,7 @@
         <div class="split">
           <div class="section-copy">
             <p>Students work on real ideas, not just hypothetical projects.</p>
+            <p>With instructor guidance, they move from early research and rough concepts to something more concrete: a product, service, prototype, or small business idea they can test and present.</p>
             <p>They might create:</p>
             <ul class="bullet-list">
               <li>a next-level lemonade stand</li>
@@ -2724,89 +2807,14 @@
               <li>a simple app or digital tool</li>
               <li>the branding or marketing materials that help it stand out</li>
             </ul>
-            <p>It is to build something useful and see what happens when real people have to decide: is this worth paying for?</p>
+            <p>The goal is to build something useful and see what happens when real people have to decide: is this worth paying for?</p>
             <div class="mobile-reserve-btn">
               <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
             </div>
           </div>
           <div class="section-media">
             <div class="section-image">
-              <img src="assets/instruct-presents-1.jpg" alt="Students presenting a UX design" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="radical-transparency">
-      <div class="section-banner teal">
-        <div class="wrap">
-          <h2>Built for learning — not profit</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="radical-grid">
-          <div class="radical-copy">
-            <h3>The Money Club.Org is a community-first program.</h3>
-            <p>It is not designed to maximize profit. It is designed to teach financial literacy by example.</p>
-            <p>That's why we run the program using open-book financials — so families can see exactly where tuition goes, and students can learn by watching money move through a real system.</p>
-
-            <h3>Why This Matters to Families</h3>
-            <p>This model keeps the program:</p>
-            <ul class="radical-list">
-              <li>Accountable</li>
-              <li>Sustainable</li>
-              <li>Focused on outcomes</li>
-              <li>Designed to break even — on purpose</li>
-            </ul>
-            <div class="radical-notes">
-              <p>No upselling.</p>
-              <p>No corner-cutting.</p>
-              <p>No pressure to scale at the expense of quality.</p>
-            </div>
-          </div>
-          <div class="radical-side">
-            <div class="openbook-pie-card" aria-label="Program budget distribution chart">
-              <h3 class="openbook-subheading">Expenses <span class="openbook-subtitle">(10 Students + 1 Lecturer)</span></h3>
-              <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 35%, Materials 13%, Venue rental 22%, Insurance 3%, Overhead 19%, Incidentals 9%">
-                <div class="openbook-pie-center">
-                  <span class="label">Total</span>
-                  <span class="value">100%</span>
-                </div>
-              </div>
-              <ul class="openbook-legend">
-                <li>
-                  <span class="legend-dot" style="background: var(--purple);"></span>
-                  <span class="legend-label">Instructor</span>
-                  <span class="legend-value">35%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--teal);"></span>
-                  <span class="legend-label">Materials</span>
-                  <span class="legend-value">13%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--gold);"></span>
-                  <span class="legend-label">Venue rental</span>
-                  <span class="legend-value">22%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--rose);"></span>
-                  <span class="legend-label">Incidentals</span>
-                  <span class="legend-value">9%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--slate);"></span>
-                  <span class="legend-label">Overhead</span>
-                  <span class="legend-value">19%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--ink);"></span>
-                  <span class="legend-label">Insurance</span>
-                  <span class="legend-value">3%</span>
-                </li>
-              </ul>
-              <a data-cta-label="Audit the books" class="btn purple cta-standard" href="open-book-hook.html">Audit Our Books</a>
+              <img src="assets/instruct-mobile-packing.jpg" alt="Students presenting a UX design" />
             </div>
           </div>
         </div>
@@ -2821,101 +2829,47 @@
       </div>
       <div class="section-content">
         <div class="section-copy">
-          <p>Each week builds on the last. Students move from understanding how money and businesses work → to designing products → to building and testing their own ideas.</p>
+          <p><strong>A Typical Day</strong></p>
+          <p>Each day follows a clear rhythm with instructor-led sessions, build time, lunch, project work, feedback, and short presentations so students know what to expect.</p>
+          <p><strong>Week by Week</strong></p>
+          <p>Each week builds on the last, so students move from understanding how ideas work in the real world to building and presenting one of their own.</p>
           <ul class="module-list week-list">
             <li>
-              <strong>Week 1 — Decision Bootcamp</strong>
-              <p>Students learn how money and work actually function in the real world—reading simple agreements, modeling wages and costs, breaking down how businesses survive, and running their first market research field study so they can build ideas based on evidence, not guesswork.</p>
+              <strong>Week 1 — Understand the Basics</strong>
+              <p>Money, pricing, work, and early market research.</p>
             </li>
             <li>
-              <strong>Week 2 — Control Brand Sprint</strong>
-              <p>Students reverse-engineer a real product category (like garbage bags or snacks), studying competitors, designing their own “control brand,” and learning how packaging, pricing, sourcing, and positioning combine to create a product that can actually compete.</p>
+              <strong>Week 2 — Study What Works</strong>
+              <p>Products, competitors, branding, and positioning.</p>
             </li>
             <li>
-              <strong>Week 3 — Marketplace Build</strong>
-              <p>Students identify a real customer problem, validate the idea through interviews and quick research, then prototype, cost, and price their own product or service while preparing a launch plan for a simulated marketplace.</p>
+              <strong>Week 3 — Build the Idea</strong>
+              <p>Prototype, test, price, and shape core concept.</p>
             </li>
             <li>
-              <strong>Week 4 — Scale + Showcase</strong>
-              <p>Students refine their product based on feedback, improve the economics and story behind it, and present their work at the final showcase—explaining not just what they built, but why the idea works and what they would do next.</p>
+              <strong>Week 4 — Maker Market Event</strong>
+              <p>Improve the work and prepare for the final showcase - parents invited.</p>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="section" id="what-students-leave-with">
-      <div class="section-banner gold">
+    <section class="section" id="radical-transparency">
+      <div class="section-banner teal">
         <div class="wrap">
-          <h2>Is This a STEM Program?</h2>
+          <h2>Built for Learning — Not Profit</h2>
         </div>
       </div>
       <div class="section-content">
-        <div class="stem-grid">
-          <div class="section-copy stem-copy">
-            <p>It works alongside STEM — but focuses on the layer most STEM programs skip.</p>
-            <p>Many STEM camps teach students how to code, build robots, or engineer projects.</p>
-            <p>The Money Club asks a different question:</p>
-            <p><strong>What should you build — and why would anyone want it?</strong></p>
-            <p>Students learn to observe how people interact with products and systems, identify real problems, and test ideas through design thinking.</p>
-            <p>That might include:</p>
-            <ul class="bullet-list">
-              <li>designing a product or service</li>
-              <li>prototyping an idea</li>
-              <li>building a simple digital tool</li>
-              <li>interviewing potential users</li>
-              <li>testing pricing and demand</li>
-              <li>developing branding, photography, or marketing materials</li>
-              <li>presenting the idea clearly to others</li>
-            </ul>
-            <p>For students who already enjoy coding, robotics, or making things, The Money Club provides the real-world context those skills often lack.</p>
-            <p>It’s not just about building something.</p>
-            <p>It’s about building something that solves a real problem — and understanding the systems that make it work.</p>
-            <div class="mobile-reserve-btn">
-              <a data-cta-label="Reserve a spot" class="btn teal gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
+        <div class="radical-grid">
+          <div class="radical-side">
+            <div class="section-image">
+              <img src="assets/flywheel.jpg" alt="Students and instructors collaborating in class" />
             </div>
           </div>
-          <div class="stem-visuals" aria-hidden="true">
-            <div class="stem-visual">
-              <div class="section-image">
-                <img src="assets/student-ux.jpg" alt="" />
-              </div>
-            </div>
-            <div class="stem-visual">
-              <div class="section-image">
-                <img src="assets/student-present-1.jpg" alt="" />
-              </div>
-            </div>
-            <a data-cta-label="Reserve a spot" class="btn teal gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="camp-guides">
-      <div class="section-banner purple">
-        <div class="wrap">
-          <h2><a class="guide-heading-link" href="article-best-summer-camps.html">Guide to Summer Camps in Toronto</a></h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="guide-grid">
-          <div class="section-copy guide-intro">
-            <p>Toronto parents often ask how to choose the right summer camp for their child. We&apos;ve created a few simple guides to help families explore different types of programs, from broad camp options to STEM and entrepreneurship-focused learning.</p>
-            <p>These guides are designed to help families compare options and find a program that fits their child&apos;s interests.</p>
-            <ul class="module-list guide-links">
-              <li><a href="article-best-summer-camps.html">Best Summer Camps in Toronto</a></li>
-              <li><a href="article-stem-summer-camps.html">STEM Summer Camps in Toronto</a></li>
-              <li><a href="article-teens-summer-camps.html">Summer Camps for Teens in Toronto</a></li>
-              <li><a href="article-entrepreneurship-camps-toronto.html">Entrepreneurship Camps in Toronto</a></li>
-              <li><a href="article-financial-literacy-camps.html">Financial Literacy Camps for Kids</a></li>
-            </ul>
-          </div>
-          <div class="guide-cta">
-            <div class="guide-media">
-              <img src="assets/kids-campus-1.jpg" alt="Students walking together outside near campus buildings" width="1536" height="1024" loading="lazy" decoding="async" />
-            </div>
-            <a class="btn gold gloss cta-standard" href="article-best-summer-camps.html">Check out the guides</a>
+          <div class="radical-copy">
+            <p>The Money Club.Org is a nonprofit summer program with open-book financials, so families can see where tuition goes. No upselling. No hidden extras. Just a transparent program built around instruction, materials, and a strong student experience.</p>
           </div>
         </div>
       </div>
@@ -2923,7 +2877,7 @@
 
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2>JOIN THE INTEREST LIST</h2>
+        <h2 id="join-the-interest-list">JOIN THE INTEREST LIST</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
