@@ -116,7 +116,7 @@ if (!array_key_exists($preferred_session, $session_map)) {
 }
 
 if ($terms_agree === '') {
-    redirect_with_error($return_error, 'terms-agree', 'Please agree to the program terms and refund policy.');
+    redirect_with_error($return_error, 'terms-agree', 'Please agree to the Terms & Payment Policy.');
 }
 
 if ($payment_method !== 'Credit Card') {

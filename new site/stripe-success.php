@@ -197,7 +197,7 @@ if ($parent_email !== '') {
     $parent_lines[] = 'UTSU Student Commons';
     $parent_lines[] = 'University of Toronto (downtown)';
     $parent_lines[] = '';
-    $parent_lines[] = 'Daily 9–5';
+    $parent_lines[] = 'Daily 9–5, with instruction from 9:30am to 3:30pm';
     $parent_lines[] = '';
     $parent_lines[] = 'Sessions:';
     $parent_lines[] = '- July 6–31';

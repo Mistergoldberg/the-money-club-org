@@ -51,7 +51,7 @@
           "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 10-16.",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://the-money-club.org/assets/logo-500.png"
+            "url": "https://the-money-club.org/assets/logo-mb-w.png"
           },
           "email": "info@the-money-club.org",
           "telephone": "+1-437-239-8602",
@@ -1009,7 +1009,7 @@ nav{
       justify-items: center;
     }
     .reserve-banner .logo-main{
-      width: clamp(50px, 5.4vw, 72px);
+      width: clamp(184px, 16vw, 264px);
       height: auto;
       margin: 0 auto 10px;
       display: block;
@@ -1420,8 +1420,8 @@ nav{
     }
     .tuition-amount{
       margin: 0;
-      font-size: clamp(36px, 4.6vw, 52px);
-      line-height: 1;
+      font-size: inherit;
+      line-height: var(--lh-body);
       font-weight: 700;
       color: var(--ink);
     }
@@ -1788,7 +1788,7 @@ nav{
         padding: 20px 0 24px;
       }
       .reserve-banner .logo-main{
-        width: clamp(60px, 15.4vw, 100px);
+        width: clamp(220px, 48vw, 320px);
         margin-bottom: 12px;
       }
       .reserve-subheading{
@@ -1880,12 +1880,11 @@ nav{
     <section class="section-banner reserve-banner">
       <div class="wrap">
         <a href="index.html" aria-label="The Money Club.Org home">
-          <img class="logo-main" src="assets/logo-500.png" alt="The Money Club.Org logo" />
+          <img class="logo-main" src="assets/logo-mb-w.png" alt="The Money Club.Org logo" />
         </a>
         <h2>RESERVE A SPOT &mdash; SUMMER 2026</h2>
-        <p class="reserve-subheading">You're one step away from securing a spot. Complete registration below to confirm your child's place.</p>
+        <p class="reserve-subheading">You&apos;re steps away from investing in the community. Complete registration below to confirm your child&apos;s place.</p>
         <p class="reserve-support">Small groups • Ages 10&ndash;16 • UTSU Student Commons (Downtown Toronto)</p>
-        <p class="reserve-support">Light daily snacks are provided. Students bring their own lunch.</p>
         <a class="reserve-secondary-link" href="how-it-works.html">Not ready yet? Get program details first</a>
       </div>
     </section>
@@ -1961,23 +1960,22 @@ nav{
               </div>
               <div class="payment-section">
                 <h2 class="form-step-title">Step 3 &mdash; Program Tuition</h2>
-                <p class="tuition-amount">$1,500 per student</p>
+                <p class="tuition-amount">$1,500 per student (plus HST)</p>
                 <div class="payment-meta">
-                  <div>Includes the full 4-week program, materials, and final presentation event.</div>
-                  <div>Refunds available until June 1, 2026.</div>
+                  <div>Includes the full 4-week program, materials, light daily snacks, and final presentation event.</div>
                 </div>
                 <h2 class="form-step-title payment-step-title">Step 4 &mdash; Payment Options</h2>
                 <div class="reassurance-list">
                   <div>&#10003; Small groups</div>
                   <div>&#10003; Downtown Toronto</div>
-                  <div>&#10003; Refunds available until June 1</div>
+                  <div>&#10003; Refunds available until June 1 (less $75 admin fee)</div>
                 </div>
                 <div class="field terms-consent">
                   <label for="terms-agree">
                     <input id="terms-agree" name="terms-agree" type="checkbox" required />
-                    <span>I agree to the <a href="program-terms.html">program terms</a> and <a href="program-terms.html">refund policy</a>.</span>
+                    <span>I agree to the <a href="program-terms.html">Terms &amp; Payment Policy</a>.</span>
                   </label>
-                  <small class="field-error">Please agree to the program terms and refund policy.</small>
+                  <small class="field-error">Please agree to the Terms &amp; Payment Policy.</small>
                 </div>
                 <div class="payment-grid">
                   <button class="payment-option is-disabled" type="submit" name="payment-method" value="e-Transfer" aria-disabled="true">

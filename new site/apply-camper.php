@@ -125,7 +125,7 @@ if (!array_key_exists($preferred_session, $session_map)) {
 }
 
 if ($terms_agree === '') {
-    redirect_with_error($error_return, 'terms-agree', 'Please agree to the program terms and refund policy.');
+    redirect_with_error($error_return, 'terms-agree', 'Please agree to the Terms & Payment Policy.');
 }
 
 if ($payment_method === '' || !in_array($payment_method, ['Credit Card', 'e-Transfer'], true)) {
@@ -236,7 +236,7 @@ $parent_lines[] = '';
 $parent_lines[] = 'UTSU Student Commons';
 $parent_lines[] = 'University of Toronto (downtown)';
 $parent_lines[] = '';
-$parent_lines[] = 'Daily 9–5';
+$parent_lines[] = 'Daily 9–5, with instruction from 9:30am to 3:30pm';
 $parent_lines[] = '';
 $parent_lines[] = 'Sessions:';
 $parent_lines[] = '- July 6–31';
