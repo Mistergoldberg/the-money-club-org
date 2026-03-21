@@ -2881,5 +2881,76 @@ nav{
     })();
   </script>
 
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    (function(){
+      var interestForm = document.querySelector('form[action="apply-interest.php"]');
+      if (!interestForm){ return; }
+
+      function fireInterestFormStart(){
+        if (window.__tmcInterestFormStarted){ return; }
+        window.__tmcInterestFormStarted = true;
+
+        window.dataLayer.push({
+          event: 'interest_form_start',
+          form_name: 'interest_form',
+          funnel_step: 'form_start',
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
+      function pushInterestFormSubmit(){
+        window.dataLayer.push({
+          event: 'interest_form_submit',
+          form_name: 'interest_form',
+          funnel_step: 'form_submit',
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
+      function pushInterestFormError(fieldName, message){
+        window.dataLayer.push({
+          event: 'interest_form_error',
+          error_field: fieldName || 'unknown',
+          error_message: message || 'Validation error',
+          form_name: 'interest_form',
+          funnel_step: 'form_error',
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
+      interestForm.addEventListener('focusin', function(e){
+        var target = e.target;
+        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
+        fireInterestFormStart();
+      }, true);
+
+      interestForm.addEventListener('input', function(e){
+        var target = e.target;
+        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
+        fireInterestFormStart();
+      }, true);
+
+      interestForm.addEventListener('submit', function(e){
+        if (!interestForm.checkValidity()){
+          var firstInvalid = interestForm.querySelector(':invalid');
+
+          pushInterestFormError(
+            firstInvalid ? firstInvalid.name : 'unknown',
+            firstInvalid ? firstInvalid.validationMessage : 'Validation error'
+          );
+
+          return;
+        }
+
+        pushInterestFormSubmit();
+      });
+    })();
+  </script>
+
 </body>
 </html>

@@ -1973,6 +1973,8 @@ Phone: <strong>437-239-8602</strong></p>
         var pagePath = window.location.pathname || '';
         return {
           event: eventName,
+          form_name: 'site_cta',
+          funnel_step: eventName,
           cta_label: label,
           cta_text: text,
           cta_href: href,
@@ -2048,7 +2050,7 @@ Phone: <strong>437-239-8602</strong></p>
         event: 'tmc_registration_submitted',
         ga4_event_name: 'registration_submitted',
         form_name: 'reserve_a_spot',
-        payment_method: 'e_transfer',
+        payment_method: 'etransfer',
         funnel_step: 'registration_payment',
         page_path: window.location.pathname || '',
         page_title: document.title || ''

@@ -1638,6 +1638,9 @@ nav{
         window.dataLayer.push({
           event: 'tmc_purchase_success',
           ga4_event_name: 'purchase',
+          form_name: 'reserve_a_spot',
+          funnel_step: 'purchase_success',
+          payment_method: 'credit_card',
           transaction_id: purchasePayload.transaction_id,
           currency: purchasePayload.currency,
           value: purchasePayload.value,
@@ -1647,6 +1650,8 @@ nav{
           page_title: pageTitle
         });
 
+        purchasePayload.form_name = purchasePayload.form_name || 'reserve_a_spot';
+        purchasePayload.funnel_step = purchasePayload.funnel_step || 'purchase';
         purchasePayload.page_path = pagePath;
         purchasePayload.page_title = pageTitle;
         window.dataLayer.push(purchasePayload);
@@ -1895,6 +1900,8 @@ nav{
         var pagePath = window.location.pathname || '';
         return {
           event: eventName,
+          form_name: 'site_cta',
+          funnel_step: eventName,
           cta_label: label,
           cta_text: text,
           cta_href: href,

@@ -2113,6 +2113,79 @@ nav{
         });
       }
 
+      var pagePath = window.location.pathname || '';
+      var pageTitle = document.title || '';
+      var formName = 'reserve_a_spot';
+      var registrationReadyTracked = false;
+
+      function pushFormEvent(payload){
+        if (!payload || !payload.event){ return; }
+        window.dataLayer = window.dataLayer || [];
+        if (!payload.form_name){ payload.form_name = formName; }
+        if (!payload.page_path){ payload.page_path = pagePath; }
+        if (!payload.page_title){ payload.page_title = pageTitle; }
+        window.dataLayer.push(payload);
+      }
+
+      function fireRegistrationFormStart(){
+        if (window.__tmcRegistrationFormStarted){ return; }
+        window.__tmcRegistrationFormStarted = true;
+        pushFormEvent({
+          event: 'registration_form_start',
+          funnel_step: 'registration_start'
+        });
+      }
+
+      function getSelectedSessionName(){
+        var selected = document.querySelector('input[name="preferred-session"]:checked');
+        return selected ? selected.value : '';
+      }
+
+      function normalizePaymentMethod(value){
+        return value === 'Credit Card' ? 'credit_card' : 'etransfer';
+      }
+
+      function normalizeStoredPaymentMethod(value){
+        return value === 'credit_card' ? 'credit_card' : 'etransfer';
+      }
+
+      function persistSessionName(sessionName){
+        if (!sessionName){ return; }
+        try {
+          sessionStorage.setItem('tmc_registration_session_name', sessionName);
+        } catch (e) {}
+      }
+
+      function persistPaymentMethod(paymentMethod){
+        if (!paymentMethod){ return; }
+        try {
+          sessionStorage.setItem('tmc_registration_payment_method', paymentMethod);
+        } catch (e) {}
+      }
+
+      function getStoredValue(key){
+        try {
+          return sessionStorage.getItem(key) || '';
+        } catch (e) {
+          return '';
+        }
+      }
+
+      function pushRegistrationFormError(fieldName, message){
+        pushFormEvent({
+          event: 'registration_form_error',
+          error_field: fieldName || 'unknown',
+          error_message: message || 'Validation error',
+          funnel_step: 'form_error'
+        });
+      }
+
+      pushFormEvent({
+        event: 'registration_page_view',
+        page_type: 'registration',
+        funnel_step: 'registration_entry'
+      });
+
       function updateFieldState(field, force){
         if (!field){ return; }
         var radios = field.querySelectorAll('input[type="radio"]');
@@ -2138,6 +2211,12 @@ nav{
 
       var forms = document.querySelectorAll('.form-grid');
       forms.forEach(function(form){
+        form.addEventListener('focusin', function(e){
+          var target = e.target;
+          if (!target || !target.matches || !target.matches('input, select, textarea')){ return; }
+          fireRegistrationFormStart();
+        }, true);
+
         form.addEventListener('submit', function(e){
           var fields = form.querySelectorAll('.field');
           fields.forEach(function(field){
@@ -2148,12 +2227,19 @@ nav{
             e.preventDefault();
             var firstInvalid = form.querySelector(':invalid');
             if (firstInvalid){
+              pushRegistrationFormError(firstInvalid.name, firstInvalid.validationMessage);
+            }
+            if (firstInvalid){
               firstInvalid.focus();
             }
           }
         });
 
       form.addEventListener('input', function(e){
+        var target = e.target;
+        if (target && target.matches && target.matches('input, select, textarea')){
+          fireRegistrationFormStart();
+        }
         updateFieldState(e.target.closest('.field'), false);
         updateFlowState();
       });
@@ -2187,12 +2273,15 @@ nav{
         } catch (e) {}
 
         if (!alreadyTracked){
+          var trackedPaymentMethod = normalizeStoredPaymentMethod(getStoredValue('tmc_registration_payment_method'));
+          var trackedSessionName = getStoredValue('tmc_registration_session_name') || getSelectedSessionName() || 'unspecified';
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
             event: 'tmc_registration_submitted',
             ga4_event_name: 'registration_submitted',
             form_name: 'reserve_a_spot',
-            payment_method: 'unspecified',
+            payment_method: trackedPaymentMethod,
+            session_name: trackedSessionName,
             funnel_step: 'registration_payment',
             page_path: window.location.pathname || '',
             page_title: document.title || ''
@@ -2315,10 +2404,29 @@ nav{
         }
       }
 
+      function getFirstInvalidBaseField(){
+        var invalid = null;
+        Array.prototype.some.call(baseRequiredInputs, function(input){
+          if (!input.checkValidity()){
+            invalid = input;
+            return true;
+          }
+          return false;
+        });
+        return invalid;
+      }
+
       function updateFlowState(){
         setSessionState();
         var canPay = baseFieldsValid() && sessionSelected() && termsAgreed();
         setPaymentState(canPay);
+        if (canPay && !registrationReadyTracked){
+          registrationReadyTracked = true;
+          pushFormEvent({
+            event: 'registration_ready',
+            funnel_step: 'ready_for_payment'
+          });
+        }
       }
 
       updateFlowState();
@@ -2350,6 +2458,9 @@ nav{
         var value = getProgramFeeValue(form);
         window.dataLayer.push({
           event: 'begin_checkout',
+          form_name: 'reserve_a_spot',
+          funnel_step: 'begin_checkout',
+          payment_method: 'credit_card',
           currency: 'CAD',
           value: value,
           items: [
@@ -2366,8 +2477,27 @@ nav{
         });
       }
 
+      function pushEtransferStart(form){
+        if (!form || form.dataset.etransferStartTracked === 'true'){
+          return;
+        }
+        form.dataset.etransferStartTracked = 'true';
+        pushFormEvent({
+          event: 'etransfer_start',
+          payment_method: 'etransfer',
+          funnel_step: 'begin_checkout'
+        });
+      }
+
       sessionRadios.forEach(function(radio){
         radio.addEventListener('change', function(){
+          var sessionName = radio.value || '';
+          persistSessionName(sessionName);
+          pushFormEvent({
+            event: 'session_select',
+            session_name: sessionName,
+            funnel_step: 'session_selected'
+          });
           updateFlowState();
         });
       });
@@ -2383,6 +2513,14 @@ nav{
 
       paymentButtons.forEach(function(btn){
         btn.addEventListener('click', function(e){
+          var paymentMethod = normalizePaymentMethod(btn.value);
+          persistPaymentMethod(paymentMethod);
+          pushFormEvent({
+            event: 'payment_method_select',
+            payment_method: paymentMethod,
+            funnel_step: 'payment_selected'
+          });
+
           var form = btn.form;
           if (form) {
             var returnTo = form.querySelector('[name="return-to"]');
@@ -2400,21 +2538,29 @@ nav{
           }
           if (!baseFieldsValid()){
             e.preventDefault();
+            var invalidBase = getFirstInvalidBaseField();
+            if (invalidBase){
+              pushRegistrationFormError(invalidBase.name, invalidBase.validationMessage);
+            }
             showFirstInvalidField();
             return;
           }
           if (!sessionSelected()){
             e.preventDefault();
+            pushRegistrationFormError('preferred-session', 'Please select a session.');
             showSessionError();
             return;
           }
           if (!termsAgreed()){
             e.preventDefault();
+            pushRegistrationFormError('terms-agree', 'Please agree to the Terms & Payment Policy.');
             showFirstInvalidField();
             return;
           }
           if (btn.value === 'Credit Card') {
             pushBeginCheckout(form);
+          } else {
+            pushEtransferStart(form);
           }
         });
       });
@@ -2531,6 +2677,8 @@ nav{
         var pagePath = window.location.pathname || '';
         return {
           event: eventName,
+          form_name: 'site_cta',
+          funnel_step: eventName,
           cta_label: label,
           cta_text: text,
           cta_href: href,
