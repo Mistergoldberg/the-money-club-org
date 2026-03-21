@@ -273,7 +273,7 @@ $_SESSION['tmc_verified_purchase'] = [
     'items' => [
         [
             'item_id' => 'money-club-summer-camp',
-            'item_name' => 'The Money Club Summer Camp',
+            'item_name' => 'The Money Club.Org Summer Camp',
             'item_category' => 'Summer Camp',
             'price' => 1500,
             'quantity' => 1
