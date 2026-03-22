@@ -1186,7 +1186,7 @@ nav{
       scroll-margin-top: var(--scroll-offset);
     }
     .openbook-banner{
-      background: var(--gold);
+      background: var(--teal);
       color: #ffffff;
       padding: 26px 0;
       border-top: 1px solid var(--line);
@@ -1207,6 +1207,9 @@ nav{
       grid-template-columns: 1.02fr 0.98fr;
       gap: 18px;
       align-items: start;
+    }
+    .openbook-grid.process-layout{
+      align-items: stretch;
     }
     .openbook-table{
       width: 100%;
@@ -1255,6 +1258,36 @@ nav{
       flex-direction: column;
       gap: 18px;
       height: 100%;
+    }
+    .openbook-grid.process-layout .openbook-side{
+      display: block;
+      height: auto;
+      min-height: 0;
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #ffffff;
+      gap: 0;
+    }
+    .openbook-grid.process-layout .openbook-card{
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      aspect-ratio: auto;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+    .openbook-grid.process-layout .openbook-card img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
     .openbook-pie-card{
       border-radius: 18px;
@@ -1481,6 +1514,9 @@ nav{
       gap: 20px;
       align-items: stretch;
     }
+    .quickfacts-content.financial-literacy-layout{
+      align-items: stretch;
+    }
     .quickfacts-list{
       margin: 12px 0 0;
       padding-left: 18px;
@@ -1530,6 +1566,9 @@ nav{
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
+    .reserve-banner.purple{
+      background: var(--purple);
+    }
     .reserve-banner h2{
       font-size: clamp(34px, 5vw, 56px);
       line-height: 0.8;
@@ -1550,6 +1589,75 @@ nav{
       max-width: var(--content-max);
     }
     .reserve-copy p{ margin: 0; }
+    .outcomes-content{
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .outcomes-grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .outcome-item{
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      align-items: stretch;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+    .outcome-copy{
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+    .outcome-copy p{
+      margin: 0;
+    }
+    .outcome-copy .body-section-heading{
+      margin: 0;
+      font-size: clamp(24px, 2.8vw, 34px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    .outcomes-list{
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+    .outcomes-list li{
+      margin: 0;
+    }
+    .outcome-media{
+      height: 100%;
+      min-height: 260px;
+      background: #f7f7f7;
+    }
+    .outcome-media img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .outcome-item.outcome-design-thinking .outcome-media{
+      min-height: 0;
+      position: relative;
+    }
+    .outcome-item.outcome-design-thinking .outcome-media img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
     .section-banner.teal{
       background: var(--teal);
       color: #ffffff;
@@ -1616,17 +1724,27 @@ nav{
       scroll-margin-top: var(--scroll-offset);
     }
     .curriculum-section .curriculum-grid{
-      align-items: start;
+      align-items: stretch;
     }
     .curriculum-section .curriculum-media{
       height: auto;
+      display: flex;
+      min-height: 0;
     }
     .curriculum-section .curriculum-photo{
-      height: auto;
-      aspect-ratio: 0.9 / 1;
+      position: relative;
+      height: 100%;
+      min-height: 0;
+      aspect-ratio: auto;
+      flex: 1;
     }
     .curriculum-section .curriculum-photo img{
-      object-position: center top;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
     .why-section .why-grid{
       align-items: start;
@@ -1672,6 +1790,31 @@ nav{
       font-size: clamp(22px, 2.1vw, 28px);
       line-height: 1.08;
       letter-spacing: -0.01em;
+    }
+    .financial-literacy-layout .skills-copy{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-self: stretch;
+      gap: 12px;
+    }
+    .financial-literacy-layout .skills-copy p,
+    .financial-literacy-layout .skills-copy ul{
+      margin: 0;
+    }
+    .financial-literacy-layout > .curriculum-photo{
+      position: relative;
+      height: 100%;
+      min-height: 0;
+      aspect-ratio: auto;
+    }
+    .financial-literacy-layout > .curriculum-photo img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
     .curriculum-section .curriculum-copy:not(.intro-copy) > h3,
     .teachers-section .curriculum-copy > h3{
@@ -1838,11 +1981,64 @@ nav{
       .cta-stack{ width: min(100%, 360px); }
       .why-grid{ grid-template-columns: 1fr; }
       .curriculum-grid{ grid-template-columns: 1fr; }
+      .curriculum-section .curriculum-media{
+        display: block;
+      }
+      .curriculum-section .curriculum-photo{
+        position: static;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 0.9 / 1;
+        flex: initial;
+      }
+      .curriculum-section .curriculum-photo img{
+        position: static;
+        inset: auto;
+        width: 100%;
+        height: 100%;
+      }
       .openbook-grid{ grid-template-columns: 1fr; }
+      .openbook-grid.process-layout .openbook-card{
+        position: static;
+        inset: auto;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+      }
+      .openbook-grid.process-layout .openbook-card img{
+        position: static;
+        inset: auto;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: auto;
+      }
+      .openbook-grid.process-layout .openbook-side{
+        border: 0;
+        border-radius: 0;
+        overflow: visible;
+      }
       .openbook-columns{ grid-template-columns: 1fr; }
       .teachers-grid{ grid-template-columns: 1fr; }
       .quickfacts-content{ grid-template-columns: 1fr; }
+      .financial-literacy-layout > .curriculum-photo{
+        position: static;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 0.95 / 1;
+      }
+      .financial-literacy-layout > .curriculum-photo img{
+        position: static;
+        inset: auto;
+        width: 100%;
+        height: 100%;
+      }
       .reserve-content{ grid-template-columns: 1fr; }
+      .outcome-item{ grid-template-columns: 1fr; }
+      .outcome-media{
+        min-height: 220px;
+      }
       .location-content{ grid-template-columns: 1fr; }
       .why-copy,
       .curriculum-copy,
@@ -2084,82 +2280,10 @@ nav{
 
           <div class="curriculum-copy intro-copy">
             <h3>Try Building Something Real</h3>
-            <p>Babysitting. Tutoring. Swim lessons. Selling things online.</p>
-            <p>A lot of kids already try to make money in small, real ways. The Money Club.Org starts there.</p>
-            <p>Students work in teams, get a project budget, and try to build something people might actually want — a product, a service, or a simple community app.</p>
-            <p>They test the idea, get feedback, make changes, and see what happens when a real person has to decide: is this worth paying for?</p>
-            <p>It’s not about pretending to be entrepreneurs.</p>
-            <p>It’s about learning how money, value, and decisions work in the real world.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="quickfacts-section">
-      <div class="quickfacts-banner">
-        <div class="wrap">
-          <h2>Skills Students Develop</h2>
-        </div>
-      </div>
-      <div class="quickfacts-content">
-        <div class="curriculum-photo">
-          <img src="assets/n-kid-5.jpg" alt="Students interviewing a customer at a table" />
-        </div>
-        <div class="reserve-copy skills-copy">
-          <p class="body-section-kicker">Most programs focus on learning subjects.</p>
-          <h3 class="body-section-heading">Students leave the program with more than a project.</h3>
-          <p>They leave with a set of tools for exploring ideas.</p>
-          <div class="skill-item">
-            <h4>Problem Finding</h4>
-            <p>Seeing opportunities where others see inconveniences.</p>
-          </div>
-          <div class="skill-item">
-            <h4>Design Thinking</h4>
-            <p>Breaking complex challenges into smaller steps.</p>
-          </div>
-          <div class="skill-item">
-            <h4>Financial Literacy</h4>
-            <p>Understanding how money, incentives, and pricing shape decisions.</p>
-          </div>
-          <div class="skill-item">
-            <h4>Communication</h4>
-            <p>Explaining ideas clearly and presenting them with confidence.</p>
-          </div>
-          <div class="skill-item">
-            <h4>Intellectual Independence</h4>
-            <p>Learning to question assumptions and test new ideas.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="why-section">
-      <div class="why-banner">
-        <div class="wrap">
-          <h2>The Core Idea</h2>
-        </div>
-      </div>
-      <div class="why-content">
-        <div class="why-grid">
-          <div class="why-copy">
-            <h3 class="body-section-heading">Most programs focus on learning subjects.</h3>
-            <p>This program focuses on learning a process.</p>
-            <p class="body-section-kicker">Students learn how to:</p>
-            <ul class="why-list">
-              <li>notice problems</li>
-              <li>generate ideas</li>
-              <li>test solutions</li>
-              <li>learn from feedback</li>
-              <li>improve their thinking</li>
-            </ul>
-            <p>This approach is used by designers, engineers, and entrepreneurs around the world.</p>
-            <p>Instead of memorizing concepts, students learn by building and experimenting.</p>
-          </div>
-          <div class="why-media">
-            <div class="why-illustration">
-              <img src="assets/student-packing.jpg" alt="Students working on a hands-on packaging activity" />
-            </div>
+            <p>A lot of kids already earn money in small ways &mdash; babysitting, tutoring, selling things online.</p>
+            <p>The Money Club starts there.</p>
+            <p>Students get a project budget and work in teams to build something people might actually pay for.</p>
+            <p>They test it, get feedback, and adjust &mdash; until they understand what makes something valuable.</p>
           </div>
         </div>
       </div>
@@ -2172,110 +2296,72 @@ nav{
         </div>
       </div>
       <div class="openbook-content">
-        <div class="openbook-grid">
+        <div class="openbook-grid process-layout">
           <div class="openbook-copy process-copy">
-            <h3 class="process-intro-heading">The program is built around a simple framework.</h3>
-            <p>Good ideas rarely appear fully formed.</p>
-            <p>They develop through testing.</p>
+            <h3 class="process-intro-heading">The program is built around a simple framework based on Design Thinking.</h3>
             <div class="openbook-box process-plain">
-              <h4 class="process-step-heading">1. Notice Problems</h4>
-              <p>Students begin by observing small frustrations in everyday life.</p>
-              <p>What feels inefficient?<br />What could work better?</p>
+              <h4 class="process-step-heading">1. Notice problems</h4>
+              <p>What feels inefficient? What could work better?</p>
             </div>
             <div class="openbook-box process-plain">
-              <h4 class="process-step-heading">2. Generate Possible Solutions</h4>
-              <p>Teams brainstorm many ideas before choosing one to explore.</p>
-              <p>The focus is on possibility, not perfection.</p>
+              <h4 class="process-step-heading">2. Generate ideas</h4>
+              <p>Teams explore many possible solutions before choosing one.</p>
             </div>
             <div class="openbook-box process-plain">
-              <h4 class="process-step-heading">3. Build a Prototype</h4>
-              <p>Students sketch or model their idea.</p>
-              <p>This might be:</p>
-              <ul>
-                <li>a product concept</li>
-                <li>a service idea</li>
-                <li>a simple app concept</li>
-                <li>a community solution</li>
-              </ul>
+              <h4 class="process-step-heading">3. Build something simple</h4>
+              <p>This could be a product, service, app concept, or community idea.</p>
             </div>
             <div class="openbook-box process-plain">
-              <h4 class="process-step-heading">4. Test the Idea</h4>
-              <p>Students gather feedback from potential users.</p>
-              <p>They discover which assumptions were right and which were wrong.</p>
+              <h4 class="process-step-heading">4. Test it</h4>
+              <p>Students get feedback from real people and see which assumptions hold up.</p>
             </div>
+            <div class="openbook-box process-plain">
+              <h4 class="process-step-heading">5. Improve it</h4>
+              <p>Teams refine the idea based on what they learn.</p>
+            </div>
+            <div class="openbook-box process-plain">
+              <h4 class="process-step-heading">6. Present it</h4>
+              <p>At each stage, students explain what they tried, what worked, and what surprised them.</p>
+            </div>
+            <p>Good ideas usually do not appear fully formed.</p>
+            <p>They get stronger through testing.</p>
           </div>
           <div class="openbook-side process-side">
             <div class="openbook-card">
-              <img src="assets/student-ux-2.jpg" alt="Students reviewing work together on a laptop" />
-            </div>
-            <div class="openbook-box process-plain">
-              <h4 class="process-step-heading">5. Improve the Idea</h4>
-              <p>Teams adjust their ideas based on what they learned.</p>
-              <p>This step often leads to the most interesting discoveries.</p>
-            </div>
-            <div class="openbook-box process-plain">
-              <h4 class="process-step-heading">6. Present What They Learned</h4>
-              <p>At the end of each stage students explain:</p>
-              <ul>
-                <li>what they tried</li>
-                <li>what worked</li>
-                <li>what surprised them</li>
-              </ul>
-              <p>Learning to explain their thinking is a key part of the process.</p>
+              <img src="assets/instruct-mobile-packing.jpg" alt="Instructor and students packaging products together" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="teachers-section">
-      <div class="teachers-banner">
+
+    <section class="quickfacts-section">
+      <div class="quickfacts-banner">
         <div class="wrap">
-          <h2>Who Will Love This Program?</h2>
+          <h2>Financial Literacy</h2>
         </div>
       </div>
-      <div class="teachers-content">
-        <div class="curriculum-grid">
-          <div class="curriculum-copy">
-            <p>This program tends to attract students who enjoy:</p>
-            <ul class="teachers-list">
-              <li>asking lots of questions</li>
-              <li>inventing things</li>
-              <li>figuring out how systems work</li>
-              <li>debating ideas with friends</li>
-              <li>building projects that solve real problems</li>
-            </ul>
-            <p>If your child enjoys understanding how the world works, they often thrive in this environment.</p>
-            <h3>What a Typical Day Looks Like</h3>
-            <div class="daypart">
-              <h4>Morning</h4>
-              <p>Team project work and idea development.</p>
-            </div>
-            <div class="daypart">
-              <h4>Midday</h4>
-              <p>Workshops exploring design, money, and product thinking.</p>
-            </div>
-            <div class="daypart">
-              <h4>Lunch</h4>
-              <p>Students bring their own lunch. Light daily snacks are provided.</p>
-            </div>
-            <div class="daypart">
-              <h4>Afternoon</h4>
-              <p>Testing ideas, improving projects, and presenting progress.</p>
-            </div>
-            <p>The program runs more like a studio or innovation lab than a traditional classroom.</p>
-          </div>
-          <div class="curriculum-media">
-            <div class="curriculum-photo">
-              <img src="assets/kid-presents-larg-class.jpg" alt="Students presenting project" />
-            </div>
-          </div>
+      <div class="quickfacts-content financial-literacy-layout">
+        <div class="curriculum-photo">
+          <img src="assets/n-kid-5.jpg" alt="Students interviewing a customer at a table" />
+        </div>
+        <div class="reserve-copy skills-copy">
+          <p>In most settings, money is explained. Here, it&rsquo;s experienced.</p>
+          <p>Students work through:</p>
+          <ul class="quickfacts-list">
+            <li>Cost, price, and margin</li>
+            <li>How demand responds to pricing</li>
+            <li>Why some ideas generate value &mdash; and others don&rsquo;t</li>
+            <li>How incentives shape decisions</li>
+          </ul>
+          <p>The feedback is immediate because students have a real budget and the system responds.</p>
+          <p>They learn to read that signal &mdash; and adjust.</p>
         </div>
       </div>
     </section>
-
     <section class="reserve-section">
-      <div class="reserve-banner">
+      <div class="reserve-banner purple">
         <div class="wrap">
           <h2>The Maker Market</h2>
         </div>
@@ -2295,37 +2381,13 @@ nav{
           <p>Each participant gets virtual cash to spend on the ideas they think are strongest.</p>
           <p>That means every team has to answer a real question:</p>
           <p><strong>Why will someone choose one idea over another?</strong></p>
+          <a class="btn teal gloss cta-standard interest-submit" href="schedule-pricing.html" data-cta-label="Learn More">Learn More</a>
         </div>
       </div>
     </section>
-
-    <section class="location-section">
-      <div class="section-banner full-bleed teal heading-white">
-        <div class="wrap">
-          <h2>Where the Program Happens</h2>
-        </div>
-      </div>
-      <div class="location-content">
-          <div class="location-copy">
-            <p>The Money Club.Org runs at the UTSU Student Commons, 230 College Street, near the University of Toronto.</p>
-            <p>Students learn in a supervised classroom setting with access to breakout space, lounge seating, and a lunch area. The location is also steps from the TTC, making commuting easier for families.</p>
-            <p>We keep light snacks on hand each day so students can stay focused through the afternoon.</p>
-          </div>
-        <div class="location-map-card">
-          <iframe
-            class="location-map"
-            title="Map showing UTSU Student Commons at 230 College Street in Toronto"
-            src="https://www.google.com/maps?q=UTSU%20Student%20Commons%2C%20230%20College%20Street%2C%20Toronto%2C%20ON%20M5T%201R2&z=15&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2>Sign Up for the April 18th Info Session</h2>
+        <h2>Free Info Session &mdash; Learn How The Money Club.Org Works</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">

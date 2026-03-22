@@ -216,6 +216,9 @@
       white-space:nowrap;
       border:0;
     }
+    .hide-all-devices{
+      display: none !important;
+    }
 
     a{ color: inherit; text-decoration: none; }
 
@@ -632,15 +635,28 @@ nav{
     }
     .why-grid{
       display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 20px;
-      align-items:start;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 24px;
+      align-items: stretch;
     }
     .why-copy{
+      display:grid;
+      gap: 12px;
       font-size: inherit;
       line-height: inherit;
       color: var(--ink);
-      max-width: var(--content-max);
+      max-width: min(62ch, var(--content-max));
+    }
+    .why-copy p{ margin: 0; }
+    .why-copy .body-section-heading{
+      margin: 0;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
+    }
+    .why-copy .body-section-kicker{
+      font-weight: 700;
+      line-height: 1.18;
     }
     .why-copy .lead{
       font-size: inherit;
@@ -665,19 +681,24 @@ nav{
       font-weight: 700;
     }
     .why-media{
-      display:grid;
-      gap: 14px;
+      display:flex;
+      min-width: 0;
+      height: 100%;
     }
     .why-illustration{
+      width: 100%;
+      height: 100%;
       border-radius: 18px;
       border: 1px solid var(--line);
-      overflow-y: auto;
+      overflow: hidden;
       background: #f2ede6;
     }
     .why-illustration img{
       display:block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
     .cta-large{
       display:inline-flex;
@@ -989,6 +1010,48 @@ nav{
       padding-left: 18px;
     }
     .teachers-list li{ margin: 6px 0; }
+    .teachers-section .curriculum-copy > h3{
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
+      margin: 0;
+    }
+    .daypart{
+      display:grid;
+      gap: 2px;
+    }
+    .daypart h4{
+      margin: 0;
+      font-size: clamp(22px, 2.1vw, 28px);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+    .teachers-section .curriculum-grid{
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+    .teachers-section .curriculum-copy{
+      max-width: min(62ch, var(--content-max));
+    }
+    .teachers-section .curriculum-media{
+      display: flex;
+      height: 100%;
+      min-width: 0;
+    }
+    .teachers-section .curriculum-photo{
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      aspect-ratio: auto;
+      overflow: hidden;
+    }
+    .teachers-section .curriculum-photo img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
     .teachers-cta{
       display:flex;
       gap: 10px;
@@ -1040,9 +1103,6 @@ nav{
       gap: 20px;
       align-items: stretch;
     }
-    .quickfacts-content > div:first-child{
-      max-width: var(--content-max);
-    }
     .quickfacts-list{
       margin: 12px 0 0;
       padding-left: 18px;
@@ -1069,6 +1129,60 @@ nav{
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
     }
+    .quickfacts-content > .curriculum-photo{
+      aspect-ratio: 0.95 / 1;
+    }
+    .quickfacts-content > .curriculum-photo img{
+      object-position: center top;
+    }
+    .skills-copy{
+      gap: 8px;
+    }
+    .skills-copy .body-section-kicker{
+      font-weight: 700;
+      line-height: 1.18;
+    }
+    .skills-copy .body-section-heading{
+      margin: 0;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
+    }
+    .skills-copy .skill-item{
+      display:grid;
+      gap: 2px;
+    }
+    .skills-copy h4{
+      margin: 6px 0 0;
+      font-size: clamp(22px, 2.1vw, 28px);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+    .experiences-content{
+      grid-template-columns: 1fr;
+    }
+    .experience-gallery{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      width: 100%;
+    }
+    .experience-photo{
+      margin: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+    .experience-photo img{
+      display:block;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+    }
 
     .reserve-section{
       margin-top: var(--space-6);
@@ -1080,6 +1194,9 @@ nav{
       padding: 26px 0;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
+    }
+    .reserve-banner.purple{
+      background: var(--purple);
     }
     .reserve-banner.full-bleed{
       width: 100vw;
@@ -1106,16 +1223,22 @@ nav{
       margin: 0 auto;
       padding: 24px var(--pad) 10px;
       display:grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 20px;
-      align-items:start;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 24px;
+      align-items: stretch;
     }
     .reserve-copy{
       display:grid;
       gap: 10px;
-      max-width: var(--content-max);
+      max-width: min(62ch, var(--content-max));
     }
     .reserve-copy p{ margin: 0; }
+    .reserve-copy .body-section-heading{
+      margin: 0;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
+    }
     .reserve-section .reserve-content{
       align-items: stretch;
     }
@@ -1129,15 +1252,168 @@ nav{
     }
     .reserve-section .curriculum-media{
       height: 100%;
+      min-width: 0;
     }
     .reserve-section .curriculum-photo{
+      width: 100%;
       height: 100%;
-      aspect-ratio: 1.12 / 1;
+      min-width: 0;
+      aspect-ratio: auto;
+      overflow: hidden;
     }
     .reserve-section .curriculum-photo img{
+      width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center;
+    }
+    .reserve-section .reserve-copy{
+      min-width: 0;
+    }
+    .market-deep-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .market-deep-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 10px;
+      display: grid;
+      gap: 0;
+    }
+    .market-deep-item{
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 24px;
+      align-items: start;
+      padding: 24px 0;
+    }
+    .market-deep-item + .market-deep-item{
+      border-top: 1px solid var(--line);
+    }
+    .market-deep-copy{
+      display: grid;
+      gap: 10px;
+      max-width: min(62ch, var(--content-max));
+    }
+    .market-deep-copy p{
+      margin: 0;
+    }
+    .market-deep-item-title{
+      margin: 0;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.12;
+      font-family: var(--font-body);
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .market-deep-plain-list{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 4px;
+    }
+    .market-deep-plain-list li{
+      margin: 0;
+    }
+    .market-deep-points{
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+    .market-deep-points li{
+      margin: 0;
+    }
+    .market-deep-photo{
+      width: clamp(180px, 22vw, 260px);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+      justify-self: end;
+      align-self: start;
+      margin: 0;
+    }
+    .market-deep-photo img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .outcomes-content{
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .outcomes-grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .outcome-item{
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      align-items: stretch;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #ffffff;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+    .outcome-copy{
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+    .outcome-copy p{
+      margin: 0;
+    }
+    .outcome-copy .body-section-heading{
+      margin: 0;
+      font-size: clamp(24px, 2.8vw, 34px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    .outcomes-list{
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+    .outcomes-list li{
+      margin: 0;
+    }
+    .outcome-media{
+      height: 100%;
+      min-height: 260px;
+      background: #f7f7f7;
+    }
+    .outcome-media img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .outcome-item.outcome-design-thinking .outcome-media{
+      min-height: 0;
+      position: relative;
+    }
+    .outcome-item.outcome-design-thinking .outcome-media img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
     .location-section{
       margin-top: var(--space-6);
@@ -1184,6 +1460,31 @@ nav{
       width: 100%;
       min-height: 300px;
       border: 0;
+    }
+    .takeaways-section .location-content{
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+    .takeaways-section .location-copy{
+      max-width: min(62ch, var(--content-max));
+    }
+    .takeaways-photo-card{
+      margin-top: 0;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(17,17,17,0.06);
+      height: 100%;
+      min-height: 0;
+    }
+    .takeaways-photo-card img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
     #reserve.section-banner{
       margin-top: var(--space-6);
@@ -1941,8 +2242,31 @@ nav{
       .math-layout{ grid-template-columns: 1fr; }
       .teachers-grid{ grid-template-columns: 1fr; }
       .quickfacts-content{ grid-template-columns: 1fr; }
+      .experience-gallery{ grid-template-columns: 1fr; }
       .reserve-content{ grid-template-columns: 1fr; }
+      .market-deep-item{
+        grid-template-columns: 1fr;
+        gap: 14px;
+        align-items: start;
+        padding: 18px 0;
+      }
+      .market-deep-copy{ grid-column: auto; }
+      .market-deep-photo{
+        display: none;
+      }
+      .outcome-item{ grid-template-columns: 1fr; }
+      .outcome-media{ min-height: 220px; }
       .location-content{ grid-template-columns: 1fr; }
+      .teachers-section .curriculum-grid{ grid-template-columns: 1fr; }
+      .takeaways-section .location-content{ grid-template-columns: 1fr; }
+      .teachers-section .curriculum-media{ display: block; height: auto; }
+      .teachers-section .curriculum-photo{ height: auto; aspect-ratio: 1 / 1; }
+      .teachers-section .curriculum-photo img{ height: auto; aspect-ratio: 1 / 1; }
+      .why-media{ display: block; height: auto; }
+      .why-illustration{ height: auto; aspect-ratio: 1 / 1; }
+      .why-illustration img{ height: auto; aspect-ratio: 1 / 1; }
+      .takeaways-photo-card{ height: auto; aspect-ratio: 1 / 1; }
+      .takeaways-photo-card img{ height: auto; aspect-ratio: 1 / 1; }
       .reservation-row.two-col{ grid-template-columns: 1fr; }
       .session-grid{ grid-template-columns: 1fr; }
       .session-card{ padding: 10px; min-height: 0; }
@@ -2073,6 +2397,19 @@ nav{
       footer.site-footer .footer-tagline{ font-size: 23px; }
       footer.site-footer .footer-tagline{ line-height: 1.1; }
     }
+
+    @media (max-width: 700px){
+      .market-deep-item{
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .market-deep-copy{ grid-column: auto; }
+      .market-deep-photo{
+        grid-column: auto;
+        justify-self: center;
+        width: min(72vw, 280px);
+      }
+    }
   
     @media (max-width: 640px){
       :root{
@@ -2188,7 +2525,7 @@ nav{
       </div>
     </section>
 
-    <section class="reserve-section">
+    <section class="reserve-section hide-all-devices">
       <div class="reserve-banner full-bleed">
         <div class="wrap">
           <h2>The Maker Market</h2>
@@ -2201,131 +2538,257 @@ nav{
           </div>
         </div>
         <div class="reserve-copy">
-          <h3 class="body-section-heading">The program ends with a live Maker Market.</h3>
-          <p>Every team sets up their idea and pitches it in a market-style format.</p>
-          <p>Some students present products.</p>
-          <p>Some present services.</p>
+          <h3 class="body-section-heading">At the end of the program, each team presents what they built in a live market event.</h3>
+          <p>Some bring products.</p>
+          <p>Some offer services.</p>
           <p>Some present apps or community ideas.</p>
-          <p>Each participant gets virtual cash to spend on the ideas they think are strongest.</p>
-          <p>That means every team has to answer a real question:</p>
-          <p><strong>Why will someone choose one idea over another?</strong></p>
+          <p>But every team faces the same question: Would someone choose this?</p>
+          <p>Each participant receives virtual cash and decides where it goes.</p>
+          <p>There are no grades. Just one signal: Would you choose this &mdash; or something else?</p>
+          <p>Parents are invited to attend the Maker Market event.</p>
         </div>
       </div>
     </section>
 
-    <div class="reserve-banner full-bleed build-sell-banner">
-      <div class="wrap">
-        <h2>Build &amp; Sell</h2>
+    <section class="market-deep-section">
+      <div class="section-banner full-bleed purple heading-white">
+        <div class="wrap">
+          <h2>The Maker Market</h2>
+        </div>
       </div>
-    </div>
+      <div class="market-deep-content">
+        <article class="market-deep-item">
+          <div class="market-deep-copy">
+            <h3 class="market-deep-item-title">At the end of the program, everything gets tested.</h3>
+            <p>Not by an instructor.</p>
+            <p>By real decisions.</p>
+            <p>Each team sets up what they built:</p>
+            <ul class="market-deep-plain-list">
+              <li>A product.</li>
+              <li>A service.</li>
+              <li>An app.</li>
+              <li>An idea they believe in.</li>
+            </ul>
+            <p>Then the room opens.</p>
+          </div>
+          <figure class="market-deep-photo">
+            <img src="assets/maker-event.jpg" alt="Students presenting at The Maker Market event" />
+          </figure>
+        </article>
+
+        <article class="market-deep-item">
+          <div class="market-deep-copy">
+            <h3 class="market-deep-item-title">💸 You Get a Budget — And So Does Everyone Else</h3>
+            <p>Every student receives virtual cash.</p>
+            <p>You walk around.</p>
+            <p>You look at what other teams built.</p>
+            <p>You ask questions.</p>
+            <p>And then you decide:</p>
+            <p><strong>Is this worth paying for?</strong></p>
+            <p>You can spend it all on one idea.</p>
+            <p>Or spread it across a few.</p>
+            <p>But every choice sends a signal.</p>
+          </div>
+          <figure class="market-deep-photo">
+            <img src="assets/n-kid-5.jpg" alt="Students comparing projects and making choices" />
+          </figure>
+        </article>
+
+        <article class="market-deep-item">
+          <div class="market-deep-copy">
+            <h3 class="market-deep-item-title">⚖️ What You&rsquo;re Really Evaluating</h3>
+            <p>Behind every table, there&rsquo;s more than just an idea.</p>
+            <p>There&rsquo;s a set of decisions:</p>
+            <ul class="market-deep-plain-list">
+              <li>What did it cost to make?</li>
+              <li>How much time went into it?</li>
+              <li>What price makes sense?</li>
+              <li>Is there actually margin left over?</li>
+            </ul>
+            <p>Students start to see something most people miss:</p>
+            <p>Not all &ldquo;good ideas&rdquo; are worth doing.</p>
+            <p>Some are too expensive.</p>
+            <p>Some take too long.</p>
+            <p>Some don&rsquo;t justify the price.</p>
+          </div>
+          <figure class="market-deep-photo">
+            <img src="assets/student-packing.jpg" alt="Students discussing costs and margins while building projects" />
+          </figure>
+        </article>
+
+        <article class="market-deep-item">
+          <div class="market-deep-copy">
+            <h3 class="market-deep-item-title">🧠 Where Money Meets Thinking</h3>
+            <p>This is where the system comes together.</p>
+            <p>Students connect:</p>
+            <ul class="market-deep-plain-list">
+              <li>Cost &rarr; Price &rarr; Margin</li>
+              <li>Time &rarr; Effort &rarr; Return</li>
+              <li>Value &rarr; Choice &rarr; Demand</li>
+            </ul>
+            <p>They begin to understand:</p>
+            <p><strong>What is this idea worth &mdash; to someone else, and to me?</strong></p>
+          </div>
+          <figure class="market-deep-photo">
+            <img src="assets/student-ux.jpg" alt="Students testing ideas and analyzing feedback" />
+          </figure>
+        </article>
+
+        <article class="market-deep-item">
+          <div class="market-deep-copy">
+            <h3 class="market-deep-item-title">🎤 You Present — And Defend Your Idea</h3>
+            <p>At some point, it&rsquo;s your turn.</p>
+            <p>You explain:</p>
+            <ul class="market-deep-plain-list">
+              <li>What you built</li>
+              <li>What it costs</li>
+              <li>Why it&rsquo;s priced that way</li>
+              <li>Why someone should choose it</li>
+            </ul>
+            <p>People ask questions.</p>
+            <p>They decide for themselves.</p>
+            <p>No grades.</p>
+            <p>Just real feedback.</p>
+          </div>
+          <figure class="market-deep-photo">
+            <img src="assets/student-present-2.jpg" alt="Students presenting and answering questions" />
+          </figure>
+        </article>
+
+        <article class="market-deep-item">
+          <div class="market-deep-copy">
+            <h3 class="market-deep-item-title">🧭 What This Moment Teaches</h3>
+            <p>Most ideas sound good when you explain them.</p>
+            <p>The Maker Market is where you find out:</p>
+            <ul class="market-deep-plain-list">
+              <li>Does it make sense?</li>
+              <li>Does it hold up?</li>
+              <li>Is it actually worth it?</li>
+            </ul>
+            <p>Students leave with more than a project:</p>
+            <ul class="market-deep-plain-list">
+              <li>What they built</li>
+              <li>How people responded</li>
+              <li>What they would change</li>
+            </ul>
+            <p>And a sharper understanding of something important:</p>
+            <p>A good idea isn&rsquo;t enough.</p>
+            <p>It has to work &mdash; in time, in cost, and in value.</p>
+          </div>
+          <figure class="market-deep-photo">
+            <img src="assets/n-kid-3.jpg" alt="Students reflecting on what worked and what to improve" />
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="why-section hide-all-devices">
+      <div class="why-banner">
+        <div class="wrap">
+          <h2>The Core Idea</h2>
+        </div>
+      </div>
+      <div class="why-content">
+        <div class="why-grid">
+          <div class="why-copy">
+            <h3 class="body-section-heading">Most ideas sound good when you explain them.</h3>
+            <p>The Maker Market is where ideas gets tested.</p>
+            <p>Does the pricing make sense?</p>
+            <p>Does the offer feel clear?</p>
+            <p>Does anyone actually want this?</p>
+            <p>Students see, in real time, what works &mdash; and what doesn&rsquo;t.</p>
+            <p>This approach is used by designers, engineers, and entrepreneurs around the world.</p>
+          </div>
+          <div class="why-media">
+            <div class="why-illustration">
+              <img src="assets/student-packing.jpg" alt="Students working on a hands-on packaging activity" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="teachers-section hide-all-devices">
+      <div class="teachers-banner">
+        <div class="wrap">
+          <h2>Who Will Love This Program?</h2>
+        </div>
+      </div>
+      <div class="teachers-content">
+        <div class="curriculum-grid">
+          <div class="curriculum-copy">
+            <p>This program tends to attract students who enjoy:</p>
+            <ul class="teachers-list">
+              <li>asking lots of questions</li>
+              <li>inventing things</li>
+              <li>figuring out how systems work</li>
+              <li>debating ideas with friends</li>
+              <li>building projects that solve real problems</li>
+            </ul>
+            <p>If your child enjoys understanding how the world works, they often thrive in this environment.</p>
+          </div>
+          <div class="curriculum-media">
+            <div class="curriculum-photo">
+              <img src="assets/kid-presents-larg-class.jpg" alt="Students presenting project" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quickfacts-section">
+      <div class="quickfacts-banner">
+        <div class="wrap">
+          <h2>WHAT STUDENTS EXPERIENCE</h2>
+        </div>
+      </div>
+      <div class="quickfacts-content experiences-content">
+        <div class="experience-gallery">
+          <figure class="experience-photo">
+            <img src="assets/n-kid-3.jpg" alt="Students discussing project plans" />
+          </figure>
+          <figure class="experience-photo">
+            <img src="assets/n-kid-5.jpg" alt="Students testing ideas at a table" />
+          </figure>
+          <figure class="experience-photo">
+            <img src="assets/n-kid-6.jpg" alt="Students collaborating in class" />
+          </figure>
+          <figure class="experience-photo">
+            <img src="assets/n-kid-4.jpg" alt="Students presenting work to peers" />
+          </figure>
+        </div>
+      </div>
+    </section>
 
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
       <div class="wrap">
-        <div class="reservation-row">
-          <div class="reservation-card program-copy">
-            <h3 class="body-section-heading">Babysitting. Tutoring. Swim lessons. Paper routes.</h3>
-            <p class="body-section-kicker">Those are real ways kids start earning.</p>
-            <p class="body-section-kicker">The Money Club.Org takes that idea further.</p>
-            <p>Instead of working alone for an hourly rate, students work in teams with a project budget to build something bigger - a product, a service, or a simple community app people might actually choose, use, and pay for.</p>
-            <p class="body-section-kicker">Think:</p>
-            <ul class="content-list">
-              <li>a smarter lemonade stand</li>
-              <li>a neighborhood subscription service</li>
-              <li>a small business idea that solves a real problem</li>
-            </ul>
-            <p>Over four weeks, students learn how to spot demand, shape an offer, test pricing, gather feedback, and improve their idea in the real world.</p>
-          </div>
-        </div>
-
-        <div class="reservation-row">
-          <div class="reservation-card">
-            <h2>How the 4 Weeks Work</h2>
-
-            <div class="schedule-block">
-              <h3>Week 1 — Learn the System</h3>
-              <p>Students build a foundation in money, pricing, wages, margins, and market research so they can make better decisions in the weeks ahead.</p>
-            </div>
-
-            <div class="schedule-block">
-              <h3>Week 2 — Build a Product Concept</h3>
-              <p>Students study a real product category, develop their own version, and learn how pricing, packaging, and positioning work together.</p>
-            </div>
-
-            <div class="schedule-block">
-              <h3>Week 3 — Create and Test an Idea</h3>
-              <p>Students build their own product or service idea, talk to potential users, and prepare it for the Maker Market.</p>
-            </div>
-
-            <div class="schedule-block">
-              <h3>Week 4 — Maker Market + Final Showcase</h3>
-              <p>Students present their products at the Maker Market, where everyone gets virtual cash to invest in the ideas they believe in, then refine their thinking and present what they built, why it works, and what they would do next.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="reservation-row">
-          <div class="reservation-card">
-            <h2>A Typical Day</h2>
-            <p>Each day follows a clear rhythm so students can focus on learning and building.</p>
-            <div class="tight-stack">
-              <div class="schedule-block">
-                <h3>Standup</h3>
-                <p>goals, quick wins, what needs help</p>
-              </div>
-              <div class="schedule-block">
-                <h3>Instructor session</h3>
-                <p>one new idea for the day</p>
-              </div>
-              <div class="schedule-block">
-                <h3>Build time</h3>
-                <p>research, prototypes, spreadsheets, branding, pricing</p>
-              </div>
-              <div class="schedule-block">
-                <h3>Lunch</h3>
-                <p>Students bring their own lunch. Light daily snacks are provided.</p>
-              </div>
-              <div class="schedule-block">
-                <h3>Project work</h3>
-                <p>teams keep building with instructor feedback</p>
-              </div>
-              <div class="schedule-block">
-                <h3>Short presentations</h3>
-                <p>students explain what they’re making</p>
-              </div>
-              <div class="schedule-block">
-                <h3>More build time</h3>
-                <p>refine the work and move it forward</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <section class="location-section">
+        <section class="location-section takeaways-section hide-all-devices">
           <div class="section-banner full-bleed teal heading-white">
             <div class="wrap">
-              <h2>Where the Program Happens</h2>
+              <h2>What Students Take Away</h2>
             </div>
           </div>
           <div class="location-content">
             <div class="location-copy">
-              <p>The Money Club.Org runs at the UTSU Student Commons, 230 College Street, near the University of Toronto.</p>
-              <p>Students learn in a supervised classroom setting with access to breakout space, lounge seating, and a lunch area. The location is also steps from the TTC, making commuting easier for families.</p>
+              <p>By the end of the program, students do not just have an idea. They have a portfolio.</p>
+              <p>They can show:</p>
+              <ul class="content-list">
+                <li>what they built</li>
+                <li>how people responded</li>
+                <li>what they would change</li>
+              </ul>
+              <p>And most importantly, they leave with a sharper sense of what makes something worth choosing.</p>
+              <p>The Maker Market brings those lessons together in one final moment.</p>
             </div>
-            <div class="location-map-card">
-              <iframe
-                class="location-map"
-                title="Map showing UTSU Student Commons at 230 College Street in Toronto"
-                src="https://www.google.com/maps?q=UTSU%20Student%20Commons%2C%20230%20College%20Street%2C%20Toronto%2C%20ON%20M5T%201R2&z=15&output=embed"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div class="takeaways-photo-card">
+              <img src="assets/student-present-2.jpg" alt="Students presenting their final project to an audience" />
             </div>
           </div>
         </section>
 
         <section class="section-banner full-bleed purple heading-white" id="reserve">
           <div class="wrap">
-            <h2>Sign Up for the April 18th Info Session</h2>
+            <h2>Free Info Session &mdash; Learn How The Money Club.Org Works</h2>
           </div>
         </section>
         <div class="reservation-row registration-form-container">

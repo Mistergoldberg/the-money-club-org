@@ -789,6 +789,15 @@
     #built-like-a-business .program-summary-point-text{
       display: block;
     }
+    #built-like-a-business .program-summary-cta-note{
+      margin: 4px 0 10px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.2;
+      font-size: clamp(18px, 1.7vw, 24px);
+    }
     #what-is-this .split,
     #how-it-works .split,
     #who-runs-it .split{
@@ -961,6 +970,69 @@
     }
     #who-runs-it .section-copy{
       max-width: min(100%, 78rem);
+    }
+    #outcomes .section-content{
+      display: grid;
+      gap: 18px;
+    }
+    #outcomes .outcomes-lead{
+      margin: 0;
+      max-width: min(100%, 72ch);
+    }
+    #outcomes .outcomes-stack{
+      display: grid;
+      gap: 20px;
+    }
+    #outcomes .outcome-row{
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: clamp(18px, 3vw, 34px);
+      align-items: center;
+      background: #efefef;
+      border: 1px solid #dfdfdf;
+      border-radius: 24px;
+      padding: clamp(18px, 2.3vw, 30px);
+    }
+    #outcomes .outcome-copy{
+      display: grid;
+      gap: 12px;
+      max-width: none;
+    }
+    #outcomes .outcome-title{
+      margin: 0;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.08;
+      font-family: var(--font-body);
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    #outcomes .outcome-copy p{
+      margin: 0;
+    }
+    #outcomes .outcome-points{
+      margin: 0;
+      padding-left: 1.05em;
+      display: grid;
+      gap: 8px;
+    }
+    #outcomes .outcome-points li{
+      margin: 0;
+      line-height: 1.3;
+    }
+    #outcomes .outcome-image{
+      margin: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #d7d7d7;
+      background: #ffffff;
+      aspect-ratio: 4 / 3;
+    }
+    #outcomes .outcome-image img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .week-list{
       gap: 14px;
@@ -2150,6 +2222,18 @@
       .bullet-list li{
         margin: 8px 0;
       }
+      #outcomes .outcome-row{
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 16px;
+      }
+      #outcomes .outcome-title{
+        font-size: clamp(24px, 3vw, 34px);
+        line-height: 1.08;
+      }
+      #outcomes .outcome-image{
+        aspect-ratio: 16 / 11;
+      }
       .outcomes-card,
       .trust-card,
       .team-card,
@@ -2366,6 +2450,7 @@
       main > #built-like-a-business{ order: 20; }
       main > #what-is-this{ order: 30; }
       main > #how-it-works{ order: 40; }
+      main > #outcomes{ order: 45; }
       main > #who-runs-it{ order: 50; }
       main > #radical-transparency{ order: 60; }
       main > #what-students-leave-with{ order: 70; }
@@ -2736,6 +2821,7 @@
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">Daily: 9-5</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
               </div>
+              <p class="program-summary-cta-note">Free Info Session &mdash; Learn How The Money Club.Org Works</p>
               <a data-cta-label="Get program details" class="btn teal gloss cta-standard cta-fill" href="#join-the-interest-list">Get Program Details</a>
             </div>
           </div>
@@ -2767,7 +2853,7 @@
           </div>
           <div class="section-copy">
             <p>The Money Club.Org runs at the UTSU Student Commons at 230 College Street in downtown Toronto.</p>
-            <p>Classes are led by University of Toronto instructors in a supervised, small-group classroom setting where students build projects, collaborate with peers, and present their ideas.</p>
+            <p>Classes are led by University of Toronto student instructors in a supervised, small-group classroom setting where participants build projects, collaborate with peers, and present their ideas.</p>
             <p>Students also have access to breakout space, lounge seating, and a lunch area. The building is steps from the TTC, making commuting easier for families across central Toronto.</p>
             <p>Light daily snacks are provided. Students should bring their own lunch and water bottle.</p>
             <div class="fact-list">
@@ -2817,6 +2903,66 @@
               <img src="assets/instruct-mobile-packing.jpg" alt="Students presenting a UX design" />
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="outcomes">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>Outcomes</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="outcomes-stack">
+          <article class="outcome-row">
+            <div class="outcome-copy">
+              <h3 class="outcome-title">Financial Literacy — How Money Actually Works</h3>
+              <p>Students learn the fundamentals behind every real idea:</p>
+              <ul class="bullet-list outcome-points">
+                <li>Unit economics (cost vs. price vs. margin)</li>
+                <li>Cost of goods sold and basic sourcing decisions</li>
+                <li>How pricing affects demand and viability</li>
+                <li>Why some ideas make money — and others don&apos;t</li>
+              </ul>
+              <p>They don&apos;t just hear these concepts. They apply them.</p>
+            </div>
+            <figure class="outcome-image">
+              <img src="assets/student-packing.jpg" alt="Students working together to package a product" />
+            </figure>
+          </article>
+          <article class="outcome-row">
+            <div class="outcome-copy">
+              <h3 class="outcome-title">Design Thinking — An Evidence Based Approach</h3>
+              <p>Students learn to build ideas that respond to the real world:</p>
+              <ul class="bullet-list outcome-points">
+                <li>Defining clear success criteria before building</li>
+                <li>Testing ideas with real people, not assumptions</li>
+                <li>Using feedback loops to improve decisions</li>
+                <li>Understanding what works, what doesn&apos;t, and why</li>
+              </ul>
+              <p>This builds judgment — not just creativity.</p>
+            </div>
+            <figure class="outcome-image">
+              <img src="assets/student-ux.jpg" alt="Students reviewing design ideas together" />
+            </figure>
+          </article>
+          <article class="outcome-row">
+            <div class="outcome-copy">
+              <h3 class="outcome-title">Communication — Presenting Ideas Clearly</h3>
+              <p>Students learn to explain their thinking with confidence:</p>
+              <ul class="bullet-list outcome-points">
+                <li>Structuring a clear, logical argument</li>
+                <li>Showing how decisions were made</li>
+                <li>Presenting ideas to a group and handling questions</li>
+                <li>Speaking with clarity, not just enthusiasm</li>
+              </ul>
+              <p>The goal isn&apos;t performance. It&apos;s clarity.</p>
+            </div>
+            <figure class="outcome-image">
+              <img src="assets/student-present-2.jpg" alt="Student presenting ideas in front of a group" />
+            </figure>
+          </article>
         </div>
       </div>
     </section>
@@ -2877,7 +3023,7 @@
 
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Sign Up for the April 18th Info Session</h2>
+        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn How The Money Club.Org Works</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
