@@ -842,6 +842,16 @@ nav{
       line-height: 1.15;
       font-weight: 700;
       color: var(--ink);
+      text-align: center;
+    }
+    #reserve .wrap{
+      text-align: center;
+    }
+    #reserve + .reservation-steps{
+      margin-top: var(--space-4);
+    }
+    .reservation-steps #reserve.section-banner + .reservation-row{
+      margin-top: var(--space-4);
     }
     .interest-helper{
       margin: 0;
@@ -2274,7 +2284,7 @@ nav{
         <div class="curriculum-grid">
           <div class="curriculum-media">
             <div class="curriculum-photo">
-              <img src="assets/n-kid-1-p.jpg" alt="Students working together" />
+              <img src="assets/nnn-kid-1.jpg" alt="Students working together" />
             </div>
           </div>
 
@@ -2328,7 +2338,7 @@ nav{
           </div>
           <div class="openbook-side process-side">
             <div class="openbook-card">
-              <img src="assets/instruct-mobile-packing.jpg" alt="Instructor and students packaging products together" />
+              <img src="assets/nnn-kid-4.jpg" alt="Instructor and students packaging products together" />
             </div>
           </div>
         </div>
@@ -2344,7 +2354,7 @@ nav{
       </div>
       <div class="quickfacts-content financial-literacy-layout">
         <div class="curriculum-photo">
-          <img src="assets/n-kid-5.jpg" alt="Students interviewing a customer at a table" />
+          <img src="assets/nn-kid-2.jpg" alt="Students interviewing a customer at a table" />
         </div>
         <div class="reserve-copy skills-copy">
           <p>In most settings, money is explained. Here, it&rsquo;s experienced.</p>
@@ -2394,7 +2404,7 @@ nav{
       <div class="wrap">
         <div class="reservation-row registration-form-container">
           <div class="reservation-card">
-            <p class="interest-subhead">📅 April 18 • Live video session • ~30 minutes</p>
+            <p class="interest-subhead">📅 April 18 • Live video session • 30 minutes</p>
             <p class="interest-helper">Save your spot and we&apos;ll send the session link and program details. No payment required.</p>
             <div class="form-success" id="form-success" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
 <div class="form-loading" role="status" aria-live="polite">
@@ -2542,6 +2552,12 @@ nav{
       var success = document.getElementById('form-success');
       if (success && params.get('status') === 'sent') {
         success.classList.add('is-visible');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'tmc_interest_form_success',
+          form_name: 'interest_form',
+          funnel_step: 'form_success'
+        });
         var successCard = success.closest('.reservation-card');
         if (successCard) {
           successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });

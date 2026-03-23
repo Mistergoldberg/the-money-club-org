@@ -1030,8 +1030,11 @@ nav{
     }
     .reserve-secondary-link{
       margin: 0;
-      font-size: clamp(16px, 1.2vw, 20px);
-      line-height: 1.2;
+      display: block;
+      max-width: 28ch;
+      font-size: clamp(24px, 3.4vw, 34px);
+      line-height: 1.15;
+      font-weight: 700;
       color: #ffffff;
       text-decoration: underline;
       text-decoration-thickness: 2px;
@@ -1041,6 +1044,78 @@ nav{
     .reserve-secondary-link:hover,
     .reserve-secondary-link:focus-visible{
       opacity: 1;
+    }
+    body.info-session-open{
+      overflow: hidden;
+    }
+    .info-session-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 1400;
+      display: none;
+      align-items: center;
+      justify-items: center;
+      background: rgba(12, 12, 12, 0.62);
+      padding: clamp(14px, 3vw, 24px);
+    }
+    .info-session-overlay.is-open{
+      display: grid;
+    }
+    .info-session-modal{
+      width: min(760px, 100%);
+      max-height: min(90vh, 920px);
+      overflow: auto;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 18px 42px rgba(0,0,0,0.26);
+      padding: clamp(18px, 3vw, 28px);
+      display: grid;
+      gap: 12px;
+    }
+    .info-session-close{
+      justify-self: end;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .info-session-title{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      line-height: 1.1;
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .info-session-meta{
+      margin: 0;
+      font-size: clamp(18px, 2.1vw, 24px);
+      line-height: 1.2;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .info-session-helper{
+      margin: 0;
+      color: var(--muted);
+    }
+    .info-session-form{
+      display: grid;
+      gap: 16px;
+    }
+    .info-session-form .field{
+      max-width: none;
+    }
+    .info-session-submit{
+      width: 100%;
+      justify-content: center;
     }
     main{ padding-top: 0; }
     .reserve-content{
@@ -1795,10 +1870,13 @@ nav{
         font-size: 23px;
         line-height: 1.15;
       }
-      .reserve-support,
-      .reserve-secondary-link{
+      .reserve-support{
         font-size: 18px;
         line-height: 1.15;
+      }
+      .reserve-secondary-link{
+        font-size: clamp(24px, 3.4vw, 34px);
+        line-height: 1.1;
       }
       .session-grid{ grid-template-columns: 1fr; }
       .session-card{ padding: 10px; min-height: 0; }
@@ -1922,11 +2000,34 @@ nav{
           <img class="logo-main" src="assets/logo-mb-w.png" alt="The Money Club.Org logo" />
         </a>
         <h2>RESERVE A SPOT &mdash; SUMMER 2026</h2>
-        <p class="reserve-subheading">You&apos;re steps away from investing in the community. Complete registration below to confirm your child&apos;s place.</p>
-        <p class="reserve-support">Small groups • Ages 10&ndash;16 • UTSU Student Commons (Downtown Toronto)</p>
-        <a class="reserve-secondary-link" href="how-it-works.html">Not ready yet? Get program details first</a>
+           <p></p>
+        <a class="reserve-secondary-link" href="#info-session-overlay" data-open-info-session data-cta-label="Free Info Session — Learn How The Money Club.Org Works">Not ready yet? Sign Up for a Free Info Session &mdash; Learn How The Money Club.Org Works</a>
       </div>
     </section>
+
+    <div class="info-session-overlay" id="info-session-overlay" aria-hidden="true">
+      <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
+        <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
+        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn How The Money Club.Org Works</h2>
+        <p class="info-session-meta">📅 April 18 • Live video session • ~30 minutes</p>
+        <p class="info-session-helper">Save your spot and we&rsquo;ll send the session link and program details. No payment required.</p>
+        <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
+          <input type="hidden" name="return-to" value="reserve-a-spot.html" />
+          <input type="hidden" name="return-error" value="reserve-a-spot.html" />
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="info-parent-name">Parent / Guardian Name</label>
+              <input id="info-parent-name" name="parent-name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="info-parent-email">Email Address</label>
+              <input id="info-parent-email" name="parent-email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+          <button class="btn teal gloss cta-standard info-session-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
+        </form>
+      </div>
+    </div>
 
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
       <div class="wrap">
@@ -2259,8 +2360,12 @@ nav{
       });
 
       var params = new URLSearchParams(window.location.search);
+      var pendingInterestSubmit = false;
+      try {
+        pendingInterestSubmit = sessionStorage.getItem('tmc_interest_submit_pending') === '1';
+      } catch (e) {}
       var success = document.getElementById('form-success');
-      if (success && params.get('status') === 'sent') {
+      if (success && params.get('status') === 'sent' && !pendingInterestSubmit) {
         success.classList.add('is-visible');
 
         var dedupeKey = 'tmc_registration_submitted:' + (window.location.pathname || '') + ':' + window.location.search;
@@ -2563,6 +2668,188 @@ nav{
             pushEtransferStart(form);
           }
         });
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      var openLink = document.querySelector('[data-open-info-session]');
+      var overlay = document.getElementById('info-session-overlay');
+      if (!openLink || !overlay){ return; }
+      var closeBtn = overlay.querySelector('.info-session-close');
+      var modal = overlay.querySelector('.info-session-modal');
+      var modalIsOpen = overlay.classList.contains('is-open');
+
+      function pushModalEvent(eventName, funnelStep){
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: eventName,
+          form_name: 'interest_form',
+          funnel_step: funnelStep,
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
+      function openInfoSession(){
+        if (modalIsOpen){ return; }
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('info-session-open');
+        modalIsOpen = true;
+        pushModalEvent('info_session_modal_open', 'modal_open');
+        if (closeBtn){
+          closeBtn.focus();
+        }
+      }
+
+      function closeInfoSession(){
+        if (!modalIsOpen){ return; }
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('info-session-open');
+        modalIsOpen = false;
+        pushModalEvent('info_session_modal_close', 'modal_close');
+        openLink.focus();
+      }
+
+      openLink.addEventListener('click', function(e){
+        e.preventDefault();
+        openInfoSession();
+      });
+
+      if (closeBtn){
+        closeBtn.addEventListener('click', function(){
+          closeInfoSession();
+        });
+      }
+
+      overlay.addEventListener('click', function(e){
+        if (modal && !modal.contains(e.target)){
+          closeInfoSession();
+        }
+      });
+
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')){
+          closeInfoSession();
+        }
+      });
+    })();
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    (function(){
+      var interestForm = document.querySelector('form.info-session-form[action="apply-interest.php"]');
+      if (!interestForm){ return; }
+
+      var params = new URLSearchParams(window.location.search);
+      var hasPendingInterestSubmit = false;
+      try {
+        hasPendingInterestSubmit = sessionStorage.getItem('tmc_interest_submit_pending') === '1';
+      } catch (e) {}
+
+      if (params.get('status') === 'sent' && hasPendingInterestSubmit){
+        var dedupeKey = 'tmc_interest_form_success:' + (window.location.pathname || '') + ':' + window.location.search;
+        var alreadyTracked = false;
+        try {
+          alreadyTracked = sessionStorage.getItem(dedupeKey) === '1';
+          if (!alreadyTracked){
+            sessionStorage.setItem(dedupeKey, '1');
+          }
+        } catch (e) {}
+
+        if (!alreadyTracked){
+          window.dataLayer.push({
+            event: 'tmc_interest_form_success',
+            form_name: 'interest_form',
+            funnel_step: 'form_success'
+          });
+        }
+
+        try {
+          sessionStorage.removeItem('tmc_interest_submit_pending');
+        } catch (e) {}
+
+        params.delete('status');
+        params.delete('field');
+        params.delete('message');
+        var cleanQuery = params.toString();
+        var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
+        try {
+          window.history.replaceState({}, document.title, cleanUrl);
+        } catch (e) {}
+      }
+
+      if (params.get('status') === 'error'){
+        try {
+          sessionStorage.removeItem('tmc_interest_submit_pending');
+        } catch (e) {}
+      }
+
+      function fireInterestFormStart(){
+        if (window.__tmcInterestFormStarted){ return; }
+        window.__tmcInterestFormStarted = true;
+
+        window.dataLayer.push({
+          event: 'interest_form_start',
+          form_name: 'interest_form',
+          funnel_step: 'form_start',
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
+      function pushInterestFormSubmit(){
+        try {
+          sessionStorage.setItem('tmc_interest_submit_pending', '1');
+        } catch (e) {}
+
+        window.dataLayer.push({
+          event: 'interest_form_submit',
+          form_name: 'interest_form',
+          funnel_step: 'form_submit',
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
+      function pushInterestFormError(fieldName, message){
+        window.dataLayer.push({
+          event: 'interest_form_error',
+          error_field: fieldName || 'unknown',
+          error_message: message || 'Validation error',
+          form_name: 'interest_form',
+          funnel_step: 'form_error',
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
+      interestForm.addEventListener('focusin', function(e){
+        var target = e.target;
+        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
+        fireInterestFormStart();
+      }, true);
+
+      interestForm.addEventListener('input', function(e){
+        var target = e.target;
+        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
+        fireInterestFormStart();
+      }, true);
+
+      interestForm.addEventListener('submit', function(){
+        if (!interestForm.checkValidity()){
+          var firstInvalid = interestForm.querySelector(':invalid');
+          pushInterestFormError(
+            firstInvalid ? firstInvalid.name : 'unknown',
+            firstInvalid ? firstInvalid.validationMessage : 'Validation error'
+          );
+          return;
+        }
+
+        pushInterestFormSubmit();
       });
     })();
   </script>

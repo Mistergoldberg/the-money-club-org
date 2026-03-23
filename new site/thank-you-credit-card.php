@@ -1635,26 +1635,24 @@ nav{
           page_title: pageTitle
         });
 
+        var purchaseValue = (typeof purchasePayload.value === 'number' && !isNaN(purchasePayload.value))
+          ? purchasePayload.value
+          : 0;
+        var purchaseCurrency = purchasePayload.currency || 'CAD';
         window.dataLayer.push({
-          event: 'tmc_purchase_success',
-          ga4_event_name: 'purchase',
-          form_name: 'reserve_a_spot',
-          funnel_step: 'purchase_success',
-          payment_method: 'credit_card',
+          event: 'purchase',
           transaction_id: purchasePayload.transaction_id,
-          currency: purchasePayload.currency,
-          value: purchasePayload.value,
-          tax: purchasePayload.tax,
-          items: purchasePayload.items,
-          page_path: pagePath,
-          page_title: pageTitle
+          value: purchaseValue,
+          currency: purchaseCurrency,
+          items: [
+            {
+              item_name: 'The Money Club Registration',
+              item_category: 'Summer Program',
+              price: purchaseValue,
+              quantity: 1
+            }
+          ]
         });
-
-        purchasePayload.form_name = purchasePayload.form_name || 'reserve_a_spot';
-        purchasePayload.funnel_step = purchasePayload.funnel_step || 'purchase';
-        purchasePayload.page_path = pagePath;
-        purchasePayload.page_title = pageTitle;
-        window.dataLayer.push(purchasePayload);
       }
     })();
   </script>

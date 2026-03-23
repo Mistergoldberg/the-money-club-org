@@ -48,7 +48,8 @@ $allowed_returns = [
     'schedule-pricing.html',
     'pricing.html',
     'faq.html',
-    'open-book-hook.html'
+    'open-book-hook.html',
+    'reserve-a-spot.html'
 ];
 
 if (!in_array($return_to, $allowed_returns, true)) {

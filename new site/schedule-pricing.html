@@ -1308,6 +1308,13 @@ nav{
       letter-spacing: 0;
       text-transform: none;
     }
+    .market-mobile-icon{
+      display: none;
+    }
+    .market-emoji-inline{
+      display: inline;
+      margin-right: 4px;
+    }
     .market-deep-plain-list{
       margin: 0;
       padding: 0;
@@ -1340,6 +1347,16 @@ nav{
       margin: 0;
     }
     .market-deep-photo img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .mobile-only-round-photo{
+      display: none;
+    }
+    .mobile-only-round-photo img{
       display: block;
       width: 100%;
       height: 100%;
@@ -1942,6 +1959,16 @@ nav{
       line-height: 1.15;
       font-weight: 700;
       color: var(--ink);
+      text-align: center;
+    }
+    #reserve .wrap{
+      text-align: center;
+    }
+    #reserve + .reservation-steps{
+      margin-top: var(--space-4);
+    }
+    .reservation-steps #reserve.section-banner + .reservation-row{
+      margin-top: var(--space-4);
     }
     .interest-helper{
       margin: 0;
@@ -2250,9 +2277,61 @@ nav{
         align-items: start;
         padding: 18px 0;
       }
+      .market-deep-section > .section-banner .wrap{
+        text-align: center;
+      }
       .market-deep-copy{ grid-column: auto; }
+      .market-deep-item-title.with-mobile-icon{
+        display: grid;
+        justify-items: start;
+        text-align: left;
+        gap: 10px;
+      }
+      .market-deep-copy{
+        text-align: left;
+        justify-items: start;
+      }
+      .market-deep-copy p,
+      .market-deep-copy li,
+      .market-deep-copy .market-deep-plain-list{
+        text-align: left;
+      }
+      .market-mobile-icon{
+        display: inline-grid;
+        place-items: center;
+        width: clamp(118px, 36vw, 170px);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        border: 2px solid #111111;
+        font-size: clamp(52px, 12vw, 74px);
+        line-height: 1;
+        background: #ffffff;
+        justify-self: start;
+      }
+      .market-emoji-inline{
+        display: none;
+      }
       .market-deep-photo{
         display: none;
+      }
+      .mobile-only-round-photo{
+        display: block;
+        width: min(62vw, 260px);
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: #ffffff;
+        box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+        margin: 16px auto 12px;
+      }
+      .mobile-only-round-photo.market-mobile-top{
+        margin-top: 18px;
+        margin-bottom: 14px;
+      }
+      .mobile-only-round-photo.info-mobile-top{
+        margin-top: 10px;
+        margin-bottom: 14px;
       }
       .outcome-item{ grid-template-columns: 1fr; }
       .outcome-media{ min-height: 220px; }
@@ -2556,6 +2635,9 @@ nav{
           <h2>The Maker Market</h2>
         </div>
       </div>
+      <figure class="mobile-only-round-photo market-mobile-top" aria-hidden="true">
+        <img src="assets/maker-event.jpg" alt="" />
+      </figure>
       <div class="market-deep-content">
         <article class="market-deep-item">
           <div class="market-deep-copy">
@@ -2578,7 +2660,7 @@ nav{
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title">💸 You Get a Budget — And So Does Everyone Else</h3>
+            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">💸</span><span class="market-emoji-inline" aria-hidden="true">💸</span><span class="market-title-label">You Get a Budget — And So Does Everyone Else</span></h3>
             <p>Every student receives virtual cash.</p>
             <p>You walk around.</p>
             <p>You look at what other teams built.</p>
@@ -2596,7 +2678,7 @@ nav{
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title">⚖️ What You&rsquo;re Really Evaluating</h3>
+            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">⚖️</span><span class="market-emoji-inline" aria-hidden="true">⚖️</span><span class="market-title-label">What You&rsquo;re Really Evaluating</span></h3>
             <p>Behind every table, there&rsquo;s more than just an idea.</p>
             <p>There&rsquo;s a set of decisions:</p>
             <ul class="market-deep-plain-list">
@@ -2618,7 +2700,7 @@ nav{
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title">🧠 Where Money Meets Thinking</h3>
+            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">🧠</span><span class="market-emoji-inline" aria-hidden="true">🧠</span><span class="market-title-label">Where Money Meets Thinking</span></h3>
             <p>This is where the system comes together.</p>
             <p>Students connect:</p>
             <ul class="market-deep-plain-list">
@@ -2636,7 +2718,7 @@ nav{
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title">🎤 You Present — And Defend Your Idea</h3>
+            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">🎤</span><span class="market-emoji-inline" aria-hidden="true">🎤</span><span class="market-title-label">You Present — And Defend Your Idea</span></h3>
             <p>At some point, it&rsquo;s your turn.</p>
             <p>You explain:</p>
             <ul class="market-deep-plain-list">
@@ -2651,13 +2733,13 @@ nav{
             <p>Just real feedback.</p>
           </div>
           <figure class="market-deep-photo">
-            <img src="assets/student-present-2.jpg" alt="Students presenting and answering questions" />
+            <img src="assets/nn-kid-2.jpg" alt="Students presenting and answering questions" />
           </figure>
         </article>
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title">🧭 What This Moment Teaches</h3>
+            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">🧭</span><span class="market-emoji-inline" aria-hidden="true">🧭</span><span class="market-title-label">What This Moment Teaches</span></h3>
             <p>Most ideas sound good when you explain them.</p>
             <p>The Maker Market is where you find out:</p>
             <ul class="market-deep-plain-list">
@@ -2676,7 +2758,7 @@ nav{
             <p>It has to work &mdash; in time, in cost, and in value.</p>
           </div>
           <figure class="market-deep-photo">
-            <img src="assets/n-kid-3.jpg" alt="Students reflecting on what worked and what to improve" />
+            <img src="assets/n-kid-7.jpg" alt="Students reflecting on what worked and what to improve" />
           </figure>
         </article>
       </div>
@@ -2736,7 +2818,7 @@ nav{
       </div>
     </section>
 
-    <section class="quickfacts-section">
+    <section class="quickfacts-section hide-all-devices">
       <div class="quickfacts-banner">
         <div class="wrap">
           <h2>WHAT STUDENTS EXPERIENCE</h2>
@@ -2786,6 +2868,9 @@ nav{
           </div>
         </section>
 
+        <figure class="mobile-only-round-photo info-mobile-top" aria-hidden="true">
+          <img src="assets/n-kid-7.jpg" alt="" />
+        </figure>
         <section class="section-banner full-bleed purple heading-white" id="reserve">
           <div class="wrap">
             <h2>Free Info Session &mdash; Learn How The Money Club.Org Works</h2>
@@ -2793,7 +2878,7 @@ nav{
         </section>
         <div class="reservation-row registration-form-container">
           <div class="reservation-card">
-            <p class="interest-subhead">📅 April 18 • Live video session • ~30 minutes</p>
+            <p class="interest-subhead">📅 April 18 • Live video session • 30 minutes</p>
             <p class="interest-helper">Save your spot and we&apos;ll send the session link and program details. No payment required.</p>
             <div class="form-success" id="form-success" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
 <div class="form-loading" role="status" aria-live="polite">
@@ -2938,6 +3023,12 @@ nav{
       var success = document.getElementById('form-success');
       if (success && params.get('status') === 'sent') {
         success.classList.add('is-visible');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'tmc_interest_form_success',
+          form_name: 'interest_form',
+          funnel_step: 'form_success'
+        });
         var successCard = success.closest('.reservation-card');
         if (successCard) {
           successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
