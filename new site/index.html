@@ -3626,7 +3626,9 @@
       window.dataLayer.push({
         event: 'tmc_interest_form_success',
         form_name: 'interest_form',
-        funnel_step: 'form_success'
+        funnel_step: 'form_success',
+        page_location: window.location.pathname,
+        form_context: 'homepage'
       });
 
       params.delete('status');
