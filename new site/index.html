@@ -571,8 +571,8 @@
       justify-content: center;
     }
     .hero-logo{
-      width: 136px;
-      height: 136px;
+      width: 116px;
+      height: 116px;
       display: block;
     }
     .hero-title-block{
@@ -740,7 +740,7 @@
     }
     #built-like-a-business .program-summary{
       width: 100%;
-      max-width: 36rem;
+      max-width: 39rem;
       margin: 0;
       padding: clamp(24px, 2.4vw, 34px);
       border: 1px solid var(--line);
@@ -750,6 +750,21 @@
       text-align: left;
       font-size: inherit;
       line-height: var(--lh-body);
+    }
+    #built-like-a-business .program-selection-row{
+      width: 100%;
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(32px, 4vw, 64px);
+      align-items: start;
+    }
+    #built-like-a-business .program-selection-row .program-summary-row-title{
+      grid-column: 1 / -1;
+    }
+    #built-like-a-business .program-selection-panel{
+      grid-column: 1 / -1;
+      min-width: 0;
     }
     #built-like-a-business .program-summary-title{
       margin: 0 0 8px;
@@ -789,14 +804,101 @@
     #built-like-a-business .program-summary-point-text{
       display: block;
     }
-    #built-like-a-business .program-summary-cta-note{
-      margin: 4px 0 10px;
-      padding-top: 16px;
-      border-top: 1px solid var(--line);
+    #built-like-a-business .program-summary-row-title{
+      margin: 0 0 16px;
+      display: block;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding: clamp(8px, 1.4vw, 14px) max(var(--pad), 18px);
+      background: var(--teal);
       text-align: center;
       font-weight: 700;
-      line-height: 1.2;
-      font-size: clamp(18px, 1.7vw, 24px);
+      line-height: 1.1;
+      font-size: clamp(20px, 2.8vw, 30px);
+      color: #ffffff;
+      border-radius: 0;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), inset 0 -1px 0 rgba(0,0,0,0.14);
+    }
+    #built-like-a-business .program-summary-options{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 0 0 18px;
+      text-align: center;
+    }
+    #built-like-a-business .program-summary-option{
+      display: block;
+      line-height: 1.22;
+      text-align: center;
+      height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(17,17,17,0.08);
+      padding: clamp(18px, 2.2vw, 26px) clamp(14px, 1.7vw, 22px);
+    }
+    #built-like-a-business .program-summary-option-copy{
+      display: grid;
+      gap: 6px;
+    }
+    #built-like-a-business .program-summary-option-copy p{
+      margin: 0;
+    }
+    #built-like-a-business .program-summary-option-title{
+      font-weight: 700;
+      font-size: 1.06em;
+      line-height: 1.18;
+    }
+    #built-like-a-business .program-summary-option-copy p + p{
+      margin-top: 3px;
+    }
+    #built-like-a-business .program-summary-cta-group{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 42px;
+      margin-top: 6px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+    #built-like-a-business .program-summary-cta-group .cta-fill{
+      width: min(100%, 46rem);
+      justify-self: center;
+      min-height: 76px;
+      padding: 18px 16px;
+      font-size: clamp(22px, 1.8vw, 32px);
+      border-radius: 14px;
+    }
+    #built-like-a-business .program-summary-secondary-link{
+      margin: 0;
+      display: block;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding: clamp(8px, 1.4vw, 14px) max(var(--pad), 18px);
+      background: var(--teal);
+      font-size: clamp(20px, 2.8vw, 30px);
+      line-height: 1.1;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 0;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), inset 0 -1px 0 rgba(0,0,0,0.14);
+      transition: background-color 120ms ease, transform 120ms ease;
+    }
+    #built-like-a-business .program-summary-row-title,
+    #built-like-a-business .program-summary-secondary-link{
+      font-size: clamp(20px, 2.8vw, 30px);
+    }
+    #built-like-a-business .program-summary-secondary-link:hover,
+    #built-like-a-business .program-summary-secondary-link:focus-visible{
+      background: #166f79;
+      transform: translateY(-1px);
+    }
+    #what-is-this{
+      margin-top: 6px;
     }
     #what-is-this .split,
     #how-it-works .split,
@@ -1956,25 +2058,32 @@
     }
     @media (min-width: 981px){
       #how-it-works .split{
-        align-items: start;
+        align-items: stretch;
       }
       #how-it-works .section-copy{
         max-width: 44rem;
         font-size: 0.95em;
         gap: 10px;
+        align-self: stretch;
       }
       #how-it-works .section-media{
-        align-self: start;
+        align-self: stretch;
+        display: flex;
+        min-height: 0;
       }
       #how-it-works .section-image{
-        height: clamp(380px, 34vw, 520px);
+        position: relative;
+        height: 100%;
+        min-height: 0;
         overflow: hidden;
       }
       #how-it-works .section-image img{
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 50% 32%;
+        object-position: 50% 24%;
       }
       #radical-transparency .radical-grid{
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -2145,12 +2254,25 @@
         max-width: none;
         padding: 20px;
       }
+      #built-like-a-business .program-selection-row{
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 12px;
+      }
+      #built-like-a-business .program-selection-row .program-summary-row-title{
+        grid-column: auto;
+      }
+      #built-like-a-business .program-selection-panel{
+        grid-column: auto;
+      }
       #built-like-a-business .program-summary-meta{
         margin-bottom: 14px;
         font-size: 1em;
       }
-      #built-like-a-business .program-summary-cta-note{
-        font-size: 1em;
+      #built-like-a-business .program-summary-row-title{
+        font-size: clamp(24px, 5.2vw, 30px);
+        margin-bottom: 12px;
+        padding: 10px 16px;
       }
       #built-like-a-business .program-summary-points{
         gap: 10px;
@@ -2159,6 +2281,31 @@
       }
       #built-like-a-business .program-summary-point{
         font-size: 0.98em;
+      }
+      #built-like-a-business .program-summary-options{
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      #built-like-a-business .program-summary-option{
+        font-size: 0.98em;
+        padding: 16px 14px;
+      }
+      #built-like-a-business .program-summary-option-title{
+        font-size: 1.02em;
+      }
+      #built-like-a-business .program-summary-cta-group{
+        gap: 36px;
+        padding-top: 12px;
+      }
+      #built-like-a-business .program-summary-cta-group .cta-fill{
+        min-height: 82px;
+        padding: 22px 20px;
+        font-size: clamp(24px, 7vw, 34px);
+      }
+      #built-like-a-business .program-summary-secondary-link{
+        font-size: clamp(24px, 5.2vw, 30px);
+        padding: 10px 16px;
       }
       #built-like-a-business .program-summary-title,
       #built-like-a-business .program-summary-meta{
@@ -2369,8 +2516,8 @@
         width: 100%;
       }
       .hero-logo{
-        width: clamp(143px, 32vw, 190px);
-        height: clamp(143px, 32vw, 190px);
+        width: clamp(122px, 27.2vw, 162px);
+        height: clamp(122px, 27.2vw, 162px);
       }
       .hero-title-block,
       .hero-title,
@@ -2755,7 +2902,7 @@
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="open-book-hook.html">Transparency</a>
+        <a href="who-runs-it.html">Transparency</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
         <a href="/instructors.html">We're Hiring</a>
@@ -2768,7 +2915,7 @@
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="open-book-hook.html">Transparency</a>
+        <a href="who-runs-it.html">Transparency</a>
         <a href="faq.html">FAQ</a>
         <a href="/instructors.html">We're Hiring</a>
       </nav>
@@ -2788,7 +2935,7 @@
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A Toronto nonprofit maker camp that teaches financial literacy, design thinking, and public speaking.</div>
+          <div class="hero-sub">A Toronto nonprofit product development camp that teaches financial literacy and design thinking.</div>
         </div>
 
         <div class="hero-image banner">
@@ -2807,37 +2954,60 @@
     <section class="section" id="built-like-a-business">
       <div class="section-banner purple">
         <div class="wrap">
-        <h2>Toronto Product Dev Camp 2026</h2>
+        <h2>Build products. Price them. Sell them.</h2>
         </div>
       </div>
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <h3>Build an idea. Test it in the real world.</h3>
-            <p><strong>Many kids already earn money in small ways — babysitting, teaching swim lessons, tutoring, or selling things online.</strong></p>
-            <p>At The Money Club.Org, student teams receive a project budget and try something similar: design an idea and see if people will actually buy it.</p>
+            <h3>Build and test real ideas.</h3>
+            <p><strong>Many kids already earn money in small ways&mdash;babysitting, tutoring, selling things.</strong></p>
+            <p>Here, they take it further.</p>
             <ul class="bullet-list">
-              <li>Some teams build products.</li>
-              <li>Some create services.</li>
-              <li>Some test community engagement.</li>
+              <li>Students receive a small project budget and build something people might actually pay for.</li>
+              <li>Products. Services. Simple apps.</li>
+              <li>Not theory.</li>
             </ul>
-            <p>It's not about getting rich.</p>
-            <p>It's about discovering what happens when an idea meets the real world.</p>
+            <p>What happens when an idea meets the real world.</p>
            </div>
           <div class="cta-stack cta-stack--hero">
             <div class="program-summary">
-              <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons</span> | <span class="program-summary-keep">4 Weeks</span></div>
+              <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons | Summer 2026</span></div>
               <div class="program-summary-points">
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧠</span><span class="program-summary-point-text">Build and launch real products</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧠</span><span class="program-summary-point-text">Build and test real ideas</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text">Ages 10–16</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July Thru Aug</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧭</span><span class="program-summary-point-text">2-Week Sprints</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">Cost: $750 ($75/day)</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">Daily: 9-5</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">Daily: 9–5</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
               </div>
-              <p class="program-summary-cta-note">Free Info Session &mdash; Learn How The Money Club.Org Works</p>
-              <a data-cta-label="Get program details" class="btn teal gloss cta-standard cta-fill" href="#join-the-interest-list">Get Program Details</a>
+            </div>
+          </div>
+        </div>
+        <div class="program-selection-row">
+          <div class="program-summary-row-title">Choose your program</div>
+          <div class="program-selection-panel">
+              <div class="program-summary-options">
+                <div class="program-summary-option">
+                  <div class="program-summary-option-copy">
+                    <p class="program-summary-option-title">2-Week Builder Sprint</p>
+                    <p>$750</p>
+                  <p>July 6–17 or Aug 4–15</p>
+                  <p>A focused introduction.</p>
+                  <p>Build and test one idea.</p>
+                </div>
+                </div>
+                <div class="program-summary-option">
+                  <div class="program-summary-option-copy">
+                    <p class="program-summary-option-title">4-Week Full Program</p>
+                    <p>$1,500</p>
+                  <p>July 6–31 or Aug 4–28</p>
+                  <p>The full experience.</p>
+                  <p>Deeper build, more iteration, final showcase.</p>
+                </div>
+              </div>
+            </div>
+            <div class="program-summary-cta-group">
+              <a data-cta-label="Reserve a spot" class="btn purple gloss cta-standard cta-fill" href="reserve-a-spot.html">Reserve a Spot</a>
+              <a class="program-summary-secondary-link" href="#join-the-interest-list" data-cta-label="Free Info Session — Learn How The Money Club.Org Works">Not ready yet? Sign Up for a Free Info Session &mdash; Learn How The Money Club.Org Works</a>
             </div>
           </div>
         </div>
@@ -2853,9 +3023,6 @@
       <div class="section-content">
         <div class="split reverse">
           <div class="section-media">
-            <div class="section-image">
-              <img src="assets/kid-presents-larg-class.jpg" alt="Students presenting product ideas" />
-            </div>
             <div class="location-map-card">
               <iframe
                 class="location-map"
@@ -2867,22 +3034,10 @@
             </div>
           </div>
           <div class="section-copy">
-            <p>The Money Club.Org runs at the UTSU Student Commons at 230 College Street in downtown Toronto.</p>
-            <p>Classes are led by University of Toronto student instructors in a supervised, small-group classroom setting where participants build projects, collaborate with peers, and present their ideas.</p>
-            <p>Students also have access to breakout space, lounge seating, and a lunch area. The building is steps from the TTC, making commuting easier for families across central Toronto.</p>
-            <p>Light daily snacks are provided. Students should bring their own lunch and water bottle.</p>
-            <div class="fact-list">
-              <div>
-                <strong>Schedule</strong>
-                <div class="fact-subline">Weekdays, 9:00 AM-5:00 PM</div>
-                <div class="fact-subline">Core instruction: 9:30 AM-3:30 PM</div>
-              </div>
-              <div>
-                <strong>Session Dates</strong>
-                <div class="fact-subline">Session 1: July 6-31</div>
-                <div class="fact-subline">Session 2: August 4-28</div>
-              </div>
-            </div>
+            <p>The program runs at the UTSU Student Commons.</p>
+            <p>Small-groups, 1 instructor to 10 participants, supervised in a classroom setting led by University of Toronto students.</p>
+            <p>Easy TTC access. Light snacks provided. Students bring lunch.</p>
+            <p><strong>Schedule</strong><br />Weekdays, 9:00 AM–5:00 PM<br />Core instruction: 9:30 AM–3:30 PM</p>
           </div>
         </div>
       </div>
@@ -2891,31 +3046,29 @@
     <section class="section" id="how-it-works">
       <div class="section-banner purple">
         <div class="wrap">
-          <h2>What do students actually build or create?</h2>
+          <h2>What Do Students Build?</h2>
         </div>
       </div>
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <p>Students work on real ideas, not just hypothetical projects.</p>
-            <p>With instructor guidance, they move from early research and rough concepts to something more concrete: a product, service, prototype, or small business idea they can test and present.</p>
-            <p>They might create:</p>
+            <p>Students work on real ideas&mdash;not hypothetical projects.</p>
+            <p>They move from early concepts to something they can test and present.</p>
+            <p>Examples:</p>
             <ul class="bullet-list">
-              <li>a next-level lemonade stand</li>
-              <li>a subscription service</li>
-              <li>a product people might actually buy</li>
-              <li>a service that solves a real problem</li>
-              <li>a simple app or digital tool</li>
-              <li>the branding or marketing materials that help it stand out</li>
+              <li>A small product people might buy</li>
+              <li>A service that solves a real problem</li>
+              <li>A basic app or digital tool</li>
+              <li>Branding or marketing to support it</li>
             </ul>
-            <p>The goal is to build something useful and see what happens when real people have to decide: is this worth paying for?</p>
+            <p>The goal: Build something&mdash;and see if people choose it.</p>
             <div class="mobile-reserve-btn">
               <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
             </div>
           </div>
           <div class="section-media">
             <div class="section-image">
-              <img src="assets/instruct-mobile-packing.jpg" alt="Students presenting a UX design" />
+              <img src="assets/n-kid-6.jpg" alt="Students presenting a UX design" />
             </div>
           </div>
         </div>
@@ -2932,86 +3085,53 @@
         <div class="outcomes-stack">
           <article class="outcome-row">
             <div class="outcome-copy">
-              <h3 class="outcome-title">Financial Literacy — How Money Actually Works</h3>
-              <p>Students learn the fundamentals behind every real idea:</p>
+              <h3 class="outcome-title">Financial Literacy — How Money Works</h3>
+              <p>Students learn:</p>
               <ul class="bullet-list outcome-points">
-                <li>Unit economics (cost vs. price vs. margin)</li>
-                <li>Cost of goods sold and basic sourcing decisions</li>
-                <li>How pricing affects demand and viability</li>
-                <li>Why some ideas make money — and others don&apos;t</li>
+                <li>Cost vs. price vs. margin</li>
+                <li>What makes something profitable</li>
+                <li>How pricing affects decisions</li>
+                <li>Applied through their own project</li>
               </ul>
-              <p>They don&apos;t just hear these concepts. They apply them.</p>
+              <p>Applied through their own project.</p>
             </div>
             <figure class="outcome-image">
-              <img src="assets/student-packing.jpg" alt="Students working together to package a product" />
+              <img src="assets/nn-kid-2.jpg" alt="Students working together to package a product" />
             </figure>
           </article>
           <article class="outcome-row">
             <div class="outcome-copy">
-              <h3 class="outcome-title">Design Thinking — An Evidence Based Approach</h3>
-              <p>Students learn to build ideas that respond to the real world:</p>
+              <h3 class="outcome-title">Design Thinking — Build What Works</h3>
+              <p>Students learn how to thnik like designers</p>
               <ul class="bullet-list outcome-points">
-                <li>Defining clear success criteria before building</li>
-                <li>Testing ideas with real people, not assumptions</li>
-                <li>Using feedback loops to improve decisions</li>
-                <li>Understanding what works, what doesn&apos;t, and why</li>
+                <li>Test ideas with real people</li>
+                <li>Use feedback to improve</li>
+                <li>Understand what works (and why)</li>
+                <li>Focus on judgment, not guesswork</li>
               </ul>
-              <p>This builds judgment — not just creativity.</p>
+              <p>Focus on judgment, not guesswork.</p>
             </div>
             <figure class="outcome-image">
-              <img src="assets/student-ux.jpg" alt="Students reviewing design ideas together" />
+              <img src="assets/apps-n.jpg" alt="Students reviewing design ideas together" />
             </figure>
           </article>
           <article class="outcome-row">
             <div class="outcome-copy">
-              <h3 class="outcome-title">Communication — Presenting Ideas Clearly</h3>
-              <p>Students learn to explain their thinking with confidence:</p>
+              <h3 class="outcome-title">Build with AI</h3>
+              <p>Students learn to use AI tools to help them:</p>
               <ul class="bullet-list outcome-points">
-                <li>Structuring a clear, logical argument</li>
-                <li>Showing how decisions were made</li>
-                <li>Presenting ideas to a group and handling questions</li>
-                <li>Speaking with clarity, not just enthusiasm</li>
+                <li>Research markets</li>
+                <li>Analyze information and find opportunities</li>
+                <li>Model simple business cases</li>
+                <li>Create media and marketing</li>
+                <li>Build websites and app concepts</li>
               </ul>
-              <p>The goal isn&apos;t performance. It&apos;s clarity.</p>
+              <p>Create market-ready products.</p>
             </div>
             <figure class="outcome-image">
-              <img src="assets/student-present-2.jpg" alt="Student presenting ideas in front of a group" />
+              <img src="assets/vibe-coding.jpg" alt="Student presenting ideas in front of a group" />
             </figure>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="who-runs-it">
-      <div class="section-banner purple">
-        <div class="wrap">
-          <h2>How the 4 Weeks Work</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="section-copy">
-          <p><strong>A Typical Day</strong></p>
-          <p>Each day follows a clear rhythm with instructor-led sessions, build time, lunch, project work, feedback, and short presentations so students know what to expect.</p>
-          <p><strong>Week by Week</strong></p>
-          <p>Each week builds on the last, so students move from understanding how ideas work in the real world to building and presenting one of their own.</p>
-          <ul class="module-list week-list">
-            <li>
-              <strong>Week 1 — Understand the Basics</strong>
-              <p>Money, pricing, work, and early market research.</p>
-            </li>
-            <li>
-              <strong>Week 2 — Study What Works</strong>
-              <p>Products, competitors, branding, and positioning.</p>
-            </li>
-            <li>
-              <strong>Week 3 — Build the Idea</strong>
-              <p>Prototype, test, price, and shape core concept.</p>
-            </li>
-            <li>
-              <strong>Week 4 — Maker Market Event</strong>
-              <p>Improve the work and prepare for the final showcase - parents invited.</p>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
@@ -3030,7 +3150,7 @@
             </div>
           </div>
           <div class="radical-copy">
-            <p>The Money Club.Org is a nonprofit summer program with open-book financials, so families can see where tuition goes. No upselling. No hidden extras. Just a transparent program built around instruction, materials, and a strong student experience.</p>
+            <p>The Money Club.Org is a nonprofit with open-book finances. No upsells. No hidden costs. Tuition goes directly into instruction, materials, and the student experience.</p>
           </div>
         </div>
       </div>
@@ -3038,15 +3158,15 @@
 
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn How The Money Club.Org Works</h2>
+        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn How It Works</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
       <div class="wrap">
         <div class="reservation-row registration-form-container">
           <div class="reservation-card">
-            <p class="interest-subhead">📅 April 18 • Live video session • 30 minutes</p>
-            <p class="interest-helper">Save your spot and we&apos;ll send the session link and program details. No payment required.</p>
+            <p class="interest-subhead">📅 April 18 • Live video • 30 minutes</p>
+            <p class="interest-helper">We&apos;ll walk through the program and answer questions. Save your spot and we&apos;ll send the link.</p>
             <div class="form-success" id="form-success" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
 <div class="form-loading" role="status" aria-live="polite">
   <div class="spinner" aria-hidden="true"></div>
@@ -3070,7 +3190,7 @@
               </div>
               <div class="interest-submit-wrap">
                 <button class="btn teal gloss cta-standard interest-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
-                <small class="interest-trust-line">Small groups • Ages 10–16 • Downtown Toronto • UTSU Student Commons • Light daily snacks provided</small>
+                <small class="interest-trust-line">Small groups • Ages 10–16 • Downtown Toronto • UTSU Student Commons • Snacks provided</small>
                 <a class="interest-register-link" href="/reserve-a-spot.html" data-cta-label="Complete registration here">Ready to register now? Complete registration here →</a>
               </div>
             </form>

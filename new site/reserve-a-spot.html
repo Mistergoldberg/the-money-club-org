@@ -1029,21 +1029,26 @@ nav{
       color: #ffffff;
     }
     .reserve-secondary-link{
-      margin: 0;
+      margin: 6px 0 0;
       display: block;
-      max-width: 28ch;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding: clamp(14px, 2.2vw, 24px) max(var(--pad), 18px);
+      background: var(--purple);
       font-size: clamp(24px, 3.4vw, 34px);
       line-height: 1.15;
       font-weight: 700;
       color: #ffffff;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 3px;
-      opacity: 0.95;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), inset 0 -1px 0 rgba(0,0,0,0.14);
+      transition: background-color 120ms ease, transform 120ms ease;
     }
     .reserve-secondary-link:hover,
     .reserve-secondary-link:focus-visible{
-      opacity: 1;
+      background: #7a4fa8;
+      transform: translateY(-1px);
     }
     body.info-session-open{
       overflow: hidden;
@@ -1829,8 +1834,8 @@ nav{
         width: 100%;
       }
       .hero-logo{
-        width: clamp(143px, 32vw, 190px);
-        height: clamp(143px, 32vw, 190px);
+        width: clamp(122px, 27.2vw, 162px);
+        height: clamp(122px, 27.2vw, 162px);
       }
       .hero-title-block,
       .hero-title,
@@ -1875,8 +1880,9 @@ nav{
         line-height: 1.15;
       }
       .reserve-secondary-link{
-        font-size: clamp(24px, 3.4vw, 34px);
+        font-size: clamp(28px, 5.2vw, 38px);
         line-height: 1.1;
+        padding: 16px max(var(--pad), 14px);
       }
       .session-grid{ grid-template-columns: 1fr; }
       .session-card{ padding: 10px; min-height: 0; }
@@ -1971,7 +1977,7 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="open-book-hook.html">Transparency</a>
+        <a href="who-runs-it.html">Transparency</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
         <a href="/instructors.html">We're Hiring</a>
@@ -1984,7 +1990,7 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="open-book-hook.html">Transparency</a>
+        <a href="who-runs-it.html">Transparency</a>
         <a href="faq.html">FAQ</a>
         <a href="/instructors.html">We're Hiring</a>
       </nav>

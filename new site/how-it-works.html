@@ -440,8 +440,8 @@ nav{
       justify-content: center;
     }
     .hero-logo{
-      width: 136px;
-      height: 136px;
+      width: 116px;
+      height: 116px;
       display: block;
     }
     .hero-title-block{
@@ -1514,6 +1514,9 @@ nav{
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
+    .quickfacts-banner.teal{
+      background: var(--teal);
+    }
     .quickfacts-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
     .quickfacts-content{
       max-width: var(--max-wide);
@@ -1530,6 +1533,9 @@ nav{
     .quickfacts-list{
       margin: 12px 0 0;
       padding-left: 18px;
+    }
+    .ai-build-list{
+      margin-top: 0;
     }
     .quickfacts-list li{ margin: 6px 0; }
     .quickfacts-card{
@@ -1591,7 +1597,7 @@ nav{
       display:grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 20px;
-      align-items:start;
+      align-items: stretch;
     }
     .reserve-copy{
       display:grid;
@@ -1869,10 +1875,32 @@ nav{
       height: auto;
     }
     .reserve-section .curriculum-photo{
-      aspect-ratio: 1.12 / 1;
+      position: relative;
+      height: 100%;
+      min-height: 0;
+      aspect-ratio: auto;
+      flex: 1;
     }
     .reserve-section .curriculum-photo img{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       object-position: center top;
+    }
+    .reserve-section .curriculum-media{
+      display: flex;
+      min-height: 0;
+      height: auto;
+    }
+    .reserve-section .reserve-copy{
+      max-width: none;
+      align-self: stretch;
+    }
+    .reserve-section .interest-submit{
+      width: 100%;
+      display: flex;
     }
     .curriculum-content,
     .why-content,
@@ -2044,7 +2072,27 @@ nav{
         width: 100%;
         height: 100%;
       }
-      .reserve-content{ grid-template-columns: 1fr; }
+      .reserve-content{
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+      .reserve-section .curriculum-media{
+        display: block;
+        height: auto;
+      }
+      .reserve-section .curriculum-photo{
+        position: static;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 0.95 / 1;
+        flex: initial;
+      }
+      .reserve-section .curriculum-photo img{
+        position: static;
+        inset: auto;
+        width: 100%;
+        height: 100%;
+      }
       .outcome-item{ grid-template-columns: 1fr; }
       .outcome-media{
         min-height: 220px;
@@ -2120,8 +2168,8 @@ nav{
         width: 100%;
       }
       .hero-logo{
-        width: clamp(143px, 32vw, 190px);
-        height: clamp(143px, 32vw, 190px);
+        width: clamp(122px, 27.2vw, 162px);
+        height: clamp(122px, 27.2vw, 162px);
       }
       .hero-title-block,
       .hero-title,
@@ -2230,7 +2278,7 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="open-book-hook.html">Transparency</a>
+        <a href="who-runs-it.html">Transparency</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
         <a href="/instructors.html">We're Hiring</a>
@@ -2243,7 +2291,7 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="open-book-hook.html">Transparency</a>
+        <a href="who-runs-it.html">Transparency</a>
         <a href="faq.html">FAQ</a>
         <a href="/instructors.html">We're Hiring</a>
       </nav>
@@ -2263,7 +2311,7 @@ nav{
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A Toronto nonprofit maker camp that teaches financial literacy, design thinking, and public speaking.</div>
+          <div class="hero-sub">A Toronto nonprofit product development camp that teaches financial literacy and design thinking.</div>
         </div>
 
         <div class="hero-image banner">
@@ -2289,11 +2337,11 @@ nav{
           </div>
 
           <div class="curriculum-copy intro-copy">
-            <h3>Try Building Something Real</h3>
-            <p>A lot of kids already earn money in small ways &mdash; babysitting, tutoring, selling things online.</p>
-            <p>The Money Club starts there.</p>
+            <h3>Build products. Price them. Sell them.</h3>
+            <p>Many kids already earn money in small ways&mdash;babysitting, tutoring, selling online.</p>
+            <p>The program builds on that.</p>
             <p>Students get a project budget and work in teams to build something people might actually pay for.</p>
-            <p>They test it, get feedback, and adjust &mdash; until they understand what makes something valuable.</p>
+            <p>They test it, get feedback, and adjust. The goal is simple: understand what makes something worth paying for.</p>
           </div>
         </div>
       </div>
@@ -2308,33 +2356,31 @@ nav{
       <div class="openbook-content">
         <div class="openbook-grid process-layout">
           <div class="openbook-copy process-copy">
-            <h3 class="process-intro-heading">The program is built around a simple framework based on Design Thinking.</h3>
+            <h3 class="process-intro-heading">A simple, repeatable process:</h3>
             <div class="openbook-box process-plain">
               <h4 class="process-step-heading">1. Notice problems</h4>
-              <p>What feels inefficient? What could work better?</p>
+              <p>What could work better?</p>
             </div>
             <div class="openbook-box process-plain">
               <h4 class="process-step-heading">2. Generate ideas</h4>
-              <p>Teams explore many possible solutions before choosing one.</p>
+              <p>Explore options before choosing one.</p>
             </div>
             <div class="openbook-box process-plain">
               <h4 class="process-step-heading">3. Build something simple</h4>
-              <p>This could be a product, service, app concept, or community idea.</p>
+              <p>Product, service, or app concept.</p>
             </div>
             <div class="openbook-box process-plain">
               <h4 class="process-step-heading">4. Test it</h4>
-              <p>Students get feedback from real people and see which assumptions hold up.</p>
+              <p>Get feedback from real people.</p>
             </div>
             <div class="openbook-box process-plain">
               <h4 class="process-step-heading">5. Improve it</h4>
-              <p>Teams refine the idea based on what they learn.</p>
+              <p>Adjust based on what works.</p>
             </div>
             <div class="openbook-box process-plain">
               <h4 class="process-step-heading">6. Present it</h4>
-              <p>At each stage, students explain what they tried, what worked, and what surprised them.</p>
+              <p>Explain what changed and why.</p>
             </div>
-            <p>Good ideas usually do not appear fully formed.</p>
-            <p>They get stronger through testing.</p>
           </div>
           <div class="openbook-side process-side">
             <div class="openbook-card">
@@ -2346,8 +2392,40 @@ nav{
     </section>
 
 
+    <section class="curriculum-section">
+      <div class="curriculum-banner">
+        <div class="wrap">
+          <h2>Build with AI</h2>
+        </div>
+      </div>
+      <div class="curriculum-content">
+        <div class="curriculum-grid">
+          <div class="curriculum-media">
+            <div class="curriculum-photo">
+              <img src="assets/student-ux-2.jpg" alt="Students using laptops to build and test ideas" />
+            </div>
+          </div>
+
+          <div class="curriculum-copy intro-copy">
+            <p>Students use AI to move faster and test better ideas.</p>
+            <p>They use it to:</p>
+            <ul class="quickfacts-list ai-build-list">
+              <li>Research markets and understand customers</li>
+              <li>Analyze information and spot opportunities</li>
+              <li>Model simple business cases</li>
+              <li>Create media and marketing</li>
+              <li>Build basic websites and app concepts</li>
+            </ul>
+            <p>The goal isn&rsquo;t just to use AI.</p>
+            <p>It&rsquo;s to use it to build something that actually works.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <section class="quickfacts-section">
-      <div class="quickfacts-banner">
+      <div class="quickfacts-banner teal">
         <div class="wrap">
           <h2>Financial Literacy</h2>
         </div>
@@ -2357,16 +2435,16 @@ nav{
           <img src="assets/nn-kid-2.jpg" alt="Students interviewing a customer at a table" />
         </div>
         <div class="reserve-copy skills-copy">
-          <p>In most settings, money is explained. Here, it&rsquo;s experienced.</p>
+          <p>In most programs, money is explained. Here, it&rsquo;s used.</p>
           <p>Students work through:</p>
           <ul class="quickfacts-list">
-            <li>Cost, price, and margin</li>
-            <li>How demand responds to pricing</li>
-            <li>Why some ideas generate value &mdash; and others don&rsquo;t</li>
-            <li>How incentives shape decisions</li>
+            <li>Cost vs. price vs. margin</li>
+            <li>How pricing affects demand</li>
+            <li>Why some ideas make money&mdash;and others don&rsquo;t</li>
+            <li>How decisions impact results</li>
           </ul>
-          <p>The feedback is immediate because students have a real budget and the system responds.</p>
-          <p>They learn to read that signal &mdash; and adjust.</p>
+          <p>They see the outcome directly.</p>
+          <p>Through their own project.</p>
         </div>
       </div>
     </section>
@@ -2384,28 +2462,28 @@ nav{
         </div>
         <div class="reserve-copy">
           <h3 class="body-section-heading">The program ends with a live Maker Market.</h3>
-          <p>Every team sets up their idea and pitches it in a market-style format.</p>
-          <p>Some students present products.</p>
-          <p>Some present services.</p>
-          <p>Some present apps or community ideas.</p>
-          <p>Each participant gets virtual cash to spend on the ideas they think are strongest.</p>
-          <p>That means every team has to answer a real question:</p>
-          <p><strong>Why will someone choose one idea over another?</strong></p>
+          <p>Each team presents what they built.</p>
+          <p>Products.</p>
+          <p>Services.</p>
+          <p>Apps. Ideas.</p>
+          <p>Every participant receives virtual cash and chooses what to spend it on.</p>
+          <p>That creates one real question. No grades. Just decisions.</p>
+          <p><strong>Why would someone choose this?</strong></p>
           <a class="btn teal gloss cta-standard interest-submit" href="schedule-pricing.html" data-cta-label="Learn More">Learn More</a>
         </div>
       </div>
     </section>
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2>Free Info Session &mdash; Learn How The Money Club.Org Works</h2>
+        <h2>Free Info Session &mdash; Learn How It Works</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
       <div class="wrap">
         <div class="reservation-row registration-form-container">
           <div class="reservation-card">
-            <p class="interest-subhead">📅 April 18 • Live video session • 30 minutes</p>
-            <p class="interest-helper">Save your spot and we&apos;ll send the session link and program details. No payment required.</p>
+            <p class="interest-subhead">📅 April 18 • Live video • 30 minutes</p>
+            <p class="interest-helper">We&rsquo;ll walk through the program and answer questions. Save your spot and we&rsquo;ll send the link.</p>
             <div class="form-success" id="form-success" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
 <div class="form-loading" role="status" aria-live="polite">
   <div class="spinner" aria-hidden="true"></div>
