@@ -444,9 +444,10 @@ nav{
       font-weight: 700;
       font-size: inherit;
       color: var(--ink);
-      margin: 2px 0 0;
-      line-height: 1.05;
-      text-align: left;
+      margin: 6px auto 0;
+      line-height: 1.2;
+      width: min(100%, 57.6rem);
+      text-align: center;
     }
     .hero-copy{
       font-family: var(--font-display);
@@ -1591,6 +1592,13 @@ nav{
       color: #ffffff;
     }
     @media (min-width: 981px){
+      .topbar nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-right: 0;
+      }
+    }
+    @media (min-width: 981px){
       .menu-btn{ display:none; }
     }
 
@@ -1782,10 +1790,9 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -1795,9 +1802,8 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1846,7 +1852,7 @@ nav{
             <p>Not exactly — but it complements STEM skills very well.</p>
             <p>Many STEM camps teach students how to build technology.</p>
             <p>This program focuses on <a href="/how-it-works.html">what to build and why</a> — identifying real problems, understanding demand, and designing ideas that people actually want.</p>
-            <p>Students who already enjoy coding or robotics often find this perspetive especially valuable.</p>
+            <p>Students who already enjoy coding or robotics often find this perspective especially valuable.</p>
           </details>
           <details class="faq-item">
             <summary>How many students are in each session?</summary>
@@ -2420,6 +2426,12 @@ nav{
       document.addEventListener('click', function(event){
         var target = event.target.closest('a, button');
         if (!target){
+          return;
+        }
+        // Exclude interest form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* events
+        var interestForm = target.closest('form[action="apply-interest.php"]');
+        if (interestForm){
           return;
         }
         if (!(

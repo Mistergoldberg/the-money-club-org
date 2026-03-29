@@ -203,8 +203,15 @@ remove this rule or remove class="hide-registration" from the
 
   .hero-logo{ display: none !important; }
   .hero-title{ display: none !important; }
-  .hero-logo-mobile{ display: block; margin: 0 auto; }
+  .hero-logo-mobile{
+    display: block;
+    margin: 0 auto;
+    width: min(272px, 73vw);
+  }
   .hero-top{ width: 100%; }
+  .hero-sub{
+    max-width: min(94vw, 36ch);
+  }
 
   .menu-btn{
     transform: scale(0.9);

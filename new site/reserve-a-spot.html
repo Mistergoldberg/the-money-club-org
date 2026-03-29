@@ -359,12 +359,13 @@
 nav{
       display:flex;
       gap: 0;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       align-items:center;
       color: var(--ink);
       font-size: 23px;
       flex: 1;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      margin-right: clamp(16px, 2vw, 30px);
     }
 
     .topbar nav a{
@@ -1723,6 +1724,13 @@ nav{
     }
 
     @media (min-width: 981px){
+      .topbar nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-right: 0;
+      }
+    }
+    @media (min-width: 981px){
       .menu-btn{ display:none; }
     }
 
@@ -1977,10 +1985,9 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -1990,9 +1997,8 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -3011,6 +3017,12 @@ nav{
       document.addEventListener('click', function(event){
         var target = event.target.closest('a, button');
         if (!target){
+          return;
+        }
+        // Exclude interest form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* events
+        var interestForm = target.closest('form[action="apply-interest.php"]');
+        if (interestForm){
           return;
         }
         if (!(

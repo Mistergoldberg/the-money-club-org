@@ -488,9 +488,10 @@ nav{
       font-weight: 700;
       font-size: inherit;
       color: var(--ink);
-      margin: 0;
-      line-height: 1.05;
-      text-align: left;
+      margin: 6px auto 0;
+      line-height: 1.2;
+      width: min(100%, 57.6rem);
+      text-align: center;
     }
     .hero-image{
       width: 100%;
@@ -2232,6 +2233,13 @@ nav{
     }
 
     @media (min-width: 981px){
+      .topbar nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-right: 0;
+      }
+    }
+    @media (min-width: 981px){
       .menu-btn{ display:none; }
     }
 
@@ -2562,10 +2570,9 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -2575,9 +2582,8 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -2595,7 +2601,7 @@ nav{
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A Toronto nonprofit product development camp that teaches financial literacy and design thinking.</div>
+          <div class="hero-sub">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
         </div>
 
         <div class="hero-image banner">
@@ -2641,17 +2647,18 @@ nav{
       <div class="market-deep-content">
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title">At the end of the sprint, everything gets tested.</h3>
-            <p>Not by an instructor.</p>
-            <p>By other people&rsquo;s choices.</p>
-            <p>Each team sets up what they built and explains why it matters.</p>
-            <ul class="market-deep-plain-list">
-              <li>What they built</li>
-              <li>Why it matters</li>
-              <li>What problem it solves</li>
-              <li>Why someone should choose it</li>
+            <h3 class="market-deep-item-title">Where students test what they&rsquo;ve built&mdash;in a structured, supportive environment</h3>
+            <p>At the end of the program, students take part in the Maker Market.</p>
+            <p>It&rsquo;s a guided, in-person showcase where each team presents what they&rsquo;ve built and explains how it works.</p>
+            <p>They share:</p>
+            <ul class="market-deep-points">
+              <li>what they created</li>
+              <li>what problem it solves</li>
+              <li>how they designed it</li>
+              <li>and why someone might choose it</li>
             </ul>
-            <p>Then the room opens.</p>
+            <p>This is not a competition.</p>
+            <p>It&rsquo;s a structured way for students to see how their ideas land with others.</p>
           </div>
           <figure class="market-deep-photo">
             <img src="assets/maker-event.jpg" alt="Students presenting at The Maker Market event" />
@@ -2660,14 +2667,15 @@ nav{
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">💸</span><span class="market-emoji-inline" aria-hidden="true">💸</span><span class="market-title-label">You Get a Budget</span></h3>
-            <p>Every student receives virtual cash.</p>
-            <p>They walk around.</p>
-            <p>They look at other teams&rsquo; work.</p>
+            <h3 class="market-deep-item-title">How It Works</h3>
+            <p>Each student receives a small amount of virtual &ldquo;budget.&rdquo;</p>
+            <p>They explore what other teams have built.</p>
             <p>They ask questions.</p>
-            <p>They decide what they would choose.</p>
-            <p>They can back one idea or spread it across a few.</p>
-            <p>But every choice sends a signal.</p>
+            <p>They think about what they value.</p>
+            <p>Then they decide how they would spend it.</p>
+            <p>Some support one idea.</p>
+            <p>Others spread their choices.</p>
+            <p>Every decision becomes part of the learning.</p>
           </div>
           <figure class="market-deep-photo">
             <img src="assets/n-kid-5.jpg" alt="Students comparing projects and making choices" />
@@ -2676,15 +2684,19 @@ nav{
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">⚖️</span><span class="market-emoji-inline" aria-hidden="true">⚖️</span><span class="market-title-label">What You&rsquo;re Really Evaluating</span></h3>
-            <p>Behind every project is a set of decisions:</p>
-            <ul class="market-deep-plain-list">
+            <h3 class="market-deep-item-title">What Students Are Learning</h3>
+            <p>Behind each project, students begin to understand:</p>
+            <ul class="market-deep-points">
               <li>What did it cost to make?</li>
               <li>How much time went into it?</li>
               <li>What price makes sense?</li>
               <li>Would someone actually choose it?</li>
             </ul>
-            <p>Students start to see that not every good idea works in practice.</p>
+            <p>They start to see the difference between:</p>
+            <ul class="market-deep-points">
+              <li>an interesting idea</li>
+              <li>and one that works in practice</li>
+            </ul>
           </div>
           <figure class="market-deep-photo">
             <img src="assets/Banner-School-Real-Life.jpg" alt="Students discussing costs and margins while building projects" />
@@ -2693,15 +2705,14 @@ nav{
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">🧠</span><span class="market-emoji-inline" aria-hidden="true">🧠</span><span class="market-title-label">Where Money Meets Thinking</span></h3>
-            <p>This is where financial literacy becomes real.</p>
-            <p>Students connect:</p>
+            <h3 class="market-deep-item-title">Where Financial Literacy Becomes Real</h3>
+            <p>Instead of learning concepts in isolation, students connect them:</p>
             <ul class="market-deep-plain-list">
               <li>Cost &rarr; Price &rarr; Margin</li>
               <li>Time &rarr; Effort &rarr; Return</li>
               <li>Value &rarr; Choice &rarr; Demand</li>
             </ul>
-            <p>They begin to understand what makes an idea worth doing.</p>
+            <p>They begin to understand not just how money works&mdash;but how decisions shape outcomes.</p>
           </div>
           <figure class="market-deep-photo">
             <img src="assets/apps-n.jpg" alt="Students testing ideas and analyzing feedback" />
@@ -2710,18 +2721,17 @@ nav{
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">🎤</span><span class="market-emoji-inline" aria-hidden="true">🎤</span><span class="market-title-label">You Present</span></h3>
-            <p>Each team presents:</p>
-            <ul class="market-deep-plain-list">
-              <li>What they built</li>
-              <li>What it costs</li>
-              <li>Why they priced it that way</li>
-              <li>Why someone should choose it</li>
+            <h3 class="market-deep-item-title">Presenting Their Work</h3>
+            <p>Each team presents their project clearly and confidently.</p>
+            <p>They explain:</p>
+            <ul class="market-deep-points">
+              <li>what they built</li>
+              <li>how they priced it</li>
+              <li>what they learned</li>
+              <li>what they would improve</li>
             </ul>
-            <p>Then they answer questions and hear real feedback.</p>
-            <p>No grades.</p>
-            <p>No fake points.</p>
-            <p>Just a real response from other people.</p>
+            <p>They also answer questions and receive thoughtful feedback from others.</p>
+            <p>This helps students build confidence in how they communicate ideas.</p>
           </div>
           <figure class="market-deep-photo">
             <img src="assets/nn-kid-2.jpg" alt="Students presenting and answering questions" />
@@ -2730,26 +2740,30 @@ nav{
 
         <article class="market-deep-item">
           <div class="market-deep-copy">
-            <h3 class="market-deep-item-title with-mobile-icon"><span class="market-mobile-icon" aria-hidden="true">🧭</span><span class="market-emoji-inline" aria-hidden="true">🧭</span><span class="market-title-label">What This Moment Teaches</span></h3>
-            <p>Most ideas sound good when you explain them.</p>
-            <p>The Maker Market is where students find out what actually holds up.</p>
+            <h3 class="market-deep-item-title">What Students Take Away</h3>
+            <p>By the end of the Maker Market, students leave with:</p>
             <ul class="market-deep-plain-list">
-              <li>Does the idea make sense?</li>
-              <li>Does the price hold up?</li>
-              <li>Would someone choose it?</li>
+              <li>something they built themselves</li>
+              <li>feedback from real people</li>
+              <li>a clearer understanding of what worked</li>
+              <li>stronger confidence presenting and explaining their thinking</li>
             </ul>
-            <p>They leave with:</p>
-            <ul class="market-deep-plain-list">
-              <li>Something they built</li>
-              <li>Feedback from others</li>
-              <li>A clearer sense of what worked</li>
-              <li>More confidence explaining their thinking</li>
-            </ul>
-            <p>This is the final test of what they built.</p>
-            <p>It gives them a clearer way to improve.</p>
+            <p>Most importantly, they gain a practical sense of what makes something worth choosing.</p>
           </div>
           <figure class="market-deep-photo">
             <img src="assets/n-kid-7.jpg" alt="Students reflecting on what worked and what to improve" />
+          </figure>
+        </article>
+
+        <article class="market-deep-item">
+          <div class="market-deep-copy">
+            <h3 class="market-deep-item-title">Why This Matters</h3>
+            <p>Many programs stop at ideas.</p>
+            <p>This is where students see what happens next.</p>
+            <p>They learn how to test thinking, adapt, and improve&mdash;skills that carry far beyond the classroom.</p>
+          </div>
+          <figure class="market-deep-photo">
+            <img src="assets/n-kid-6.jpg" alt="Students testing and improving their ideas together" />
           </figure>
         </article>
       </div>
@@ -3381,6 +3395,12 @@ nav{
       document.addEventListener('click', function(event){
         var target = event.target.closest('a, button');
         if (!target){
+          return;
+        }
+        // Exclude interest form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* events
+        var interestForm = target.closest('form[action="apply-interest.php"]');
+        if (interestForm){
           return;
         }
         if (!(

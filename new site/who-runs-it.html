@@ -305,7 +305,7 @@
       justify-content: space-between;
       gap: 14px;
       min-height: var(--topbar-height);
-      padding: 10px var(--pad);
+      padding: 10px clamp(18px, 3.5vw, 34px);
       max-width: var(--max-wide);
       margin: 0 auto;
     }
@@ -442,9 +442,10 @@ nav{
       font-weight: 700;
       font-size: inherit;
       color: var(--ink);
-      margin: 0;
-      line-height: var(--lh-body);
-      text-align: left;
+      margin: 6px auto 0;
+      line-height: 1.2;
+      width: min(100%, 57.6rem);
+      text-align: center;
     }
     .hero-panel{
       background: #f5efe6;
@@ -692,23 +693,26 @@ nav{
     .instructors-card{
       grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
       gap: clamp(16px, 3vw, 28px);
-      align-items: center;
+      align-items: stretch;
     }
     .instructors-media{
-      aspect-ratio: 1 / 1;
+      aspect-ratio: auto;
       border-radius: 18px;
       border: 1px solid var(--line);
       overflow: hidden;
       background: #ffffff;
-      justify-self: center;
+      justify-self: stretch;
+      align-self: stretch;
       width: 100%;
+      height: 100%;
+      min-height: 0;
     }
     .instructors-media img{
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
-      transform: scaleX(-1);
+      object-position: center;
     }
     .stack-column{
       display:grid;
@@ -840,6 +844,13 @@ nav{
       text-align: center;
     }
 
+    @media (min-width: 981px){
+      .topbar nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-right: 0;
+      }
+    }
     @media (min-width: 981px){
       .menu-btn{ display:none; }
     }
@@ -1013,10 +1024,9 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -1026,9 +1036,8 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1046,7 +1055,7 @@ nav{
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A Toronto nonprofit product development camp that teaches financial literacy and design thinking.</div>
+          <div class="hero-sub">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
         </div>
       </div>
     </section>
@@ -1056,14 +1065,17 @@ nav{
           <div class="system-copy">
             <div class="section-title">
               <div class="eyebrow">The Money Club.Org</div>
-              <h2>A system that sustains itself</h2>
-              <p class="lede">The Money Club.Org is built to run on its own revenue.</p>
+              <h2>Transparent and accountable</h2>
+              <p class="lede">The Money Club is designed to operate the same way it teaches.</p>
             </div>
-            <p>No grants. No hidden funding.</p>
-            <p>Families pay for the program, and that money goes directly into running it.</p>
-            <p>We share how that works.</p>
-            <p>📖 Open-book financials &mdash; so students and families can see where the money goes.</p>
-            <p>This isn&rsquo;t theory. It&rsquo;s how the program operates.</p>
+            <p>Families pay for the program, and that revenue goes directly into running it:</p>
+            <ul>
+              <li>instructors</li>
+              <li>space</li>
+              <li>materials</li>
+              <li>program delivery</li>
+            </ul>
+            <p>We believe students should understand how systems actually work&mdash;including where money goes.</p>
           </div>
           <div class="system-art">
             <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel graphic" />
@@ -1072,18 +1084,82 @@ nav{
       </div>
     </section>
 
+    <section class="section instructors-mentors">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="eyebrow">Who Your Child Will Be Learning From</div>
+          <h2>University of Toronto Student Mentors</h2>
+        </div>
+        <div class="stack-card instructors-card">
+          <div class="instructors-media">
+            <img src="assets/vibe-coding-2.jpg" alt="University of Toronto student mentors guiding classroom work" />
+          </div>
+          <div class="instructors-body">
+            <p>At the center of the program is a cohort of paid University of Toronto students.</p>
+            <p>They are selected for their ability to:</p>
+            <ul>
+              <li>communicate clearly</li>
+              <li>think practically</li>
+              <li>work across business, technology, and problem-solving</li>
+            </ul>
+            <p>These mentors:</p>
+            <ul>
+              <li>lead workshops and small group sessions</li>
+              <li>help students build products, services, and simple apps</li>
+              <li>guide the use of AI tools for research and creation</li>
+              <li>support presentations and real-world project work</li>
+            </ul>
+            <p>They are close enough in age to be relatable&mdash;and experienced enough to guide students with structure and confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section architect-section">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="eyebrow">Who Designed the Program</div>
+          <h2>The Program Architect</h2>
+        </div>
+        <div class="stack-card architect-card">
+          <div class="architect-media">
+            <img src="assets/Jared-Profile.png" alt="Portrait of Jared Goldberg" />
+          </div>
+          <div class="architect-body">
+            <p>The Money Club.Org was designed and is overseen by Jared Goldberg, a product strategist and systems builder with 15+ years of experience.</p>
+            <p>His background includes work within Walmart, Loblaw, and Canadian Tire, as well as over a decade in China-based manufacturing environments where cost, quality, and execution are tightly connected.</p>
+            <p>The program is intentionally designed to reflect how real systems work:</p>
+            <ul>
+              <li>constraints</li>
+              <li>trade-offs</li>
+              <li>accountability</li>
+            </ul>
+            <p>Students are not just learning ideas&mdash;they are learning how decisions play out in practice.</p>
+            <div class="role-links">
+              <a data-cta-label="Learn more about the curriculum" class="btn secondary cta-standard" href="schedule-pricing.html">Learn more about the curriculum</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section operators">
       <div class="wrap">
         <div class="section-title">
-          <div class="eyebrow">Who Actually Runs the Program</div>
-          <h2>Student Leadership, Real Responsibility</h2>
+          <div class="eyebrow">Student Leadership</div>
+          <h2>Student Volunteers</h2>
         </div>
         <div class="stack-card ops-card">
           <div class="ops-body">
-            <p>The program is supported by student leaders Sarah Duong and Alex Goldberg (Humberside CI). They take on real responsibilities inside a structured, supervised system.</p>
-            <p>This includes:<br />Helping track program costs and budgets<br />Supporting instructor outreach<br />Assisting with operations and scheduling<br />Contributing to marketing and enrollment</p>
-            <p>During the summer, they help sessions run smoothly day-to-day. They are not running the program alone.</p>
-            <p>They are learning how a real system operates&mdash;with guidance and oversight.</p>
+            <p>In addition to mentors, Alex G. and Sarah D., senior high school students, support aspects of the program behind the scenes.</p>
+            <p>They help with:</p>
+            <ul>
+              <li>operations and scheduling</li>
+              <li>program coordination</li>
+              <li>basic budgeting exposure</li>
+              <li>marketing and outreach</li>
+            </ul>
+            <p>This gives them early exposure to how a real program operates&mdash;while remaining fully supervised.</p>
           </div>
           <div class="ops-media">
             <div class="ops-portrait">
@@ -1097,78 +1173,32 @@ nav{
       </div>
     </section>
 
-    <section class="section instructors-mentors">
-      <div class="wrap">
-        <div class="section-title">
-          <div class="eyebrow">Who Are the Instructors?</div>
-          <h2>Paid University Mentors</h2>
-        </div>
-        <div class="stack-card instructors-card">
-          <div class="instructors-media">
-            <img src="assets/teach-n.jpg" alt="University of Toronto instructor" />
-          </div>
-          <div class="instructors-body">
-            <p>University of Toronto students are hired and paid as instructors. They lead sessions, support student work, and help guide projects. All instruction happens within a structured, supervised program.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section architect-section">
-      <div class="wrap">
-        <div class="section-title">
-          <div class="eyebrow">Who Designed the Program?</div>
-          <h2>The Program Architect</h2>
-        </div>
-        <div class="stack-card architect-card">
-          <div class="architect-media">
-            <img src="assets/Jared-Profile.png" alt="Portrait of Jared Goldberg" />
-          </div>
-          <div class="architect-body">
-            <p>The Money Club.Org was designed and is overseen by Jared Goldberg. Jared is a product strategist and systems builder with 15+ years of experience.</p>
-            <p>He has worked with Walmart, Loblaw, and Canadian Tire, and spent over a decade in China-based manufacturing environments where cost, quality, and execution matter.</p>
-            <p>The program is designed to reflect how real systems work:<br />&bull; Constraints<br />&bull; Trade-offs<br />&bull; Accountability<br />&bull; Not just theory.</p>
-            <div class="role-links">
-              <a data-cta-label="Learn more about the curriculum" class="btn secondary cta-standard" href="schedule-pricing.html">Learn more about the curriculum</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section funding">
       <div class="wrap funding-grid">
         <div>
           <div class="section-title">
-            <div class="eyebrow">Why This Model Is Intentional</div>
-            <h2>Built to Sustain Itself</h2>
-            <p class="lede">The program is designed to stay small and focused.</p>
+            <div class="eyebrow">Why This Model Works</div>
+            <h2>Structured and Accountable</h2>
+            <p class="lede">The program is designed to stay small and intentional.</p>
           </div>
-          <p>That means:</p>
+          <p>That allows us to:</p>
           <ul>
-            <li>Instructors are paid</li>
-            <li>Cohorts stay small</li>
-            <li>Standards stay high</li>
-            <li>Students get real attention</li>
+            <li>hire and pay strong university mentors</li>
+            <li>keep cohort sizes small</li>
+            <li>maintain a high standard of instruction</li>
+            <li>give students real attention and support</li>
           </ul>
-          <p>Tuition keeps the program accountable and independent.</p>
         </div>
         <div class="stack-column">
           <div class="stack-card">
             <h3>Where This Leads</h3>
             <p>Today, the program runs as:</p>
             <ul>
-              <li>Small local cohorts</li>
-              <li>Self-funded programs</li>
-              <li>Carefully managed sessions</li>
+              <li>small, local cohorts</li>
+              <li>self-funded sessions</li>
+              <li>carefully managed learning environments</li>
             </ul>
-            <p>Over time, this may expand through:</p>
-            <ul>
-              <li>Partnerships</li>
-              <li>Sponsorships</li>
-              <li>Grants</li>
-            </ul>
-            <p>But growth comes after the program works&mdash;not before.</p>
+            <p>Over time, we aim to grow this into a broader platform that supports youth-led ideas and local projects across Toronto.</p>
             <div class="role-links">
               <a data-cta-label="Interested in supporting our mission?" class="btn purple cta-standard" href="support-our-mission.html">Interested in supporting our mission?</a>
             </div>
@@ -1180,29 +1210,24 @@ nav{
     <section class="section">
       <div class="wrap">
         <div class="section-title">
-          <div class="eyebrow">Everything parents need to know</div>
-          <h2>Quick Facts</h2>
+          <div class="eyebrow">Why Parents Choose The Money Club.Org</div>
+          <h2>The people in the room</h2>
         </div>
         <div class="facts-grid">
           <div class="facts-card">
-            <h3>Program essentials</h3>
             <ul>
-              <li>Ages: 10–16</li>
-              <li>Format: Summer day program</li>
-              <li>Duration: 4 weeks</li>
-              <li>When: Weekdays 9:30am-3:30pm, July & August</li>
-              <li>Cost: $1,500 per student</li>
-              <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
-              <li>Materials: Included (including student project inputs)</li>
-              <li>Experience: None required</li>
+              <li>University of Toronto mentors who can guide, challenge, and support</li>
+              <li>A structured program with clear outcomes</li>
+              <li>A practical approach to financial literacy and decision-making</li>
+              <li>A learning environment that balances independence with supervision</li>
             </ul>
           </div>
           <div class="facts-card">
             <div class="role-media">
-              <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+              <img src="assets/n-kid-6.jpg" alt="Students collaborating during a Money Club session" />
             </div>
             <h3>Ready for details?</h3>
-            <p class="lede">See exact dates, tuition, and cohort size. Everything is transparent before you commit.</p>
+            <p class="lede">See exact dates, tuition, and cohort size before you commit.</p>
             <a data-cta-label="View pricing" class="btn secondary gloss cta-standard" href="pricing.html">View Pricing</a>
           </div>
         </div>
@@ -1215,7 +1240,7 @@ nav{
     <div class="inner">
       <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A Toronto nonprofit product development camp that teaches financial literacy and design thinking.</div>
+      <div class="footer-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
     </div>
   </footer>
 
@@ -1388,6 +1413,12 @@ nav{
       document.addEventListener('click', function(event){
         var target = event.target.closest('a, button');
         if (!target){
+          return;
+        }
+        // Exclude interest form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* events
+        var interestForm = target.closest('form[action="apply-interest.php"]');
+        if (interestForm){
           return;
         }
         if (!(

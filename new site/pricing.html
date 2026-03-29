@@ -592,9 +592,10 @@
       font-weight: 700;
       font-size: inherit;
       color: var(--ink);
-      margin: 0;
-      line-height: 1.05;
-      text-align: left;
+      margin: 6px auto 0;
+      line-height: 1.2;
+      width: min(100%, 57.6rem);
+      text-align: center;
     }
     .hero-image{
       width: 100%;
@@ -2686,10 +2687,9 @@
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -2699,9 +2699,8 @@
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -2719,7 +2718,7 @@
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A Toronto nonprofit product development camp that teaches financial literacy and design thinking.</div>
+          <div class="hero-sub">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
         </div>
 
         <div class="hero-image banner">
@@ -3324,6 +3323,12 @@
       document.addEventListener('click', function(event){
         var target = event.target.closest('a, button');
         if (!target){
+          return;
+        }
+        // Exclude interest form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* events
+        var interestForm = target.closest('form[action="apply-interest.php"]');
+        if (interestForm){
           return;
         }
         if (!(

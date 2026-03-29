@@ -338,9 +338,10 @@ nav{
       font-weight: 700;
       font-size: inherit;
       color: var(--ink);
-      margin: 2px 0 0;
-      line-height: 1.05;
-      text-align: left;
+      margin: 6px auto 0;
+      line-height: 1.2;
+      width: min(100%, 57.6rem);
+      text-align: center;
     }
     .hero-copy{
       font-family: var(--font-display);
@@ -1043,6 +1044,13 @@ nav{
       color: #ffffff;
     }
     @media (min-width: 981px){
+      .topbar nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-right: 0;
+      }
+    }
+    @media (min-width: 981px){
       .menu-btn{ display:none; }
     }
 
@@ -1193,10 +1201,9 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -1206,9 +1213,8 @@ nav{
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1241,7 +1247,7 @@ nav{
             <p class="deploy-copy">As a Money Club instructor, your job is <strong>not to babysit</strong> and <strong>not to invent curriculum</strong>.</p>
             <p class="deploy-copy">Your role is to:</p>
             <ul class="quickfacts-list">
-              <li>Present materials based on the cirriculum</li>
+              <li>Present materials based on the curriculum</li>
               <li>Guide students as they work through real projects</li>
               <li>Ask good questions</li>
               <li>Stress-test ideas</li>
@@ -1408,7 +1414,7 @@ nav{
     <div class="inner">
       <a href="index.html" aria-label="The Money Club.Org home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A Toronto nonprofit product development camp that teaches financial literacy and design thinking.</div>
+      <div class="footer-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
     </div>
   </footer>
 
@@ -1581,6 +1587,12 @@ nav{
       document.addEventListener('click', function(event){
         var target = event.target.closest('a, button');
         if (!target){
+          return;
+        }
+        // Exclude interest form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* events
+        var interestForm = target.closest('form[action="apply-interest.php"]');
+        if (interestForm){
           return;
         }
         if (!(

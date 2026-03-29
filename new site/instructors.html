@@ -343,9 +343,10 @@
       font-weight: 700;
       font-size: inherit;
       color: var(--ink);
-      margin: 2px 0 0;
-      line-height: 1.05;
-      text-align: left;
+      margin: 6px auto 0;
+      line-height: 1.2;
+      width: min(100%, 57.6rem);
+      text-align: center;
     }
     .hero-image{
       width: 100%;
@@ -425,16 +426,30 @@
     .section-media{
       display:grid;
       gap: 12px;
-      align-items: start;
+      align-items: stretch;
+      grid-template-rows: minmax(0, 1fr) auto;
+      height: 100%;
     }
-    .section-media .btn{ width: 100%; }
+    .section-media .section-image{
+      height: 100%;
+      min-height: 0;
+    }
+    .section-media .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 22px 24px;
+      border-radius: 16px;
+    }
 
     .cta-stack{
       display:grid;
-      gap: 12px;
-      width: min(100%, 340px);
-      justify-self: end;
-      align-content: start;
+      gap: 14px;
+      width: 100%;
+      align-items: stretch;
+      justify-self: stretch;
     }
     .cta-stack .btn{
       width: 100%;
@@ -442,7 +457,7 @@
       font-size: var(--btn-size-lg);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      padding: 18px 22px;
+      padding: 22px 22px;
       border-radius: 16px;
     }
 
@@ -481,10 +496,11 @@
       font-size: var(--btn-size-lg);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      padding: 18px 22px;
+      padding: 22px 24px;
       border-radius: 16px;
+      min-height: 104px;
       white-space: normal;
-      line-height: 0.9;
+      line-height: 1;
       text-align: center;
     }
     .cta-note{
@@ -498,11 +514,13 @@
     }
     .cta-block h3{ line-height: 1.05; }
     .split.sign-up{
-      align-items: start;
+      align-items: stretch;
     }
     .split.sign-up .section-image.square{
-      max-width: 520px;
-      justify-self: center;
+      max-width: none;
+      justify-self: stretch;
+      aspect-ratio: auto;
+      height: 100%;
     }
     .split.sign-up .section-copy{
       max-width: 520px;
@@ -597,6 +615,13 @@
     }
 
     @media (min-width: 981px){
+      .topbar nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-right: 0;
+      }
+    }
+    @media (min-width: 981px){
       .menu-btn{ display:none; }
     }
 
@@ -627,7 +652,7 @@
       .split,
       .split.reverse{ grid-template-columns: 1fr; }
       .cta-row{ grid-template-columns: 1fr; }
-      .cta-stack{ width: min(100%, 360px); justify-self: center; }
+      .cta-stack{ width: 100%; justify-self: stretch; }
 
       /* Mobile standards */
       .hero-logo{ display: none !important; }
@@ -643,7 +668,7 @@
       .hero-sub{ font-size: inherit; line-height: 1.05; }
       .btn{
         font-family: var(--font-display);
-        font-size: 35.04px;
+        font-size: clamp(24px, 6.6vw, 32px);
         line-height: 0.9;
         text-transform: uppercase;
         letter-spacing: var(--tracking-display);
@@ -652,12 +677,18 @@
         text-align: center;
       }
       .topbar .btn:not(.menu-cta){
+        display: inline-flex;
         font-family: var(--font-body);
-        font-size: 26.5px;
+        font-size: 16px;
+        line-height: 1.05;
+        padding: 10px 14px;
+        min-height: 44px;
+        border-radius: 999px;
         margin-left: 0;
         margin-right: 0;
         text-transform: none;
         letter-spacing: 0;
+        white-space: nowrap;
       }
       .hero-top{
         flex-direction: column;
@@ -681,6 +712,19 @@
         aspect-ratio: 1 / 1;
         object-fit: cover;
         height: auto;
+      }
+      .section-media{
+        grid-template-rows: auto;
+        height: auto;
+      }
+      .split.sign-up{
+        align-items: start;
+      }
+      .split.sign-up .section-image.square{
+        aspect-ratio: 1 / 1;
+        height: auto;
+        max-width: 520px;
+        justify-self: center;
       }
       footer.site-footer .inner{ text-align: center; }
       footer.site-footer .footer-logo{ width: 72px; height: 72px; }
@@ -731,10 +775,9 @@
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -744,9 +787,8 @@
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
-        <a href="who-runs-it.html">Transparency</a>
+        <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
-        <a href="/instructors.html">We're Hiring</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -764,9 +806,10 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <p>The Money Club.Org is a paid summer opportunity for university students to run a real, community-based entrepreneurship program.</p>
-            <p>You'll help young people build and sell real products, manage real budgets, and make real decisions while gaining hands-on experience in economics, public policy, education, and social impact.</p>
-            <p>This isn't tutoring and it's not volunteering. It's operational leadership in a supervised, closed-loop system with pay, responsibility, and measurable outcomes.</p>
+            <p>The Money Club.Org is a paid summer opportunity for University of Toronto students to help run a real, community-based product and entrepreneurship program based at the UTSU Student Commons.</p>
+            <p>You'll help students build products, services, and simple apps, use AI to test ideas, and understand how money, pricing, and decisions actually work.</p>
+            <p>This isn't tutoring and it's not volunteering.</p>
+            <p>It's a hands-on, public-facing role where you help operate a live program with real responsibility, real outcomes, and a clear system behind it.</p>
           </div>
           <div class="cta-stack">
             <a data-cta-label="Learn more" class="btn purple cta-standard" href="instructors-learn-more.html">Learn More</a>
@@ -785,19 +828,24 @@
       <div class="section-content">
         <div class="split reverse">
           <div class="section-copy">
-            <div>This opportunity is well-suited for students studying or interested in:</div>
+            <p>This opportunity is well-suited for students studying or interested in:</p>
             <ul class="bullet-list">
-              <li>Economics</li>
-              <li>Public policy</li>
-              <li>Political science</li>
-              <li>Non-profit management</li>
-              <li>Education</li>
-              <li>Urban studies</li>
-              <li>Sociology</li>
               <li>Business, marketing, or entrepreneurship</li>
+              <li>Economics or finance</li>
+              <li>Public policy, sociology, or urban studies</li>
+              <li>Education or nonprofit work</li>
               <li>Design, innovation, or systems thinking</li>
+              <li>Technology, AI, or product development</li>
             </ul>
-            <div class="note">No prior teaching experience required - training and structure are provided.</div>
+            <p>You don't need to fit one path.</p>
+            <p>We're looking for students with range&mdash;people who are comfortable combining:</p>
+            <ul class="bullet-list">
+              <li>building</li>
+              <li>communication</li>
+              <li>problem-solving</li>
+              <li>and working with others in real time</li>
+            </ul>
+            <div class="note">No prior teaching experience required. Training and structure are provided, including a paid onboarding week.</div>
           </div>
           <div class="section-media">
             <div class="section-image">
@@ -819,11 +867,12 @@
         <div class="split">
           <div class="section-copy">
             <ul class="benefit-list">
-              <li><strong>You get paid</strong>This is a paid summer role, not a volunteer position.</li>
-              <li><strong>You run something real</strong>You're not analyzing case studies -- you're operating a live program with real budgets, timelines, and outcomes.</li>
-              <li><strong>You build credible experience</strong>Leadership, facilitation, systems thinking, and community impact - all in one role.</li>
-              <li><strong>You give back without burning out</strong>Clear structure, clear expectations, and real support.</li>
-              <li><strong>You help build local capacity</strong>You're not just teaching - you're helping seed small, real-world business thinking in your community.</li>
+              <li><strong>You get paid</strong>$22/hour + 4% holiday pay, with a full week of paid onboarding and weekday program hours.</li>
+              <li><strong>You run something real</strong>This is not case work or observation. You help operate a live program where students build, test, and present ideas with real constraints and outcomes.</li>
+              <li><strong>You build credible experience</strong>Work across business, AI, media, and live program delivery. You'll lead discussions, support product building, and participate in public-facing sessions with families.</li>
+              <li><strong>You develop real range</strong>Some days you're mentoring. Some days you're building. Some days you're presenting. All of it translates.</li>
+              <li><strong>You gain visibility</strong>You may take part in video, webinars, and parent-facing conversations. You're not behind the scenes&mdash;you're part of what makes the program credible.</li>
+              <li><strong>You build something that continues</strong>Strong mentors are invited back. The goal is not to reset each year, but to build a returning cohort that improves and grows the program over time.</li>
             </ul>
           </div>
           <div class="section-image">
@@ -848,7 +897,7 @@
               </div>
               <div class="section-copy cta-block">
                 <h3>Run something real</h3>
-                <p class="cta-note">You're not analyzing case studies -- you're operating a live program with real budgets, timelines, and outcomes.</p>
+                <p class="cta-note">You're not analyzing case studies. You're helping run a system where ideas become products, products meet decisions, and decisions create real signals.</p>
                 <div class="cta-row">
                   <a data-cta-label="Share the opportunity" class="btn purple share-opportunity cta-standard" href="mailto:?subject=Share%20The%20Opportunity&body=Check%20out%20this%20opportunity%20at%20The%20Money%20Club:%20">Share the Opportunity</a>
                   <a data-cta-label="Apply today" class="btn teal cta-standard" href="instructor-apply.html">Apply Today</a>
@@ -865,7 +914,7 @@
     <div class="inner">
       <a href="index.html" aria-label="The Money Club.Org home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
       <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A Toronto nonprofit product development camp that teaches financial literacy and design thinking.</div>
+      <div class="footer-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
     </div>
   </footer>
 
@@ -1055,6 +1104,12 @@
       document.addEventListener('click', function(event){
         var target = event.target.closest('a, button');
         if (!target){
+          return;
+        }
+        // Exclude interest form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* events
+        var interestForm = target.closest('form[action="apply-interest.php"]');
+        if (interestForm){
           return;
         }
         if (!(
