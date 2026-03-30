@@ -2656,6 +2656,73 @@
       .reservation-steps .payment-option{ padding: 14px; }
     }
 
+    #choose-your-adventure{
+      display: none;
+    }
+    #choose-your-adventure .section-banner h2{
+      text-align: center;
+    }
+    #choose-your-adventure .section-content{
+      padding-top: 24px;
+      padding-bottom: 14px;
+    }
+    #choose-your-adventure .adventure-grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    #choose-your-adventure .adventure-grid .adventure-link{
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      text-align: center;
+      padding: 22px 16px;
+      border-top: 1px solid var(--line);
+      background: transparent;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:first-child{
+      border-top: 0;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link h3{
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 2.6vw, 36px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.95;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:hover h3,
+    #choose-your-adventure .adventure-grid .adventure-link:focus-visible h3{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child{
+      background: var(--teal);
+      color: #ffffff;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child h3{
+      color: #ffffff;
+    }
+    @media (max-width: 980px){
+      #choose-your-adventure{
+        display: block;
+      }
+      #choose-your-adventure .adventure-grid{
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      #choose-your-adventure .adventure-grid .adventure-link h3{
+        font-size: clamp(24px, 7vw, 34px);
+      }
+    }
+    @media (max-width: 768px){
+      main > #choose-your-adventure{ order: 110; }
+    }
+
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
   <!-- Google Tag Manager -->
@@ -2684,11 +2751,11 @@
       <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
+        <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
         <a href="who-runs-it.html">Who Runs It</a>
-        <a href="/article-best-summer-camps.html">Parent Resources</a>
+        <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
@@ -2696,8 +2763,8 @@
       </div>
 
       <nav aria-label="Primary">
+        <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
@@ -2718,7 +2785,7 @@
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
+          <div class="hero-sub mobile-hide-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
         </div>
 
         <div class="hero-image banner">
@@ -2787,7 +2854,7 @@
 
     <section class="section-banner full-bleed purple heading-white quickfacts-section" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn How It Works</h2>
+        <h2 id="join-the-interest-list">Free Info Session</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
@@ -2827,6 +2894,24 @@
         </div>
       </div>
     </section>
+  
+    <section class="section" id="choose-your-adventure">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>Choose Your Adventure</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="adventure-grid">
+          <a class="adventure-link" data-cta-label="Curriculum" href="curriculum-details.html"><h3>Curriculum</h3></a>
+          <a class="adventure-link" data-cta-label="Build &amp; Sell" href="how-it-works.html"><h3>Build &amp; Sell</h3></a>
+          <a class="adventure-link" data-cta-label="Who Runs It" href="who-runs-it.html"><h3>Who Runs It</h3></a>
+          <a class="adventure-link" data-cta-label="FAQs" href="faq.html"><h3>FAQs</h3></a>
+          <a class="adventure-link" data-cta-label="Reserve a Spot" href="reserve-a-spot.html"><h3>Reserve a Spot</h3></a>
+        </div>
+      </div>
+    </section>
+
   </main>
   <script>
     (function(){

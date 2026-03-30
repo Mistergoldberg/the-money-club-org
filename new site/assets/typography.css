@@ -55,6 +55,16 @@ h1{
 }
 
 @media (max-width: 980px){
+
+  .mobile-hide-tagline{
+    display: none !important;
+  }
+  .field-row.two-col{
+    grid-template-columns: 1fr !important;
+  }
+  .field-row.three-col{
+    grid-template-columns: 1fr !important;
+  }
   .hero-title .org{
     font-size: 0.45em;
   }

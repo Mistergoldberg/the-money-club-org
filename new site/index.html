@@ -619,8 +619,12 @@
     /* Sections */
     .section{ margin-top: var(--space-6); }
     #how-it-works,
-    #radical-transparency{
+    #radical-transparency,
+    #choose-your-adventure{
       display: none;
+    }
+    .reserve-heading-suffix{
+      display: inline;
     }
     #reserve.section-banner{ margin-top: var(--space-6); }
     .section-banner{
@@ -1744,6 +1748,9 @@
     .interest-register-link:focus-visible{
       color: #0f47dd;
     }
+    .mobile-inline-interest{
+      display: none;
+    }
     .confirmation-grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2066,6 +2073,54 @@
       white-space: normal;
       line-height: 1;
       text-align: center;
+    }
+    #choose-your-adventure .section-banner h2{
+      text-align: center;
+    }
+    #choose-your-adventure .section-content{
+      padding-top: 24px;
+      padding-bottom: 14px;
+    }
+    #choose-your-adventure .adventure-grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    #choose-your-adventure .adventure-grid .adventure-link{
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      text-align: center;
+      padding: 22px 16px;
+      border-top: 1px solid var(--line);
+      background: transparent;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:first-child{
+      border-top: 0;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link h3{
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 2.6vw, 36px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.95;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:hover h3,
+    #choose-your-adventure .adventure-grid .adventure-link:focus-visible h3{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child{
+      background: var(--teal);
+      color: #ffffff;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child h3{
+      color: #ffffff;
     }
     .btn.cta-standard{
       width: 100%;
@@ -2514,7 +2569,11 @@
       #outcomes .outcome-row{
         grid-template-columns: 1fr;
         gap: 14px;
-        padding: 16px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
       }
       #outcomes .outcome-title{
         font-size: clamp(24px, 3vw, 34px);
@@ -2737,6 +2796,7 @@
       }
       main > .hero{ order: 10; }
       main > #built-like-a-business{ order: 20; }
+      main > .mobile-inline-interest{ order: 24; }
       main > #outcomes{ order: 25; }
       main > #what-is-this{ order: 30; }
       main > #how-it-works{ order: 40; }
@@ -2746,6 +2806,7 @@
       main > #camp-guides{ order: 80; }
       main > #reserve.section-banner{ order: 90; }
       main > #reserve-a-spot{ order: 100; }
+      main > #choose-your-adventure{ order: 110; }
 
       .section{
         margin-top: 40px;
@@ -2997,13 +3058,72 @@
       .reservation-steps .payment-body{ font-size: 16px; line-height: 1.2; }
       .reservation-steps .payment-note{ font-size: 16px; line-height: 1.2; }
       .reservation-steps .payment-option{ padding: 14px; }
+      .mobile-inline-interest{ display: block; }
     }
 
     @media (max-width: 980px){
       /* Mobile hierarchy: primary CTA > secondary CTA > next section title */
       #built-like-a-business .program-summary-cta-group{
-        gap: 24px;
-        padding-top: 14px;
+        display: none;
+      }
+      .mobile-inline-interest{
+        margin-top: 14px;
+        background: #efefef;
+        border: 1px solid #cfc9c0;
+        border-radius: 0;
+        overflow: hidden;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+      }
+      .mobile-inline-interest-band{
+        background: var(--purple);
+        color: #ffffff;
+        padding: 16px 12px 14px;
+      }
+      .mobile-inline-interest-band h2{
+        margin: 0;
+        color: #ffffff;
+        text-align: center;
+        font-size: clamp(52px, 12vw, 78px);
+        line-height: 0.82;
+      }
+      .mobile-inline-interest .reservation-card{
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        background: #efefef;
+        box-shadow: none;
+        padding: 18px;
+        gap: 14px;
+      }
+      .mobile-inline-interest .interest-subhead{
+        text-align: center;
+      }
+      .mobile-inline-interest .interest-helper{
+        text-align: center;
+      }
+      .mobile-inline-interest .field label{
+        text-align: center;
+      }
+      .mobile-inline-interest .form-grid{
+        max-width: none;
+      }
+      .mobile-inline-interest .field-row.two-col{
+        grid-template-columns: 1fr;
+      }
+      #choose-your-adventure{
+        display: block;
+      }
+      #choose-your-adventure .adventure-grid{
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      #choose-your-adventure .adventure-grid .adventure-link h3{
+        font-size: clamp(24px, 7vw, 34px);
+      }
+      .reserve-heading-suffix{
+        display: none;
       }
       #built-like-a-business .program-summary-cta-group .cta-fill{
         min-height: 74px;
@@ -3055,11 +3175,11 @@
       <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
+        <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
         <a href="who-runs-it.html">Who Runs It</a>
-        <a href="/article-best-summer-camps.html">Parent Resources</a>
+        <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
@@ -3067,8 +3187,8 @@
       </div>
 
       <nav aria-label="Primary">
+        <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
@@ -3144,6 +3264,41 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="mobile-inline-interest" data-cta-location="reserve-a-spot-mobile">
+      <div class="mobile-inline-interest-band">
+        <h2>Free Info Session</h2>
+      </div>
+      <div class="reservation-card">
+        <p class="interest-subhead">📅 April 18 • Live video • 30 minutes</p>
+        <p class="interest-helper">We&apos;ll walk through the program and answer questions. Save your spot and we&apos;ll send the link.</p>
+        <div class="form-success" id="form-success-mobile" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
+<div class="form-loading" role="status" aria-live="polite">
+  <div class="spinner" aria-hidden="true"></div>
+  <div class="loading-text">Processing…</div>
+</div>
+
+        <form class="form-grid" action="apply-interest.php" method="post" novalidate>
+          <input type="hidden" name="return-to" value="index.html" />
+          <input type="hidden" name="return-error" value="index.html" />
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="parent-name-mobile">Parent / Guardian Name</label>
+              <input id="parent-name-mobile" name="parent-name" data-next="parent-email-mobile" type="text" autocomplete="name" required />
+              <small class="field-error">Parent/guardian name is required.</small>
+            </div>
+            <div class="field">
+              <label for="parent-email-mobile">Email Address</label>
+              <input id="parent-email-mobile" name="parent-email" type="email" autocomplete="email" required />
+              <small class="field-error">Enter a valid email address.</small>
+            </div>
+          </div>
+          <div class="interest-submit-wrap">
+            <button class="btn teal gloss cta-standard interest-submit" type="submit" data-cta-label="Submit">Submit</button>
+          </div>
+        </form>
       </div>
     </section>
 
@@ -3287,9 +3442,26 @@
       </div>
     </section>
 
+    <section class="section" id="choose-your-adventure">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>Choose Your Adventure</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="adventure-grid">
+          <a class="adventure-link" data-cta-label="Curriculum" href="curriculum-details.html"><h3>Curriculum</h3></a>
+          <a class="adventure-link" data-cta-label="Build &amp; Sell" href="how-it-works.html"><h3>Build &amp; Sell</h3></a>
+          <a class="adventure-link" data-cta-label="Who Runs It" href="who-runs-it.html"><h3>Who Runs It</h3></a>
+          <a class="adventure-link" data-cta-label="FAQs" href="faq.html"><h3>FAQs</h3></a>
+          <a class="adventure-link" data-cta-label="Reserve a Spot" href="reserve-a-spot.html"><h3>Reserve a Spot</h3></a>
+        </div>
+      </div>
+    </section>
+
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn How It Works</h2>
+        <h2 id="join-the-interest-list">Free Info Session</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
@@ -3449,10 +3621,15 @@
       });
 
       var params = new URLSearchParams(window.location.search);
-      var success = document.getElementById('form-success');
-      if (success && params.get('status') === 'sent') {
-        success.classList.add('is-visible');
-        var successCard = success.closest('.reservation-card');
+      var successMessages = document.querySelectorAll('.form-success');
+      if (successMessages.length && params.get('status') === 'sent') {
+        successMessages.forEach(function(success){
+          success.classList.add('is-visible');
+        });
+        var successTarget = Array.prototype.find.call(successMessages, function(success){
+          return !!success.offsetParent;
+        }) || successMessages[0];
+        var successCard = successTarget.closest('.reservation-card');
         if (successCard) {
           successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
@@ -4103,8 +4280,8 @@
     window.dataLayer = window.dataLayer || [];
 
     (function(){
-      var interestForm = document.querySelector('form[action="apply-interest.php"]');
-      if (!interestForm){ return; }
+      var interestForms = document.querySelectorAll('form[action="apply-interest.php"]');
+      if (!interestForms.length){ return; }
 
       function fireInterestFormStart(){
         if (window.__tmcInterestFormStarted){ return; }
@@ -4141,31 +4318,33 @@
         });
       }
 
-      interestForm.addEventListener('focusin', function(e){
-        var target = e.target;
-        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
-        fireInterestFormStart();
-      }, true);
+      interestForms.forEach(function(interestForm){
+        interestForm.addEventListener('focusin', function(e){
+          var target = e.target;
+          if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
+          fireInterestFormStart();
+        }, true);
 
-      interestForm.addEventListener('input', function(e){
-        var target = e.target;
-        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
-        fireInterestFormStart();
-      }, true);
+        interestForm.addEventListener('input', function(e){
+          var target = e.target;
+          if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
+          fireInterestFormStart();
+        }, true);
 
-      interestForm.addEventListener('submit', function(e){
-        if (!interestForm.checkValidity()){
-          var firstInvalid = interestForm.querySelector(':invalid');
+        interestForm.addEventListener('submit', function(){
+          if (!interestForm.checkValidity()){
+            var firstInvalid = interestForm.querySelector(':invalid');
 
-          pushInterestFormError(
-            firstInvalid ? firstInvalid.name : 'unknown',
-            firstInvalid ? firstInvalid.validationMessage : 'Validation error'
-          );
+            pushInterestFormError(
+              firstInvalid ? firstInvalid.name : 'unknown',
+              firstInvalid ? firstInvalid.validationMessage : 'Validation error'
+            );
 
-          return;
-        }
+            return;
+          }
 
-        pushInterestFormSubmit();
+          pushInterestFormSubmit();
+        });
       });
     })();
   </script>

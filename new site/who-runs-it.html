@@ -714,6 +714,15 @@ nav{
       object-fit: cover;
       object-position: center;
     }
+    .instructors-mobile-hero{
+      display: none;
+    }
+    .instructors-mobile-hero img{
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
     .stack-column{
       display:grid;
       gap: 16px;
@@ -894,18 +903,49 @@ nav{
       .role-card.feature{ grid-template-columns: 1fr; }
       .ops-card{ grid-template-columns: 1fr; }
       .instructors-card{ grid-template-columns: 1fr; }
-      .instructors-media{ max-width: 160px; }
+      .instructors-mobile-hero{
+        display: block;
+        width: calc(100% + 40px);
+        margin: 0 -20px 16px;
+        overflow: hidden;
+      }
+      .instructors-mobile-hero img{
+        min-height: 220px;
+      }
+      .instructors-media{
+        display: none;
+      }
       .architect-card{ grid-template-columns: 1fr; }
+      .architect-media{
+        width: 140px;
+        max-width: 140px;
+        margin: 0 auto;
+      }
       .funding-grid{ grid-template-columns: 1fr; }
       .facts-grid{ grid-template-columns: 1fr; }
       .stack-row{ grid-template-columns: 1fr; }
+      .stack-card,
+      .facts-card,
+      .stack-item{
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+      }
+      .facts-grid .facts-card:last-child{
+        display: none;
+      }
 
       .ops-media{
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+        gap: 12px;
+        max-width: none;
+        justify-self: center;
       }
       .ops-media .ops-portrait{
         max-width: 140px;
+        width: 140px;
         margin: 0 auto;
       }
 
@@ -921,7 +961,11 @@ nav{
       h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
-      .hero-sub{ font-size: inherit; line-height: 1.05; }
+      .hero-sub{
+        display: none;
+        font-size: inherit;
+        line-height: 1.05;
+      }
       .btn{
         font-family: var(--font-display);
         font-size: 35.04px;
@@ -972,6 +1016,9 @@ nav{
         aspect-ratio: 1 / 1;
         object-fit: cover;
       }
+      #choose-your-adventure .section-content{
+        background: #edf3f6;
+      }
       footer.site-footer .inner{ text-align: center; }
       footer.site-footer .footer-logo{ width: 72px; height: 72px; }
       footer.site-footer .footer-title,
@@ -992,6 +1039,73 @@ nav{
 
       .topbar .btn{ display: none; }
     }
+    #choose-your-adventure{
+      display: none;
+    }
+    #choose-your-adventure .section-banner h2{
+      text-align: center;
+    }
+    #choose-your-adventure .section-content{
+      padding-top: 24px;
+      padding-bottom: 14px;
+    }
+    #choose-your-adventure .adventure-grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    #choose-your-adventure .adventure-grid .adventure-link{
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      text-align: center;
+      padding: 22px 16px;
+      border-top: 1px solid var(--line);
+      background: transparent;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:first-child{
+      border-top: 0;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link h3{
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 2.6vw, 36px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.95;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:hover h3,
+    #choose-your-adventure .adventure-grid .adventure-link:focus-visible h3{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child{
+      background: var(--teal);
+      color: #ffffff;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child h3{
+      color: #ffffff;
+    }
+    @media (max-width: 980px){
+      #choose-your-adventure{
+        display: block;
+      }
+      #choose-your-adventure .adventure-grid{
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      #choose-your-adventure .adventure-grid .adventure-link h3{
+        font-size: clamp(24px, 7vw, 34px);
+      }
+    }
+    @media (max-width: 768px){
+      main > #choose-your-adventure{ order: 110; }
+    }
+
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
   <!-- Google Tag Manager -->
@@ -1021,11 +1135,11 @@ nav{
       <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
+        <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
         <a href="who-runs-it.html">Who Runs It</a>
-        <a href="/article-best-summer-camps.html">Parent Resources</a>
+        <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
@@ -1033,8 +1147,8 @@ nav{
       </div>
 
       <nav aria-label="Primary">
+        <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Pricing</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
@@ -1055,44 +1169,25 @@ nav{
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
+          <div class="hero-sub mobile-hide-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
         </div>
       </div>
     </section>
-    <section class="section system">
-      <div class="wrap">
-        <div class="system-grid">
-          <div class="system-copy">
-            <div class="section-title">
-              <div class="eyebrow">The Money Club.Org</div>
-              <h2>Transparent and accountable</h2>
-              <p class="lede">The Money Club.Org is designed to operate the same way it teaches.</p>
-            </div>
-            <p>Families pay for the program, and that revenue goes directly into running it:</p>
-            <ul>
-              <li>instructors</li>
-              <li>space</li>
-              <li>materials</li>
-              <li>program delivery</li>
-            </ul>
-            <p>We believe students should understand how systems actually work&mdash;including where money goes.</p>
-          </div>
-          <div class="system-art">
-            <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel graphic" />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section instructors-mentors">
       <div class="wrap">
+        <div class="instructors-mobile-hero">
+          <img src="assets/vibe-comding-6.jpg" alt="University of Toronto student mentors guiding classroom work" />
+        </div>
         <div class="section-title">
           <div class="eyebrow">Who Your Child Will Be Learning From</div>
           <h2>University of Toronto Student Mentors</h2>
         </div>
         <div class="stack-card instructors-card">
           <div class="instructors-media">
-            <img src="assets/vibe-coding-2.jpg" alt="University of Toronto student mentors guiding classroom work" />
+            <picture>
+              <source media="(max-width: 980px)" srcset="assets/vibe-comding-6.jpg" />
+              <img src="assets/vibe-coding-2.jpg" alt="University of Toronto student mentors guiding classroom work" />
+            </picture>
           </div>
           <div class="instructors-body">
             <p>At the center of the program is a cohort of paid University of Toronto students.</p>
@@ -1135,9 +1230,6 @@ nav{
               <li>accountability</li>
             </ul>
             <p>Students are not just learning ideas&mdash;they are learning how decisions play out in practice.</p>
-            <div class="role-links">
-              <a data-cta-label="Learn more about the curriculum" class="btn secondary cta-standard" href="schedule-pricing.html">Learn more about the curriculum</a>
-            </div>
           </div>
         </div>
       </div>
@@ -1173,40 +1265,6 @@ nav{
       </div>
     </section>
 
-    <section class="section funding">
-      <div class="wrap funding-grid">
-        <div>
-          <div class="section-title">
-            <div class="eyebrow">Why This Model Works</div>
-            <h2>Structured and Accountable</h2>
-            <p class="lede">The program is designed to stay small and intentional.</p>
-          </div>
-          <p>That allows us to:</p>
-          <ul>
-            <li>hire and pay strong university mentors</li>
-            <li>keep cohort sizes small</li>
-            <li>maintain a high standard of instruction</li>
-            <li>give students real attention and support</li>
-          </ul>
-        </div>
-        <div class="stack-column">
-          <div class="stack-card">
-            <h3>Where This Leads</h3>
-            <p>Today, the program runs as:</p>
-            <ul>
-              <li>small, local cohorts</li>
-              <li>self-funded sessions</li>
-              <li>carefully managed learning environments</li>
-            </ul>
-            <p>Over time, we aim to grow this into a broader platform that supports youth-led ideas and local projects across Toronto.</p>
-            <div class="role-links">
-              <a data-cta-label="Interested in supporting our mission?" class="btn purple cta-standard" href="support-our-mission.html">Interested in supporting our mission?</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section">
       <div class="wrap">
         <div class="section-title">
@@ -1228,22 +1286,31 @@ nav{
             </div>
             <h3>Ready for details?</h3>
             <p class="lede">See exact dates, tuition, and cohort size before you commit.</p>
-            <a data-cta-label="View pricing" class="btn secondary gloss cta-standard" href="pricing.html">View Pricing</a>
+            <a data-cta-label="Learn more about the curriculum" class="btn secondary gloss cta-standard" href="curriculum-details.html">Learn more about the curriculum</a>
           </div>
         </div>
 
       </div>
     </section>
+  
+    <section class="section" id="choose-your-adventure">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>Choose Your Adventure</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="adventure-grid">
+          <a class="adventure-link" data-cta-label="Curriculum" href="curriculum-details.html"><h3>Curriculum</h3></a>
+          <a class="adventure-link" data-cta-label="Build &amp; Sell" href="how-it-works.html"><h3>Build &amp; Sell</h3></a>
+          <a class="adventure-link" data-cta-label="Who Runs It" href="who-runs-it.html"><h3>Who Runs It</h3></a>
+          <a class="adventure-link" data-cta-label="FAQs" href="faq.html"><h3>FAQs</h3></a>
+          <a class="adventure-link" data-cta-label="Reserve a Spot" href="reserve-a-spot.html"><h3>Reserve a Spot</h3></a>
+        </div>
+      </div>
+    </section>
+
   </main>
-
-  <footer class="site-footer">
-    <div class="inner">
-      <a href="index.html" aria-label="The Money Club home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
-      <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
-    </div>
-  </footer>
-
   <script>
     (function(){
       var menuBtn = document.querySelector('.menu-btn');
