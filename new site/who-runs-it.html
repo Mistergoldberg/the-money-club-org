@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Who Runs It | Toronto Kids Summer Camp 2026</title>
+  <title>Who Runs It | U of T Mentors for The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="description" content="Meet the team behind the Toronto kids summer camp 2026: student operators, instructors, and program leadership." />
-  <meta property="og:title" content="Who Runs It | Toronto Kids Summer Camp 2026" />
+  <meta property="og:title" content="Who Runs It | U of T Mentors for The Money Club.Org" />
   <meta property="og:description" content="Meet the team behind the Toronto kids summer camp 2026: student operators, instructors, and program leadership." />
   <meta property="og:url" content="https://the-money-club.org/who-runs-it.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Jared-Profile.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Who Runs It | Toronto Kids Summer Camp 2026" />
+  <meta name="twitter:title" content="Who Runs It | U of T Mentors for The Money Club.Org" />
   <meta name="twitter:description" content="Meet the team behind the Toronto kids summer camp 2026: student operators, instructors, and program leadership." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Jared-Profile.png" />
   <link rel="canonical" href="https://the-money-club.org/who-runs-it.html" />
@@ -230,7 +230,7 @@
     .btn:active{
       box-shadow: none;
     }
-    .topbar .btn{
+    .topbar .btn:not(.menu-cta){
       font-family: var(--font-body);
       font-weight: 500;
       text-transform: none;
@@ -367,9 +367,12 @@
       width: min(320px, 100%);
       justify-content: center;
       margin-top: 6px;
-      font-size: var(--btn-size-lg);
+      font-size: clamp(24px, 5.8vw, 31px);
+      line-height: 1.15;
+      font-weight: 500;
       border-radius: 16px;
       padding: 16px 26px;
+      min-height: 62px;
       justify-self: center;
     }
 
@@ -869,6 +872,7 @@ nav{
       :root{
         --btn-size: 35.04px;
         --btn-size-lg: 35.04px;
+        --topbar-height: 68px;
       }
       .section-banner h2,
       .content-banner h2,
@@ -952,7 +956,12 @@ nav{
       /* Mobile standards */
       .hero-logo{ display: none !important; }
       .hero-title{ display: none !important; }
-      .hero-logo-mobile{ display: block !important; margin: 0 auto; }
+      .hero-logo-mobile{ display: none !important; margin: 0 auto; }
+      main > .hero{ display: none; }
+      main > .instructors-mentors{
+        margin-top: 0;
+        padding-top: 0;
+      }
 
       .hero-title{ font-size: 60px !important; line-height: 0.9 !important; letter-spacing: -0.02em !important; }
       .hero-title .org{ font-size: 28px !important; }
@@ -976,13 +985,64 @@ nav{
         margin-right: auto;
         text-align: center;
       }
-      .topbar .btn{
+      .topbar .inner{
+        min-height: var(--topbar-height);
+        padding: 10px var(--pad);
+        gap: 10px;
+      }
+      .menu-btn{
+        width: 40px;
+        height: 32px;
+      }
+      .menu-btn span{
+        width: 28px;
+      }
+      .topbar .btn:not(.menu-cta){
+        display: inline-flex;
         font-family: var(--font-body);
-        font-size: 26.5px;
+        font-size: 16px;
+        line-height: 1.05;
+        padding: 10px 14px;
+        min-height: 44px;
+        border-radius: 999px;
         margin-left: 0;
         margin-right: 0;
+        white-space: nowrap;
         text-transform: none;
         letter-spacing: 0;
+      }
+      .menu-panel{
+        padding: calc(var(--topbar-height) + 10px) var(--pad) 20px;
+        background: rgba(255,255,255,0.99);
+      }
+      .menu-panel.is-open{
+        justify-items: stretch;
+        text-align: left;
+      }
+      .menu-links{
+        max-width: 28rem;
+        margin: 0 auto;
+        gap: 0;
+      }
+      .menu-panel a{
+        width: 100%;
+        padding: 14px 0;
+        font-size: clamp(20px, 4.8vw, 26px);
+        line-height: 1.15;
+        border-bottom: 1px solid var(--line);
+      }
+      .menu-panel a.nav-hiring{
+        padding-top: 0;
+      }
+      .menu-panel .menu-cta{
+        width: 100%;
+        margin-top: 18px;
+        border-bottom: 0;
+        justify-content: center;
+        font-size: clamp(24px, 5.8vw, 31px);
+        line-height: 1.15;
+        font-weight: 500;
+        min-height: 62px;
       }
       .hero-top{
         flex-direction: column;
@@ -1035,9 +1095,17 @@ nav{
     @media (max-width: 640px){
       :root{
         --lh-body: 1.38;
+        --topbar-height: 64px;
       }
 
-      .topbar .btn{ display: none; }
+      .topbar .inner{
+        gap: 8px;
+      }
+      .topbar .btn:not(.menu-cta){
+        font-size: 14px;
+        padding: 10px 12px;
+        min-height: 40px;
+      }
     }
     #choose-your-adventure{
       display: none;
@@ -1169,7 +1237,7 @@ nav{
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub mobile-hide-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
+          <div class="hero-sub mobile-hide-tagline">A nonprofit summer program where students build with AI and learn how money, value, and demand actually work.</div>
         </div>
       </div>
     </section>
@@ -1191,7 +1259,7 @@ nav{
           </div>
           <div class="instructors-body">
             <p>At the center of the program is a cohort of paid University of Toronto students.</p>
-            <p>They are selected for their ability to:</p>
+            <p>They are selected for their ability to guide students through research, product thinking, AI tools, and real-world problem-solving.</p>
             <ul>
               <li>communicate clearly</li>
               <li>think practically</li>
@@ -1202,7 +1270,7 @@ nav{
               <li>lead workshops and small group sessions</li>
               <li>help students build products, services, and simple apps</li>
               <li>guide the use of AI tools for research and creation</li>
-              <li>support presentations and real-world project work</li>
+              <li>help students test ideas, refine decisions, and improve what they build</li>
             </ul>
             <p>They are close enough in age to be relatable&mdash;and experienced enough to guide students with structure and confidence.</p>
           </div>
@@ -1296,7 +1364,7 @@ nav{
     <section class="section" id="choose-your-adventure">
       <div class="section-banner purple">
         <div class="wrap">
-          <h2>Choose Your Adventure</h2>
+          <h2>Learn More</h2>
         </div>
       </div>
       <div class="section-content">

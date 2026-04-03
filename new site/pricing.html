@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Toronto Summer Camp for Teens (Ages 10–16) | Financial Literacy &amp; Entrepreneurship | The Money Club.Org</title>
+  <title>Pricing | AI Product-Building Summer Program for Ages 10–16</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="description" content="A 2-week Toronto summer sprint for students ages 10–16 teaching financial literacy and design thinking. Located at the UTSU Student Commons in downtown Toronto." />
-  <meta property="og:title" content="Toronto Summer Camp for Teens (Ages 10–16) | Financial Literacy &amp; Entrepreneurship | The Money Club.Org" />
+  <meta property="og:title" content="Pricing | AI Product-Building Summer Program for Ages 10–16" />
   <meta property="og:description" content="A 2-week Toronto summer sprint for students ages 10–16 teaching financial literacy and design thinking. Located at the UTSU Student Commons in downtown Toronto." />
   <meta property="og:url" content="https://the-money-club.org/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Toronto Summer Camp for Teens (Ages 10–16) | Financial Literacy &amp; Entrepreneurship | The Money Club.Org" />
+  <meta name="twitter:title" content="Pricing | AI Product-Building Summer Program for Ages 10–16" />
   <meta name="twitter:description" content="A 2-week Toronto summer sprint for students ages 10–16 teaching financial literacy and design thinking. Located at the UTSU Student Commons in downtown Toronto." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/" />
@@ -1551,6 +1551,162 @@
       color: var(--muted);
     }
 
+    .math-section{
+      margin-top: var(--space-6);
+    }
+    .math-banner{
+      background: var(--purple);
+      color: #ffffff;
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .math-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 10px;
+      display:grid;
+      gap: 28px;
+    }
+    .math-layout{
+      display:grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items:stretch;
+    }
+    .math-card{
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 16px 18px;
+      display:grid;
+      gap: 12px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .math-card p{ margin: 0; }
+    .math-card.revenue{
+      text-align: left;
+    }
+    .math-card.revenue ul{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .revenue-title{
+      margin: 0;
+      text-align: center;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.1;
+    }
+    .revenue-list{
+      margin: 12px 0 0;
+      display:grid;
+      gap: 10px;
+    }
+    .revenue-list li{
+      display:grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 6px 12px;
+      align-items: baseline;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #ffffff;
+    }
+    .revenue-list .value{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .revenue-total{
+      margin-top: 12px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      display:grid;
+      gap: 6px;
+      text-align: center;
+    }
+    .revenue-total .label{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+    }
+    .openbook-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+    .openbook-expenses{
+      margin-top: 28px;
+    }
+    .openbook-summary{
+      margin-top: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 18px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .openbook-summary.standout{
+      background: #ffffff;
+      border-color: var(--line);
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .openbook-expenses .openbook-summary{
+      margin-top: 0;
+    }
+    .openbook-summary h3{
+      margin: 0 0 10px;
+      text-align: center;
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+      font-weight: 700;
+    }
+    .openbook-table{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: inherit;
+      margin: 10px 0 18px;
+    }
+    .openbook-table th,
+    .openbook-table td{
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .openbook-table th{
+      font-weight: 700;
+      background: #ffffff;
+    }
+    .openbook-table td:last-child,
+    .openbook-table th:last-child{
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .math-card h3{
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+      font-weight: 700;
+    }
+    .math-note{
+      font-size: inherit;
+      color: var(--muted);
+      margin: 0;
+    }
+    .math-figure{
+      font-family: var(--font-display);
+      font-size: clamp(34px, 6vw, 56px);
+      letter-spacing: var(--tracking-display);
+      color: var(--ink);
+    }
+
     .openbook-card{
       border-radius: 18px;
       border: 1px solid var(--line);
@@ -1576,10 +1732,12 @@
       margin: 0 auto;
       background:
         conic-gradient(
-          var(--purple) 0% 40%,
-          var(--teal) 40% 50%,
-          var(--gold) 50% 90%,
-          var(--ink) 90% 100%
+          var(--rose) 0% 12.223%,
+          var(--purple) 12.223% 60.214%,
+          var(--teal) 60.214% 64.926%,
+          var(--gold) 64.926% 95.656%,
+          var(--ink) 95.656% 99.585%,
+          var(--slate) 99.585% 100%
         );
     }
     .openbook-legend{
@@ -1684,12 +1842,12 @@
       margin: 0 auto 14px;
       background:
         conic-gradient(
-          var(--purple) 0% 34.75%,
-          var(--teal) 34.75% 48.08%,
-          var(--gold) 48.08% 69.82%,
-          var(--ink) 69.82% 72.6%,
-          var(--slate) 72.6% 91.17%,
-          var(--rose) 91.17% 100%
+          var(--rose) 0% 12.223%,
+          var(--purple) 12.223% 60.214%,
+          var(--teal) 60.214% 64.926%,
+          var(--gold) 64.926% 95.656%,
+          var(--ink) 95.656% 99.585%,
+          var(--slate) 99.585% 100%
         );
       position: relative;
       display: grid;
@@ -1997,6 +2155,49 @@
         text-align: left;
       }
       .radical-side .section-image{ width: 100%; }
+      .openbook-grid{ grid-template-columns: 1fr; }
+      .math-layout{ grid-template-columns: 1fr; }
+      .math-layout > *{ min-width: 0; }
+      .math-card{
+        max-width: 100%;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+        overflow-wrap: normal;
+        word-break: normal;
+      }
+      .openbook-summary,
+      .openbook-summary.standout,
+      .openbook-pie-card{
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+      }
+      .math-content,
+      .openbook-grid,
+      .math-layout,
+      .openbook-summary,
+      .openbook-pie-card{
+        max-width: 100%;
+      }
+      .openbook-table{
+        table-layout: auto;
+        width: 100%;
+      }
+      .openbook-table th,
+      .openbook-table td{
+        border: 0;
+        padding: 8px 0;
+        overflow-wrap: normal;
+        word-break: normal;
+      }
+      .openbook-table tr + tr{
+        border-top: 1px solid var(--line);
+      }
 
       :root{
         --topbar-height: 68px;
@@ -2402,6 +2603,7 @@
       main > .hero{ order: 10; }
       main > #built-like-a-business{ order: 20; }
       main > #what-is-this{ order: 30; }
+      main > .math-section{ order: 35; }
       main > #how-it-works{ order: 40; }
       main > #radical-transparency{ order: 50; }
       main > #who-runs-it{ order: 60; }
@@ -2711,6 +2913,12 @@
       #choose-your-adventure{
         display: block;
       }
+      main > .hero{
+        display: none;
+      }
+      main > .hero + #what-is-this{
+        margin-top: 0;
+      }
       #choose-your-adventure .adventure-grid{
         grid-template-columns: 1fr;
         gap: 0;
@@ -2785,7 +2993,7 @@
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub mobile-hide-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
+          <div class="hero-sub mobile-hide-tagline">A nonprofit summer program where students build with AI and learn how money, value, and demand actually work.</div>
         </div>
 
         <div class="hero-image banner">
@@ -2810,10 +3018,10 @@
       <div class="section-content">
         <div class="section-copy pricing-info-copy">
           <div class="pricing-block">
-            <p>4-weeks (2 x 2-Week product development sprints).</p>
+            <p>4 weeks of guided product-building: two structured sprints focused on research, prototyping, testing, and iteration.</p>
             <p><strong>$1500 + 13% HST</strong></p>
             <p>Small-groups, 1 instructor x 10 participants, for ages 10&ndash;16.</p>
-            <p>Students build, price, and sell products.</p>
+            <p>Students use AI and mentor guidance to build, test, price, and improve products, services, and simple apps.</p>
 
             <p><strong>Payment Options</strong></p>
             <ul class="bullet-list">
@@ -2824,11 +3032,10 @@
 
             <p><strong>What's Included</strong></p>
             <ul class="bullet-list">
-              <li>Instructor-led sessions and project support</li>
+              <li>Instructor-led workshops and guided build sessions</li>
               <li>Materials and supplies</li>
-              <li>A project budget to test, build, and sell</li>
-              <li>Final Maker Market presentations</li>
-              <li>Light daily snacks (students bring lunch)</li>
+              <li>A student project budget for testing and iteration</li>
+              <li>A final Maker Market where students pitch what they built and see what people choose</li>
             </ul>
 
             <div class="pricing-schedule-row">
@@ -2847,6 +3054,127 @@
                 ></iframe>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="math-section h3-raleway">
+      <div class="math-banner">
+        <div class="wrap">
+          <h2>Open-Book Financials</h2>
+        </div>
+      </div>
+      <div class="math-content">
+        <div class="math-layout">
+          <div class="math-card">
+            <h3>Where Tuition Goes</h3>
+            <p>The Money Club.Org is a nonprofit summer program designed around learning, not upselling.</p>
+            <p>We share a simple budget breakdown so families can see how tuition supports instruction, materials, venue costs, insurance, and program operations. The goal is not to maximize profit. The goal is to run a thoughtful, well-supported program for students in a transparent and responsible way.</p>
+          </div>
+
+          <div class="math-card revenue">
+            <h3 class="revenue-title">Revenue In</h3>
+            <ul class="revenue-list">
+              <li>
+                <span>Students per cohort</span>
+                <span class="value">10</span>
+              </li>
+              <li>
+                <span>Tuition per student</span>
+                <span class="value">$1,100</span>
+              </li>
+            </ul>
+            <div class="revenue-total">
+              <span class="label">Total revenue</span>
+              <div class="math-figure">$11,000</div>
+            </div>
+            <p class="math-note">This tuition funds everything required to run the group with one instructor, venue, and materials.</p>
+          </div>
+        </div>
+        <div class="openbook-grid openbook-expenses">
+          <div class="openbook-summary standout">
+            <h3>Expense Summary</h3>
+            <table class="openbook-table" aria-label="Program expense summary">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Sums</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Marketing</td>
+                  <td>$1,297</td>
+                </tr>
+                <tr>
+                  <td>Instructors</td>
+                  <td>$5,093</td>
+                </tr>
+                <tr>
+                  <td>Program Materials</td>
+                  <td>$500</td>
+                </tr>
+                <tr>
+                  <td>Venue Rental</td>
+                  <td>$3,261</td>
+                </tr>
+                <tr>
+                  <td>Insurance</td>
+                  <td>$417</td>
+                </tr>
+                <tr>
+                  <td>Overhead</td>
+                  <td>$44</td>
+                </tr>
+                <tr>
+                  <td><strong>Total expenses</strong></td>
+                  <td><strong>$10,612</strong></td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="math-note">Based on current program financials.</p>
+          </div>
+          <div class="openbook-pie-card" aria-label="Program budget distribution chart">
+            <h3 class="openbook-subheading">Expense Visualization</h3>
+            <div class="openbook-pie" role="img" aria-label="Expense distribution: Marketing 12.2%, Instructors 48.0%, Program Materials 4.7%, Venue Rental 30.7%, Insurance 3.9%, Overhead 0.4%">
+              <div class="openbook-pie-center">
+                <span class="label">Total</span>
+                <span class="value">$10,612</span>
+              </div>
+            </div>
+            <ul class="openbook-legend">
+              <li>
+                <span class="legend-dot" style="background: var(--rose);"></span>
+                <span class="legend-label">Marketing</span>
+                <span class="legend-value">12.2%</span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--purple);"></span>
+                <span class="legend-label">Instructors</span>
+                <span class="legend-value">48.0%</span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--teal);"></span>
+                <span class="legend-label">Program Materials</span>
+                <span class="legend-value">4.7%</span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--gold);"></span>
+                <span class="legend-label">Venue Rental</span>
+                <span class="legend-value">30.7%</span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--ink);"></span>
+                <span class="legend-label">Insurance</span>
+                <span class="legend-value">3.9%</span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--slate);"></span>
+                <span class="legend-label">Overhead</span>
+                <span class="legend-value">0.4%</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -2886,7 +3214,7 @@
               </div>
               <div class="interest-submit-wrap">
                 <button class="btn teal gloss cta-standard interest-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
-                <small class="interest-trust-line">Small groups • Ages 10–16 • Downtown Toronto • UTSU Student Commons • Light daily snacks provided</small>
+                <small class="interest-trust-line">Small groups • Ages 10–16 • Downtown Toronto • UTSU Student Commons</small>
                 <a class="interest-register-link" href="/reserve-a-spot.html" data-cta-label="Complete registration here">Ready to register now? Complete registration here →</a>
               </div>
             </form>
@@ -2898,7 +3226,7 @@
     <section class="section" id="choose-your-adventure">
       <div class="section-banner purple">
         <div class="wrap">
-          <h2>Choose Your Adventure</h2>
+          <h2>Learn More</h2>
         </div>
       </div>
       <div class="section-content">

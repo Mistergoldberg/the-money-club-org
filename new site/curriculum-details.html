@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Curriculum | Toronto Kids Summer Camp 2026</title>
+  <title>Curriculum | Financial Literacy, Product Building, and AI</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="description" content="Curriculum for the Toronto kids summer camp 2026: real-world business math, team collaboration, and confident presentations." />
-  <meta property="og:title" content="Curriculum | Toronto Kids Summer Camp 2026" />
+  <meta property="og:title" content="Curriculum | Financial Literacy, Product Building, and AI" />
   <meta property="og:description" content="Curriculum for the Toronto kids summer camp 2026: real-world business math, team collaboration, and confident presentations." />
   <meta property="og:url" content="https://the-money-club.org/curriculum-details.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/kid-presents-larg-class.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Curriculum | Toronto Kids Summer Camp 2026" />
+  <meta name="twitter:title" content="Curriculum | Financial Literacy, Product Building, and AI" />
   <meta name="twitter:description" content="Curriculum for the Toronto kids summer camp 2026: real-world business math, team collaboration, and confident presentations." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/kid-presents-larg-class.jpg" />
   <link rel="canonical" href="https://the-money-club.org/curriculum-details.html" />
@@ -969,6 +969,35 @@ nav{
       margin: 0;
       color: var(--muted);
     }
+    .experiences-content{
+      grid-template-columns: 1fr;
+      max-width: none;
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .experience-gallery{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      width: 100%;
+    }
+    .experience-photo{
+      margin: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+    .experience-photo img{
+      display:block;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+    }
 
     .deploy-section{
       margin-top: var(--space-6);
@@ -1016,6 +1045,9 @@ nav{
       display:grid;
       gap: 16px;
     }
+    .lesson-plans-list{
+      margin-top: 32px;
+    }
     .deploy-item{
       border: 1px solid var(--line);
       border-radius: 16px;
@@ -1048,14 +1080,15 @@ nav{
       background: var(--purple);
       color: #ffffff;
     }
+    .section-banner.teal{
+      background: var(--teal);
+      color: #ffffff;
+    }
     .section-banner.heading-white{
       color: #ffffff;
     }
     .section-banner.heading-white h2{
       color: #ffffff;
-    }
-    .inline-interest-band-bottom{
-      margin-bottom: var(--space-6);
     }
     .form-grid{
       display:grid;
@@ -1360,6 +1393,21 @@ nav{
       .openbook-columns{ grid-template-columns: 1fr; }
       .teachers-grid{ grid-template-columns: 1fr; }
       .quickfacts-content{ grid-template-columns: 1fr; }
+      .experiences-content{
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding: 0;
+      }
+      .experience-gallery{
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .experiences-content .experience-photo{
+        border-radius: 0;
+        border: 0;
+        box-shadow: none;
+      }
       .quickfacts-content .quickfacts-card:not(.essentials){ display: none; }
       .reserve-content{ grid-template-columns: 1fr; }
 
@@ -1499,6 +1547,12 @@ nav{
       #choose-your-adventure{
         display: block;
       }
+      main > .hero{
+        display: none;
+      }
+      main > .hero + .deploy-section{
+        margin-top: 0;
+      }
       #choose-your-adventure .adventure-grid{
         grid-template-columns: 1fr;
         gap: 0;
@@ -1574,7 +1628,7 @@ nav{
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub mobile-hide-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</div>
+          <div class="hero-sub mobile-hide-tagline">Curriculum-based summer program at UTSU Student Commons where students use AI to build, test, and improve real products, services, and simple apps.</div>
         </div>
 
         <div class="hero-image banner">
@@ -1619,7 +1673,7 @@ nav{
           <p class="deploy-copy">Why would someone choose this?</p>
           <p class="deploy-copy">By this stage, students are not just learning concepts. They are applying judgment.</p>
 
-          <div class="deploy-title">🧠 What Students Actually Learn</div>
+          <div class="deploy-title">🧠 How Students Build, Test, and Learn</div>
           <p class="deploy-copy">The Money Club is hands-on, but it is also structured. Students are learning practical ideas that help them understand business, money, and decision-making more clearly.</p>
         </div>
 
@@ -1665,9 +1719,37 @@ nav{
             </div>
           </div>
         </section>
-        <section class="section-banner full-bleed purple inline-interest-band-bottom" aria-hidden="true"></section>
+        <section class="quickfacts-section">
+          <div class="section-banner full-bleed purple heading-white">
+            <div class="wrap">
+              <h2>WHAT STUDENTS EXPERIENCE</h2>
+            </div>
+          </div>
+          <div class="quickfacts-content experiences-content">
+            <div class="experience-gallery">
+              <figure class="experience-photo">
+                <img src="assets/n-kid-3.jpg" alt="Students discussing project plans" />
+              </figure>
+              <figure class="experience-photo">
+                <img src="assets/n-kid-5.jpg" alt="Students testing ideas at a table" />
+              </figure>
+              <figure class="experience-photo">
+                <img src="assets/n-kid-6.jpg" alt="Students collaborating in class" />
+              </figure>
+              <figure class="experience-photo">
+                <img src="assets/n-kid-4.jpg" alt="Students presenting work to peers" />
+              </figure>
+            </div>
+          </div>
+        </section>
 
-        <ul class="deploy-list">
+        <section class="section-banner full-bleed teal heading-white">
+          <div class="wrap">
+            <h2>Core Build Modules</h2>
+          </div>
+        </section>
+
+        <ul class="deploy-list lesson-plans-list">
           <li class="deploy-item">
             <div class="deploy-title">💰 Financial Literacy as Survival Gear</div>
             <p class="deploy-copy">Students learn how money actually moves through a business: gross margin, profit, fixed and variable costs, break-even points, and cash flow. They begin to see why many businesses fail because the economics do not work.</p>
@@ -1698,7 +1780,7 @@ nav{
           </li>
           <li class="deploy-item">
             <div class="deploy-title">📸 Creative Fundamentals: Photography, Design &amp; Visual Clarity</div>
-            <p class="deploy-copy">Students learn how presentation affects perceived value. They use simple creative tools to improve clarity, trust, and communication.</p>
+            <p class="deploy-copy">Students learn how design, messaging, and visual clarity affect trust, demand, and perceived value.</p>
           </li>
           <li class="deploy-item">
             <div class="deploy-title">📣 Marketing: Use Existing Channels First</div>
@@ -1709,7 +1791,7 @@ nav{
             <p class="deploy-copy">Students learn that research is ongoing. They monitor competitors, pricing, customer behavior, and shifts in the market over time.</p>
           </li>
           <li class="deploy-item">
-            <div class="deploy-title">💻 Build With AI</div>
+            <div class="deploy-title">💻 AI Tools Used Across the Program</div>
             <p class="deploy-copy">AI is part of the program because it is part of how real products and ideas are now developed.</p>
             <p class="deploy-copy">Students use AI to:</p>
             <ul class="deploy-bullets">
@@ -1755,7 +1837,7 @@ nav{
       <div class="quickfacts-content">
         <div class="quickfacts-card essentials">
           <h3>The Money Club.Org</h3>
-          <p class="quickfacts-note mobile-hide-tagline">A nonprofit summer program where students learn financial literacy, design thinking, and how to build real products with AI.</p>
+          <p class="quickfacts-note mobile-hide-tagline">A nonprofit summer program where students build with AI and learn how money, value, and demand actually work.</p>
           <ul class="quickfacts-list">
             <li>👥 Ages 10&ndash;16</li>
             <li>📅 July 6&ndash;31 or Aug 4&ndash;28</li>
@@ -1819,7 +1901,7 @@ nav{
     <section class="section" id="choose-your-adventure">
       <div class="section-banner purple">
         <div class="wrap">
-          <h2>Choose Your Adventure</h2>
+          <h2>Learn More</h2>
         </div>
       </div>
       <div class="section-content">
