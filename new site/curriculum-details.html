@@ -134,6 +134,8 @@
       --space-4: 24px;
       --space-5: 36px;
       --space-6: 56px;
+      --section-content-pad-top: 32px;
+      --section-content-pad-bottom: 18px;
 
       --radius-sm: 10px;
       --radius-md: 16px;
@@ -529,7 +531,7 @@ nav{
     .why-content{
       max-width: var(--max-wide);
       margin: 0 auto;
-      padding: 20px var(--pad) 10px;
+      padding: var(--section-content-pad-top) var(--pad) var(--section-content-pad-bottom);
     }
     .why-grid{
       display:grid;
@@ -648,7 +650,7 @@ nav{
     .curriculum-content{
       max-width: var(--max-wide);
       margin: 0 auto;
-      padding: 20px var(--pad) 10px;
+      padding: var(--section-content-pad-top) var(--pad) var(--section-content-pad-bottom);
     }
     .curriculum-grid{
       display:grid;
@@ -700,7 +702,7 @@ nav{
     .openbook-content{
       max-width: var(--max-wide);
       margin: 0 auto;
-      padding: 20px var(--pad) 10px;
+      padding: var(--section-content-pad-top) var(--pad) var(--section-content-pad-bottom);
     }
     .openbook-grid{
       display:grid;
@@ -863,7 +865,7 @@ nav{
     .teachers-content{
       max-width: var(--max-wide);
       margin: 0 auto;
-      padding: 24px var(--pad) 10px;
+      padding: var(--section-content-pad-top) var(--pad) var(--section-content-pad-bottom);
     }
     .teachers-grid{
       display:grid;
@@ -935,7 +937,7 @@ nav{
     .quickfacts-content{
       max-width: var(--max-wide);
       margin: 0 auto;
-      padding: 24px var(--pad) 10px;
+      padding: var(--section-content-pad-top) var(--pad) var(--section-content-pad-bottom);
       display:grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 20px;
@@ -1011,7 +1013,7 @@ nav{
     .deploy-content{
       max-width: var(--max-wide);
       margin: 0 auto;
-      padding: 24px var(--pad) 10px;
+      padding: var(--section-content-pad-top) var(--pad) var(--section-content-pad-bottom);
     }
     .deploy-intro{
       max-width: var(--content-max);
@@ -1235,7 +1237,7 @@ nav{
     .reserve-content{
       max-width: var(--max-wide);
       margin: 0 auto;
-      padding: 24px var(--pad) 10px;
+      padding: var(--section-content-pad-top) var(--pad) var(--section-content-pad-bottom);
       display:grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 20px;
@@ -1338,6 +1340,8 @@ nav{
       :root{
         --btn-size: 35.04px;
         --btn-size-lg: 35.04px;
+        --section-content-pad-top: 22px;
+        --section-content-pad-bottom: 10px;
       }
       .section-banner h2,
       .content-banner h2,
@@ -1562,6 +1566,27 @@ nav{
       }
     }
     @media (max-width: 768px){
+      .why-section,
+      .curriculum-section,
+      .openbook-section,
+      .teachers-section,
+      .quickfacts-section,
+      .deploy-section,
+      .reserve-section,
+      .reservation-steps,
+      footer.site-footer{
+        margin-top: var(--space-5);
+      }
+      .why-banner,
+      .curriculum-banner,
+      .openbook-banner,
+      .teachers-banner,
+      .quickfacts-banner,
+      .deploy-banner,
+      .reserve-banner,
+      .section-banner{
+        padding: 18px 0;
+      }
       main > #choose-your-adventure{ order: 110; }
     }
 
@@ -1596,7 +1621,7 @@ nav{
         <div class="menu-links">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
@@ -1608,7 +1633,7 @@ nav{
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -1628,7 +1653,7 @@ nav{
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub mobile-hide-tagline">Curriculum-based summer program at UTSU Student Commons where students use AI to build, test, and improve real products, services, and simple apps.</div>
+          <div class="hero-sub mobile-hide-tagline">A nonprofit teaching financial literacy, design thinking, AI, and public speaking.</div>
         </div>
 
         <div class="hero-image banner">
@@ -1679,7 +1704,7 @@ nav{
 
         <section class="section-banner full-bleed purple heading-white" id="reserve">
           <div class="wrap">
-            <h2 id="join-the-interest-list">Free Info Session</h2>
+            <h2 id="join-the-interest-list">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
           </div>
         </section>
         <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
@@ -1828,35 +1853,9 @@ nav{
       </div>
     </section>
 
-    <section class="quickfacts-section">
-      <div class="quickfacts-banner">
-        <div class="wrap">
-          <h2>✅ Program Details</h2>
-        </div>
-      </div>
-      <div class="quickfacts-content">
-        <div class="quickfacts-card essentials">
-          <h3>The Money Club.Org</h3>
-          <p class="quickfacts-note mobile-hide-tagline">A nonprofit summer program where students build with AI and learn how money, value, and demand actually work.</p>
-          <ul class="quickfacts-list">
-            <li>👥 Ages 10&ndash;16</li>
-            <li>📅 July 6&ndash;31 or Aug 4&ndash;28</li>
-            <li>🕘 9&ndash;5 daily</li>
-            <li>📍 UTSU Student Commons, 230 College Street</li>
-            <li>💰 $1,500 ($75/day)</li>
-          </ul>
-        </div>
-        <div class="quickfacts-card">
-          <h3>Sign Up Today</h3>
-          <p class="quickfacts-note">Ready to help your child build real-world confidence?</p>
-          <a data-cta-label="Reserve a Spot" class="btn teal block gloss cta-standard" href="reserve-a-spot.html">Reserve a Spot</a>
-        </div>
-      </div>
-    </section>
-
     <section class="section-banner full-bleed purple heading-white" id="reserve-bottom">
       <div class="wrap">
-        <h2 id="join-the-interest-list-bottom">Free Info Session</h2>
+        <h2 id="join-the-interest-list-bottom">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
       </div>
     </section>
     <section id="reserve-a-spot-bottom" data-cta-location="reserve-a-spot-bottom" class="reservation-steps">
@@ -2076,10 +2075,9 @@ nav{
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
-        if (isReserveCta(target)){
-          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
-        }
+        var payload = buildCtaPayload(target, 'cta_click');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
+        window.dataLayer.push(payload);
       }
 
       document.addEventListener('click', function(event){
@@ -2087,10 +2085,18 @@ nav{
         if (!target){
           return;
         }
-        // Exclude interest form submit controls from generic CTA tracking
-        // These are tracked separately via interest_form_* events
+        // Exclude form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* and registration_form_* events
         var interestForm = target.closest('form[action="apply-interest.php"]');
         if (interestForm){
+          return;
+        }
+        var submitForm = target.closest('form');
+        var isSubmitControl = !!submitForm && (
+          target.matches('button[type="submit"], input[type="submit"]') ||
+          (target.tagName === 'BUTTON' && (!target.type || target.type.toLowerCase() === 'submit'))
+        );
+        if (isSubmitControl){
           return;
         }
         if (!(

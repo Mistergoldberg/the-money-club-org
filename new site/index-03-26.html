@@ -2962,7 +2962,7 @@
         <div class="menu-links">
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Transparency</a>
         <a href="/article-best-summer-camps.html">Parent Resources</a>
         <a href="faq.html">FAQ</a>
@@ -2975,7 +2975,7 @@
       <nav aria-label="Primary">
         <a href="how-it-works.html">Build & Sell</a>
         <a href="schedule-pricing.html">Maker Market</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Transparency</a>
         <a href="faq.html">FAQ</a>
         <a href="/instructors.html">We're Hiring</a>
@@ -3059,7 +3059,7 @@
                 <a class="program-summary-option" href="reserve-a-spot.html" data-cta-label="4-Week Full Program">
                   <div class="program-summary-option-copy">
                     <p class="program-summary-option-title">4-Week Full Program</p>
-                    <p>$1,500</p>
+                    <p>$1,100</p>
                   <p>July 6–31 or Aug 4–28</p>
                   <p>The full experience.</p>
                   <p>Deeper build, more iteration, final showcase.</p>
@@ -3218,7 +3218,7 @@
 
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn How It Works</h2>
+        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
@@ -3501,112 +3501,6 @@
         var value = parseFloat(match[1].replace(/,/g, ''));
         return isNaN(value) ? 1500 : value;
       }
-
-      function pushBeginCheckout(form){
-        if (!form || form.dataset.beginCheckoutTracked === 'true'){
-          return;
-        }
-        form.dataset.beginCheckoutTracked = 'true';
-        window.dataLayer = window.dataLayer || [];
-        var value = getProgramFeeValue(form);
-        window.dataLayer.push({
-          event: 'begin_checkout',
-          form_name: 'reserve_a_spot',
-          funnel_step: 'begin_checkout',
-          payment_method: 'credit_card',
-          currency: 'CAD',
-          value: value,
-          items: [
-            {
-              item_id: 'money-club-summer-camp',
-              item_name: 'The Money Club.Org Summer Camp',
-              item_category: 'Summer Camp',
-              price: value,
-              quantity: 1
-            }
-          ],
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
-      }
-
-      sessionRadios.forEach(function(radio){
-        radio.addEventListener('change', function(){
-          updateFlowState();
-        });
-      });
-
-      if (sessionGrid){
-        sessionGrid.addEventListener('click', function(e){
-          if (sessionGrid.classList.contains('is-locked')){
-            e.preventDefault();
-            showFirstInvalidField();
-          }
-        });
-      }
-
-      paymentButtons.forEach(function(btn){
-        btn.addEventListener('click', function(e){
-          var form = btn.form;
-          if (form) {
-            var returnTo = form.querySelector('[name="return-to"]');
-            var returnCancel = form.querySelector('[name="return-cancel"]');
-            var currentPage = window.location.pathname.split('/').pop() || 'reserve-a-spot.html';
-            if (returnCancel){ returnCancel.value = currentPage; }
-
-            if (btn.value === 'Credit Card') {
-              form.setAttribute('action', 'stripe-checkout.php');
-              if (returnTo){ returnTo.value = 'thank-you-credit-card.php'; }
-            } else {
-              form.setAttribute('action', 'apply-camper.php');
-              if (returnTo){ returnTo.value = 'etransfer.html'; }
-            }
-          }
-          if (!baseFieldsValid()){
-            e.preventDefault();
-            showFirstInvalidField();
-            return;
-          }
-          if (!sessionSelected()){
-            e.preventDefault();
-            showSessionError();
-            return;
-          }
-          if (!termsAgreed()){
-            e.preventDefault();
-            showFirstInvalidField();
-            return;
-          }
-          if (btn.value === 'Credit Card') {
-            pushBeginCheckout(form);
-          }
-        });
-      });
-    })();
-  </script>
-  <script>
-    (function(){
-      var spotEls = document.querySelectorAll('.session-availability');
-      if (!spotEls.length){ return; }
-
-      function updateSpots(data){
-        spotEls.forEach(function(el){
-          var key = el.getAttribute('data-session');
-          if (!key || typeof data[key] !== 'number'){ return; }
-          var count = data[key];
-          var capacity = typeof data.capacity === 'number' ? data.capacity : 30;
-          el.textContent = count + ' of ' + capacity + ' Spots Available';
-          var row = el.closest('.session-card');
-          if (row){
-            row.classList.toggle('is-full', count <= 0);
-            var input = row.querySelector('input[type="radio"]');
-            if (input){
-              input.disabled = count <= 0;
-            }
-          }
-        });
-      }
-
       function fetchAvailability(url){
         return fetch(url, { cache: 'no-store' }).then(function(res){
           if (!res.ok){
@@ -3747,10 +3641,9 @@
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
-        if (isReserveCta(target)){
-          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
-        }
+        var payload = buildCtaPayload(target, 'cta_click');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
+        window.dataLayer.push(payload);
       }
 
       document.addEventListener('click', function(event){
@@ -3806,9 +3699,10 @@
 
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: 'tmc_interest_form_success',
-        form_name: 'interest_form',
-        funnel_step: 'form_success',
+        event: 'interest_form_success',
+          form_name: 'interest_form',
+          form_id: 'interest',
+          funnel_step: 'form_success',
         page_location: window.location.pathname,
         form_context: 'homepage'
       });
@@ -3838,6 +3732,7 @@
         window.dataLayer.push({
           event: 'interest_form_start',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_start',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
@@ -3848,6 +3743,7 @@
         window.dataLayer.push({
           event: 'interest_form_submit',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_submit',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
@@ -3860,6 +3756,7 @@
           error_field: fieldName || 'unknown',
           error_message: message || 'Validation error',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_error',
           page_path: window.location.pathname || '',
           page_title: document.title || ''

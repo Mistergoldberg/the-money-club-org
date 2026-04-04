@@ -1564,7 +1564,7 @@ nav{
         <div class="menu-links">
         <a class="nav-hiring" href="instructors.html">We're hiring</a>
         <a href="how-it-works.html">How it works</a>
-        <a href="open-book-hook.html">Open-book financials</a>
+        <a href="/pricing.html">Open-Book Financials</a>
         <a href="schedule-pricing.html">Curriculum</a>
         <a href="pricing.html">Mission</a>
         <a href="faq.html">FAQ</a>
@@ -1576,7 +1576,7 @@ nav{
       <nav aria-label="Primary">
         <a class="nav-hiring" href="instructors.html">We're hiring</a>
         <a href="how-it-works.html">How it works</a>
-        <a href="open-book-hook.html">Open-book financials</a>
+        <a href="/pricing.html">Open-Book Financials</a>
         <a href="schedule-pricing.html">Curriculum</a>
         <a href="pricing.html">Mission</a>
         <a href="faq.html">FAQ</a>
@@ -1625,9 +1625,9 @@ nav{
         var pageTitle = document.title || '';
 
         window.dataLayer.push({
-          event: 'tmc_registration_submitted',
-          ga4_event_name: 'registration_submitted',
+          event: 'registration_form_submitted',
           form_name: 'reserve_a_spot',
+          form_id: 'registration',
           payment_method: 'credit_card',
           funnel_step: 'registration_payment',
           transaction_id: purchasePayload.transaction_id,
@@ -1928,10 +1928,9 @@ nav{
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
-        if (isReserveCta(target)){
-          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
-        }
+        var payload = buildCtaPayload(target, 'cta_click');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
+        window.dataLayer.push(payload);
       }
 
       document.addEventListener('click', function(event){

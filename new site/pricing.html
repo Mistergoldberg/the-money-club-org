@@ -599,9 +599,8 @@
     }
     .hero-image{
       width: 100%;
-      aspect-ratio: 1920 / 877;
       border-radius: 22px;
-      overflow: hidden;
+      overflow-y: auto;
       border: 1px solid var(--line);
       margin-top: 12px;
     }
@@ -611,7 +610,7 @@
       height: auto;
     }
     .hero-image.banner img{
-      height: 100%;
+      height: clamp(220px, 32vw, 420px);
       object-fit: cover;
       object-position: center 35%;
     }
@@ -802,6 +801,9 @@
     #what-is-this .pricing-info-copy{
       display: grid;
       gap: 16px;
+    }
+    #practical-note .section-copy{
+      max-width: none;
     }
     #what-is-this .pricing-block{
       border: 1px solid var(--line);
@@ -1162,6 +1164,60 @@
       gap: 10px;
       font-weight: 600;
     }
+    .program-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .program-card{
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: clamp(22px, 2.6vw, 34px);
+      background: #f6f4ef;
+      display: grid;
+      gap: 8px;
+      cursor: pointer;
+      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+      position: relative;
+      text-align: center;
+      align-content: center;
+    }
+    .program-card:hover{
+      border-color: var(--teal);
+      box-shadow: 0 10px 20px rgba(8, 122, 128, 0.14);
+      transform: translateY(-1px);
+    }
+    .program-card input{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .program-title{
+      margin: 0;
+      font-weight: 700;
+      font-size: inherit;
+      line-height: var(--lh-body);
+      color: var(--ink);
+    }
+    .program-price{
+      margin: 0;
+      font-weight: 700;
+      font-size: inherit;
+      line-height: var(--lh-body);
+      color: var(--ink);
+    }
+    .program-dates,
+    .program-line{
+      margin: 0;
+      font-size: inherit;
+      line-height: var(--lh-body);
+      color: #3a3a3a;
+    }
+    .program-card:has(input:checked){
+      border-color: var(--teal);
+      box-shadow: 0 14px 26px rgba(8, 122, 128, 0.2);
+      background: #eef9fa;
+    }
     .session-grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1179,6 +1235,10 @@
       position: relative;
       min-height: 140px;
       overflow: hidden;
+    }
+    .session-card.is-hidden,
+    .session-card[hidden]{
+      display: none;
     }
     .session-card::after{
       content: "";
@@ -1295,6 +1355,124 @@
     }
     .terms-consent .field-error{
       margin-left: 28px;
+    }
+    .register-actions{
+      margin-top: 10px;
+      display: grid;
+      gap: 10px;
+    }
+    .register-btn{
+      width: 100%;
+      border-radius: 14px;
+      background: var(--teal);
+      border: 0;
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: clamp(30px, 3.2vw, 44px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 1;
+      padding: 20px 18px;
+      cursor: pointer;
+    }
+    .register-btn:hover,
+    .register-btn:focus-visible{
+      background: #167a84;
+    }
+    .info-session-trigger-btn{
+      width: 100%;
+      border-radius: 14px;
+      border: 2px solid var(--purple);
+      background: #ffffff;
+      color: var(--purple);
+      font-family: var(--font-body);
+      font-size: clamp(18px, 2.1vw, 24px);
+      font-weight: 700;
+      line-height: 1.2;
+      padding: 14px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 120ms ease, transform 120ms ease;
+    }
+    .info-session-trigger-btn:hover,
+    .info-session-trigger-btn:focus-visible{
+      background: #f3ebfb;
+      transform: translateY(-1px);
+    }
+    body.info-session-open{
+      overflow: hidden;
+    }
+    .info-session-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 1400;
+      display: none;
+      align-items: center;
+      justify-items: center;
+      background: rgba(12, 12, 12, 0.62);
+      padding: clamp(14px, 3vw, 24px);
+    }
+    .info-session-overlay.is-open{
+      display: grid;
+    }
+    .info-session-modal{
+      width: min(760px, 100%);
+      max-height: min(90vh, 920px);
+      overflow: auto;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 18px 42px rgba(0,0,0,0.26);
+      padding: clamp(18px, 3vw, 28px);
+      display: grid;
+      gap: 12px;
+    }
+    .info-session-close{
+      justify-self: end;
+      width: 38px;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .info-session-title{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      line-height: 1.1;
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 700;
+      color: var(--ink);
+      text-align: center;
+    }
+    .info-session-meta{
+      margin: 0;
+      font-size: clamp(18px, 2.1vw, 24px);
+      line-height: 1.2;
+      color: var(--ink);
+      font-weight: 600;
+      text-align: center;
+    }
+    .info-session-helper{
+      margin: 0;
+      color: var(--muted);
+      text-align: center;
+    }
+    .info-session-form{
+      display: grid;
+      gap: 16px;
+    }
+    .info-session-form .field{
+      max-width: none;
+    }
+    .info-session-submit{
+      width: 100%;
+      justify-content: center;
     }
     .payment-section h2{
       margin: 0;
@@ -1449,6 +1627,21 @@
     }
     .reservation-card h2:not(:first-child){
       margin-top: 16px;
+    }
+    .form-step-title{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: 1.15;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .step-block{
+      display: grid;
+      gap: 6px;
+      margin-top: 4px;
     }
     .interest-subhead{
       margin: 0;
@@ -2469,6 +2662,15 @@
       .field-row.two-col{
         grid-template-columns: 1fr;
       }
+      .program-grid{
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .program-card{
+        border-radius: 18px;
+        padding: 18px 16px;
+        gap: 6px;
+      }
       .session-grid{ grid-template-columns: 1fr; }
       .session-card{ padding: 10px; min-height: 0; }
       .session-title{
@@ -2529,7 +2731,7 @@
         margin-top: 8px;
       }
       .hero-image.banner img{
-        height: 100%;
+        height: clamp(220px, 32vw, 420px);
       }
       .hero-image img,
       .section-image img{
@@ -2602,8 +2804,8 @@
       }
       main > .hero{ order: 10; }
       main > #built-like-a-business{ order: 20; }
-      main > #what-is-this{ order: 30; }
-      main > .math-section{ order: 35; }
+      main > .math-section{ order: 30; }
+      main > #what-is-this{ order: 35; }
       main > #how-it-works{ order: 40; }
       main > #radical-transparency{ order: 50; }
       main > #who-runs-it{ order: 60; }
@@ -2634,7 +2836,7 @@
         max-width: 24ch;
       }
       .hero-image.banner img{
-        height: 100%;
+        height: clamp(220px, 32vw, 420px);
       }
       .split,
       .split.reverse{
@@ -2770,7 +2972,7 @@
         font-size: 0.92em;
       }
       .hero-image.banner img{
-        height: 100%;
+        height: clamp(220px, 32vw, 420px);
       }
       .section-content{
         padding: 20px var(--pad) 8px;
@@ -2961,7 +3163,7 @@
         <div class="menu-links">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
@@ -2973,7 +3175,7 @@
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -2983,6 +3185,30 @@
   </header>
 
   <main>
+    <div class="info-session-overlay" id="info-session-overlay" aria-hidden="true">
+      <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
+        <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
+        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
+        <p class="info-session-meta">📅 April 18 • Live video session • ~30 minutes</p>
+        <p class="info-session-helper">Save your spot and we&rsquo;ll send the session link and program details. No payment required.</p>
+        <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
+          <input type="hidden" name="return-to" value="pricing.html" />
+          <input type="hidden" name="return-error" value="pricing.html" />
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="info-parent-name">Parent / Guardian Name</label>
+              <input id="info-parent-name" name="parent-name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="info-parent-email">Email Address</label>
+              <input id="info-parent-email" name="parent-email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+          <button class="btn teal gloss cta-standard info-session-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
+        </form>
+      </div>
+    </div>
+
     <section class="hero">
       <div class="wrap">
         <div class="hero-top">
@@ -2993,7 +3219,7 @@
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub mobile-hide-tagline">A nonprofit summer program where students build with AI and learn how money, value, and demand actually work.</div>
+          <div class="hero-sub mobile-hide-tagline">A nonprofit teaching financial literacy, design thinking, AI, and public speaking.</div>
         </div>
 
         <div class="hero-image banner">
@@ -3005,56 +3231,6 @@
             loading="eager"
             decoding="async"
           />
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="what-is-this">
-      <div class="section-banner purple">
-        <div class="wrap">
-          <h2>Pricing</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="section-copy pricing-info-copy">
-          <div class="pricing-block">
-            <p>4 weeks of guided product-building: two structured sprints focused on research, prototyping, testing, and iteration.</p>
-            <p><strong>$1500 + 13% HST</strong></p>
-            <p>Small-groups, 1 instructor x 10 participants, for ages 10&ndash;16.</p>
-            <p>Students use AI and mentor guidance to build, test, price, and improve products, services, and simple apps.</p>
-
-            <p><strong>Payment Options</strong></p>
-            <ul class="bullet-list">
-              <li>Interac e-Transfer &mdash; no fee</li>
-              <li>Credit card &mdash; 2.4% surcharge</li>
-            </ul>
-            <p><strong>Refund Policy</strong><br />Refunds available until June 1, 2026, less a $75 administration fee<br /><br />After June 1, fees are non-refundable<br />Medical exceptions may be considered</p>
-
-            <p><strong>What's Included</strong></p>
-            <ul class="bullet-list">
-              <li>Instructor-led workshops and guided build sessions</li>
-              <li>Materials and supplies</li>
-              <li>A student project budget for testing and iteration</li>
-              <li>A final Maker Market where students pitch what they built and see what people choose</li>
-            </ul>
-
-            <div class="pricing-schedule-row">
-              <div class="pricing-schedule-copy">
-                <p><strong>Schedule</strong><br />Weekdays, 9:00 AM&ndash;5:00 PM<br />Core instruction: 9:30 AM&ndash;3:30 PM</p>
-                <p><strong>Session Dates</strong><br />Session 1: July 6&ndash;17<br />Session 2: August 4&ndash;15</p>
-                <p><strong>Location</strong><br />UTSU Student Commons<br />230 College Street<br />Toronto, ON<br /><br />Easy TTC access</p>
-              </div>
-              <div class="location-map-card">
-                <iframe
-                  class="location-map"
-                  title="Map showing UTSU Student Commons at 230 College Street in Toronto"
-                  src="https://www.google.com/maps?q=UTSU%20Student%20Commons%2C%20230%20College%20Street%2C%20Toronto%2C%20ON%20M5T%201R2&z=15&output=embed"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -3180,27 +3356,146 @@
       </div>
     </section>
 
+    <section class="section" id="practical-note">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>A practical note</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="section-copy pricing-info-copy">
+          <p>The Money Club.Org is a <strong>nonprofit startup</strong>. We are building this program to support <strong>community spirit</strong>, <strong>practical knowledge-sharing</strong>, and <strong>local economic participation</strong> through tested frameworks and systems thinking.</p>
+          <p>To run the program responsibly, we need to generate about <strong>$61,000</strong> to cover core costs &mdash; mainly <strong>rent</strong> and <strong>University of Toronto student mentor wages</strong>. At current pricing, that means approximately <strong>60 four-week registrations</strong> or <strong>120 two-week sprints</strong>.</p>
+          <p>We share this openly because <strong>transparency is part of the model</strong>. The goal is not to maximize profit, but to build a <strong>fair, useful, community-rooted program</strong>.</p>
+          <p><strong>Help us reach our goal</strong> &mdash; and see whether your son or daughter is interested in <strong>building something real this summer</strong> at <strong>UTSU Student Commons</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="what-is-this">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>Pricing</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="section-copy pricing-info-copy">
+          <div class="pricing-block">
+            <p><strong>2-Week Builder Sprint</strong><br />$550 + 13% HST<br />A focused introduction.</p>
+            <p><strong>4-Week Full Program</strong><br />The full experience.<br />$1,100 + 13% HST</p>
+            <p>Small-groups, 1 instructor x 10 participants, for ages 10&ndash;16.</p>
+            <p>Students use AI and mentor guidance to build, test, price, and improve products, services, and simple apps.</p>
+
+            <p><strong>Payment Options</strong></p>
+            <ul class="bullet-list">
+              <li>Interac e-Transfer &mdash; no fee</li>
+              <li>Credit card &mdash; 2.4% surcharge</li>
+            </ul>
+            <p><strong>Refund Policy</strong><br />Because The Money Club.Org is a lean nonprofit startup, program fees are non-refundable. Each registration directly supports the costs of running the program, including venue, materials, and University of Toronto student mentor wages.</p>
+
+            <p><strong>What's Included</strong></p>
+            <ul class="bullet-list">
+              <li>Instructor-led workshops and guided build sessions</li>
+              <li>Materials and supplies</li>
+              <li>A student project budget for testing and iteration</li>
+              <li>A final Maker Market where students pitch what they built and see what people choose</li>
+            </ul>
+
+            <div class="pricing-schedule-row">
+              <div class="pricing-schedule-copy">
+                <p><strong>Schedule</strong><br />Weekdays, 9:00 AM&ndash;5:00 PM<br />Core instruction: 9:30 AM&ndash;3:30 PM</p>
+                <p><strong>Session Dates</strong><br />Session 1: July 6&ndash;17<br />Session 2: August 4&ndash;15</p>
+                <p><strong>Location</strong><br />UTSU Student Commons<br />230 College Street<br />Toronto, ON<br /><br />Easy TTC access</p>
+              </div>
+              <div class="location-map-card">
+                <iframe
+                  class="location-map"
+                  title="Map showing UTSU Student Commons at 230 College Street in Toronto"
+                  src="https://www.google.com/maps?q=UTSU%20Student%20Commons%2C%20230%20College%20Street%2C%20Toronto%2C%20ON%20M5T%201R2&z=15&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section-banner full-bleed purple heading-white quickfacts-section" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Free Info Session</h2>
+        <h2 id="join-the-interest-list">Reserve a Spot</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
       <div class="wrap">
         <div class="reservation-row registration-form-container">
           <div class="reservation-card">
-            <p class="interest-subhead">April 18 • Live video • 30 minutes</p>
-            <p class="interest-helper">Save your spot and we&apos;ll send the link and program details.</p>
-            <div class="form-success" id="form-success" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
+            <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We&apos;ll follow up by email.</div>
 <div class="form-loading" role="status" aria-live="polite">
   <div class="spinner" aria-hidden="true"></div>
   <div class="loading-text">Processing…</div>
 </div>
-
-            <form class="form-grid" action="apply-interest.php" method="post" novalidate>
-              <input type="hidden" name="return-to" value="pricing.html" />
-              <input type="hidden" name="return-error" value="pricing.html" />
-              <div class="field-row two-col">
+            <form class="form-grid" action="parent-approval.html" method="get" novalidate>
+              <div class="step-block">
+                <h2 class="form-step-title">Step 1 &mdash; Choose Your Program</h2>
+              </div>
+              <div class="field">
+                <div class="program-grid">
+                  <label class="program-card">
+                    <input type="radio" name="program-track" value="two-week-builder-sprint" required />
+                    <p class="program-title">2-Week Builder Sprint</p>
+                    <p class="program-price">$550</p>
+                    <p class="program-line">A focused introduction.</p>
+                    <p class="program-line">Build and test one idea.</p>
+                  </label>
+                  <label class="program-card">
+                    <input type="radio" name="program-track" value="four-week-full-program" />
+                    <p class="program-title">4-Week Full Program</p>
+                    <p class="program-price">$1,100</p>
+                    <p class="program-line">The full experience.</p>
+                    <p class="program-line">Deeper build, more iteration, final showcase.</p>
+                  </label>
+                </div>
+                <small class="field-error">Please choose a program.</small>
+              </div>
+              <div class="step-block">
+                <h2 class="form-step-title">Step 2 &mdash; Choose Your Session</h2>
+              </div>
+              <div class="field">
+                <label class="section-heading">Available Sessions</label>
+                <div class="session-grid gloss-active">
+                  <label class="session-card" data-session-key="session1">
+                    <input type="radio" name="preferred-session" value="fw_jul_6_31" required />
+                    <div class="session-card-body">
+                      <div class="session-title" data-session-title data-session-key="session1">July 6&ndash;31</div>
+                    </div>
+                  </label>
+                  <label class="session-card" data-session-key="session2">
+                    <input type="radio" name="preferred-session" value="fw_aug_4_28" />
+                    <div class="session-card-body">
+                      <div class="session-title" data-session-title data-session-key="session2">Aug 4&ndash;28</div>
+                    </div>
+                  </label>
+                  <label class="session-card is-hidden" data-session-key="session3" hidden style="display:none;">
+                    <input type="radio" name="preferred-session" value="tw_jul_20_31" />
+                    <div class="session-card-body">
+                      <div class="session-title" data-session-title data-session-key="session3">July 20&ndash;31</div>
+                    </div>
+                  </label>
+                  <label class="session-card is-hidden" data-session-key="session4" hidden style="display:none;">
+                    <input type="radio" name="preferred-session" value="tw_aug_17_28" />
+                    <div class="session-card-body">
+                      <div class="session-title" data-session-title data-session-key="session4">Aug 17&ndash;28</div>
+                    </div>
+                  </label>
+                </div>
+                <small class="field-error">Please select a session.</small>
+              </div>
+              <div class="step-block">
+                <h2 class="form-step-title">Step 3 &mdash; Parent &amp; Student Details</h2>
+              </div>
+              <div class="field-row three-col">
                 <div class="field">
                   <label for="parent-name">Parent / Guardian Name</label>
                   <input id="parent-name" name="parent-name" data-next="parent-email" type="text" autocomplete="name" required />
@@ -3208,14 +3503,37 @@
                 </div>
                 <div class="field">
                   <label for="parent-email">Email Address</label>
-                  <input id="parent-email" name="parent-email" type="email" autocomplete="email" required />
+                  <input id="parent-email" name="parent-email" data-next="parent-phone" type="email" autocomplete="email" required />
                   <small class="field-error">Enter a valid email address.</small>
                 </div>
+                <div class="field">
+                  <label for="parent-phone">Phone Number</label>
+                  <input id="parent-phone" name="parent-phone" data-next="student-name" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
+                  <small class="field-error">Phone number is required.</small>
+                </div>
               </div>
-              <div class="interest-submit-wrap">
-                <button class="btn teal gloss cta-standard interest-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
-                <small class="interest-trust-line">Small groups • Ages 10–16 • Downtown Toronto • UTSU Student Commons</small>
-                <a class="interest-register-link" href="/reserve-a-spot.html" data-cta-label="Complete registration here">Ready to register now? Complete registration here →</a>
+              <div class="field-row two-col">
+                <div class="field">
+                  <label for="student-name">Child’s Name</label>
+                  <input id="student-name" name="student-name" data-next="student-age" type="text" autocomplete="name" required />
+                  <small class="field-error">Child’s name is required.</small>
+                </div>
+                <div class="field">
+                  <label for="student-age">Child’s Age</label>
+                  <input id="student-age" name="student-age" type="number" min="10" max="16" step="1" inputmode="numeric" required />
+                  <small class="field-error">Child’s age is required.</small>
+                </div>
+              </div>
+              <div class="field terms-consent">
+                <label for="terms-agree">
+                  <input id="terms-agree" name="terms-agree" type="checkbox" required />
+                  <span>I agree to the <a href="program-terms.html">Terms &amp; Payment Policy</a>.</span>
+                </label>
+                <small class="field-error">Please agree to the Terms &amp; Payment Policy.</small>
+              </div>
+              <div class="register-actions">
+                <button class="register-btn" type="submit" data-cta-label="Register">Register</button>
+                <button class="info-session-trigger-btn" type="button" data-open-info-session data-cta-label="Need More Info Sign Up for a Free Info Session">Need More Info? Learn How The Money Club.Org Works &mdash; Sign Up for a Free Info Session</button>
               </div>
             </form>
           </div>
@@ -3305,7 +3623,117 @@
   </script>
   <script>
     (function(){
-      function updateFieldState(field){
+      var pagePath = window.location.pathname || '';
+      var pageTitle = document.title || '';
+      var formName = 'reserve_a_spot';
+      var registrationReadyTracked = false;
+
+      function pushFormEvent(payload){
+        if (!payload || !payload.event){ return; }
+        window.dataLayer = window.dataLayer || [];
+        if (!payload.form_name){ payload.form_name = formName; }
+        if (!payload.page_path){ payload.page_path = pagePath; }
+        if (!payload.page_title){ payload.page_title = pageTitle; }
+        window.dataLayer.push(payload);
+      }
+
+      function fireRegistrationFormStart(){
+        if (window.__tmcRegistrationFormStarted){ return; }
+        window.__tmcRegistrationFormStarted = true;
+        pushFormEvent({
+          event: 'registration_form_start',
+          form_id: 'registration',
+          funnel_step: 'form_start'
+        });
+      }
+
+      function getSelectedProgramTrack(){
+        var selectedProgram = document.querySelector('input[name="program-track"]:checked');
+        return selectedProgram ? selectedProgram.value : '';
+      }
+
+      function getSelectedSessionName(){
+        var selected = document.querySelector('input[name="preferred-session"]:checked');
+        return selected ? selected.value : '';
+      }
+
+      function getProgramConfig(programTrack){
+        var config = {
+          'two-week-builder-sprint': {
+            label: '2-Week Builder Sprint',
+            tuition: 550,
+            includes: 'Includes two weeks of instruction, materials, and a final demo.',
+            sessionOrder: {
+              session1: { value: 'tw_jul_6_17', label: 'July 6–17' },
+              session2: { value: 'tw_jul_20_31', label: 'July 20–31' },
+              session3: { value: 'tw_aug_4_15', label: 'Aug 4–15' },
+              session4: { value: 'tw_aug_17_28', label: 'Aug 17–28' }
+            },
+            sessions: {
+              tw_jul_6_17: 'July 6–17',
+              tw_jul_20_31: 'July 20–31',
+              tw_aug_4_15: 'Aug 4–15',
+              tw_aug_17_28: 'Aug 17–28'
+            }
+          },
+          'four-week-full-program': {
+            label: '4-Week Full Program',
+            tuition: 1100,
+            includes: 'Includes the full 4-week program, materials, and final presentation event.',
+            sessionOrder: {
+              session1: { value: 'fw_jul_6_31', label: 'July 6–31' },
+              session2: { value: 'fw_aug_4_28', label: 'Aug 4–28' }
+            },
+            sessions: {
+              fw_jul_6_31: 'July 6–31',
+              fw_aug_4_28: 'Aug 4–28'
+            }
+          }
+        };
+        return config[programTrack] || config['four-week-full-program'];
+      }
+
+      function getSelectedSessionLabel(){
+        var programTrack = getSelectedProgramTrack();
+        var sessionKey = getSelectedSessionName();
+        if (!sessionKey){ return ''; }
+        var config = getProgramConfig(programTrack);
+        return config.sessions[sessionKey] || sessionKey;
+      }
+
+      function persistSessionName(sessionName){
+        if (!sessionName){ return; }
+        try {
+          sessionStorage.setItem('tmc_registration_session_name', sessionName);
+        } catch (e) {}
+      }
+
+      function persistProgramTrack(programTrack){
+        if (!programTrack){ return; }
+        try {
+          sessionStorage.setItem('tmc_registration_program_track', programTrack);
+        } catch (e) {}
+      }
+
+      function getStoredValue(key){
+        try {
+          return sessionStorage.getItem(key) || '';
+        } catch (e) {
+          return '';
+        }
+      }
+
+      function pushRegistrationFormError(fieldName, message){
+        pushFormEvent({
+          event: 'registration_form_error',
+          form_id: 'registration',
+          error_field: fieldName || 'unknown',
+          error_message: message || 'Validation error',
+          funnel_step: 'form_error'
+        });
+      }
+
+      function updateFieldState(field, force){
         if (!field){ return; }
         var radios = field.querySelectorAll('input[type="radio"]');
         var checkbox = field.querySelector('input[type="checkbox"]');
@@ -3320,19 +3748,34 @@
         } else if (input){
           valid = input.checkValidity();
         }
-        field.classList.toggle('is-invalid', !valid);
+        if (valid){
+          field.classList.remove('is-invalid');
+          return;
+        }
+        var showErrors = force || field.dataset.touched === 'true';
+        field.classList.toggle('is-invalid', showErrors);
       }
 
       var forms = document.querySelectorAll('.form-grid');
       forms.forEach(function(form){
+        form.addEventListener('focusin', function(e){
+          var target = e.target;
+          if (!target || !target.matches || !target.matches('input, select, textarea')){ return; }
+          fireRegistrationFormStart();
+        }, true);
+
         form.addEventListener('submit', function(e){
           var fields = form.querySelectorAll('.field');
           fields.forEach(function(field){
-            updateFieldState(field);
+            field.dataset.touched = 'true';
+            updateFieldState(field, true);
           });
           if (!form.checkValidity()){
             e.preventDefault();
             var firstInvalid = form.querySelector(':invalid');
+            if (firstInvalid){
+              pushRegistrationFormError(firstInvalid.name, firstInvalid.validationMessage);
+            }
             if (firstInvalid){
               firstInvalid.focus();
             }
@@ -3340,63 +3783,34 @@
         });
 
         form.addEventListener('input', function(e){
-          updateFieldState(e.target.closest('.field'));
+          var target = e.target;
+          if (target && target.matches && target.matches('input, select, textarea')){
+            fireRegistrationFormStart();
+          }
+          updateFieldState(e.target.closest('.field'), false);
           updateFlowState();
         });
 
         form.addEventListener('change', function(e){
-          updateFieldState(e.target.closest('.field'));
+          updateFieldState(e.target.closest('.field'), false);
           updateFlowState();
+        });
+
+        form.addEventListener('focusout', function(e){
+          var field = e.target.closest('.field');
+          if (field){
+            field.dataset.touched = 'true';
+            updateFieldState(field, true);
+          }
         });
       });
 
-      var params = new URLSearchParams(window.location.search);
-      var success = document.getElementById('form-success');
-      if (success && params.get('status') === 'sent') {
-        success.classList.add('is-visible');
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'tmc_interest_form_success',
-          form_name: 'interest_form',
-          funnel_step: 'form_success',
-          page_location: window.location.pathname,
-          form_context: 'pricing'
-        });
-      }
-      if (params.get('status') === 'error') {
-        var fieldName = params.get('field');
-        var message = params.get('message') || 'Please check the highlighted field.';
-        if (fieldName) {
-          if (fieldName === 'payment-method') {
-            var paymentSection = document.querySelector('.payment-section');
-            if (paymentSection) {
-              paymentSection.classList.add('is-invalid');
-              var paymentError = paymentSection.querySelector('.field-error');
-              if (paymentError) {
-                paymentError.textContent = message;
-              }
-              paymentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-          } else {
-            var input = document.querySelector('[name=\"' + fieldName + '\"]');
-            if (input) {
-              var field = input.closest('.field');
-              if (field) {
-                field.classList.add('is-invalid');
-                var errorEl = field.querySelector('.field-error');
-                if (errorEl) {
-                  errorEl.textContent = message;
-                }
-                field.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              }
-            }
-          }
-        }
-      }
-
+      var programRadios = document.querySelectorAll('input[name="program-track"]');
       var sessionRadios = document.querySelectorAll('input[name="preferred-session"]');
-      var paymentButtons = document.querySelectorAll('.payment-option');
+      var registrationForm = document.querySelector('#reserve-a-spot form.form-grid');
+      var registerButton = registrationForm ? registrationForm.querySelector('.register-btn') : null;
       var sessionGrid = document.querySelector('.session-grid');
+      var sessionTitleEls = document.querySelectorAll('[data-session-title]');
       var baseRequiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
       var termsAgree = document.getElementById('terms-agree');
 
@@ -3415,6 +3829,40 @@
         });
       }
 
+      function programSelected(){
+        return Array.prototype.some.call(programRadios, function(radio){
+          return radio.checked;
+        });
+      }
+
+      function updateProgramDrivenContent(){
+        var selectedTrack = getSelectedProgramTrack();
+        var config = getProgramConfig(selectedTrack);
+        sessionTitleEls.forEach(function(titleEl){
+          var sessionSlot = titleEl.getAttribute('data-session-key');
+          if (!sessionSlot){ return; }
+          var card = titleEl.closest('.session-card');
+          var input = card ? card.querySelector('input[type="radio"]') : null;
+          var slotConfig = config.sessionOrder && config.sessionOrder[sessionSlot] ? config.sessionOrder[sessionSlot] : null;
+          if (slotConfig){
+            titleEl.textContent = slotConfig.label;
+            if (input){ input.value = slotConfig.value; }
+            if (card){
+              card.classList.remove('is-hidden');
+              card.hidden = false;
+              card.style.display = '';
+            }
+          } else {
+            if (input){ input.checked = false; }
+            if (card){
+              card.classList.add('is-hidden');
+              card.hidden = true;
+              card.style.display = 'none';
+            }
+          }
+        });
+      }
+
       function termsAgreed(){
         return !termsAgree || termsAgree.checked;
       }
@@ -3426,7 +3874,7 @@
       }
 
       function setSessionState(){
-        var canSelectSession = baseFieldsValid();
+        var canSelectSession = programSelected();
         if (sessionGrid){
           sessionGrid.classList.toggle('is-locked', !canSelectSession);
           sessionGrid.classList.toggle('gloss-active', canSelectSession && !sessionSelected());
@@ -3434,15 +3882,8 @@
         sessionRadios.forEach(function(radio){
           var card = radio.closest('.session-card');
           var isFull = card && card.classList.contains('is-full');
-          radio.disabled = !canSelectSession || isFull;
-        });
-      }
-
-      function setPaymentState(enabled){
-        paymentButtons.forEach(function(btn){
-          btn.classList.toggle('is-disabled', !enabled);
-          btn.classList.toggle('is-enabled', enabled);
-          btn.setAttribute('aria-disabled', String(!enabled));
+          var isHidden = card && (card.classList.contains('is-hidden') || card.hidden);
+          radio.disabled = !canSelectSession || isFull || isHidden;
         });
       }
 
@@ -3468,52 +3909,82 @@
         }
       }
 
+      function showProgramError(){
+        var programField = document.querySelector('.field .program-grid');
+        if (programField){
+          var field = programField.closest('.field');
+          if (field){
+            field.classList.add('is-invalid');
+          }
+          programField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      function getFirstInvalidBaseField(){
+        var invalid = null;
+        Array.prototype.some.call(baseRequiredInputs, function(input){
+          if (!input.checkValidity()){
+            invalid = input;
+            return true;
+          }
+          return false;
+        });
+        return invalid;
+      }
+
       function updateFlowState(){
+        updateProgramDrivenContent();
         setSessionState();
-        var canPay = baseFieldsValid() && sessionSelected() && termsAgreed();
-        setPaymentState(canPay);
+        var canPay = programSelected() && baseFieldsValid() && sessionSelected() && termsAgreed();
+        if (registerButton){
+          registerButton.disabled = !canPay;
+          registerButton.setAttribute('aria-disabled', String(!canPay));
+        }
+        if (canPay && !registrationReadyTracked){
+          registrationReadyTracked = true;
+        }
       }
 
       updateFlowState();
 
       function getProgramFeeValue(form){
-        var paymentMeta = form ? form.querySelector('.payment-meta') : null;
-        var sourceText = paymentMeta ? paymentMeta.textContent : '';
-        var match = sourceText.match(/\$([0-9][0-9,]*(?:\.[0-9]{2})?)/);
-        if (!match){
-          return 750;
-        }
-        var value = parseFloat(match[1].replace(/,/g, ''));
-        return isNaN(value) ? 750 : value;
+        var config = getProgramConfig(getSelectedProgramTrack());
+        var value = config && typeof config.tuition === 'number' ? config.tuition : 0;
+        return value > 0 ? value : 1100;
       }
-
-      function pushBeginCheckout(form){
-        if (!form || form.dataset.beginCheckoutTracked === 'true'){
-          return;
-        }
-        form.dataset.beginCheckoutTracked = 'true';
-        window.dataLayer = window.dataLayer || [];
-        var value = getProgramFeeValue(form);
-        window.dataLayer.push({
-          event: 'begin_checkout',
-          currency: 'CAD',
-          value: value,
-          items: [
-            {
-              item_id: 'money-club-summer-camp',
-              item_name: 'The Money Club.Org Summer Camp',
-              item_category: 'Summer Camp',
-              price: value,
-              quantity: 1
-            }
-          ],
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
+      function pushRegistrationSubmitted(sessionName, programTrack){
+        pushFormEvent({
+          event: 'registration_form_submitted',
+          form_id: 'registration',
+          payment_method: 'registration',
+          session_name: sessionName || 'unspecified',
+          program_track: programTrack || 'unspecified',
+          funnel_step: 'registration_payment'
         });
       }
 
+      programRadios.forEach(function(radio){
+        radio.addEventListener('change', function(){
+          var selectedProgram = radio.value || '';
+          persistProgramTrack(selectedProgram);
+          sessionRadios.forEach(function(sessionRadio){
+            sessionRadio.checked = false;
+          });
+          updateFlowState();
+        });
+      });
+
       sessionRadios.forEach(function(radio){
         radio.addEventListener('change', function(){
+          var sessionKey = radio.value || '';
+          var sessionName = getSelectedSessionLabel() || sessionKey;
+          persistSessionName(sessionName);
+          pushFormEvent({
+            event: 'session_select',
+            session_name: sessionName,
+            program_track: getSelectedProgramTrack() || 'unspecified',
+            funnel_step: 'session_selected'
+          });
           updateFlowState();
         });
       });
@@ -3522,48 +3993,69 @@
         sessionGrid.addEventListener('click', function(e){
           if (sessionGrid.classList.contains('is-locked')){
             e.preventDefault();
-            showFirstInvalidField();
+            pushRegistrationFormError('program-track', 'Please select a program first.');
+            showProgramError();
           }
         });
       }
 
-      paymentButtons.forEach(function(btn){
-        btn.addEventListener('click', function(e){
-          var form = btn.form;
-          if (form) {
-            var returnTo = form.querySelector('[name="return-to"]');
-            var returnCancel = form.querySelector('[name="return-cancel"]');
-            var currentPage = window.location.pathname.split('/').pop() || 'reserve-a-spot.html';
-            if (returnCancel){ returnCancel.value = currentPage; }
-
-            if (btn.value === 'Credit Card') {
-              form.setAttribute('action', 'stripe-checkout.php');
-              if (returnTo){ returnTo.value = 'thank-you-credit-card.php'; }
-            } else {
-              form.setAttribute('action', 'apply-camper.php');
-              if (returnTo){ returnTo.value = 'etransfer.html'; }
-            }
+      if (registrationForm){
+        registrationForm.addEventListener('submit', function(e){
+          if (!programSelected()){
+            e.preventDefault();
+            pushRegistrationFormError('program-track', 'Please select a program.');
+            showProgramError();
+            return;
           }
           if (!baseFieldsValid()){
             e.preventDefault();
+            var invalidBase = getFirstInvalidBaseField();
+            if (invalidBase){
+              pushRegistrationFormError(invalidBase.name, invalidBase.validationMessage);
+            }
             showFirstInvalidField();
             return;
           }
           if (!sessionSelected()){
             e.preventDefault();
+            pushRegistrationFormError('preferred-session', 'Please select a session.');
             showSessionError();
             return;
           }
           if (!termsAgreed()){
             e.preventDefault();
+            pushRegistrationFormError('terms-agree', 'Please agree to the Terms & Payment Policy.');
             showFirstInvalidField();
             return;
           }
-          if (btn.value === 'Credit Card') {
-            pushBeginCheckout(form);
-          }
+
+          e.preventDefault();
+          var sessionName = getSelectedSessionLabel() || getSelectedSessionName();
+          var programTrack = getSelectedProgramTrack();
+          persistSessionName(sessionName);
+          persistProgramTrack(programTrack);
+          try {
+            sessionStorage.setItem('tmc_registration_payment_method', 'registration');
+            sessionStorage.setItem('tmc_parent_approval_prefill', JSON.stringify({
+              parent_name: document.getElementById('parent-name') ? document.getElementById('parent-name').value.trim() : '',
+              parent_email: document.getElementById('parent-email') ? document.getElementById('parent-email').value.trim() : '',
+              parent_phone: document.getElementById('parent-phone') ? document.getElementById('parent-phone').value.trim() : '',
+              student_name: document.getElementById('student-name') ? document.getElementById('student-name').value.trim() : '',
+              student_age: document.getElementById('student-age') ? document.getElementById('student-age').value.trim() : '',
+              session: getSelectedSessionName(),
+              program_track: programTrack || ''
+            }));
+          } catch (err) {}
+
+          pushFormEvent({
+            event: 'payment_method_select',
+            payment_method: 'registration',
+            funnel_step: 'payment_selected'
+          });
+          pushRegistrationSubmitted(sessionName, programTrack);
+          window.location.href = 'parent-approval.html';
         });
-      });
+      }
     })();
   </script>
   <script>
@@ -3727,10 +4219,9 @@
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
-        if (isReserveCta(target)){
-          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
-        }
+        var payload = buildCtaPayload(target, 'cta_click');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
+        window.dataLayer.push(payload);
       }
 
       document.addEventListener('click', function(event){
@@ -3738,10 +4229,18 @@
         if (!target){
           return;
         }
-        // Exclude interest form submit controls from generic CTA tracking
-        // These are tracked separately via interest_form_* events
+        // Exclude form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* and registration_form_* events
         var interestForm = target.closest('form[action="apply-interest.php"]');
         if (interestForm){
+          return;
+        }
+        var submitForm = target.closest('form');
+        var isSubmitControl = !!submitForm && (
+          target.matches('button[type="submit"], input[type="submit"]') ||
+          (target.tagName === 'BUTTON' && (!target.type || target.type.toLowerCase() === 'submit'))
+        );
+        if (isSubmitControl){
           return;
         }
         if (!(
@@ -3781,11 +4280,132 @@
   </script>
 
   <script>
+    (function(){
+      var openLinks = document.querySelectorAll('[data-open-info-session]');
+      var overlay = document.getElementById('info-session-overlay');
+      if (!openLinks.length || !overlay){ return; }
+      var closeBtn = overlay.querySelector('.info-session-close');
+      var modal = overlay.querySelector('.info-session-modal');
+      var modalIsOpen = overlay.classList.contains('is-open');
+      var activeTrigger = null;
+
+      function pushModalEvent(eventName, funnelStep){
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: eventName,
+          form_name: 'interest_form',
+          form_id: 'interest',
+          funnel_step: funnelStep,
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
+      function openInfoSession(triggerEl){
+        if (modalIsOpen){ return; }
+        activeTrigger = triggerEl || null;
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('info-session-open');
+        modalIsOpen = true;
+        pushModalEvent('info_session_modal_open', 'modal_open');
+        if (closeBtn){
+          closeBtn.focus();
+        }
+      }
+
+      function closeInfoSession(){
+        if (!modalIsOpen){ return; }
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('info-session-open');
+        modalIsOpen = false;
+        pushModalEvent('info_session_modal_close', 'modal_close');
+        if (activeTrigger && typeof activeTrigger.focus === 'function'){
+          activeTrigger.focus();
+        }
+      }
+
+      openLinks.forEach(function(openLink){
+        openLink.addEventListener('click', function(e){
+          e.preventDefault();
+          openInfoSession(openLink);
+        });
+      });
+
+      if (closeBtn){
+        closeBtn.addEventListener('click', function(){
+          closeInfoSession();
+        });
+      }
+
+      overlay.addEventListener('click', function(e){
+        if (modal && !modal.contains(e.target)){
+          closeInfoSession();
+        }
+      });
+
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')){
+          closeInfoSession();
+        }
+      });
+    })();
+  </script>
+
+  <script>
     window.dataLayer = window.dataLayer || [];
 
     (function(){
-      var interestForm = document.querySelector('form[action="apply-interest.php"]');
+      var interestForm = document.querySelector('form.info-session-form[action="apply-interest.php"]');
       if (!interestForm){ return; }
+
+      var params = new URLSearchParams(window.location.search);
+      var hasPendingInterestSubmit = false;
+      try {
+        hasPendingInterestSubmit = sessionStorage.getItem('tmc_interest_submit_pending') === '1';
+      } catch (e) {}
+
+      if (params.get('status') === 'sent' && hasPendingInterestSubmit){
+        var dedupeKey = 'interest_form_submitted:' + (window.location.pathname || '') + ':' + window.location.search;
+        var alreadyTracked = false;
+        try {
+          alreadyTracked = sessionStorage.getItem(dedupeKey) === '1';
+          if (!alreadyTracked){
+            sessionStorage.setItem(dedupeKey, '1');
+          }
+        } catch (e) {}
+
+        if (!alreadyTracked){
+          window.dataLayer.push({
+            event: 'interest_form_success',
+            form_name: 'interest_form',
+            form_id: 'interest',
+            funnel_step: 'form_success',
+            page_location: window.location.pathname,
+            form_context: 'pricing'
+          });
+        }
+
+        try {
+          sessionStorage.removeItem('tmc_interest_submit_pending');
+        } catch (e) {}
+
+        params.delete('status');
+        params.delete('field');
+        params.delete('message');
+        var cleanQuery = params.toString();
+        var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
+        try {
+          window.history.replaceState({}, document.title, cleanUrl);
+        } catch (e) {}
+      }
+
+      if (params.get('status') === 'error'){
+        try {
+          sessionStorage.removeItem('tmc_interest_submit_pending');
+        } catch (e) {}
+      }
 
       function fireInterestFormStart(){
         if (window.__tmcInterestFormStarted){ return; }
@@ -3794,6 +4414,7 @@
         window.dataLayer.push({
           event: 'interest_form_start',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_start',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
@@ -3801,9 +4422,14 @@
       }
 
       function pushInterestFormSubmit(){
+        try {
+          sessionStorage.setItem('tmc_interest_submit_pending', '1');
+        } catch (e) {}
+
         window.dataLayer.push({
           event: 'interest_form_submit',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_submit',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
@@ -3816,6 +4442,7 @@
           error_field: fieldName || 'unknown',
           error_message: message || 'Validation error',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_error',
           page_path: window.location.pathname || '',
           page_title: document.title || ''

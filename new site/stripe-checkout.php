@@ -42,6 +42,7 @@ $parent_email = isset($_POST['parent-email']) ? trim($_POST['parent-email']) : '
 $parent_phone = isset($_POST['parent-phone']) ? trim($_POST['parent-phone']) : '';
 $student_name = isset($_POST['student-name']) ? trim($_POST['student-name']) : '';
 $student_age = isset($_POST['student-age']) ? trim($_POST['student-age']) : '';
+$program_track = isset($_POST['program-track']) ? trim($_POST['program-track']) : '';
 $preferred_session = isset($_POST['preferred-session']) ? trim($_POST['preferred-session']) : '';
 $preferred_month = isset($_POST['preferred-month']) ? trim($_POST['preferred-month']) : '';
 $payment_method = isset($_POST['payment-method']) ? trim($_POST['payment-method']) : '';
@@ -52,6 +53,7 @@ $allowed_returns = [
     'reserve-a-spot.html',
     'schedule-pricing.html',
     'how-it-works.html',
+    'pricing.html',
     'open-book-hook.html',
     'schedule-pricing.html',
     'index.html'
@@ -72,7 +74,7 @@ function redirect_with_error($return_to, $field, $message) {
     exit;
 }
 
-log_debug('stripe-checkout POST email=' . $parent_email . ' phone=' . $parent_phone . ' age=' . $student_age . ' session=' . $preferred_session . ' payment=' . $payment_method);
+log_debug('stripe-checkout POST email=' . $parent_email . ' phone=' . $parent_phone . ' age=' . $student_age . ' program=' . $program_track . ' session=' . $preferred_session . ' payment=' . $payment_method);
 
 if ($parent_name === '') {
     redirect_with_error($return_error, 'parent-name', 'Parent/guardian name is required.');
@@ -92,28 +94,50 @@ if ($phone_digits === '' || strlen($phone_digits) < 10 || strlen($phone_digits) 
 }
 
 $age_value = filter_var($student_age, FILTER_VALIDATE_INT, [
-    'options' => ['min_range' => 11, 'max_range' => 17]
+    'options' => ['min_range' => 10, 'max_range' => 16]
 ]);
 if ($age_value === false) {
-    redirect_with_error($return_error, 'student-age', 'Child’s age must be between 11 and 17.');
+    redirect_with_error($return_error, 'student-age', 'Child’s age must be between 10 and 16.');
 }
 
 if ($student_name === '') {
     redirect_with_error($return_error, 'student-name', 'Child’s name is required.');
 }
 
-$session_map = [
-    'session1' => 'Session 1: July 6-31, 2026',
-    'session2' => 'Session 2: August 4-28, 2026'
+$program_options = [
+    'two-week-builder-sprint' => [
+        'label' => '2-Week Builder Sprint',
+        'tuition' => 750,
+        'sessions' => [
+            'session1' => 'July 6-17, 2026',
+            'session2' => 'August 4-15, 2026'
+        ]
+    ],
+    'four-week-full-program' => [
+        'label' => '4-Week Full Program',
+        'tuition' => 1100,
+        'sessions' => [
+            'session1' => 'July 6-31, 2026',
+            'session2' => 'August 4-28, 2026'
+        ]
+    ]
 ];
+
+if (!array_key_exists($program_track, $program_options)) {
+    redirect_with_error($return_error, 'program-track', 'Please select a valid program.');
+}
 
 if ($preferred_session === '' && $preferred_month !== '') {
     $preferred_session = $preferred_month === 'July' ? 'session1' : 'session2';
 }
 
-if (!array_key_exists($preferred_session, $session_map)) {
+if (!array_key_exists($preferred_session, $program_options[$program_track]['sessions'])) {
     redirect_with_error($return_error, 'preferred-session', 'Please select a session.');
 }
+
+$program_label = $program_options[$program_track]['label'];
+$session_label = $program_options[$program_track]['sessions'][$preferred_session];
+$program_fee_cents = (int) round(((float)$program_options[$program_track]['tuition']) * 100);
 
 if ($terms_agree === '') {
     redirect_with_error($return_error, 'terms-agree', 'Please agree to the Terms & Payment Policy.');
@@ -136,6 +160,7 @@ $allowed_returns = [
     'reserve-a-spot.html',
     'schedule-pricing.html',
     'how-it-works.html',
+    'pricing.html',
     'open-book-hook.html',
     'schedule-pricing.html',
     'index.html'
@@ -145,19 +170,8 @@ if (!in_array($cancel_return, $allowed_returns, true)) {
 }
 $cancel_url = $base_url . '/' . $cancel_return . '?payment=cancelled';
 
-$session_product_map = [
-    'session1' => 'prod_U0Kd1JWTTeNs6L',
-    'session2' => 'prod_U0KdEfczdJUihI'
-];
-$surcharge_product_id = 'prod_U0Kd6qahHtdbbU';
-$session_product_id = $session_product_map[$preferred_session] ?? null;
-if ($session_product_id === null) {
-    redirect_with_error($return_error, 'preferred-session', 'Please select a valid session.');
-}
-
-$program_fee_cents = 150000;
 $hst_cents = (int) round($program_fee_cents * 0.13);
-$card_surcharge_cents = 4068;
+$card_surcharge_cents = (int) round(($program_fee_cents + $hst_cents) * 0.024);
 
 $data = [
     'mode' => 'payment',
@@ -170,7 +184,9 @@ $data = [
         [
             'price_data' => [
                 'currency' => 'cad',
-                'product' => $session_product_id,
+                'product_data' => [
+                    'name' => $program_label . ' — ' . $session_label
+                ],
                 'unit_amount' => $program_fee_cents,
             ],
             'quantity' => 1,
@@ -188,7 +204,9 @@ $data = [
         [
             'price_data' => [
                 'currency' => 'cad',
-                'product' => $surcharge_product_id,
+                'product_data' => [
+                    'name' => 'Credit Card Processing (2.4%)',
+                ],
                 'unit_amount' => $card_surcharge_cents,
             ],
             'quantity' => 1,
@@ -200,7 +218,11 @@ $data = [
         'parent_phone' => $parent_phone,
         'student_name' => $student_name,
         'student_age' => (string)$student_age,
+        'program_track' => $program_track,
+        'program_label' => $program_label,
+        'program_tuition' => number_format($program_fee_cents / 100, 2, '.', ''),
         'preferred_session' => $preferred_session,
+        'session_label' => $session_label,
         'terms_agree' => 'Yes'
     ]
 ];
@@ -238,7 +260,9 @@ $lines[] = 'Email: ' . $parent_email;
 $lines[] = 'Phone: ' . ($parent_phone !== '' ? $parent_phone : '(not provided)');
 $lines[] = 'Child Name: ' . ($student_name !== '' ? $student_name : '(not provided)');
 $lines[] = 'Child Age: ' . ($student_age !== '' ? $student_age : '(not provided)');
-$lines[] = 'Session: ' . ($session_map[$preferred_session] ?? $preferred_session);
+$lines[] = 'Program: ' . $program_label;
+$lines[] = 'Session: ' . $session_label;
+$lines[] = 'Program tuition: $' . number_format($program_fee_cents / 100, 2) . ' CAD (+HST)';
 $lines[] = 'Payment method: Credit Card (Stripe checkout started)';
 $lines[] = 'Stripe session id: ' . ($result['id'] ?? '(unknown)');
 $lines[] = 'Checkout URL: ' . ($result['url'] ?? '(unknown)');

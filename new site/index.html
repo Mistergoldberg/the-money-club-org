@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AI Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org</title>
+  <title>Nonprofit Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="description" content="A 4-week Toronto summer camp for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
   <meta property="og:title" content="AI Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org" />
   <meta property="og:description" content="A 4-week Toronto summer camp for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
   <meta property="og:url" content="https://the-money-club.org/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://the-money-club.org/assets/vibe-coding-2-ls.jpg" />
+  <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AI Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org" />
   <meta name="twitter:description" content="A 4-week Toronto summer camp for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
-  <meta name="twitter:image" content="https://the-money-club.org/assets/vibe-coding-2-ls.jpg" />
+  <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/" />
   <script type="application/ld+json">
     {
@@ -49,7 +49,7 @@
           ],
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://the-money-club.org/assets/vibe-coding-2-ls.jpg"
+            "url": "https://the-money-club.org/assets/Kids-Index.jpg"
           }
         },
         {
@@ -88,7 +88,7 @@
             "@type": "ImageObject",
             "url": "https://the-money-club.org/assets/logo-500.png"
           },
-          "image": "https://the-money-club.org/assets/vibe-coding-2-ls.jpg",
+          "image": "https://the-money-club.org/assets/Kids-Index.jpg",
           "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 10–16.",
           "address": {
             "@type": "PostalAddress",
@@ -259,6 +259,10 @@
       --size-xl: clamp(38px, 6.2vw, 77px);
       --size-hero: clamp(52px, 9vw, 110px);
       --size-headline: clamp(34px, 5.2vw, 64px);
+      --size-section-copy: clamp(21px, 1.55vw, 23px);
+      --size-section-subhead: clamp(28px, 2.45vw, 34px);
+      --lh-section-copy: 1.42;
+      --lh-section-subhead: 1.14;
 
       --max: 1200px;
       --max-wide: 1320px;
@@ -599,9 +603,8 @@
     }
     .hero-image{
       width: 100%;
-      aspect-ratio: 1920 / 877;
       border-radius: 22px;
-      overflow: hidden;
+      overflow-y: auto;
       border: 1px solid var(--line);
       margin-top: 12px;
     }
@@ -611,14 +614,13 @@
       height: auto;
     }
     .hero-image.banner img{
-      height: 100%;
+      height: clamp(220px, 32vw, 420px);
       object-fit: cover;
       object-position: center 35%;
     }
 
     /* Sections */
     .section{ margin-top: var(--space-6); }
-    #how-it-works,
     #choose-your-adventure{
       display: none;
     }
@@ -688,6 +690,46 @@
       max-width: var(--content-max);
     }
     .section-copy p{ margin: 0; }
+    /* Shared type rhythm for visible homepage narrative sections */
+    #built-like-a-business .section-copy,
+    #radical-transparency .radical-copy,
+    #who-runs-it .section-copy,
+    #outcomes .outcome-copy,
+    #what-is-this .section-copy{
+      font-size: var(--size-section-copy);
+      line-height: var(--lh-section-copy);
+    }
+    #built-like-a-business .section-copy p,
+    #radical-transparency .radical-copy p,
+    #who-runs-it .section-copy p,
+    #outcomes .outcome-copy p,
+    #what-is-this .section-copy p{
+      line-height: var(--lh-section-copy);
+    }
+    #built-like-a-business .section-copy li,
+    #radical-transparency .radical-copy li,
+    #who-runs-it .section-copy li,
+    #outcomes .outcome-copy li,
+    #what-is-this .section-copy li{
+      line-height: var(--lh-section-copy);
+    }
+    #radical-transparency .radical-copy h3,
+    #outcomes .outcome-title,
+    #who-runs-it .section-copy > div strong{
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: var(--size-section-subhead);
+      line-height: var(--lh-section-subhead);
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    #who-runs-it .section-copy > div{
+      margin: 0;
+    }
+    #who-runs-it .section-copy > div strong{
+      display: block;
+    }
     .section-image{
       border-radius: 18px;
       overflow-y: auto;
@@ -791,6 +833,7 @@
       font-weight: 700;
       line-height: 1.15;
       text-wrap: balance;
+      text-align: center;
     }
     #built-like-a-business .program-summary-keep{
       white-space: normal;
@@ -809,6 +852,8 @@
       align-items: start;
       column-gap: 10px;
       line-height: 1.28;
+      width: fit-content;
+      margin: 0 auto;
     }
     #built-like-a-business .program-summary-point-icon{
       display: block;
@@ -906,6 +951,7 @@
       font-size: 1.08em;
       line-height: 1.15;
       font-weight: 700;
+      text-align: center;
     }
     #built-like-a-business .program-summary-cta-group .cta-fill{
       width: 100%;
@@ -1143,11 +1189,14 @@
       text-align: center;
     }
     #radical-transparency .openbook-pie-card .btn{
-      font-size: clamp(30px, 2.6vw, 44px);
-      padding: 28px 24px;
-      border-radius: 22px;
-      min-height: 104px;
+      font-size: clamp(22px, 1.8vw, 32px);
+      padding: 18px 16px;
+      border-radius: 14px;
+      min-height: 76px;
       line-height: 0.9;
+      background: var(--purple);
+      color: #ffffff;
+      box-shadow: 0 10px 20px rgba(140,98,167,0.25);
     }
     #who-runs-it .section-copy{
       max-width: min(100%, 78rem);
@@ -1181,12 +1230,6 @@
     }
     #outcomes .outcome-title{
       margin: 0;
-      font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.08;
-      font-family: var(--font-body);
-      font-weight: 700;
-      letter-spacing: 0;
-      text-transform: none;
     }
     #outcomes .outcome-copy p{
       margin: 0;
@@ -1214,6 +1257,102 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    body.info-session-open{
+      overflow: hidden;
+    }
+    .info-session-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 1400;
+      display: none;
+      align-items: center;
+      justify-items: center;
+      background: rgba(12, 12, 12, 0.62);
+      padding: clamp(14px, 3vw, 24px);
+    }
+    .info-session-overlay.is-open{
+      display: grid;
+    }
+    .info-session-modal{
+      width: min(760px, 100%);
+      max-height: min(90vh, 920px);
+      overflow: auto;
+      background: #f4f4f2;
+      border: 1px solid #d7d1c7;
+      border-radius: 20px;
+      box-shadow: 0 18px 42px rgba(0,0,0,0.26);
+      padding: clamp(18px, 3vw, 28px);
+      display: grid;
+      gap: 12px;
+    }
+    .info-session-close{
+      justify-self: end;
+      width: 38px;
+      height: 38px;
+      border: 4px solid #0a63ce;
+      border-radius: 999px;
+      background: #f4f4f2;
+      color: var(--ink);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .info-session-title{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      line-height: 1.1;
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 700;
+      color: var(--ink);
+      text-align: center;
+    }
+    .info-session-meta{
+      margin: 0;
+      font-size: clamp(18px, 2.1vw, 24px);
+      line-height: 1.2;
+      color: var(--ink);
+      font-weight: 600;
+      text-align: center;
+    }
+    .info-session-helper{
+      margin: 0;
+      color: var(--muted);
+      text-align: center;
+    }
+    .info-session-form{
+      display: grid;
+      gap: 16px;
+    }
+    .info-session-form .field{
+      max-width: none;
+    }
+    .info-session-form .field label{
+      color: #1c1e22;
+      font-weight: 700;
+    }
+    .info-session-form .field input{
+      border-radius: 24px;
+      border: 1px solid #c8bfb1;
+      background: #f2f1ee;
+      color: #1c1e22;
+      padding: 14px 16px;
+    }
+    .info-session-form .field input::placeholder{
+      color: #7b7b7b;
+    }
+    .info-session-form .field input:focus{
+      outline: none;
+      border-color: #8c62a7;
+      box-shadow: 0 0 0 2px rgba(140,98,167,0.15);
+      background: #f5f4f2;
+    }
+    .info-session-submit{
+      width: 100%;
+      justify-content: center;
     }
     .week-list{
       gap: 14px;
@@ -1862,13 +2001,12 @@
     }
     .radical-copy{
       display:grid;
-      gap: 12px;
-      max-width: 70ch;
+      gap: 14px;
+      max-width: 74ch;
     }
     .radical-copy p{ margin: 0; }
     .radical-copy h3{
       margin: 6px 0 0;
-      font-size: clamp(22px, 3vw, 30px);
     }
     .radical-side h3{
       margin: 0;
@@ -1876,7 +2014,7 @@
     }
     .radical-list{
       display:grid;
-      gap: 6px;
+      gap: 8px;
       margin: 0;
       padding-left: 18px;
     }
@@ -1890,6 +2028,81 @@
       display:grid;
       gap: 16px;
       align-items: start;
+    }
+    #radical-transparency .program-summary{
+      width: 100%;
+      margin: 0;
+      padding: clamp(24px, 2.4vw, 34px);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 14px 28px rgba(17,17,17,0.08);
+      text-align: left;
+      font-size: inherit;
+      line-height: var(--lh-body);
+    }
+    #radical-transparency .radical-summary-row{
+      margin-top: clamp(18px, 2.4vw, 28px);
+      width: 100%;
+    }
+    #radical-transparency .program-summary-meta{
+      margin: 0 0 18px;
+      font-size: 1.08em;
+      font-weight: 700;
+      line-height: 1.15;
+      text-wrap: balance;
+      text-align: center;
+    }
+    #radical-transparency .program-summary-keep{
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+    #radical-transparency .program-summary-points{
+      display: grid;
+      gap: 12px;
+      margin: 0 0 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+    #radical-transparency .program-summary-point{
+      display: grid;
+      grid-template-columns: 1.4em minmax(0, 1fr);
+      align-items: start;
+      column-gap: 10px;
+      line-height: 1.28;
+      width: fit-content;
+      margin: 0 auto;
+    }
+    #radical-transparency .program-summary-point-icon{
+      display: block;
+      line-height: 1;
+    }
+    #radical-transparency .program-summary-point-text{
+      display: block;
+    }
+    #radical-transparency .program-summary-cta-group{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 4px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      text-align: left;
+    }
+    #radical-transparency .program-summary-cta-title{
+      margin: 0;
+      font-size: 1.08em;
+      line-height: 1.15;
+      font-weight: 700;
+      text-align: center;
+    }
+    #radical-transparency .program-summary-cta-group .cta-fill{
+      width: 100%;
+      justify-self: stretch;
+      min-height: 76px;
+      padding: 18px 16px;
+      font-size: clamp(22px, 1.8vw, 32px);
+      border-radius: 14px;
     }
     .radical-side .btn{
       width: 100%;
@@ -1906,43 +2119,62 @@
       overflow: hidden;
     }
     .openbook-pie-card{
-      border-radius: 18px;
+      border-radius: 22px;
       border: 1px solid var(--line);
       background: #ffffff;
-      padding: 16px;
+      padding: clamp(20px, 2.1vw, 26px);
       display: grid;
-      gap: 12px;
+      gap: 16px;
+      width: min(100%, 560px);
+      justify-self: center;
+      box-shadow: 0 14px 28px rgba(17,17,17,0.08);
     }
     .openbook-subheading{
-      margin: 0 0 10px;
+      margin: 0;
       text-align: center;
+      font-size: clamp(30px, 2.6vw, 40px);
+      line-height: 1.05;
     }
     .openbook-subtitle{
       display: block;
-      font-size: clamp(14px, 2vw, 18px);
+      font-size: clamp(16px, 1.7vw, 20px);
       font-weight: 500;
       color: var(--muted);
       text-transform: none;
       letter-spacing: 0;
       margin-top: 4px;
     }
+    .openbook-helper{
+      margin: 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: clamp(16px, 1.35vw, 20px);
+      line-height: 1.25;
+    }
     .openbook-pie{
       width: min(360px, 100%);
       aspect-ratio: 1 / 1;
       border-radius: 50%;
-      margin: 0 auto 14px;
+      margin: 0 auto 10px;
       background:
         conic-gradient(
-          var(--purple) 0% 34.75%,
-          var(--teal) 34.75% 48.08%,
-          var(--gold) 48.08% 69.82%,
-          var(--ink) 69.82% 72.6%,
-          var(--slate) 72.6% 91.17%,
-          var(--rose) 91.17% 100%
+          var(--purple) 0% 50.4%,
+          var(--gold) 50.4% 82.7%,
+          var(--rose) 82.7% 90.6%,
+          var(--teal) 90.6% 95.5%,
+          var(--ink) 95.5% 99.6%,
+          var(--slate) 99.6% 100%
         );
       position: relative;
       display: grid;
       place-items: center;
+    }
+    .openbook-pie.kickstarter-pie{
+      background:
+        conic-gradient(
+          var(--purple) 0% 24.6%,
+          #d9d4cc 24.6% 100%
+        );
     }
     .openbook-pie::after{
       content: "";
@@ -1960,43 +2192,58 @@
       gap: 4px;
     }
     .openbook-pie-center .label{
-      font-size: var(--size-sm);
+      font-size: clamp(16px, 1.5vw, 20px);
       text-transform: uppercase;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.08em;
       color: var(--muted);
+      font-weight: 700;
     }
     .openbook-pie-center .value{
       font-family: var(--font-display);
-      font-size: clamp(32px, 7vw, 52px);
+      font-size: clamp(28px, 5.2vw, 44px);
       letter-spacing: var(--tracking-display);
       color: var(--ink);
+      line-height: 0.95;
     }
     .openbook-legend{
       list-style: none;
       margin: 0;
       padding: 0;
       display: grid;
-      gap: 12px;
+      gap: 10px;
       width: 100%;
       max-width: 100%;
       justify-self: stretch;
       align-self: start;
+      font-size: clamp(20px, 1.6vw, 24px);
     }
     .openbook-legend li{
       display: grid;
-      grid-template-columns: 12px minmax(0, 1fr) minmax(0, 88px);
-      gap: 12px;
+      grid-template-columns: 14px minmax(0, 1fr) minmax(0, 96px);
+      gap: 14px;
       align-items: center;
       text-align: left;
     }
     .openbook-legend .legend-label{
       color: var(--ink);
+      font-weight: 500;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      min-width: 0;
+    }
+    .openbook-legend .legend-amount{
+      color: var(--muted);
+      font-size: 0.84em;
+      font-weight: 600;
+      white-space: nowrap;
     }
     .openbook-legend .legend-value{
-      font-weight: 600;
+      font-weight: 700;
       text-align: right;
       justify-self: end;
       font-variant-numeric: tabular-nums;
+      font-size: 1.05em;
     }
     .profile-photo{
       width: min(100%, 210px);
@@ -2010,30 +2257,33 @@
     }
     .profile-stack{
       position: relative;
-      width: min(100%, 320px);
-      aspect-ratio: 1 / 1;
+      width: min(100%, 620px);
+      aspect-ratio: 1.24 / 1;
       margin: 0 auto;
     }
     .profile-stack .profile-photo{
       position: absolute;
-      width: 62%;
+      width: 42%;
+      min-width: 170px;
+      max-width: 250px;
       margin: 0;
       box-shadow: 0 10px 18px rgba(0,0,0,0.12);
       background: #ffffff;
     }
     .profile-photo.jared{
-      left: -10%;
-      bottom: -6%;
+      left: 8%;
+      bottom: 8%;
       z-index: 1;
     }
     .profile-photo.sarah{
-      top: -12%;
-      left: 24%;
+      top: 2%;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: 3;
     }
     .profile-photo.alex{
-      right: -10%;
-      bottom: -6%;
+      right: 8%;
+      bottom: 8%;
       z-index: 2;
     }
 
@@ -2333,7 +2583,6 @@
 
       .hero-title{ font-size: 60px !important; line-height: 0.9 !important; letter-spacing: -0.02em !important; }
       .hero-title .org{ font-size: 28px !important; }
-
       body{ font-size: 20px; }
       h1, h2, h3{ font-size: 24px; line-height: 1.2; }
       .hero-title{ font-size: var(--size-hero); }
@@ -2717,7 +2966,7 @@
         margin-top: 8px;
       }
       .hero-image.banner img{
-        height: 100%;
+        height: clamp(220px, 32vw, 420px);
       }
       .hero-image img,
       .section-image img{
@@ -2796,10 +3045,12 @@
       main > .hero{ order: 10; }
       main > #built-like-a-business{ order: 20; }
       main > .mobile-inline-interest{ order: 24; }
-      main > #outcomes{ order: 25; }
       main > #radical-transparency{ order: 30; }
       main > #how-it-works{ order: 40; }
+      main > #the-flywheel{ order: 45; }
       main > #who-runs-it{ order: 50; }
+      main > #outcomes{ order: 52; }
+      main > #curriculum{ order: 55; }
       main > #what-is-this{ order: 60; }
       main > #what-students-leave-with{ order: 70; }
       main > #camp-guides{ order: 80; }
@@ -2832,7 +3083,7 @@
         max-width: 24ch;
       }
       .hero-image.banner img{
-        height: 100%;
+        height: clamp(220px, 32vw, 420px);
       }
       .split,
       .split.reverse{
@@ -2850,6 +3101,27 @@
       }
       #who-runs-it .section-copy{
         order: 2;
+      }
+      .profile-stack{
+        width: min(100%, 360px);
+        aspect-ratio: 1.06 / 1;
+      }
+      .profile-stack .profile-photo{
+        width: 56%;
+        min-width: 0;
+        max-width: none;
+      }
+      .profile-photo.jared{
+        left: 0;
+        bottom: 2%;
+      }
+      .profile-photo.sarah{
+        top: 0;
+        left: 50%;
+      }
+      .profile-photo.alex{
+        right: 0;
+        bottom: 2%;
       }
       .who-runs-gallery{
         position: relative;
@@ -2968,7 +3240,7 @@
         font-size: 0.92em;
       }
       .hero-image.banner img{
-        height: 100%;
+        height: clamp(220px, 32vw, 420px);
       }
       .section-content{
         padding: 20px var(--pad) 8px;
@@ -2991,6 +3263,9 @@
         padding: 16px;
       }
       .who-runs-gallery{
+        width: min(100%, 320px);
+      }
+      .profile-stack{
         width: min(100%, 320px);
       }
       .team-card-lead{
@@ -3020,9 +3295,12 @@
         width: 100%;
         margin: 0;
       }
-      .openbook-legend li{
-        grid-template-columns: 12px minmax(0, 1fr) 72px;
-      }
+	      .openbook-legend li{
+	        grid-template-columns: 14px minmax(0, 1fr) 84px;
+	      }
+	      .openbook-legend .legend-amount{
+	        display: none;
+	      }
       .openbook-legend .legend-value{
         text-align: right;
         justify-self: end;
@@ -3063,7 +3341,7 @@
     @media (max-width: 980px){
       /* Mobile hierarchy: primary CTA > secondary CTA > next section title */
       #built-like-a-business .program-summary-cta-group{
-        display: none;
+        display: grid;
       }
       .mobile-inline-interest{
         margin-top: 14px;
@@ -3176,7 +3454,7 @@
         <div class="menu-links">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
@@ -3188,7 +3466,7 @@
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -3208,12 +3486,12 @@
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A nonprofit summer program where students build with AI and learn how money, value, and demand actually work.</div>
+          <div class="hero-sub">A nonprofit teaching financial literacy, design thinking, AI, and public speaking.</div>
         </div>
 
         <div class="hero-image banner">
           <img
-            src="assets/vibe-coding-2-ls.jpg"
+            src="assets/Kids-Index.jpg"
             alt="Students watching a classroom presentation"
             width="1920"
             height="877"
@@ -3225,7 +3503,7 @@
     </section>
 
     <section class="section" id="built-like-a-business">
-      <div class="section-banner purple" aria-hidden="true">
+      <div class="section-banner teal">
         <div class="wrap">
           <h2>Build. Price. Sell.</h2>
         </div>
@@ -3233,32 +3511,30 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <h3>Many kids already earn money in small ways&mdash;babysitting, tutoring, selling things.</h3>
-            <p>The Money Club.Org takes that instinct further.</p>
-            <p>Students take part in a curriculum-based program where they build products with AI, guided by University of Toronto mentors through structured weekly sprints.</p>
-            <p>They get a small budget, research ideas, create prototypes, test them, and learn what happens when an idea meets the real world.</p>
-            <p>That&rsquo;s how they learn:</p>
+            <p>Most kids leave school without understanding:</p>
             <ul class="bullet-list">
-              <li>what makes something valuable</li>
-              <li>how pricing works</li>
-              <li>why some ideas hold up&mdash;and others don&rsquo;t</li>
+              <li>how money moves</li>
+              <li>how products are priced</li>
+              <li>how demand affects decisions</li>
+              <li>or how ideas hold up in the real world</li>
             </ul>
-            <p>This is financial literacy, design thinking, and AI&mdash;applied in practice.</p>
+            <p>The Money Club.Org is a curriculum-based program where students build products with AI and learn how value actually works.</p>
+            <p>Guided by University of Toronto mentors, they move through structured weekly sprints to research, prototype, test, price, and improve ideas &mdash; while building confidence in communication, judgment, and real-world decision-making.</p>
            </div>
           <div class="cta-stack cta-stack--hero">
             <div class="program-summary">
-              <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons | 4 Weeks</span></div>
+              <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons | Summer 2026</span></div>
               <div class="program-summary-points">
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text">Ages 10–16</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July 6–31 or Aug 4–28</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July - Aug</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">9–5 daily</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">$1,500</span></div>
-
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">4-Weeks = $1,100</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💵</span><span class="program-summary-point-text">2-Weeks = $550</span></div>
               </div>
               <div class="program-summary-cta-group">
-                <p class="program-summary-cta-title">Free Info Session &mdash; Learn How It Works</p>
-                <a class="btn teal gloss cta-fill" href="#join-the-interest-list" data-cta-label="Get Program Details">Get Program Details</a>
+                <p class="program-summary-cta-title">Free Info Session &mdash; Learn how The Money Club.Org Works</p>
+                <a class="btn purple gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
               </div>
             </div>
           </div>
@@ -3266,38 +3542,152 @@
       </div>
     </section>
 
-    <section class="mobile-inline-interest" data-cta-location="reserve-a-spot-mobile">
-      <div class="mobile-inline-interest-band">
-        <h2>Free Info Session</h2>
+    <section class="section" id="radical-transparency">
+      <div class="section-banner teal">
+        <div class="wrap">
+          <h2>Built for learning — not profit</h2>
+        </div>
       </div>
-      <div class="reservation-card">
-        <p class="interest-subhead">📅 April 18 • Live video • 30 minutes</p>
-        <p class="interest-helper">We&apos;ll walk through the program and answer questions. Save your spot and we&apos;ll send the link.</p>
-        <div class="form-success" id="form-success-mobile" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
-<div class="form-loading" role="status" aria-live="polite">
-  <div class="spinner" aria-hidden="true"></div>
-  <div class="loading-text">Processing…</div>
-</div>
+      <div class="section-content">
+        <div class="radical-grid">
+          <div class="radical-copy">
+            <h3>The Money Club.Org is a community-first program.</h3>
+            <p>It is <strong>not designed to maximize profit</strong>. It is designed to <strong>teach financial literacy by example</strong>.</p>
+            <p>That's why we run the program using <strong>open-book financials</strong> — so families can see <strong>exactly where tuition goes</strong>, and students can learn by watching money move through a real system.</p>
+            <p><strong>Our problem statement is:</strong> We are trying to prove that a <strong>small, transparent nonprofit</strong> can create <strong>real value for kids</strong> and <strong>meaningful work for University of Toronto student mentors</strong>.</p>
+            <p>The Money Club.Org is a <strong>startup-style summer program</strong> where kids learn how money moves by building real products through guided sprints. <strong>Every dollar is visible.</strong> Revenue pays for rent, U of T student mentors, insurance, and project materials — including a <strong>$50 build budget</strong> each student uses to test ideas in the real world.</p>
+            <p><strong>This is the model:</strong></p>
+            <ul class="radical-list">
+              <li><strong>kids learn financial literacy through radical transparency</strong></li>
+              <li><strong>mentors get meaningful paid work</strong></li>
+              <li><strong>families help kickstart a local feedback loop of learning, demand, and community value</strong></li>
+            </ul>
+            <p>To run this summer, we need to secure <strong>$60,000</strong> in paid parent participation by <strong>June 1</strong>.</p>
+            <p><strong>That means either:</strong></p>
+            <ul class="radical-list">
+              <li><strong>60 four-week registrations, or</strong></li>
+              <li><strong>120 two-week sprints</strong></li>
+            </ul>
+            <p>I will personally contribute <strong>$15,000</strong> toward the <strong>$61,000</strong> total goal.</p>
+            <p><strong>If we hit the threshold, we run.</strong></p>
+            <p><strong>If we do not, we build more.</strong></p>
+          </div>
+          <div class="radical-side">
+            <div class="openbook-pie-card" aria-label="Program budget distribution chart">
+              <h3 class="openbook-subheading">Expenses <span class="openbook-subtitle">Where tuition goes for a 10-student cohort</span></h3>
+              <p class="openbook-helper">Most revenue goes directly to mentors and program delivery.</p>
+              <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 50.4%, Venue Rental 32.3%, Marketing 7.9%, Program Materials 4.9%, Insurance 4.1%, Overhead 0.4%">
+                <div class="openbook-pie-center">
+                  <span class="label">100%</span>
+                  <span class="value">Allocated</span>
+                </div>
+              </div>
+              <ul class="openbook-legend">
+                <li>
+                  <span class="legend-dot" style="background: var(--purple);"></span>
+                  <span class="legend-label">Instructors <span class="legend-amount">$5,093</span></span>
+                  <span class="legend-value">50.4%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--gold);"></span>
+                  <span class="legend-label">Venue Rental <span class="legend-amount">$3,261</span></span>
+                  <span class="legend-value">32.3%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--rose);"></span>
+                  <span class="legend-label">Marketing <span class="legend-amount">$1,297</span></span>
+                  <span class="legend-value">7.9%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--teal);"></span>
+                  <span class="legend-label">Program Materials <span class="legend-amount">$500</span></span>
+                  <span class="legend-value">4.9%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--ink);"></span>
+                  <span class="legend-label">Insurance <span class="legend-amount">$417</span></span>
+                  <span class="legend-value">4.1%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--slate);"></span>
+                  <span class="legend-label">Overhead <span class="legend-amount">$44</span></span>
+                  <span class="legend-value">0.4%</span>
+                </li>
+              </ul>
+              <a data-cta-label="See Our Open-Book Budget" class="btn gold cta-standard" href="/pricing.html">See Our Open-Book Budget</a>
+            </div>
+            <div class="openbook-pie-card" aria-label="Kickstarter funding progress">
+              <h3 class="openbook-subheading">Kickstarter <span class="openbook-subtitle">$61,000 total goal - $15,000 funded</span></h3>
+              <p class="openbook-helper">Goal Date: June 1st.</p>
+              <div class="openbook-pie kickstarter-pie" role="img" aria-label="Kickstarter funding progress: $15,000 funded (24.6%) and $46,000 remaining (75.4%).">
+                <div class="openbook-pie-center">
+                  <span class="label">Funded</span>
+                  <span class="value">$15,000</span>
+                </div>
+              </div>
+              <ul class="openbook-legend">
+                <li>
+                  <span class="legend-dot" style="background: var(--purple);"></span>
+                  <span class="legend-label">Funded <span class="legend-amount">$15,000</span></span>
+                  <span class="legend-value">24.6%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: #6f7f8d;"></span>
+                  <span class="legend-label">Remaining <span class="legend-amount">$46,000</span></span>
+                  <span class="legend-value">75.4%</span>
+                </li>
+              </ul>
+              <a data-cta-label="See Our Open-Book Budget" class="btn gold cta-standard" href="/pricing.html">See Our Open-Book Budget</a>
+            </div>
+          </div>
+        </div>
+        <div class="radical-summary-row">
+          <div class="program-summary">
+            <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons | Summer 2026</span></div>
+            <div class="program-summary-points">
+              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text">Ages 10–16</span></div>
+              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July - Aug</span></div>
+              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">9–5 daily</span></div>
+              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
+              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">4-Weeks = $1,100</span></div>
+              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💵</span><span class="program-summary-point-text">2-Weeks = $550</span></div>
+            </div>
+            <div class="program-summary-cta-group">
+              <p class="program-summary-cta-title">Free Info Session &mdash; Learn how The Money Club.Org Works</p>
+              <a class="btn purple gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <form class="form-grid" action="apply-interest.php" method="post" novalidate>
-          <input type="hidden" name="return-to" value="index.html" />
-          <input type="hidden" name="return-error" value="index.html" />
-          <div class="field-row two-col">
-            <div class="field">
-              <label for="parent-name-mobile">Parent / Guardian Name</label>
-              <input id="parent-name-mobile" name="parent-name" data-next="parent-email-mobile" type="text" autocomplete="name" required />
-              <small class="field-error">Parent/guardian name is required.</small>
-            </div>
-            <div class="field">
-              <label for="parent-email-mobile">Email Address</label>
-              <input id="parent-email-mobile" name="parent-email" type="email" autocomplete="email" required />
-              <small class="field-error">Enter a valid email address.</small>
+    <section class="section" id="who-runs-it">
+      <div class="section-banner teal">
+        <div class="wrap">
+          <h2>Who Runs It</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="split">
+          <div class="section-copy">
+            <div><strong>Student-led support (adult-supervised)</strong></div>
+            <p>The Money Club.Org is operated by its student leadership team: Sarah Duong and Alex Goldberg, both students at Humberside Collegiate Institute.</p>
+            <div><strong>Designed by a practitioner</strong></div>
+            <p>The Money Club.Org was designed by Jared Goldberg — a product strategist, systems designer, and educator with 15+ years building real-world business platforms.</p>
+            <ul class="bullet-list">
+              <li>Walmart, Loblaw, and Canadian Tire</li>
+              <li>10+ years in China-based manufacturing ecosystems</li>
+              <li>Economics, incentives, design thinking, and human behavior</li>
+            </ul>
+          </div>
+          <div class="section-media">
+            <div class="profile-stack" aria-label="Jared Goldberg, Sarah Duong, and Alex Goldberg">
+              <img class="profile-photo jared" src="assets/Jared-Profile.png" alt="Jared Goldberg" />
+              <img class="profile-photo sarah" src="assets/sarah.png" alt="Sarah Duong" />
+              <img class="profile-photo alex" src="assets/alex.png" alt="Alex Goldberg" />
             </div>
           </div>
-          <div class="interest-submit-wrap">
-            <button class="btn teal gloss cta-standard interest-submit" type="submit" data-cta-label="Submit">Submit</button>
-          </div>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -3320,7 +3710,7 @@
               </ul>
             </div>
             <figure class="outcome-image">
-              <img src="assets/nn-kid-2.jpg" alt="Students working together to package a product" />
+              <img src="assets/kid-presents-larg-class.jpg" alt="Students working together to package a product" />
             </figure>
           </article>
           <article class="outcome-row">
@@ -3334,7 +3724,7 @@
               </ul>
             </div>
             <figure class="outcome-image">
-              <img src="assets/apps-n.jpg" alt="Students reviewing design ideas together" />
+              <img src="assets/student-ux.jpg" alt="Students reviewing design ideas together" />
             </figure>
           </article>
           <article class="outcome-row">
@@ -3350,32 +3740,36 @@
               </ul>
             </div>
             <figure class="outcome-image">
-              <img src="assets/vibe-coding.jpg" alt="Student presenting ideas in front of a group" />
+              <img src="assets/apps-n.jpg" alt="Student presenting ideas in front of a group" />
             </figure>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="radical-transparency">
-      <div class="section-banner teal">
-        <div class="wrap">
-          <h2>Built for Learning — Not Profit</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="radical-grid">
-          <div class="radical-side">
-            <div class="section-image">
-              <img src="assets/flywheel.jpg" alt="Students and instructors collaborating in class" />
+    <div class="info-session-overlay" id="info-session-overlay" aria-hidden="true">
+      <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
+        <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
+        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
+        <p class="info-session-meta">📅 April 18 • Live video session • ~30 minutes</p>
+        <p class="info-session-helper">Save your spot and we&rsquo;ll send the session link and program details. No payment required.</p>
+        <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
+          <input type="hidden" name="return-to" value="index.html" />
+          <input type="hidden" name="return-error" value="index.html" />
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="info-parent-name">Parent / Guardian Name</label>
+              <input id="info-parent-name" name="parent-name" type="text" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="info-parent-email">Email Address</label>
+              <input id="info-parent-email" name="parent-email" type="email" autocomplete="email" required />
             </div>
           </div>
-          <div class="radical-copy">
-            <p>The Money Club.Org is a nonprofit with open-book finances. No upsells. No hidden costs. Tuition goes directly into instruction, materials, and the student experience.</p>
-          </div>
-        </div>
+          <button class="btn teal gloss cta-standard info-session-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
+        </form>
       </div>
-    </section>
+    </div>
 
     <section class="section" id="what-is-this">
       <div class="section-banner purple">
@@ -3406,41 +3800,6 @@
       </div>
     </section>
 
-    <section class="section" id="how-it-works">
-      <div class="section-banner purple">
-        <div class="wrap">
-          <h2>What Do Students Build?</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="split">
-          <div class="section-copy">
-            <p>Students work on real ideas&mdash;not hypothetical projects.</p>
-            <p>They move from early concepts to something they can test in the real world.</p>
-            <p>Examples:</p>
-            <ul class="bullet-list">
-              <li>A small product people might buy</li>
-              <li>A service that solves a real problem</li>
-              <li>A basic app or digital tool</li>
-              <li>Branding or marketing to support it</li>
-            </ul>
-            <p>The goal: Build something&mdash;and see if people buy it.</p>
-            <div class="mobile-reserve-btn">
-              <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
-            </div>
-          </div>
-          <div class="section-media">
-            <div class="section-image">
-              <picture>
-                <source media="(max-width: 980px)" srcset="assets/nn-kid-4.jpg" />
-                <img src="assets/n-kid-6.jpg" alt="Students presenting a UX design" />
-              </picture>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="choose-your-adventure">
       <div class="section-banner purple">
         <div class="wrap">
@@ -3460,7 +3819,7 @@
 
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Free Info Session</h2>
+        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
@@ -3504,6 +3863,217 @@
 
   <script>
     (function(){
+      var openLinks = document.querySelectorAll('[data-open-info-session]');
+      var overlay = document.getElementById('info-session-overlay');
+      if (!overlay){ return; }
+      var closeBtn = overlay.querySelector('.info-session-close');
+      var modal = overlay.querySelector('.info-session-modal');
+      var outcomesSection = document.getElementById('outcomes');
+      var modalIsOpen = overlay.classList.contains('is-open');
+      var autoOpened = false;
+      var autoPopupDisabled = false;
+      var outcomesObserver = null;
+      var lockScrollY = 0;
+      var modalInterestForm = overlay.querySelector('form[action="apply-interest.php"]');
+      var params = new URLSearchParams(window.location.search);
+      var sessionDismissKey = 'tmc_info_popup_dismissed_session';
+      var completedKey = 'tmc_interest_form_completed';
+      var completedAtKey = 'tmc_interest_form_completed_at';
+
+      function pushModalEvent(eventName, funnelStep){
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: eventName,
+          form_name: 'interest_form',
+          form_id: 'interest',
+          funnel_step: funnelStep,
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
+      function lockPageScroll(){
+        lockScrollY = window.pageYOffset || window.scrollY || 0;
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + lockScrollY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+      }
+
+      function unlockPageScroll(){
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        window.scrollTo(0, lockScrollY);
+      }
+
+      function disableAutoPopup(){
+        autoPopupDisabled = true;
+        autoOpened = true;
+        if (outcomesObserver){
+          outcomesObserver.disconnect();
+          outcomesObserver = null;
+        }
+        detachOutcomesFallback();
+      }
+
+      function markInterestComplete(){
+        try {
+          localStorage.setItem(completedKey, '1');
+          localStorage.setItem(completedAtKey, String(Date.now()));
+        } catch (e) {}
+      }
+
+      function isInterestComplete(){
+        try {
+          return localStorage.getItem(completedKey) === '1' && !!localStorage.getItem(completedAtKey);
+        } catch (e) {
+          return false;
+        }
+      }
+
+      function markSessionDismissed(){
+        try {
+          sessionStorage.setItem(sessionDismissKey, '1');
+        } catch (e) {}
+      }
+
+      function isSessionDismissed(){
+        try {
+          return sessionStorage.getItem(sessionDismissKey) === '1';
+        } catch (e) {
+          return false;
+        }
+      }
+
+      function openInfoSession(source){
+        if (modalIsOpen){ return; }
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('info-session-open');
+        lockPageScroll();
+        overlay.dataset.openSource = source || 'manual';
+        modalIsOpen = true;
+        if (source === 'manual'){
+          markSessionDismissed();
+          disableAutoPopup();
+        }
+        pushModalEvent('info_session_modal_open', 'modal_open');
+        if (closeBtn){
+          closeBtn.focus();
+        }
+      }
+
+      function closeInfoSession(){
+        if (!modalIsOpen){ return; }
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('info-session-open');
+        unlockPageScroll();
+        delete overlay.dataset.openSource;
+        modalIsOpen = false;
+        pushModalEvent('info_session_modal_close', 'modal_close');
+      }
+
+      openLinks.forEach(function(openLink){
+        openLink.addEventListener('click', function(e){
+          e.preventDefault();
+          openInfoSession('manual');
+        });
+      });
+
+      if (modalInterestForm){
+        modalInterestForm.addEventListener('submit', function(){
+          if (!modalInterestForm.checkValidity()){
+            return;
+          }
+          // Keep UI stable while submitting and prevent future auto-open this session.
+          markSessionDismissed();
+          disableAutoPopup();
+          closeInfoSession();
+        });
+      }
+
+      if (params.get('status') === 'sent'){
+        markInterestComplete();
+      }
+      if (isInterestComplete() || isSessionDismissed()){
+        disableAutoPopup();
+      }
+
+      if (closeBtn){
+        closeBtn.addEventListener('click', function(){
+          closeInfoSession();
+        });
+      }
+
+      overlay.addEventListener('click', function(e){
+        if (modal && !modal.contains(e.target)){
+          closeInfoSession();
+        }
+      });
+
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')){
+          closeInfoSession();
+        }
+      });
+
+      function detachOutcomesFallback(){
+        window.removeEventListener('scroll', maybeOpenFromOutcomesFallback);
+        window.removeEventListener('resize', maybeOpenFromOutcomesFallback);
+        window.removeEventListener('orientationchange', maybeOpenFromOutcomesFallback);
+      }
+
+      function maybeOpenFromOutcomesFallback(){
+        if (!outcomesSection || autoPopupDisabled || autoOpened || modalIsOpen){
+          return;
+        }
+        var rect = outcomesSection.getBoundingClientRect();
+        var viewportH = window.innerHeight || document.documentElement.clientHeight || 0;
+        if (!viewportH){
+          return;
+        }
+        var isVisible = rect.bottom > 0 && rect.top < viewportH;
+        if (!isVisible){
+          return;
+        }
+        if (rect.top <= viewportH * 0.7){
+          openInfoSession('outcomes_scroll');
+          autoOpened = true;
+          disableAutoPopup();
+          detachOutcomesFallback();
+        }
+      }
+
+      if (!autoOpened && outcomesSection){
+        if ('IntersectionObserver' in window){
+          outcomesObserver = new IntersectionObserver(function(entries){
+            if (autoPopupDisabled){
+              disableAutoPopup();
+              return;
+            }
+            entries.forEach(function(entry){
+              if (!entry.isIntersecting){ return; }
+              openInfoSession('outcomes_scroll');
+              autoOpened = true;
+              disableAutoPopup();
+            });
+          }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+          outcomesObserver.observe(outcomesSection);
+        }
+        window.addEventListener('scroll', maybeOpenFromOutcomesFallback, { passive: true });
+        window.addEventListener('resize', maybeOpenFromOutcomesFallback);
+        window.addEventListener('orientationchange', maybeOpenFromOutcomesFallback);
+        maybeOpenFromOutcomesFallback();
+      }
+    })();
+  </script>
+  <script>
+    (function(){
       var menuBtn = document.querySelector('.menu-btn');
       var menuPanel = document.querySelector('.menu-panel');
       var menuClose = document.querySelector('.menu-close');
@@ -3523,14 +4093,6 @@
         menuPanel.classList.add('is-open');
         menuPanel.setAttribute('aria-hidden', 'false');
         menuBtn.setAttribute('aria-expanded', 'true');
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'menu_open',
-          funnel_step: 'menu_open',
-          menu_name: 'mobile_menu',
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
       }
 
       function toggleMenu(){
@@ -3756,112 +4318,6 @@
         var value = parseFloat(match[1].replace(/,/g, ''));
         return isNaN(value) ? 1500 : value;
       }
-
-      function pushBeginCheckout(form){
-        if (!form || form.dataset.beginCheckoutTracked === 'true'){
-          return;
-        }
-        form.dataset.beginCheckoutTracked = 'true';
-        window.dataLayer = window.dataLayer || [];
-        var value = getProgramFeeValue(form);
-        window.dataLayer.push({
-          event: 'begin_checkout',
-          form_name: 'reserve_a_spot',
-          funnel_step: 'begin_checkout',
-          payment_method: 'credit_card',
-          currency: 'CAD',
-          value: value,
-          items: [
-            {
-              item_id: 'money-club-summer-camp',
-              item_name: 'The Money Club.Org Summer Camp',
-              item_category: 'Summer Camp',
-              price: value,
-              quantity: 1
-            }
-          ],
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
-      }
-
-      sessionRadios.forEach(function(radio){
-        radio.addEventListener('change', function(){
-          updateFlowState();
-        });
-      });
-
-      if (sessionGrid){
-        sessionGrid.addEventListener('click', function(e){
-          if (sessionGrid.classList.contains('is-locked')){
-            e.preventDefault();
-            showFirstInvalidField();
-          }
-        });
-      }
-
-      paymentButtons.forEach(function(btn){
-        btn.addEventListener('click', function(e){
-          var form = btn.form;
-          if (form) {
-            var returnTo = form.querySelector('[name="return-to"]');
-            var returnCancel = form.querySelector('[name="return-cancel"]');
-            var currentPage = window.location.pathname.split('/').pop() || 'reserve-a-spot.html';
-            if (returnCancel){ returnCancel.value = currentPage; }
-
-            if (btn.value === 'Credit Card') {
-              form.setAttribute('action', 'stripe-checkout.php');
-              if (returnTo){ returnTo.value = 'thank-you-credit-card.php'; }
-            } else {
-              form.setAttribute('action', 'apply-camper.php');
-              if (returnTo){ returnTo.value = 'etransfer.html'; }
-            }
-          }
-          if (!baseFieldsValid()){
-            e.preventDefault();
-            showFirstInvalidField();
-            return;
-          }
-          if (!sessionSelected()){
-            e.preventDefault();
-            showSessionError();
-            return;
-          }
-          if (!termsAgreed()){
-            e.preventDefault();
-            showFirstInvalidField();
-            return;
-          }
-          if (btn.value === 'Credit Card') {
-            pushBeginCheckout(form);
-          }
-        });
-      });
-    })();
-  </script>
-  <script>
-    (function(){
-      var spotEls = document.querySelectorAll('.session-availability');
-      if (!spotEls.length){ return; }
-
-      function updateSpots(data){
-        spotEls.forEach(function(el){
-          var key = el.getAttribute('data-session');
-          if (!key || typeof data[key] !== 'number'){ return; }
-          var count = data[key];
-          var capacity = typeof data.capacity === 'number' ? data.capacity : 30;
-          el.textContent = count + ' of ' + capacity + ' Spots Available';
-          var row = el.closest('.session-card');
-          if (row){
-            row.classList.toggle('is-full', count <= 0);
-            var input = row.querySelector('input[type="radio"]');
-            if (input){
-              input.disabled = count <= 0;
-            }
-          }
-        });
-      }
-
       function fetchAvailability(url){
         return fetch(url, { cache: 'no-store' }).then(function(res){
           if (!res.ok){
@@ -3964,129 +4420,59 @@
       window.addEventListener('load', handleScrollDepth);
       handleScrollDepth();
 
-      // Reserve-area tracking semantics:
-      // - section_view(section_name=reserve_banner) tracks content progression (banner reached).
-      // - reserve_form_view tracks true form exposure.
-      // - GTM cleanup note: any legacy view_reserve_section trigger should target the form
-      //   inside #reserve-a-spot, not the #reserve banner.
-      var sections = [
-        { name: 'hero', el: document.getElementById('hero') },
-        { name: 'built-like-a-business', el: document.getElementById('built-like-a-business') },
-        { name: 'what-is-this', el: document.getElementById('what-is-this') },
-        { name: 'how-it-works', el: document.getElementById('how-it-works') },
-        { name: 'outcomes', el: document.getElementById('outcomes') },
-        { name: 'reserve_banner', el: document.getElementById('reserve') }
-      ].filter(function(item){
-        return !!item.el;
-      });
+      // Keep explicit interest form exposure tracking; section-level view events are disabled.
 
-      var seenSections = Object.create(null);
-
-      function trackSectionView(sectionName){
-        if (seenSections[sectionName]){
-          return;
-        }
-        seenSections[sectionName] = true;
-        pushDataLayerEvent({
-          event: 'section_view',
-          funnel_step: 'section_view',
-          section_name: sectionName,
-          page_path: pagePath,
-          page_title: pageTitle
-        });
-      }
-
-      if ('IntersectionObserver' in window){
-        var observer = new IntersectionObserver(function(entries){
-          entries.forEach(function(entry){
-            if (!entry.isIntersecting || entry.intersectionRatio < 0.45){
-              return;
-            }
-            var sectionName = entry.target.getAttribute('data-section-name');
-            if (sectionName){
-              trackSectionView(sectionName);
-            }
-            observer.unobserve(entry.target);
-          });
-        }, {
-          threshold: [0.45]
-        });
-
-        sections.forEach(function(section){
-          section.el.setAttribute('data-section-name', section.name);
-          observer.observe(section.el);
-        });
-      } else {
-        function checkSectionsFallback(){
-          sections.forEach(function(section){
-            if (seenSections[section.name]){
-              return;
-            }
-            var rect = section.el.getBoundingClientRect();
-            var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
-            var visiblePx = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
-            var ratio = visiblePx / Math.max(rect.height, 1);
-            if (ratio >= 0.45){
-              trackSectionView(section.name);
-            }
-          });
-        }
-        window.addEventListener('scroll', checkSectionsFallback, { passive: true });
-        window.addEventListener('resize', checkSectionsFallback);
-        window.addEventListener('load', checkSectionsFallback);
-        checkSectionsFallback();
-      }
-
-      var reserveFormEl = document.querySelector('#reserve-a-spot form[action="apply-interest.php"]') ||
+      var interestFormEl = document.querySelector('#reserve-a-spot form[action="apply-interest.php"]') ||
         document.querySelector('#reserve-a-spot .reservation-card');
-      var reserveFormViewed = false;
+      var interestFormViewed = false;
 
-      function pushReserveFormView(){
-        if (reserveFormViewed){
+      function pushInterestFormView(){
+        if (interestFormViewed){
           return;
         }
-        reserveFormViewed = true;
+        interestFormViewed = true;
         pushDataLayerEvent({
-          event: 'reserve_form_view',
-          funnel_step: 'reserve_form_view',
+          event: 'interest_form_view',
           form_name: 'interest_form',
+          funnel_step: 'interest_form_view',
+          form_id: 'interest',
           page_path: pagePath,
           page_title: pageTitle
         });
       }
 
-      if (reserveFormEl){
+      if (interestFormEl){
         if ('IntersectionObserver' in window){
-          var reserveFormObserver = new IntersectionObserver(function(entries){
+          var interestFormObserver = new IntersectionObserver(function(entries){
             entries.forEach(function(entry){
               if (!entry.isIntersecting || entry.intersectionRatio < 0.5){
                 return;
               }
-              pushReserveFormView();
-              reserveFormObserver.unobserve(entry.target);
+              pushInterestFormView();
+              interestFormObserver.unobserve(entry.target);
             });
           }, {
             threshold: [0.5]
           });
 
-          reserveFormObserver.observe(reserveFormEl);
+          interestFormObserver.observe(interestFormEl);
         } else {
-          function checkReserveFormFallback(){
-            if (reserveFormViewed){
+          function checkInterestFormFallback(){
+            if (interestFormViewed){
               return;
             }
-            var rect = reserveFormEl.getBoundingClientRect();
+            var rect = interestFormEl.getBoundingClientRect();
             var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
             var visiblePx = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
             var ratio = visiblePx / Math.max(rect.height, 1);
             if (ratio >= 0.5){
-              pushReserveFormView();
+              pushInterestFormView();
             }
           }
-          window.addEventListener('scroll', checkReserveFormFallback, { passive: true });
-          window.addEventListener('resize', checkReserveFormFallback);
-          window.addEventListener('load', checkReserveFormFallback);
-          checkReserveFormFallback();
+          window.addEventListener('scroll', checkInterestFormFallback, { passive: true });
+          window.addEventListener('resize', checkInterestFormFallback);
+          window.addEventListener('load', checkInterestFormFallback);
+          checkInterestFormFallback();
         }
       }
     })();
@@ -4191,10 +4577,9 @@
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
-        if (isReserveCta(target)){
-          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
-        }
+        var payload = buildCtaPayload(target, 'cta_click');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
+        window.dataLayer.push(payload);
       }
 
       document.addEventListener('click', function(event){
@@ -4202,10 +4587,18 @@
         if (!target){
           return;
         }
-        // Exclude interest form submit controls from generic CTA tracking
-        // These are tracked separately via interest_form_* events
+        // Exclude form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* and registration_form_* events
         var interestForm = target.closest('form[action="apply-interest.php"]');
         if (interestForm){
+          return;
+        }
+        var submitForm = target.closest('form');
+        var isSubmitControl = !!submitForm && (
+          target.matches('button[type="submit"], input[type="submit"]') ||
+          (target.tagName === 'BUTTON' && (!target.type || target.type.toLowerCase() === 'submit'))
+        );
+        if (isSubmitControl){
           return;
         }
         if (!(
@@ -4256,9 +4649,10 @@
 
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: 'tmc_interest_form_success',
-        form_name: 'interest_form',
-        funnel_step: 'form_success',
+        event: 'interest_form_success',
+          form_name: 'interest_form',
+          form_id: 'interest',
+          funnel_step: 'form_success',
         page_path: window.location.pathname || '',
         page_title: document.title || '',
         form_context: 'homepage'
@@ -4289,6 +4683,7 @@
         window.dataLayer.push({
           event: 'interest_form_start',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_start',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
@@ -4299,6 +4694,7 @@
         window.dataLayer.push({
           event: 'interest_form_submit',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_submit',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
@@ -4311,6 +4707,7 @@
           error_field: fieldName || 'unknown',
           error_message: message || 'Validation error',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_error',
           page_path: window.location.pathname || '',
           page_title: document.title || ''

@@ -1658,7 +1658,7 @@ nav{
         <div class="menu-links">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
@@ -1670,7 +1670,7 @@ nav{
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -1713,7 +1713,7 @@ nav{
 <p>We’ll email confirmation <strong>within 24 hours of receiving your transfer</strong>.</p>
 
 <h3>Refunds</h3>
-<p>Refunds are available until June 1, 2026, less a $75 administration fee. After June 1, fees are non-refundable. Medical exceptions may be considered with documentation.</p>
+<p>Because The Money Club.Org is a lean nonprofit startup, program fees are non-refundable. Each registration directly supports the costs of running the program, including venue, materials, and University of Toronto student mentor wages.</p>
 
 <h3>Need help?</h3>
 <p>Email: <strong>info@the-money-club.org</strong><br />
@@ -1999,10 +1999,9 @@ Phone: <strong>437-239-8602</strong></p>
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
-        if (isReserveCta(target)){
-          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
-        }
+        var payload = buildCtaPayload(target, 'cta_click');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
+        window.dataLayer.push(payload);
       }
 
       document.addEventListener('click', function(event){
@@ -2010,10 +2009,18 @@ Phone: <strong>437-239-8602</strong></p>
         if (!target){
           return;
         }
-        // Exclude interest form submit controls from generic CTA tracking
-        // These are tracked separately via interest_form_* events
+        // Exclude form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* and registration_form_* events
         var interestForm = target.closest('form[action="apply-interest.php"]');
         if (interestForm){
+          return;
+        }
+        var submitForm = target.closest('form');
+        var isSubmitControl = !!submitForm && (
+          target.matches('button[type="submit"], input[type="submit"]') ||
+          (target.tagName === 'BUTTON' && (!target.type || target.type.toLowerCase() === 'submit'))
+        );
+        if (isSubmitControl){
           return;
         }
         if (!(
@@ -2036,7 +2043,7 @@ Phone: <strong>437-239-8602</strong></p>
       if (params.get('status') !== 'sent'){
         return;
       }
-      var dedupeKey = 'tmc_registration_submitted:' + (window.location.pathname || '') + ':' + window.location.search;
+      var dedupeKey = 'registration_form_submitted:' + (window.location.pathname || '') + ':' + window.location.search;
       var alreadyTracked = false;
       try {
         alreadyTracked = sessionStorage.getItem(dedupeKey) === '1';
@@ -2049,9 +2056,9 @@ Phone: <strong>437-239-8602</strong></p>
       }
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: 'tmc_registration_submitted',
-        ga4_event_name: 'registration_submitted',
+        event: 'registration_form_submitted',
         form_name: 'reserve_a_spot',
+        form_id: 'registration',
         payment_method: 'etransfer',
         funnel_step: 'registration_payment',
         page_path: window.location.pathname || '',

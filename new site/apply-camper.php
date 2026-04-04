@@ -43,6 +43,7 @@ $parent_email = isset($_POST['parent-email']) ? trim($_POST['parent-email']) : '
 $parent_phone = isset($_POST['parent-phone']) ? trim($_POST['parent-phone']) : '';
 $student_name = isset($_POST['student-name']) ? trim($_POST['student-name']) : '';
 $student_age = isset($_POST['student-age']) ? trim($_POST['student-age']) : '';
+$program_track = isset($_POST['program-track']) ? trim($_POST['program-track']) : '';
 $preferred_session = isset($_POST['preferred-session']) ? trim($_POST['preferred-session']) : '';
 $preferred_month = isset($_POST['preferred-month']) ? trim($_POST['preferred-month']) : '';
 $payment_method = isset($_POST['payment-method']) ? trim($_POST['payment-method']) : '';
@@ -54,6 +55,7 @@ $allowed_returns = [
     'reserve-a-spot.html',
     'schedule-pricing.html',
     'how-it-works.html',
+    'pricing.html',
     'open-book-hook.html',
     'schedule-pricing.html',
     'index.html',
@@ -81,7 +83,7 @@ function redirect_with_error($return_to, $field, $message) {
     exit;
 }
 
-log_debug('apply-camper POST email=' . $parent_email . ' phone=' . $parent_phone . ' age=' . $student_age . ' session=' . $preferred_session . ' payment=' . $payment_method . ' terms=' . ($terms_agree !== '' ? 'yes' : 'no') . ' return=' . $return_to);
+log_debug('apply-camper POST email=' . $parent_email . ' phone=' . $parent_phone . ' age=' . $student_age . ' program=' . $program_track . ' session=' . $preferred_session . ' payment=' . $payment_method . ' terms=' . ($terms_agree !== '' ? 'yes' : 'no') . ' return=' . $return_to);
 
 if ($parent_name === '') {
     redirect_with_error($error_return, 'parent-name', 'Parent/guardian name is required.');
@@ -101,28 +103,50 @@ if ($phone_digits === '' || strlen($phone_digits) < 10 || strlen($phone_digits) 
 }
 
 $age_value = filter_var($student_age, FILTER_VALIDATE_INT, [
-    'options' => ['min_range' => 11, 'max_range' => 17]
+    'options' => ['min_range' => 10, 'max_range' => 16]
 ]);
 if ($age_value === false) {
-    redirect_with_error($error_return, 'student-age', 'Child’s age must be between 11 and 17.');
+    redirect_with_error($error_return, 'student-age', 'Child’s age must be between 10 and 16.');
 }
 
 if ($student_name === '') {
     redirect_with_error($error_return, 'student-name', 'Child’s name is required.');
 }
 
-$session_map = [
-    'session1' => 'Session 1: July 6-31, 2026',
-    'session2' => 'Session 2: August 4-28, 2026'
+$program_options = [
+    'two-week-builder-sprint' => [
+        'label' => '2-Week Builder Sprint',
+        'tuition' => 750,
+        'sessions' => [
+            'session1' => 'July 6-17, 2026',
+            'session2' => 'August 4-15, 2026'
+        ]
+    ],
+    'four-week-full-program' => [
+        'label' => '4-Week Full Program',
+        'tuition' => 1100,
+        'sessions' => [
+            'session1' => 'July 6-31, 2026',
+            'session2' => 'August 4-28, 2026'
+        ]
+    ]
 ];
+
+if (!array_key_exists($program_track, $program_options)) {
+    redirect_with_error($error_return, 'program-track', 'Please select a valid program.');
+}
 
 if ($preferred_session === '' && $preferred_month !== '') {
     $preferred_session = $preferred_month === 'July' ? 'session1' : 'session2';
 }
 
-if (!array_key_exists($preferred_session, $session_map)) {
+if (!array_key_exists($preferred_session, $program_options[$program_track]['sessions'])) {
     redirect_with_error($error_return, 'preferred-session', 'Please select a session.');
 }
+
+$session_label = $program_options[$program_track]['sessions'][$preferred_session];
+$program_label = $program_options[$program_track]['label'];
+$program_tuition = (float)$program_options[$program_track]['tuition'];
 
 if ($terms_agree === '') {
     redirect_with_error($error_return, 'terms-agree', 'Please agree to the Terms & Payment Policy.');
@@ -195,7 +219,9 @@ $lines[] = 'Email: ' . $parent_email;
 $lines[] = 'Phone: ' . ($parent_phone !== '' ? $parent_phone : '(not provided)');
 $lines[] = 'Child Name: ' . ($student_name !== '' ? $student_name : '(not provided)');
 $lines[] = 'Child Age: ' . ($student_age !== '' ? $student_age : '(not provided)');
-$lines[] = 'Session: ' . $session_map[$preferred_session];
+$lines[] = 'Program: ' . $program_label;
+$lines[] = 'Session: ' . $session_label;
+$lines[] = 'Program tuition: $' . number_format($program_tuition, 2) . ' CAD (+HST)';
 $lines[] = 'Session spots remaining: ' . (string)$reserve_result['remaining'];
 $lines[] = 'Terms agreed: ' . ($terms_agree !== '' ? 'Yes' : 'No');
 $lines[] = 'Payment method: ' . ($payment_method !== '' ? $payment_method : '(not specified)');
@@ -238,9 +264,9 @@ $parent_lines[] = 'University of Toronto (downtown)';
 $parent_lines[] = '';
 $parent_lines[] = 'Daily 9–5, with instruction from 9:30am to 3:30pm';
 $parent_lines[] = '';
-$parent_lines[] = 'Sessions:';
-$parent_lines[] = '- July 6–31';
-$parent_lines[] = '- August 4–28';
+$parent_lines[] = 'Program selected: ' . $program_label;
+$parent_lines[] = 'Session selected: ' . $session_label;
+$parent_lines[] = 'Program fee: $' . number_format($program_tuition, 2) . ' CAD (+HST)';
 $parent_lines[] = '';
 $parent_lines[] = '---';
 $parent_lines[] = '';
@@ -265,6 +291,8 @@ $csv_headers = [
     'parent_phone',
     'student_name',
     'student_age',
+    'program_track',
+    'program_tuition',
     'session',
     'terms_agreed',
     'payment_method',
@@ -277,7 +305,9 @@ $csv_row = [
     $parent_phone,
     $student_name,
     $student_age,
-    $session_map[$preferred_session],
+    $program_label,
+    '$' . number_format($program_tuition, 2),
+    $session_label,
     ($terms_agree !== '' ? 'Yes' : 'No'),
     $payment_method,
     (string)$reserve_result['remaining']

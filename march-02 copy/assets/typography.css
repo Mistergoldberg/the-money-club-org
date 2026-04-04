@@ -1,0 +1,188 @@
+:root{
+  --font-body: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --tracking-display: 0.04em;
+  --lh-body: 1.45;
+  --lh-heading: 0.8;
+
+  --size-body: 23px;
+  --size-lg: clamp(24px, 2.8vw, 34px);
+  --size-xl: clamp(38px, 6.2vw, 77px);
+  --size-hero: clamp(52px, 9vw, 110px);
+  --size-headline: clamp(34px, 5.2vw, 64px);
+  --size-section-heading: clamp(34px, 5vw, 56px);
+}
+
+html{
+  -webkit-text-size-adjust: 100%;
+}
+
+body{
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+}
+
+h1, h2, h3{
+  margin: 0;
+  font-weight: 700;
+}
+
+h1{
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  font-size: calc(var(--size-hero) * 1.2);
+  line-height: 1.2;
+}
+.hero-title{
+  letter-spacing: -0.01em;
+}
+.hero-title .org{
+  font-size: 0.6em;
+  letter-spacing: inherit;
+  margin-left: 0.02em;
+}
+.hero-logo-mobile{
+  display: none;
+  width: min(320px, 86vw);
+  height: auto;
+}
+.footer-title .org{
+  font-size: 0.7em;
+  letter-spacing: inherit;
+  margin-left: 0.04em;
+}
+
+@media (max-width: 980px){
+  .hero-title .org{
+    font-size: 0.45em;
+  }
+}
+
+h2{
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  font-size: var(--size-xl);
+  line-height: var(--lh-heading);
+}
+
+h3{
+  font-family: var(--font-body);
+  font-size: var(--size-lg);
+  line-height: var(--lh-body);
+}
+
+.section-banner h2,
+.content-banner h2,
+.curriculum-banner h2,
+.deploy-banner h2,
+.math-banner h2,
+.openbook-banner h2,
+.quickfacts-banner h2,
+.reserve-banner h2,
+.teachers-banner h2,
+.why-banner h2,
+.section-title h2{
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  font-size: var(--size-section-heading);
+  line-height: var(--lh-heading);
+}
+
+.lede{
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+}
+
+.reservation-card{
+  position: relative;
+}
+.reservation-card.is-processing{
+  pointer-events: none;
+}
+.form-loading{
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255,255,255,0.88);
+  border-radius: inherit;
+  text-align: center;
+  padding: 18px;
+  z-index: 5;
+}
+.form-loading.is-visible{
+  display: flex;
+}
+.form-loading .spinner{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid rgba(0,0,0,0.15);
+  border-top-color: rgba(0,0,0,0.55);
+  animation: spin 0.9s linear infinite;
+}
+.form-loading .loading-text{
+  font-weight: 600;
+  font-size: 18px;
+}
+@keyframes spin{
+  to{ transform: rotate(360deg); }
+}
+
+@media (max-width: 980px){
+  html, body{ overflow-x: hidden; }
+  body{ -webkit-text-size-adjust: 100%; }
+
+  :root{
+    --size-section-heading: clamp(48.96px, 7.2vw, 80.64px);
+  }
+
+  h1, h2, h3{
+    font-size: 26.5px;
+    line-height: 1.2;
+  }
+
+  h2{
+    line-height: var(--lh-heading);
+  }
+
+  .reservation-card,
+  .confirmation-card,
+  .form-success{
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
+
+  body .hero-title{
+    font-size: 60px !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .hero-title .org{
+    font-size: 28px !important;
+    vertical-align: baseline !important;
+  }
+
+  .hero-logo{ display: none !important; }
+  .hero-title{ display: none !important; }
+  .hero-logo-mobile{ display: block; margin: 0 auto; }
+  .hero-top{ width: 100%; }
+}
+
+@media (min-width: 981px){
+  .hero-logo{ display: block !important; }
+  .hero-title{ display: block !important; }
+  .hero-logo-mobile{ display: none !important; }
+}

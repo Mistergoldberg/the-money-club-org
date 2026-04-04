@@ -87,6 +87,7 @@ $student_age = isset($_POST['student-age']) ? trim($_POST['student-age']) : '';
 $parent_name = isset($_POST['parent-name']) ? trim($_POST['parent-name']) : '';
 $parent_email = isset($_POST['parent-email']) ? trim($_POST['parent-email']) : '';
 $parent_phone = isset($_POST['parent-phone']) ? trim($_POST['parent-phone']) : '';
+$program_track = isset($_POST['program-track']) ? trim($_POST['program-track']) : '';
 $session = isset($_POST['session']) ? trim($_POST['session']) : '';
 $emergency_contact_name = isset($_POST['emergency-contact-name']) ? trim($_POST['emergency-contact-name']) : '';
 $emergency_contact_phone = isset($_POST['emergency-contact-phone']) ? trim($_POST['emergency-contact-phone']) : '';
@@ -138,17 +139,62 @@ if ($parent_phone === '' || $parent_phone_digits === '' || strlen($parent_phone_
     redirect_with_error($error_return, 'parent-phone', 'Please provide a valid parent phone number.');
 }
 
-$session_map = [
-    'session1' => 'July 6 - July 31, 2026',
-    'session2' => 'August 4 - August 28, 2026'
+$program_options = [
+    'two-week-builder-sprint' => [
+        'label' => '2-Week Builder Sprint',
+        'sessions' => [
+            'tw_jul_6_17' => 'July 6 - July 17, 2026',
+            'tw_jul_20_31' => 'July 20 - July 31, 2026',
+            'tw_aug_4_15' => 'August 4 - August 15, 2026',
+            'tw_aug_17_28' => 'August 17 - August 28, 2026'
+        ]
+    ],
+    'four-week-full-program' => [
+        'label' => '4-Week Full Program',
+        'sessions' => [
+            'fw_jul_6_31' => 'July 6 - July 31, 2026',
+            'fw_aug_4_28' => 'August 4 - August 28, 2026'
+        ]
+    ]
 ];
-if (!array_key_exists($session, $session_map)) {
+
+// Backward compatibility if old values are still posted.
+if ($session === 'session1') {
+    $session = 'fw_jul_6_31';
+} elseif ($session === 'session2') {
+    $session = 'fw_aug_4_28';
+}
+
+if (!array_key_exists($program_track, $program_options)) {
+    foreach ($program_options as $track_key => $track_data) {
+        if (isset($track_data['sessions'][$session])) {
+            $program_track = $track_key;
+            break;
+        }
+    }
+}
+
+if (!array_key_exists($program_track, $program_options)) {
     redirect_with_error($error_return, 'session', 'Please select a valid session.');
 }
 
-if ($emergency_contact_name === '') {
-    redirect_with_error($error_return, 'emergency-contact-name', 'Emergency contact name is required.');
+if (!array_key_exists($session, $program_options[$program_track]['sessions'])) {
+    $matched_track = '';
+    foreach ($program_options as $track_key => $track_data) {
+        if (isset($track_data['sessions'][$session])) {
+            $matched_track = $track_key;
+            break;
+        }
+    }
+    if ($matched_track !== '') {
+        $program_track = $matched_track;
+    } else {
+        redirect_with_error($error_return, 'session', 'Please select a valid session.');
+    }
 }
+
+$program_label = $program_options[$program_track]['label'];
+$session_label = $program_options[$program_track]['sessions'][$session];
 
 $emergency_phone_digits = preg_replace('/\D+/', '', $emergency_contact_phone);
 if ($emergency_contact_phone === '' || $emergency_phone_digits === '' || strlen($emergency_phone_digits) < 10 || strlen($emergency_phone_digits) > 15) {
@@ -156,10 +202,13 @@ if ($emergency_contact_phone === '' || $emergency_phone_digits === '' || strlen(
 }
 
 $authorized_pickup_1_phone_digits = preg_replace('/\D+/', '', $authorized_pickup_phone_1);
-if ($authorized_pickup_name_1 === '') {
-    redirect_with_error($error_return, 'authorized-pickup-name-1', 'Authorized pickup name is required.');
+if (($authorized_pickup_name_1 !== '' && $authorized_pickup_phone_1 === '')) {
+    redirect_with_error($error_return, 'authorized-pickup-phone-1', 'Please provide a phone number for Authorized Pickup Name 1.');
 }
-if ($authorized_pickup_phone_1 === '' || $authorized_pickup_1_phone_digits === '' || strlen($authorized_pickup_1_phone_digits) < 10 || strlen($authorized_pickup_1_phone_digits) > 15) {
+if (($authorized_pickup_name_1 === '' && $authorized_pickup_phone_1 !== '')) {
+    redirect_with_error($error_return, 'authorized-pickup-name-1', 'Please provide a name for Authorized Pickup Phone 1.');
+}
+if ($authorized_pickup_phone_1 !== '' && ($authorized_pickup_1_phone_digits === '' || strlen($authorized_pickup_1_phone_digits) < 10 || strlen($authorized_pickup_1_phone_digits) > 15)) {
     redirect_with_error($error_return, 'authorized-pickup-phone-1', 'Please provide a valid authorized pickup phone number.');
 }
 
@@ -234,7 +283,8 @@ $hash_payload = [
     'parent_name' => $parent_name,
     'parent_email' => $parent_email,
     'parent_phone' => $parent_phone,
-    'session' => $session_map[$session],
+    'program_track' => $program_label,
+    'session' => $session_label,
     'emergency_contact_name' => $emergency_contact_name,
     'emergency_contact_phone' => $emergency_contact_phone,
     'authorized_pickup_name_1' => $authorized_pickup_name_1,
@@ -270,6 +320,7 @@ $csv_headers = [
     'parent_name',
     'parent_email',
     'parent_phone',
+    'program_track',
     'session',
     'emergency_contact_name',
     'emergency_contact_phone',
@@ -298,7 +349,8 @@ $csv_row = [
     $parent_name,
     $parent_email,
     $parent_phone,
-    $session_map[$session],
+    $program_label,
+    $session_label,
     $emergency_contact_name,
     $emergency_contact_phone,
     $authorized_pickup_name_1,
@@ -340,7 +392,8 @@ $internal_lines[] = 'Student Age: ' . (string)$age_value;
 $internal_lines[] = 'Parent/Guardian Name: ' . $parent_name;
 $internal_lines[] = 'Parent Email: ' . $parent_email;
 $internal_lines[] = 'Parent Phone: ' . $parent_phone;
-$internal_lines[] = 'Session: ' . $session_map[$session];
+$internal_lines[] = 'Program: ' . $program_label;
+$internal_lines[] = 'Session: ' . $session_label;
 $internal_lines[] = 'Emergency Contact Name: ' . $emergency_contact_name;
 $internal_lines[] = 'Emergency Contact Phone: ' . $emergency_contact_phone;
 $internal_lines[] = 'Authorized Pickup Name 1: ' . $authorized_pickup_name_1;

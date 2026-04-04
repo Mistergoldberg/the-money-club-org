@@ -1627,7 +1627,7 @@ nav{
         <div class="menu-links">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
@@ -1639,7 +1639,7 @@ nav{
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -1663,8 +1663,11 @@ nav{
 
           <h3>🚀 Program Overview</h3>
           <p><strong>Who is it for?</strong> Curious kids ages <strong>10–16</strong></p>
-          <p><strong>How much?</strong> <strong>$1,500 per student</strong> (plus 13% HST)</p>
-          <p><strong>How long?</strong> <strong>4-week</strong> summer day program</p>
+          <p><strong>How much and how long?</strong></p>
+          <ul>
+            <li><strong>2-Week Builder Sprint</strong><br><strong>$550 + 13% HST</strong><br>A focused introduction.</li>
+            <li><strong>4-Week Full Program</strong><br><strong>$1,100</strong><br>The full experience.</li>
+          </ul>
           <p><strong>Where?</strong> <strong>UTSU Student Commons</strong>, 230 College Street, Toronto, ON M5T 1R2, in downtown Toronto near the University of Toronto. Independent program, not affiliated with or endorsed by the University.</p>
           <p><strong>When?</strong></p>
           <ul>
@@ -1686,7 +1689,7 @@ nav{
 
           <h3>💰 Program Fee + HST</h3>
           <ul>
-            <li><strong>Program fee:</strong> <strong>$1,500 CAD</strong> per student, per session</li>
+            <li><strong>Program fee:</strong> <strong>$1,100 CAD</strong> per student, per session</li>
             <li><strong>HST:</strong> <strong>13% (Ontario)</strong> is added to the program fee</li>
           </ul>
           <p>Program fees are <strong>not charitable donations</strong> and are <strong>not eligible for donation tax receipts</strong>.</p>
@@ -1707,21 +1710,7 @@ nav{
           </ul>
 
           <h3>🔁 Refunds &amp; Cancellations</h3>
-          <p><strong>Refunds requested on or before June 1, 2026</strong><br />
-            Refund requests must be emailed to <a href="mailto:info@the-money-club.org">info@the-money-club.org</a> from the same email address used to register.</p>
-          <ul>
-            <li>Refunds are available until June 1, 2026, less a $75 administration fee.</li>
-            <li>For credit card payments, the credit card processing surcharge is non-refundable.</li>
-          </ul>
-          <p><strong>After June 1, 2026</strong><br />Program fees are non-refundable.</p>
-          <p>Where space allows, families may request a session transfer or program credit.<br />
-            Requests related to medical circumstances may be considered with documentation.</p>
-          <p><strong>🛑 If we cancel a session</strong><br />
-            If The Money Club.Org cancels a session (for example, safety issues, venue issues, or insufficient enrollment), we will offer <strong>your choice</strong> of:</p>
-          <ul>
-            <li>a <strong>full refund of amounts paid</strong> (including HST and any credit card surcharge), or</li>
-            <li>a <strong>transfer to another session</strong> (if space is available)</li>
-          </ul>
+          <p>Because The Money Club.Org is a lean nonprofit startup, program fees are non-refundable. Each registration directly supports the costs of running the program, including venue, materials, and University of Toronto student mentor wages.</p>
 
           <h3>🔄 Transfers Between Sessions</h3>
           <p>Transfers between Session 1 and Session 2 may be possible <strong>only if space is available</strong> and must be requested in writing at <a href="mailto:info@the-money-club.org">info@the-money-club.org</a>.</p>
@@ -1747,7 +1736,7 @@ nav{
 
           <h3>📸 Photos, Video, &amp; Communications</h3>
           <p>Media preferences (photo/video consent) are collected in the Student Registration &amp; Consent Form.</p>
-          <p>We may contact you by email or phone regarding program operations, scheduling, receipts, refunds, and required forms.</p>
+          <p>We may contact you by email or phone regarding program operations, scheduling, receipts, and required forms.</p>
 
           <h3>🧩 Changes to the Program</h3>
           <p>We may make reasonable changes to scheduling, instructors, activities, or materials. Any significant changes will be communicated by email.</p>
@@ -2058,10 +2047,9 @@ nav{
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
-        if (isReserveCta(target)){
-          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
-        }
+        var payload = buildCtaPayload(target, 'cta_click');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
+        window.dataLayer.push(payload);
       }
 
       document.addEventListener('click', function(event){
@@ -2069,10 +2057,18 @@ nav{
         if (!target){
           return;
         }
-        // Exclude interest form submit controls from generic CTA tracking
-        // These are tracked separately via interest_form_* events
+        // Exclude form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* and registration_form_* events
         var interestForm = target.closest('form[action="apply-interest.php"]');
         if (interestForm){
+          return;
+        }
+        var submitForm = target.closest('form');
+        var isSubmitControl = !!submitForm && (
+          target.matches('button[type="submit"], input[type="submit"]') ||
+          (target.tagName === 'BUTTON' && (!target.type || target.type.toLowerCase() === 'submit'))
+        );
+        if (isSubmitControl){
           return;
         }
         if (!(

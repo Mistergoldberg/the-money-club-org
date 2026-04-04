@@ -491,7 +491,7 @@
         <div class="menu-links">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
@@ -503,7 +503,7 @@
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -532,6 +532,7 @@
         <form class="approval-form form-grid" action="apply-parent-approval.php" method="post" novalidate>
           <input type="hidden" name="return-to" value="parent-approval.html" />
           <input type="hidden" name="return-error" value="parent-approval.html" />
+          <input type="hidden" id="program-track" name="program-track" value="" />
           <p class="signature-note">All fields are required unless marked optional.</p>
 
           <div class="field-row two-col">
@@ -570,38 +571,35 @@
               <label for="session">Session</label>
               <select id="session" name="session" required>
                 <option value="">Select a session</option>
-                <option value="session1">July 6 &ndash; July 31, 2026</option>
-                <option value="session2">August 4 &ndash; August 28, 2026</option>
+                <option value="fw_jul_6_31">4-Week Full Program &mdash; July 6&ndash;31</option>
+                <option value="fw_aug_4_28">4-Week Full Program &mdash; Aug 4&ndash;28</option>
+                <option value="tw_jul_6_17">2-Week Builder Sprint &mdash; July 6&ndash;17</option>
+                <option value="tw_jul_20_31">2-Week Builder Sprint &mdash; July 20&ndash;31</option>
+                <option value="tw_aug_4_15">2-Week Builder Sprint &mdash; Aug 4&ndash;15</option>
+                <option value="tw_aug_17_28">2-Week Builder Sprint &mdash; Aug 17&ndash;28</option>
               </select>
               <small class="field-error">Please select a session.</small>
             </div>
           </div>
 
-          <div class="field-row two-col">
-            <div class="field">
-              <label for="emergency-contact-name">Emergency Contact Name</label>
-              <input id="emergency-contact-name" name="emergency-contact-name" type="text" autocomplete="name" required />
-              <small class="field-error">Emergency contact name is required.</small>
-            </div>
-            <div class="field">
-              <label for="emergency-contact-phone">Emergency Contact Phone</label>
-              <input id="emergency-contact-phone" name="emergency-contact-phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
-              <small class="field-error">Enter a valid emergency contact phone number.</small>
-            </div>
+          <div class="field">
+            <label for="emergency-contact-phone">Emergency Contact Phone</label>
+            <input id="emergency-contact-phone" name="emergency-contact-phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
+            <small class="field-error">Enter a valid emergency contact phone number.</small>
           </div>
 
           <div class="form-section">
             <h2>Authorized Pickup</h2>
             <div class="field-row two-col">
               <div class="field">
-                <label for="authorized-pickup-name-1">Authorized Pickup Name 1</label>
-                <input id="authorized-pickup-name-1" name="authorized-pickup-name-1" type="text" autocomplete="name" required />
-                <small class="field-error">Authorized pickup name is required.</small>
+                <label for="authorized-pickup-name-1">Authorized Pickup Name 1 (optional)</label>
+                <input id="authorized-pickup-name-1" name="authorized-pickup-name-1" type="text" autocomplete="name" />
+                <small class="field-error">Enter a name if Authorized Pickup Phone 1 is provided.</small>
               </div>
               <div class="field">
-                <label for="authorized-pickup-phone-1">Authorized Pickup Phone 1</label>
-                <input id="authorized-pickup-phone-1" name="authorized-pickup-phone-1" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
-                <small class="field-error">Enter a valid authorized pickup phone number.</small>
+                <label for="authorized-pickup-phone-1">Authorized Pickup Phone 1 (optional)</label>
+                <input id="authorized-pickup-phone-1" name="authorized-pickup-phone-1" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" />
+                <small class="field-error">Enter a valid phone number if Authorized Pickup Name 1 is provided.</small>
               </div>
             </div>
             <div class="field-row two-col">
@@ -765,17 +763,102 @@
 
       var form = document.querySelector('.approval-form');
       if (!form){ return; }
+      var programTrackInput = document.getElementById('program-track');
+      var sessionSelect = document.getElementById('session');
+
+      function applySessionFilter(programTrack){
+        if (!sessionSelect){ return; }
+        var showTwoWeek = programTrack === 'two-week-builder-sprint';
+        var showFourWeek = programTrack === 'four-week-full-program';
+
+        Array.prototype.forEach.call(sessionSelect.options, function(option){
+          if (!option.value){ return; }
+          var isTwoWeek = option.value.indexOf('tw_') === 0;
+          var isFourWeek = option.value.indexOf('fw_') === 0;
+          var shouldShow = true;
+          if (showTwoWeek){ shouldShow = isTwoWeek; }
+          if (showFourWeek){ shouldShow = isFourWeek; }
+          option.hidden = !shouldShow;
+          option.disabled = !shouldShow;
+        });
+
+        var selectedOption = sessionSelect.options[sessionSelect.selectedIndex];
+        if (selectedOption && selectedOption.disabled){
+          sessionSelect.value = '';
+        }
+      }
+
+      (function hydrateFromReserve(){
+        var prefillRaw = '';
+        try {
+          prefillRaw = sessionStorage.getItem('tmc_parent_approval_prefill') || '';
+        } catch (e) {}
+        if (!prefillRaw){ return; }
+
+        var prefill = null;
+        try {
+          prefill = JSON.parse(prefillRaw);
+        } catch (e) {
+          prefill = null;
+        }
+        if (!prefill || typeof prefill !== 'object'){ return; }
+
+        function setIfEmpty(id, value){
+          var el = document.getElementById(id);
+          if (!el || typeof value !== 'string'){ return; }
+          if (el.value.trim() === '' && value.trim() !== ''){
+            el.value = value.trim();
+          }
+        }
+
+        setIfEmpty('student-name', prefill.student_name || '');
+        setIfEmpty('student-age', prefill.student_age || '');
+        setIfEmpty('parent-name', prefill.parent_name || '');
+        setIfEmpty('parent-email', prefill.parent_email || '');
+        setIfEmpty('parent-phone', prefill.parent_phone || '');
+
+        var programTrack = (prefill.program_track || '').trim();
+        if (programTrackInput){
+          programTrackInput.value = programTrack;
+        }
+        applySessionFilter(programTrack);
+
+        var prefillSession = (prefill.session || '').trim();
+        if (sessionSelect && prefillSession){
+          sessionSelect.value = prefillSession;
+        }
+
+        try {
+          sessionStorage.removeItem('tmc_parent_approval_prefill');
+        } catch (e) {}
+      })();
+
+      if (programTrackInput){
+        applySessionFilter(programTrackInput.value || '');
+      }
 
       function updatePickupPairValidity(){
+        var pickupName1 = document.getElementById('authorized-pickup-name-1');
+        var pickupPhone1 = document.getElementById('authorized-pickup-phone-1');
         var pickupName2 = document.getElementById('authorized-pickup-name-2');
         var pickupPhone2 = document.getElementById('authorized-pickup-phone-2');
-        if (!pickupName2 || !pickupPhone2){ return; }
+        if (!pickupName1 || !pickupPhone1 || !pickupName2 || !pickupPhone2){ return; }
 
+        pickupName1.setCustomValidity('');
+        pickupPhone1.setCustomValidity('');
         pickupName2.setCustomValidity('');
         pickupPhone2.setCustomValidity('');
 
+        var hasName1 = pickupName1.value.trim() !== '';
+        var hasPhone1 = pickupPhone1.value.trim() !== '';
         var hasName2 = pickupName2.value.trim() !== '';
         var hasPhone2 = pickupPhone2.value.trim() !== '';
+
+        if (hasName1 && !hasPhone1){
+          pickupPhone1.setCustomValidity('Please provide a phone number for Authorized Pickup Name 1.');
+        } else if (!hasName1 && hasPhone1){
+          pickupName1.setCustomValidity('Please provide a name for Authorized Pickup Phone 1.');
+        }
 
         if (hasName2 && !hasPhone2){
           pickupPhone2.setCustomValidity('Please provide a phone number for Authorized Pickup Name 2.');
@@ -796,13 +879,13 @@
       });
 
       form.addEventListener('input', function(e){
-        if (e.target && (e.target.id === 'authorized-pickup-name-2' || e.target.id === 'authorized-pickup-phone-2')){
+        if (e.target && (e.target.id === 'authorized-pickup-name-1' || e.target.id === 'authorized-pickup-phone-1' || e.target.id === 'authorized-pickup-name-2' || e.target.id === 'authorized-pickup-phone-2')){
           updatePickupPairValidity();
         }
         updateFieldState(e.target.closest('.field'));
       });
       form.addEventListener('change', function(e){
-        if (e.target && (e.target.id === 'authorized-pickup-name-2' || e.target.id === 'authorized-pickup-phone-2')){
+        if (e.target && (e.target.id === 'authorized-pickup-name-1' || e.target.id === 'authorized-pickup-phone-1' || e.target.id === 'authorized-pickup-name-2' || e.target.id === 'authorized-pickup-phone-2')){
           updatePickupPairValidity();
         }
         updateFieldState(e.target.closest('.field'));

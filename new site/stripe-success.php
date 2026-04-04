@@ -90,13 +90,44 @@ $parent_email = filter_var($parent_email_raw, FILTER_VALIDATE_EMAIL) ? $parent_e
 $parent_phone = trim((string)($metadata['parent_phone'] ?? ''));
 $student_name = trim((string)($metadata['student_name'] ?? ''));
 $student_age = trim((string)($metadata['student_age'] ?? ''));
+$program_track = trim((string)($metadata['program_track'] ?? ''));
+$program_label = trim((string)($metadata['program_label'] ?? ''));
+$program_tuition = trim((string)($metadata['program_tuition'] ?? ''));
 $preferred_session = trim((string)($metadata['preferred_session'] ?? ''));
+$session_label = trim((string)($metadata['session_label'] ?? ''));
 $terms_agree = trim((string)($metadata['terms_agree'] ?? 'Yes'));
 
-$session_map = [
-    'session1' => 'Session 1: July 6-31, 2026',
-    'session2' => 'Session 2: August 4-28, 2026'
+$program_options = [
+    'two-week-builder-sprint' => [
+        'label' => '2-Week Builder Sprint',
+        'tuition' => '750.00',
+        'sessions' => [
+            'session1' => 'July 6-17, 2026',
+            'session2' => 'August 4-15, 2026'
+        ]
+    ],
+    'four-week-full-program' => [
+        'label' => '4-Week Full Program',
+        'tuition' => '1100.00',
+        'sessions' => [
+            'session1' => 'July 6-31, 2026',
+            'session2' => 'August 4-28, 2026'
+        ]
+    ]
 ];
+
+if (!array_key_exists($program_track, $program_options)) {
+    $program_track = 'four-week-full-program';
+}
+if ($program_label === '') {
+    $program_label = $program_options[$program_track]['label'];
+}
+if ($program_tuition === '') {
+    $program_tuition = $program_options[$program_track]['tuition'];
+}
+if ($session_label === '' && isset($program_options[$program_track]['sessions'][$preferred_session])) {
+    $session_label = $program_options[$program_track]['sessions'][$preferred_session];
+}
 
 $availability_path = $data_dir . '/availability.json';
 $availability_defaults = [
@@ -134,7 +165,7 @@ function update_availability($path, $defaults, $callback) {
 }
 
 $reserve_result = ['ok' => true, 'remaining' => 'unknown'];
-if (isset($session_map[$preferred_session])) {
+if (in_array($preferred_session, ['session1', 'session2'], true)) {
     $reserve_result = update_availability($availability_path, $availability_defaults, function (&$data) use ($preferred_session) {
         if ((int)$data[$preferred_session] <= 0) {
             return ['ok' => true, 'remaining' => (int)$data[$preferred_session]];
@@ -154,7 +185,9 @@ $lines[] = 'Email: ' . ($parent_email !== '' ? $parent_email : '(not provided)')
 $lines[] = 'Phone: ' . ($parent_phone !== '' ? $parent_phone : '(not provided)');
 $lines[] = 'Child Name: ' . ($student_name !== '' ? $student_name : '(not provided)');
 $lines[] = 'Child Age: ' . ($student_age !== '' ? $student_age : '(not provided)');
-$lines[] = 'Session: ' . ($session_map[$preferred_session] ?? $preferred_session);
+$lines[] = 'Program: ' . ($program_label !== '' ? $program_label : '(not provided)');
+$lines[] = 'Session: ' . ($session_label !== '' ? $session_label : $preferred_session);
+$lines[] = 'Program tuition: $' . $program_tuition . ' CAD (+HST)';
 $lines[] = 'Session spots remaining: ' . (string)$reserve_result['remaining'];
 $lines[] = 'Terms agreed: ' . ($terms_agree !== '' ? 'Yes' : 'No');
 $lines[] = 'Payment method: Credit Card (Stripe)';
@@ -199,9 +232,9 @@ if ($parent_email !== '') {
     $parent_lines[] = '';
     $parent_lines[] = 'Daily 9–5, with instruction from 9:30am to 3:30pm';
     $parent_lines[] = '';
-    $parent_lines[] = 'Sessions:';
-    $parent_lines[] = '- July 6–31';
-    $parent_lines[] = '- August 4–28';
+    $parent_lines[] = 'Program selected: ' . $program_label;
+    $parent_lines[] = 'Session selected: ' . ($session_label !== '' ? $session_label : $preferred_session);
+    $parent_lines[] = 'Program fee: $' . $program_tuition . ' CAD (+HST)';
     $parent_lines[] = '';
     $parent_lines[] = '---';
     $parent_lines[] = '';
@@ -229,6 +262,8 @@ $csv_headers = [
     'parent_phone',
     'student_name',
     'student_age',
+    'program_track',
+    'program_tuition',
     'session',
     'terms_agreed',
     'payment_method',
@@ -241,7 +276,9 @@ $csv_row = [
     $parent_phone,
     $student_name,
     $student_age,
-    ($session_map[$preferred_session] ?? $preferred_session),
+    $program_label,
+    '$' . $program_tuition,
+    ($session_label !== '' ? $session_label : $preferred_session),
     ($terms_agree !== '' ? 'Yes' : 'No'),
     'Credit Card (Stripe) - ' . $session_id,
     (string)$reserve_result['remaining']
@@ -272,10 +309,10 @@ $_SESSION['tmc_verified_purchase'] = [
     'tax' => $purchase_tax,
     'items' => [
         [
-            'item_id' => 'money-club-summer-camp',
-            'item_name' => 'The Money Club.Org Summer Camp',
-            'item_category' => 'Summer Camp',
-            'price' => 1500,
+            'item_id' => ($program_track !== '' ? $program_track : 'summer-program'),
+            'item_name' => 'The Money Club.Org ' . ($program_label !== '' ? $program_label : 'Summer Program'),
+            'item_category' => 'Summer Program',
+            'price' => (float)$program_tuition,
             'quantity' => 1
         ]
     ]

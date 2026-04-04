@@ -51,7 +51,7 @@
           "name": "What will my child actually do during the day?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Students work through guided build sprints, not passive classroom activities. They might design a product idea, build a simple app or prototype, conduct interviews with potential users, test pricing, create branding or marketing materials, and present their work to the group. The goal is to help students research, build, test, and improve ideas like real creators."
+            "text": "Students work through guided build sprints, not passive classroom activities. They might research a real problem, use AI to generate and improve ideas, build a simple app or prototype, interview potential users, test pricing, create branding or marketing materials, and present what they learned. The goal is to help students think clearly, make things, test them in the real world, and improve them based on evidence. View the curriculum to see how the program is organized."
           }
         },
         {
@@ -84,7 +84,7 @@
           "name": "What is your refund policy?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Refunds are available until June 1, 2026, less a $75 administration fee. After June 1, fees are non-refundable. Medical exceptions may be considered with documentation."
+            "text": "The Money Club.Org operates as a lean nonprofit startup, so we are not able to offer refunds. Each registration directly supports the costs required to run the program, including University of Toronto student mentors, space, materials, and operations. We share this openly as part of our transparent model. If a session does not run, families will be notified and any payments made for that session will be refunded."
           }
         },
         {
@@ -1848,7 +1848,7 @@ nav{
         <div class="menu-links">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
@@ -1860,7 +1860,7 @@ nav{
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
       </nav>
@@ -1897,8 +1897,9 @@ nav{
           <details class="faq-item">
             <summary>What will my child actually do during the day?</summary>
             <p>Students work through guided build sprints, not passive classroom activities.</p>
-            <p>They might design a product idea, build a simple app or prototype, conduct interviews with potential users, test pricing, create branding or marketing materials, and present their work to the group.</p>
-            <p>The goal is to help students research, build, test, and improve ideas like real creators.</p>
+            <p>They might research a real problem, use AI to generate and improve ideas, build a simple app or prototype, interview potential users, test pricing, create branding or marketing materials, and present what they learned.</p>
+            <p>The goal is to help students <strong>think clearly, make things, test them in the real world, and improve them based on evidence</strong>.</p>
+            <p><a href="curriculum-details.html">View the curriculum</a> to see how the program is organized.</p>
           </details>
           <details class="faq-item">
             <summary>How is AI used in the program?</summary>
@@ -1921,7 +1922,8 @@ nav{
           </details>
           <details class="faq-item">
             <summary>What is your refund policy?</summary>
-            <p>Refunds are available until June 1, 2026, less a $75 administration fee. After June 1, fees are non-refundable. Medical exceptions may be considered with documentation.</p>
+            <p>The Money Club.Org operates as a lean nonprofit startup, so we are not able to offer refunds. Each registration directly supports the costs required to run the program, including University of Toronto student mentors, space, materials, and operations.</p>
+            <p>We share this openly as part of our transparent model. If a session does not run, families will be notified and any payments made for that session will be refunded.</p>
           </details>
           <details class="faq-item">
             <summary>What happens at the end of the program?</summary>
@@ -1945,7 +1947,7 @@ nav{
 
     <section class="section-banner full-bleed purple heading-white quickfacts-section" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Free Info Session</h2>
+        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
@@ -2119,8 +2121,9 @@ nav{
         success.classList.add('is-visible');
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
-          event: 'tmc_interest_form_success',
+          event: 'interest_form_success',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_success',
           page_location: window.location.pathname,
           form_context: 'faq'
@@ -2249,109 +2252,6 @@ nav{
         var value = parseFloat(match[1].replace(/,/g, ''));
         return isNaN(value) ? 1500 : value;
       }
-
-      function pushBeginCheckout(form){
-        if (!form || form.dataset.beginCheckoutTracked === 'true'){
-          return;
-        }
-        form.dataset.beginCheckoutTracked = 'true';
-        window.dataLayer = window.dataLayer || [];
-        var value = getProgramFeeValue(form);
-        window.dataLayer.push({
-          event: 'begin_checkout',
-          currency: 'CAD',
-          value: value,
-          items: [
-            {
-              item_id: 'money-club-summer-camp',
-              item_name: 'The Money Club.Org Summer Camp',
-              item_category: 'Summer Camp',
-              price: value,
-              quantity: 1
-            }
-          ],
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
-      }
-
-      sessionRadios.forEach(function(radio){
-        radio.addEventListener('change', function(){
-          updateFlowState();
-        });
-      });
-
-      if (sessionGrid){
-        sessionGrid.addEventListener('click', function(e){
-          if (sessionGrid.classList.contains('is-locked')){
-            e.preventDefault();
-            showFirstInvalidField();
-          }
-        });
-      }
-
-      paymentButtons.forEach(function(btn){
-        btn.addEventListener('click', function(e){
-          var form = btn.form;
-          if (form) {
-            var returnTo = form.querySelector('[name="return-to"]');
-            var returnCancel = form.querySelector('[name="return-cancel"]');
-            var currentPage = window.location.pathname.split('/').pop() || 'faq.html';
-            if (returnCancel){ returnCancel.value = currentPage; }
-
-            if (btn.value === 'Credit Card') {
-              form.setAttribute('action', 'stripe-checkout.php');
-              if (returnTo){ returnTo.value = 'thank-you-credit-card.php'; }
-            } else {
-              form.setAttribute('action', 'apply-camper.php');
-              if (returnTo){ returnTo.value = 'etransfer.html'; }
-            }
-          }
-          if (!baseFieldsValid()){
-            e.preventDefault();
-            showFirstInvalidField();
-            return;
-          }
-          if (!sessionSelected()){
-            e.preventDefault();
-            showSessionError();
-            return;
-          }
-          if (!termsAgreed()){
-            e.preventDefault();
-            showFirstInvalidField();
-            return;
-          }
-          if (btn.value === 'Credit Card') {
-            pushBeginCheckout(form);
-          }
-        });
-      });
-    })();
-  </script>
-  <script>
-    (function(){
-      var spotEls = document.querySelectorAll('.session-availability');
-      if (!spotEls.length){ return; }
-
-      function updateSpots(data){
-        spotEls.forEach(function(el){
-          var key = el.getAttribute('data-session');
-          if (!key || typeof data[key] !== 'number'){ return; }
-          var count = data[key];
-          var capacity = typeof data.capacity === 'number' ? data.capacity : 30;
-          el.textContent = count + ' of ' + capacity + ' Spots Available';
-          var row = el.closest('.session-card');
-          if (row){
-            row.classList.toggle('is-full', count <= 0);
-            var input = row.querySelector('input[type="radio"]');
-            if (input){
-              input.disabled = count <= 0;
-            }
-          }
-        });
-      }
-
       function fetchAvailability(url){
         return fetch(url, { cache: 'no-store' }).then(function(res){
           if (!res.ok){
@@ -2490,10 +2390,9 @@ nav{
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
-        if (isReserveCta(target)){
-          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
-        }
+        var payload = buildCtaPayload(target, 'cta_click');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
+        window.dataLayer.push(payload);
       }
 
       document.addEventListener('click', function(event){
@@ -2501,10 +2400,18 @@ nav{
         if (!target){
           return;
         }
-        // Exclude interest form submit controls from generic CTA tracking
-        // These are tracked separately via interest_form_* events
+        // Exclude form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* and registration_form_* events
         var interestForm = target.closest('form[action="apply-interest.php"]');
         if (interestForm){
+          return;
+        }
+        var submitForm = target.closest('form');
+        var isSubmitControl = !!submitForm && (
+          target.matches('button[type="submit"], input[type="submit"]') ||
+          (target.tagName === 'BUTTON' && (!target.type || target.type.toLowerCase() === 'submit'))
+        );
+        if (isSubmitControl){
           return;
         }
         if (!(
@@ -2556,6 +2463,7 @@ nav{
         window.dataLayer.push({
           event: 'interest_form_start',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_start',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
@@ -2566,6 +2474,7 @@ nav{
         window.dataLayer.push({
           event: 'interest_form_submit',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_submit',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
@@ -2578,6 +2487,7 @@ nav{
           error_field: fieldName || 'unknown',
           error_message: message || 'Validation error',
           form_name: 'interest_form',
+          form_id: 'interest',
           funnel_step: 'form_error',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
