@@ -2396,9 +2396,20 @@ nav{
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
+        var isReserveIntent = isReserveCta(target);
         var payload = buildCtaPayload(target, 'cta_click');
-        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveIntent ? 'reserve_spot' : 'general');
         window.dataLayer.push(payload);
+
+        if (isReserveIntent){
+          var normalizedLabel = normalizeText(getLabel(target));
+          var normalizedText = normalizeText(getText(target));
+          if (normalizedLabel === 'reserve a spot' || normalizedText === 'reserve a spot'){
+            var reservePayload = buildCtaPayload(target, 'reserve_spot_click');
+            reservePayload.cta_intent = 'reserve_spot';
+            window.dataLayer.push(reservePayload);
+          }
+        }
       }
 
       document.addEventListener('click', function(event){
@@ -2459,8 +2470,8 @@ nav{
     window.dataLayer = window.dataLayer || [];
 
     (function(){
-      var interestForm = document.querySelector('form[action="apply-interest.php"]');
-      if (!interestForm){ return; }
+      var interestForms = document.querySelectorAll('form[action="apply-interest.php"]');
+      if (!interestForms.length){ return; }
 
       function hasValidInterestIdentity(form){
         if (!form){ return false; }
@@ -2483,12 +2494,14 @@ nav{
         });
       }
 
-      interestForm.addEventListener('submit', function(e){
-        if (!interestForm.checkValidity() || !hasValidInterestIdentity(interestForm)){
-          return;
-        }
+      interestForms.forEach(function(interestForm){
+        interestForm.addEventListener('submit', function(){
+          if (!interestForm.checkValidity() || !hasValidInterestIdentity(interestForm)){
+            return;
+          }
 
-        pushInterestFormSubmit();
+          pushInterestFormSubmit();
+        });
       });
     })();
   </script>

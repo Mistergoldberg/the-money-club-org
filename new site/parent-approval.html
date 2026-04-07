@@ -946,5 +946,92 @@
       }
     })();
   </script>
+  <script>
+    (function(){
+      function normalizeText(value){
+        return (value || '')
+          .toLowerCase()
+          .replace(/&/g, ' and ')
+          .replace(/[^a-z0-9]+/g, ' ')
+          .trim();
+      }
+
+      function getLabel(el){
+        if (!el){
+          return '';
+        }
+        var explicitLabel = el.getAttribute('data-cta-label');
+        if (explicitLabel){
+          return explicitLabel;
+        }
+        var text = el.textContent || '';
+        return text.trim().replace(/\s+/g, ' ');
+      }
+
+      function getText(el){
+        if (!el){
+          return '';
+        }
+        var text = el.textContent || '';
+        return text.trim().replace(/\s+/g, ' ');
+      }
+
+      function getLocation(el){
+        if (!el){
+          return '';
+        }
+        var container = el.closest('[data-cta-location], section[id], header, footer, nav, form');
+        if (!container){
+          return '';
+        }
+        return (
+          container.getAttribute('data-cta-location') ||
+          container.id ||
+          container.getAttribute('aria-label') ||
+          container.tagName.toLowerCase()
+        );
+      }
+
+      function isReserveSpotClick(target){
+        var normalizedLabel = normalizeText(getLabel(target));
+        var normalizedText = normalizeText(getText(target));
+        return normalizedLabel === 'reserve a spot' || normalizedText === 'reserve a spot';
+      }
+
+      function buildReserveSpotPayload(target){
+        var label = getLabel(target);
+        var text = getText(target);
+        var href = target.getAttribute('href') || '';
+        var pagePath = window.location.pathname || '';
+        return {
+          event: 'reserve_spot_click',
+          form_name: 'site_cta',
+          funnel_step: 'reserve_spot_click',
+          cta_label: label,
+          cta_text: text,
+          cta_href: href,
+          cta_url: href,
+          cta_type: target.tagName.toLowerCase() === 'a' ? 'link' : (target.type || 'button'),
+          cta_location: getLocation(target),
+          cta_page: pagePath,
+          cta_intent: 'reserve_spot',
+          page_path: pagePath,
+          page_title: document.title || ''
+        };
+      }
+
+      document.addEventListener('click', function(event){
+        var target = event.target.closest('a, button');
+        if (!target){
+          return;
+        }
+        if (!isReserveSpotClick(target)){
+          return;
+        }
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(buildReserveSpotPayload(target));
+      });
+    })();
+  </script>
 </body>
 </html>
