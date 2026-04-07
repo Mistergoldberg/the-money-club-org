@@ -3,29 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mission | Toronto Kids Summer Camp 2026</title>
+  <title>Executive Director Letter | The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Learn about the mission, leadership, and mentorship behind The Money Club.Org Toronto summer program." />
-  <meta property="og:title" content="Mission | Toronto Kids Summer Camp 2026" />
-  <meta property="og:description" content="Learn about the mission, leadership, and mentorship behind The Money Club.Org Toronto summer program." />
-  <meta property="og:url" content="https://the-money-club.org/who-runs-it.html" />
+  <meta name="description" content="A letter from The Money Club.Org Executive Director about mission, systems thinking, and long-term community impact." />
+  <meta property="og:title" content="Executive Director Letter | The Money Club.Org" />
+  <meta property="og:description" content="A letter from The Money Club.Org Executive Director about mission, systems thinking, and long-term community impact." />
+  <meta property="og:url" content="https://the-money-club.org/executive-director-letter.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Jared-Profile.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mission | Toronto Kids Summer Camp 2026" />
-  <meta name="twitter:description" content="Learn about the mission, leadership, and mentorship behind The Money Club.Org Toronto summer program." />
+  <meta name="twitter:title" content="Executive Director Letter | The Money Club.Org" />
+  <meta name="twitter:description" content="A letter from The Money Club.Org Executive Director about mission, systems thinking, and long-term community impact." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Jared-Profile.png" />
-  <link rel="canonical" href="https://the-money-club.org/who-runs-it.html" />
+  <link rel="canonical" href="https://the-money-club.org/executive-director-letter.html" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "WebPage",
-          "@id": "https://the-money-club.org/who-runs-it.html#webpage",
-          "url": "https://the-money-club.org/who-runs-it.html",
-          "name": "Mission | Toronto Kids Summer Camp 2026",
-          "description": "Learn about the mission, leadership, and mentorship behind The Money Club.Org Toronto summer program.",
+          "@id": "https://the-money-club.org/executive-director-letter.html#webpage",
+          "url": "https://the-money-club.org/executive-director-letter.html",
+          "name": "Executive Director Letter | The Money Club.Org",
+          "description": "A letter from The Money Club.Org Executive Director about mission, systems thinking, and long-term community impact.",
           "about": {
             "@id": "https://the-money-club.org/#organization"
           },
@@ -36,7 +36,7 @@
         {
           "@type": "EducationalOrganization",
           "@id": "https://the-money-club.org/#organization",
-          "name": "The Money Club.Org",
+          "name": "The Money Club",
           "url": "https://the-money-club.org/",
           "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 10-16.",
           "logo": {
@@ -88,6 +88,8 @@
       --plum: #6e4a88;
       --purple: #8c62a7;
       --gold: #f0b43a;
+      --rose: #cf6679;
+      --slate: #5b6c7a;
       --ink: #1a1a1a;
 
       --font-body: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -284,6 +286,11 @@
       color: #ffffff;
       box-shadow: 0 10px 20px rgba(140,98,167,0.25);
     }
+    .btn.plum{
+      background: var(--plum);
+      color: #ffffff;
+      box-shadow: 0 10px 20px rgba(110,74,136,0.25);
+    }
     .btn.outline{
       background: transparent;
       border-color: #ffffff;
@@ -424,8 +431,8 @@ nav{
       justify-content: center;
     }
     .hero-logo{
-      width: 136px;
-      height: 136px;
+      width: 116px;
+      height: 116px;
       display: block;
     }
     .hero-title-block{
@@ -436,6 +443,7 @@ nav{
     }
     .hero-title{
       color: var(--teal);
+      font-size: calc(var(--size-hero) * 1.2);
       line-height: 0.85;
       letter-spacing: normal;
       text-align: left;
@@ -443,7 +451,7 @@ nav{
     .hero-sub{
       font-family: var(--font-body);
       font-weight: 700;
-      font-size: inherit;
+      font-size: var(--size-body);
       color: var(--ink);
       margin: 6px auto 0;
       line-height: 1.2;
@@ -544,7 +552,15 @@ nav{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(24px, 5vw, 48px);
-      align-items:center;
+      align-items:start;
+    }
+    .system-title-row{
+      margin-bottom: clamp(16px, 2.5vw, 28px);
+    }
+    @media (min-width: 981px){
+      .system-title-row h2{
+        white-space: nowrap;
+      }
     }
     .system-art{
       border-radius: var(--radius-lg);
@@ -562,8 +578,8 @@ nav{
       display:grid;
       gap: 16px;
     }
-    .system-copy .section-title{
-      margin-bottom: 0;
+    .system-copy .lede{
+      max-width: none;
     }
 
     .roles-grid{
@@ -629,17 +645,22 @@ nav{
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
-    .mission-section{
-      background: #f6faf9;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .leadership-section{
-      background: #fff8eb;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
     .architect-section{
+      background: #edf3f6;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .mission-section{
+      background: #f3efe7;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .kickstart-cta-section{
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .launch-note-section{
       background: #edf3f6;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
@@ -659,43 +680,6 @@ nav{
       gap: 12px;
       box-shadow: 0 18px 30px rgba(0,0,0,0.08);
     }
-    .mission-card{
-      gap: 16px;
-    }
-    .mission-card .subhead{
-      margin: 0;
-      font-size: clamp(24px, 3vw, 30px);
-      line-height: var(--lh-body);
-      font-weight: 700;
-      color: var(--ink);
-    }
-    .mission-proof{
-      margin: 0;
-      padding-left: 22px;
-      display: grid;
-      gap: 8px;
-    }
-    .leadership-card{
-      gap: 18px;
-    }
-    .leadership-card .subhead{
-      margin: 0;
-      font-size: clamp(24px, 3vw, 30px);
-      line-height: var(--lh-body);
-      font-weight: 700;
-      color: var(--ink);
-    }
-    .leadership-block{
-      display: grid;
-      gap: 10px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 18px;
-      background: #fbfaf6;
-    }
-    .leadership-block h3{
-      margin: 0;
-    }
     .ops-card{
       grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
       gap: clamp(16px, 3vw, 28px);
@@ -704,6 +688,8 @@ nav{
     .ops-media{
       display:grid;
       gap: 12px;
+      max-width: 188px;
+      justify-self: end;
     }
     .ops-media .ops-portrait{
       aspect-ratio: 1 / 1;
@@ -734,6 +720,345 @@ nav{
       display:grid;
       gap: 12px;
     }
+    .mission-body{
+      display: grid;
+      gap: 12px;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+    }
+    .mission-questions{
+      list-style: none;
+      padding-left: 0;
+      display: grid;
+      gap: 6px;
+      margin: 0;
+    }
+    .mission-signoff{
+      display: grid;
+      gap: 0;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+    .kickstart-cta-card{
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: clamp(18px, 3vw, 28px);
+      display: grid;
+      gap: 14px;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.08);
+      width: 100%;
+      max-width: none;
+    }
+    .kickstart-cta-card p{
+      margin: 0;
+    }
+    .kickstart-cta-grid{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .kickstart-cta-grid .btn{
+      width: 100%;
+      min-height: 62px;
+      border-radius: 16px;
+      justify-content: center;
+      padding: 14px 16px;
+      font-size: clamp(22px, 2.5vw, 30px);
+      line-height: 0.95;
+    }
+    .kickstart-cta-grid .btn.secondary{
+      background: var(--gold);
+      box-shadow: 0 10px 20px rgba(240,180,58,0.25);
+    }
+    .kickstart-cta-grid .btn.primary{
+      background: var(--teal);
+      box-shadow: 0 10px 20px rgba(30,138,149,0.25);
+    }
+    .kickstart-cta-grid .btn.plum{
+      background: var(--plum);
+      box-shadow: 0 10px 20px rgba(110,74,136,0.25);
+    }
+    .kickstart-cta-grid .btn.purple{
+      background: var(--purple);
+      box-shadow: 0 10px 20px rgba(140,98,167,0.25);
+    }
+    .kickstart-cta-footnote{
+      font-size: clamp(18px, 1.9vw, 22px);
+      color: var(--muted);
+      text-align: center;
+    }
+    .launch-note-layout{
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.9fr);
+      gap: clamp(18px, 3.2vw, 34px);
+      align-items: start;
+    }
+    .launch-note-copy{
+      display: grid;
+      gap: 12px;
+    }
+    .launch-note-copy--intro{ grid-column: 1; grid-row: 1; }
+    .launch-note-copy--mid{ grid-column: 1; grid-row: 2; }
+    .launch-kickstarter-card{
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      align-self: start;
+    }
+    .launch-note-copy p{
+      margin: 0;
+    }
+    .launch-note-list{
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+      display: grid;
+      gap: 6px;
+    }
+    .openbook-pie-card{
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: clamp(18px, 2.1vw, 24px);
+      display: grid;
+      gap: 14px;
+      width: 100%;
+      box-shadow: 0 14px 28px rgba(17,17,17,0.08);
+      font-family: var(--font-body);
+      font-size: clamp(18px, 1.3vw, 21px);
+      line-height: 1.32;
+    }
+    .openbook-subheading{
+      margin: 0;
+      text-align: center;
+      font-size: clamp(34px, 2.7vw, 44px);
+      line-height: 1.02;
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+    .openbook-subtitle{
+      display: block;
+      font-size: clamp(17px, 1.2vw, 20px);
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: 4px;
+      line-height: 1.25;
+    }
+    .openbook-helper{
+      margin: 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: clamp(17px, 1.15vw, 19px);
+      line-height: 1.25;
+    }
+    .openbook-pie{
+      width: min(320px, 100%);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      margin: 0 auto 8px;
+      background:
+        conic-gradient(
+          var(--purple) 0% 50.4%,
+          var(--gold) 50.4% 82.7%,
+          var(--rose) 82.7% 90.6%,
+          var(--teal) 90.6% 95.5%,
+          var(--ink) 95.5% 99.6%,
+          var(--slate) 99.6% 100%
+        );
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+    .openbook-pie.kickstarter-pie{
+      background:
+        conic-gradient(
+          var(--purple) 0% 24.6%,
+          rgba(30,138,149,0.28) 24.6% 100%
+        );
+    }
+    .openbook-pie::after{
+      content: "";
+      position: absolute;
+      inset: 18%;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+    .openbook-pie-center{
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      display: grid;
+      gap: 4px;
+    }
+    .openbook-pie-center .label{
+      font-size: clamp(15px, 1.05vw, 17px);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .openbook-pie-center .value{
+      font-family: var(--font-display);
+      font-size: clamp(32px, 3.1vw, 42px);
+      letter-spacing: var(--tracking-display);
+      color: var(--ink);
+      line-height: 0.95;
+    }
+    .openbook-legend{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+      font-size: clamp(18px, 1.25vw, 20px);
+    }
+    .openbook-legend li{
+      display: grid;
+      grid-template-columns: 14px minmax(0, 1fr) minmax(0, 90px);
+      gap: 12px;
+      align-items: center;
+      text-align: left;
+      margin: 0;
+    }
+    .legend-dot{
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      display: inline-block;
+    }
+    .openbook-legend .legend-label{
+      color: var(--ink);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      min-width: 0;
+      line-height: 1.24;
+    }
+    .openbook-legend .legend-amount{
+      color: var(--muted);
+      font-size: 0.86em;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .openbook-legend .legend-value{
+      font-weight: 700;
+      text-align: right;
+      justify-self: end;
+      font-variant-numeric: tabular-nums;
+      font-size: 1.04em;
+    }
+    body.info-session-open{
+      overflow: hidden;
+    }
+    .info-session-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 1400;
+      display: none;
+      align-items: center;
+      justify-items: center;
+      background: rgba(12, 12, 12, 0.62);
+      padding: clamp(14px, 3vw, 24px);
+    }
+    .info-session-overlay.is-open{
+      display: grid;
+    }
+    .info-session-modal{
+      width: min(760px, 100%);
+      max-height: min(90vh, 920px);
+      overflow: auto;
+      background: #f4f4f2;
+      border: 1px solid #d7d1c7;
+      border-radius: 20px;
+      box-shadow: 0 18px 42px rgba(0,0,0,0.26);
+      padding: clamp(18px, 3vw, 28px);
+      display: grid;
+      gap: 12px;
+    }
+    .info-session-close{
+      justify-self: end;
+      width: 38px;
+      height: 38px;
+      border: 4px solid #0a63ce;
+      border-radius: 999px;
+      background: #f4f4f2;
+      color: var(--ink);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .info-session-title{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      line-height: 1.1;
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 700;
+      color: var(--ink);
+      text-align: center;
+    }
+    .info-session-meta{
+      margin: 0;
+      font-size: clamp(18px, 2.1vw, 24px);
+      line-height: 1.2;
+      color: var(--ink);
+      font-weight: 600;
+      text-align: center;
+    }
+    .info-session-helper{
+      margin: 0;
+      color: var(--muted);
+      text-align: center;
+    }
+    .info-session-form{
+      display: grid;
+      gap: 16px;
+    }
+    .info-session-row{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .info-session-field{
+      display: grid;
+      gap: 8px;
+    }
+    .info-session-field label{
+      color: #1c1e22;
+      font-weight: 700;
+    }
+    .info-session-field input{
+      border-radius: 24px;
+      border: 1px solid #c8bfb1;
+      background: #f2f1ee;
+      color: #1c1e22;
+      padding: 14px 16px;
+      min-height: 52px;
+      font: inherit;
+    }
+    .info-session-field input:focus{
+      outline: none;
+      border-color: #8c62a7;
+      box-shadow: 0 0 0 2px rgba(140,98,167,0.15);
+      background: #f5f4f2;
+    }
+    .info-session-submit{
+      width: 100%;
+      justify-content: center;
+      min-height: 62px;
+      border-radius: 16px;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 0.9;
+    }
     .ops-body{
       display:grid;
       gap: 12px;
@@ -741,23 +1066,35 @@ nav{
     .instructors-card{
       grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
       gap: clamp(16px, 3vw, 28px);
-      align-items: center;
+      align-items: stretch;
     }
     .instructors-media{
-      aspect-ratio: 1 / 1;
+      aspect-ratio: auto;
       border-radius: 18px;
       border: 1px solid var(--line);
       overflow: hidden;
       background: #ffffff;
-      justify-self: center;
+      justify-self: stretch;
+      align-self: stretch;
       width: 100%;
+      height: 100%;
+      min-height: 0;
     }
     .instructors-media img{
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
-      transform: scaleX(-1);
+      object-position: center;
+    }
+    .instructors-mobile-hero{
+      display: none;
+    }
+    .instructors-mobile-hero img{
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
     }
     .stack-column{
       display:grid;
@@ -864,16 +1201,11 @@ nav{
       color: #ffffff;
     }
     .site-footer .footer-tagline{
+      max-width: var(--content-max);
       margin: 0 auto;
       color: #ffffff;
       font-size: var(--size-body);
       line-height: var(--lh-body);
-    }
-    @media (min-width: 981px){
-      .site-footer .footer-tagline{
-        width: 100%;
-        max-width: none;
-      }
     }
 
     @media (max-width: 1100px){
@@ -910,6 +1242,7 @@ nav{
       :root{
         --btn-size: 35.04px;
         --btn-size-lg: 35.04px;
+        --topbar-height: 68px;
       }
       .section-banner h2,
       .content-banner h2,
@@ -944,25 +1277,89 @@ nav{
       .role-card.feature{ grid-template-columns: 1fr; }
       .ops-card{ grid-template-columns: 1fr; }
       .instructors-card{ grid-template-columns: 1fr; }
-      .instructors-media{ max-width: 160px; }
+      .instructors-mobile-hero{
+        display: block;
+        width: calc(100% + 40px);
+        margin: 0 -20px 16px;
+        overflow: hidden;
+      }
+      .instructors-mobile-hero img{
+        min-height: 220px;
+      }
+      .instructors-media{
+        display: none;
+      }
       .architect-card{ grid-template-columns: 1fr; }
+      .architect-media{
+        width: 140px;
+        max-width: 140px;
+        margin: 0 auto;
+      }
       .funding-grid{ grid-template-columns: 1fr; }
       .facts-grid{ grid-template-columns: 1fr; }
       .stack-row{ grid-template-columns: 1fr; }
+      .stack-card,
+      .facts-card,
+      .stack-item{
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+      }
+      .facts-grid .facts-card:last-child{
+        display: none;
+      }
 
       .ops-media{
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+        gap: 12px;
+        max-width: none;
+        justify-self: center;
       }
       .ops-media .ops-portrait{
-        max-width: 160px;
+        max-width: 140px;
+        width: 140px;
         margin: 0 auto;
+      }
+      .launch-note-layout{
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .launch-note-copy--intro{ grid-column: 1; grid-row: 1; }
+      .launch-kickstarter-card{ grid-column: 1; grid-row: 2; }
+      .launch-note-copy--mid{ grid-column: 1; grid-row: 3; }
+      .openbook-pie-card{
+        padding: 16px;
+      }
+      .openbook-pie{
+        width: min(290px, 100%);
+      }
+      .openbook-legend{
+        font-size: clamp(17px, 4.2vw, 20px);
+      }
+      .kickstart-cta-grid{
+        grid-template-columns: 1fr;
+      }
+      .kickstart-cta-card{
+        border: 0;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+      }
+      .info-session-row{
+        grid-template-columns: 1fr;
       }
 
       /* Mobile standards */
       .hero-logo{ display: none !important; }
       .hero-title{ display: none !important; }
-      .hero-logo-mobile{ display: block !important; margin: 0 auto; }
+      .hero-logo-mobile{ display: none !important; margin: 0 auto; }
+      main > .hero{ display: none; }
+      main > .instructors-mentors{
+        margin-top: 0;
+        padding-top: 0;
+      }
 
       .hero-title{ font-size: 60px !important; line-height: 0.9 !important; letter-spacing: -0.02em !important; }
       .hero-title .org{ font-size: 28px !important; }
@@ -971,7 +1368,11 @@ nav{
       h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
-      .hero-sub{ font-size: inherit; line-height: 1.05; }
+      .hero-sub{
+        display: none;
+        font-size: inherit;
+        line-height: 1.05;
+      }
       .btn{
         font-family: var(--font-display);
         font-size: 35.04px;
@@ -982,13 +1383,64 @@ nav{
         margin-right: auto;
         text-align: center;
       }
+      .topbar .inner{
+        min-height: var(--topbar-height);
+        padding: 10px var(--pad);
+        gap: 10px;
+      }
+      .menu-btn{
+        width: 40px;
+        height: 32px;
+      }
+      .menu-btn span{
+        width: 28px;
+      }
       .topbar .btn:not(.menu-cta){
+        display: inline-flex;
         font-family: var(--font-body);
-        font-size: 26.5px;
+        font-size: 16px;
+        line-height: 1.05;
+        padding: 10px 14px;
+        min-height: 44px;
+        border-radius: 999px;
         margin-left: 0;
         margin-right: 0;
+        white-space: nowrap;
         text-transform: none;
         letter-spacing: 0;
+      }
+      .menu-panel{
+        padding: calc(var(--topbar-height) + 10px) var(--pad) 20px;
+        background: rgba(255,255,255,0.99);
+      }
+      .menu-panel.is-open{
+        justify-items: stretch;
+        text-align: left;
+      }
+      .menu-links{
+        max-width: 28rem;
+        margin: 0 auto;
+        gap: 0;
+      }
+      .menu-panel a{
+        width: 100%;
+        padding: 14px 0;
+        font-size: clamp(20px, 4.8vw, 26px);
+        line-height: 1.15;
+        border-bottom: 1px solid var(--line);
+      }
+      .menu-panel a.nav-hiring{
+        padding-top: 0;
+      }
+      .menu-panel .menu-cta{
+        width: 100%;
+        margin-top: 18px;
+        border-bottom: 0;
+        justify-content: center;
+        font-size: clamp(24px, 5.8vw, 31px);
+        line-height: 1.15;
+        font-weight: 500;
+        min-height: 62px;
       }
       .hero-top{
         flex-direction: column;
@@ -996,8 +1448,8 @@ nav{
         width: 100%;
       }
       .hero-logo{
-        width: clamp(143px, 32vw, 190px);
-        height: clamp(143px, 32vw, 190px);
+        width: clamp(122px, 27.2vw, 162px);
+        height: clamp(122px, 27.2vw, 162px);
       }
       .hero-title-block,
       .hero-title,
@@ -1022,6 +1474,9 @@ nav{
         aspect-ratio: 1 / 1;
         object-fit: cover;
       }
+      #choose-your-adventure .section-content{
+        background: #edf3f6;
+      }
       footer.site-footer .inner{ text-align: center; }
       footer.site-footer .footer-logo{ width: 72px; height: 72px; }
       footer.site-footer .footer-title,
@@ -1038,14 +1493,88 @@ nav{
     @media (max-width: 640px){
       :root{
         --lh-body: 1.38;
+        --topbar-height: 64px;
       }
 
+      .topbar .inner{
+        gap: 8px;
+      }
       .topbar .btn:not(.menu-cta){
         font-size: 14px;
         padding: 10px 12px;
         min-height: 40px;
       }
     }
+    #choose-your-adventure{
+      display: none;
+    }
+    #choose-your-adventure .section-banner h2{
+      text-align: center;
+    }
+    #choose-your-adventure .section-content{
+      padding-top: 24px;
+      padding-bottom: 14px;
+    }
+    #choose-your-adventure .adventure-grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    #choose-your-adventure .adventure-grid .adventure-link{
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      text-align: center;
+      padding: 22px 16px;
+      border-top: 1px solid var(--line);
+      background: transparent;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:first-child{
+      border-top: 0;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link h3{
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 2.6vw, 36px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.95;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:hover h3,
+    #choose-your-adventure .adventure-grid .adventure-link:focus-visible h3{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child{
+      background: var(--teal);
+      color: #ffffff;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child h3{
+      color: #ffffff;
+    }
+    @media (max-width: 980px){
+      #choose-your-adventure{
+        display: none;
+      }
+      #choose-your-adventure .adventure-grid{
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      #choose-your-adventure .adventure-grid .adventure-link h3{
+        font-size: clamp(24px, 7vw, 34px);
+      }
+    }
+    @media (max-width: 768px){
+      main > #choose-your-adventure{ order: 110; }
+      .architect-section .role-links{
+        display: none;
+      }
+    }
+
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
   <!-- Google Tag Manager -->
@@ -1075,11 +1604,11 @@ nav{
       <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
+        <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
-        <a href="/article-best-summer-camps.html">Parent Resources</a>
+        <a href="article-best-summer-camps.html">Camp Guides</a>
         <a href="faq.html">FAQ</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
@@ -1087,8 +1616,8 @@ nav{
       </div>
 
       <nav aria-label="Primary">
+        <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="schedule-pricing.html">Maker Market</a>
         <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
         <a href="faq.html">FAQ</a>
@@ -1099,112 +1628,93 @@ nav{
   </header>
 
   <main>
-    <section class="hero section">
-      <div class="wrap">
-        <div class="hero-top">
-          <div class="hero-brand-row">
-            <img class="hero-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" />
-            <div class="hero-title-block">
-              <h1 class="hero-title">The Money Club<span class="org">.Org</span></h1>
-              <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
-            </div>
-          </div>
-          <div class="hero-sub">A Toronto nonprofit maker camp that teaches financial literacy, design thinking, and public speaking.</div>
-        </div>
-      </div>
-    </section>
+
     <section class="section mission-section">
       <div class="wrap">
         <div class="section-title">
-          <h2>Our Mission</h2>
+          <div class="eyebrow">Executive Director Letter</div>
+          <h2>Our Vision and Mission</h2>
         </div>
-        <div class="stack-card mission-card">
-          <p class="subhead">Helping young people understand how the real world works — and how they can contribute to it.</p>
-          <p>At The Money Club.Org, we believe young people are capable of far more than most programs ask of them. Instead of slogans or abstract lessons, students need practical tools: how money moves, how ideas become products, how problems are structured, and how thoughtful people improve the systems around them.</p>
-          <p>A central part of the program is design thinking — learning to observe carefully, understand people’s needs, and identify the small points of friction that make everyday systems inefficient or frustrating. When students learn to see these problems clearly, they can begin to turn them into opportunities for improvement.</p>
-          <p>Through hands-on projects, students research problems, test ideas, build prototypes, and present their thinking clearly. In the process they develop financial literacy, entrepreneurial thinking, and the confidence to communicate their ideas.</p>
-          <p>Our goal is simple: help students become more capable, more confident, and more ready to contribute to the world around them.</p>
-          <h3>What this looks like in practice</h3>
-          <ul class="mission-proof">
-            <li>Project-based learning instead of passive instruction</li>
-            <li>Financial literacy taught through real systems and decisions</li>
-            <li>Small cohorts that encourage collaboration and confidence</li>
-            <li>Practical skills: problem solving, communication, and initiative</li>
+        <div class="mission-body">
+          <p>At The Money Club.Org, we believe young people are capable of far more than most institutions ask of them.</p>
+          <p>They do not need more slogans. They need tools — tools to understand how money moves, how systems behave, how problems are structured, and how small sources of local friction can be turned into actions like transactions.</p>
+          <p>That is the work we are building toward.</p>
+          <p>The Money Club.Org began with a simple observation: many of the problems communities face are not caused by a lack of care. They are caused by a lack of design. Good intentions are everywhere. Clear feedback loops are not.</p>
+          <p>Communities often live with the same recurring friction points year after year — gaps in access, wasted time, underused talent, small problems that quietly become expensive ones.</p>
+          <p>Our view is that young people should not simply inherit these systems. They should learn how to read them, question them, and improve them.</p>
+          <p>That is why The Money Club.Org is being built not just as a program, but as a platform.</p>
+          <p>In its early form, this means teaching financial literacy, entrepreneurship, public speaking, and design thinking through hands-on projects. Students build ideas, test them, and learn how incentives shape outcomes.</p>
+          <p>But the larger vision goes further.</p>
+          <p>Over time, we intend to grow into a charitable platform that helps Toronto-area youth research local problems, investigate root causes, and develop practical community projects that deserve real support.</p>
+          <p>Not charity as performance.<br />Not theory without application.</p>
+          <p>A working platform where young people learn to identify friction, understand incentives, test ideas, and build solutions with real-world consequences.</p>
+          <p>We want students to ask better questions:</p>
+          <ul class="mission-questions">
+            <li>Where is value quietly leaking out of a neighborhood?</li>
+            <li>What problems are being tolerated simply because no one has mapped them clearly?</li>
+            <li>What would happen if local talent, local knowledge, and local effort were better coordinated?</li>
+            <li>What if education did not stop at awareness, but moved into design, prototyping, and action?</li>
           </ul>
-          <p>The program is supported by University of Toronto student mentors — near-peer role models studying fields such as education, economics, and business. Their presence brings energy and perspective to the classroom while students learn in a supervised environment guided by experienced adult leadership.</p>
-          <p>Ultimately, we believe resilient communities depend on people who can observe clearly, understand others, and build practical solutions. Helping young people develop those abilities early is the purpose of The Money Club.Org.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section leadership-section">
-      <div class="wrap">
-        <div class="section-title">
-          <h2>Leadership &amp; Mentorship</h2>
-        </div>
-        <div class="stack-card leadership-card">
-          <p class="subhead">A small, thoughtful team focused on learning, mentorship, and real-world thinking.</p>
-          <p>The Money Club.Org is led by experienced adult leadership and supported by a small group of carefully selected mentors. The goal is to create a structured, supervised environment where students can experiment with ideas, collaborate with peers, and develop confidence presenting their work.</p>
-          <div class="leadership-block">
-            <h3>Program Leadership</h3>
-            <p>The Money Club.Org curriculum was designed by Jared G., a product strategist, educator, and writer with experience spanning retail, manufacturing, and hands-on product development.</p>
-            <p>His background includes work across Walmart, Loblaw, and Canadian Tire, along with 10+ years of experience working with China-based manufacturing partners. His work has focused on design thinking, product strategy, teaching, and curriculum development — helping turn ideas into practical products, systems, and learning experiences.</p>
-            <p>The Money Club.Org brings that experience into a student setting: giving young people the tools to understand how ideas are built, how products come to life, and how thoughtful design can turn problems into practical solutions.</p>
-          </div>
-          <div class="leadership-block">
-            <h3>University of Toronto Mentors</h3>
-            <p>Students also work alongside University of Toronto mentors — near-peer role models studying fields such as education, economics, and business. These mentors help guide project work, support collaboration, and bring energy and perspective to the classroom.</p>
-          </div>
-          <div class="leadership-block">
-            <h3>Supervised Learning Environment</h3>
-            <p>The program runs in a supervised classroom setting at the UTSU Student Commons near the University of Toronto campus. Students work in small groups, receive structured guidance, and present their projects in a supportive learning environment.</p>
+          <p>These are not abstract exercises. They are the beginning of civic and economic participation.</p>
+          <p>Our long-term goal is to help seed promising youth-led community projects across the Toronto area — small ventures, neighborhood solutions, and practical experiments that strengthen communities from the ground up.</p>
+          <p>We believe competence compounds.<br />Confidence compounds.<br />Dignity compounds.</p>
+          <p>When young people are trusted with real responsibility, communities become more resilient.</p>
+          <p>The future will not be improved by commentary alone. It will be improved by people who can observe clearly, think structurally, communicate persuasively, and build with discipline.</p>
+          <p>That is the kind of generation we hope to help develop.</p>
+          <p>Thank you for taking an interest in The Money Club.Org. We are building something ambitious, practical, and deeply local. We hope you will follow the work, support the mission, and help us expand what young people in this city believe is possible.</p>
+          <div class="mission-signoff">
+            <p>Sincerely,</p>
+            <p>Jared Goldberg</p>
+            <p>Executive Director</p>
+            <p>The Money Club.Org</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section kickstart-cta-section">
       <div class="wrap">
         <div class="section-title">
-          <div class="eyebrow">Everything parents need to know</div>
-          <h2>Quick Facts</h2>
+          <div class="eyebrow">Kickstart THE MONEY CLUB.ORG</div>
+          <h2>HELP US LAUNCH - SUMMER 2026</h2>
         </div>
-        <div class="facts-grid">
-          <div class="facts-card">
-            <h3>Program essentials</h3>
-            <ul>
-              <li>Ages: 10–16</li>
-              <li>Format: Summer day program</li>
-              <li>Duration: 4 weeks</li>
-              <li>When: Weekdays 9:30am-3:30pm, July & August</li>
-              <li>Cost: $1,100 per student</li>
-              <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
-              <li>Materials: Included (including student project inputs)</li>
-              <li>Experience: None required</li>
-            </ul>
+        <div class="kickstart-cta-card">
+          <p>If this model resonates with you, the best next step is to learn more.</p>
+          <p>Please share the program with family and friends, or review the financials.</p>
+          <div class="kickstart-cta-grid">
+            <a class="btn purple gloss cta-standard" href="pricing.html" data-cta-label="View Open-Book Financials">View Open-Book Financials</a>
+            <button class="btn plum gloss cta-standard" type="button" data-share-program data-cta-label="Share Program Details">Share Program Details</button>
           </div>
-          <div class="facts-card">
-            <div class="role-media">
-              <img src="assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+          <p class="kickstart-cta-footnote">Ages 10&ndash;16 &middot; UTSU Student Commons &middot; 2-week and 4-week options</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="info-session-overlay" id="info-session-overlay" aria-hidden="true">
+      <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
+        <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
+        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn About The Money Club.Org</h2>
+        <p class="info-session-meta">📅 April 18 • Live video session • ~30 minutes</p>
+        <p class="info-session-helper">Save your spot and we&rsquo;ll send the session link and program details. No payment required.</p>
+        <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
+          <input type="hidden" name="return-to" value="executive-director-letter.html" />
+          <input type="hidden" name="return-error" value="executive-director-letter.html" />
+          <div class="info-session-row">
+            <div class="info-session-field">
+              <label for="exec-info-parent-name">Parent / Guardian Name</label>
+              <input id="exec-info-parent-name" name="parent-name" type="text" autocomplete="name" required />
             </div>
-            <h3>Ready for details?</h3>
-            <p class="lede">See exact dates, tuition, and cohort size.</p>
-            <a data-cta-label="View schedule &amp; pricing" class="btn secondary gloss cta-standard" href="schedule-pricing.html">View Schedule &amp; Pricing</a>
+            <div class="info-session-field">
+              <label for="exec-info-parent-email">Email Address</label>
+              <input id="exec-info-parent-email" name="parent-email" type="email" autocomplete="email" required />
+            </div>
           </div>
-        </div>
-
+          <button class="btn primary gloss cta-standard info-session-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
+        </form>
       </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="inner">
-      <a href="index.html" aria-label="The Money Club.Org home"><img class="footer-logo" src="assets/logo-500.png" alt="The Money Club.Org logo" /></a>
-      <div class="footer-title">The Money Club<span class="org">.Org</span></div>
-      <div class="footer-tagline">A Toronto nonprofit maker camp that teaches financial literacy, design thinking, and public speaking.</div>
     </div>
-  </footer>
 
+  </main>
   <script>
     (function(){
       var menuBtn = document.querySelector('.menu-btn');
@@ -1263,6 +1773,143 @@ nav{
       document.addEventListener('keydown', function(e){
         if (e.key === 'Escape'){
           closeMenu();
+        }
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      var openLinks = document.querySelectorAll('[data-open-info-session]');
+      var overlay = document.getElementById('info-session-overlay');
+      if (!overlay){ return; }
+      var closeBtn = overlay.querySelector('.info-session-close');
+      var modal = overlay.querySelector('.info-session-modal');
+      var modalInterestForm = overlay.querySelector('form[action="apply-interest.php"]');
+      var modalIsOpen = overlay.classList.contains('is-open');
+      var lockScrollY = 0;
+
+      function lockPageScroll(){
+        lockScrollY = window.pageYOffset || window.scrollY || 0;
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + lockScrollY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+      }
+
+      function unlockPageScroll(){
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        window.scrollTo(0, lockScrollY);
+      }
+
+      function openInfoSession(){
+        if (modalIsOpen){ return; }
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('info-session-open');
+        lockPageScroll();
+        modalIsOpen = true;
+        if (closeBtn){
+          closeBtn.focus();
+        }
+      }
+
+      function closeInfoSession(){
+        if (!modalIsOpen){ return; }
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('info-session-open');
+        unlockPageScroll();
+        modalIsOpen = false;
+      }
+
+      openLinks.forEach(function(openLink){
+        openLink.addEventListener('click', function(e){
+          e.preventDefault();
+          openInfoSession();
+        });
+      });
+
+      if (modalInterestForm){
+        modalInterestForm.addEventListener('submit', function(){
+          if (!modalInterestForm.checkValidity()){
+            return;
+          }
+          closeInfoSession();
+        });
+      }
+
+      if (closeBtn){
+        closeBtn.addEventListener('click', function(){
+          closeInfoSession();
+        });
+      }
+
+      overlay.addEventListener('click', function(e){
+        if (modal && !modal.contains(e.target)){
+          closeInfoSession();
+        }
+      });
+
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && overlay.classList.contains('is-open')){
+          closeInfoSession();
+        }
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      var shareBtn = document.querySelector('[data-share-program]');
+      if (!shareBtn){ return; }
+
+      var shareUrl = 'https://the-money-club.org/reserve-a-spot.html';
+      var originalLabel = shareBtn.textContent;
+
+      function setTempLabel(label){
+        shareBtn.textContent = label;
+        window.setTimeout(function(){
+          shareBtn.textContent = originalLabel;
+        }, 1600);
+      }
+
+      shareBtn.addEventListener('click', async function(event){
+        event.preventDefault();
+        var shareData = {
+          title: 'The Money Club.Org | Summer 2026',
+          text: 'Learn how The Money Club.Org works and review Summer 2026 options.',
+          url: shareUrl
+        };
+
+        try {
+          if (navigator.share){
+            await navigator.share(shareData);
+            return;
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText){
+            await navigator.clipboard.writeText(shareUrl);
+            setTempLabel('Link Copied');
+            return;
+          }
+          window.prompt('Copy this link:', shareUrl);
+        } catch (error){
+          if (error && error.name === 'AbortError'){
+            return;
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText){
+            try {
+              await navigator.clipboard.writeText(shareUrl);
+              setTempLabel('Link Copied');
+            } catch (clipboardError) {
+              window.prompt('Copy this link:', shareUrl);
+            }
+          } else {
+            window.prompt('Copy this link:', shareUrl);
+          }
         }
       });
     })();
@@ -1337,6 +1984,8 @@ nav{
         var pagePath = window.location.pathname || '';
         return {
           event: eventName,
+          form_name: 'site_cta',
+          funnel_step: eventName,
           cta_label: label,
           cta_text: text,
           cta_href: href,

@@ -2008,6 +2008,45 @@
     .radical-copy h3{
       margin: 6px 0 0;
     }
+    .funding-threshold-block{
+      display: grid;
+      gap: 12px;
+      line-height: var(--lh-body);
+    }
+    .funding-threshold-block p{
+      margin: 0;
+      line-height: 1.3;
+    }
+    .funding-threshold-block .radical-list{
+      margin: 0;
+      gap: 8px;
+      padding-left: 20px;
+    }
+    .funding-threshold-block .radical-list li{
+      line-height: 1.3;
+    }
+    .kickstart-us-banner{
+      display: none;
+    }
+    .kickstarter-heading-mobile{
+      display: none;
+    }
+    .kickstarter-goal-date{
+      font-size: clamp(18px, 1.7vw, 26px);
+      line-height: 1.18;
+    }
+    .radical-copy .openbook-pie-card{
+      width: 100%;
+      max-width: 640px;
+      justify-self: start;
+      margin: 4px 0 2px;
+    }
+    .openbook-pie-card.openbook-pie-card--mobile{
+      display: none;
+    }
+    .openbook-pie-card.openbook-pie-card--desktop{
+      display: grid;
+    }
     .radical-side h3{
       margin: 0;
       font-size: clamp(22px, 3vw, 30px);
@@ -2044,6 +2083,9 @@
     #radical-transparency .radical-summary-row{
       margin-top: clamp(18px, 2.4vw, 28px);
       width: 100%;
+    }
+    #radical-transparency .share-cta-band + .radical-summary-row{
+      margin-top: clamp(10px, 1.7vw, 18px);
     }
     #radical-transparency .program-summary-meta{
       margin: 0 0 18px;
@@ -2101,8 +2143,21 @@
       justify-self: stretch;
       min-height: 76px;
       padding: 18px 16px;
-      font-size: clamp(22px, 1.8vw, 32px);
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 40px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.95;
       border-radius: 14px;
+      text-align: center;
+    }
+    #radical-transparency .program-summary-cta-actions{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    #radical-transparency .program-summary-cta-group .cta-share{
+      display: inline-flex;
     }
     .radical-side .btn{
       width: 100%;
@@ -2128,27 +2183,109 @@
       width: min(100%, 560px);
       justify-self: center;
       box-shadow: 0 14px 28px rgba(17,17,17,0.08);
+      font-family: var(--font-body);
+      font-size: clamp(18px, 1.35vw, 21px);
+      line-height: 1.32;
+    }
+    .share-help-row{
+      margin-top: clamp(18px, 2.4vw, 28px);
+      display: none;
+      gap: 12px;
+      max-width: 72ch;
+      width: 100%;
+      justify-items: center;
+      text-align: center;
+    }
+    .share-help-row p{
+      margin: 0;
+      max-width: 28ch;
+      font-family: var(--font-body);
+      font-size: clamp(31px, 2.45vw, 46px);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+    .share-cta-band{
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      margin-top: clamp(10px, 1.6vw, 16px);
+      background: var(--teal);
+      color: #ffffff;
+      padding: clamp(18px, 2.1vw, 24px) max(var(--pad), 18px);
+      text-align: center;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), inset 0 -1px 0 rgba(0,0,0,0.14);
+    }
+    .share-cta-band p{
+      margin: 0 auto;
+      max-width: 34ch;
+      font-family: var(--font-body);
+      font-size: clamp(30px, 2.35vw, 44px);
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+    .share-cta-band .share-cta-link{
+      width: min(100%, 980px);
+      margin: 0 auto;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      text-transform: none;
+      letter-spacing: 0;
+      font-family: var(--font-body);
+      font-size: clamp(25px, 2vw, 33px);
+      line-height: 1.14;
+      font-weight: 700;
+      border-radius: 18px;
+      padding: clamp(14px, 1.7vw, 18px) clamp(16px, 2vw, 24px);
+      min-height: 64px;
+      color: #ffffff;
+      background: var(--purple);
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 10px 20px rgba(140,98,167,0.25);
+    }
+    .share-opportunity-btn{
+      width: min(100%, 720px);
+      font-size: clamp(19px, 1.4vw, 23px);
+      line-height: 1.2;
+      min-height: 62px;
+      padding: 16px 22px;
+      border-radius: 16px;
+      justify-self: start;
+      text-transform: none;
+      letter-spacing: 0;
+      font-family: var(--font-body);
+      font-weight: 700;
     }
     .openbook-subheading{
       margin: 0;
       text-align: center;
-      font-size: clamp(30px, 2.6vw, 40px);
-      line-height: 1.05;
+      font-size: var(--size-section-subhead);
+      line-height: var(--lh-section-subhead);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 700;
     }
     .openbook-subtitle{
       display: block;
-      font-size: clamp(16px, 1.7vw, 20px);
+      font-size: clamp(17px, 1.2vw, 20px);
       font-weight: 500;
       color: var(--muted);
       text-transform: none;
       letter-spacing: 0;
       margin-top: 4px;
+      line-height: 1.25;
     }
     .openbook-helper{
       margin: 0;
       text-align: center;
       color: var(--muted);
-      font-size: clamp(16px, 1.35vw, 20px);
+      font-size: clamp(17px, 1.15vw, 19px);
       line-height: 1.25;
     }
     .openbook-pie{
@@ -2192,7 +2329,7 @@
       gap: 4px;
     }
     .openbook-pie-center .label{
-      font-size: clamp(16px, 1.5vw, 20px);
+      font-size: clamp(15px, 1.1vw, 18px);
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--muted);
@@ -2200,7 +2337,7 @@
     }
     .openbook-pie-center .value{
       font-family: var(--font-display);
-      font-size: clamp(28px, 5.2vw, 44px);
+      font-size: clamp(34px, 3.3vw, 44px);
       letter-spacing: var(--tracking-display);
       color: var(--ink);
       line-height: 0.95;
@@ -2215,7 +2352,7 @@
       max-width: 100%;
       justify-self: stretch;
       align-self: start;
-      font-size: clamp(20px, 1.6vw, 24px);
+      font-size: clamp(19px, 1.3vw, 22px);
     }
     .openbook-legend li{
       display: grid;
@@ -2226,15 +2363,16 @@
     }
     .openbook-legend .legend-label{
       color: var(--ink);
-      font-weight: 500;
+      font-weight: 600;
       display: inline-flex;
       align-items: baseline;
       gap: 8px;
       min-width: 0;
+      line-height: 1.25;
     }
     .openbook-legend .legend-amount{
       color: var(--muted);
-      font-size: 0.84em;
+      font-size: 0.88em;
       font-weight: 600;
       white-space: nowrap;
     }
@@ -3038,6 +3176,22 @@
     }
 
     @media (max-width: 768px){
+      #radical-transparency .section-content{
+        display: flex;
+        flex-direction: column;
+      }
+      #radical-transparency .radical-grid{
+        order: 1;
+      }
+      #radical-transparency .share-help-row{
+        order: 2;
+      }
+      #radical-transparency .share-cta-band{
+        order: 3;
+      }
+      #radical-transparency .radical-summary-row{
+        order: 4;
+      }
       main{
         display: flex;
         flex-direction: column;
@@ -3058,11 +3212,124 @@
       main > #reserve-a-spot{ order: 100; }
       main > #choose-your-adventure{ order: 110; }
 
+      .openbook-pie-card.openbook-pie-card--mobile{
+        display: grid;
+        order: 0;
+      }
+      .openbook-pie-card.openbook-pie-card--desktop{
+        display: none;
+      }
+      .radical-copy .openbook-pie-card{
+        order: 0;
+      }
+      .share-help-row{
+        display: grid;
+      }
+      .share-cta-band{
+        margin-top: 10px;
+        padding: 16px var(--pad);
+      }
+      .share-cta-band p{
+        font-size: clamp(31px, 8.4vw, 44px);
+        line-height: 1.06;
+      }
+      .share-cta-band .share-cta-link{
+        width: 100%;
+        font-size: clamp(20px, 5.2vw, 25px);
+        line-height: 1.14;
+        border-radius: 16px;
+        min-height: 58px;
+        padding: 14px 16px;
+      }
+      .share-help-row .share-opportunity-btn{
+        font-family: var(--font-body);
+        font-size: clamp(18px, 4.8vw, 22px);
+        line-height: 1.15;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+      .threshold-desktop{
+        display: none;
+      }
+      #radical-transparency .section-banner{
+        background: var(--purple);
+        color: #ffffff;
+      }
+      #radical-transparency .program-summary-cta-group .cta-fill{
+        min-height: 62px;
+        padding: 16px 22px;
+        font-size: var(--btn-size);
+        letter-spacing: var(--tracking-display);
+        text-transform: uppercase;
+        line-height: 0.95;
+        border-radius: 16px;
+      }
+      #radical-transparency .program-summary-cta-actions .cta-fill[data-open-info-session]{
+        background: var(--purple);
+        color: #ffffff;
+        box-shadow: 0 10px 20px rgba(140,98,167,0.25);
+      }
+      #radical-transparency .kickstarter-card .cta-share{
+        width: 100%;
+        min-height: 62px;
+        padding: 16px 22px;
+        font-size: var(--btn-size);
+        letter-spacing: var(--tracking-display);
+        text-transform: uppercase;
+        line-height: 0.95;
+        border-radius: 16px;
+        margin-top: 10px;
+        justify-content: center;
+        background: var(--teal);
+        color: #ffffff;
+        box-shadow: 0 10px 20px rgba(30,138,149,0.25);
+      }
+      #radical-transparency .kickstart-us-banner{
+        display: block;
+        width: 100vw;
+        margin: 4px calc(50% - 50vw) 2px;
+        background: var(--teal);
+        color: #ffffff;
+        text-align: left;
+        padding: 14px var(--pad);
+      }
+      #radical-transparency .kickstart-us-banner h3{
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+        letter-spacing: var(--tracking-display);
+        text-transform: uppercase;
+        color: #ffffff;
+        text-align: left;
+      }
+      #radical-transparency .funding-threshold-block{
+        order: 5;
+        gap: 14px;
+      }
+      #radical-transparency .kickstarter-card{
+        order: 6;
+      }
+      #radical-transparency .kickstarter-card .kickstarter-heading-label,
+      #radical-transparency .kickstarter-card .kickstarter-heading-subtitle{
+        display: none;
+      }
+      #radical-transparency .kickstarter-card .kickstarter-heading-mobile{
+        display: block;
+      }
+      #radical-transparency .kickstarter-card .kickstarter-goal-date{
+        font-size: clamp(26px, 4.9vw, 40px);
+        line-height: 1.05;
+      }
+
       .section{
         margin-top: 40px;
       }
       #reserve.section-banner{
         margin-top: 40px;
+      }
+      #choose-your-adventure{
+        display: none;
       }
       .section-banner{
         padding: 16px 0;
@@ -3390,7 +3657,7 @@
         grid-template-columns: 1fr;
       }
       #choose-your-adventure{
-        display: block;
+        display: none;
       }
       #choose-your-adventure .adventure-grid{
         grid-template-columns: 1fr;
@@ -3502,46 +3769,6 @@
       </div>
     </section>
 
-    <section class="section" id="built-like-a-business">
-      <div class="section-banner teal">
-        <div class="wrap">
-          <h2>Build. Price. Sell.</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="split">
-          <div class="section-copy">
-            <p>Most kids leave school without understanding:</p>
-            <ul class="bullet-list">
-              <li>how money moves</li>
-              <li>how products are priced</li>
-              <li>how demand affects decisions</li>
-              <li>or how ideas hold up in the real world</li>
-            </ul>
-            <p>The Money Club.Org is a curriculum-based program where students build products with AI and learn how value actually works.</p>
-            <p>Guided by University of Toronto mentors, they move through structured weekly sprints to research, prototype, test, price, and improve ideas &mdash; while building confidence in communication, judgment, and real-world decision-making.</p>
-           </div>
-          <div class="cta-stack cta-stack--hero">
-            <div class="program-summary">
-              <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons | Summer 2026</span></div>
-              <div class="program-summary-points">
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text">Ages 10–16</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July - Aug</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">9–5 daily</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">4-Weeks = $1,100</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💵</span><span class="program-summary-point-text">2-Weeks = $550</span></div>
-              </div>
-              <div class="program-summary-cta-group">
-                <p class="program-summary-cta-title">Free Info Session &mdash; Learn how The Money Club.Org Works</p>
-                <a class="btn purple gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section" id="radical-transparency">
       <div class="section-banner teal">
         <div class="wrap">
@@ -3554,71 +3781,117 @@
             <h3>The Money Club.Org is a community-first program.</h3>
             <p>It is <strong>not designed to maximize profit</strong>. It is designed to <strong>teach financial literacy by example</strong>.</p>
             <p>That's why we run the program using <strong>open-book financials</strong> — so families can see <strong>exactly where tuition goes</strong>, and students can learn by watching money move through a real system.</p>
+            <div class="openbook-pie-card openbook-pie-card--mobile" aria-label="Program budget distribution chart">
+              <h3 class="openbook-subheading">Expenses <span class="openbook-subtitle">Where tuition goes for a 10-student cohort</span></h3>
+              <p class="openbook-helper">Most revenue goes directly to mentors and program delivery.</p>
+              <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 50.4%, Venue Rental 32.3%, Marketing 7.9%, Program Materials 4.9%, Insurance 4.1%, Overhead 0.4%">
+                <div class="openbook-pie-center">
+                  <span class="label">Total</span>
+                  <span class="value">$60,670</span>
+                </div>
+              </div>
+              <ul class="openbook-legend">
+                <li>
+                  <span class="legend-dot" style="background: var(--purple);"></span>
+                  <span class="legend-label">Instructors <span class="legend-amount">$30,558</span></span>
+                  <span class="legend-value">50.4%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--gold);"></span>
+                  <span class="legend-label">Venue Rental <span class="legend-amount">$19,567</span></span>
+                  <span class="legend-value">32.3%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--rose);"></span>
+                  <span class="legend-label">Marketing <span class="legend-amount">$4,780</span></span>
+                  <span class="legend-value">7.9%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--teal);"></span>
+                  <span class="legend-label">Program Materials <span class="legend-amount">$3,000</span></span>
+                  <span class="legend-value">4.9%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--ink);"></span>
+                  <span class="legend-label">Insurance <span class="legend-amount">$2,500</span></span>
+                  <span class="legend-value">4.1%</span>
+                </li>
+                <li>
+                  <span class="legend-dot" style="background: var(--slate);"></span>
+                  <span class="legend-label">Overhead <span class="legend-amount">$264</span></span>
+                  <span class="legend-value">0.4%</span>
+                </li>
+              </ul>
+            </div>
             <p><strong>Our problem statement is:</strong> We are trying to prove that a <strong>small, transparent nonprofit</strong> can create <strong>real value for kids</strong> and <strong>meaningful work for University of Toronto student mentors</strong>.</p>
-            <p>The Money Club.Org is a <strong>startup-style summer program</strong> where kids learn how money moves by building real products through guided sprints. <strong>Every dollar is visible.</strong> Revenue pays for rent, U of T student mentors, insurance, and project materials — including a <strong>$50 build budget</strong> each student uses to test ideas in the real world.</p>
+            <p>The Money Club.Org is a <strong>startup-style summer program</strong> where kids learn how money moves by building real products through guided sprints. <strong>Every dollar is visible.</strong> Revenue pays for rent, mentors, insurance, and project materials — including a <strong>$50 build budget</strong> each student uses to test ideas in the real world.</p>
             <p><strong>This is the model:</strong></p>
             <ul class="radical-list">
               <li><strong>kids learn financial literacy through radical transparency</strong></li>
               <li><strong>mentors get meaningful paid work</strong></li>
               <li><strong>families help kickstart a local feedback loop of learning, demand, and community value</strong></li>
             </ul>
-            <p>To run this summer, we need to secure <strong>$60,000</strong> in paid parent participation by <strong>June 1</strong>.</p>
-            <p><strong>That means either:</strong></p>
-            <ul class="radical-list">
-              <li><strong>60 four-week registrations, or</strong></li>
-              <li><strong>120 two-week sprints</strong></li>
-            </ul>
-            <p>I will personally contribute <strong>$15,000</strong> toward the <strong>$61,000</strong> total goal.</p>
-            <p><strong>If we hit the threshold, we run.</strong></p>
-            <p><strong>If we do not, we build more.</strong></p>
+            <div class="funding-threshold-block">
+              <div class="kickstart-us-banner">
+                <h3>Help Us Kickstart</h3>
+              </div>
+              <p>To run this summer, we need to secure <strong>$61,000</strong> in paid parent participation by <strong>June 1</strong>.</p>
+              <p><strong>That means either:</strong></p>
+              <ul class="radical-list">
+                <li><strong>60 four-week registrations, or</strong></li>
+                <li><strong>120 two-week sprints</strong></li>
+              </ul>
+              <p>Founder Jared Goldberg is personally contributing <strong>$15,000</strong> toward the <strong>$61,000</strong> goal to help get the program off the ground.</p>
+              <p>If we hit the threshold, we run.</p>
+              <p>If not, we build more and try again.</p>
+            </div>
           </div>
           <div class="radical-side">
-            <div class="openbook-pie-card" aria-label="Program budget distribution chart">
-              <h3 class="openbook-subheading">Expenses <span class="openbook-subtitle">Where tuition goes for a 10-student cohort</span></h3>
+            <div class="openbook-pie-card openbook-pie-card--desktop" aria-label="Program budget distribution chart">
+              <h3 class="openbook-subheading">Expenses <span class="openbook-subtitle">Costs to run the program at the UTSU Student Commons, July & August, with 3 university mentors.</span></h3>
               <p class="openbook-helper">Most revenue goes directly to mentors and program delivery.</p>
               <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 50.4%, Venue Rental 32.3%, Marketing 7.9%, Program Materials 4.9%, Insurance 4.1%, Overhead 0.4%">
                 <div class="openbook-pie-center">
-                  <span class="label">100%</span>
-                  <span class="value">Allocated</span>
+                  <span class="label">Total</span>
+                  <span class="value">$60,670</span>
                 </div>
               </div>
               <ul class="openbook-legend">
                 <li>
                   <span class="legend-dot" style="background: var(--purple);"></span>
-                  <span class="legend-label">Instructors <span class="legend-amount">$5,093</span></span>
+                  <span class="legend-label">Instructors <span class="legend-amount">$30,558</span></span>
                   <span class="legend-value">50.4%</span>
                 </li>
                 <li>
                   <span class="legend-dot" style="background: var(--gold);"></span>
-                  <span class="legend-label">Venue Rental <span class="legend-amount">$3,261</span></span>
+                  <span class="legend-label">Venue Rental <span class="legend-amount">$19,567</span></span>
                   <span class="legend-value">32.3%</span>
                 </li>
                 <li>
                   <span class="legend-dot" style="background: var(--rose);"></span>
-                  <span class="legend-label">Marketing <span class="legend-amount">$1,297</span></span>
+                  <span class="legend-label">Marketing <span class="legend-amount">$4,780</span></span>
                   <span class="legend-value">7.9%</span>
                 </li>
                 <li>
                   <span class="legend-dot" style="background: var(--teal);"></span>
-                  <span class="legend-label">Program Materials <span class="legend-amount">$500</span></span>
+                  <span class="legend-label">Program Materials <span class="legend-amount">$3,000</span></span>
                   <span class="legend-value">4.9%</span>
                 </li>
                 <li>
                   <span class="legend-dot" style="background: var(--ink);"></span>
-                  <span class="legend-label">Insurance <span class="legend-amount">$417</span></span>
+                  <span class="legend-label">Insurance <span class="legend-amount">$2,500</span></span>
                   <span class="legend-value">4.1%</span>
                 </li>
                 <li>
                   <span class="legend-dot" style="background: var(--slate);"></span>
-                  <span class="legend-label">Overhead <span class="legend-amount">$44</span></span>
+                  <span class="legend-label">Overhead <span class="legend-amount">$264</span></span>
                   <span class="legend-value">0.4%</span>
                 </li>
               </ul>
-              <a data-cta-label="See Our Open-Book Budget" class="btn gold cta-standard" href="/pricing.html">See Our Open-Book Budget</a>
             </div>
-            <div class="openbook-pie-card" aria-label="Kickstarter funding progress">
-              <h3 class="openbook-subheading">Kickstarter <span class="openbook-subtitle">$61,000 total goal - $15,000 funded</span></h3>
-              <p class="openbook-helper">Goal Date: June 1st.</p>
+            <div class="openbook-pie-card kickstarter-card" aria-label="Kickstarter funding progress">
+              <h3 class="openbook-subheading"><span class="kickstarter-heading-label">Kickstarter</span><span class="openbook-subtitle kickstarter-heading-subtitle">$61,000 Goal</span><span class="kickstarter-heading-mobile">$61,000 Goal</span></h3>
+              <p class="openbook-helper kickstarter-goal-date">Goal Date: June 1st.</p>
               <div class="openbook-pie kickstarter-pie" role="img" aria-label="Kickstarter funding progress: $15,000 funded (24.6%) and $46,000 remaining (75.4%).">
                 <div class="openbook-pie-center">
                   <span class="label">Funded</span>
@@ -3637,9 +3910,10 @@
                   <span class="legend-value">75.4%</span>
                 </li>
               </ul>
-              <a data-cta-label="See Our Open-Book Budget" class="btn gold cta-standard" href="/pricing.html">See Our Open-Book Budget</a>
             </div>
           </div>
+        </div>
+        <div class="share-help-row">
         </div>
         <div class="radical-summary-row">
           <div class="program-summary">
@@ -3653,8 +3927,11 @@
               <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💵</span><span class="program-summary-point-text">2-Weeks = $550</span></div>
             </div>
             <div class="program-summary-cta-group">
-              <p class="program-summary-cta-title">Free Info Session &mdash; Learn how The Money Club.Org Works</p>
-              <a class="btn purple gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
+              <p class="program-summary-cta-title">Free Info Session &mdash; Learn About The Money Club.Org</p>
+              <div class="program-summary-cta-actions">
+                <a class="btn teal gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
+                <a href="#" id="share-opportunity-btn" class="btn gold gloss cta-fill cta-share" data-cta-label="Share Program Details">Share Program Details</a>
+              </div>
             </div>
           </div>
         </div>
@@ -3671,7 +3948,7 @@
         <div class="split">
           <div class="section-copy">
             <div><strong>Student-led support (adult-supervised)</strong></div>
-            <p>The Money Club.Org is operated by its student leadership team: Sarah Duong and Alex Goldberg, both students at Humberside Collegiate Institute.</p>
+            <p>The Money Club.Org is operated by its student leadership team: Sarah D. and Alex G., both students at Humberside Collegiate Institute.</p>
             <div><strong>Designed by a practitioner</strong></div>
             <p>The Money Club.Org was designed by Jared Goldberg — a product strategist, systems designer, and educator with 15+ years building real-world business platforms.</p>
             <ul class="bullet-list">
@@ -3750,7 +4027,7 @@
     <div class="info-session-overlay" id="info-session-overlay" aria-hidden="true">
       <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
         <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
-        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
+        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn About The Money Club.Org</h2>
         <p class="info-session-meta">📅 April 18 • Live video session • ~30 minutes</p>
         <p class="info-session-helper">Save your spot and we&rsquo;ll send the session link and program details. No payment required.</p>
         <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
@@ -3819,7 +4096,7 @@
 
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
+        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn About The Money Club.Org</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
@@ -4420,61 +4697,6 @@
       window.addEventListener('load', handleScrollDepth);
       handleScrollDepth();
 
-      // Keep explicit interest form exposure tracking; section-level view events are disabled.
-
-      var interestFormEl = document.querySelector('#reserve-a-spot form[action="apply-interest.php"]') ||
-        document.querySelector('#reserve-a-spot .reservation-card');
-      var interestFormViewed = false;
-
-      function pushInterestFormView(){
-        if (interestFormViewed){
-          return;
-        }
-        interestFormViewed = true;
-        pushDataLayerEvent({
-          event: 'interest_form_view',
-          form_name: 'interest_form',
-          funnel_step: 'interest_form_view',
-          form_id: 'interest',
-          page_path: pagePath,
-          page_title: pageTitle
-        });
-      }
-
-      if (interestFormEl){
-        if ('IntersectionObserver' in window){
-          var interestFormObserver = new IntersectionObserver(function(entries){
-            entries.forEach(function(entry){
-              if (!entry.isIntersecting || entry.intersectionRatio < 0.5){
-                return;
-              }
-              pushInterestFormView();
-              interestFormObserver.unobserve(entry.target);
-            });
-          }, {
-            threshold: [0.5]
-          });
-
-          interestFormObserver.observe(interestFormEl);
-        } else {
-          function checkInterestFormFallback(){
-            if (interestFormViewed){
-              return;
-            }
-            var rect = interestFormEl.getBoundingClientRect();
-            var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
-            var visiblePx = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
-            var ratio = visiblePx / Math.max(rect.height, 1);
-            if (ratio >= 0.5){
-              pushInterestFormView();
-            }
-          }
-          window.addEventListener('scroll', checkInterestFormFallback, { passive: true });
-          window.addEventListener('resize', checkInterestFormFallback);
-          window.addEventListener('load', checkInterestFormFallback);
-          checkInterestFormFallback();
-        }
-      }
     })();
   </script>
   <script>
@@ -4647,17 +4869,6 @@
         return;
       }
 
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: 'interest_form_success',
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: 'form_success',
-        page_path: window.location.pathname || '',
-        page_title: document.title || '',
-        form_context: 'homepage'
-      });
-
       params.delete('status');
       params.delete('field');
       params.delete('message');
@@ -4676,18 +4887,14 @@
       var interestForms = document.querySelectorAll('form[action="apply-interest.php"]');
       if (!interestForms.length){ return; }
 
-      function fireInterestFormStart(){
-        if (window.__tmcInterestFormStarted){ return; }
-        window.__tmcInterestFormStarted = true;
-
-        window.dataLayer.push({
-          event: 'interest_form_start',
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: 'form_start',
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
+      function hasValidInterestIdentity(form){
+        if (!form){ return false; }
+        var nameInput = form.querySelector('input[name="parent-name"]');
+        var emailInput = form.querySelector('input[name="parent-email"]');
+        if (!nameInput || !emailInput){ return false; }
+        var nameValue = (nameInput.value || '').trim();
+        var emailValue = (emailInput.value || '').trim();
+        return nameValue.length > 0 && emailValue.length > 0 && emailInput.checkValidity();
       }
 
       function pushInterestFormSubmit(){
@@ -4701,47 +4908,75 @@
         });
       }
 
-      function pushInterestFormError(fieldName, message){
-        window.dataLayer.push({
-          event: 'interest_form_error',
-          error_field: fieldName || 'unknown',
-          error_message: message || 'Validation error',
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: 'form_error',
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
-      }
-
       interestForms.forEach(function(interestForm){
-        interestForm.addEventListener('focusin', function(e){
-          var target = e.target;
-          if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
-          fireInterestFormStart();
-        }, true);
-
-        interestForm.addEventListener('input', function(e){
-          var target = e.target;
-          if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
-          fireInterestFormStart();
-        }, true);
-
         interestForm.addEventListener('submit', function(){
-          if (!interestForm.checkValidity()){
-            var firstInvalid = interestForm.querySelector(':invalid');
-
-            pushInterestFormError(
-              firstInvalid ? firstInvalid.name : 'unknown',
-              firstInvalid ? firstInvalid.validationMessage : 'Validation error'
-            );
-
+          if (!interestForm.checkValidity() || !hasValidInterestIdentity(interestForm)){
             return;
           }
 
           pushInterestFormSubmit();
         });
       });
+    })();
+  </script>
+  <script>
+    (function(){
+      var shareBtn = document.getElementById('share-opportunity-btn');
+      if (!shareBtn){
+        return;
+      }
+
+      shareBtn.addEventListener('click', function(e){
+        if (e && typeof e.preventDefault === 'function'){
+          e.preventDefault();
+        }
+        var shareUrl = window.location.origin + window.location.pathname;
+        var sharePayload = {
+          title: 'The Money Club.Org',
+          text: 'Help us. Share this opportunity with your friends and family.',
+          url: shareUrl
+        };
+
+        if (navigator.share){
+          navigator.share(sharePayload).catch(function(){});
+          return;
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(shareUrl).then(function(){
+            alert('Link copied. Share it with your friends and family.');
+          }).catch(function(){
+            window.location.href = 'mailto:?subject=' + encodeURIComponent(sharePayload.title) + '&body=' + encodeURIComponent(sharePayload.text + '\n\n' + shareUrl);
+          });
+          return;
+        }
+
+        window.location.href = 'mailto:?subject=' + encodeURIComponent(sharePayload.title) + '&body=' + encodeURIComponent(sharePayload.text + '\n\n' + shareUrl);
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      if (!window.matchMedia || !window.matchMedia('(max-width: 768px)').matches){
+        return;
+      }
+      var section = document.getElementById('radical-transparency');
+      if (!section){
+        return;
+      }
+      var content = section.querySelector('.section-content');
+      var summaryRow = section.querySelector('.radical-summary-row');
+      var fundingBlock = section.querySelector('.funding-threshold-block');
+      var kickstarterCard = section.querySelector('.kickstarter-card');
+      var shareBtn = section.querySelector('#share-opportunity-btn');
+      if (!content || !summaryRow || !fundingBlock || !kickstarterCard){
+        return;
+      }
+      content.appendChild(fundingBlock);
+      content.appendChild(kickstarterCard);
+      if (shareBtn){
+        kickstarterCard.appendChild(shareBtn);
+      }
     })();
   </script>
 

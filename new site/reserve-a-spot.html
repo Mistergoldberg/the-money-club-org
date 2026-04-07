@@ -2149,7 +2149,7 @@ nav{
     <div class="info-session-overlay" id="info-session-overlay" aria-hidden="true">
       <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
         <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
-        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
+        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn About The Money Club.Org</h2>
         <p class="info-session-meta">📅 April 18 • Live video session • ~30 minutes</p>
         <p class="info-session-helper">Save your spot and we&rsquo;ll send the session link and program details. No payment required.</p>
         <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
@@ -2894,36 +2894,7 @@ nav{
       if (!interestForm){ return; }
 
       var params = new URLSearchParams(window.location.search);
-      var hasPendingInterestSubmit = false;
-      try {
-        hasPendingInterestSubmit = sessionStorage.getItem('tmc_interest_submit_pending') === '1';
-      } catch (e) {}
-
-      if (params.get('status') === 'sent' && hasPendingInterestSubmit){
-        var dedupeKey = 'interest_form_submitted:' + (window.location.pathname || '') + ':' + window.location.search;
-        var alreadyTracked = false;
-        try {
-          alreadyTracked = sessionStorage.getItem(dedupeKey) === '1';
-          if (!alreadyTracked){
-            sessionStorage.setItem(dedupeKey, '1');
-          }
-        } catch (e) {}
-
-        if (!alreadyTracked){
-          window.dataLayer.push({
-            event: 'interest_form_success',
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: 'form_success',
-            page_location: window.location.pathname,
-            form_context: 'reserve_a_spot'
-          });
-        }
-
-        try {
-          sessionStorage.removeItem('tmc_interest_submit_pending');
-        } catch (e) {}
-
+      if (params.get('status') === 'sent' || params.get('status') === 'error'){
         params.delete('status');
         params.delete('field');
         params.delete('message');
@@ -2934,31 +2905,17 @@ nav{
         } catch (e) {}
       }
 
-      if (params.get('status') === 'error'){
-        try {
-          sessionStorage.removeItem('tmc_interest_submit_pending');
-        } catch (e) {}
-      }
-
-      function fireInterestFormStart(){
-        if (window.__tmcInterestFormStarted){ return; }
-        window.__tmcInterestFormStarted = true;
-
-        window.dataLayer.push({
-          event: 'interest_form_start',
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: 'form_start',
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
+      function hasValidInterestIdentity(form){
+        if (!form){ return false; }
+        var nameInput = form.querySelector('input[name="parent-name"]');
+        var emailInput = form.querySelector('input[name="parent-email"]');
+        if (!nameInput || !emailInput){ return false; }
+        var nameValue = (nameInput.value || '').trim();
+        var emailValue = (emailInput.value || '').trim();
+        return nameValue.length > 0 && emailValue.length > 0 && emailInput.checkValidity();
       }
 
       function pushInterestFormSubmit(){
-        try {
-          sessionStorage.setItem('tmc_interest_submit_pending', '1');
-        } catch (e) {}
-
         window.dataLayer.push({
           event: 'interest_form_submit',
           form_name: 'interest_form',
@@ -2969,38 +2926,8 @@ nav{
         });
       }
 
-      function pushInterestFormError(fieldName, message){
-        window.dataLayer.push({
-          event: 'interest_form_error',
-          error_field: fieldName || 'unknown',
-          error_message: message || 'Validation error',
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: 'form_error',
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
-      }
-
-      interestForm.addEventListener('focusin', function(e){
-        var target = e.target;
-        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
-        fireInterestFormStart();
-      }, true);
-
-      interestForm.addEventListener('input', function(e){
-        var target = e.target;
-        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
-        fireInterestFormStart();
-      }, true);
-
       interestForm.addEventListener('submit', function(){
-        if (!interestForm.checkValidity()){
-          var firstInvalid = interestForm.querySelector(':invalid');
-          pushInterestFormError(
-            firstInvalid ? firstInvalid.name : 'unknown',
-            firstInvalid ? firstInvalid.validationMessage : 'Validation error'
-          );
+        if (!interestForm.checkValidity() || !hasValidInterestIdentity(interestForm)){
           return;
         }
 

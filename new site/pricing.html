@@ -1925,12 +1925,12 @@
       margin: 0 auto;
       background:
         conic-gradient(
-          var(--rose) 0% 12.223%,
-          var(--purple) 12.223% 60.214%,
-          var(--teal) 60.214% 64.926%,
-          var(--gold) 64.926% 95.656%,
-          var(--ink) 95.656% 99.585%,
-          var(--slate) 99.585% 100%
+          var(--purple) 0% 50.4%,
+          var(--gold) 50.4% 82.7%,
+          var(--rose) 82.7% 90.6%,
+          var(--teal) 90.6% 95.5%,
+          var(--ink) 95.5% 99.6%,
+          var(--slate) 99.6% 100%
         );
     }
     .openbook-legend{
@@ -2021,12 +2021,23 @@
     }
     .openbook-subtitle{
       display: block;
-      font-size: clamp(14px, 2vw, 18px);
-      font-weight: 500;
+      font-size: inherit;
+      font-weight: 400;
+      line-height: var(--lh-body);
       color: var(--muted);
       text-transform: none;
       letter-spacing: 0;
       margin-top: 4px;
+    }
+    .openbook-expenses .openbook-summary > h3,
+    .openbook-expenses .openbook-pie-card > .openbook-subheading{
+      margin-bottom: 4px;
+    }
+    .openbook-expenses .openbook-summary > .openbook-subtitle,
+    .openbook-expenses .openbook-pie-card > .openbook-subtitle{
+      margin: 0 0 10px;
+      text-align: center;
+      width: 100%;
     }
     .openbook-pie{
       width: min(360px, 100%);
@@ -2035,12 +2046,12 @@
       margin: 0 auto 14px;
       background:
         conic-gradient(
-          var(--rose) 0% 12.223%,
-          var(--purple) 12.223% 60.214%,
-          var(--teal) 60.214% 64.926%,
-          var(--gold) 64.926% 95.656%,
-          var(--ink) 95.656% 99.585%,
-          var(--slate) 99.585% 100%
+          var(--purple) 0% 50.4%,
+          var(--gold) 50.4% 82.7%,
+          var(--rose) 82.7% 90.6%,
+          var(--teal) 90.6% 95.5%,
+          var(--ink) 95.5% 99.6%,
+          var(--slate) 99.6% 100%
         );
       position: relative;
       display: grid;
@@ -2083,6 +2094,8 @@
       max-width: 100%;
       justify-self: stretch;
       align-self: start;
+      font-size: inherit;
+      line-height: var(--lh-body);
     }
     .openbook-legend li{
       display: grid;
@@ -2351,6 +2364,22 @@
       .openbook-grid{ grid-template-columns: 1fr; }
       .math-layout{ grid-template-columns: 1fr; }
       .math-layout > *{ min-width: 0; }
+      .math-section .math-content{
+        display: flex;
+        flex-direction: column;
+      }
+      .math-section .math-layout{
+        order: 2;
+      }
+      .math-section .openbook-grid.openbook-expenses{
+        display: contents;
+      }
+      .math-section .openbook-grid.openbook-expenses .openbook-pie-card{
+        order: 1;
+      }
+      .math-section .openbook-grid.openbook-expenses .openbook-summary{
+        order: 3;
+      }
       .math-card{
         max-width: 100%;
         border: 0;
@@ -2805,6 +2834,7 @@
       main > .hero{ order: 10; }
       main > #built-like-a-business{ order: 20; }
       main > .math-section{ order: 30; }
+      main > #practical-note{ order: 34; }
       main > #what-is-this{ order: 35; }
       main > #how-it-works{ order: 40; }
       main > #radical-transparency{ order: 50; }
@@ -3188,7 +3218,7 @@
     <div class="info-session-overlay" id="info-session-overlay" aria-hidden="true">
       <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
         <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
-        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn how The Money Club.Org Works</h2>
+        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn About The Money Club.Org</h2>
         <p class="info-session-meta">📅 April 18 • Live video session • ~30 minutes</p>
         <p class="info-session-helper">Save your spot and we&rsquo;ll send the session link and program details. No payment required.</p>
         <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
@@ -3251,6 +3281,7 @@
 
           <div class="math-card revenue">
             <h3 class="revenue-title">Revenue In</h3>
+            <p class="math-note">This tuition funds a 10-student cohort including one university mentor, venue, insurance, and materials.</p>
             <ul class="revenue-list">
               <li>
                 <span>Students per cohort</span>
@@ -3265,12 +3296,12 @@
               <span class="label">Total revenue</span>
               <div class="math-figure">$11,000</div>
             </div>
-            <p class="math-note">This tuition funds everything required to run the group with one instructor, venue, and materials.</p>
           </div>
         </div>
         <div class="openbook-grid openbook-expenses">
           <div class="openbook-summary standout">
             <h3>Expense Summary</h3>
+            <span class="openbook-subtitle">Costs to run the program at the UTSU Student Commons, July &amp; August, with 3 university mentors.</span>
             <table class="openbook-table" aria-label="Program expense summary">
               <thead>
                 <tr>
@@ -3280,32 +3311,32 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Marketing</td>
-                  <td>$1,297</td>
-                </tr>
-                <tr>
                   <td>Instructors</td>
-                  <td>$5,093</td>
-                </tr>
-                <tr>
-                  <td>Program Materials</td>
-                  <td>$500</td>
+                  <td>$30,558</td>
                 </tr>
                 <tr>
                   <td>Venue Rental</td>
-                  <td>$3,261</td>
+                  <td>$19,567</td>
+                </tr>
+                <tr>
+                  <td>Marketing</td>
+                  <td>$4,780</td>
+                </tr>
+                <tr>
+                  <td>Program Materials</td>
+                  <td>$3,000</td>
                 </tr>
                 <tr>
                   <td>Insurance</td>
-                  <td>$417</td>
+                  <td>$2,500</td>
                 </tr>
                 <tr>
                   <td>Overhead</td>
-                  <td>$44</td>
+                  <td>$264</td>
                 </tr>
                 <tr>
                   <td><strong>Total expenses</strong></td>
-                  <td><strong>$10,612</strong></td>
+                  <td><strong>$60,670</strong></td>
                 </tr>
               </tbody>
             </table>
@@ -3313,7 +3344,8 @@
           </div>
           <div class="openbook-pie-card" aria-label="Program budget distribution chart">
             <h3 class="openbook-subheading">Expense Visualization</h3>
-            <div class="openbook-pie" role="img" aria-label="Expense distribution: Marketing 12.2%, Instructors 48.0%, Program Materials 4.7%, Venue Rental 30.7%, Insurance 3.9%, Overhead 0.4%">
+            <span class="openbook-subtitle">Where tuition goes for a 10-student cohort</span>
+            <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 50.4%, Venue Rental 32.3%, Marketing 7.9%, Program Materials 4.9%, Insurance 4.1%, Overhead 0.4%">
               <div class="openbook-pie-center">
                 <span class="label">Total</span>
                 <span class="value">$10,612</span>
@@ -3321,33 +3353,33 @@
             </div>
             <ul class="openbook-legend">
               <li>
-                <span class="legend-dot" style="background: var(--rose);"></span>
-                <span class="legend-label">Marketing</span>
-                <span class="legend-value">12.2%</span>
-              </li>
-              <li>
                 <span class="legend-dot" style="background: var(--purple);"></span>
-                <span class="legend-label">Instructors</span>
-                <span class="legend-value">48.0%</span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--teal);"></span>
-                <span class="legend-label">Program Materials</span>
-                <span class="legend-value">4.7%</span>
+                <span class="legend-label">Instructors $5,093</span>
+                <span class="legend-value">50.4%</span>
               </li>
               <li>
                 <span class="legend-dot" style="background: var(--gold);"></span>
-                <span class="legend-label">Venue Rental</span>
-                <span class="legend-value">30.7%</span>
+                <span class="legend-label">Venue Rental $3,261</span>
+                <span class="legend-value">32.3%</span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--rose);"></span>
+                <span class="legend-label">Marketing $1,297</span>
+                <span class="legend-value">7.9%</span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: var(--teal);"></span>
+                <span class="legend-label">Program Materials $500</span>
+                <span class="legend-value">4.9%</span>
               </li>
               <li>
                 <span class="legend-dot" style="background: var(--ink);"></span>
-                <span class="legend-label">Insurance</span>
-                <span class="legend-value">3.9%</span>
+                <span class="legend-label">Insurance $417</span>
+                <span class="legend-value">4.1%</span>
               </li>
               <li>
                 <span class="legend-dot" style="background: var(--slate);"></span>
-                <span class="legend-label">Overhead</span>
+                <span class="legend-label">Overhead $44</span>
                 <span class="legend-value">0.4%</span>
               </li>
             </ul>
@@ -3541,23 +3573,6 @@
       </div>
     </section>
   
-    <section class="section" id="choose-your-adventure">
-      <div class="section-banner purple">
-        <div class="wrap">
-          <h2>Learn More</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="adventure-grid">
-          <a class="adventure-link" data-cta-label="Curriculum" href="curriculum-details.html"><h3>Curriculum</h3></a>
-          <a class="adventure-link" data-cta-label="Build &amp; Sell" href="how-it-works.html"><h3>Build &amp; Sell</h3></a>
-          <a class="adventure-link" data-cta-label="Who Runs It" href="who-runs-it.html"><h3>Who Runs It</h3></a>
-          <a class="adventure-link" data-cta-label="FAQs" href="faq.html"><h3>FAQs</h3></a>
-          <a class="adventure-link" data-cta-label="Reserve a Spot" href="reserve-a-spot.html"><h3>Reserve a Spot</h3></a>
-        </div>
-      </div>
-    </section>
-
   </main>
   <script>
     (function(){
@@ -4191,6 +4206,8 @@
         var pagePath = window.location.pathname || '';
         return {
           event: eventName,
+          form_name: 'site_cta',
+          funnel_step: eventName,
           cta_label: label,
           cta_text: text,
           cta_href: href,
@@ -4361,36 +4378,7 @@
       if (!interestForm){ return; }
 
       var params = new URLSearchParams(window.location.search);
-      var hasPendingInterestSubmit = false;
-      try {
-        hasPendingInterestSubmit = sessionStorage.getItem('tmc_interest_submit_pending') === '1';
-      } catch (e) {}
-
-      if (params.get('status') === 'sent' && hasPendingInterestSubmit){
-        var dedupeKey = 'interest_form_submitted:' + (window.location.pathname || '') + ':' + window.location.search;
-        var alreadyTracked = false;
-        try {
-          alreadyTracked = sessionStorage.getItem(dedupeKey) === '1';
-          if (!alreadyTracked){
-            sessionStorage.setItem(dedupeKey, '1');
-          }
-        } catch (e) {}
-
-        if (!alreadyTracked){
-          window.dataLayer.push({
-            event: 'interest_form_success',
-            form_name: 'interest_form',
-            form_id: 'interest',
-            funnel_step: 'form_success',
-            page_location: window.location.pathname,
-            form_context: 'pricing'
-          });
-        }
-
-        try {
-          sessionStorage.removeItem('tmc_interest_submit_pending');
-        } catch (e) {}
-
+      if (params.get('status') === 'sent' || params.get('status') === 'error'){
         params.delete('status');
         params.delete('field');
         params.delete('message');
@@ -4401,31 +4389,17 @@
         } catch (e) {}
       }
 
-      if (params.get('status') === 'error'){
-        try {
-          sessionStorage.removeItem('tmc_interest_submit_pending');
-        } catch (e) {}
-      }
-
-      function fireInterestFormStart(){
-        if (window.__tmcInterestFormStarted){ return; }
-        window.__tmcInterestFormStarted = true;
-
-        window.dataLayer.push({
-          event: 'interest_form_start',
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: 'form_start',
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
+      function hasValidInterestIdentity(form){
+        if (!form){ return false; }
+        var nameInput = form.querySelector('input[name="parent-name"]');
+        var emailInput = form.querySelector('input[name="parent-email"]');
+        if (!nameInput || !emailInput){ return false; }
+        var nameValue = (nameInput.value || '').trim();
+        var emailValue = (emailInput.value || '').trim();
+        return nameValue.length > 0 && emailValue.length > 0 && emailInput.checkValidity();
       }
 
       function pushInterestFormSubmit(){
-        try {
-          sessionStorage.setItem('tmc_interest_submit_pending', '1');
-        } catch (e) {}
-
         window.dataLayer.push({
           event: 'interest_form_submit',
           form_name: 'interest_form',
@@ -4436,40 +4410,8 @@
         });
       }
 
-      function pushInterestFormError(fieldName, message){
-        window.dataLayer.push({
-          event: 'interest_form_error',
-          error_field: fieldName || 'unknown',
-          error_message: message || 'Validation error',
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: 'form_error',
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
-      }
-
-      interestForm.addEventListener('focusin', function(e){
-        var target = e.target;
-        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
-        fireInterestFormStart();
-      }, true);
-
-      interestForm.addEventListener('input', function(e){
-        var target = e.target;
-        if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
-        fireInterestFormStart();
-      }, true);
-
       interestForm.addEventListener('submit', function(e){
-        if (!interestForm.checkValidity()){
-          var firstInvalid = interestForm.querySelector(':invalid');
-
-          pushInterestFormError(
-            firstInvalid ? firstInvalid.name : 'unknown',
-            firstInvalid ? firstInvalid.validationMessage : 'Validation error'
-          );
-
+        if (!interestForm.checkValidity() || !hasValidInterestIdentity(interestForm)){
           return;
         }
 
