@@ -2196,7 +2196,7 @@ nav{
   <div class="spinner" aria-hidden="true"></div>
   <div class="loading-text">Processing…</div>
 </div>
-            <form class="form-grid" action="parent-approval.html" method="get" novalidate>
+            <form class="form-grid" action="start-parent-approval.php" method="post" novalidate>
               <div class="step-block">
                 <h2 class="form-step-title">Step 1 &mdash; Choose Your Program</h2>
               </div>
@@ -2784,7 +2784,6 @@ nav{
             return;
           }
 
-          e.preventDefault();
           var sessionName = getSelectedSessionLabel() || getSelectedSessionName();
           var programTrack = getSelectedProgramTrack();
           persistSessionName(sessionName);
@@ -2808,7 +2807,6 @@ nav{
             funnel_step: 'payment_selected'
           });
           pushRegistrationSubmitted(sessionName, programTrack);
-          window.location.href = 'parent-approval.html';
         });
       }
     })();

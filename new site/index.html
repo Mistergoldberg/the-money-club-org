@@ -674,6 +674,9 @@
       margin: 0 auto;
       padding: 32px var(--pad) 18px;
     }
+    #what-is-this{
+      display: none !important;
+    }
     .split{
       display:grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -2013,6 +2016,13 @@
       gap: 12px;
       line-height: var(--lh-body);
     }
+    .desktop-radical-model{
+      display: grid;
+      gap: 10px;
+    }
+    .desktop-radical-model p{
+      margin: 0;
+    }
     .funding-threshold-block p{
       margin: 0;
       line-height: 1.3;
@@ -2063,12 +2073,58 @@
       gap: 4px;
     }
     .radical-notes p{ margin: 0; }
+    .mobile-build-price-sell{
+      display: none;
+    }
+    .mobile-build-price-sell-copy{
+      display: grid;
+      gap: 12px;
+      max-width: 74ch;
+    }
+    .mobile-build-price-sell-copy p{
+      margin: 0;
+    }
+    .mobile-program-overview{
+      display: none;
+    }
+    .mobile-program-overview-card{
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 14px 28px rgba(17,17,17,0.08);
+      padding: clamp(22px, 2.2vw, 30px);
+      display: grid;
+      gap: 12px;
+    }
+    .mobile-program-overview-title{
+      margin: 0;
+      font-weight: 700;
+    }
+    .mobile-program-overview-points{
+      display: grid;
+      gap: 8px;
+    }
+    .mobile-program-overview-point{
+      margin: 0;
+    }
+    .mobile-kickstart{
+      display: none;
+    }
+    .mobile-kickstart-copy{
+      display: grid;
+      gap: 12px;
+      max-width: 74ch;
+    }
+    .mobile-kickstart-copy p{
+      margin: 0;
+    }
     .radical-side{
       display:grid;
       gap: 16px;
       align-items: start;
     }
-    #radical-transparency .program-summary{
+    #radical-transparency .program-summary,
+    #mobile-program-overview .program-summary{
       width: 100%;
       margin: 0;
       padding: clamp(24px, 2.4vw, 34px);
@@ -2087,7 +2143,8 @@
     #radical-transparency .share-cta-band + .radical-summary-row{
       margin-top: clamp(10px, 1.7vw, 18px);
     }
-    #radical-transparency .program-summary-meta{
+    #radical-transparency .program-summary-meta,
+    #mobile-program-overview .program-summary-meta{
       margin: 0 0 18px;
       font-size: 1.08em;
       font-weight: 700;
@@ -2095,18 +2152,21 @@
       text-wrap: balance;
       text-align: center;
     }
-    #radical-transparency .program-summary-keep{
+    #radical-transparency .program-summary-keep,
+    #mobile-program-overview .program-summary-keep{
       white-space: normal;
       overflow-wrap: anywhere;
     }
-    #radical-transparency .program-summary-points{
+    #radical-transparency .program-summary-points,
+    #mobile-program-overview .program-summary-points{
       display: grid;
       gap: 12px;
       margin: 0 0 22px;
       padding-top: 18px;
       border-top: 1px solid var(--line);
     }
-    #radical-transparency .program-summary-point{
+    #radical-transparency .program-summary-point,
+    #mobile-program-overview .program-summary-point{
       display: grid;
       grid-template-columns: 1.4em minmax(0, 1fr);
       align-items: start;
@@ -2115,14 +2175,17 @@
       width: fit-content;
       margin: 0 auto;
     }
-    #radical-transparency .program-summary-point-icon{
+    #radical-transparency .program-summary-point-icon,
+    #mobile-program-overview .program-summary-point-icon{
       display: block;
       line-height: 1;
     }
-    #radical-transparency .program-summary-point-text{
+    #radical-transparency .program-summary-point-text,
+    #mobile-program-overview .program-summary-point-text{
       display: block;
     }
-    #radical-transparency .program-summary-cta-group{
+    #radical-transparency .program-summary-cta-group,
+    #mobile-program-overview .program-summary-cta-group{
       display: grid;
       grid-template-columns: 1fr;
       gap: 14px;
@@ -2131,14 +2194,16 @@
       border-top: 1px solid var(--line);
       text-align: left;
     }
-    #radical-transparency .program-summary-cta-title{
+    #radical-transparency .program-summary-cta-title,
+    #mobile-program-overview .program-summary-cta-title{
       margin: 0;
       font-size: 1.08em;
       line-height: 1.15;
       font-weight: 700;
       text-align: center;
     }
-    #radical-transparency .program-summary-cta-group .cta-fill{
+    #radical-transparency .program-summary-cta-group .cta-fill,
+    #mobile-program-overview .program-summary-cta-group .cta-fill{
       width: 100%;
       justify-self: stretch;
       min-height: 76px;
@@ -2151,12 +2216,14 @@
       border-radius: 14px;
       text-align: center;
     }
-    #radical-transparency .program-summary-cta-actions{
+    #radical-transparency .program-summary-cta-actions,
+    #mobile-program-overview .program-summary-cta-actions{
       display: grid;
       grid-template-columns: 1fr;
       gap: 12px;
     }
-    #radical-transparency .program-summary-cta-group .cta-share{
+    #radical-transparency .program-summary-cta-group .cta-share,
+    #mobile-program-overview .program-summary-cta-group .cta-share{
       display: inline-flex;
     }
     .radical-side .btn{
@@ -2265,16 +2332,16 @@
       margin: 0;
       text-align: center;
       font-size: var(--size-section-subhead);
-      line-height: var(--lh-section-subhead);
+      line-height: 1.08;
       font-family: var(--font-body);
       text-transform: none;
-      letter-spacing: 0;
-      font-weight: 700;
+      letter-spacing: -0.01em;
+      font-weight: 800;
     }
     .openbook-subtitle{
       display: block;
       font-size: clamp(17px, 1.2vw, 20px);
-      font-weight: 500;
+      font-weight: 600;
       color: var(--muted);
       text-transform: none;
       letter-spacing: 0;
@@ -2896,6 +2963,9 @@
       .radical-copy{
         order: 1;
       }
+      #radical-transparency .desktop-radical-model{
+        display: none;
+      }
       .radical-side .section-image{
         order: 1;
       }
@@ -3199,11 +3269,14 @@
       main > .hero{ order: 10; }
       main > #built-like-a-business{ order: 20; }
       main > .mobile-inline-interest{ order: 24; }
+      main > #build-price-sell-mobile{ order: 28; }
+      main > #mobile-program-overview{ order: 29; }
       main > #radical-transparency{ order: 30; }
       main > #how-it-works{ order: 40; }
       main > #the-flywheel{ order: 45; }
       main > #who-runs-it{ order: 50; }
       main > #outcomes{ order: 52; }
+      main > #mobile-kickstart{ order: 53; }
       main > #curriculum{ order: 55; }
       main > #what-is-this{ order: 60; }
       main > #what-students-leave-with{ order: 70; }
@@ -3212,11 +3285,25 @@
       main > #reserve-a-spot{ order: 100; }
       main > #choose-your-adventure{ order: 110; }
 
+      .mobile-program-overview,
+      .mobile-build-price-sell{
+        display: block;
+      }
+      .mobile-kickstart{
+        display: block;
+      }
+      #radical-transparency .radical-summary-row,
+      #radical-transparency .funding-threshold-block{
+        display: none;
+      }
       .openbook-pie-card.openbook-pie-card--mobile{
         display: grid;
         order: 0;
       }
       .openbook-pie-card.openbook-pie-card--desktop{
+        display: none;
+      }
+      #radical-transparency .radical-side .kickstarter-card{
         display: none;
       }
       .radical-copy .openbook-pie-card{
@@ -3255,7 +3342,8 @@
         background: var(--purple);
         color: #ffffff;
       }
-      #radical-transparency .program-summary-cta-group .cta-fill{
+      #radical-transparency .program-summary-cta-group .cta-fill,
+      #mobile-program-overview .program-summary-cta-group .cta-fill{
         min-height: 62px;
         padding: 16px 22px;
         font-size: var(--btn-size);
@@ -3264,7 +3352,8 @@
         line-height: 0.95;
         border-radius: 16px;
       }
-      #radical-transparency .program-summary-cta-actions .cta-fill[data-open-info-session]{
+      #radical-transparency .program-summary-cta-actions .cta-fill[data-open-info-session],
+      #mobile-program-overview .program-summary-cta-actions .cta-fill[data-open-info-session]{
         background: var(--purple);
         color: #ffffff;
         box-shadow: 0 10px 20px rgba(140,98,167,0.25);
@@ -3769,6 +3858,48 @@
       </div>
     </section>
 
+    <section class="section mobile-build-price-sell" id="build-price-sell-mobile">
+      <div class="section-banner teal">
+        <div class="wrap">
+          <h2>Build. Price. Sell.</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="mobile-build-price-sell-copy">
+          <p>The Money Club.Org is a <strong>startup-style summer program</strong> where kids learn how money moves by building real products through guided sprints. <strong>Every dollar is visible.</strong> Kids receive a <strong>$50 build budget</strong> to build, price, test and sell a product or service.</p>
+          <p><strong>This is the model:</strong></p>
+          <ul class="radical-list">
+            <li><strong>kids learn financial literacy through radical transparency</strong></li>
+            <li><strong>mentors get meaningful paid work</strong></li>
+            <li><strong>families help kickstart a local feedback loop of learning, demand, and community value</strong></li>
+          </ul>
+          <p><strong>Our problem statement:</strong> We are trying to prove that a <strong>small, transparent nonprofit</strong> can create <strong>real value for kids</strong> and <strong>meaningful work for University of Toronto student mentors</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mobile-program-overview" id="mobile-program-overview">
+      <div class="section-content">
+        <div class="mobile-program-overview-card program-summary">
+          <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons | Summer 2026</span></div>
+          <div class="program-summary-points">
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text">Ages 10–16</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July - Aug</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">9–5 daily</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">4-Weeks = $1,100</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💵</span><span class="program-summary-point-text">2-Weeks = $550</span></div>
+          </div>
+          <div class="program-summary-cta-group">
+            <p class="program-summary-cta-title">Free Info Session &mdash; Learn About The Money Club.Org</p>
+            <div class="program-summary-cta-actions">
+              <a class="btn teal gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="radical-transparency">
       <div class="section-banner teal">
         <div class="wrap">
@@ -3823,14 +3954,16 @@
                 </li>
               </ul>
             </div>
-            <p><strong>Our problem statement is:</strong> We are trying to prove that a <strong>small, transparent nonprofit</strong> can create <strong>real value for kids</strong> and <strong>meaningful work for University of Toronto student mentors</strong>.</p>
-            <p>The Money Club.Org is a <strong>startup-style summer program</strong> where kids learn how money moves by building real products through guided sprints. <strong>Every dollar is visible.</strong> Revenue pays for rent, mentors, insurance, and project materials — including a <strong>$50 build budget</strong> each student uses to test ideas in the real world.</p>
-            <p><strong>This is the model:</strong></p>
-            <ul class="radical-list">
-              <li><strong>kids learn financial literacy through radical transparency</strong></li>
-              <li><strong>mentors get meaningful paid work</strong></li>
-              <li><strong>families help kickstart a local feedback loop of learning, demand, and community value</strong></li>
-            </ul>
+            <div class="desktop-radical-model">
+              <p>The Money Club.Org is a <strong>startup-style summer program</strong> where kids learn how money moves by building real products through guided sprints. <strong>Every dollar is visible.</strong> Kids receive a <strong>$50 build budget</strong> each student uses to build, price, and sell in the real world.</p>
+              <p><strong>This is the model:</strong></p>
+              <ul class="radical-list">
+                <li><strong>kids learn financial literacy through radical transparency</strong></li>
+                <li><strong>mentors get meaningful paid work</strong></li>
+                <li><strong>families help kickstart a local feedback loop of learning, demand, and community value</strong></li>
+              </ul>
+              <p><strong>Our problem statement:</strong> We are trying to prove that a <strong>small, transparent nonprofit</strong> can create <strong>real value for kids</strong> and <strong>meaningful work for University of Toronto student mentors</strong>.</p>
+            </div>
             <div class="funding-threshold-block">
               <div class="kickstart-us-banner">
                 <h3>Help Us Kickstart</h3>
@@ -4020,6 +4153,49 @@
               <img src="assets/apps-n.jpg" alt="Student presenting ideas in front of a group" />
             </figure>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mobile-kickstart" id="mobile-kickstart">
+      <div class="section-banner teal">
+        <div class="wrap">
+          <h2>Help Us Kickstart</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="mobile-kickstart-copy">
+          <p>To run this summer, we need to secure <strong>$61,000</strong> in paid parent participation by <strong>June 1</strong>.</p>
+          <p><strong>That means either:</strong></p>
+          <ul class="radical-list">
+            <li><strong>60 four-week registrations, or</strong></li>
+            <li><strong>120 two-week sprints</strong></li>
+          </ul>
+          <p>Founder Jared Goldberg is personally contributing <strong>$15,000</strong> toward the <strong>$61,000</strong> goal to help get the program off the ground.</p>
+          <p>If we hit the threshold, we run.</p>
+          <p>If not, we build more and try again.</p>
+          <div class="openbook-pie-card kickstarter-card" aria-label="Kickstarter funding progress">
+            <h3 class="openbook-subheading"><span class="kickstarter-heading-label">Kickstarter</span><span class="openbook-subtitle kickstarter-heading-subtitle">$61,000 Goal</span><span class="kickstarter-heading-mobile">$61,000 Goal</span></h3>
+            <p class="openbook-helper kickstarter-goal-date">Goal Date: June 1st.</p>
+            <div class="openbook-pie kickstarter-pie" role="img" aria-label="Kickstarter funding progress: $15,000 funded (24.6%) and $46,000 remaining (75.4%).">
+              <div class="openbook-pie-center">
+                <span class="label">Funded</span>
+                <span class="value">$15,000</span>
+              </div>
+            </div>
+            <ul class="openbook-legend">
+              <li>
+                <span class="legend-dot" style="background: var(--purple);"></span>
+                <span class="legend-label">Funded <span class="legend-amount">$15,000</span></span>
+                <span class="legend-value">24.6%</span>
+              </li>
+              <li>
+                <span class="legend-dot" style="background: #6f7f8d;"></span>
+                <span class="legend-label">Remaining <span class="legend-amount">$46,000</span></span>
+                <span class="legend-value">75.4%</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -4966,30 +5142,5 @@
       });
     })();
   </script>
-  <script>
-    (function(){
-      if (!window.matchMedia || !window.matchMedia('(max-width: 768px)').matches){
-        return;
-      }
-      var section = document.getElementById('radical-transparency');
-      if (!section){
-        return;
-      }
-      var content = section.querySelector('.section-content');
-      var summaryRow = section.querySelector('.radical-summary-row');
-      var fundingBlock = section.querySelector('.funding-threshold-block');
-      var kickstarterCard = section.querySelector('.kickstarter-card');
-      var shareBtn = section.querySelector('#share-opportunity-btn');
-      if (!content || !summaryRow || !fundingBlock || !kickstarterCard){
-        return;
-      }
-      content.appendChild(fundingBlock);
-      content.appendChild(kickstarterCard);
-      if (shareBtn){
-        kickstarterCard.appendChild(shareBtn);
-      }
-    })();
-  </script>
-
 </body>
 </html>

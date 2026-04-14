@@ -74,7 +74,7 @@ function redirect_with_error($return_to, $field, $message) {
     exit;
 }
 
-log_debug('stripe-checkout POST email=' . $parent_email . ' phone=' . $parent_phone . ' age=' . $student_age . ' program=' . $program_track . ' session=' . $preferred_session . ' payment=' . $payment_method);
+log_debug('stripe-checkout POST program=' . $program_track . ' session=' . $preferred_session . ' payment=' . $payment_method);
 
 if ($parent_name === '') {
     redirect_with_error($return_error, 'parent-name', 'Parent/guardian name is required.');
@@ -154,7 +154,7 @@ if ($stripe_secret === false || $stripe_secret === '') {
 }
 
 $base_url = base_url();
-$success_url = $base_url . '/stripe-success.php?session_id={CHECKOUT_SESSION_ID}&return=thank-you-credit-card.php';
+$success_url = $base_url . '/stripe-success.php?session_id={CHECKOUT_SESSION_ID}';
 $cancel_return = isset($_POST['return-cancel']) ? basename(trim($_POST['return-cancel'])) : 'reserve-a-spot.html';
 $allowed_returns = [
     'reserve-a-spot.html',
@@ -249,7 +249,7 @@ if ($status < 200 || $status >= 300 || !isset($result['url'])) {
     redirect_with_error($return_error, 'payment-method', $error_message);
 }
 
-log_debug('Stripe checkout created session_id=' . ($result['id'] ?? '') . ' email=' . $parent_email);
+log_debug('Stripe checkout created session_id=' . ($result['id'] ?? ''));
 
 $to = ['info@the-money-club.org', 'alex@the-money-club.org', 'sarah@the-money-club.org'];
 $subject = 'Reserve a Spot (Payment Started): The Money Club.Org';

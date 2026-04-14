@@ -49,7 +49,10 @@ function get_parent_approval_hash_secret($data_dir) {
     try {
         $new_key = bin2hex(random_bytes(32));
     } catch (Exception $e) {
-        $new_key = hash('sha256', __FILE__ . php_uname('n'));
+        throw new RuntimeException(
+            'Unable to generate parent approval hash key securely. ' .
+            'Set PARENT_APPROVAL_HASH_KEY or provide writable key storage.'
+        );
     }
 
     @file_put_contents($key_path, $new_key, LOCK_EX);
@@ -272,7 +275,13 @@ $source_page = $return_to;
 $photo_consent_label = $photo_consent === '' ? 'Not provided' : strtoupper($photo_consent);
 
 $data_dir = get_data_dir();
-$hash_secret = get_parent_approval_hash_secret($data_dir);
+try {
+    $hash_secret = get_parent_approval_hash_secret($data_dir);
+} catch (Throwable $e) {
+    log_parent_approval_event('hash_secret_error: ' . $e->getMessage());
+    http_response_code(500);
+    exit('Unable to process consent form securely at this time. Please contact support.');
+}
 $hash_chain_path = $data_dir . '/parent-approval-hash-chain.log';
 
 $previous_hash = get_previous_parent_approval_hash($hash_chain_path);
@@ -308,7 +317,7 @@ $submission_hash = hash_hmac('sha256', (string)$hash_input, $hash_secret);
 
 $chain_line = $submitted_at_utc . ',' . $submission_hash . ',' . $previous_hash . "\n";
 if (@file_put_contents($hash_chain_path, $chain_line, FILE_APPEND | LOCK_EX) === false) {
-    log_parent_approval_event('hash_chain_write_failed email=' . $parent_email);
+    log_parent_approval_event('hash_chain_write_failed');
 }
 
 $csv_path = $data_dir . '/parent-approval-submissions.csv';
@@ -380,7 +389,7 @@ if ($handle) {
     fputcsv($handle, $csv_row);
     fclose($handle);
 } else {
-    log_parent_approval_event('csv_write_failed email=' . $parent_email);
+    log_parent_approval_event('csv_write_failed');
 }
 
 $from = 'info@the-money-club.org';
@@ -417,7 +426,7 @@ $internal_lines[] = 'Submission Hash: ' . $submission_hash;
 $internal_message = implode("\n", $internal_lines);
 
 if (!smtp_send_mail($internal_to, $internal_subject, $internal_message, $from, $parent_email)) {
-    log_parent_approval_event('internal_email_failed email=' . $parent_email);
+    log_parent_approval_event('internal_email_failed');
 }
 
 $parent_subject = 'You’re all set — see you this summer';
@@ -457,7 +466,7 @@ $parent_lines[] = '— The Money Club.Org';
 $parent_message = implode("\n", $parent_lines);
 
 if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
-    log_parent_approval_event('parent_email_failed email=' . $parent_email);
+    log_parent_approval_event('parent_email_failed');
 }
 
 $separator = (strpos($return_to, '?') === false) ? '?' : '&';

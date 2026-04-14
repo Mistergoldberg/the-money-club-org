@@ -2,3 +2,15 @@
 .vscode/
 Archive.zip
 Marketing\ Images/
+
+# Local secrets/config
+*.env
+*.env.*
+**/smtp-config.local.php
+
+# Sensitive runtime artifacts
+**/data/*.log
+**/data/*.csv
+**/data/*.key
+**/data/*hash*
+**/data/stripe-processed-sessions.json

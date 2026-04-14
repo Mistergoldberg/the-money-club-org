@@ -106,7 +106,7 @@ if ($handle) {
     fputcsv($handle, $csv_row);
     fclose($handle);
 } else {
-    log_interest_event('csv_write_failed email=' . $parent_email . ' source=' . $source_page);
+    log_interest_event('csv_write_failed source=' . $source_page);
 }
 
 $internal_to = ['info@the-money-club.org', 'alex@the-money-club.org', 'sarah@the-money-club.org'];
@@ -121,7 +121,7 @@ $internal_lines[] = 'Submitted At: ' . $submitted_at;
 $internal_message = implode("\n", $internal_lines);
 
 if (!smtp_send_mail($internal_to, $internal_subject, $internal_message, $from, $parent_email)) {
-    log_interest_event('internal_email_failed email=' . $parent_email . ' source=' . $source_page);
+    log_interest_event('internal_email_failed source=' . $source_page);
 }
 
 $first_name = '';
@@ -167,7 +167,7 @@ if ($age_value !== '') {
 $parent_message = implode("\n", $parent_lines);
 
 if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
-    log_interest_event('parent_email_failed email=' . $parent_email . ' source=' . $source_page);
+    log_interest_event('parent_email_failed source=' . $source_page);
 }
 
 $separator = (strpos($return_to, '?') === false) ? '?' : '&';

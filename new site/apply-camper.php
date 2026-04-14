@@ -83,7 +83,7 @@ function redirect_with_error($return_to, $field, $message) {
     exit;
 }
 
-log_debug('apply-camper POST email=' . $parent_email . ' phone=' . $parent_phone . ' age=' . $student_age . ' program=' . $program_track . ' session=' . $preferred_session . ' payment=' . $payment_method . ' terms=' . ($terms_agree !== '' ? 'yes' : 'no') . ' return=' . $return_to);
+log_debug('apply-camper POST program=' . $program_track . ' session=' . $preferred_session . ' payment=' . $payment_method . ' terms=' . ($terms_agree !== '' ? 'yes' : 'no') . ' return=' . $return_to);
 
 if ($parent_name === '') {
     redirect_with_error($error_return, 'parent-name', 'Parent/guardian name is required.');
@@ -230,9 +230,9 @@ $lines[] = 'Notes: ' . ($notes !== '' ? $notes : '(none)');
 $message = implode("\n", $lines);
 
 if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
-    log_debug('smtp_send_mail failed for ' . $parent_email);
+    log_debug('smtp_send_mail failed for registration notification.');
 } else {
-    log_debug('smtp_send_mail success for ' . $parent_email . ' session=' . $preferred_session . ' payment=' . $payment_method);
+    log_debug('smtp_send_mail success session=' . $preferred_session . ' payment=' . $payment_method);
 }
 
 $parent_subject = 'You’re in — one final step';
@@ -278,9 +278,9 @@ $parent_lines[] = '— The Money Club.Org';
 $parent_message = implode("\n", $parent_lines);
 
 if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
-    log_debug('post-registration parent email failed for ' . $parent_email);
+    log_debug('post-registration parent email failed session=' . $preferred_session);
 } else {
-    log_debug('post-registration parent email sent to ' . $parent_email);
+    log_debug('post-registration parent email sent session=' . $preferred_session);
 }
 
 $csv_path = $data_dir . '/apply-camper-submissions.csv';

@@ -788,19 +788,7 @@
         }
       }
 
-      (function hydrateFromReserve(){
-        var prefillRaw = '';
-        try {
-          prefillRaw = sessionStorage.getItem('tmc_parent_approval_prefill') || '';
-        } catch (e) {}
-        if (!prefillRaw){ return; }
-
-        var prefill = null;
-        try {
-          prefill = JSON.parse(prefillRaw);
-        } catch (e) {
-          prefill = null;
-        }
+      function applyPrefill(prefill){
         if (!prefill || typeof prefill !== 'object'){ return; }
 
         function setIfEmpty(id, value){
@@ -827,11 +815,51 @@
         if (sessionSelect && prefillSession){
           sessionSelect.value = prefillSession;
         }
+      }
 
+      function tryHydrateFromSessionStorage(){
+        var prefillRaw = '';
+        try {
+          prefillRaw = sessionStorage.getItem('tmc_parent_approval_prefill') || '';
+        } catch (e) {}
+        if (!prefillRaw){ return false; }
+
+        var prefill = null;
+        try {
+          prefill = JSON.parse(prefillRaw);
+        } catch (e) {
+          prefill = null;
+        }
+        if (!prefill || typeof prefill !== 'object'){ return false; }
+
+        applyPrefill(prefill);
         try {
           sessionStorage.removeItem('tmc_parent_approval_prefill');
         } catch (e) {}
-      })();
+        return true;
+      }
+
+      function tryHydrateFromServer(){
+        if (!window.fetch){ return; }
+        fetch('parent-approval-prefill.php', {
+          method: 'GET',
+          credentials: 'same-origin',
+          cache: 'no-store'
+        })
+          .then(function(response){
+            if (!response.ok){ return null; }
+            return response.json();
+          })
+          .then(function(payload){
+            if (!payload || payload.ok !== true || !payload.prefill){ return; }
+            applyPrefill(payload.prefill);
+          })
+          .catch(function(){});
+      }
+
+      if (!tryHydrateFromSessionStorage()){
+        tryHydrateFromServer();
+      }
 
       if (programTrackInput){
         applySessionFilter(programTrackInput.value || '');

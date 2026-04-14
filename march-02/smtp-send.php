@@ -1,6 +1,52 @@
 <?php
+function smtp_load_config() {
+    try {
+        $config = require __DIR__ . '/smtp-config.php';
+    } catch (Throwable $e) {
+        error_log('[smtp] Configuration load failed: ' . $e->getMessage());
+        return null;
+    }
+
+    if (!is_array($config)) {
+        error_log('[smtp] Configuration must be an array.');
+        return null;
+    }
+
+    $required = ['host', 'port', 'username', 'password', 'use_tls'];
+    foreach ($required as $key) {
+        if (!array_key_exists($key, $config)) {
+            error_log('[smtp] Missing required configuration key: ' . $key);
+            return null;
+        }
+    }
+
+    if (!is_string($config['host']) || trim($config['host']) === '') {
+        error_log('[smtp] Invalid SMTP host configuration.');
+        return null;
+    }
+    if (!is_numeric($config['port']) || (int)$config['port'] < 1 || (int)$config['port'] > 65535) {
+        error_log('[smtp] Invalid SMTP port configuration.');
+        return null;
+    }
+    if (!is_string($config['username']) || trim($config['username']) === '') {
+        error_log('[smtp] Invalid SMTP username configuration.');
+        return null;
+    }
+    if (!is_string($config['password']) || $config['password'] === '') {
+        error_log('[smtp] Invalid SMTP password configuration.');
+        return null;
+    }
+
+    return $config;
+}
+
 function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name = 'The Money Club.Org', $is_html = false) {
-    $config = require __DIR__ . '/smtp-config.php';
+    $config = smtp_load_config();
+    if ($config === null) {
+        throw new RuntimeException(
+            'SMTP configuration is missing or invalid. Set SMTP_* env vars or smtp-config.local.php.'
+        );
+    }
 
     $host = $config['host'] ?? '';
     $port = $config['port'] ?? 25;

@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/smtp-send.php';
 session_start();
+header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 
 function get_data_dir() {
     $outside = dirname(__DIR__) . '/data';
@@ -33,17 +34,135 @@ function log_debug($message) {
     @file_put_contents($GLOBALS['log_path'], $line, FILE_APPEND);
 }
 
-$session_id = isset($_GET['session_id']) ? trim($_GET['session_id']) : '';
-if ($session_id === '') {
+function redirect_to_payment_cancelled() {
     header('Location: reserve-a-spot.html?payment=cancelled');
     exit;
+}
+
+function get_stripe_processed_store_path($data_dir) {
+    return $data_dir . '/stripe-processed-sessions.json';
+}
+
+function load_stripe_processed_store($fp) {
+    rewind($fp);
+    $raw = stream_get_contents($fp);
+    if (!is_string($raw) || trim($raw) === '') {
+        return [
+            'sessions' => [],
+            'payment_intents' => []
+        ];
+    }
+
+    $store = json_decode($raw, true);
+    if (!is_array($store)) {
+        throw new RuntimeException('Stripe processed-session store is not valid JSON.');
+    }
+
+    if (!isset($store['sessions']) || !is_array($store['sessions'])) {
+        $store['sessions'] = [];
+    }
+    if (!isset($store['payment_intents']) || !is_array($store['payment_intents'])) {
+        $store['payment_intents'] = [];
+    }
+
+    return $store;
+}
+
+function save_stripe_processed_store($fp, $store) {
+    $json = json_encode($store, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+    if (!is_string($json) || $json === '') {
+        throw new RuntimeException('Unable to encode Stripe processed-session store.');
+    }
+
+    rewind($fp);
+    if (!ftruncate($fp, 0)) {
+        throw new RuntimeException('Unable to truncate Stripe processed-session store.');
+    }
+    if (fwrite($fp, $json) === false) {
+        throw new RuntimeException('Unable to write Stripe processed-session store.');
+    }
+    fflush($fp);
+}
+
+function claim_stripe_success_session($store_path, $session_id, $payment_intent_id) {
+    $fp = @fopen($store_path, 'c+');
+    if (!$fp) {
+        throw new RuntimeException('Unable to open Stripe processed-session store.');
+    }
+
+    if (!flock($fp, LOCK_EX)) {
+        fclose($fp);
+        throw new RuntimeException('Unable to lock Stripe processed-session store.');
+    }
+
+    try {
+        $store = load_stripe_processed_store($fp);
+
+        if (isset($store['sessions'][$session_id]) && is_array($store['sessions'][$session_id])) {
+            return ['claimed' => false, 'reason' => 'session'];
+        }
+
+        if ($payment_intent_id !== '' && isset($store['payment_intents'][$payment_intent_id])) {
+            $existing_session = (string)$store['payment_intents'][$payment_intent_id];
+            if ($existing_session !== '' && isset($store['sessions'][$existing_session])) {
+                return ['claimed' => false, 'reason' => 'payment_intent'];
+            }
+            throw new RuntimeException('Stripe processed-session store is inconsistent.');
+        }
+
+        $store['sessions'][$session_id] = [
+            'session_id' => $session_id,
+            'payment_intent_id' => $payment_intent_id,
+            'status' => 'processing',
+            'claimed_at_utc' => gmdate('c'),
+            'processed_at_utc' => null
+        ];
+        if ($payment_intent_id !== '') {
+            $store['payment_intents'][$payment_intent_id] = $session_id;
+        }
+
+        save_stripe_processed_store($fp, $store);
+        return ['claimed' => true, 'reason' => 'new'];
+    } finally {
+        flock($fp, LOCK_UN);
+        fclose($fp);
+    }
+}
+
+function mark_stripe_success_session_processed($store_path, $session_id) {
+    $fp = @fopen($store_path, 'c+');
+    if (!$fp) {
+        throw new RuntimeException('Unable to open Stripe processed-session store.');
+    }
+    if (!flock($fp, LOCK_EX)) {
+        fclose($fp);
+        throw new RuntimeException('Unable to lock Stripe processed-session store.');
+    }
+
+    try {
+        $store = load_stripe_processed_store($fp);
+        if (!isset($store['sessions'][$session_id]) || !is_array($store['sessions'][$session_id])) {
+            throw new RuntimeException('Stripe session was not claimed before processing.');
+        }
+        $store['sessions'][$session_id]['status'] = 'processed';
+        $store['sessions'][$session_id]['processed_at_utc'] = gmdate('c');
+        save_stripe_processed_store($fp, $store);
+    } finally {
+        flock($fp, LOCK_UN);
+        fclose($fp);
+    }
+}
+
+$session_id = isset($_GET['session_id']) ? trim($_GET['session_id']) : '';
+$return_page = 'thank-you-credit-card.php';
+if ($session_id === '') {
+    redirect_to_payment_cancelled();
 }
 
 $stripe_secret = getenv('STRIPE_SECRET_KEY');
 if ($stripe_secret === false || $stripe_secret === '') {
     log_debug('Missing STRIPE_SECRET_KEY env var.');
-    header('Location: reserve-a-spot.html?payment=cancelled');
-    exit;
+    redirect_to_payment_cancelled();
 }
 
 $ch = curl_init('https://api.stripe.com/v1/checkout/sessions/' . urlencode($session_id));
@@ -54,34 +173,45 @@ $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 if ($response === false) {
     log_debug('Stripe retrieve error: ' . curl_error($ch));
     curl_close($ch);
-    header('Location: reserve-a-spot.html?payment=cancelled');
-    exit;
+    redirect_to_payment_cancelled();
 }
 curl_close($ch);
 
 $session = json_decode($response, true);
 if ($status < 200 || $status >= 300 || !is_array($session)) {
-    log_debug('Stripe retrieve bad status=' . $status . ' response=' . $response);
-    header('Location: reserve-a-spot.html?payment=cancelled');
-    exit;
+    log_debug('Stripe retrieve bad status=' . $status . ' session_id=' . $session_id);
+    redirect_to_payment_cancelled();
 }
 
 $payment_status = $session['payment_status'] ?? '';
 if ($payment_status !== 'paid') {
     log_debug('Stripe session not paid: ' . $session_id . ' status=' . $payment_status);
-    header('Location: reserve-a-spot.html?payment=cancelled');
-    exit;
+    redirect_to_payment_cancelled();
 }
 
 $metadata = isset($session['metadata']) && is_array($session['metadata']) ? $session['metadata'] : [];
-$transaction_id = isset($session['payment_intent']) && is_string($session['payment_intent']) && $session['payment_intent'] !== ''
-    ? $session['payment_intent']
-    : $session_id;
+$payment_intent_id = isset($session['payment_intent']) && is_string($session['payment_intent']) ? trim($session['payment_intent']) : '';
+$transaction_id = $payment_intent_id !== '' ? $payment_intent_id : $session_id;
 $purchase_currency = strtoupper((string)($session['currency'] ?? 'cad'));
 $purchase_value = isset($session['amount_total']) ? round(((int)$session['amount_total']) / 100, 2) : 0.0;
 $purchase_tax = null;
 if (isset($session['total_details']) && is_array($session['total_details']) && isset($session['total_details']['amount_tax'])) {
     $purchase_tax = round(((int)$session['total_details']['amount_tax']) / 100, 2);
+}
+
+$idempotency_store_path = get_stripe_processed_store_path($data_dir);
+try {
+    $claim_result = claim_stripe_success_session($idempotency_store_path, $session_id, $payment_intent_id);
+} catch (Throwable $e) {
+    log_debug('Stripe success idempotency claim failed session_id=' . $session_id . ' error=' . $e->getMessage());
+    http_response_code(500);
+    exit('Unable to verify payment confirmation safely. Please contact support.');
+}
+
+if (!$claim_result['claimed']) {
+    log_debug('Stripe success replay ignored session_id=' . $session_id . ' reason=' . $claim_result['reason']);
+    header('Location: ' . base_url() . '/' . $return_page);
+    exit;
 }
 
 $parent_name = trim((string)($metadata['parent_name'] ?? ''));
@@ -197,9 +327,9 @@ $lines[] = 'Stripe payment status: ' . $payment_status;
 $message = implode("\n", $lines);
 
 if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
-    log_debug('smtp_send_mail failed for ' . $parent_email . ' session=' . $session_id);
+    log_debug('smtp_send_mail failed session=' . $session_id);
 } else {
-    log_debug('smtp_send_mail success for ' . $parent_email . ' session=' . $session_id);
+    log_debug('smtp_send_mail success session=' . $session_id);
 }
 
 if ($parent_email !== '') {
@@ -246,9 +376,9 @@ if ($parent_email !== '') {
     $parent_message = implode("\n", $parent_lines);
 
     if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
-        log_debug('post-payment parent email failed for ' . $parent_email . ' session=' . $session_id);
+        log_debug('post-payment parent email failed session=' . $session_id);
     } else {
-        log_debug('post-payment parent email sent to ' . $parent_email . ' session=' . $session_id);
+        log_debug('post-payment parent email sent session=' . $session_id);
     }
 } else {
     log_debug('post-payment parent email skipped: missing valid parent email for session=' . $session_id);
@@ -298,10 +428,12 @@ if ($csv_fp) {
     fclose($csv_fp);
 }
 
-$return_page = isset($_GET['return']) ? basename(trim($_GET['return'])) : 'thank-you-credit-card.php';
-if ($return_page !== 'thank-you-credit-card.php') {
-    $return_page = 'thank-you-credit-card.php';
+try {
+    mark_stripe_success_session_processed($idempotency_store_path, $session_id);
+} catch (Throwable $e) {
+    log_debug('Stripe success mark processed failed session_id=' . $session_id . ' error=' . $e->getMessage());
 }
+
 $_SESSION['tmc_verified_purchase'] = [
     'transaction_id' => $transaction_id,
     'currency' => $purchase_currency,
