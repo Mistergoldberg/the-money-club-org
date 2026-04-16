@@ -1328,6 +1328,8 @@ nav{
               <p>Thank you for supporting the mission 🙏. Complete the form below 📝 and we’ll be in touch with next steps 🧭.</p>
             </div>
             <form class="form-grid" action="apply-contact.php" method="post" novalidate>
+              <input type="hidden" name="return-to" value="thank-u-contact.html" />
+              <input type="hidden" name="return-error" value="thank-u-contact.html" />
               <div class="field">
                 <label for="applicant-name">Name</label>
                 <input id="applicant-name" name="applicant-name" type="text" required />
@@ -1609,5 +1611,6 @@ nav{
     })();
   </script>
 
+  <script src="assets/form-protection.js?v=1" defer></script>
 </body>
 </html>

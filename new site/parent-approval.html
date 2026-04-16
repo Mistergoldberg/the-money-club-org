@@ -404,6 +404,20 @@
       color: #ffffff;
       font-family: var(--font-display);
     }
+    .submit-btn:disabled{
+      opacity: 0.75;
+      cursor: wait;
+    }
+    .submit-processing{
+      display: none;
+      margin: 10px 4px 0;
+      color: var(--muted);
+      font-size: var(--size-sm);
+      line-height: 1.35;
+    }
+    .submit-processing.is-visible{
+      display: block;
+    }
 
     footer.site-footer{
       margin-top: var(--space-6);
@@ -521,6 +535,7 @@
 
     <section class="intro wrap">
       <p>Please complete this form so we can confirm your child&rsquo;s participation and collect the information we need for safety, communication, and pickup.</p>
+      <p class="fine-print">After this form, you&rsquo;ll be redirected to the next-steps page with current program updates and launch details.</p>
       <p class="operator-line">Humanoid Community Development Platforms Corporation<br />Operating as The Money Club.Org</p>
       <p class="fine-print">The Money Club.Org is an independent program and is not affiliated with or endorsed by the University of Toronto.</p>
     </section>
@@ -530,7 +545,7 @@
         <div class="form-success" id="form-success" role="status">Thanks &mdash; we&rsquo;ve received your parent approval form.</div>
 
         <form class="approval-form form-grid" action="apply-parent-approval.php" method="post" novalidate>
-          <input type="hidden" name="return-to" value="parent-approval.html" />
+          <input type="hidden" name="return-to" value="thank-you.html" />
           <input type="hidden" name="return-error" value="parent-approval.html" />
           <input type="hidden" id="program-track" name="program-track" value="" />
           <p class="signature-note">All fields are required unless marked optional.</p>
@@ -690,6 +705,9 @@
 
           <div class="submit-wrap">
             <button type="submit" class="submit-btn" data-cta-label="Submit Parent Approval">Submit Parent Approval</button>
+            <p class="submit-processing" id="submit-processing" role="status" aria-live="polite">
+              Processing your form and sending emails. Please wait...
+            </p>
           </div>
         </form>
       </div>
@@ -765,6 +783,21 @@
       if (!form){ return; }
       var programTrackInput = document.getElementById('program-track');
       var sessionSelect = document.getElementById('session');
+      var submitButton = form.querySelector('.submit-btn');
+      var submitProcessing = document.getElementById('submit-processing');
+      var submitting = false;
+      var defaultSubmitLabel = submitButton ? submitButton.textContent : '';
+
+      function setSubmittingState(active){
+        if (!submitButton){ return; }
+        submitting = !!active;
+        submitButton.disabled = submitting;
+        submitButton.textContent = submitting ? 'Processing...' : defaultSubmitLabel;
+        form.setAttribute('aria-busy', submitting ? 'true' : 'false');
+        if (submitProcessing){
+          submitProcessing.classList.toggle('is-visible', submitting);
+        }
+      }
 
       function applySessionFilter(programTrack){
         if (!sessionSelect){ return; }
@@ -896,6 +929,12 @@
       }
 
       form.addEventListener('submit', function(e){
+        if (submitting){
+          e.preventDefault();
+          return;
+        }
+
+        setSubmittingState(false);
         updatePickupPairValidity();
         var fields = form.querySelectorAll('.field');
         fields.forEach(function(field){ updateFieldState(field); });
@@ -903,7 +942,10 @@
           e.preventDefault();
           var firstInvalid = form.querySelector(':invalid');
           if (firstInvalid){ firstInvalid.focus(); }
+          return;
         }
+
+        setSubmittingState(true);
       });
 
       form.addEventListener('input', function(e){
@@ -1061,5 +1103,6 @@
       });
     })();
   </script>
+  <script src="assets/form-protection.js?v=1" defer></script>
 </body>
 </html>

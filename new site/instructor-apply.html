@@ -1359,6 +1359,8 @@ nav{
           <div class="reservation-card">
             <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We'll follow up by email.</div>
             <form class="form-grid" action="apply-instructor.php" method="post" novalidate>
+              <input type="hidden" name="return-to" value="instructor-apply.html" />
+              <input type="hidden" name="return-error" value="instructor-apply.html" />
               <div class="field">
                 <label for="applicant-name">Name</label>
                 <input id="applicant-name" name="applicant-name" type="text" required />
@@ -1660,5 +1662,6 @@ nav{
     })();
   </script>
 
+  <script src="assets/form-protection.js?v=1" defer></script>
 </body>
 </html>

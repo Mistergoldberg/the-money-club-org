@@ -1687,10 +1687,11 @@ nav{
         </div>
       </div>
       <div class="content-content">
-        <div class="reservation-card thankyou-card">
+<div class="reservation-card thankyou-card">
+<div class="form-success" id="form-success" role="status">Parent approval received. Please send your e-Transfer now to secure the seat. We confirm payments manually.</div>
 <span id="copy-recipient" class="visually-hidden">info@the-money-club.org</span>
-<span id="copy-amount" class="visually-hidden">$1,695.00 CAD</span>
-<span id="copy-message" class="visually-hidden" data-child-name>Sally Smith</span>
+<span id="copy-amount" class="visually-hidden">$621.50 CAD (2-week) or $1,243.00 CAD (4-week)</span>
+<span id="copy-message" class="visually-hidden" data-child-name>[Student Full Name]</span>
 
 
 <h3>How to Pay (1 minute)</h3>
@@ -1700,13 +1701,15 @@ nav{
   <li>Enter the recipient email: <strong>info@the-money-club.org</strong>
     <button class="copy-inline" type="button" data-copy-target="copy-recipient">Tap to copy</button>
   </li>
-  <li>Enter the amount: <strong>$1,695.00 CAD</strong>
+  <li>Enter the amount:
+    <strong>$621.50 CAD (2-Week Builder Sprint)</strong> or
+    <strong>$1,243.00 CAD (4-Week Full Program)</strong>
     <button class="copy-inline" type="button" data-copy-target="copy-amount">Tap to copy</button>
   </li>
-  <li>Paste the message: <strong><span data-child-name>Sally Smith</span></strong>
+  <li>Paste the message: <strong><span data-child-name>[Student Full Name]</span></strong>
     <button class="copy-inline" type="button" data-copy-target="copy-message">Tap to copy</button>
   </li>
-  <li>Send the transfer</li>
+  <li>Send the transfer and keep your confirmation email from your bank</li>
 </ol>
 
 <h3>Confirmation</h3>
@@ -1833,8 +1836,21 @@ Phone: <strong>437-239-8602</strong></p>
 
       var params = new URLSearchParams(window.location.search);
       var success = document.getElementById('form-success');
-      if (success && params.get('status') === 'sent') {
+      var status = params.get('status');
+      if (success && (status === 'sent' || status === 'payment-pending')) {
         success.classList.add('is-visible');
+      }
+
+      if (status === 'sent' || status === 'payment-pending' || status === 'error') {
+        params.delete('status');
+        params.delete('field');
+        params.delete('message');
+        params.delete('source');
+        var cleanQuery = params.toString();
+        var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
+        try {
+          window.history.replaceState({}, document.title, cleanUrl);
+        } catch (e) {}
       }
     })();
   </script>

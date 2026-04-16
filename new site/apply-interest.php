@@ -1,33 +1,11 @@
 <?php
 require_once __DIR__ . '/smtp-send.php';
-
-function get_data_dir() {
-    $outside = dirname(__DIR__) . '/data';
-    if (is_dir($outside) && is_writable($outside)) {
-        return $outside;
-    }
-    $inside = __DIR__ . '/data';
-    if (is_dir($inside) && is_writable($inside)) {
-        return $inside;
-    }
-    return $inside;
-}
+require_once __DIR__ . '/form-security.php';
 
 function log_interest_event($message) {
-    $log_path = get_data_dir() . '/apply-interest.log';
+    $log_path = tmc_get_data_dir() . '/apply-interest.log';
     $line = '[' . gmdate('c') . '] ' . $message . "\n";
     @file_put_contents($log_path, $line, FILE_APPEND);
-}
-
-function redirect_with_error($return_to, $field, $message) {
-    $params = [
-        'status' => 'error',
-        'field' => $field,
-        'message' => $message
-    ];
-    $separator = (strpos($return_to, '?') === false) ? '?' : '&';
-    header('Location: ' . $return_to . $separator . http_build_query($params));
-    exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -35,36 +13,58 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$parent_name = isset($_POST['parent-name']) ? trim($_POST['parent-name']) : '';
-$parent_email = isset($_POST['parent-email']) ? trim($_POST['parent-email']) : '';
-$student_age = isset($_POST['student-age']) ? trim($_POST['student-age']) : '';
-$interested_session = isset($_POST['interested-session']) ? trim($_POST['interested-session']) : '';
-
-$return_to = isset($_POST['return-to']) ? trim($_POST['return-to']) : 'index.html';
-$error_return = isset($_POST['return-error']) ? trim($_POST['return-error']) : 'index.html';
 $allowed_returns = [
     'index.html',
+    'index-03-26.html',
     'how-it-works.html',
     'schedule-pricing.html',
     'pricing.html',
     'faq.html',
     'open-book-hook.html',
-    'reserve-a-spot.html'
+    'reserve-a-spot.html',
+    'curriculum-details.html',
+    'executive-director-letter.html',
+    'who-runs-it.html'
 ];
 
-if (!in_array($return_to, $allowed_returns, true)) {
-    $return_to = 'index.html';
+$return_to = tmc_resolve_return_target($_POST['return-to'] ?? 'index.html', $allowed_returns, 'index.html');
+$error_return = tmc_resolve_return_target($_POST['return-error'] ?? $return_to, $allowed_returns, 'index.html');
+
+try {
+    tmc_issue_csrf_cookie();
+} catch (RuntimeException $e) {
+    tmc_log_form_security_event('apply-interest', 'csrf_cookie_failed');
+    tmc_redirect_with_error($error_return, 'form', 'Unable to validate this form securely. Please refresh and try again.');
 }
-if (!in_array($error_return, $allowed_returns, true)) {
-    $error_return = 'index.html';
+
+if (tmc_honeypot_triggered()) {
+    tmc_log_form_security_event('apply-interest', 'honeypot_tripped', ['return_to' => $return_to]);
+    tmc_redirect_with_status($return_to, 'sent');
 }
+
+$rate_limit = tmc_rate_limit_check('apply-interest', 8, 600);
+if (!$rate_limit['allowed']) {
+    tmc_log_form_security_event('apply-interest', 'rate_limited', ['retry_after' => (string)$rate_limit['retry_after']]);
+    tmc_redirect_with_error($error_return, 'form', 'Too many submissions. Please wait a few minutes and try again.');
+}
+
+$csrf_reason = '';
+if (!tmc_verify_csrf_token(true, $csrf_reason)) {
+    tmc_log_form_security_event('apply-interest', 'csrf_failed', ['reason' => $csrf_reason]);
+    tmc_redirect_with_error($error_return, 'form', 'Your form session expired. Please refresh and try again.');
+}
+
+$parent_name = tmc_trim_post('parent-name', 160);
+$parent_email = tmc_trim_post('parent-email', 254);
+$student_age = tmc_trim_post('student-age', 3);
+$interested_session = tmc_trim_post('interested-session', 20);
 
 if ($parent_name === '') {
-    redirect_with_error($error_return, 'parent-name', 'Parent/guardian name is required.');
+    tmc_redirect_with_error($error_return, 'parent-name', 'Parent/guardian name is required.');
 }
 
-if ($parent_email === '' || !filter_var($parent_email, FILTER_VALIDATE_EMAIL)) {
-    redirect_with_error($error_return, 'parent-email', 'Please provide a valid email.');
+if (!tmc_is_valid_email($parent_email)) {
+    tmc_redirect_with_error($error_return, 'parent-email', 'Please provide a valid email.');
 }
 
 $age_value = '';
@@ -73,7 +73,7 @@ if ($student_age !== '') {
         'options' => ['min_range' => 10, 'max_range' => 16]
     ]);
     if ($validated_age === false) {
-        redirect_with_error($error_return, 'student-age', 'Child\'s age must be between 10 and 16.');
+        tmc_redirect_with_error($error_return, 'student-age', 'Child\'s age must be between 10 and 16.');
     }
     $age_value = (string)$validated_age;
 }
@@ -86,24 +86,29 @@ $session_options = [
 ];
 
 if (!array_key_exists($interested_session, $session_options)) {
-    redirect_with_error($error_return, 'interested-session', 'Please choose a valid session option.');
+    tmc_redirect_with_error($error_return, 'interested-session', 'Please choose a valid session option.');
 }
 
 $submitted_at = gmdate('c');
 $source_page = $return_to;
 $from = 'info@the-money-club.org';
 
-$data_dir = get_data_dir();
+$data_dir = tmc_get_data_dir();
 $csv_path = $data_dir . '/apply-interest-submissions.csv';
 $csv_headers = ['submitted_at', 'parent_name', 'parent_email', 'student_age', 'interested_session', 'source'];
 $csv_row = [$submitted_at, $parent_name, $parent_email, $age_value, $session_options[$interested_session], $source_page];
 
-$handle = @fopen($csv_path, 'a');
+$handle = @fopen($csv_path, 'a+');
 if ($handle) {
-    if (filesize($csv_path) === 0) {
-        fputcsv($handle, $csv_headers);
+    if (flock($handle, LOCK_EX)) {
+        $is_empty = (filesize($csv_path) === 0);
+        if ($is_empty) {
+            fputcsv($handle, $csv_headers);
+        }
+        fputcsv($handle, $csv_row);
+        fflush($handle);
+        flock($handle, LOCK_UN);
     }
-    fputcsv($handle, $csv_row);
     fclose($handle);
 } else {
     log_interest_event('csv_write_failed source=' . $source_page);
@@ -121,7 +126,8 @@ $internal_lines[] = 'Submitted At: ' . $submitted_at;
 $internal_message = implode("\n", $internal_lines);
 
 if (!smtp_send_mail($internal_to, $internal_subject, $internal_message, $from, $parent_email)) {
-    log_interest_event('internal_email_failed source=' . $source_page);
+    $smtp_reason = function_exists('smtp_get_last_error') ? smtp_get_last_error() : 'unknown';
+    log_interest_event('internal_email_failed reason=' . $smtp_reason . ' source=' . $source_page);
 }
 
 $first_name = '';
@@ -167,10 +173,9 @@ if ($age_value !== '') {
 $parent_message = implode("\n", $parent_lines);
 
 if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
-    log_interest_event('parent_email_failed source=' . $source_page);
+    $smtp_reason = function_exists('smtp_get_last_error') ? smtp_get_last_error() : 'unknown';
+    log_interest_event('parent_email_failed reason=' . $smtp_reason . ' source=' . $source_page);
 }
 
-$separator = (strpos($return_to, '?') === false) ? '?' : '&';
-header('Location: ' . $return_to . $separator . 'status=sent');
-exit;
+tmc_redirect_with_status($return_to, 'sent');
 ?>

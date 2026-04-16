@@ -1,17 +1,6 @@
 <?php
 require_once __DIR__ . '/smtp-send.php';
-
-function get_data_dir() {
-    $outside = dirname(__DIR__) . '/data';
-    if (is_dir($outside) && is_writable($outside)) {
-        return $outside;
-    }
-    $inside = __DIR__ . '/data';
-    if (is_dir($inside) && is_writable($inside)) {
-        return $inside;
-    }
-    return $inside;
-}
+require_once __DIR__ . '/form-security.php';
 
 function base_url() {
     $scheme = 'https';
@@ -30,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$data_dir = get_data_dir();
+$data_dir = tmc_get_data_dir();
 $log_path = $data_dir . '/apply-camper.log';
 function log_debug($message) {
     $timestamp = date('Y-m-d H:i:s');
@@ -38,19 +27,28 @@ function log_debug($message) {
     @file_put_contents($GLOBALS['log_path'], $line, FILE_APPEND);
 }
 
-$parent_name = isset($_POST['parent-name']) ? trim($_POST['parent-name']) : '';
-$parent_email = isset($_POST['parent-email']) ? trim($_POST['parent-email']) : '';
-$parent_phone = isset($_POST['parent-phone']) ? trim($_POST['parent-phone']) : '';
-$student_name = isset($_POST['student-name']) ? trim($_POST['student-name']) : '';
-$student_age = isset($_POST['student-age']) ? trim($_POST['student-age']) : '';
-$program_track = isset($_POST['program-track']) ? trim($_POST['program-track']) : '';
-$preferred_session = isset($_POST['preferred-session']) ? trim($_POST['preferred-session']) : '';
-$preferred_month = isset($_POST['preferred-month']) ? trim($_POST['preferred-month']) : '';
-$payment_method = isset($_POST['payment-method']) ? trim($_POST['payment-method']) : '';
-$terms_agree = isset($_POST['terms-agree']) ? trim($_POST['terms-agree']) : '';
-$notes = isset($_POST['student-notes']) ? trim($_POST['student-notes']) : '';
+$parent_name = tmc_trim_post('parent-name', 160);
+$parent_email = tmc_trim_post('parent-email', 254);
+$parent_phone = tmc_trim_post('parent-phone', 40);
+$student_name = tmc_trim_post('student-name', 160);
+$student_age = tmc_trim_post('student-age', 3);
+$program_track = tmc_trim_post('program-track', 80);
+$preferred_session = tmc_trim_post('preferred-session', 80);
+$preferred_month = tmc_trim_post('preferred-month', 20);
+$payment_method = tmc_trim_post('payment-method', 40);
+$terms_agree = tmc_trim_post('terms-agree', 10);
+$notes = tmc_trim_post('student-notes', 4000);
 
-$return_to = isset($_POST['return-to']) ? trim($_POST['return-to']) : 'reserve-a-spot.html';
+$return_to = tmc_resolve_return_target($_POST['return-to'] ?? 'reserve-a-spot.html', [
+    'reserve-a-spot.html',
+    'schedule-pricing.html',
+    'how-it-works.html',
+    'pricing.html',
+    'open-book-hook.html',
+    'index.html',
+    'thank-you.html',
+    'etransfer.html'
+], 'reserve-a-spot.html');
 $allowed_returns = [
     'reserve-a-spot.html',
     'schedule-pricing.html',
@@ -62,14 +60,7 @@ $allowed_returns = [
     'thank-you.html',
     'etransfer.html'
 ];
-if (!in_array($return_to, $allowed_returns, true)) {
-    $return_to = 'reserve-a-spot.html';
-}
-
-$error_return = isset($_POST['return-error']) ? trim($_POST['return-error']) : $return_to;
-if (!in_array($error_return, $allowed_returns, true)) {
-    $error_return = 'reserve-a-spot.html';
-}
+$error_return = tmc_resolve_return_target($_POST['return-error'] ?? $return_to, $allowed_returns, 'reserve-a-spot.html');
 
 function redirect_with_error($return_to, $field, $message) {
     log_debug('redirect_with_error field=' . $field . ' message=' . $message . ' return=' . $return_to);
@@ -85,11 +76,35 @@ function redirect_with_error($return_to, $field, $message) {
 
 log_debug('apply-camper POST program=' . $program_track . ' session=' . $preferred_session . ' payment=' . $payment_method . ' terms=' . ($terms_agree !== '' ? 'yes' : 'no') . ' return=' . $return_to);
 
+try {
+    tmc_issue_csrf_cookie();
+} catch (RuntimeException $e) {
+    tmc_log_form_security_event('apply-camper', 'csrf_cookie_failed');
+    redirect_with_error($error_return, 'form', 'Unable to validate this form securely. Please refresh and try again.');
+}
+
+if (tmc_honeypot_triggered()) {
+    tmc_log_form_security_event('apply-camper', 'honeypot_tripped', ['return_to' => $return_to]);
+    tmc_redirect_with_status($return_to, 'sent');
+}
+
+$rate_limit = tmc_rate_limit_check('apply-camper', 6, 900);
+if (!$rate_limit['allowed']) {
+    tmc_log_form_security_event('apply-camper', 'rate_limited', ['retry_after' => (string)$rate_limit['retry_after']]);
+    redirect_with_error($error_return, 'form', 'Too many submissions. Please wait before trying again.');
+}
+
+$csrf_reason = '';
+if (!tmc_verify_csrf_token(true, $csrf_reason)) {
+    tmc_log_form_security_event('apply-camper', 'csrf_failed', ['reason' => $csrf_reason]);
+    redirect_with_error($error_return, 'form', 'Your form session expired. Please refresh and try again.');
+}
+
 if ($parent_name === '') {
     redirect_with_error($error_return, 'parent-name', 'Parent/guardian name is required.');
 }
 
-if ($parent_email === '' || !filter_var($parent_email, FILTER_VALIDATE_EMAIL)) {
+if (!tmc_is_valid_email($parent_email)) {
     redirect_with_error($error_return, 'parent-email', 'Please provide a valid email.');
 }
 
@@ -97,7 +112,7 @@ if ($parent_phone === '') {
     redirect_with_error($error_return, 'parent-phone', 'Phone number is required.');
 }
 
-$phone_digits = preg_replace('/\D+/', '', $parent_phone);
+$phone_digits = tmc_phone_digits($parent_phone);
 if ($phone_digits === '' || strlen($phone_digits) < 10 || strlen($phone_digits) > 15) {
     redirect_with_error($error_return, 'parent-phone', 'Please provide a valid phone number.');
 }
@@ -152,8 +167,8 @@ if ($terms_agree === '') {
     redirect_with_error($error_return, 'terms-agree', 'Please agree to the Terms & Payment Policy.');
 }
 
-if ($payment_method === '' || !in_array($payment_method, ['Credit Card', 'e-Transfer'], true)) {
-    redirect_with_error($error_return, 'payment-method', 'Please choose a payment method.');
+if ($payment_method === '' || $payment_method !== 'e-Transfer') {
+    redirect_with_error($error_return, 'payment-method', 'Payment is currently available by e-Transfer only.');
 }
 
 $availability_path = $data_dir . '/availability.json';
@@ -224,7 +239,7 @@ $lines[] = 'Session: ' . $session_label;
 $lines[] = 'Program tuition: $' . number_format($program_tuition, 2) . ' CAD (+HST)';
 $lines[] = 'Session spots remaining: ' . (string)$reserve_result['remaining'];
 $lines[] = 'Terms agreed: ' . ($terms_agree !== '' ? 'Yes' : 'No');
-$lines[] = 'Payment method: ' . ($payment_method !== '' ? $payment_method : '(not specified)');
+$lines[] = 'Payment method: e-Transfer (pending manual confirmation)';
 $lines[] = 'Notes: ' . ($notes !== '' ? $notes : '(none)');
 
 $message = implode("\n", $lines);
@@ -235,25 +250,29 @@ if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
     log_debug('smtp_send_mail success session=' . $preferred_session . ' payment=' . $payment_method);
 }
 
-$parent_subject = 'You’re in — one final step';
+$parent_subject = 'Registration received — complete e-Transfer payment';
 $greeting = $parent_name !== '' ? 'Hi ' . $parent_name . ',' : 'Hi there,';
 $parent_approval_link = base_url() . '/parent-approval.html';
 $parent_lines = [];
 $parent_lines[] = $greeting;
 $parent_lines[] = '';
-$parent_lines[] = 'Your child’s spot in The Money Club.Org is confirmed.';
+$parent_lines[] = 'We’ve received your registration details.';
 $parent_lines[] = '';
-$parent_lines[] = 'Thanks for registering.';
+$parent_lines[] = 'To secure your child’s seat, please complete the parent approval form and send your Interac e-Transfer payment.';
 $parent_lines[] = '';
 $parent_lines[] = '---';
 $parent_lines[] = '';
 $parent_lines[] = '🧭 One final step';
 $parent_lines[] = '';
-$parent_lines[] = 'Please complete the parent approval form:';
+$parent_lines[] = 'Please complete the parent approval form first:';
 $parent_lines[] = '';
 $parent_lines[] = '👉 ' . $parent_approval_link;
 $parent_lines[] = '';
-$parent_lines[] = 'This takes 2–3 minutes and helps us confirm safety and contact details.';
+$parent_lines[] = 'Then send payment using our e-Transfer instructions:';
+$parent_lines[] = '';
+$parent_lines[] = '👉 ' . base_url() . '/etransfer.html';
+$parent_lines[] = '';
+$parent_lines[] = 'Seats are confirmed only after e-Transfer is received and manually matched to your registration.';
 $parent_lines[] = '';
 $parent_lines[] = '---';
 $parent_lines[] = '';
@@ -270,7 +289,7 @@ $parent_lines[] = 'Program fee: $' . number_format($program_tuition, 2) . ' CAD 
 $parent_lines[] = '';
 $parent_lines[] = '---';
 $parent_lines[] = '';
-$parent_lines[] = 'Once the form is submitted, you’re fully set.';
+$parent_lines[] = 'Once form + payment are both received, we’ll send your confirmation email.';
 $parent_lines[] = '';
 $parent_lines[] = 'If you have any questions, just reply to this email.';
 $parent_lines[] = '';
@@ -327,12 +346,7 @@ if ($csv_fp) {
     fclose($csv_fp);
 }
 
-if ($return_to === 'thank-you.html') {
-    log_debug('redirect success to thank-you.html');
-    header('Location: ' . $return_to);
-} else {
-    log_debug('redirect success to return_to=' . $return_to);
-    header('Location: ' . $return_to . '?status=sent');
-}
+log_debug('redirect success to etransfer.html');
+header('Location: etransfer.html?status=sent');
 exit;
 ?>

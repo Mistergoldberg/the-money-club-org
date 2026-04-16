@@ -2197,6 +2197,8 @@ nav{
   <div class="loading-text">Processing…</div>
 </div>
             <form class="form-grid" action="start-parent-approval.php" method="post" novalidate>
+              <input type="hidden" name="return-to" value="parent-approval.html" />
+              <input type="hidden" name="return-error" value="reserve-a-spot.html" />
               <div class="step-block">
                 <h2 class="form-step-title">Step 1 &mdash; Choose Your Program</h2>
               </div>
@@ -2299,7 +2301,7 @@ nav{
               <div class="confirmation-card">
                 <h2>Next Steps</h2>
                 <div class="tight-stack">
-                  <p>Thank you — your spot is confirmed once payment is received. Next, you’ll receive an email with your permission forms and your receipt/confirmation.</p>
+                  <p>Thank you — your registration is pending until e-Transfer payment is received and manually confirmed. Next, complete the parent approval form and follow the e-Transfer instructions.</p>
                 </div>
               </div>
               <div class="confirmation-card">
@@ -2711,10 +2713,10 @@ nav{
         pushFormEvent({
           event: 'registration_form_submitted',
           form_id: 'registration',
-          payment_method: 'registration',
+          payment_method: 'etransfer_pending',
           session_name: sessionName || 'unspecified',
           program_track: programTrack || 'unspecified',
-          funnel_step: 'registration_payment'
+          funnel_step: 'registration_pending_payment'
         });
       }
 
@@ -2789,7 +2791,7 @@ nav{
           persistSessionName(sessionName);
           persistProgramTrack(programTrack);
           try {
-            sessionStorage.setItem('tmc_registration_payment_method', 'registration');
+            sessionStorage.setItem('tmc_registration_payment_method', 'etransfer_pending');
             sessionStorage.setItem('tmc_parent_approval_prefill', JSON.stringify({
               parent_name: document.getElementById('parent-name') ? document.getElementById('parent-name').value.trim() : '',
               parent_email: document.getElementById('parent-email') ? document.getElementById('parent-email').value.trim() : '',
@@ -2803,8 +2805,8 @@ nav{
 
           pushFormEvent({
             event: 'payment_method_select',
-            payment_method: 'registration',
-            funnel_step: 'payment_selected'
+            payment_method: 'etransfer_pending',
+            funnel_step: 'payment_pending'
           });
           pushRegistrationSubmitted(sessionName, programTrack);
         });
@@ -2892,7 +2894,7 @@ nav{
       if (!interestForms.length){ return; }
 
       var params = new URLSearchParams(window.location.search);
-      if (params.get('status') === 'sent' || params.get('status') === 'error'){
+      if (params.get('status') === 'sent'){
         params.delete('status');
         params.delete('field');
         params.delete('message');
@@ -3171,5 +3173,6 @@ nav{
     })();
   </script>
 
+  <script src="assets/form-protection.js?v=1" defer></script>
 </body>
 </html>

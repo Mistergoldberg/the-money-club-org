@@ -1,22 +1,20 @@
 <?php
 require_once __DIR__ . '/smtp-send.php';
+require_once __DIR__ . '/form-security.php';
 
-function get_data_dir() {
-    $outside = dirname(__DIR__) . '/data';
-    if (is_dir($outside) && is_writable($outside)) {
-        return $outside;
+function base_url() {
+    $scheme = 'https';
+    if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
+        $scheme = $_SERVER['HTTP_X_FORWARDED_PROTO'];
+    } elseif (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') {
+        $scheme = 'https';
     }
-
-    $inside = __DIR__ . '/data';
-    if (is_dir($inside) && is_writable($inside)) {
-        return $inside;
-    }
-
-    return $inside;
+    $host = $_SERVER['HTTP_HOST'] ?? 'the-money-club.org';
+    return $scheme . '://' . $host;
 }
 
 function log_parent_approval_event($message) {
-    $log_path = get_data_dir() . '/apply-parent-approval.log';
+    $log_path = tmc_get_data_dir() . '/apply-parent-approval.log';
     $line = '[' . gmdate('c') . '] ' . $message . "\n";
     @file_put_contents($log_path, $line, FILE_APPEND);
 }
@@ -85,37 +83,54 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$student_name = isset($_POST['student-name']) ? trim($_POST['student-name']) : '';
-$student_age = isset($_POST['student-age']) ? trim($_POST['student-age']) : '';
-$parent_name = isset($_POST['parent-name']) ? trim($_POST['parent-name']) : '';
-$parent_email = isset($_POST['parent-email']) ? trim($_POST['parent-email']) : '';
-$parent_phone = isset($_POST['parent-phone']) ? trim($_POST['parent-phone']) : '';
-$program_track = isset($_POST['program-track']) ? trim($_POST['program-track']) : '';
-$session = isset($_POST['session']) ? trim($_POST['session']) : '';
-$emergency_contact_name = isset($_POST['emergency-contact-name']) ? trim($_POST['emergency-contact-name']) : '';
-$emergency_contact_phone = isset($_POST['emergency-contact-phone']) ? trim($_POST['emergency-contact-phone']) : '';
-$authorized_pickup_name_1 = isset($_POST['authorized-pickup-name-1']) ? trim($_POST['authorized-pickup-name-1']) : '';
-$authorized_pickup_phone_1 = isset($_POST['authorized-pickup-phone-1']) ? trim($_POST['authorized-pickup-phone-1']) : '';
-$authorized_pickup_name_2 = isset($_POST['authorized-pickup-name-2']) ? trim($_POST['authorized-pickup-name-2']) : '';
-$authorized_pickup_phone_2 = isset($_POST['authorized-pickup-phone-2']) ? trim($_POST['authorized-pickup-phone-2']) : '';
-$medical_allergies = isset($_POST['medical-allergies']) ? trim($_POST['medical-allergies']) : '';
-$medical_medications = isset($_POST['medical-medications']) ? trim($_POST['medical-medications']) : '';
-$medical_accommodations = isset($_POST['medical-accommodations']) ? trim($_POST['medical-accommodations']) : '';
-$medical_details = isset($_POST['medical-details']) ? trim($_POST['medical-details']) : '';
-$legacy_medical_notes = isset($_POST['medical-notes']) ? trim($_POST['medical-notes']) : '';
-$photo_consent = isset($_POST['photo-consent']) ? trim($_POST['photo-consent']) : '';
-$parent_signature_name = isset($_POST['parent-signature-name']) ? trim($_POST['parent-signature-name']) : '';
-$consent_agree = isset($_POST['consent-agree']) ? trim($_POST['consent-agree']) : '';
+$student_name = tmc_trim_post('student-name', 160);
+$student_age = tmc_trim_post('student-age', 3);
+$parent_name = tmc_trim_post('parent-name', 160);
+$parent_email = tmc_trim_post('parent-email', 254);
+$parent_phone = tmc_trim_post('parent-phone', 40);
+$program_track = tmc_trim_post('program-track', 80);
+$session = tmc_trim_post('session', 80);
+$emergency_contact_name = tmc_trim_post('emergency-contact-name', 160);
+$emergency_contact_phone = tmc_trim_post('emergency-contact-phone', 40);
+$authorized_pickup_name_1 = tmc_trim_post('authorized-pickup-name-1', 160);
+$authorized_pickup_phone_1 = tmc_trim_post('authorized-pickup-phone-1', 40);
+$authorized_pickup_name_2 = tmc_trim_post('authorized-pickup-name-2', 160);
+$authorized_pickup_phone_2 = tmc_trim_post('authorized-pickup-phone-2', 40);
+$medical_allergies = tmc_trim_post('medical-allergies', 20);
+$medical_medications = tmc_trim_post('medical-medications', 20);
+$medical_accommodations = tmc_trim_post('medical-accommodations', 20);
+$medical_details = tmc_trim_post('medical-details', 4000);
+$legacy_medical_notes = tmc_trim_post('medical-notes', 4000);
+$photo_consent = tmc_trim_post('photo-consent', 20);
+$parent_signature_name = tmc_trim_post('parent-signature-name', 160);
+$consent_agree = tmc_trim_post('consent-agree', 10);
 
-$return_to = isset($_POST['return-to']) ? trim($_POST['return-to']) : 'parent-approval.html';
-$error_return = isset($_POST['return-error']) ? trim($_POST['return-error']) : 'parent-approval.html';
-$allowed_returns = ['parent-approval.html'];
+$allowed_returns = ['parent-approval.html', 'etransfer.html', 'thank-you.html'];
+$return_to = tmc_resolve_return_target($_POST['return-to'] ?? 'parent-approval.html', $allowed_returns, 'parent-approval.html');
+$error_return = tmc_resolve_return_target($_POST['return-error'] ?? 'parent-approval.html', $allowed_returns, 'parent-approval.html');
 
-if (!in_array($return_to, $allowed_returns, true)) {
-    $return_to = 'parent-approval.html';
+try {
+    tmc_issue_csrf_cookie();
+} catch (RuntimeException $e) {
+    tmc_log_form_security_event('apply-parent-approval', 'csrf_cookie_failed');
+    redirect_with_error($error_return, 'form', 'Unable to validate this form securely. Please refresh and try again.');
 }
-if (!in_array($error_return, $allowed_returns, true)) {
-    $error_return = 'parent-approval.html';
+
+if (tmc_honeypot_triggered()) {
+    tmc_log_form_security_event('apply-parent-approval', 'honeypot_tripped', ['return_to' => $return_to]);
+    tmc_redirect_with_status($return_to, 'sent');
+}
+
+$rate_limit = tmc_rate_limit_check('apply-parent-approval', 6, 1800);
+if (!$rate_limit['allowed']) {
+    tmc_log_form_security_event('apply-parent-approval', 'rate_limited', ['retry_after' => (string)$rate_limit['retry_after']]);
+    redirect_with_error($error_return, 'form', 'Too many submissions. Please wait before trying again.');
+}
+
+$csrf_reason = '';
+if (!tmc_verify_csrf_token(true, $csrf_reason)) {
+    tmc_log_form_security_event('apply-parent-approval', 'csrf_failed', ['reason' => $csrf_reason]);
+    redirect_with_error($error_return, 'form', 'Your form session expired. Please refresh and try again.');
 }
 
 if ($student_name === '') {
@@ -133,11 +148,11 @@ if ($parent_name === '') {
     redirect_with_error($error_return, 'parent-name', 'Parent/guardian name is required.');
 }
 
-if ($parent_email === '' || !filter_var($parent_email, FILTER_VALIDATE_EMAIL)) {
+if (!tmc_is_valid_email($parent_email)) {
     redirect_with_error($error_return, 'parent-email', 'Please provide a valid parent email.');
 }
 
-$parent_phone_digits = preg_replace('/\D+/', '', $parent_phone);
+$parent_phone_digits = tmc_phone_digits($parent_phone);
 if ($parent_phone === '' || $parent_phone_digits === '' || strlen($parent_phone_digits) < 10 || strlen($parent_phone_digits) > 15) {
     redirect_with_error($error_return, 'parent-phone', 'Please provide a valid parent phone number.');
 }
@@ -274,13 +289,12 @@ if (strlen($user_agent) > 500) {
 $source_page = $return_to;
 $photo_consent_label = $photo_consent === '' ? 'Not provided' : strtoupper($photo_consent);
 
-$data_dir = get_data_dir();
+$data_dir = tmc_get_data_dir();
 try {
     $hash_secret = get_parent_approval_hash_secret($data_dir);
 } catch (Throwable $e) {
     log_parent_approval_event('hash_secret_error: ' . $e->getMessage());
-    http_response_code(500);
-    exit('Unable to process consent form securely at this time. Please contact support.');
+    redirect_with_error($error_return, 'form', 'Unable to process this form securely at this time. Please try again.');
 }
 $hash_chain_path = $data_dir . '/parent-approval-hash-chain.log';
 
@@ -421,55 +435,102 @@ $internal_lines[] = 'Submitted At (Server Local): ' . $submitted_at_local;
 $internal_lines[] = 'IP Address: ' . ($ip_address !== '' ? $ip_address : '(unavailable)');
 $internal_lines[] = 'User Agent: ' . ($user_agent !== '' ? $user_agent : '(unavailable)');
 $internal_lines[] = 'Source: ' . $source_page;
+$internal_lines[] = 'Payment Status: Pending e-Transfer (manual confirmation required)';
 $internal_lines[] = 'Previous Hash: ' . $previous_hash;
 $internal_lines[] = 'Submission Hash: ' . $submission_hash;
 $internal_message = implode("\n", $internal_lines);
 
-if (!smtp_send_mail($internal_to, $internal_subject, $internal_message, $from, $parent_email)) {
-    log_parent_approval_event('internal_email_failed');
+try {
+    $internal_email_sent = smtp_send_mail($internal_to, $internal_subject, $internal_message, $from, $parent_email);
+} catch (Throwable $e) {
+    error_log('[apply-parent-approval] Internal email exception: ' . $e->getMessage());
+    $internal_email_sent = false;
 }
 
-$parent_subject = 'You’re all set — see you this summer';
-$greeting = $parent_name !== '' ? 'Hi ' . $parent_name . ',' : 'Hi there,';
+if ($internal_email_sent) {
+    log_parent_approval_event('internal_email_sent');
+} else {
+    $smtp_reason = function_exists('smtp_get_last_error') ? smtp_get_last_error() : 'unknown';
+    if ($smtp_reason === '') {
+        $smtp_reason = 'unknown';
+    }
+    log_parent_approval_event('internal_email_failed reason=' . $smtp_reason);
+}
+
+$parent_subject = 'We\'ve received your parent approval form';
 $parent_lines = [];
-$parent_lines[] = $greeting;
+$parent_lines[] = 'Hi,';
 $parent_lines[] = '';
-$parent_lines[] = 'We’ve received your parent approval form.';
+$parent_lines[] = 'Thank you - we\'ve received your parent approval form for The Money Club.Org.';
 $parent_lines[] = '';
-$parent_lines[] = 'Everything is now complete — your child is fully registered for The Money Club.Org.';
+$parent_lines[] = 'We\'re grateful for your interest and excited that your family wants to be part of this.';
 $parent_lines[] = '';
-$parent_lines[] = '---';
+$parent_lines[] = 'I also want to be direct about where things stand.';
 $parent_lines[] = '';
-$parent_lines[] = '📅 What happens next';
+$parent_lines[] = 'The Money Club.Org is a community-first program built for learning, not profit. It is designed to teach financial literacy by example, which is why we operate with open-book financials so families can see how money moves through a real system.';
 $parent_lines[] = '';
-$parent_lines[] = 'Closer to the program start, we’ll send:';
-$parent_lines[] = '- first-day details';
-$parent_lines[] = '- what to bring';
-$parent_lines[] = '- program schedule';
+$parent_lines[] = 'This is not a traditional camp. It is a startup-style summer program where kids learn how money works by building real products through guided sprints. Each student receives a $50 build budget to help research, build, price, and test ideas in the real world.';
 $parent_lines[] = '';
-$parent_lines[] = '---';
+$parent_lines[] = 'This is the model we are trying to prove:';
 $parent_lines[] = '';
-$parent_lines[] = '📍 Location';
+$parent_lines[] = 'kids learn financial literacy through radical transparency';
+$parent_lines[] = 'University of Toronto student mentors get meaningful paid work';
+$parent_lines[] = 'families help kickstart a local feedback loop of learning, demand, and community value';
 $parent_lines[] = '';
+$parent_lines[] = 'Right now, we are working toward the threshold needed to run the program this summer.';
+$parent_lines[] = '';
+$parent_lines[] = 'To launch, we need to secure $61,000 in paid parent participation by June 1. That works out to some mix of:';
+$parent_lines[] = '';
+$parent_lines[] = '60 four-week registrations, or';
+$parent_lines[] = '120 two-week sprints';
+$parent_lines[] = '';
+$parent_lines[] = 'I am personally contributing $15,000 toward that goal to help get the program off the ground.';
+$parent_lines[] = '';
+$parent_lines[] = 'Because we have not yet reached that threshold, we are not sending payment links just yet. Your approval form lets us know your family is seriously interested, and we are holding that in our planning as we work toward launch.';
+$parent_lines[] = '';
+$parent_lines[] = 'If we hit the threshold, we will follow up with payment details, final next steps, and program logistics.';
+$parent_lines[] = '';
+$parent_lines[] = 'If this opportunity resonates with you, I would be very grateful if you shared it with friends or family who may know a young person who would be a strong fit. At this stage, thoughtful word of mouth can make a real difference.';
+$parent_lines[] = '';
+$parent_lines[] = 'Over the coming weeks, we\'ll continue to share updates, including:';
+$parent_lines[] = '';
+$parent_lines[] = 'curriculum details';
+$parent_lines[] = 'what students will be working on';
+$parent_lines[] = 'mentor introductions';
+$parent_lines[] = 'and launch progress';
+$parent_lines[] = '';
+$parent_lines[] = 'Location:';
 $parent_lines[] = 'UTSU Student Commons';
-$parent_lines[] = 'University of Toronto (downtown)';
+$parent_lines[] = 'University of Toronto, downtown Toronto';
 $parent_lines[] = '';
-$parent_lines[] = 'Daily 9–5, with instruction from 9:30am to 3:30pm';
+$parent_lines[] = 'Daily schedule:';
+$parent_lines[] = '9:00 AM-5:00 PM';
+$parent_lines[] = 'Core instruction: 9:30 AM-3:30 PM';
 $parent_lines[] = '';
-$parent_lines[] = '---';
+$parent_lines[] = 'Thank you again for your interest, your trust, and your willingness to consider something early.';
 $parent_lines[] = '';
-$parent_lines[] = 'If anything changes or you have questions, feel free to reply anytime.';
-$parent_lines[] = '';
-$parent_lines[] = 'Looking forward to having your child in the program.';
-$parent_lines[] = '';
-$parent_lines[] = '— The Money Club.Org';
+$parent_lines[] = 'Warmly,';
+$parent_lines[] = 'Jared Goldberg';
+$parent_lines[] = 'The Money Club.Org';
 $parent_message = implode("\n", $parent_lines);
 
-if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
-    log_parent_approval_event('parent_email_failed');
+try {
+    $parent_email_sent = smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from);
+} catch (Throwable $e) {
+    error_log('[apply-parent-approval] Parent confirmation email exception: ' . $e->getMessage());
+    $parent_email_sent = false;
 }
 
-$separator = (strpos($return_to, '?') === false) ? '?' : '&';
-header('Location: ' . $return_to . $separator . 'status=sent');
+if ($parent_email_sent) {
+    log_parent_approval_event('parent_email_sent');
+} else {
+    $smtp_reason = function_exists('smtp_get_last_error') ? smtp_get_last_error() : 'unknown';
+    if ($smtp_reason === '') {
+        $smtp_reason = 'unknown';
+    }
+    log_parent_approval_event('parent_email_failed reason=' . $smtp_reason);
+}
+
+header('Location: thank-you.html');
 exit;
 ?>

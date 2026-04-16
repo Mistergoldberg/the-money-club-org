@@ -3420,8 +3420,7 @@
 
             <p><strong>Payment Options</strong></p>
             <ul class="bullet-list">
-              <li>Interac e-Transfer &mdash; no fee</li>
-              <li>Credit card &mdash; 2.4% surcharge</li>
+              <li>Interac e-Transfer only &mdash; no card processing surcharge</li>
             </ul>
             <p><strong>Refund Policy</strong><br />Because The Money Club.Org is a lean nonprofit startup, program fees are non-refundable. Each registration directly supports the costs of running the program, including venue, materials, and University of Toronto student mentor wages.</p>
 
@@ -3469,6 +3468,8 @@
   <div class="loading-text">Processing…</div>
 </div>
             <form class="form-grid" action="start-parent-approval.php" method="post" novalidate>
+              <input type="hidden" name="return-to" value="parent-approval.html" />
+              <input type="hidden" name="return-error" value="pricing.html" />
               <div class="step-block">
                 <h2 class="form-step-title">Step 1 &mdash; Choose Your Program</h2>
               </div>
@@ -3971,10 +3972,10 @@
         pushFormEvent({
           event: 'registration_form_submitted',
           form_id: 'registration',
-          payment_method: 'registration',
+          payment_method: 'etransfer_pending',
           session_name: sessionName || 'unspecified',
           program_track: programTrack || 'unspecified',
-          funnel_step: 'registration_payment'
+          funnel_step: 'registration_pending_payment'
         });
       }
 
@@ -4049,7 +4050,7 @@
           persistSessionName(sessionName);
           persistProgramTrack(programTrack);
           try {
-            sessionStorage.setItem('tmc_registration_payment_method', 'registration');
+            sessionStorage.setItem('tmc_registration_payment_method', 'etransfer_pending');
             sessionStorage.setItem('tmc_parent_approval_prefill', JSON.stringify({
               parent_name: document.getElementById('parent-name') ? document.getElementById('parent-name').value.trim() : '',
               parent_email: document.getElementById('parent-email') ? document.getElementById('parent-email').value.trim() : '',
@@ -4063,8 +4064,8 @@
 
           pushFormEvent({
             event: 'payment_method_select',
-            payment_method: 'registration',
-            funnel_step: 'payment_selected'
+            payment_method: 'etransfer_pending',
+            funnel_step: 'payment_pending'
           });
           pushRegistrationSubmitted(sessionName, programTrack);
         });
@@ -4387,7 +4388,7 @@
       if (!interestForms.length){ return; }
 
       var params = new URLSearchParams(window.location.search);
-      if (params.get('status') === 'sent' || params.get('status') === 'error'){
+      if (params.get('status') === 'sent'){
         params.delete('status');
         params.delete('field');
         params.delete('message');
@@ -4431,5 +4432,6 @@
     })();
   </script>
 
+  <script src="assets/form-protection.js?v=1" defer></script>
 </body>
 </html>

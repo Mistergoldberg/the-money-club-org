@@ -14,3 +14,4 @@ Marketing\ Images/
 **/data/*.key
 **/data/*hash*
 **/data/stripe-processed-sessions.json
+**/data/form-rate-limit.json
