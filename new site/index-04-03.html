@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pricing | AI Product-Building Summer Program for Ages 10–16</title>
+  <title>AI Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="A 2-week Toronto summer sprint for students ages 10–16 teaching financial literacy and design thinking. Located at the UTSU Student Commons in downtown Toronto." />
-  <meta property="og:title" content="Pricing | AI Product-Building Summer Program for Ages 10–16" />
-  <meta property="og:description" content="A 2-week Toronto summer sprint for students ages 10–16 teaching financial literacy and design thinking. Located at the UTSU Student Commons in downtown Toronto." />
+  <meta name="description" content="A 4-week Toronto summer camp for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
+  <meta property="og:title" content="AI Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org" />
+  <meta property="og:description" content="A 4-week Toronto summer camp for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
   <meta property="og:url" content="https://the-money-club.org/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <meta property="og:image" content="https://the-money-club.org/assets/vibe-coding-2-ls.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pricing | AI Product-Building Summer Program for Ages 10–16" />
-  <meta name="twitter:description" content="A 2-week Toronto summer sprint for students ages 10–16 teaching financial literacy and design thinking. Located at the UTSU Student Commons in downtown Toronto." />
-  <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <meta name="twitter:title" content="AI Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org" />
+  <meta name="twitter:description" content="A 4-week Toronto summer camp for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
+  <meta name="twitter:image" content="https://the-money-club.org/assets/vibe-coding-2-ls.jpg" />
   <link rel="canonical" href="https://the-money-club.org/" />
   <script type="application/ld+json">
     {
@@ -49,7 +49,7 @@
           ],
           "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://the-money-club.org/assets/Kids-Index.jpg"
+            "url": "https://the-money-club.org/assets/vibe-coding-2-ls.jpg"
           }
         },
         {
@@ -68,14 +68,14 @@
         {
           "@type": "Offer",
           "@id": "https://the-money-club.org/#session-1-offer",
-          "price": "750",
+          "price": "1500",
           "priceCurrency": "CAD",
           "url": "https://the-money-club.org/reserve-a-spot.html"
         },
         {
           "@type": "Offer",
           "@id": "https://the-money-club.org/#session-2-offer",
-          "price": "750",
+          "price": "1500",
           "priceCurrency": "CAD",
           "url": "https://the-money-club.org/reserve-a-spot.html"
         },
@@ -88,7 +88,7 @@
             "@type": "ImageObject",
             "url": "https://the-money-club.org/assets/logo-500.png"
           },
-          "image": "https://the-money-club.org/assets/Kids-Index.jpg",
+          "image": "https://the-money-club.org/assets/vibe-coding-2-ls.jpg",
           "description": "Toronto educational organization and nonprofit summer program teaching financial literacy, entrepreneurship, design thinking, and public speaking through project-based learning for students ages 10–16.",
           "address": {
             "@type": "PostalAddress",
@@ -193,9 +193,9 @@
           "@type": "EducationEvent",
           "@id": "https://the-money-club.org/#session-1",
           "name": "The Money Club.Org Summer Program Session 1",
-          "description": "In-person 2-week Toronto summer sprint for students ages 10–16 focused on financial literacy and design thinking.",
+          "description": "In-person 4-week Toronto summer program for students ages 10–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.",
           "startDate": "2026-07-06",
-          "endDate": "2026-07-17",
+          "endDate": "2026-07-31",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
@@ -212,9 +212,9 @@
           "@type": "EducationEvent",
           "@id": "https://the-money-club.org/#session-2",
           "name": "The Money Club.Org Summer Program Session 2",
-          "description": "In-person 2-week Toronto summer sprint for students ages 10–16 focused on financial literacy and design thinking.",
+          "description": "In-person 4-week Toronto summer program for students ages 10–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.",
           "startDate": "2026-08-04",
-          "endDate": "2026-08-15",
+          "endDate": "2026-08-28",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
@@ -599,8 +599,9 @@
     }
     .hero-image{
       width: 100%;
+      aspect-ratio: 1920 / 877;
       border-radius: 22px;
-      overflow-y: auto;
+      overflow: hidden;
       border: 1px solid var(--line);
       margin-top: 12px;
     }
@@ -610,13 +611,21 @@
       height: auto;
     }
     .hero-image.banner img{
-      height: clamp(220px, 32vw, 420px);
+      height: 100%;
       object-fit: cover;
       object-position: center 35%;
     }
 
     /* Sections */
     .section{ margin-top: var(--space-6); }
+    #how-it-works,
+    #choose-your-adventure{
+      display: none;
+    }
+    .reserve-heading-suffix{
+      display: inline;
+    }
+    #reserve.section-banner{ margin-top: var(--space-6); }
     .section-banner{
       padding: 26px 0;
       border-top: 1px solid var(--line);
@@ -668,6 +677,9 @@
       grid-template-columns: 1.1fr 0.9fr;
       gap: 24px;
       align-items: center;
+    }
+    .split > *{
+      min-width: 0;
     }
     .split.reverse{ grid-template-columns: 0.9fr 1.1fr; }
     .section-copy{
@@ -739,7 +751,7 @@
     }
     #built-like-a-business .program-summary{
       width: 100%;
-      max-width: 36rem;
+      max-width: 39rem;
       margin: 0;
       padding: clamp(24px, 2.4vw, 34px);
       border: 1px solid var(--line);
@@ -749,6 +761,22 @@
       text-align: left;
       font-size: inherit;
       line-height: var(--lh-body);
+    }
+    #built-like-a-business .program-selection-row{
+      width: 100%;
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: clamp(32px, 4vw, 64px);
+      row-gap: 12px;
+      align-items: start;
+    }
+    #built-like-a-business .program-selection-row .program-summary-row-title{
+      grid-column: 1 / -1;
+    }
+    #built-like-a-business .program-selection-panel{
+      grid-column: 1 / -1;
+      min-width: 0;
     }
     #built-like-a-business .program-summary-title{
       margin: 0 0 8px;
@@ -765,7 +793,8 @@
       text-wrap: balance;
     }
     #built-like-a-business .program-summary-keep{
-      white-space: nowrap;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
     #built-like-a-business .program-summary-points{
       display: grid;
@@ -788,55 +817,187 @@
     #built-like-a-business .program-summary-point-text{
       display: block;
     }
+    #built-like-a-business .program-summary-row-title{
+      margin: 0 0 10px;
+      display: block;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding: clamp(8px, 1.4vw, 14px) max(var(--pad), 18px);
+      background: var(--teal);
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.1;
+      font-size: clamp(20px, 2.8vw, 30px);
+      color: #ffffff;
+      border-radius: 0;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), inset 0 -1px 0 rgba(0,0,0,0.14);
+    }
+    #built-like-a-business .program-summary-options{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin: 0 0 18px;
+      text-align: center;
+    }
+    #built-like-a-business .program-summary-option{
+      display: block;
+      line-height: 1.22;
+      text-align: center;
+      height: 100%;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(17,17,17,0.08);
+      padding: clamp(18px, 2.2vw, 26px) clamp(14px, 1.7vw, 22px);
+    }
+    #built-like-a-business a.program-summary-option{
+      position: relative;
+      overflow: hidden;
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+    #built-like-a-business a.program-summary-option::after{
+      content: "";
+      position: absolute;
+      inset: -40% -20%;
+      background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.65) 50%, transparent 65%);
+      transform: translateX(-140%);
+      opacity: 0.7;
+      pointer-events: none;
+      animation: gloss-sweep 2.8s ease-in-out infinite;
+    }
+    #built-like-a-business a.program-summary-option:hover,
+    #built-like-a-business a.program-summary-option:focus-visible{
+      transform: translateY(-1px);
+      border-color: #d8d3ca;
+      box-shadow: 0 16px 30px rgba(17,17,17,0.12);
+      text-decoration: none;
+      outline: none;
+    }
+    #built-like-a-business .program-summary-option-copy{
+      display: grid;
+      gap: 6px;
+    }
+    #built-like-a-business .program-summary-option-copy p{
+      margin: 0;
+    }
+    #built-like-a-business .program-summary-option-title{
+      font-weight: 700;
+      font-size: 1.06em;
+      line-height: 1.18;
+    }
+    #built-like-a-business .program-summary-option-copy p + p{
+      margin-top: 3px;
+    }
+    #built-like-a-business .program-summary-cta-group{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 4px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      text-align: left;
+    }
+    #built-like-a-business .program-summary-cta-title{
+      margin: 0;
+      font-size: 1.08em;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+    #built-like-a-business .program-summary-cta-group .cta-fill{
+      width: 100%;
+      justify-self: stretch;
+      min-height: 76px;
+      padding: 18px 16px;
+      font-size: clamp(22px, 1.8vw, 32px);
+      border-radius: 14px;
+    }
+    #built-like-a-business .program-summary-secondary-link{
+      margin: 0;
+      display: block;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding: clamp(14px, 2.2vw, 24px) max(var(--pad), 18px);
+      background: var(--teal);
+      font-size: clamp(24px, 3.4vw, 34px);
+      line-height: 1.15;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 0;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.16), inset 0 -1px 0 rgba(0,0,0,0.14);
+      transition: background-color 120ms ease, transform 120ms ease;
+    }
+    #built-like-a-business .program-summary-row-title{
+      font-size: clamp(20px, 2.8vw, 30px);
+    }
+    #built-like-a-business .program-summary-secondary-link:hover,
+    #built-like-a-business .program-summary-secondary-link:focus-visible{
+      background: #166f79;
+      transform: translateY(-1px);
+    }
+    #what-is-this{
+      margin-top: 26px;
+    }
     #what-is-this .split,
     #how-it-works .split,
     #who-runs-it .split{
       align-items: start;
       gap: clamp(24px, 4vw, 44px);
     }
+    #how-it-works .section-banner h2{
+      letter-spacing: 0.01em;
+    }
+    #how-it-works .section-copy{
+      gap: 14px;
+      max-width: 44rem;
+    }
+    #how-it-works .section-copy p{
+      margin: 0;
+      line-height: var(--lh-body);
+      font-weight: 400;
+    }
+    #how-it-works .section-copy p:nth-of-type(3){
+      font-weight: 500;
+    }
+    #how-it-works .section-copy .bullet-list{
+      margin: 0;
+      padding-left: 1.05em;
+      display: grid;
+      gap: 8px;
+    }
+    #how-it-works .section-copy .bullet-list li{
+      margin: 0;
+      line-height: 1.28;
+    }
     #what-is-this .section-copy{
       gap: 16px;
       max-width: none;
-    }
-    #what-is-this .pricing-info-copy{
-      display: grid;
-      gap: 16px;
-    }
-    #practical-note .section-copy{
-      max-width: none;
-    }
-    #what-is-this .pricing-block{
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: #ffffff;
-      padding: 16px 18px;
-      box-shadow: 0 12px 24px rgba(17,17,17,0.06);
-      display: grid;
-      gap: 10px;
-    }
-    #what-is-this .pricing-schedule-row{
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.92fr);
-      gap: 14px;
-      align-items: stretch;
-    }
-    #what-is-this .pricing-schedule-copy{
-      display: grid;
-      gap: 10px;
       align-content: start;
     }
-    #what-is-this .pricing-schedule-row .location-map-card{
-      margin-top: 0;
-      height: 100%;
+    #what-is-this .section-copy p{
+      margin: 0;
+      line-height: var(--lh-body);
     }
-    #what-is-this .pricing-schedule-row .location-map{
-      min-height: 100%;
-      height: 100%;
+    #what-is-this .section-copy .bullet-list{
+      margin: 0;
+      padding-left: 1.05em;
+      display: grid;
+      gap: 8px;
+    }
+    #what-is-this .section-copy .bullet-list li{
+      margin: 0;
+      line-height: var(--lh-body);
     }
     #what-is-this .section-copy h3{
       margin: 0;
-      font-size: var(--size-lg);
-      line-height: 1.15;
+      font-size: clamp(28px, 3.2vw, 42px);
+      line-height: 1.05;
     }
     #what-is-this .fact-list{
       gap: 12px;
@@ -848,18 +1009,38 @@
     #what-is-this .fact-subline{
       padding-left: 0;
     }
-    #what-is-this .location-map-card{
-      margin-top: 6px;
+    #what-is-this .location-photo-card{
+      margin: 0;
+      width: 100%;
       border: 1px solid var(--line);
       border-radius: 22px;
       overflow: hidden;
       background: #ffffff;
       box-shadow: 0 12px 24px rgba(17,17,17,0.06);
+      aspect-ratio: 3 / 4;
+    }
+    #what-is-this .location-photo-card img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    #what-is-this .location-map-card{
+      margin-top: 0;
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 12px 24px rgba(17,17,17,0.06);
+      aspect-ratio: 3 / 4;
     }
     #what-is-this .location-map{
       display: block;
       width: 100%;
-      min-height: 320px;
+      min-height: 300px;
+      height: 100%;
       border: 0;
     }
     #what-students-leave-with .stem-grid{
@@ -970,6 +1151,69 @@
     }
     #who-runs-it .section-copy{
       max-width: min(100%, 78rem);
+    }
+    #outcomes .section-content{
+      display: grid;
+      gap: 18px;
+    }
+    #outcomes .outcomes-lead{
+      margin: 0;
+      max-width: min(100%, 72ch);
+    }
+    #outcomes .outcomes-stack{
+      display: grid;
+      gap: 20px;
+    }
+    #outcomes .outcome-row{
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: clamp(18px, 3vw, 34px);
+      align-items: center;
+      background: #efefef;
+      border: 1px solid #dfdfdf;
+      border-radius: 24px;
+      padding: clamp(18px, 2.3vw, 30px);
+    }
+    #outcomes .outcome-copy{
+      display: grid;
+      gap: 12px;
+      max-width: none;
+    }
+    #outcomes .outcome-title{
+      margin: 0;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.08;
+      font-family: var(--font-body);
+      font-weight: 700;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    #outcomes .outcome-copy p{
+      margin: 0;
+    }
+    #outcomes .outcome-points{
+      margin: 0;
+      padding-left: 1.05em;
+      display: grid;
+      gap: 8px;
+    }
+    #outcomes .outcome-points li{
+      margin: 0;
+      line-height: 1.3;
+    }
+    #outcomes .outcome-image{
+      margin: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #d7d7d7;
+      background: #ffffff;
+      aspect-ratio: 4 / 3;
+    }
+    #outcomes .outcome-image img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .week-list{
       gap: 14px;
@@ -1164,60 +1408,6 @@
       gap: 10px;
       font-weight: 600;
     }
-    .program-grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-    }
-    .program-card{
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: clamp(22px, 2.6vw, 34px);
-      background: #f6f4ef;
-      display: grid;
-      gap: 8px;
-      cursor: pointer;
-      transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-      position: relative;
-      text-align: center;
-      align-content: center;
-    }
-    .program-card:hover{
-      border-color: var(--teal);
-      box-shadow: 0 10px 20px rgba(8, 122, 128, 0.14);
-      transform: translateY(-1px);
-    }
-    .program-card input{
-      position: absolute;
-      opacity: 0;
-      pointer-events: none;
-    }
-    .program-title{
-      margin: 0;
-      font-weight: 700;
-      font-size: inherit;
-      line-height: var(--lh-body);
-      color: var(--ink);
-    }
-    .program-price{
-      margin: 0;
-      font-weight: 700;
-      font-size: inherit;
-      line-height: var(--lh-body);
-      color: var(--ink);
-    }
-    .program-dates,
-    .program-line{
-      margin: 0;
-      font-size: inherit;
-      line-height: var(--lh-body);
-      color: #3a3a3a;
-    }
-    .program-card:has(input:checked){
-      border-color: var(--teal);
-      box-shadow: 0 14px 26px rgba(8, 122, 128, 0.2);
-      background: #eef9fa;
-    }
     .session-grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1235,10 +1425,6 @@
       position: relative;
       min-height: 140px;
       overflow: hidden;
-    }
-    .session-card.is-hidden,
-    .session-card[hidden]{
-      display: none;
     }
     .session-card::after{
       content: "";
@@ -1355,124 +1541,6 @@
     }
     .terms-consent .field-error{
       margin-left: 28px;
-    }
-    .register-actions{
-      margin-top: 10px;
-      display: grid;
-      gap: 10px;
-    }
-    .register-btn{
-      width: 100%;
-      border-radius: 14px;
-      background: var(--teal);
-      border: 0;
-      color: #ffffff;
-      font-family: var(--font-display);
-      font-size: clamp(30px, 3.2vw, 44px);
-      letter-spacing: var(--tracking-display);
-      text-transform: uppercase;
-      line-height: 1;
-      padding: 20px 18px;
-      cursor: pointer;
-    }
-    .register-btn:hover,
-    .register-btn:focus-visible{
-      background: #167a84;
-    }
-    .info-session-trigger-btn{
-      width: 100%;
-      border-radius: 14px;
-      border: 2px solid var(--purple);
-      background: #ffffff;
-      color: var(--purple);
-      font-family: var(--font-body);
-      font-size: clamp(18px, 2.1vw, 24px);
-      font-weight: 700;
-      line-height: 1.2;
-      padding: 14px 16px;
-      text-align: center;
-      cursor: pointer;
-      transition: background-color 120ms ease, transform 120ms ease;
-    }
-    .info-session-trigger-btn:hover,
-    .info-session-trigger-btn:focus-visible{
-      background: #f3ebfb;
-      transform: translateY(-1px);
-    }
-    body.info-session-open{
-      overflow: hidden;
-    }
-    .info-session-overlay{
-      position: fixed;
-      inset: 0;
-      z-index: 1400;
-      display: none;
-      align-items: center;
-      justify-items: center;
-      background: rgba(12, 12, 12, 0.62);
-      padding: clamp(14px, 3vw, 24px);
-    }
-    .info-session-overlay.is-open{
-      display: grid;
-    }
-    .info-session-modal{
-      width: min(760px, 100%);
-      max-height: min(90vh, 920px);
-      overflow: auto;
-      background: #ffffff;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      box-shadow: 0 18px 42px rgba(0,0,0,0.26);
-      padding: clamp(18px, 3vw, 28px);
-      display: grid;
-      gap: 12px;
-    }
-    .info-session-close{
-      justify-self: end;
-      width: 38px;
-      height: 38px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: #ffffff;
-      color: var(--ink);
-      font-size: 28px;
-      line-height: 1;
-      cursor: pointer;
-    }
-    .info-session-title{
-      margin: 0;
-      font-size: clamp(24px, 3.4vw, 34px);
-      line-height: 1.1;
-      font-family: var(--font-body);
-      text-transform: none;
-      letter-spacing: 0;
-      font-weight: 700;
-      color: var(--ink);
-      text-align: center;
-    }
-    .info-session-meta{
-      margin: 0;
-      font-size: clamp(18px, 2.1vw, 24px);
-      line-height: 1.2;
-      color: var(--ink);
-      font-weight: 600;
-      text-align: center;
-    }
-    .info-session-helper{
-      margin: 0;
-      color: var(--muted);
-      text-align: center;
-    }
-    .info-session-form{
-      display: grid;
-      gap: 16px;
-    }
-    .info-session-form .field{
-      max-width: none;
-    }
-    .info-session-submit{
-      width: 100%;
-      justify-content: center;
     }
     .payment-section h2{
       margin: 0;
@@ -1628,21 +1696,6 @@
     .reservation-card h2:not(:first-child){
       margin-top: 16px;
     }
-    .form-step-title{
-      margin: 0;
-      font-size: clamp(24px, 3.4vw, 34px);
-      font-family: var(--font-body);
-      text-transform: none;
-      letter-spacing: 0;
-      line-height: 1.15;
-      font-weight: 700;
-      color: var(--ink);
-    }
-    .step-block{
-      display: grid;
-      gap: 6px;
-      margin-top: 4px;
-    }
     .interest-subhead{
       margin: 0;
       font-size: clamp(24px, 3.1vw, 32px);
@@ -1694,6 +1747,9 @@
     .interest-register-link:focus-visible{
       color: #0f47dd;
     }
+    .mobile-inline-interest{
+      display: none;
+    }
     .confirmation-grid{
       display:grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1744,162 +1800,6 @@
       color: var(--muted);
     }
 
-    .math-section{
-      margin-top: var(--space-6);
-    }
-    .math-banner{
-      background: var(--purple);
-      color: #ffffff;
-      padding: 26px 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .math-content{
-      max-width: var(--max-wide);
-      margin: 0 auto;
-      padding: 24px var(--pad) 10px;
-      display:grid;
-      gap: 28px;
-    }
-    .math-layout{
-      display:grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 28px;
-      align-items:stretch;
-    }
-    .math-card{
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-      padding: 16px 18px;
-      display:grid;
-      gap: 12px;
-      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
-    }
-    .math-card p{ margin: 0; }
-    .math-card.revenue{
-      text-align: left;
-    }
-    .math-card.revenue ul{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .revenue-title{
-      margin: 0;
-      text-align: center;
-      font-size: clamp(24px, 3vw, 34px);
-      line-height: 1.1;
-    }
-    .revenue-list{
-      margin: 12px 0 0;
-      display:grid;
-      gap: 10px;
-    }
-    .revenue-list li{
-      display:grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 6px 12px;
-      align-items: baseline;
-      padding: 12px 14px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #ffffff;
-    }
-    .revenue-list .value{
-      font-weight: 700;
-      color: var(--ink);
-    }
-    .revenue-total{
-      margin-top: 12px;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-      display:grid;
-      gap: 6px;
-      text-align: center;
-    }
-    .revenue-total .label{
-      font-size: var(--size-sm);
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: var(--muted);
-    }
-    .openbook-grid{
-      display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 20px;
-      align-items: stretch;
-    }
-    .openbook-expenses{
-      margin-top: 28px;
-    }
-    .openbook-summary{
-      margin-top: 18px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-      padding: 18px;
-      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
-    }
-    .openbook-summary.standout{
-      background: #ffffff;
-      border-color: var(--line);
-      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
-    }
-    .openbook-expenses .openbook-summary{
-      margin-top: 0;
-    }
-    .openbook-summary h3{
-      margin: 0 0 10px;
-      text-align: center;
-      font-family: var(--font-body);
-      text-transform: none;
-      letter-spacing: 0;
-      line-height: var(--lh-body);
-      font-weight: 700;
-    }
-    .openbook-table{
-      width: 100%;
-      border-collapse: collapse;
-      font-size: inherit;
-      margin: 10px 0 18px;
-    }
-    .openbook-table th,
-    .openbook-table td{
-      border: 1px solid var(--line);
-      padding: 10px 12px;
-      text-align: left;
-    }
-    .openbook-table th{
-      font-weight: 700;
-      background: #ffffff;
-    }
-    .openbook-table td:last-child,
-    .openbook-table th:last-child{
-      text-align: right;
-      font-variant-numeric: tabular-nums;
-    }
-    .math-card h3{
-      font-family: var(--font-body);
-      text-transform: none;
-      letter-spacing: 0;
-      line-height: var(--lh-body);
-      font-weight: 700;
-    }
-    .math-note{
-      font-size: inherit;
-      color: var(--muted);
-      margin: 0;
-    }
-    .math-figure{
-      font-family: var(--font-display);
-      font-size: clamp(34px, 6vw, 56px);
-      letter-spacing: var(--tracking-display);
-      color: var(--ink);
-    }
-
     .openbook-card{
       border-radius: 18px;
       border: 1px solid var(--line);
@@ -1925,12 +1825,10 @@
       margin: 0 auto;
       background:
         conic-gradient(
-          var(--purple) 0% 50.4%,
-          var(--gold) 50.4% 82.7%,
-          var(--rose) 82.7% 90.6%,
-          var(--teal) 90.6% 95.5%,
-          var(--ink) 95.5% 99.6%,
-          var(--slate) 99.6% 100%
+          var(--purple) 0% 40%,
+          var(--teal) 40% 50%,
+          var(--gold) 50% 90%,
+          var(--ink) 90% 100%
         );
     }
     .openbook-legend{
@@ -2021,23 +1919,12 @@
     }
     .openbook-subtitle{
       display: block;
-      font-size: inherit;
-      font-weight: 400;
-      line-height: var(--lh-body);
+      font-size: clamp(14px, 2vw, 18px);
+      font-weight: 500;
       color: var(--muted);
       text-transform: none;
       letter-spacing: 0;
       margin-top: 4px;
-    }
-    .openbook-expenses .openbook-summary > h3,
-    .openbook-expenses .openbook-pie-card > .openbook-subheading{
-      margin-bottom: 4px;
-    }
-    .openbook-expenses .openbook-summary > .openbook-subtitle,
-    .openbook-expenses .openbook-pie-card > .openbook-subtitle{
-      margin: 0 0 10px;
-      text-align: center;
-      width: 100%;
     }
     .openbook-pie{
       width: min(360px, 100%);
@@ -2046,12 +1933,12 @@
       margin: 0 auto 14px;
       background:
         conic-gradient(
-          var(--purple) 0% 50.4%,
-          var(--gold) 50.4% 82.7%,
-          var(--rose) 82.7% 90.6%,
-          var(--teal) 90.6% 95.5%,
-          var(--ink) 95.5% 99.6%,
-          var(--slate) 99.6% 100%
+          var(--purple) 0% 34.75%,
+          var(--teal) 34.75% 48.08%,
+          var(--gold) 48.08% 69.82%,
+          var(--ink) 69.82% 72.6%,
+          var(--slate) 72.6% 91.17%,
+          var(--rose) 91.17% 100%
         );
       position: relative;
       display: grid;
@@ -2094,8 +1981,6 @@
       max-width: 100%;
       justify-self: stretch;
       align-self: start;
-      font-size: inherit;
-      line-height: var(--lh-body);
     }
     .openbook-legend li{
       display: grid;
@@ -2188,6 +2073,54 @@
       line-height: 1;
       text-align: center;
     }
+    #choose-your-adventure .section-banner h2{
+      text-align: center;
+    }
+    #choose-your-adventure .section-content{
+      padding-top: 24px;
+      padding-bottom: 14px;
+    }
+    #choose-your-adventure .adventure-grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    #choose-your-adventure .adventure-grid .adventure-link{
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      text-align: center;
+      padding: 22px 16px;
+      border-top: 1px solid var(--line);
+      background: transparent;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:first-child{
+      border-top: 0;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link h3{
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 2.6vw, 36px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.95;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:hover h3,
+    #choose-your-adventure .adventure-grid .adventure-link:focus-visible h3{
+      text-decoration: underline;
+      text-underline-offset: 6px;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child{
+      background: var(--teal);
+      color: #ffffff;
+    }
+    #choose-your-adventure .adventure-grid .adventure-link:last-child h3{
+      color: #ffffff;
+    }
     .btn.cta-standard{
       width: 100%;
       font-family: var(--font-display);
@@ -2200,59 +2133,6 @@
       white-space: normal;
       line-height: 0.95;
       text-align: center;
-    }
-    .quickfacts-section{
-      margin-top: var(--space-6);
-      scroll-margin-top: var(--scroll-offset);
-    }
-    .quickfacts-content{
-      max-width: var(--max-wide);
-      margin: 0 auto;
-      padding: clamp(42px, 6vw, 78px) var(--pad) 18px;
-    }
-    .facts-grid{
-      display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      align-items: stretch;
-    }
-    .facts-card{
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--line);
-      background: #ffffff;
-      padding: 24px;
-      display:grid;
-      gap: 8px;
-      align-content: start;
-      box-shadow: 0 18px 32px rgba(0,0,0,0.08);
-    }
-    .facts-card h3{
-      margin-bottom: 0;
-    }
-    .facts-card ul{
-      margin: 0;
-      padding-left: 18px;
-    }
-    .facts-card .btn{
-      font-family: var(--font-display);
-      letter-spacing: var(--tracking-display);
-      text-transform: uppercase;
-      font-size: var(--btn-size-lg);
-    }
-    .facts-card .btn.cta-standard{
-      font-size: clamp(22px, 3vw, 40px);
-    }
-    .role-media{
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid var(--line);
-      aspect-ratio: 16 / 10;
-    }
-    .role-media img{
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
     .cta-note{
       max-width: 720px;
@@ -2313,6 +2193,84 @@
     @media (min-width: 981px){
       .menu-btn{ display:none; }
     }
+    @media (min-width: 981px){
+      #how-it-works .split{
+        align-items: stretch;
+      }
+      #what-is-this .split{
+        align-items: stretch;
+      }
+      #what-is-this .section-media{
+        align-self: stretch;
+        display: grid;
+        gap: 12px;
+      }
+      #what-is-this .section-copy{
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+      }
+      #what-is-this .section-copy .btn{
+        margin-top: auto;
+        align-self: flex-start;
+      }
+      #what-is-this .location-photo-card,
+      #what-is-this .location-map-card{
+        margin: 0;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+      }
+      #what-is-this .location-photo-card img{
+        height: 100%;
+      }
+      #what-is-this .location-map{
+        min-height: 0;
+        height: 100%;
+      }
+      #how-it-works .section-copy{
+        max-width: 44rem;
+        font-size: 0.95em;
+        gap: 10px;
+        align-self: stretch;
+      }
+      #how-it-works .section-media{
+        align-self: stretch;
+        display: flex;
+        min-height: 0;
+      }
+      #how-it-works .section-image{
+        position: relative;
+        height: 100%;
+        min-height: 0;
+        overflow: hidden;
+      }
+      #how-it-works .section-image img{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 24%;
+      }
+      #radical-transparency .radical-grid{
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: clamp(28px, 4vw, 52px);
+      }
+      #radical-transparency .radical-side{
+        justify-items: center;
+        align-self: center;
+      }
+      #radical-transparency .radical-side .section-image{
+        width: min(100%, 448px);
+        justify-self: center;
+      }
+      #radical-transparency .radical-copy{
+        align-self: center;
+        max-width: 46rem;
+      }
+    }
 
 
     @media (max-width: 980px){
@@ -2361,65 +2319,6 @@
         text-align: left;
       }
       .radical-side .section-image{ width: 100%; }
-      .openbook-grid{ grid-template-columns: 1fr; }
-      .math-layout{ grid-template-columns: 1fr; }
-      .math-layout > *{ min-width: 0; }
-      .math-section .math-content{
-        display: flex;
-        flex-direction: column;
-      }
-      .math-section .math-layout{
-        order: 2;
-      }
-      .math-section .openbook-grid.openbook-expenses{
-        display: contents;
-      }
-      .math-section .openbook-grid.openbook-expenses .openbook-pie-card{
-        order: 1;
-      }
-      .math-section .openbook-grid.openbook-expenses .openbook-summary{
-        order: 3;
-      }
-      .math-card{
-        max-width: 100%;
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
-        background: transparent;
-        padding: 0;
-        overflow-wrap: normal;
-        word-break: normal;
-      }
-      .openbook-summary,
-      .openbook-summary.standout,
-      .openbook-pie-card{
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
-        background: transparent;
-        padding: 0;
-      }
-      .math-content,
-      .openbook-grid,
-      .math-layout,
-      .openbook-summary,
-      .openbook-pie-card{
-        max-width: 100%;
-      }
-      .openbook-table{
-        table-layout: auto;
-        width: 100%;
-      }
-      .openbook-table th,
-      .openbook-table td{
-        border: 0;
-        padding: 8px 0;
-        overflow-wrap: normal;
-        word-break: normal;
-      }
-      .openbook-table tr + tr{
-        border-top: 1px solid var(--line);
-      }
 
       :root{
         --topbar-height: 68px;
@@ -2513,19 +2412,41 @@
       .split > .cta-stack{
         order: 3;
       }
-      #built-like-a-business .cta-stack--hero{
+      #built-like-a-business .section-copy{
         order: 1;
       }
-      #built-like-a-business .section-copy{
+      #built-like-a-business .cta-stack--hero{
         order: 2;
       }
       #built-like-a-business .program-summary{
         max-width: none;
         padding: 20px;
       }
+      #built-like-a-business .program-selection-row{
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-top: 12px;
+      }
+      #built-like-a-business .program-selection-row .program-summary-row-title{
+        grid-column: auto;
+      }
+      #built-like-a-business .program-selection-panel{
+        grid-column: auto;
+      }
       #built-like-a-business .program-summary-meta{
         margin-bottom: 14px;
         font-size: 1em;
+      }
+      #built-like-a-business .program-summary-cta-title{
+        font-size: 1em;
+      }
+      #built-like-a-business .program-summary-point-text{
+        overflow-wrap: anywhere;
+      }
+      #built-like-a-business .program-summary-row-title{
+        font-size: clamp(24px, 5.2vw, 30px);
+        margin-bottom: 12px;
+        padding: 10px 16px;
       }
       #built-like-a-business .program-summary-points{
         gap: 10px;
@@ -2534,6 +2455,31 @@
       }
       #built-like-a-business .program-summary-point{
         font-size: 0.98em;
+      }
+      #built-like-a-business .program-summary-options{
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      #built-like-a-business .program-summary-option{
+        font-size: 0.98em;
+        padding: 16px 14px;
+      }
+      #built-like-a-business .program-summary-option-title{
+        font-size: 1.02em;
+      }
+      #built-like-a-business .program-summary-cta-group{
+        gap: 36px;
+        padding-top: 12px;
+      }
+      #built-like-a-business .program-summary-cta-group .cta-fill{
+        min-height: 82px;
+        padding: 22px 20px;
+        font-size: clamp(24px, 7vw, 34px);
+      }
+      #built-like-a-business .program-summary-secondary-link{
+        font-size: clamp(24px, 5.2vw, 30px);
+        padding: 10px 16px;
       }
       #built-like-a-business .program-summary-title,
       #built-like-a-business .program-summary-meta{
@@ -2579,24 +2525,28 @@
         padding: 18px;
       }
       .mobile-reserve-btn{ display: block; }
+      #how-it-works .mobile-reserve-btn{ display: none; }
       #what-is-this .section-copy{
         gap: 14px;
       }
       #what-is-this .section-copy h3{
-        font-size: 24px;
-        line-height: 1.2;
+        font-size: clamp(30px, 8vw, 38px);
       }
-      #what-is-this .pricing-schedule-row{
-        grid-template-columns: 1fr;
+      #what-is-this .location-photo-card,
+      #what-is-this .location-map-card{
+        aspect-ratio: 4 / 3;
       }
-      #what-is-this .pricing-schedule-row .location-map{
-        min-height: 240px;
-        height: 240px;
+      #what-is-this .location-photo-card{
+        display: none;
       }
       #what-is-this .location-map{
-        min-height: 240px;
+        min-height: 0;
+        height: 100%;
       }
       .section{
+        margin-top: var(--space-5);
+      }
+      #reserve.section-banner{
         margin-top: var(--space-5);
       }
       .section-banner{
@@ -2614,6 +2564,22 @@
       }
       .bullet-list li{
         margin: 8px 0;
+      }
+      #outcomes .outcome-row{
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      #outcomes .outcome-title{
+        font-size: clamp(24px, 3vw, 34px);
+        line-height: 1.08;
+      }
+      #outcomes .outcome-image{
+        aspect-ratio: 16 / 11;
       }
       .outcomes-card,
       .trust-card,
@@ -2691,15 +2657,6 @@
       .field-row.two-col{
         grid-template-columns: 1fr;
       }
-      .program-grid{
-        grid-template-columns: 1fr;
-        gap: 14px;
-      }
-      .program-card{
-        border-radius: 18px;
-        padding: 18px 16px;
-        gap: 6px;
-      }
       .session-grid{ grid-template-columns: 1fr; }
       .session-card{ padding: 10px; min-height: 0; }
       .session-title{
@@ -2760,12 +2717,18 @@
         margin-top: 8px;
       }
       .hero-image.banner img{
-        height: clamp(220px, 32vw, 420px);
+        height: 100%;
       }
       .hero-image img,
       .section-image img{
         aspect-ratio: 4 / 3;
         object-fit: cover;
+      }
+      #radical-transparency .radical-side .section-image img{
+        aspect-ratio: auto;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
       }
       footer.site-footer .inner{ text-align: center; }
       footer.site-footer .footer-logo{ width: 72px; height: 72px; }
@@ -2793,10 +2756,9 @@
       .openbook-legend li:last-child{
         border-bottom: 0;
       }
-      .facts-grid{ grid-template-columns: 1fr; }
 
       /* Mobile color sequencing: gold -> purple -> teal */
-      #built-like-a-business .section-banner{ background: var(--gold); color: #ffffff; }
+      #built-like-a-business .section-banner{ background: var(--purple); color: #ffffff; }
       #what-is-this .section-banner{ background: var(--purple); color: #ffffff; }
       #how-it-works .section-banner{ background: var(--teal); color: #ffffff; }
       #what-students-leave-with .section-banner{ background: var(--gold); color: #ffffff; }
@@ -2833,18 +2795,22 @@
       }
       main > .hero{ order: 10; }
       main > #built-like-a-business{ order: 20; }
-      main > .math-section{ order: 30; }
-      main > #practical-note{ order: 34; }
-      main > #what-is-this{ order: 35; }
+      main > .mobile-inline-interest{ order: 24; }
+      main > #outcomes{ order: 25; }
+      main > #radical-transparency{ order: 30; }
       main > #how-it-works{ order: 40; }
-      main > #radical-transparency{ order: 50; }
-      main > #who-runs-it{ order: 60; }
+      main > #who-runs-it{ order: 50; }
+      main > #what-is-this{ order: 60; }
       main > #what-students-leave-with{ order: 70; }
       main > #camp-guides{ order: 80; }
       main > #reserve.section-banner{ order: 90; }
       main > #reserve-a-spot{ order: 100; }
+      main > #choose-your-adventure{ order: 110; }
 
       .section{
+        margin-top: 40px;
+      }
+      #reserve.section-banner{
         margin-top: 40px;
       }
       .section-banner{
@@ -2866,7 +2832,7 @@
         max-width: 24ch;
       }
       .hero-image.banner img{
-        height: clamp(220px, 32vw, 420px);
+        height: 100%;
       }
       .split,
       .split.reverse{
@@ -3002,12 +2968,15 @@
         font-size: 0.92em;
       }
       .hero-image.banner img{
-        height: clamp(220px, 32vw, 420px);
+        height: 100%;
       }
       .section-content{
         padding: 20px var(--pad) 8px;
       }
       .section{
+        margin-top: 34px;
+      }
+      #reserve.section-banner{
         margin-top: 34px;
       }
       .guide-links li,
@@ -3088,68 +3057,62 @@
       .reservation-steps .payment-body{ font-size: 16px; line-height: 1.2; }
       .reservation-steps .payment-note{ font-size: 16px; line-height: 1.2; }
       .reservation-steps .payment-option{ padding: 14px; }
+      .mobile-inline-interest{ display: block; }
     }
 
-    #choose-your-adventure{
-      display: none;
-    }
-    #choose-your-adventure .section-banner h2{
-      text-align: center;
-    }
-    #choose-your-adventure .section-content{
-      padding-top: 24px;
-      padding-bottom: 14px;
-    }
-    #choose-your-adventure .adventure-grid{
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0;
-      width: min(100%, 1120px);
-      margin: 0 auto;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    #choose-your-adventure .adventure-grid .adventure-link{
-      text-decoration: none;
-      color: var(--ink);
-      display: block;
-      text-align: center;
-      padding: 22px 16px;
-      border-top: 1px solid var(--line);
-      background: transparent;
-    }
-    #choose-your-adventure .adventure-grid .adventure-link:first-child{
-      border-top: 0;
-    }
-    #choose-your-adventure .adventure-grid .adventure-link h3{
-      margin: 0;
-      font-family: var(--font-display);
-      font-size: clamp(24px, 2.6vw, 36px);
-      letter-spacing: var(--tracking-display);
-      text-transform: uppercase;
-      line-height: 0.95;
-    }
-    #choose-your-adventure .adventure-grid .adventure-link:hover h3,
-    #choose-your-adventure .adventure-grid .adventure-link:focus-visible h3{
-      text-decoration: underline;
-      text-underline-offset: 6px;
-    }
-    #choose-your-adventure .adventure-grid .adventure-link:last-child{
-      background: var(--teal);
-      color: #ffffff;
-    }
-    #choose-your-adventure .adventure-grid .adventure-link:last-child h3{
-      color: #ffffff;
-    }
     @media (max-width: 980px){
-      #choose-your-adventure{
-        display: block;
-      }
-      main > .hero{
+      /* Mobile hierarchy: primary CTA > secondary CTA > next section title */
+      #built-like-a-business .program-summary-cta-group{
         display: none;
       }
-      main > .hero + #what-is-this{
-        margin-top: 0;
+      .mobile-inline-interest{
+        margin-top: 14px;
+        background: #efefef;
+        border: 1px solid #cfc9c0;
+        border-radius: 0;
+        overflow: hidden;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+      }
+      .mobile-inline-interest-band{
+        background: var(--purple);
+        color: #ffffff;
+        padding: 16px 12px 14px;
+      }
+      .mobile-inline-interest-band h2{
+        margin: 0;
+        color: #ffffff;
+        text-align: center;
+        font-size: clamp(52px, 12vw, 78px);
+        line-height: 0.82;
+      }
+      .mobile-inline-interest .reservation-card{
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        background: #efefef;
+        box-shadow: none;
+        padding: 18px;
+        gap: 14px;
+      }
+      .mobile-inline-interest .interest-subhead{
+        text-align: center;
+      }
+      .mobile-inline-interest .interest-helper{
+        text-align: center;
+      }
+      .mobile-inline-interest .field label{
+        text-align: center;
+      }
+      .mobile-inline-interest .form-grid{
+        max-width: none;
+      }
+      .mobile-inline-interest .field-row.two-col{
+        grid-template-columns: 1fr;
+      }
+      #choose-your-adventure{
+        display: block;
       }
       #choose-your-adventure .adventure-grid{
         grid-template-columns: 1fr;
@@ -3158,9 +3121,29 @@
       #choose-your-adventure .adventure-grid .adventure-link h3{
         font-size: clamp(24px, 7vw, 34px);
       }
-    }
-    @media (max-width: 768px){
-      main > #choose-your-adventure{ order: 110; }
+      .reserve-heading-suffix{
+        display: none;
+      }
+      #built-like-a-business .program-summary-cta-group .cta-fill{
+        min-height: 74px;
+        padding: 18px 18px;
+        font-size: clamp(21px, 6.2vw, 30px);
+      }
+      #built-like-a-business .program-summary-secondary-link{
+        font-size: clamp(28px, 5.2vw, 38px);
+        line-height: 1.1;
+        padding: 16px max(var(--pad), 14px);
+      }
+      #what-is-this{
+        margin-top: 26px;
+      }
+      #what-is-this .section-banner{
+        padding: 14px 0;
+      }
+      #what-is-this .section-banner h2{
+        font-size: clamp(34px, 9.5vw, 44px);
+        line-height: 0.88;
+      }
     }
 
   </style>
@@ -3211,31 +3194,7 @@
   </header>
 
   <main>
-    <div class="info-session-overlay" id="info-session-overlay" aria-hidden="true">
-      <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
-        <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
-        <h2 class="info-session-title" id="info-session-title">Learn How The Money Club.Org Works</h2>
-        <p class="info-session-meta">📝 Get the Program Details</p>
-        <p class="info-session-helper">Enter your email and we&rsquo;ll send a clear overview of how The Money Club.Org works, including the one-week schedule, curriculum, location, tuition, and registration steps.</p>
-        <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
-          <input type="hidden" name="return-to" value="pricing.html" />
-          <input type="hidden" name="return-error" value="pricing.html" />
-          <div class="field-row two-col">
-            <div class="field">
-              <label for="info-parent-name">Parent / Guardian Name</label>
-              <input id="info-parent-name" name="parent-name" type="text" autocomplete="name" required />
-            </div>
-            <div class="field">
-              <label for="info-parent-email">Email Address</label>
-              <input id="info-parent-email" name="parent-email" type="email" autocomplete="email" required />
-            </div>
-          </div>
-          <button class="btn teal gloss cta-standard info-session-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
-        </form>
-      </div>
-    </div>
-
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="wrap">
         <div class="hero-top">
           <div class="hero-brand-row">
@@ -3245,12 +3204,12 @@
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub mobile-hide-tagline">A nonprofit teaching financial literacy, design thinking, AI, and public speaking.</div>
+          <div class="hero-sub">A nonprofit summer program where students build with AI and learn how money, value, and demand actually work.</div>
         </div>
 
         <div class="hero-image banner">
           <img
-            src="assets/Kids-Index.jpg"
+            src="assets/vibe-coding-2-ls.jpg"
             alt="Students watching a classroom presentation"
             width="1920"
             height="877"
@@ -3261,141 +3220,155 @@
       </div>
     </section>
 
-    <section class="math-section h3-raleway">
-      <div class="math-banner">
+    <section class="section" id="built-like-a-business">
+      <div class="section-banner purple" aria-hidden="true">
         <div class="wrap">
-          <h2>Open-Book Financials</h2>
+          <h2>Build. Price. Sell.</h2>
         </div>
       </div>
-      <div class="math-content">
-        <div class="math-layout">
-          <div class="math-card">
-            <h3>Where Tuition Goes</h3>
-            <p>The Money Club.Org is a nonprofit summer program designed around learning, not upselling.</p>
-            <p>We share a simple budget breakdown so families can see how tuition supports instruction, materials, venue costs, insurance, and program operations. The goal is not to maximize profit. The goal is to run a thoughtful, well-supported program for students in a transparent and responsible way.</p>
-          </div>
-
-          <div class="math-card revenue">
-            <h3 class="revenue-title">Revenue In</h3>
-            <p class="math-note">This tuition funds a 10-student cohort including one university mentor, venue, insurance, and materials.</p>
-            <ul class="revenue-list">
-              <li>
-                <span>Students per cohort</span>
-                <span class="value">10</span>
-              </li>
-              <li>
-                <span>Tuition per student</span>
-                <span class="value">$1,100</span>
-              </li>
+      <div class="section-content">
+        <div class="split">
+          <div class="section-copy">
+            <h3>Many kids already earn money in small ways&mdash;babysitting, tutoring, selling things.</h3>
+            <p>The Money Club.Org takes that instinct further.</p>
+            <p>Students take part in a curriculum-based program where they build products with AI, guided by University of Toronto mentors through structured weekly sprints.</p>
+            <p>They get a small budget, research ideas, create prototypes, test them, and learn what happens when an idea meets the real world.</p>
+            <p>That&rsquo;s how they learn:</p>
+            <ul class="bullet-list">
+              <li>what makes something valuable</li>
+              <li>how pricing works</li>
+              <li>why some ideas hold up&mdash;and others don&rsquo;t</li>
             </ul>
-            <div class="revenue-total">
-              <span class="label">Total revenue</span>
-              <div class="math-figure">$11,000</div>
-            </div>
-          </div>
-        </div>
-        <div class="openbook-grid openbook-expenses">
-          <div class="openbook-summary standout">
-            <h3>Expense Summary</h3>
-            <span class="openbook-subtitle">Costs to run the program at the UTSU Student Commons, July &amp; August, with 3 university mentors.</span>
-            <table class="openbook-table" aria-label="Program expense summary">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th>Sums</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Instructors</td>
-                  <td>$30,558</td>
-                </tr>
-                <tr>
-                  <td>Venue Rental</td>
-                  <td>$19,567</td>
-                </tr>
-                <tr>
-                  <td>Marketing</td>
-                  <td>$4,780</td>
-                </tr>
-                <tr>
-                  <td>Program Materials</td>
-                  <td>$3,000</td>
-                </tr>
-                <tr>
-                  <td>Insurance</td>
-                  <td>$2,500</td>
-                </tr>
-                <tr>
-                  <td>Overhead</td>
-                  <td>$264</td>
-                </tr>
-                <tr>
-                  <td><strong>Total expenses</strong></td>
-                  <td><strong>$60,670</strong></td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="math-note">Based on current program financials.</p>
-          </div>
-          <div class="openbook-pie-card" aria-label="Program budget distribution chart">
-            <h3 class="openbook-subheading">Expense Visualization</h3>
-            <span class="openbook-subtitle">Where tuition goes for a 10-student cohort</span>
-            <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 50.4%, Venue Rental 32.3%, Marketing 7.9%, Program Materials 4.9%, Insurance 4.1%, Overhead 0.4%">
-              <div class="openbook-pie-center">
-                <span class="label">Total</span>
-                <span class="value">$10,612</span>
+            <p>This is financial literacy, design thinking, and AI&mdash;applied in practice.</p>
+           </div>
+          <div class="cta-stack cta-stack--hero">
+            <div class="program-summary">
+              <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons | 4 Weeks</span></div>
+              <div class="program-summary-points">
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text">Ages 10–16</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July 6–31 or Aug 4–28</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">9–5 daily</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">$1,500</span></div>
+
+              </div>
+              <div class="program-summary-cta-group">
+                <p class="program-summary-cta-title">Free Info Session &mdash; Learn How It Works</p>
+                <a class="btn teal gloss cta-fill" href="#join-the-interest-list" data-cta-label="Get Program Details">Get Program Details</a>
               </div>
             </div>
-            <ul class="openbook-legend">
-              <li>
-                <span class="legend-dot" style="background: var(--purple);"></span>
-                <span class="legend-label">Instructors $5,093</span>
-                <span class="legend-value">50.4%</span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--gold);"></span>
-                <span class="legend-label">Venue Rental $3,261</span>
-                <span class="legend-value">32.3%</span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--rose);"></span>
-                <span class="legend-label">Marketing $1,297</span>
-                <span class="legend-value">7.9%</span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--teal);"></span>
-                <span class="legend-label">Program Materials $500</span>
-                <span class="legend-value">4.9%</span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--ink);"></span>
-                <span class="legend-label">Insurance $417</span>
-                <span class="legend-value">4.1%</span>
-              </li>
-              <li>
-                <span class="legend-dot" style="background: var(--slate);"></span>
-                <span class="legend-label">Overhead $44</span>
-                <span class="legend-value">0.4%</span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="practical-note">
+    <section class="mobile-inline-interest" data-cta-location="reserve-a-spot-mobile">
+      <div class="mobile-inline-interest-band">
+        <h2>Free Info Session</h2>
+      </div>
+      <div class="reservation-card">
+        <p class="interest-subhead">📝 Get the Program Details</p>
+        <p class="interest-helper">Enter your email and we&rsquo;ll send a clear overview of how The Money Club.Org works, including the one-week schedule, curriculum, location, tuition, and registration steps.</p>
+        <div class="form-success" id="form-success-mobile" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
+<div class="form-loading" role="status" aria-live="polite">
+  <div class="spinner" aria-hidden="true"></div>
+  <div class="loading-text">Processing…</div>
+</div>
+
+        <form class="form-grid" action="apply-interest.php" method="post" novalidate>
+          <input type="hidden" name="return-to" value="index.html" />
+          <input type="hidden" name="return-error" value="index.html" />
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="parent-name-mobile">Parent / Guardian Name</label>
+              <input id="parent-name-mobile" name="parent-name" data-next="parent-email-mobile" type="text" autocomplete="name" required />
+              <small class="field-error">Parent/guardian name is required.</small>
+            </div>
+            <div class="field">
+              <label for="parent-email-mobile">Email Address</label>
+              <input id="parent-email-mobile" name="parent-email" type="email" autocomplete="email" required />
+              <small class="field-error">Enter a valid email address.</small>
+            </div>
+          </div>
+          <div class="interest-submit-wrap">
+            <button class="btn teal gloss cta-standard interest-submit" type="submit" data-cta-label="Submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="outcomes">
       <div class="section-banner purple">
         <div class="wrap">
-          <h2>A practical note</h2>
+          <h2>Outcomes</h2>
         </div>
       </div>
       <div class="section-content">
-        <div class="section-copy pricing-info-copy">
-          <p>The Money Club.Org is a <strong>nonprofit startup</strong>. We are building this program to support <strong>community spirit</strong>, <strong>practical knowledge-sharing</strong>, and <strong>local economic participation</strong> through tested frameworks and systems thinking.</p>
-          <p>To run the program responsibly, we need to generate about <strong>$61,000</strong> to cover core costs &mdash; mainly <strong>rent</strong> and <strong>University of Toronto student mentor wages</strong>. At current pricing, that means approximately <strong>60 four-week registrations</strong> or <strong>120 two-week sprints</strong>.</p>
-          <p>We share this openly because <strong>transparency is part of the model</strong>. The goal is not to maximize profit, but to build a <strong>fair, useful, community-rooted program</strong>.</p>
-          <p><strong>Help us reach our goal</strong> &mdash; and see whether your son or daughter is interested in <strong>building something real this summer</strong> at <strong>UTSU Student Commons</strong>.</p>
+        <div class="outcomes-stack">
+          <article class="outcome-row">
+            <div class="outcome-copy">
+              <h3 class="outcome-title">Financial Literacy — How Money Works</h3>
+              <p>Students learn:</p>
+              <ul class="bullet-list outcome-points">
+                <li>Cost vs. price vs. margin</li>
+                <li>What makes something profitable</li>
+                <li>How pricing affects decisions</li>
+              </ul>
+            </div>
+            <figure class="outcome-image">
+              <img src="assets/nn-kid-2.jpg" alt="Students working together to package a product" />
+            </figure>
+          </article>
+          <article class="outcome-row">
+            <div class="outcome-copy">
+              <h3 class="outcome-title">Design Thinking — Build What Works</h3>
+              <p>Students learn how to think like designers</p>
+              <ul class="bullet-list outcome-points">
+                <li>Test ideas with real people</li>
+                <li>Use feedback to improve</li>
+                <li>Understand what works and why</li>
+              </ul>
+            </div>
+            <figure class="outcome-image">
+              <img src="assets/apps-n.jpg" alt="Students reviewing design ideas together" />
+            </figure>
+          </article>
+          <article class="outcome-row">
+            <div class="outcome-copy">
+              <h3 class="outcome-title">Build with AI</h3>
+              <p>Students use AI throughout the program to research, prototype, test, and improve ideas faster.</p>
+              <ul class="bullet-list outcome-points">
+                <li>Research markets</li>
+                <li>Analyze information and find opportunities</li>
+                <li>Model simple business cases</li>
+                <li>Create media and marketing</li>
+                <li>Build websites and app concepts</li>
+              </ul>
+            </div>
+            <figure class="outcome-image">
+              <img src="assets/vibe-coding.jpg" alt="Student presenting ideas in front of a group" />
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="radical-transparency">
+      <div class="section-banner teal">
+        <div class="wrap">
+          <h2>Built for Learning — Not Profit</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="radical-grid">
+          <div class="radical-side">
+            <div class="section-image">
+              <img src="assets/flywheel.jpg" alt="Students and instructors collaborating in class" />
+            </div>
+          </div>
+          <div class="radical-copy">
+            <p>The Money Club.Org is a nonprofit with open-book finances. No upsells. No hidden costs. Tuition goes directly into instruction, materials, and the student experience.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -3403,128 +3376,104 @@
     <section class="section" id="what-is-this">
       <div class="section-banner purple">
         <div class="wrap">
-          <h2>Pricing</h2>
+          <h2>Where the Program Happens</h2>
         </div>
       </div>
       <div class="section-content">
-        <div class="section-copy pricing-info-copy">
-          <div class="pricing-block">
-            <p><strong>2-Week Builder Sprint</strong><br />$550 + 13% HST<br />A focused introduction.</p>
-            <p><strong>4-Week Full Program</strong><br />The full experience.<br />$1,100 + 13% HST</p>
-            <p>Small-groups, 1 instructor x 10 participants, for ages 10&ndash;16.</p>
-            <p>Students use AI and mentor guidance to build, test, price, and improve products, services, and simple apps.</p>
+        <div class="split reverse">
+          <div class="section-media">
+            <div class="location-map-card">
+              <iframe
+                class="location-map"
+                title="Map showing UTSU Student Commons at 230 College Street in Toronto"
+                src="https://www.google.com/maps?q=UTSU%20Student%20Commons%2C%20230%20College%20Street%2C%20Toronto%2C%20ON%20M5T%201R2&z=15&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <div class="section-copy">
+            <p>The Money Club runs at the UTSU Student Commons in downtown Toronto.</p>
+            <p>Students learn in a small-group, classroom-based setting guided by paid University of Toronto student mentors.</p>
+            <p>Easy TTC access.</p>
+            <a data-cta-label="Learn More" class="btn teal gloss cta-standard" href="how-it-works.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <p><strong>Payment Options</strong></p>
+    <section class="section" id="how-it-works">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>What Do Students Build?</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="split">
+          <div class="section-copy">
+            <p>Students work on real ideas&mdash;not hypothetical projects.</p>
+            <p>They move from early concepts to something they can test in the real world.</p>
+            <p>Examples:</p>
             <ul class="bullet-list">
-              <li>Interac e-Transfer only &mdash; no card processing surcharge</li>
+              <li>A small product people might buy</li>
+              <li>A service that solves a real problem</li>
+              <li>A basic app or digital tool</li>
+              <li>Branding or marketing to support it</li>
             </ul>
-            <p><strong>Refund Policy</strong><br />Because The Money Club.Org is a lean nonprofit startup, program fees are non-refundable. Each registration directly supports the costs of running the program, including venue, materials, and University of Toronto student mentor wages.</p>
-
-            <p><strong>What's Included</strong></p>
-            <ul class="bullet-list">
-              <li>Instructor-led workshops and guided build sessions</li>
-              <li>Materials and supplies</li>
-              <li>A student project budget for testing and iteration</li>
-              <li>A final Maker Market where students pitch what they built and see what people choose</li>
-            </ul>
-
-            <div class="pricing-schedule-row">
-              <div class="pricing-schedule-copy">
-                <p><strong>Schedule</strong><br />Weekdays, 9:00 AM&ndash;5:00 PM<br />Core instruction: 9:30 AM&ndash;3:30 PM</p>
-                <p><strong>Session Dates</strong><br />Session 1: July 6&ndash;17<br />Session 2: August 4&ndash;15</p>
-                <p><strong>Location</strong><br />UTSU Student Commons<br />230 College Street<br />Toronto, ON<br /><br />Easy TTC access</p>
-              </div>
-              <div class="location-map-card">
-                <iframe
-                  class="location-map"
-                  title="Map showing UTSU Student Commons at 230 College Street in Toronto"
-                  src="https://www.google.com/maps?q=UTSU%20Student%20Commons%2C%20230%20College%20Street%2C%20Toronto%2C%20ON%20M5T%201R2&z=15&output=embed"
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+            <p>The goal: Build something&mdash;and see if people buy it.</p>
+            <div class="mobile-reserve-btn">
+              <a data-cta-label="Reserve a spot" class="btn gold gloss cta-standard" href="reserve-a-spot.html">Reserve a spot</a>
+            </div>
+          </div>
+          <div class="section-media">
+            <div class="section-image">
+              <picture>
+                <source media="(max-width: 980px)" srcset="assets/nn-kid-4.jpg" />
+                <img src="assets/n-kid-6.jpg" alt="Students presenting a UX design" />
+              </picture>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-banner full-bleed purple heading-white quickfacts-section" id="reserve">
+    <section class="section" id="choose-your-adventure">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>Learn More</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="adventure-grid">
+          <a class="adventure-link" data-cta-label="Curriculum" href="curriculum-details.html"><h3>Curriculum</h3></a>
+          <a class="adventure-link" data-cta-label="Build &amp; Sell" href="how-it-works.html"><h3>Build &amp; Sell</h3></a>
+          <a class="adventure-link" data-cta-label="Our Mission" href="who-runs-it.html"><h3>Our Mission</h3></a>
+          <a class="adventure-link" data-cta-label="Reserve a Spot" href="reserve-a-spot.html"><h3>Reserve a Spot</h3></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Reserve a Spot</h2>
+        <h2 id="join-the-interest-list">Free Info Session</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
       <div class="wrap">
         <div class="reservation-row registration-form-container">
           <div class="reservation-card">
-            <div class="form-success" id="form-success" role="status">Thanks! Your submission was received. We&apos;ll follow up by email.</div>
+            <p class="interest-subhead">📝 Get the Program Details</p>
+            <p class="interest-helper">Enter your email and we&rsquo;ll send a clear overview of how The Money Club.Org works, including the one-week schedule, curriculum, location, tuition, and registration steps.</p>
+            <div class="form-success" id="form-success" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
 <div class="form-loading" role="status" aria-live="polite">
   <div class="spinner" aria-hidden="true"></div>
   <div class="loading-text">Processing…</div>
 </div>
-            <form class="form-grid" action="start-parent-approval.php" method="post" novalidate>
-              <input type="hidden" name="return-to" value="parent-approval.html" />
-              <input type="hidden" name="return-error" value="pricing.html" />
-              <div class="step-block">
-                <h2 class="form-step-title">Step 1 &mdash; Choose Your Program</h2>
-              </div>
-              <div class="field">
-                <div class="program-grid">
-                  <label class="program-card">
-                    <input type="radio" name="program-track" value="two-week-builder-sprint" required />
-                    <p class="program-title">2-Week Builder Sprint</p>
-                    <p class="program-price">$550</p>
-                    <p class="program-line">A focused introduction.</p>
-                    <p class="program-line">Build and test one idea.</p>
-                  </label>
-                  <label class="program-card">
-                    <input type="radio" name="program-track" value="four-week-full-program" />
-                    <p class="program-title">4-Week Full Program</p>
-                    <p class="program-price">$1,100</p>
-                    <p class="program-line">The full experience.</p>
-                    <p class="program-line">Deeper build, more iteration, final showcase.</p>
-                  </label>
-                </div>
-                <small class="field-error">Please choose a program.</small>
-              </div>
-              <div class="step-block">
-                <h2 class="form-step-title">Step 2 &mdash; Choose Your Session</h2>
-              </div>
-              <div class="field">
-                <label class="section-heading">Available Sessions</label>
-                <div class="session-grid gloss-active">
-                  <label class="session-card" data-session-key="session1">
-                    <input type="radio" name="preferred-session" value="fw_jul_6_31" required />
-                    <div class="session-card-body">
-                      <div class="session-title" data-session-title data-session-key="session1">July 6&ndash;31</div>
-                    </div>
-                  </label>
-                  <label class="session-card" data-session-key="session2">
-                    <input type="radio" name="preferred-session" value="fw_aug_4_28" />
-                    <div class="session-card-body">
-                      <div class="session-title" data-session-title data-session-key="session2">Aug 4&ndash;28</div>
-                    </div>
-                  </label>
-                  <label class="session-card is-hidden" data-session-key="session3" hidden style="display:none;">
-                    <input type="radio" name="preferred-session" value="tw_jul_20_31" />
-                    <div class="session-card-body">
-                      <div class="session-title" data-session-title data-session-key="session3">July 20&ndash;31</div>
-                    </div>
-                  </label>
-                  <label class="session-card is-hidden" data-session-key="session4" hidden style="display:none;">
-                    <input type="radio" name="preferred-session" value="tw_aug_17_28" />
-                    <div class="session-card-body">
-                      <div class="session-title" data-session-title data-session-key="session4">Aug 17&ndash;28</div>
-                    </div>
-                  </label>
-                </div>
-                <small class="field-error">Please select a session.</small>
-              </div>
-              <div class="step-block">
-                <h2 class="form-step-title">Step 3 &mdash; Parent &amp; Student Details</h2>
-              </div>
-              <div class="field-row three-col">
+
+            <form class="form-grid" action="apply-interest.php" method="post" novalidate>
+              <input type="hidden" name="return-to" value="index.html" />
+              <input type="hidden" name="return-error" value="index.html" />
+              <div class="field-row two-col">
                 <div class="field">
                   <label for="parent-name">Parent / Guardian Name</label>
                   <input id="parent-name" name="parent-name" data-next="parent-email" type="text" autocomplete="name" required />
@@ -3532,45 +3481,22 @@
                 </div>
                 <div class="field">
                   <label for="parent-email">Email Address</label>
-                  <input id="parent-email" name="parent-email" data-next="parent-phone" type="email" autocomplete="email" required />
+                  <input id="parent-email" name="parent-email" type="email" autocomplete="email" required />
                   <small class="field-error">Enter a valid email address.</small>
                 </div>
-                <div class="field">
-                  <label for="parent-phone">Phone Number</label>
-                  <input id="parent-phone" name="parent-phone" data-next="student-name" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9\\s\\-()+]*" minlength="10" required />
-                  <small class="field-error">Phone number is required.</small>
-                </div>
               </div>
-              <div class="field-row two-col">
-                <div class="field">
-                  <label for="student-name">Child’s Name</label>
-                  <input id="student-name" name="student-name" data-next="student-age" type="text" autocomplete="name" required />
-                  <small class="field-error">Child’s name is required.</small>
-                </div>
-                <div class="field">
-                  <label for="student-age">Child’s Age</label>
-                  <input id="student-age" name="student-age" type="number" min="10" max="16" step="1" inputmode="numeric" required />
-                  <small class="field-error">Child’s age is required.</small>
-                </div>
-              </div>
-              <div class="field terms-consent">
-                <label for="terms-agree">
-                  <input id="terms-agree" name="terms-agree" type="checkbox" required />
-                  <span>I agree to the <a href="program-terms.html">Terms &amp; Payment Policy</a>.</span>
-                </label>
-                <small class="field-error">Please agree to the Terms &amp; Payment Policy.</small>
-              </div>
-              <div class="register-actions">
-                <button class="register-btn" type="submit" data-cta-label="Register">Register</button>
-                <button class="info-session-trigger-btn" type="button" data-open-info-session data-cta-label="Need More Info Sign Up for a Free Info Session">Need More Info? Learn How The Money Club.Org Works &mdash; Sign Up for a Free Info Session</button>
+              <div class="interest-submit-wrap">
+                <button class="btn teal gloss cta-standard interest-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
+                <small class="interest-trust-line">Downtown Toronto • UTSU Student Commons</small>
+                <a class="interest-register-link" href="/reserve-a-spot.html" data-cta-label="Complete registration here">Ready to register now? Complete registration here →</a>
               </div>
             </form>
           </div>
         </div>
       </div>
     </section>
-  
   </main>
+
   <script>
     (function(){
       var menuBtn = document.querySelector('.menu-btn');
@@ -3592,6 +3518,14 @@
         menuPanel.classList.add('is-open');
         menuPanel.setAttribute('aria-hidden', 'false');
         menuBtn.setAttribute('aria-expanded', 'true');
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'menu_open',
+          funnel_step: 'menu_open',
+          menu_name: 'mobile_menu',
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
       }
 
       function toggleMenu(){
@@ -3635,117 +3569,7 @@
   </script>
   <script>
     (function(){
-      var pagePath = window.location.pathname || '';
-      var pageTitle = document.title || '';
-      var formName = 'reserve_a_spot';
-      var registrationReadyTracked = false;
-
-      function pushFormEvent(payload){
-        if (!payload || !payload.event){ return; }
-        window.dataLayer = window.dataLayer || [];
-        if (!payload.form_name){ payload.form_name = formName; }
-        if (!payload.page_path){ payload.page_path = pagePath; }
-        if (!payload.page_title){ payload.page_title = pageTitle; }
-        window.dataLayer.push(payload);
-      }
-
-      function fireRegistrationFormStart(){
-        if (window.__tmcRegistrationFormStarted){ return; }
-        window.__tmcRegistrationFormStarted = true;
-        pushFormEvent({
-          event: 'registration_form_start',
-          form_id: 'registration',
-          funnel_step: 'form_start'
-        });
-      }
-
-      function getSelectedProgramTrack(){
-        var selectedProgram = document.querySelector('input[name="program-track"]:checked');
-        return selectedProgram ? selectedProgram.value : '';
-      }
-
-      function getSelectedSessionName(){
-        var selected = document.querySelector('input[name="preferred-session"]:checked');
-        return selected ? selected.value : '';
-      }
-
-      function getProgramConfig(programTrack){
-        var config = {
-          'two-week-builder-sprint': {
-            label: '2-Week Builder Sprint',
-            tuition: 550,
-            includes: 'Includes two weeks of instruction, materials, and a final demo.',
-            sessionOrder: {
-              session1: { value: 'tw_jul_6_17', label: 'July 6–17' },
-              session2: { value: 'tw_jul_20_31', label: 'July 20–31' },
-              session3: { value: 'tw_aug_4_15', label: 'Aug 4–15' },
-              session4: { value: 'tw_aug_17_28', label: 'Aug 17–28' }
-            },
-            sessions: {
-              tw_jul_6_17: 'July 6–17',
-              tw_jul_20_31: 'July 20–31',
-              tw_aug_4_15: 'Aug 4–15',
-              tw_aug_17_28: 'Aug 17–28'
-            }
-          },
-          'four-week-full-program': {
-            label: '4-Week Full Program',
-            tuition: 1100,
-            includes: 'Includes the full 4-week program, materials, and final presentation event.',
-            sessionOrder: {
-              session1: { value: 'fw_jul_6_31', label: 'July 6–31' },
-              session2: { value: 'fw_aug_4_28', label: 'Aug 4–28' }
-            },
-            sessions: {
-              fw_jul_6_31: 'July 6–31',
-              fw_aug_4_28: 'Aug 4–28'
-            }
-          }
-        };
-        return config[programTrack] || config['four-week-full-program'];
-      }
-
-      function getSelectedSessionLabel(){
-        var programTrack = getSelectedProgramTrack();
-        var sessionKey = getSelectedSessionName();
-        if (!sessionKey){ return ''; }
-        var config = getProgramConfig(programTrack);
-        return config.sessions[sessionKey] || sessionKey;
-      }
-
-      function persistSessionName(sessionName){
-        if (!sessionName){ return; }
-        try {
-          sessionStorage.setItem('tmc_registration_session_name', sessionName);
-        } catch (e) {}
-      }
-
-      function persistProgramTrack(programTrack){
-        if (!programTrack){ return; }
-        try {
-          sessionStorage.setItem('tmc_registration_program_track', programTrack);
-        } catch (e) {}
-      }
-
-      function getStoredValue(key){
-        try {
-          return sessionStorage.getItem(key) || '';
-        } catch (e) {
-          return '';
-        }
-      }
-
-      function pushRegistrationFormError(fieldName, message){
-        pushFormEvent({
-          event: 'registration_form_error',
-          form_id: 'registration',
-          error_field: fieldName || 'unknown',
-          error_message: message || 'Validation error',
-          funnel_step: 'form_error'
-        });
-      }
-
-      function updateFieldState(field, force){
+      function updateFieldState(field){
         if (!field){ return; }
         var radios = field.querySelectorAll('input[type="radio"]');
         var checkbox = field.querySelector('input[type="checkbox"]');
@@ -3760,34 +3584,19 @@
         } else if (input){
           valid = input.checkValidity();
         }
-        if (valid){
-          field.classList.remove('is-invalid');
-          return;
-        }
-        var showErrors = force || field.dataset.touched === 'true';
-        field.classList.toggle('is-invalid', showErrors);
+        field.classList.toggle('is-invalid', !valid);
       }
 
       var forms = document.querySelectorAll('.form-grid');
       forms.forEach(function(form){
-        form.addEventListener('focusin', function(e){
-          var target = e.target;
-          if (!target || !target.matches || !target.matches('input, select, textarea')){ return; }
-          fireRegistrationFormStart();
-        }, true);
-
         form.addEventListener('submit', function(e){
           var fields = form.querySelectorAll('.field');
           fields.forEach(function(field){
-            field.dataset.touched = 'true';
-            updateFieldState(field, true);
+            updateFieldState(field);
           });
           if (!form.checkValidity()){
             e.preventDefault();
             var firstInvalid = form.querySelector(':invalid');
-            if (firstInvalid){
-              pushRegistrationFormError(firstInvalid.name, firstInvalid.validationMessage);
-            }
             if (firstInvalid){
               firstInvalid.focus();
             }
@@ -3795,34 +3604,64 @@
         });
 
         form.addEventListener('input', function(e){
-          var target = e.target;
-          if (target && target.matches && target.matches('input, select, textarea')){
-            fireRegistrationFormStart();
-          }
-          updateFieldState(e.target.closest('.field'), false);
+          updateFieldState(e.target.closest('.field'));
           updateFlowState();
         });
 
         form.addEventListener('change', function(e){
-          updateFieldState(e.target.closest('.field'), false);
+          updateFieldState(e.target.closest('.field'));
           updateFlowState();
-        });
-
-        form.addEventListener('focusout', function(e){
-          var field = e.target.closest('.field');
-          if (field){
-            field.dataset.touched = 'true';
-            updateFieldState(field, true);
-          }
         });
       });
 
-      var programRadios = document.querySelectorAll('input[name="program-track"]');
+      var params = new URLSearchParams(window.location.search);
+      var successMessages = document.querySelectorAll('.form-success');
+      if (successMessages.length && params.get('status') === 'sent') {
+        successMessages.forEach(function(success){
+          success.classList.add('is-visible');
+        });
+        var successTarget = Array.prototype.find.call(successMessages, function(success){
+          return !!success.offsetParent;
+        }) || successMessages[0];
+        var successCard = successTarget.closest('.reservation-card');
+        if (successCard) {
+          successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+      if (params.get('status') === 'error') {
+        var fieldName = params.get('field');
+        var message = params.get('message') || 'Please check the highlighted field.';
+        if (fieldName) {
+          if (fieldName === 'payment-method') {
+            var paymentSection = document.querySelector('.payment-section');
+            if (paymentSection) {
+              paymentSection.classList.add('is-invalid');
+              var paymentError = paymentSection.querySelector('.field-error');
+              if (paymentError) {
+                paymentError.textContent = message;
+              }
+              paymentSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          } else {
+            var input = document.querySelector('[name=\"' + fieldName + '\"]');
+            if (input) {
+              var field = input.closest('.field');
+              if (field) {
+                field.classList.add('is-invalid');
+                var errorEl = field.querySelector('.field-error');
+                if (errorEl) {
+                  errorEl.textContent = message;
+                }
+                field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+            }
+          }
+        }
+      }
+
       var sessionRadios = document.querySelectorAll('input[name="preferred-session"]');
-      var registrationForm = document.querySelector('#reserve-a-spot form.form-grid');
-      var registerButton = registrationForm ? registrationForm.querySelector('.register-btn') : null;
+      var paymentButtons = document.querySelectorAll('.payment-option');
       var sessionGrid = document.querySelector('.session-grid');
-      var sessionTitleEls = document.querySelectorAll('[data-session-title]');
       var baseRequiredInputs = document.querySelectorAll('#parent-name, #parent-email, #parent-phone, #student-name, #student-age');
       var termsAgree = document.getElementById('terms-agree');
 
@@ -3841,40 +3680,6 @@
         });
       }
 
-      function programSelected(){
-        return Array.prototype.some.call(programRadios, function(radio){
-          return radio.checked;
-        });
-      }
-
-      function updateProgramDrivenContent(){
-        var selectedTrack = getSelectedProgramTrack();
-        var config = getProgramConfig(selectedTrack);
-        sessionTitleEls.forEach(function(titleEl){
-          var sessionSlot = titleEl.getAttribute('data-session-key');
-          if (!sessionSlot){ return; }
-          var card = titleEl.closest('.session-card');
-          var input = card ? card.querySelector('input[type="radio"]') : null;
-          var slotConfig = config.sessionOrder && config.sessionOrder[sessionSlot] ? config.sessionOrder[sessionSlot] : null;
-          if (slotConfig){
-            titleEl.textContent = slotConfig.label;
-            if (input){ input.value = slotConfig.value; }
-            if (card){
-              card.classList.remove('is-hidden');
-              card.hidden = false;
-              card.style.display = '';
-            }
-          } else {
-            if (input){ input.checked = false; }
-            if (card){
-              card.classList.add('is-hidden');
-              card.hidden = true;
-              card.style.display = 'none';
-            }
-          }
-        });
-      }
-
       function termsAgreed(){
         return !termsAgree || termsAgree.checked;
       }
@@ -3886,7 +3691,7 @@
       }
 
       function setSessionState(){
-        var canSelectSession = programSelected();
+        var canSelectSession = baseFieldsValid();
         if (sessionGrid){
           sessionGrid.classList.toggle('is-locked', !canSelectSession);
           sessionGrid.classList.toggle('gloss-active', canSelectSession && !sessionSelected());
@@ -3894,8 +3699,15 @@
         sessionRadios.forEach(function(radio){
           var card = radio.closest('.session-card');
           var isFull = card && card.classList.contains('is-full');
-          var isHidden = card && (card.classList.contains('is-hidden') || card.hidden);
-          radio.disabled = !canSelectSession || isFull || isHidden;
+          radio.disabled = !canSelectSession || isFull;
+        });
+      }
+
+      function setPaymentState(enabled){
+        paymentButtons.forEach(function(btn){
+          btn.classList.toggle('is-disabled', !enabled);
+          btn.classList.toggle('is-enabled', enabled);
+          btn.setAttribute('aria-disabled', String(!enabled));
         });
       }
 
@@ -3921,82 +3733,55 @@
         }
       }
 
-      function showProgramError(){
-        var programField = document.querySelector('.field .program-grid');
-        if (programField){
-          var field = programField.closest('.field');
-          if (field){
-            field.classList.add('is-invalid');
-          }
-          programField.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }
-
-      function getFirstInvalidBaseField(){
-        var invalid = null;
-        Array.prototype.some.call(baseRequiredInputs, function(input){
-          if (!input.checkValidity()){
-            invalid = input;
-            return true;
-          }
-          return false;
-        });
-        return invalid;
-      }
-
       function updateFlowState(){
-        updateProgramDrivenContent();
         setSessionState();
-        var canPay = programSelected() && baseFieldsValid() && sessionSelected() && termsAgreed();
-        if (registerButton){
-          registerButton.disabled = !canPay;
-          registerButton.setAttribute('aria-disabled', String(!canPay));
-        }
-        if (canPay && !registrationReadyTracked){
-          registrationReadyTracked = true;
-        }
+        var canPay = baseFieldsValid() && sessionSelected() && termsAgreed();
+        setPaymentState(canPay);
       }
 
       updateFlowState();
 
       function getProgramFeeValue(form){
-        var config = getProgramConfig(getSelectedProgramTrack());
-        var value = config && typeof config.tuition === 'number' ? config.tuition : 0;
-        return value > 0 ? value : 1100;
-      }
-      function pushRegistrationSubmitted(sessionName, programTrack){
-        pushFormEvent({
-          event: 'registration_form_submitted',
-          form_id: 'registration',
-          payment_method: 'etransfer_pending',
-          session_name: sessionName || 'unspecified',
-          program_track: programTrack || 'unspecified',
-          funnel_step: 'registration_pending_payment'
-        });
+        var paymentMeta = form ? form.querySelector('.payment-meta') : null;
+        var sourceText = paymentMeta ? paymentMeta.textContent : '';
+        var match = sourceText.match(/\$([0-9][0-9,]*(?:\.[0-9]{2})?)/);
+        if (!match){
+          return 1500;
+        }
+        var value = parseFloat(match[1].replace(/,/g, ''));
+        return isNaN(value) ? 1500 : value;
       }
 
-      programRadios.forEach(function(radio){
-        radio.addEventListener('change', function(){
-          var selectedProgram = radio.value || '';
-          persistProgramTrack(selectedProgram);
-          sessionRadios.forEach(function(sessionRadio){
-            sessionRadio.checked = false;
-          });
-          updateFlowState();
+      function pushBeginCheckout(form){
+        if (!form || form.dataset.beginCheckoutTracked === 'true'){
+          return;
+        }
+        form.dataset.beginCheckoutTracked = 'true';
+        window.dataLayer = window.dataLayer || [];
+        var value = getProgramFeeValue(form);
+        window.dataLayer.push({
+          event: 'begin_checkout',
+          form_name: 'reserve_a_spot',
+          funnel_step: 'begin_checkout',
+          payment_method: 'credit_card',
+          currency: 'CAD',
+          value: value,
+          items: [
+            {
+              item_id: 'money-club-summer-camp',
+              item_name: 'The Money Club.Org Summer Camp',
+              item_category: 'Summer Camp',
+              price: value,
+              quantity: 1
+            }
+          ],
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
         });
-      });
+      }
 
       sessionRadios.forEach(function(radio){
         radio.addEventListener('change', function(){
-          var sessionKey = radio.value || '';
-          var sessionName = getSelectedSessionLabel() || sessionKey;
-          persistSessionName(sessionName);
-          pushFormEvent({
-            event: 'session_select',
-            session_name: sessionName,
-            program_track: getSelectedProgramTrack() || 'unspecified',
-            funnel_step: 'session_selected'
-          });
           updateFlowState();
         });
       });
@@ -4005,67 +3790,48 @@
         sessionGrid.addEventListener('click', function(e){
           if (sessionGrid.classList.contains('is-locked')){
             e.preventDefault();
-            pushRegistrationFormError('program-track', 'Please select a program first.');
-            showProgramError();
+            showFirstInvalidField();
           }
         });
       }
 
-      if (registrationForm){
-        registrationForm.addEventListener('submit', function(e){
-          if (!programSelected()){
-            e.preventDefault();
-            pushRegistrationFormError('program-track', 'Please select a program.');
-            showProgramError();
-            return;
+      paymentButtons.forEach(function(btn){
+        btn.addEventListener('click', function(e){
+          var form = btn.form;
+          if (form) {
+            var returnTo = form.querySelector('[name="return-to"]');
+            var returnCancel = form.querySelector('[name="return-cancel"]');
+            var currentPage = window.location.pathname.split('/').pop() || 'reserve-a-spot.html';
+            if (returnCancel){ returnCancel.value = currentPage; }
+
+            if (btn.value === 'Credit Card') {
+              form.setAttribute('action', 'stripe-checkout.php');
+              if (returnTo){ returnTo.value = 'thank-you-credit-card.php'; }
+            } else {
+              form.setAttribute('action', 'apply-camper.php');
+              if (returnTo){ returnTo.value = 'etransfer.html'; }
+            }
           }
           if (!baseFieldsValid()){
             e.preventDefault();
-            var invalidBase = getFirstInvalidBaseField();
-            if (invalidBase){
-              pushRegistrationFormError(invalidBase.name, invalidBase.validationMessage);
-            }
             showFirstInvalidField();
             return;
           }
           if (!sessionSelected()){
             e.preventDefault();
-            pushRegistrationFormError('preferred-session', 'Please select a session.');
             showSessionError();
             return;
           }
           if (!termsAgreed()){
             e.preventDefault();
-            pushRegistrationFormError('terms-agree', 'Please agree to the Terms & Payment Policy.');
             showFirstInvalidField();
             return;
           }
-
-          var sessionName = getSelectedSessionLabel() || getSelectedSessionName();
-          var programTrack = getSelectedProgramTrack();
-          persistSessionName(sessionName);
-          persistProgramTrack(programTrack);
-          try {
-            sessionStorage.setItem('tmc_registration_payment_method', 'etransfer_pending');
-            sessionStorage.setItem('tmc_parent_approval_prefill', JSON.stringify({
-              parent_name: document.getElementById('parent-name') ? document.getElementById('parent-name').value.trim() : '',
-              parent_email: document.getElementById('parent-email') ? document.getElementById('parent-email').value.trim() : '',
-              parent_phone: document.getElementById('parent-phone') ? document.getElementById('parent-phone').value.trim() : '',
-              student_name: document.getElementById('student-name') ? document.getElementById('student-name').value.trim() : '',
-              student_age: document.getElementById('student-age') ? document.getElementById('student-age').value.trim() : '',
-              session: getSelectedSessionName(),
-              program_track: programTrack || ''
-            }));
-          } catch (err) {}
-
-          pushFormEvent({
-            event: 'payment_method_select',
-            payment_method: 'etransfer_pending',
-            funnel_step: 'payment_pending'
-          });
-          pushRegistrationSubmitted(sessionName, programTrack);
+          if (btn.value === 'Credit Card') {
+            pushBeginCheckout(form);
+          }
         });
-      }
+      });
     })();
   </script>
   <script>
@@ -4129,6 +3895,195 @@
           }
         });
       });
+    })();
+  </script>
+  <script>
+    (function(){
+      if (window.__tmcHomeTopFunnelInit){
+        return;
+      }
+      window.__tmcHomeTopFunnelInit = true;
+
+      function pushDataLayerEvent(payload){
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(payload);
+      }
+
+      var pagePath = window.location.pathname || '';
+      var pageTitle = document.title || '';
+
+      var scrollThresholds = [25, 50, 75];
+      var firedScroll = Object.create(null);
+      var maxScrollPercent = 0;
+
+      function getScrollPercent(){
+        var doc = document.documentElement;
+        var body = document.body;
+        var scrollTop = (window.pageYOffset || doc.scrollTop || body.scrollTop || 0);
+        var docHeight = Math.max(
+          doc.scrollHeight || 0,
+          body.scrollHeight || 0,
+          doc.offsetHeight || 0,
+          body.offsetHeight || 0
+        );
+        var viewportHeight = window.innerHeight || doc.clientHeight || 0;
+        var scrollable = docHeight - viewportHeight;
+        if (scrollable <= 0){
+          return 100;
+        }
+        var percent = (scrollTop / scrollable) * 100;
+        if (percent < 0){ return 0; }
+        if (percent > 100){ return 100; }
+        return percent;
+      }
+
+      function handleScrollDepth(){
+        maxScrollPercent = Math.max(maxScrollPercent, getScrollPercent());
+        scrollThresholds.forEach(function(threshold){
+          if (firedScroll[threshold] || maxScrollPercent < threshold){
+            return;
+          }
+          firedScroll[threshold] = true;
+          pushDataLayerEvent({
+            event: 'scroll_' + threshold,
+            funnel_step: 'scroll_' + threshold,
+            page_path: pagePath,
+            page_title: pageTitle,
+            scroll_percent: threshold
+          });
+        });
+      }
+
+      window.addEventListener('scroll', handleScrollDepth, { passive: true });
+      window.addEventListener('resize', handleScrollDepth);
+      window.addEventListener('load', handleScrollDepth);
+      handleScrollDepth();
+
+      // Reserve-area tracking semantics:
+      // - section_view(section_name=reserve_banner) tracks content progression (banner reached).
+      // - reserve_form_view tracks true form exposure.
+      // - GTM cleanup note: any legacy view_reserve_section trigger should target the form
+      //   inside #reserve-a-spot, not the #reserve banner.
+      var sections = [
+        { name: 'hero', el: document.getElementById('hero') },
+        { name: 'built-like-a-business', el: document.getElementById('built-like-a-business') },
+        { name: 'what-is-this', el: document.getElementById('what-is-this') },
+        { name: 'how-it-works', el: document.getElementById('how-it-works') },
+        { name: 'outcomes', el: document.getElementById('outcomes') },
+        { name: 'reserve_banner', el: document.getElementById('reserve') }
+      ].filter(function(item){
+        return !!item.el;
+      });
+
+      var seenSections = Object.create(null);
+
+      function trackSectionView(sectionName){
+        if (seenSections[sectionName]){
+          return;
+        }
+        seenSections[sectionName] = true;
+        pushDataLayerEvent({
+          event: 'section_view',
+          funnel_step: 'section_view',
+          section_name: sectionName,
+          page_path: pagePath,
+          page_title: pageTitle
+        });
+      }
+
+      if ('IntersectionObserver' in window){
+        var observer = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (!entry.isIntersecting || entry.intersectionRatio < 0.45){
+              return;
+            }
+            var sectionName = entry.target.getAttribute('data-section-name');
+            if (sectionName){
+              trackSectionView(sectionName);
+            }
+            observer.unobserve(entry.target);
+          });
+        }, {
+          threshold: [0.45]
+        });
+
+        sections.forEach(function(section){
+          section.el.setAttribute('data-section-name', section.name);
+          observer.observe(section.el);
+        });
+      } else {
+        function checkSectionsFallback(){
+          sections.forEach(function(section){
+            if (seenSections[section.name]){
+              return;
+            }
+            var rect = section.el.getBoundingClientRect();
+            var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+            var visiblePx = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+            var ratio = visiblePx / Math.max(rect.height, 1);
+            if (ratio >= 0.45){
+              trackSectionView(section.name);
+            }
+          });
+        }
+        window.addEventListener('scroll', checkSectionsFallback, { passive: true });
+        window.addEventListener('resize', checkSectionsFallback);
+        window.addEventListener('load', checkSectionsFallback);
+        checkSectionsFallback();
+      }
+
+      var reserveFormEl = document.querySelector('#reserve-a-spot form[action="apply-interest.php"]') ||
+        document.querySelector('#reserve-a-spot .reservation-card');
+      var reserveFormViewed = false;
+
+      function pushReserveFormView(){
+        if (reserveFormViewed){
+          return;
+        }
+        reserveFormViewed = true;
+        pushDataLayerEvent({
+          event: 'reserve_form_view',
+          funnel_step: 'reserve_form_view',
+          form_name: 'interest_form',
+          page_path: pagePath,
+          page_title: pageTitle
+        });
+      }
+
+      if (reserveFormEl){
+        if ('IntersectionObserver' in window){
+          var reserveFormObserver = new IntersectionObserver(function(entries){
+            entries.forEach(function(entry){
+              if (!entry.isIntersecting || entry.intersectionRatio < 0.5){
+                return;
+              }
+              pushReserveFormView();
+              reserveFormObserver.unobserve(entry.target);
+            });
+          }, {
+            threshold: [0.5]
+          });
+
+          reserveFormObserver.observe(reserveFormEl);
+        } else {
+          function checkReserveFormFallback(){
+            if (reserveFormViewed){
+              return;
+            }
+            var rect = reserveFormEl.getBoundingClientRect();
+            var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+            var visiblePx = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+            var ratio = visiblePx / Math.max(rect.height, 1);
+            if (ratio >= 0.5){
+              pushReserveFormView();
+            }
+          }
+          window.addEventListener('scroll', checkReserveFormFallback, { passive: true });
+          window.addEventListener('resize', checkReserveFormFallback);
+          window.addEventListener('load', checkReserveFormFallback);
+          checkReserveFormFallback();
+        }
+      }
     })();
   </script>
   <script>
@@ -4231,19 +4186,9 @@
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        var isReserveIntent = isReserveCta(target);
-        var payload = buildCtaPayload(target, 'cta_click');
-        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveIntent ? 'reserve_spot' : 'general');
-        window.dataLayer.push(payload);
-
-        if (isReserveIntent){
-          var normalizedLabel = normalizeText(getLabel(target));
-          var normalizedText = normalizeText(getText(target));
-          if (normalizedLabel === 'reserve a spot' || normalizedText === 'reserve a spot'){
-            var reservePayload = buildCtaPayload(target, 'reserve_spot_click');
-            reservePayload.cta_intent = 'reserve_spot';
-            window.dataLayer.push(reservePayload);
-          }
+        window.dataLayer.push(buildCtaPayload(target, 'cta_click'));
+        if (isReserveCta(target)){
+          window.dataLayer.push(buildCtaPayload(target, 'reserve_spot_click'));
         }
       }
 
@@ -4252,18 +4197,10 @@
         if (!target){
           return;
         }
-        // Exclude form submit controls from generic CTA tracking
-        // These are tracked separately via interest_form_* and registration_form_* events
+        // Exclude interest form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* events
         var interestForm = target.closest('form[action="apply-interest.php"]');
         if (interestForm){
-          return;
-        }
-        var submitForm = target.closest('form');
-        var isSubmitControl = !!submitForm && (
-          target.matches('button[type="submit"], input[type="submit"]') ||
-          (target.tagName === 'BUTTON' && (!target.type || target.type.toLowerCase() === 'submit'))
-        );
-        if (isSubmitControl){
           return;
         }
         if (!(
@@ -4301,78 +4238,35 @@
       }, true);
     })();
   </script>
-
   <script>
     (function(){
-      var openLinks = document.querySelectorAll('[data-open-info-session]');
-      var overlay = document.getElementById('info-session-overlay');
-      if (!openLinks.length || !overlay){ return; }
-      var closeBtn = overlay.querySelector('.info-session-close');
-      var modal = overlay.querySelector('.info-session-modal');
-      var modalIsOpen = overlay.classList.contains('is-open');
-      var activeTrigger = null;
-
-      function pushModalEvent(eventName, funnelStep){
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: eventName,
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: funnelStep,
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('status') !== 'sent'){
+        return;
+      }
+      var interestForm = document.querySelector('form[action="apply-interest.php"]');
+      if (!interestForm){
+        return;
       }
 
-      function openInfoSession(triggerEl){
-        if (modalIsOpen){ return; }
-        activeTrigger = triggerEl || null;
-        overlay.classList.add('is-open');
-        overlay.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('info-session-open');
-        modalIsOpen = true;
-        pushModalEvent('info_session_modal_open', 'modal_open');
-        if (closeBtn){
-          closeBtn.focus();
-        }
-      }
-
-      function closeInfoSession(){
-        if (!modalIsOpen){ return; }
-        overlay.classList.remove('is-open');
-        overlay.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('info-session-open');
-        modalIsOpen = false;
-        pushModalEvent('info_session_modal_close', 'modal_close');
-        if (activeTrigger && typeof activeTrigger.focus === 'function'){
-          activeTrigger.focus();
-        }
-      }
-
-      openLinks.forEach(function(openLink){
-        openLink.addEventListener('click', function(e){
-          e.preventDefault();
-          openInfoSession(openLink);
-        });
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'tmc_interest_form_success',
+        form_name: 'interest_form',
+        funnel_step: 'form_success',
+        page_path: window.location.pathname || '',
+        page_title: document.title || '',
+        form_context: 'homepage'
       });
 
-      if (closeBtn){
-        closeBtn.addEventListener('click', function(){
-          closeInfoSession();
-        });
-      }
-
-      overlay.addEventListener('click', function(e){
-        if (modal && !modal.contains(e.target)){
-          closeInfoSession();
-        }
-      });
-
-      document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && overlay.classList.contains('is-open')){
-          closeInfoSession();
-        }
-      });
+      params.delete('status');
+      params.delete('field');
+      params.delete('message');
+      var cleanQuery = params.toString();
+      var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
+      try {
+        window.history.replaceState({}, document.title, cleanUrl);
+      } catch (e) {}
     })();
   </script>
 
@@ -4383,42 +4277,63 @@
       var interestForms = document.querySelectorAll('form[action="apply-interest.php"]');
       if (!interestForms.length){ return; }
 
-      var params = new URLSearchParams(window.location.search);
-      if (params.get('status') === 'sent'){
-        params.delete('status');
-        params.delete('field');
-        params.delete('message');
-        var cleanQuery = params.toString();
-        var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
-        try {
-          window.history.replaceState({}, document.title, cleanUrl);
-        } catch (e) {}
-      }
+      function fireInterestFormStart(){
+        if (window.__tmcInterestFormStarted){ return; }
+        window.__tmcInterestFormStarted = true;
 
-      function hasValidInterestIdentity(form){
-        if (!form){ return false; }
-        var nameInput = form.querySelector('input[name="parent-name"]');
-        var emailInput = form.querySelector('input[name="parent-email"]');
-        if (!nameInput || !emailInput){ return false; }
-        var nameValue = (nameInput.value || '').trim();
-        var emailValue = (emailInput.value || '').trim();
-        return nameValue.length > 0 && emailValue.length > 0 && emailInput.checkValidity();
+        window.dataLayer.push({
+          event: 'interest_form_start',
+          form_name: 'interest_form',
+          funnel_step: 'form_start',
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
       }
 
       function pushInterestFormSubmit(){
         window.dataLayer.push({
           event: 'interest_form_submit',
           form_name: 'interest_form',
-          form_id: 'interest',
           funnel_step: 'form_submit',
           page_path: window.location.pathname || '',
           page_title: document.title || ''
         });
       }
 
+      function pushInterestFormError(fieldName, message){
+        window.dataLayer.push({
+          event: 'interest_form_error',
+          error_field: fieldName || 'unknown',
+          error_message: message || 'Validation error',
+          form_name: 'interest_form',
+          funnel_step: 'form_error',
+          page_path: window.location.pathname || '',
+          page_title: document.title || ''
+        });
+      }
+
       interestForms.forEach(function(interestForm){
+        interestForm.addEventListener('focusin', function(e){
+          var target = e.target;
+          if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
+          fireInterestFormStart();
+        }, true);
+
+        interestForm.addEventListener('input', function(e){
+          var target = e.target;
+          if (!target || !target.matches || !target.matches('input, textarea, select')){ return; }
+          fireInterestFormStart();
+        }, true);
+
         interestForm.addEventListener('submit', function(){
-          if (!interestForm.checkValidity() || !hasValidInterestIdentity(interestForm)){
+          if (!interestForm.checkValidity()){
+            var firstInvalid = interestForm.querySelector(':invalid');
+
+            pushInterestFormError(
+              firstInvalid ? firstInvalid.name : 'unknown',
+              firstInvalid ? firstInvalid.validationMessage : 'Validation error'
+            );
+
             return;
           }
 
@@ -4428,6 +4343,5 @@
     })();
   </script>
 
-  <script src="assets/form-protection.js?v=1" defer></script>
 </body>
 </html>

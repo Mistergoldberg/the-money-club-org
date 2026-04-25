@@ -845,18 +845,19 @@
     #built-like-a-business .program-summary-points{
       display: grid;
       gap: 12px;
-      margin: 0 0 22px;
+      width: min(100%, 620px);
+      margin: 0 auto 22px;
       padding-top: 18px;
       border-top: 1px solid var(--line);
     }
     #built-like-a-business .program-summary-point{
       display: grid;
-      grid-template-columns: 1.4em minmax(0, 1fr);
+      grid-template-columns: 1.6em minmax(0, 1fr);
       align-items: start;
-      column-gap: 10px;
+      column-gap: 12px;
       line-height: 1.28;
-      width: fit-content;
-      margin: 0 auto;
+      width: 100%;
+      margin: 0;
     }
     #built-like-a-business .program-summary-point-icon{
       display: block;
@@ -1203,6 +1204,14 @@
     }
     #who-runs-it .section-copy{
       max-width: min(100%, 78rem);
+    }
+    #who-runs-it .split{
+      align-items: stretch;
+    }
+    #who-runs-it .section-media{
+      align-self: stretch;
+      display: flex;
+      min-height: 0;
     }
     #outcomes .section-content{
       display: grid;
@@ -2161,19 +2170,20 @@
     #mobile-program-overview .program-summary-points{
       display: grid;
       gap: 12px;
-      margin: 0 0 22px;
+      width: min(100%, 620px);
+      margin: 0 auto 22px;
       padding-top: 18px;
       border-top: 1px solid var(--line);
     }
     #radical-transparency .program-summary-point,
     #mobile-program-overview .program-summary-point{
       display: grid;
-      grid-template-columns: 1.4em minmax(0, 1fr);
+      grid-template-columns: 1.6em minmax(0, 1fr);
       align-items: start;
-      column-gap: 10px;
+      column-gap: 12px;
       line-height: 1.28;
-      width: fit-content;
-      margin: 0 auto;
+      width: 100%;
+      margin: 0;
     }
     #radical-transparency .program-summary-point-icon,
     #mobile-program-overview .program-summary-point-icon{
@@ -2490,6 +2500,30 @@
       right: 8%;
       bottom: 8%;
       z-index: 2;
+    }
+    #who-runs-it .profile-stack[aria-label="Jared Goldberg"]{
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      aspect-ratio: auto;
+      display: block;
+    }
+    #who-runs-it .profile-stack[aria-label="Jared Goldberg"] .profile-photo{
+      position: static;
+      width: 100%;
+      height: 100%;
+      min-width: 0;
+      max-width: none;
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: auto;
+      margin: 0;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      object-fit: cover;
+      object-position: center top;
+      box-shadow: 0 12px 24px rgba(17,17,17,0.1);
     }
 
     .note{
@@ -3268,29 +3302,19 @@
       }
       main > .hero{ order: 10; }
       main > #built-like-a-business{ order: 20; }
-      main > .mobile-inline-interest{ order: 24; }
-      main > #build-price-sell-mobile{ order: 28; }
-      main > #mobile-program-overview{ order: 29; }
-      main > #radical-transparency{ order: 30; }
-      main > #how-it-works{ order: 40; }
-      main > #the-flywheel{ order: 45; }
-      main > #who-runs-it{ order: 50; }
-      main > #outcomes{ order: 52; }
-      main > #mobile-kickstart{ order: 53; }
-      main > #curriculum{ order: 55; }
-      main > #what-is-this{ order: 60; }
-      main > #what-students-leave-with{ order: 70; }
-      main > #camp-guides{ order: 80; }
-      main > #reserve.section-banner{ order: 90; }
-      main > #reserve-a-spot{ order: 100; }
-      main > #choose-your-adventure{ order: 110; }
+      main > #outcomes{ order: 30; }
+      main > #who-runs-it{ order: 40; }
+      main > #what-is-this{ order: 50; }
+      main > #choose-your-adventure{ order: 60; }
+      main > #reserve.section-banner{ order: 70; }
+      main > #reserve-a-spot{ order: 80; }
 
       .mobile-program-overview,
       .mobile-build-price-sell{
-        display: block;
+        display: none;
       }
       .mobile-kickstart{
-        display: block;
+        display: none;
       }
       #radical-transparency .radical-summary-row,
       #radical-transparency .funding-threshold-block{
@@ -3417,9 +3441,6 @@
       #reserve.section-banner{
         margin-top: 40px;
       }
-      #choose-your-adventure{
-        display: none;
-      }
       .section-banner{
         padding: 16px 0;
       }
@@ -3478,6 +3499,15 @@
       .profile-photo.alex{
         right: 0;
         bottom: 2%;
+      }
+      #who-runs-it .profile-stack[aria-label="Jared Goldberg"]{
+        width: min(100%, 360px);
+        height: auto;
+        aspect-ratio: 4 / 5;
+      }
+      #who-runs-it .profile-stack[aria-label="Jared Goldberg"] .profile-photo{
+        width: 100%;
+        height: 100%;
       }
       .who-runs-gallery{
         position: relative;
@@ -3745,9 +3775,6 @@
       .mobile-inline-interest .field-row.two-col{
         grid-template-columns: 1fr;
       }
-      #choose-your-adventure{
-        display: none;
-      }
       #choose-your-adventure .adventure-grid{
         grid-template-columns: 1fr;
         gap: 0;
@@ -3810,10 +3837,8 @@
         <div class="menu-links">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Open-Book Financials</a>
-        <a href="who-runs-it.html">Who Runs It</a>
+        <a href="who-runs-it.html">Our Mission</a>
         <a href="article-best-summer-camps.html">Camp Guides</a>
-        <a href="faq.html">FAQ</a>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -3822,9 +3847,7 @@
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="pricing.html">Open-Book Financials</a>
-        <a href="who-runs-it.html">Who Runs It</a>
-        <a href="faq.html">FAQ</a>
+        <a href="who-runs-it.html">Our Mission</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -3881,17 +3904,16 @@
     <section class="section mobile-program-overview" id="mobile-program-overview">
       <div class="section-content">
         <div class="mobile-program-overview-card program-summary">
-          <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons | Summer 2026</span></div>
+          <div class="program-summary-meta"><span class="program-summary-keep">Program Details</span></div>
           <div class="program-summary-points">
-            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text">Ages 10–16</span></div>
-            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July - Aug</span></div>
-            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">9–5 daily</span></div>
-            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
-            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">4-Weeks = $1,100</span></div>
-            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💵</span><span class="program-summary-point-text">2-Weeks = $550</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text"><strong>Location</strong><br />UTSU Student Commons<br />230 College Street, Toronto</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text"><strong>Dates</strong><br />August 10&ndash;14</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text"><strong>Program Size</strong><br />Limited to 30 participants</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧠</span><span class="program-summary-point-text"><strong>Who It&rsquo;s For</strong><br />Computer-literate students</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text"><strong>Tuition</strong><br />$200 + HST</span></div>
           </div>
           <div class="program-summary-cta-group">
-            <p class="program-summary-cta-title">Free Info Session &mdash; Learn About The Money Club.Org</p>
+            <p class="program-summary-cta-title">📝 Get the Program Details<br />Learn how the one-week sprint works</p>
             <div class="program-summary-cta-actions">
               <a class="btn teal gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
             </div>
@@ -3900,208 +3922,50 @@
       </div>
     </section>
 
-    <section class="section" id="radical-transparency">
-      <div class="section-banner teal">
+    <section class="section" id="built-like-a-business">
+      <div class="section-banner purple" aria-hidden="true">
         <div class="wrap">
-          <h2>Built for learning — not profit</h2>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="radical-grid">
-          <div class="radical-copy">
-            <h3>The Money Club.Org is a community-first program.</h3>
-            <p>It is <strong>not designed to maximize profit</strong>. It is designed to <strong>teach financial literacy by example</strong>.</p>
-            <p>That's why we run the program using <strong>open-book financials</strong> — so families can see <strong>exactly where tuition goes</strong>, and students can learn by watching money move through a real system.</p>
-            <div class="openbook-pie-card openbook-pie-card--mobile" aria-label="Program budget distribution chart">
-              <h3 class="openbook-subheading">Expenses <span class="openbook-subtitle">Where tuition goes for a 10-student cohort</span></h3>
-              <p class="openbook-helper">Most revenue goes directly to mentors and program delivery.</p>
-              <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 50.4%, Venue Rental 32.3%, Marketing 7.9%, Program Materials 4.9%, Insurance 4.1%, Overhead 0.4%">
-                <div class="openbook-pie-center">
-                  <span class="label">Total</span>
-                  <span class="value">$60,670</span>
-                </div>
-              </div>
-              <ul class="openbook-legend">
-                <li>
-                  <span class="legend-dot" style="background: var(--purple);"></span>
-                  <span class="legend-label">Instructors <span class="legend-amount">$30,558</span></span>
-                  <span class="legend-value">50.4%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--gold);"></span>
-                  <span class="legend-label">Venue Rental <span class="legend-amount">$19,567</span></span>
-                  <span class="legend-value">32.3%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--rose);"></span>
-                  <span class="legend-label">Marketing <span class="legend-amount">$4,780</span></span>
-                  <span class="legend-value">7.9%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--teal);"></span>
-                  <span class="legend-label">Program Materials <span class="legend-amount">$3,000</span></span>
-                  <span class="legend-value">4.9%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--ink);"></span>
-                  <span class="legend-label">Insurance <span class="legend-amount">$2,500</span></span>
-                  <span class="legend-value">4.1%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--slate);"></span>
-                  <span class="legend-label">Overhead <span class="legend-amount">$264</span></span>
-                  <span class="legend-value">0.4%</span>
-                </li>
-              </ul>
-            </div>
-            <div class="desktop-radical-model">
-              <p>The Money Club.Org is a <strong>startup-style summer program</strong> where kids learn how money moves by building real products through guided sprints. <strong>Every dollar is visible.</strong> Kids receive a <strong>$50 build budget</strong> each student uses to build, price, and sell in the real world.</p>
-              <p><strong>This is the model:</strong></p>
-              <ul class="radical-list">
-                <li><strong>kids learn financial literacy through radical transparency</strong></li>
-                <li><strong>mentors get meaningful paid work</strong></li>
-                <li><strong>families help kickstart a local feedback loop of learning, demand, and community value</strong></li>
-              </ul>
-              <p><strong>Our problem statement:</strong> We are trying to prove that a <strong>small, transparent nonprofit</strong> can create <strong>real value for kids</strong> and <strong>meaningful work for University of Toronto student mentors</strong>.</p>
-            </div>
-            <div class="funding-threshold-block">
-              <div class="kickstart-us-banner">
-                <h3>Help Us Kickstart</h3>
-              </div>
-              <p>To run this summer, we need to secure <strong>$61,000</strong> in paid parent participation by <strong>June 1</strong>.</p>
-              <p><strong>That means either:</strong></p>
-              <ul class="radical-list">
-                <li><strong>60 four-week registrations, or</strong></li>
-                <li><strong>120 two-week sprints</strong></li>
-              </ul>
-              <p>Founder Jared Goldberg is personally contributing <strong>$15,000</strong> toward the <strong>$61,000</strong> goal to help get the program off the ground.</p>
-              <p>If we hit the threshold, we run.</p>
-              <p>If not, we build more and try again.</p>
-            </div>
-          </div>
-          <div class="radical-side">
-            <div class="openbook-pie-card openbook-pie-card--desktop" aria-label="Program budget distribution chart">
-              <h3 class="openbook-subheading">Expenses <span class="openbook-subtitle">Costs to run the program at the UTSU Student Commons, July & August, with 3 university mentors.</span></h3>
-              <p class="openbook-helper">Most revenue goes directly to mentors and program delivery.</p>
-              <div class="openbook-pie" role="img" aria-label="Expense distribution: Instructors 50.4%, Venue Rental 32.3%, Marketing 7.9%, Program Materials 4.9%, Insurance 4.1%, Overhead 0.4%">
-                <div class="openbook-pie-center">
-                  <span class="label">Total</span>
-                  <span class="value">$60,670</span>
-                </div>
-              </div>
-              <ul class="openbook-legend">
-                <li>
-                  <span class="legend-dot" style="background: var(--purple);"></span>
-                  <span class="legend-label">Instructors <span class="legend-amount">$30,558</span></span>
-                  <span class="legend-value">50.4%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--gold);"></span>
-                  <span class="legend-label">Venue Rental <span class="legend-amount">$19,567</span></span>
-                  <span class="legend-value">32.3%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--rose);"></span>
-                  <span class="legend-label">Marketing <span class="legend-amount">$4,780</span></span>
-                  <span class="legend-value">7.9%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--teal);"></span>
-                  <span class="legend-label">Program Materials <span class="legend-amount">$3,000</span></span>
-                  <span class="legend-value">4.9%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--ink);"></span>
-                  <span class="legend-label">Insurance <span class="legend-amount">$2,500</span></span>
-                  <span class="legend-value">4.1%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: var(--slate);"></span>
-                  <span class="legend-label">Overhead <span class="legend-amount">$264</span></span>
-                  <span class="legend-value">0.4%</span>
-                </li>
-              </ul>
-            </div>
-            <div class="openbook-pie-card kickstarter-card" aria-label="Kickstarter funding progress">
-              <h3 class="openbook-subheading"><span class="kickstarter-heading-label">Kickstarter</span><span class="openbook-subtitle kickstarter-heading-subtitle">$61,000 Goal</span><span class="kickstarter-heading-mobile">$61,000 Goal</span></h3>
-              <p class="openbook-helper kickstarter-goal-date">Goal Date: June 1st.</p>
-              <div class="openbook-pie kickstarter-pie" role="img" aria-label="Kickstarter funding progress: $15,000 funded (24.6%) and $46,000 remaining (75.4%).">
-                <div class="openbook-pie-center">
-                  <span class="label">Funded</span>
-                  <span class="value">$15,000</span>
-                </div>
-              </div>
-              <ul class="openbook-legend">
-                <li>
-                  <span class="legend-dot" style="background: var(--purple);"></span>
-                  <span class="legend-label">Funded <span class="legend-amount">$15,000</span></span>
-                  <span class="legend-value">24.6%</span>
-                </li>
-                <li>
-                  <span class="legend-dot" style="background: #6f7f8d;"></span>
-                  <span class="legend-label">Remaining <span class="legend-amount">$46,000</span></span>
-                  <span class="legend-value">75.4%</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="share-help-row">
-        </div>
-        <div class="radical-summary-row">
-          <div class="program-summary">
-            <div class="program-summary-meta"><span class="program-summary-keep">UTSU Student Commons | Summer 2026</span></div>
-            <div class="program-summary-points">
-              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text">Ages 10–16</span></div>
-              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text">July - Aug</span></div>
-              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🕘</span><span class="program-summary-point-text">9–5 daily</span></div>
-              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text">230 College Street</span></div>
-              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text">4-Weeks = $1,100</span></div>
-              <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💵</span><span class="program-summary-point-text">2-Weeks = $550</span></div>
-            </div>
-            <div class="program-summary-cta-group">
-              <p class="program-summary-cta-title">Free Info Session &mdash; Learn About The Money Club.Org</p>
-              <div class="program-summary-cta-actions">
-                <a class="btn teal gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
-                <a href="#" id="share-opportunity-btn" class="btn gold gloss cta-fill cta-share" data-cta-label="Share Program Details">Share Program Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="who-runs-it">
-      <div class="section-banner teal">
-        <div class="wrap">
-          <h2>Who Runs It</h2>
+          <h2>Build. Price. Sell.</h2>
         </div>
       </div>
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <div><strong>Student-led support (adult-supervised)</strong></div>
-            <p>The Money Club.Org is operated by its student leadership team: Sarah D. and Alex G., both students at Humberside Collegiate Institute.</p>
-            <div><strong>Designed by a practitioner</strong></div>
-            <p>The Money Club.Org was designed by Jared Goldberg — a product strategist, systems designer, and educator with 15+ years building real-world business platforms.</p>
+            <h3>Built for learning &mdash; not profit</h3>
+            <p>Many kids already earn money in small ways&mdash;babysitting, tutoring, selling things.</p>
+            <p>The Money Club.Org takes that instinct further - it&rsquo;s a startup-style program where kids learn how money moves by building real products through guided sprints.</p>
+            <p>Kids receive a $50 build budget to research ideas, create prototypes, test them, and learn what happens when an idea meets the real world.</p>
+            <p>That&rsquo;s how they learn:</p>
             <ul class="bullet-list">
-              <li>Walmart, Loblaw, and Canadian Tire</li>
-              <li>10+ years in China-based manufacturing ecosystems</li>
-              <li>Economics, incentives, design thinking, and human behavior</li>
+              <li>what makes something valuable</li>
+              <li>how pricing works</li>
+              <li>why some ideas hold up&mdash;and others don&rsquo;t</li>
             </ul>
+            <p>This is financial literacy, design thinking, and AI&mdash;applied in practice.</p>
           </div>
-          <div class="section-media">
-            <div class="profile-stack" aria-label="Jared Goldberg, Sarah Duong, and Alex Goldberg">
-              <img class="profile-photo jared" src="assets/Jared-Profile.png" alt="Jared Goldberg" />
-              <img class="profile-photo sarah" src="assets/sarah.png" alt="Sarah Duong" />
-              <img class="profile-photo alex" src="assets/alex.png" alt="Alex Goldberg" />
+          <div class="cta-stack cta-stack--hero">
+            <div class="program-summary">
+              <div class="program-summary-meta"><span class="program-summary-keep">Program Details</span></div>
+              <div class="program-summary-points">
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text"><strong>Location</strong><br />UTSU Student Commons<br />230 College Street, Toronto</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text"><strong>Dates</strong><br />August 10&ndash;14</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text"><strong>Program Size</strong><br />Limited to 30 participants</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧠</span><span class="program-summary-point-text"><strong>Who It&rsquo;s For</strong><br />Computer-literate students</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text"><strong>Tuition</strong><br />$200 + HST</span></div>
+              </div>
+              <div class="program-summary-cta-group">
+                <p class="program-summary-cta-title">📝 Get the Program Details<br />Learn how the one-week sprint works</p>
+                <div class="program-summary-cta-actions">
+                  <a class="btn teal gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="outcomes">
+	    <section class="section" id="outcomes">
       <div class="section-banner purple">
         <div class="wrap">
           <h2>Outcomes</h2>
@@ -4155,7 +4019,39 @@
           </article>
         </div>
       </div>
-    </section>
+	    </section>
+
+	    <section class="section" id="who-runs-it">
+	      <div class="section-banner teal">
+	        <div class="wrap">
+	          <h2>Who Runs It</h2>
+	        </div>
+	      </div>
+	      <div class="section-content">
+	        <div class="split">
+	          <div class="section-copy">
+	            <div><strong>Everyone deserves a mentor.</strong></div>
+	            <ul class="bullet-list">
+	              <li>How to think about money.</li>
+	              <li>How to spot value.</li>
+	              <li>How to build something people actually want.</li>
+	              <li>How to price it.</li>
+	              <li>How to sell it.</li>
+	              <li>How to recover when the first idea does not work.</li>
+	            </ul>
+	            <p>The Money Club.Org is designed and led by Jared Goldberg — a product strategist and systems designer with 15+ years of experience building real-world business platforms.</p>
+	            <p>The curriculum comes from the work itself: product development, retail, manufacturing, pricing, incentives, design thinking, and human behavior.</p>
+	            <p>Jared has worked across Walmart, Loblaw, Canadian Tire, and China-based manufacturing ecosystems.</p>
+	            <p>This August, he is running The Money Club as a focused one-week sprint: a practical, mentor-led program for students learning how ideas become real.</p>
+	          </div>
+	          <div class="section-media">
+	            <div class="profile-stack" aria-label="Jared Goldberg">
+	              <img class="profile-photo jared" src="assets/Jared-Profile.png" alt="Jared Goldberg" />
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </section>
 
     <section class="section mobile-kickstart" id="mobile-kickstart">
       <div class="section-banner teal">
@@ -4203,9 +4099,9 @@
     <div class="info-session-overlay" id="info-session-overlay" aria-hidden="true">
       <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
         <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
-        <h2 class="info-session-title" id="info-session-title">Free Info Session &mdash; Learn About The Money Club.Org</h2>
-        <p class="info-session-meta">📅 April 18 • Live video session • ~30 minutes</p>
-        <p class="info-session-helper">Save your spot and we&rsquo;ll send the session link and program details. No payment required.</p>
+        <h2 class="info-session-title" id="info-session-title">Learn How The Money Club.Org Works</h2>
+        <p class="info-session-meta">📝 Get the Program Details</p>
+        <p class="info-session-helper">Enter your email and we&rsquo;ll send a clear overview of how The Money Club.Org works, including the one-week schedule, curriculum, location, tuition, and registration steps.</p>
         <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
           <input type="hidden" name="return-to" value="index.html" />
           <input type="hidden" name="return-error" value="index.html" />
@@ -4263,8 +4159,7 @@
         <div class="adventure-grid">
           <a class="adventure-link" data-cta-label="Curriculum" href="curriculum-details.html"><h3>Curriculum</h3></a>
           <a class="adventure-link" data-cta-label="Build &amp; Sell" href="how-it-works.html"><h3>Build &amp; Sell</h3></a>
-          <a class="adventure-link" data-cta-label="Who Runs It" href="who-runs-it.html"><h3>Who Runs It</h3></a>
-          <a class="adventure-link" data-cta-label="FAQs" href="faq.html"><h3>FAQs</h3></a>
+          <a class="adventure-link" data-cta-label="Our Mission" href="who-runs-it.html"><h3>Our Mission</h3></a>
           <a class="adventure-link" data-cta-label="Reserve a Spot" href="reserve-a-spot.html"><h3>Reserve a Spot</h3></a>
         </div>
       </div>
@@ -4272,15 +4167,15 @@
 
     <section class="section-banner full-bleed purple heading-white" id="reserve">
       <div class="wrap">
-        <h2 id="join-the-interest-list">Free Info Session &mdash; Learn About The Money Club.Org</h2>
+        <h2 id="join-the-interest-list">Learn How The Money Club.Org Works</h2>
       </div>
     </section>
     <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
       <div class="wrap">
         <div class="reservation-row registration-form-container">
           <div class="reservation-card">
-            <p class="interest-subhead">📅 April 18 • Live video • 30 minutes</p>
-            <p class="interest-helper">We&apos;ll walk through the program and answer questions. Save your spot and we&apos;ll send the link.</p>
+            <p class="interest-subhead">📝 Get the Program Details</p>
+            <p class="interest-helper">Enter your email and we&rsquo;ll send a clear overview of how The Money Club.Org works, including the one-week schedule, curriculum, location, tuition, and registration steps.</p>
             <div class="form-success" id="form-success" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
 <div class="form-loading" role="status" aria-live="polite">
   <div class="spinner" aria-hidden="true"></div>
@@ -4304,7 +4199,7 @@
               </div>
               <div class="interest-submit-wrap">
                 <button class="btn teal gloss cta-standard interest-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
-                <small class="interest-trust-line">Small groups • Ages 10–16 • Downtown Toronto • UTSU Student Commons • Snacks provided</small>
+                <small class="interest-trust-line">Downtown Toronto • UTSU Student Commons</small>
                 <a class="interest-register-link" href="/reserve-a-spot.html" data-cta-label="Complete registration here">Ready to register now? Complete registration here →</a>
               </div>
             </form>
@@ -4431,10 +4326,46 @@
         pushModalEvent('info_session_modal_close', 'modal_close');
       }
 
+      var openAfterScrollPending = false;
+      function outcomesInView(){
+        if (!outcomesSection){ return true; }
+        var rect = outcomesSection.getBoundingClientRect();
+        var viewportH = window.innerHeight || document.documentElement.clientHeight || 0;
+        if (!viewportH){ return true; }
+        return rect.top <= viewportH * 0.65 && rect.bottom >= viewportH * 0.15;
+      }
+
+      function scrollToOutcomesThenOpen(){
+        if (!outcomesSection){
+          openInfoSession('manual');
+          return;
+        }
+        if (openAfterScrollPending){
+          return;
+        }
+
+        openAfterScrollPending = true;
+        outcomesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        var startedAt = Date.now();
+        (function tryOpenAfterScroll(){
+          if (modalIsOpen){
+            openAfterScrollPending = false;
+            return;
+          }
+          if (outcomesInView() || (Date.now() - startedAt) > 1600){
+            openInfoSession('manual');
+            openAfterScrollPending = false;
+            return;
+          }
+          window.requestAnimationFrame(tryOpenAfterScroll);
+        })();
+      }
+
       openLinks.forEach(function(openLink){
         openLink.addEventListener('click', function(e){
           e.preventDefault();
-          openInfoSession('manual');
+          scrollToOutcomesThenOpen();
         });
       });
 
