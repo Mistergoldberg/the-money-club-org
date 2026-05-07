@@ -1,0 +1,490 @@
+/*
+  Reusable worksheet form system for The Money Club.
+  Depends on the site tokens when available: --line, --teal, --purple, --gold,
+  --muted, --text, --font-body, --lh-body.
+*/
+
+.worksheet-form{
+  display: grid;
+  gap: clamp(18px, 3vw, 28px);
+  counter-reset: worksheet-part;
+}
+
+.worksheet-form > section{
+  counter-increment: worksheet-part;
+  display: grid;
+  gap: 16px;
+  border: 1px solid var(--line, #e5e1da);
+  border-radius: 18px;
+  background: #fffdf9;
+  padding: clamp(16px, 2.4vw, 24px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+}
+
+.worksheet-form > section > p{
+  max-width: 76ch;
+}
+
+.worksheet-form > section::before{
+  content: "Part " counter(worksheet-part);
+  width: max-content;
+  border: 1px solid var(--line, #e5e1da);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--muted, #3d3d3d);
+  padding: 7px 13px;
+  font-size: clamp(20px, 1.8vw, 23px);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.thankyou-card .worksheet-form h2.article-band-heading{
+  display: block;
+  margin: 0 -16px 2px;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: 14px;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 0.86;
+  text-align: left;
+}
+
+.worksheet-learning-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: clamp(18px, 3vw, 28px);
+  align-items: start;
+}
+
+.worksheet-flow{
+  display: grid;
+  gap: clamp(18px, 3vw, 28px);
+  min-width: 0;
+}
+
+.worksheet-flow > section{
+  counter-increment: worksheet-part;
+  display: grid;
+  gap: 16px;
+  border: 1px solid var(--line, #e5e1da);
+  border-radius: 18px;
+  background: #fffdf9;
+  padding: clamp(16px, 2.4vw, 24px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+}
+
+.worksheet-flow > section > p{
+  max-width: 76ch;
+}
+
+.worksheet-flow > section::before{
+  content: "Part " counter(worksheet-part);
+  width: max-content;
+  border: 1px solid var(--line, #e5e1da);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--muted, #3d3d3d);
+  padding: 7px 13px;
+  font-size: clamp(20px, 1.8vw, 23px);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.worksheet-calculator{
+  position: sticky;
+  top: calc(var(--topbar-height, 72px) + 18px);
+  display: grid;
+  gap: 14px;
+  border: 2px solid var(--teal, #1e8a95);
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 16px;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+.worksheet-calculator h2,
+.worksheet-calculator h3{
+  margin: 0;
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.worksheet-calculator h2{
+  font-size: clamp(22px, 2.2vw, 28px);
+}
+
+.worksheet-calculator h3{
+  font-size: clamp(18px, 1.8vw, 22px);
+}
+
+.calculator-kicker{
+  margin: 0;
+  color: var(--muted, #3d3d3d);
+  font-size: clamp(14px, 1.3vw, 16px);
+  line-height: 1.35;
+}
+
+.calculator-stat-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.calculator-stat{
+  display: grid;
+  gap: 3px;
+  border: 1px solid var(--line, #e5e1da);
+  border-radius: 12px;
+  background: #f9f7f3;
+  padding: 10px;
+}
+
+.calculator-stat span:first-child{
+  color: var(--muted, #3d3d3d);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.calculator-stat strong{
+  color: var(--text, #111111);
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1;
+}
+
+.calculator-status{
+  border-radius: 12px;
+  padding: 12px;
+  background: #f9f7f3;
+  border: 1px solid var(--line, #e5e1da);
+  font-size: clamp(15px, 1.5vw, 17px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.calculator-status.is-strong{
+  color: #0f5d65;
+  background: #edf8f9;
+  border-color: rgba(30,138,149,0.45);
+}
+
+.calculator-status.is-watch{
+  color: #7a5400;
+  background: #fff7df;
+  border-color: rgba(240,180,58,0.55);
+}
+
+.calculator-status.is-weak{
+  color: #8a2f2f;
+  background: #fff1f1;
+  border-color: rgba(138,47,47,0.35);
+}
+
+.addon-grid{
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.addon-cost{
+  display: block;
+  color: var(--muted, #3d3d3d);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.math-example-table{
+  min-width: 680px;
+}
+
+.worksheet-intro{
+  display: grid;
+  gap: 10px;
+  background: #f9f7f3;
+}
+
+.worksheet-meta-grid,
+.worksheet-two-col{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.worksheet-two-col{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.worksheet-field{
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-width: 0;
+  border: 1px solid var(--line, #e5e1da);
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+}
+
+.worksheet-field label,
+.worksheet-question{
+  font-weight: 800;
+  font-size: clamp(16px, 1.8vw, 20px);
+  line-height: 1.25;
+}
+
+.worksheet-field input,
+.worksheet-field textarea,
+.worksheet-field select,
+.worksheet-table input,
+.worksheet-table textarea{
+  width: 100%;
+  border: 1px solid var(--line, #e5e1da);
+  border-radius: 10px;
+  padding: 12px;
+  font: inherit;
+  font-size: clamp(16px, 1.8vw, 20px);
+  background: #ffffff;
+  color: var(--text, #111111);
+  min-height: 48px;
+}
+
+.worksheet-field select{
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.worksheet-field input:focus,
+.worksheet-field textarea:focus,
+.worksheet-field select:focus,
+.worksheet-table input:focus,
+.worksheet-table textarea:focus{
+  outline: 3px solid rgba(30,138,149,0.22);
+  border-color: var(--teal, #1e8a95);
+}
+
+.worksheet-field textarea,
+.worksheet-table textarea{
+  min-height: 96px;
+  resize: vertical;
+}
+
+.worksheet-help{
+  margin: 0;
+  color: var(--muted, #3d3d3d);
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.35;
+}
+
+.worksheet-note,
+.worksheet-output{
+  border: 1px solid var(--line, #e5e1da);
+  border-radius: 16px;
+  background: #f9f7f3;
+  padding: 16px;
+}
+
+.worksheet-note{
+  display: grid;
+  gap: 8px;
+  border-left: 8px solid var(--gold, #f0b43a);
+}
+
+.worksheet-note p{
+  margin: 0;
+}
+
+.worksheet-output{
+  white-space: pre-wrap;
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.45;
+  min-height: 120px;
+}
+
+.worksheet-table{
+  min-width: 980px;
+}
+
+.worksheet-table th,
+.worksheet-table td{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.worksheet-table .text-col{
+  min-width: 180px;
+}
+
+.worksheet-table input{
+  text-align: center;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.worksheet-table .calculated{
+  font-weight: 800;
+  color: #0f5d65;
+  background: #edf8f9;
+}
+
+.worksheet-table thead th{
+  white-space: nowrap;
+}
+
+.choice-grid,
+.checkbox-list{
+  display: grid;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.choice-grid{
+  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+}
+
+.checkbox-list{
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.choice-grid label,
+.checkbox-list label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line, #e5e1da);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #ffffff;
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  min-height: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.035);
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.choice-grid input,
+.checkbox-list input{
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--teal, #1e8a95);
+}
+
+.choice-grid label:hover,
+.checkbox-list label:hover{
+  border-color: rgba(30,138,149,0.55);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.choice-grid label:has(input:checked),
+.checkbox-list label:has(input:checked){
+  border-color: var(--teal, #1e8a95);
+  background: #edf8f9;
+  box-shadow: 0 8px 18px rgba(30,138,149,0.13);
+}
+
+.choice-grid label:has(input:focus-visible),
+.checkbox-list label:has(input:focus-visible){
+  outline: 3px solid rgba(30,138,149,0.22);
+  outline-offset: 2px;
+}
+
+.worksheet-actions{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+.worksheet-actions .btn{
+  width: 100%;
+  min-height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+  font-size: clamp(16px, 1.6vw, 18px);
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.15;
+  text-align: center;
+  padding: 14px 16px;
+  border-radius: 12px;
+  white-space: normal;
+}
+
+.worksheet-actions #clear-worksheet{
+  color: var(--purple, #8c62a7);
+  background: #ffffff;
+  border: 2px solid var(--purple, #8c62a7);
+  box-shadow: none;
+}
+
+.formula-list{
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.formula-list li{
+  border-left: 6px solid var(--gold, #f0b43a);
+  padding-left: 12px;
+}
+
+@media (max-width: 980px){
+  .worksheet-meta-grid,
+  .worksheet-two-col{
+    grid-template-columns: 1fr;
+  }
+
+  .worksheet-learning-layout{
+    grid-template-columns: 1fr;
+  }
+
+  .worksheet-calculator{
+    position: static;
+    order: -1;
+  }
+
+  .worksheet-form > section{
+    padding: 14px;
+    gap: 14px;
+  }
+
+  .thankyou-card .worksheet-form h2.article-band-heading{
+    font-size: clamp(36px, 9vw, 56px);
+    margin-left: -12px;
+    margin-right: -12px;
+    padding: 14px;
+  }
+
+  .worksheet-field{
+    padding: 12px;
+  }
+
+  .worksheet-form .table-wrap{
+    position: relative;
+  }
+
+  .worksheet-form .table-wrap::before{
+    content: "Scroll table sideways";
+    display: block;
+    padding: 8px 12px;
+    color: var(--muted, #3d3d3d);
+    background: #f9f7f3;
+    border-bottom: 1px solid var(--line, #e5e1da);
+    font-size: 14px;
+    font-weight: 800;
+    text-align: left;
+  }
+}
