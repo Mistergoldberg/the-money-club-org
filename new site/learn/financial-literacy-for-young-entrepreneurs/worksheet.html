@@ -1431,7 +1431,10 @@ nav{
       margin-top: 24px;
     }
     .thankyou-card h2.article-band-purple{ background: var(--purple); }
-    .thankyou-card h2.article-band-gold{ background: var(--gold); }
+    .thankyou-card h2.article-band-gold{
+      background: var(--gold);
+      color: var(--text);
+    }
     .thankyou-card h2.article-band-teal{ background: var(--teal); }
     .thankyou-card h3{
       margin: 18px 0 6px;
@@ -1489,7 +1492,15 @@ nav{
       display: grid;
       gap: 8px;
     }
-    .article-intro-heading h1,
+    .article-intro-heading h1{
+      margin: 0;
+      font-size: 2.8rem;
+      line-height: 1;
+      letter-spacing: 0;
+      font-family: var(--font-body);
+      font-weight: 700;
+      text-transform: none;
+    }
     .article-intro-heading h3{
       margin: 0;
       font-size: var(--size-lg);
@@ -1497,6 +1508,7 @@ nav{
       letter-spacing: 0;
       font-family: var(--font-body);
       font-weight: 700;
+      text-transform: none;
     }
     .article-intro-heading p{
       margin: 0;
@@ -1724,6 +1736,35 @@ nav{
       line-height: 0.9;
       min-height: 88px;
     }
+
+    .learning-page-shell > .article-facts-shell{
+      min-width: 0;
+      width: 100%;
+    }
+
+    .learning-page-shell .article-facts-shell .article-facts-heading{
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(36px, 4vw, 58px);
+      line-height: 0.9;
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+    }
+
+    .learning-page-shell .article-facts-card .btn{
+      font-family: var(--font-body);
+      font-size: clamp(18px, 1.6vw, 22px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+      min-height: 58px;
+      padding: 15px 22px;
+      white-space: normal;
+    }
+
+    .learning-page-shell .article-facts-card .btn.gold{
+      color: var(--text);
+    }
     @media (min-width: 981px){
       .topbar nav{
         flex-wrap: wrap;
@@ -1904,9 +1945,225 @@ nav{
         min-height: 40px;
       }
     }
+
+
+    /* Learning catalogue navigation shared by module and worksheet pages. */
+    .learning-page-shell{
+      display: block;
+    }
+
+    .learning-catalogue-sidebar{
+      display: none;
+      position: sticky;
+      top: calc(var(--topbar-height) + 18px);
+      max-height: calc(100vh - var(--topbar-height) - 34px);
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid rgba(0,0,0,0.045);
+      border-radius: 0;
+      background: rgba(241,244,249,0.58);
+      box-shadow: none;
+    }
+
+    .learning-catalogue-sidebar h2{
+      margin: 0 0 10px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .catalogue-toc,
+    .catalogue-sublist{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .catalogue-toc{
+      display: grid;
+      gap: 6px;
+    }
+
+    .catalogue-toc details{
+      border: 1px solid rgba(0,0,0,0.035);
+      border-radius: 0;
+      background: rgba(255,255,255,0.74);
+      overflow: hidden;
+      padding: 6px 8px;
+    }
+
+    .catalogue-toc summary{
+      cursor: pointer;
+      padding: 8px 10px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+      list-style: none;
+    }
+
+    .catalogue-toc summary::-webkit-details-marker,
+    .menu-panel .learning-menu-tree summary::-webkit-details-marker{
+      display: none;
+    }
+
+    .catalogue-sublist{
+      display: grid;
+      gap: 4px;
+      margin: 8px 0 6px 8px;
+      padding: 0;
+    }
+
+    .catalogue-sublist a,
+    .catalogue-toc-link{
+      display: block;
+      border-radius: 0;
+      padding: 6px 10px;
+      color: var(--text);
+      background: #f7f8fb;
+      font-family: var(--font-body);
+      font-size: 17.6px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+      text-decoration: none;
+    }
+
+    .catalogue-toc-link{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(0,0,0,0.035);
+      background: rgba(255,255,255,0.74);
+      font-size: 20px;
+      padding: 8px 10px;
+    }
+
+    .catalogue-sublist a:hover,
+    .catalogue-toc-link:hover,
+    .catalogue-sublist a:focus-visible,
+    .catalogue-toc-link:focus-visible{
+      color: var(--teal-dark);
+      background: #e9efff;
+      text-decoration: none;
+    }
+
+    .catalogue-sublist a.is-current,
+    .catalogue-toc-link.is-current{
+      background: #dbe8ff;
+      color: #0f3675;
+      box-shadow: inset 3px 0 0 rgba(30,138,149,0.8);
+    }
+
+    .catalogue-toc details.contains-current > summary{
+      color: #0f3675;
+    }
+
+    .menu-panel .learning-menu-tree{
+      border-top: 1px solid var(--line);
+      width: 100%;
+      display: grid;
+      justify-items: center;
+    }
+
+    .menu-panel .learning-menu-tree summary{
+      cursor: pointer;
+      width: max-content;
+      max-width: min(680px, 92vw);
+      padding: 6px 6px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 500;
+      line-height: 1.1;
+      text-align: center;
+      text-transform: none;
+      letter-spacing: 0;
+      list-style: none;
+    }
+
+    .menu-panel .learning-menu-tree.contains-current summary{
+      color: #0f3675;
+      font-weight: 700;
+    }
+
+    .menu-panel .learning-menu-list{
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      width: 100%;
+      padding: 8px 16px 16px;
+    }
+
+    .menu-panel .learning-menu-list a{
+      display: block;
+      width: max-content;
+      max-width: min(680px, 92vw);
+      padding: 6px 6px;
+      border-radius: 0;
+      background: transparent;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 500;
+      line-height: 1.1;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .menu-panel .learning-menu-list a.is-current{
+      color: #0f3675;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+    }
+
+    .learning-page-shell > .reservation-card{
+      min-width: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 1024px){
+      .content-content.learning-page-shell{
+        padding-left: var(--pad);
+        padding-right: var(--pad);
+      }
+
+      .learning-page-shell{
+        display: grid;
+        grid-template-columns: clamp(240px, 22vw, 300px) minmax(0, min(920px, calc(100% - clamp(240px, 22vw, 300px) - clamp(24px, 4vw, 48px))));
+        gap: clamp(24px, 4vw, 48px);
+        align-items: start;
+        justify-content: start;
+      }
+
+      .learning-catalogue-sidebar{
+        display: block;
+      }
+
+      .learning-page-shell > .article-facts-shell{
+        grid-column: 2;
+      }
+    }
+
+    @media (max-width: 1023px){
+      .article-intro-heading h1{
+        font-size: 2.4rem;
+      }
+    }
+
   </style>
   <link rel="stylesheet" href="/assets/typography.css?v=5" />
-  <link rel="stylesheet" href="/assets/worksheet.css?v=1" />
+  <link rel="stylesheet" href="/assets/worksheet.css?v=3" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1938,6 +2195,22 @@ nav{
         <a href="/open-book-hook.html">Open Book Financials</a>
         <a href="/who-runs-it.html">Our Mission</a>
         <a href="/article-best-summer-camps.html">Camp Guides</a>
+        <details class="learning-menu-tree contains-current" open>
+          <summary>Learning Catalogue</summary>
+          <div class="learning-menu-list">
+            <a class="is-current" aria-current="page" href="/learn/index2.html#financial-literacy">Financial Literacy</a>
+            <a href="/learn/index2.html#design-thinking">Design Thinking</a>
+            <a href="/learn/index2.html#market-research">Market Research</a>
+            <a href="/learn/index2.html#sourcing">Sourcing</a>
+            <a href="/learn/index2.html#control-brand">Control Brand</a>
+            <a href="/learn/index2.html#business-model">Business Model</a>
+            <a href="/learn/index2.html#go-to-market">Go-To-Market</a>
+            <a href="/learn/index2.html#creative-fundamentals">Creative Fundamentals</a>
+            <a href="/learn/index2.html#marketing">Marketing</a>
+            <a href="/learn/index2.html#market-watch">Market Watch</a>
+            <a href="/learn/index2.html#ai-tools">AI Tools</a>
+          </div>
+        </details>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -1956,7 +2229,112 @@ nav{
 
   <main>
     <section class="content-section purple">
-      <div class="content-content">
+      <div class="content-content learning-page-shell">
+        <aside class="learning-catalogue-sidebar" aria-label="Learning catalogue table of contents">
+          <h2>Learning Catalogue</h2>
+          <ul class="catalogue-toc">
+            <li><a class="catalogue-toc-link" href="/learn/index2.html#core-build-modules">Core Build Modules</a></li>
+            <li>
+              <details class="contains-current" open>
+                <summary>💰 Financial Literacy as Survival Gear</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#financial-literacy">Module overview</a></li>
+                  <li><a class="is-current" aria-current="page" href="/learn/financial-literacy-for-young-entrepreneurs/worksheet.html">Worksheet: Coffee Counter Math Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🎨 Design Thinking & Human Factor Research</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#design-thinking">Module overview</a></li>
+                  <li><a href="/learn/index2.html#design-thinking-worksheet">Worksheet: Find the Friction Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📊 Market Research: Follow the Money & Problems</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#market-research">Module overview</a></li>
+                  <li><a href="/learn/index2.html#market-research-worksheet">Worksheet: Demand Signal Map</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🏭 Sourcing 101: Where Value Is Actually Made</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#sourcing">Module overview</a></li>
+                  <li><a href="/learn/index2.html#sourcing-worksheet">Worksheet: Supplier Comparison Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🏷 Control Brand Playbook</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#control-brand">Module overview</a></li>
+                  <li><a href="/learn/index2.html#control-brand-worksheet">Worksheet: Build a Better Version Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📋 Business Model Thinking</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#business-model">Module overview</a></li>
+                  <li><a href="/learn/index2.html#business-model-worksheet">Worksheet: One-Page Business Model Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🚀 Go-To-Market: Launch Without Burning Fuel</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#go-to-market">Module overview</a></li>
+                  <li><a href="/learn/index2.html#go-to-market-worksheet">Worksheet: First Launch Test Plan</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📸 Creative Fundamentals: Photography, Design & Visual Clarity</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#creative-fundamentals">Module overview</a></li>
+                  <li><a href="/learn/index2.html#creative-fundamentals-worksheet">Worksheet: Make the Offer Clear Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📣 Marketing: Use Existing Channels First</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#marketing">Module overview</a></li>
+                  <li><a href="/learn/index2.html#marketing-worksheet">Worksheet: Channel Match Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>♟️ Staying Ahead of the Game</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#market-watch">Module overview</a></li>
+                  <li><a href="/learn/index2.html#market-watch-worksheet">Worksheet: Market Watch Dashboard</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>💻 AI Tools Used Across the Program</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#ai-tools">Module overview</a></li>
+                  <li><a href="/learn/index2.html#ai-tools-worksheet">Worksheet: AI Co-Pilot Lab</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </aside>
         <div class="reservation-card thankyou-card">
           <section class="article-intro-module" aria-labelledby="article-intro-heading">
             <div class="article-intro-media">
@@ -1995,7 +2373,7 @@ nav{
             <div class="worksheet-learning-layout">
               <div class="worksheet-flow">
                 <section class="worksheet-intro" aria-labelledby="math-overview-heading">
-                  <h2 class="article-band-heading article-band-teal" id="math-overview-heading">The Math: Overview</h2>
+                  <h2 class="article-band-heading article-band-teal" id="math-overview-heading">Overview</h2>
                   <p>Retail price is what comes in.</p>
                   <p>Cost of Goods Sold, or COGS, is what goes out to make the product.</p>
                   <p>Gross margin is what is left before operating expenses.</p>
@@ -2033,7 +2411,7 @@ nav{
                 </section>
 
                 <section aria-labelledby="math-net-heading">
-                  <h2 class="article-band-heading article-band-purple" id="math-net-heading">The Math: Net Margin</h2>
+                  <h2 class="article-band-heading article-band-purple" id="math-net-heading">Net Margin</h2>
                   <p>Net profit is the true profit.</p>
                   <p>It is the money left after you pay for the product and the costs of running the business.</p>
                   <p>Here is an example for 1,000 coffees sold.</p>
@@ -2079,17 +2457,18 @@ nav{
                       <label for="drink-name">What drink are you selling?</label>
                       <select id="drink-name" name="drink_name">
                         <option value="">Choose a drink</option>
-                        <option>Basic coffee</option>
-                        <option>Iced coffee</option>
-                        <option>Hot chocolate</option>
-                        <option>Iced chocolate milk</option>
-                        <option>Sweet iced latte</option>
-                        <option>Fruit iced tea</option>
-                        <option>Lemonade</option>
-                        <option>Smoothie</option>
-                        <option>Bubble tea-style drink</option>
-                        <option>Other</option>
+                        <option value="Basic coffee" data-base-cost="0.55" data-suggested-price="2.00">Basic coffee</option>
+                        <option value="Iced coffee" data-base-cost="0.70" data-suggested-price="2.75">Iced coffee</option>
+                        <option value="Hot chocolate" data-base-cost="0.80" data-suggested-price="2.50">Hot chocolate</option>
+                        <option value="Iced chocolate milk" data-base-cost="0.85" data-suggested-price="2.75">Iced chocolate milk</option>
+                        <option value="Sweet iced latte" data-base-cost="1.10" data-suggested-price="3.50">Sweet iced latte</option>
+                        <option value="Fruit iced tea" data-base-cost="0.70" data-suggested-price="2.50">Fruit iced tea</option>
+                        <option value="Lemonade" data-base-cost="0.60" data-suggested-price="2.00">Lemonade</option>
+                        <option value="Smoothie" data-base-cost="1.35" data-suggested-price="4.00">Smoothie</option>
+                        <option value="Bubble tea-style drink" data-base-cost="1.45" data-suggested-price="4.50">Bubble tea-style drink</option>
+                        <option value="Other">Other</option>
                       </select>
+                      <p class="worksheet-help" id="drink-cost-hint">Choose a drink to start with its base COGS.</p>
                     </div>
                     <div class="worksheet-field">
                       <label for="retail-price">Retail price</label>
@@ -2100,12 +2479,12 @@ nav{
                   <div class="worksheet-field">
                     <div class="worksheet-question">What goes into the drink?</div>
                     <div class="checkbox-list addon-grid">
-                      <label><input type="checkbox" name="addons" value="Coffee base" data-cost="0.75" checked /> Coffee base <span class="addon-cost">$0.75</span></label>
+                      <label><input type="checkbox" name="addons" value="Coffee base" data-cost="0.75" /> Coffee base <span class="addon-cost">$0.75</span></label>
                       <label><input type="checkbox" name="addons" value="Oat milk" data-cost="0.35" /> Oat milk <span class="addon-cost">$0.35</span></label>
                       <label><input type="checkbox" name="addons" value="Whipped cream" data-cost="0.25" /> Whipped cream <span class="addon-cost">$0.25</span></label>
                       <label><input type="checkbox" name="addons" value="Sprinkles" data-cost="0.15" /> Sprinkles <span class="addon-cost">$0.15</span></label>
                       <label><input type="checkbox" name="addons" value="Flavour syrup" data-cost="0.20" /> Flavour syrup <span class="addon-cost">$0.20</span></label>
-                      <label><input type="checkbox" name="addons" value="Larger cup" data-cost="0.30" /> Larger cup <span class="addon-cost">$0.30</span></label>
+                      <label><input type="checkbox" name="addons" value="Fancy printed cup" data-cost="0.30" /> Fancy printed cup <span class="addon-cost">$0.30</span></label>
                     </div>
                   </div>
                   <div class="worksheet-two-col">
@@ -2118,6 +2497,18 @@ nav{
                       <input id="custom-cost" name="custom_cost" type="number" min="0" step="0.05" inputmode="decimal" value="0" />
                     </div>
                   </div>
+                  <aside class="worksheet-calculator worksheet-calculator-strip" aria-label="Design Your Drink calculator">
+                    <div>
+                      <h3>Drink Calculator</h3>
+                      <p class="calculator-kicker">Live math for this drink.</p>
+                    </div>
+                    <div class="calculator-stat-grid">
+                      <div class="calculator-stat"><span>Retail</span><strong data-calc="drink-price">$2.00</strong></div>
+                      <div class="calculator-stat"><span>COGS</span><strong data-calc="drink-cogs">$0.00</strong></div>
+                      <div class="calculator-stat"><span>Margin $</span><strong data-calc="drink-gross">$2.00</strong></div>
+                      <div class="calculator-stat"><span>Margin %</span><strong data-calc="drink-gross-percent">100%</strong></div>
+                    </div>
+                  </aside>
                 </section>
 
                 <section aria-labelledby="customer-offer-heading">
@@ -2195,6 +2586,20 @@ nav{
                     <label for="profit-reaction">What does the calculator tell you about the idea?</label>
                     <textarea id="profit-reaction" name="profit_reaction" placeholder="Explain whether the margin looks strong, weak, or worth testing."></textarea>
                   </div>
+                  <aside class="worksheet-calculator worksheet-calculator-strip worksheet-calculator-business" aria-label="Test the Business calculator">
+                    <div>
+                      <h3>Business Calculator</h3>
+                      <p class="calculator-kicker">Live math for the whole test.</p>
+                    </div>
+                    <div class="calculator-stat-grid">
+                      <div class="calculator-stat"><span>Retail</span><strong data-calc="price">$2</strong></div>
+                      <div class="calculator-stat"><span>Units</span><strong data-calc="units">1,000</strong></div>
+                      <div class="calculator-stat"><span>Revenue</span><strong data-calc="revenue">$2,000</strong></div>
+                      <div class="calculator-stat"><span>Gross Margin $</span><strong data-calc="total-gross">$1,250</strong></div>
+                      <div class="calculator-stat"><span>Operating Expenses</span><strong data-calc="operating-expenses">$850</strong></div>
+                      <div class="calculator-stat"><span>Net Margin</span><strong data-calc="net-percent">20%</strong></div>
+                    </div>
+                  </aside>
                 </section>
 
                 <section aria-labelledby="hooks-heading">
@@ -2281,30 +2686,13 @@ nav{
                 </section>
               </div>
 
-              <aside class="worksheet-calculator" aria-labelledby="calculator-heading">
-                <div>
-                  <h2 id="calculator-heading">Drink Calculator</h2>
-                  <p class="calculator-kicker">Live math for the drink you are building.</p>
-                </div>
-                <div class="calculator-stat-grid">
-                  <div class="calculator-stat"><span>Retail Price</span><strong id="calc-price">$2.00</strong></div>
-                  <div class="calculator-stat"><span>COGS</span><strong id="calc-cogs">$0.75</strong></div>
-                  <div class="calculator-stat"><span>Gross Margin $</span><strong id="calc-gross">$1.25</strong></div>
-                  <div class="calculator-stat"><span>Gross Margin %</span><strong id="calc-gross-percent">62.5%</strong></div>
-                  <div class="calculator-stat"><span>Revenue</span><strong id="calc-revenue">$2,000.00</strong></div>
-                  <div class="calculator-stat"><span>Total COGS</span><strong id="calc-total-cogs">$750.00</strong></div>
-                  <div class="calculator-stat"><span>Net Profit</span><strong id="calc-net-profit">$400.00</strong></div>
-                  <div class="calculator-stat"><span>Net Margin %</span><strong id="calc-net-percent">20%</strong></div>
-                </div>
-                <div id="calc-status" class="calculator-status is-strong" aria-live="polite">Strong gross margin and target net margin.</div>
-              </aside>
             </div>
           </form>
         </div>
         <section class="article-facts-shell" aria-labelledby="article-quick-facts-heading">
           <div class="article-facts-intro">
-            <div class="article-facts-kicker">Learning Module</div>
-            <h3 class="article-facts-heading" id="article-quick-facts-heading">Use the lesson with the lab</h3>
+            <div class="article-facts-kicker">Learn by building</div>
+            <h3 class="article-facts-heading" id="article-quick-facts-heading">TURN THE LESSON INTO PRACTICE</h3>
           </div>
           <div class="article-facts-grid">
             <div class="article-facts-card">
@@ -2320,7 +2708,7 @@ nav{
                 <h3>Explore the hub</h3>
                 <p>Return to the learning hub for student financial literacy and venture-building resources.</p>
               </div>
-              <a data-cta-label="Explore the Learning Hub" class="btn gold gloss" href="/learn/">Explore the Hub</a>
+              <a data-cta-label="Explore the Learning Hub" class="btn gold gloss" href="/learn/index2.html">Explore the Hub</a>
             </div>
           </div>
         </section>
@@ -2336,16 +2724,22 @@ nav{
       var storageKey = 'tmcCoffeeCounterWorksheet';
       var statusEl = document.getElementById('worksheet-status');
       var summaryEl = document.getElementById('worksheet-summary');
+      var drinkSelect = document.getElementById('drink-name');
+      var drinkCostHint = document.getElementById('drink-cost-hint');
       var priceInput = document.getElementById('retail-price');
       var customCostInput = document.getElementById('custom-cost');
       var unitsInput = document.getElementById('units-sold');
       var operatingExpensesInput = document.getElementById('operating-expenses');
-      var calcStatus = document.getElementById('calc-status');
-
       function money(value){
         return '$' + Number(value || 0).toLocaleString('en-US', {
           minimumFractionDigits: 2,
           maximumFractionDigits: 2
+        });
+      }
+
+      function moneyWhole(value){
+        return '$' + Number(value || 0).toLocaleString('en-US', {
+          maximumFractionDigits: 0
         });
       }
 
@@ -2355,20 +2749,58 @@ nav{
         }) + '%';
       }
 
+      function percentWhole(value){
+        return Number(value || 0).toLocaleString('en-US', {
+          maximumFractionDigits: 0
+        }) + '%';
+      }
+
       function numberFromInput(input){
         var value = input ? parseFloat(input.value) : 0;
         return isNaN(value) ? 0 : value;
       }
 
-      function setText(id, value){
-        var el = document.getElementById(id);
-        if (el){
+      function setCalc(name, value){
+        form.querySelectorAll('[data-calc="' + name + '"]').forEach(function(el){
           el.textContent = value;
-        }
+        });
       }
 
       function selectedAddons(){
         return Array.prototype.slice.call(form.querySelectorAll('input[name="addons"]:checked'));
+      }
+
+      function selectedDrinkOption(){
+        if (!drinkSelect || drinkSelect.selectedIndex < 0){ return null; }
+        return drinkSelect.options[drinkSelect.selectedIndex];
+      }
+
+      function selectedDrinkCost(){
+        var option = selectedDrinkOption();
+        var value = option ? parseFloat(option.getAttribute('data-base-cost') || '0') : 0;
+        return isNaN(value) ? 0 : value;
+      }
+
+      function selectedDrinkPrice(){
+        var option = selectedDrinkOption();
+        var value = option ? parseFloat(option.getAttribute('data-suggested-price') || '') : NaN;
+        return isNaN(value) ? null : value;
+      }
+
+      function updateDrinkCostHint(){
+        if (!drinkCostHint){ return; }
+        var option = selectedDrinkOption();
+        var drinkName = option ? option.value : '';
+        var baseCost = selectedDrinkCost();
+        if (!drinkName){
+          drinkCostHint.textContent = 'Choose a drink to start with its base COGS.';
+          return;
+        }
+        if (drinkName === 'Other'){
+          drinkCostHint.textContent = 'For another drink, add the base cost in Other cost.';
+          return;
+        }
+        drinkCostHint.textContent = drinkName + ' starts with ' + money(baseCost) + ' in base COGS before add-ons.';
       }
 
       function addonCost(){
@@ -2380,8 +2812,9 @@ nav{
 
       function getCalculatorState(){
         var price = numberFromInput(priceInput);
+        var baseCogs = selectedDrinkCost();
         var customCost = numberFromInput(customCostInput);
-        var cogs = addonCost() + customCost;
+        var cogs = baseCogs + addonCost() + customCost;
         var units = Math.max(0, numberFromInput(unitsInput));
         var operatingExpenses = numberFromInput(operatingExpensesInput);
         var gross = price - cogs;
@@ -2393,6 +2826,7 @@ nav{
         var netPercent = revenue > 0 ? (netProfit / revenue) * 100 : 0;
         return {
           price: price,
+          baseCogs: baseCogs,
           cogs: cogs,
           units: units,
           operatingExpenses: operatingExpenses,
@@ -2406,32 +2840,22 @@ nav{
         };
       }
 
-      function updateStatus(state){
-        if (!calcStatus){ return; }
-        calcStatus.classList.remove('is-strong', 'is-watch', 'is-weak');
-        if (state.grossPercent >= 40 && state.netPercent >= 20){
-          calcStatus.classList.add('is-strong');
-          calcStatus.textContent = 'Strong gross margin and target net margin.';
-        } else if (state.grossPercent >= 40 || state.netPercent >= 20){
-          calcStatus.classList.add('is-watch');
-          calcStatus.textContent = 'One margin is working. Check the price, add-ons, or operating expenses.';
-        } else {
-          calcStatus.classList.add('is-weak');
-          calcStatus.textContent = 'Margins are below target. The business may need a higher price or lower costs.';
-        }
-      }
-
       function updateCalculations(){
         var state = getCalculatorState();
-        setText('calc-price', money(state.price));
-        setText('calc-cogs', money(state.cogs));
-        setText('calc-gross', money(state.gross));
-        setText('calc-gross-percent', percent(state.grossPercent));
-        setText('calc-revenue', money(state.revenue));
-        setText('calc-total-cogs', money(state.totalCogs));
-        setText('calc-net-profit', money(state.netProfit));
-        setText('calc-net-percent', percent(state.netPercent));
-        updateStatus(state);
+        updateDrinkCostHint();
+        setCalc('drink-price', money(state.price));
+        setCalc('drink-cogs', money(state.cogs));
+        setCalc('drink-gross', money(state.gross));
+        setCalc('drink-gross-percent', percent(state.grossPercent));
+        setCalc('price', moneyWhole(state.price));
+        setCalc('cogs', moneyWhole(state.cogs));
+        setCalc('gross', moneyWhole(state.gross));
+        setCalc('gross-percent', percentWhole(state.grossPercent));
+        setCalc('units', Number(state.units || 0).toLocaleString('en-US', { maximumFractionDigits: 0 }));
+        setCalc('revenue', moneyWhole(state.revenue));
+        setCalc('total-gross', moneyWhole(state.totalGross));
+        setCalc('operating-expenses', moneyWhole(state.operatingExpenses));
+        setCalc('net-percent', percentWhole(state.netPercent));
       }
 
       function collectData(){
@@ -2477,6 +2901,7 @@ nav{
           '',
           'Drink: ' + (data.drink_name || ''),
           'Retail price: ' + money(state.price),
+          'Base drink COGS: ' + money(state.baseCogs),
           'Selected add-ons: ' + ((data.addons || []).join(', ') || 'None'),
           'COGS per drink: ' + money(state.cogs),
           'Gross margin: ' + money(state.gross) + ' (' + percent(state.grossPercent) + ')',
@@ -2533,6 +2958,19 @@ nav{
       form.addEventListener('change', function(){
         updateCalculations();
       });
+
+      if (drinkSelect){
+        drinkSelect.addEventListener('change', function(){
+          var suggestedPrice = selectedDrinkPrice();
+          if (priceInput && suggestedPrice !== null){
+            priceInput.value = suggestedPrice.toFixed(2);
+          }
+          updateCalculations();
+          try {
+            localStorage.setItem(storageKey, JSON.stringify(collectData()));
+          } catch (e) {}
+        });
+      }
 
       var saveBtn = document.getElementById('save-worksheet');
       if (saveBtn){

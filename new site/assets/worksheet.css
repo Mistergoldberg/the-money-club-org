@@ -53,7 +53,7 @@
 
 .worksheet-learning-layout{
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(18px, 3vw, 28px);
   align-items: start;
 }
@@ -95,8 +95,6 @@
 }
 
 .worksheet-calculator{
-  position: sticky;
-  top: calc(var(--topbar-height, 72px) + 18px);
   display: grid;
   gap: 14px;
   border: 2px solid var(--teal, #1e8a95);
@@ -104,6 +102,13 @@
   background: #ffffff;
   padding: 16px;
   box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+.worksheet-calculator-strip{
+  margin-top: 4px;
+  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
+  align-items: stretch;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
 }
 
 .worksheet-calculator h2,
@@ -132,8 +137,12 @@
 
 .calculator-stat-grid{
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
+}
+
+.worksheet-calculator-business .calculator-stat-grid{
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .calculator-stat{
@@ -148,7 +157,7 @@
 .calculator-stat span:first-child{
   color: var(--muted, #3d3d3d);
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -164,7 +173,7 @@
   background: #f9f7f3;
   border: 1px solid var(--line, #e5e1da);
   font-size: clamp(15px, 1.5vw, 17px);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.25;
 }
 
@@ -232,8 +241,8 @@
 
 .worksheet-field label,
 .worksheet-question{
-  font-weight: 800;
-  font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 700;
+  font-size: clamp(16px, 1.45vw, 18px);
   line-height: 1.25;
 }
 
@@ -248,6 +257,7 @@
   padding: 12px;
   font: inherit;
   font-size: clamp(16px, 1.8vw, 20px);
+  font-weight: 400;
   background: #ffffff;
   color: var(--text, #111111);
   min-height: 48px;
@@ -360,7 +370,7 @@
   padding: 12px 14px;
   background: #ffffff;
   font-size: clamp(15px, 1.6vw, 18px);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
   cursor: pointer;
   min-height: 50px;
@@ -411,7 +421,7 @@
   justify-content: center;
   font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
   font-size: clamp(16px, 1.6vw, 18px);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0;
   text-transform: none;
   line-height: 1.15;
@@ -453,7 +463,6 @@
 
   .worksheet-calculator{
     position: static;
-    order: -1;
   }
 
   .worksheet-form > section{
@@ -486,5 +495,36 @@
     font-size: 14px;
     font-weight: 800;
     text-align: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1180px){
+  .worksheet-calculator-strip{
+    grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
+  }
+
+  .worksheet-calculator-strip .calculator-stat-grid,
+  .worksheet-calculator-business .calculator-stat-grid{
+    grid-template-columns: repeat(4, minmax(82px, 1fr));
+  }
+}
+
+@media (max-width: 767px){
+  .worksheet-calculator-strip{
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-stat-grid,
+  .worksheet-calculator-business .calculator-stat-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media print{
+  .worksheet-calculator{
+    position: static;
+    width: auto;
+    box-shadow: none;
+    border: 1px solid var(--line, #e5e1da);
   }
 }

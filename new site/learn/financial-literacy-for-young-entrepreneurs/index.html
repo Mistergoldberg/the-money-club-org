@@ -343,7 +343,7 @@ nav{
     }
     .btn.gold{
       background: var(--gold);
-      color: #ffffff;
+      color: var(--text);
       box-shadow: 0 10px 20px rgba(240,180,58,0.25);
     }
 
@@ -953,7 +953,7 @@ nav{
     }
     .content-section.gold .content-banner{
       background: var(--gold);
-      color: #fff;
+      color: var(--ink);
     }
     .content-content{
       max-width: var(--max-wide);
@@ -1430,8 +1430,30 @@ nav{
       margin-top: 24px;
     }
     .thankyou-card h2.article-band-purple{ background: var(--purple); }
-    .thankyou-card h2.article-band-gold{ background: var(--gold); }
+    .thankyou-card h2.article-band-gold{
+      background: var(--gold);
+      color: var(--text);
+    }
     .thankyou-card h2.article-band-teal{ background: var(--teal); }
+
+    .learning-page-shell .thankyou-card h1,
+    .learning-page-shell .thankyou-card h2,
+    .learning-page-shell .thankyou-card h3{
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .learning-page-shell .thankyou-card h2.article-band-heading{
+      margin: 34px 0 18px;
+      padding: 18px 22px;
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 0.86;
+      border-radius: 14px;
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+    }
     .thankyou-card h3{
       margin: 18px 0 6px;
       font-size: clamp(22px, 3vw, 30px);
@@ -1488,7 +1510,15 @@ nav{
       display: grid;
       gap: 8px;
     }
-    .article-intro-heading h1,
+    .article-intro-heading h1{
+      margin: 0;
+      font-size: 2.8rem;
+      line-height: 1;
+      letter-spacing: 0;
+      font-family: var(--font-body);
+      font-weight: 700;
+      text-transform: none;
+    }
     .article-intro-heading h3{
       margin: 0;
       font-size: var(--size-lg);
@@ -1496,6 +1526,7 @@ nav{
       letter-spacing: 0;
       font-family: var(--font-body);
       font-weight: 700;
+      text-transform: none;
     }
     .article-intro-heading p{
       margin: 0;
@@ -1541,7 +1572,7 @@ nav{
       padding: 14px 22px;
       border-radius: 999px;
       background: var(--gold);
-      color: #ffffff;
+      color: var(--text);
       font-family: var(--font-display);
       font-size: clamp(28px, 3.6vw, 38px);
       letter-spacing: var(--tracking-display);
@@ -1723,6 +1754,35 @@ nav{
       line-height: 0.9;
       min-height: 88px;
     }
+
+    .learning-page-shell > .article-facts-shell{
+      min-width: 0;
+      width: 100%;
+    }
+
+    .learning-page-shell .article-facts-shell .article-facts-heading{
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(36px, 4vw, 58px);
+      line-height: 0.9;
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+    }
+
+    .learning-page-shell .article-facts-card .btn{
+      font-family: var(--font-body);
+      font-size: clamp(18px, 1.6vw, 22px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+      min-height: 58px;
+      padding: 15px 22px;
+      white-space: normal;
+    }
+
+    .learning-page-shell .article-facts-card .btn.gold{
+      color: var(--text);
+    }
     @media (min-width: 981px){
       .topbar nav{
         flex-wrap: wrap;
@@ -1903,6 +1963,222 @@ nav{
         min-height: 40px;
       }
     }
+
+
+    /* Learning catalogue navigation shared by module and worksheet pages. */
+    .learning-page-shell{
+      display: block;
+    }
+
+    .learning-catalogue-sidebar{
+      display: none;
+      position: sticky;
+      top: calc(var(--topbar-height) + 18px);
+      max-height: calc(100vh - var(--topbar-height) - 34px);
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid rgba(0,0,0,0.045);
+      border-radius: 0;
+      background: rgba(241,244,249,0.58);
+      box-shadow: none;
+    }
+
+    .learning-catalogue-sidebar h2{
+      margin: 0 0 10px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .catalogue-toc,
+    .catalogue-sublist{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .catalogue-toc{
+      display: grid;
+      gap: 6px;
+    }
+
+    .catalogue-toc details{
+      border: 1px solid rgba(0,0,0,0.035);
+      border-radius: 0;
+      background: rgba(255,255,255,0.74);
+      overflow: hidden;
+      padding: 6px 8px;
+    }
+
+    .catalogue-toc summary{
+      cursor: pointer;
+      padding: 8px 10px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+      list-style: none;
+    }
+
+    .catalogue-toc summary::-webkit-details-marker,
+    .menu-panel .learning-menu-tree summary::-webkit-details-marker{
+      display: none;
+    }
+
+    .catalogue-sublist{
+      display: grid;
+      gap: 4px;
+      margin: 8px 0 6px 8px;
+      padding: 0;
+    }
+
+    .catalogue-sublist a,
+    .catalogue-toc-link{
+      display: block;
+      border-radius: 0;
+      padding: 6px 10px;
+      color: var(--text);
+      background: #f7f8fb;
+      font-family: var(--font-body);
+      font-size: 17.6px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+      text-decoration: none;
+    }
+
+    .catalogue-toc-link{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(0,0,0,0.035);
+      background: rgba(255,255,255,0.74);
+      font-size: 20px;
+      padding: 8px 10px;
+    }
+
+    .catalogue-sublist a:hover,
+    .catalogue-toc-link:hover,
+    .catalogue-sublist a:focus-visible,
+    .catalogue-toc-link:focus-visible{
+      color: var(--teal-dark);
+      background: #e9efff;
+      text-decoration: none;
+    }
+
+    .catalogue-sublist a.is-current,
+    .catalogue-toc-link.is-current{
+      background: #dbe8ff;
+      color: #0f3675;
+      box-shadow: inset 3px 0 0 rgba(30,138,149,0.8);
+    }
+
+    .catalogue-toc details.contains-current > summary{
+      color: #0f3675;
+    }
+
+    .menu-panel .learning-menu-tree{
+      border-top: 1px solid var(--line);
+      width: 100%;
+      display: grid;
+      justify-items: center;
+    }
+
+    .menu-panel .learning-menu-tree summary{
+      cursor: pointer;
+      width: max-content;
+      max-width: min(680px, 92vw);
+      padding: 6px 6px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 500;
+      line-height: 1.1;
+      text-align: center;
+      text-transform: none;
+      letter-spacing: 0;
+      list-style: none;
+    }
+
+    .menu-panel .learning-menu-tree.contains-current summary{
+      color: #0f3675;
+      font-weight: 700;
+    }
+
+    .menu-panel .learning-menu-list{
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      width: 100%;
+      padding: 8px 16px 16px;
+    }
+
+    .menu-panel .learning-menu-list a{
+      display: block;
+      width: max-content;
+      max-width: min(680px, 92vw);
+      padding: 6px 6px;
+      border-radius: 0;
+      background: transparent;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 500;
+      line-height: 1.1;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .menu-panel .learning-menu-list a.is-current{
+      color: #0f3675;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+    }
+
+    .learning-page-shell > .reservation-card{
+      min-width: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 1024px){
+      .content-content.learning-page-shell{
+        padding-left: var(--pad);
+        padding-right: var(--pad);
+      }
+
+      .learning-page-shell{
+        display: grid;
+        grid-template-columns: clamp(240px, 22vw, 300px) minmax(0, min(920px, calc(100% - clamp(240px, 22vw, 300px) - clamp(24px, 4vw, 48px))));
+        gap: clamp(24px, 4vw, 48px);
+        align-items: start;
+        justify-content: start;
+      }
+
+      .learning-catalogue-sidebar{
+        display: block;
+      }
+
+      .learning-page-shell > .article-facts-shell{
+        grid-column: 2;
+      }
+    }
+
+    @media (max-width: 1023px){
+      .article-intro-heading h1{
+        font-size: 2.4rem;
+      }
+    }
+
   </style>
   <link rel="stylesheet" href="/assets/typography.css?v=5" />
   <!-- Google Tag Manager -->
@@ -1936,6 +2212,22 @@ nav{
         <a href="/open-book-hook.html">Open Book Financials</a>
         <a href="/who-runs-it.html">Our Mission</a>
         <a href="/article-best-summer-camps.html">Camp Guides</a>
+        <details class="learning-menu-tree contains-current" open>
+          <summary>Learning Catalogue</summary>
+          <div class="learning-menu-list">
+            <a class="is-current" aria-current="page" href="/learn/index2.html#financial-literacy">Financial Literacy</a>
+            <a href="/learn/index2.html#design-thinking">Design Thinking</a>
+            <a href="/learn/index2.html#market-research">Market Research</a>
+            <a href="/learn/index2.html#sourcing">Sourcing</a>
+            <a href="/learn/index2.html#control-brand">Control Brand</a>
+            <a href="/learn/index2.html#business-model">Business Model</a>
+            <a href="/learn/index2.html#go-to-market">Go-To-Market</a>
+            <a href="/learn/index2.html#creative-fundamentals">Creative Fundamentals</a>
+            <a href="/learn/index2.html#marketing">Marketing</a>
+            <a href="/learn/index2.html#market-watch">Market Watch</a>
+            <a href="/learn/index2.html#ai-tools">AI Tools</a>
+          </div>
+        </details>
                 <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
         </div>
 
@@ -1954,7 +2246,112 @@ nav{
 
   <main>
     <section class="content-section purple">
-      <div class="content-content">
+      <div class="content-content learning-page-shell">
+        <aside class="learning-catalogue-sidebar" aria-label="Learning catalogue table of contents">
+          <h2>Learning Catalogue</h2>
+          <ul class="catalogue-toc">
+            <li><a class="catalogue-toc-link" href="/learn/index2.html#core-build-modules">Core Build Modules</a></li>
+            <li>
+              <details class="contains-current" open>
+                <summary>💰 Financial Literacy as Survival Gear</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#financial-literacy">Module overview</a></li>
+                  <li><a href="/learn/financial-literacy-for-young-entrepreneurs/worksheet.html">Worksheet: Coffee Counter Math Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🎨 Design Thinking & Human Factor Research</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#design-thinking">Module overview</a></li>
+                  <li><a href="/learn/index2.html#design-thinking-worksheet">Worksheet: Find the Friction Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📊 Market Research: Follow the Money & Problems</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#market-research">Module overview</a></li>
+                  <li><a href="/learn/index2.html#market-research-worksheet">Worksheet: Demand Signal Map</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🏭 Sourcing 101: Where Value Is Actually Made</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#sourcing">Module overview</a></li>
+                  <li><a href="/learn/index2.html#sourcing-worksheet">Worksheet: Supplier Comparison Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🏷 Control Brand Playbook</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#control-brand">Module overview</a></li>
+                  <li><a href="/learn/index2.html#control-brand-worksheet">Worksheet: Build a Better Version Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📋 Business Model Thinking</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#business-model">Module overview</a></li>
+                  <li><a href="/learn/index2.html#business-model-worksheet">Worksheet: One-Page Business Model Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🚀 Go-To-Market: Launch Without Burning Fuel</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#go-to-market">Module overview</a></li>
+                  <li><a href="/learn/index2.html#go-to-market-worksheet">Worksheet: First Launch Test Plan</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📸 Creative Fundamentals: Photography, Design & Visual Clarity</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#creative-fundamentals">Module overview</a></li>
+                  <li><a href="/learn/index2.html#creative-fundamentals-worksheet">Worksheet: Make the Offer Clear Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📣 Marketing: Use Existing Channels First</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#marketing">Module overview</a></li>
+                  <li><a href="/learn/index2.html#marketing-worksheet">Worksheet: Channel Match Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>♟️ Staying Ahead of the Game</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#market-watch">Module overview</a></li>
+                  <li><a href="/learn/index2.html#market-watch-worksheet">Worksheet: Market Watch Dashboard</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>💻 AI Tools Used Across the Program</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/index2.html#ai-tools">Module overview</a></li>
+                  <li><a href="/learn/index2.html#ai-tools-worksheet">Worksheet: AI Co-Pilot Lab</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </aside>
         <div class="reservation-card thankyou-card">
           <section class="article-intro-module" aria-labelledby="article-intro-heading">
             <div class="article-intro-media">
@@ -1974,10 +2371,6 @@ nav{
                   <div class="article-intro-meta-row">
                     <div class="article-intro-meta-label">Best for</div>
                     <p>Students learning how money moves through a product, service, or venture concept.</p>
-                  </div>
-                  <div class="article-intro-meta-row">
-                    <div class="article-intro-meta-label">Key Takeaways</div>
-                    <p>Revenue is what comes in.<br />Cost is what gets used up.<br />Margin is the space between the two.<br />Profit is what survives after the full system gets paid.<br />Cash flow is the oxygen of a business.<br />Money is a compass, not just a scoreboard.</p>
                   </div>
                   <div class="article-intro-meta-row">
                     <div class="article-intro-meta-label">Learning Outcomes</div>
@@ -2107,7 +2500,7 @@ nav{
         <section class="article-facts-shell" aria-labelledby="article-quick-facts-heading">
           <div class="article-facts-intro">
             <div class="article-facts-kicker">Learn by building</div>
-            <h3 class="article-facts-heading" id="article-quick-facts-heading">Turn the lesson into practice</h3>
+            <h3 class="article-facts-heading" id="article-quick-facts-heading">TURN THE LESSON INTO PRACTICE</h3>
           </div>
           <div class="article-facts-grid">
             <div class="article-facts-card">
@@ -2123,7 +2516,7 @@ nav{
                 <h3>Keep learning</h3>
                 <p>Return to the Learning Hub for published modules and worksheet resources.</p>
               </div>
-              <a data-cta-label="Explore the Learning Hub" class="btn gold gloss" href="/learn/">Explore the Hub</a>
+              <a data-cta-label="Explore the Learning Hub" class="btn gold gloss" href="/learn/index2.html">Explore the Hub</a>
             </div>
           </div>
         </section>
