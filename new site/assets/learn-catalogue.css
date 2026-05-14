@@ -1,0 +1,58 @@
+/*
+  Learning catalogue navigation system.
+  Keeps the Learn sidebar and mobile catalogue menu consistent across hub,
+  module, and worksheet pages without changing the main page typography.
+*/
+
+.learning-catalogue-sidebar{
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+}
+
+.learning-catalogue-sidebar h2{
+  font-weight: 500;
+}
+
+.catalogue-toc summary,
+.catalogue-toc-link{
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.catalogue-sublist a,
+.catalogue-sublist span{
+  display: block;
+  border-radius: 0;
+  padding: 6px 10px;
+  background: #f7f8fb;
+  color: var(--text, #111111);
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.catalogue-sublist a{
+  font-weight: 400;
+}
+
+.catalogue-sublist span{
+  color: var(--muted, #3d3d3d);
+  font-weight: 400;
+}
+
+.catalogue-sublist a.is-current,
+.catalogue-toc-link.is-current,
+.catalogue-toc details.contains-current > summary{
+  font-weight: 500;
+}
+
+.menu-panel .learning-menu-tree summary,
+.menu-panel .learning-menu-list a{
+  font-weight: 400;
+}
+
+.menu-panel .learning-menu-tree.contains-current summary,
+.menu-panel .learning-menu-list a.is-current{
+  font-weight: 500;
+}

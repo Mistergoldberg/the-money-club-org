@@ -158,29 +158,23 @@ if ($parent_phone === '' || $parent_phone_digits === '' || strlen($parent_phone_
 }
 
 $program_options = [
-    'two-week-builder-sprint' => [
-        'label' => '2-Week Builder Sprint',
+    'money-club-program' => [
+        'label' => 'The Money Club.Org Program',
         'sessions' => [
-            'tw_jul_6_17' => 'July 6 - July 17, 2026',
-            'tw_jul_20_31' => 'July 20 - July 31, 2026',
-            'tw_aug_4_15' => 'August 4 - August 15, 2026',
-            'tw_aug_17_28' => 'August 17 - August 28, 2026'
-        ]
-    ],
-    'four-week-full-program' => [
-        'label' => '4-Week Full Program',
-        'sessions' => [
-            'fw_jul_6_31' => 'July 6 - July 31, 2026',
-            'fw_aug_4_28' => 'August 4 - August 28, 2026'
+            'jul_6_11' => 'July 6th-10th, 2026',
+            'aug_10_14' => 'August 10th-14th, 2026'
         ]
     ]
 ];
 
 // Backward compatibility if old values are still posted.
-if ($session === 'session1') {
-    $session = 'fw_jul_6_31';
-} elseif ($session === 'session2') {
-    $session = 'fw_aug_4_28';
+if ($session === 'session2' || strpos($session, 'aug') === 0) {
+    $session = 'aug_10_14';
+} elseif (preg_match('/^session[0-9]+$/', $session) || strpos($session, 'jul') === 0 || strpos($session, 'tw_') === 0 || strpos($session, 'fw_') === 0) {
+    $session = 'jul_6_11';
+}
+if ($program_track === '') {
+    $program_track = 'money-club-program';
 }
 
 if (!array_key_exists($program_track, $program_options)) {
@@ -457,60 +451,47 @@ if ($internal_email_sent) {
     log_parent_approval_event('internal_email_failed reason=' . $smtp_reason);
 }
 
-$parent_subject = 'We\'ve received your parent approval form';
+$parent_subject = 'Thank you — we received your Money Club parent approval form';
+$mission_letter_link = base_url() . '/executive-director-letter.html';
 $parent_lines = [];
 $parent_lines[] = 'Hi,';
 $parent_lines[] = '';
-$parent_lines[] = 'Thank you - we\'ve received your parent approval form for The Money Club.Org.';
+$parent_lines[] = 'Thank you — we\'ve received your parent approval form for The Money Club.Org.';
 $parent_lines[] = '';
-$parent_lines[] = 'We\'re grateful for your interest and excited that your family wants to be part of this.';
+$parent_lines[] = 'We\'ll follow up shortly with next steps, including payment details.';
 $parent_lines[] = '';
-$parent_lines[] = 'I also want to be direct about where things stand.';
+$parent_lines[] = 'I also wanted to share a little more about what this program is really trying to build.';
 $parent_lines[] = '';
-$parent_lines[] = 'The Money Club.Org is a community-first program built for learning, not profit. It is designed to teach financial literacy by example, which is why we operate with open-book financials so families can see how money moves through a real system.';
+$parent_lines[] = 'The Money Club.Org is a nonprofit startup built around a simple belief: young people are capable of far more than most institutions ask of them.';
 $parent_lines[] = '';
-$parent_lines[] = 'This is not a traditional camp. It is a startup-style summer program where kids learn how money works by building real products through guided sprints. Each student receives a $50 build budget to help research, build, price, and test ideas in the real world.';
+$parent_lines[] = 'They do not just need slogans about financial literacy.';
+$parent_lines[] = 'They need tools.';
 $parent_lines[] = '';
-$parent_lines[] = 'This is the model we are trying to prove:';
+$parent_lines[] = 'Tools to understand how money moves.';
+$parent_lines[] = 'How systems behave.';
+$parent_lines[] = 'How incentives shape outcomes.';
+$parent_lines[] = 'How ideas are built, tested, priced, improved, and brought into the real world.';
 $parent_lines[] = '';
-$parent_lines[] = 'kids learn financial literacy through radical transparency';
-$parent_lines[] = 'University of Toronto student mentors get meaningful paid work';
-$parent_lines[] = 'families help kickstart a local feedback loop of learning, demand, and community value';
+$parent_lines[] = 'That is the work we are beginning with this one-week sprint.';
 $parent_lines[] = '';
-$parent_lines[] = 'Right now, we are working toward the threshold needed to run the program this summer.';
+$parent_lines[] = 'Students will learn financial literacy, design thinking, AI, and communication by working through real business problems and building practical ideas of their own.';
 $parent_lines[] = '';
-$parent_lines[] = 'To launch, we need to secure $61,000 in paid parent participation by June 1. That works out to some mix of:';
+$parent_lines[] = 'But the larger mission goes beyond a summer program.';
 $parent_lines[] = '';
-$parent_lines[] = '60 four-week registrations, or';
-$parent_lines[] = '120 two-week sprints';
+$parent_lines[] = 'Over time, we hope to grow The Money Club.Org into a community-rooted platform that helps young people identify local problems, investigate root causes, and build practical projects that deserve real support.';
 $parent_lines[] = '';
-$parent_lines[] = 'I am personally contributing $15,000 toward that goal to help get the program off the ground.';
+$parent_lines[] = 'You can read the full mission letter here:';
 $parent_lines[] = '';
-$parent_lines[] = 'Because we have not yet reached that threshold, we are not sending payment links just yet. Your approval form lets us know your family is seriously interested, and we are holding that in our planning as we work toward launch.';
+$parent_lines[] = 'Read the Letter from the Executive Director →';
+$parent_lines[] = $mission_letter_link;
 $parent_lines[] = '';
-$parent_lines[] = 'If we hit the threshold, we will follow up with payment details, final next steps, and program logistics.';
+$parent_lines[] = 'At this early stage, thoughtful word of mouth makes a real difference. If this opportunity resonates with you, I would be very grateful if you shared The Money Club.Org with another family who may know a young person who would be a strong fit.';
 $parent_lines[] = '';
-$parent_lines[] = 'If this opportunity resonates with you, I would be very grateful if you shared it with friends or family who may know a young person who would be a strong fit. At this stage, thoughtful word of mouth can make a real difference.';
-$parent_lines[] = '';
-$parent_lines[] = 'Over the coming weeks, we\'ll continue to share updates, including:';
-$parent_lines[] = '';
-$parent_lines[] = 'curriculum details';
-$parent_lines[] = 'what students will be working on';
-$parent_lines[] = 'mentor introductions';
-$parent_lines[] = 'and launch progress';
-$parent_lines[] = '';
-$parent_lines[] = 'Location:';
-$parent_lines[] = 'UTSU Student Commons';
-$parent_lines[] = 'University of Toronto, downtown Toronto';
-$parent_lines[] = '';
-$parent_lines[] = 'Daily schedule:';
-$parent_lines[] = '9:00 AM-5:00 PM';
-$parent_lines[] = 'Core instruction: 9:30 AM-3:30 PM';
-$parent_lines[] = '';
-$parent_lines[] = 'Thank you again for your interest, your trust, and your willingness to consider something early.';
+$parent_lines[] = 'Thank you again for your interest and your trust.';
 $parent_lines[] = '';
 $parent_lines[] = 'Warmly,';
 $parent_lines[] = 'Jared Goldberg';
+$parent_lines[] = 'Executive Director';
 $parent_lines[] = 'The Money Club.Org';
 $parent_message = implode("\n", $parent_lines);
 

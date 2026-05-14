@@ -1644,6 +1644,39 @@ nav{
     .article-facts-card li{
       margin: 0;
     }
+    .article-program-details{
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .article-program-detail{
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee7dd;
+    }
+    .article-program-detail:last-child{
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+    .article-program-icon{
+      font-size: clamp(24px, 2.4vw, 32px);
+      line-height: 1;
+    }
+    .article-program-label{
+      display: block;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .article-program-value{
+      color: var(--muted);
+      line-height: 1.25;
+      margin-top: 2px;
+    }
     .article-facts-media{
       border: 1px solid #d9d2c6;
       border-radius: 22px;
@@ -1887,6 +1920,7 @@ nav{
     }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
+  <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1910,22 +1944,40 @@ nav{
         <span></span>
       </div>
       
-      <div class="menu-panel" id="mobile-menu" aria-hidden="true">
+            <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
-        <a href="curriculum-details.html">Curriculum</a>
-        <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
-        <a href="article-best-summer-camps.html">Camp Guides</a>
-                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+          <a href="/curriculum-details.html">Curriculum</a>
+          <a href="/how-it-works.html">Build &amp; Sell</a>
+          <a href="/open-book-hook.html">Open Book Financials</a>
+          <a href="/who-runs-it.html">Who Runs It</a>
+          <a href="/article-best-summer-camps.html">Camp Guides</a>
+          <details class="learning-menu-tree">
+            <summary>Learning Catalogue</summary>
+            <div class="learning-menu-list">
+              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
+              <a href="/learn/index.html">Design Thinking</a>
+              <a href="/learn/index.html">Market Research</a>
+              <a href="/learn/index.html">Sourcing</a>
+              <a href="/learn/index.html">Control Brand</a>
+              <a href="/learn/index.html">Business Model</a>
+              <a href="/learn/index.html">Go-To-Market</a>
+              <a href="/learn/index.html">Creative Fundamentals</a>
+              <a href="/learn/index.html">Marketing</a>
+              <a href="/learn/index.html">Market Watch</a>
+              <a href="/learn/index.html">AI Tools</a>
+            </div>
+          </details>
+          <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
         </div>
-
       </div>
+
 
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
+        <a href="open-book-hook.html">Open Book Financials</a>
+        <a href="who-runs-it.html">Who Runs It</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1997,7 +2049,7 @@ nav{
             <li>preparing a public presentation or debate</li>
             <li>collaborating on a team project</li>
           </ul>
-          <p>Many programs run <strong>two to four weeks</strong>, which gives students time to complete a project while still leaving room for family travel and other summer plans.</p>
+          <p>Many programs run <strong>two to the program</strong>, which gives students time to complete a project while still leaving room for family travel and other summer plans.</p>
           <p>In Toronto, many teen programs are hosted near <strong>university campuses or innovation hubs</strong>, particularly around the <strong>University of Toronto area and downtown Toronto</strong>.</p>
 
           <h2 class="article-band-heading article-band-gold">Types of Programs for Teens in Toronto</h2>
@@ -2110,7 +2162,7 @@ nav{
 
           <h3>Structure and Length</h3>
           <p>Camp length varies significantly.</p>
-          <p>Some programs last <strong>one week</strong>, while others run <strong>three to four weeks</strong>.</p>
+          <p>Some programs last <strong>one week</strong>, while others run <strong>three to the program</strong>.</p>
           <p>Longer programs often allow students to complete deeper projects.</p>
 
           <h3>Environment and Supervision</h3>
@@ -2130,7 +2182,7 @@ nav{
           <p>These outcomes help students see the value of their work.</p>
 
           <h2 class="article-band-heading article-band-gold">Spotlight: The Money Club.Org</h2>
-          <p>One example of an educational <strong>financial literacy camp in Toronto</strong> is <strong>The Money Club.Org</strong>, a four-week program designed for students ages <strong>10–16</strong>.</p>
+          <p>One example of an educational <strong>financial literacy camp in Toronto</strong> is <strong>The Money Club.Org</strong>, a program designed for students ages <strong>10–16</strong>.</p>
           <p>Located at the <strong>UTSU Student Commons near the University of Toronto</strong>, the program focuses on helping students understand how ideas become real products and economic systems.</p>
           <p>Rather than relying heavily on lectures, the program uses <strong>project-based learning</strong> and collaborative problem solving.</p>
           <p>The program introduces students to the systems behind everyday life — markets, incentives, and decision-making. Instead of memorizing concepts, students learn by building ideas and seeing how those ideas interact with the real world.</p>
@@ -2145,7 +2197,7 @@ nav{
           </ul>
 
           <h3>How the Four Weeks Work</h3>
-          <p>The program unfolds gradually over four weeks, with each stage building on the previous one.</p>
+          <p>The program unfolds gradually over the program, with each stage building on the previous one.</p>
 
           <p><strong>Week 1 — Learn the System</strong></p>
           <p>Students build a foundation in economic thinking.</p>
@@ -2172,7 +2224,7 @@ nav{
           <p>Each student receives <strong>virtual investment money</strong> and chooses which projects to support. Teams pitch their ideas, explain their pricing, and compete for attention and investment from their peers.</p>
           <p>This final event functions as both a learning exercise and a public showcase. After the market concludes, students refine their thinking and present what they built, why it works, and what they would improve next.</p>
 
-          <p>Parents interested in learning more about the program structure can explore the detailed <strong><a href="index.html">program overview</a></strong>, the <strong><a href="how-it-works.html">curriculum breakdown</a></strong>, and an explanation of <strong><a href="how-it-works.html">how the four-week program works</a></strong>.</p>
+          <p>Parents interested in learning more about the program structure can explore the detailed <strong><a href="index.html">program overview</a></strong>, the <strong><a href="how-it-works.html">curriculum breakdown</a></strong>, and an explanation of <strong><a href="how-it-works.html">how the program works</a></strong>.</p>
           <p>Session timing and tuition details are available on the <strong><a href="how-it-works.html">schedule and pricing page</a></strong>, and families can review availability through the <strong><a href="reserve-a-spot.html">reservation page</a></strong>.</p>
           <p>Within Toronto’s broader ecosystem of educational summer programs, The Money Club.Org represents one example of a camp focused on entrepreneurship, financial literacy, and real-world systems thinking.</p>
 
@@ -2182,7 +2234,7 @@ nav{
           <p>Most Toronto teen camps serve students between ages 10 and 16, typically covering middle school and early high school.</p>
 
           <h3>How long do teen summer camps usually run?</h3>
-          <p>Many programs run between one and four weeks. Longer programs often allow students to complete more substantial projects.</p>
+          <p>Many programs run between one and the program. Longer programs often allow students to complete more substantial projects.</p>
 
           <h3>Are there entrepreneurship camps for teens in Toronto?</h3>
           <p>Yes. Some programs focus on innovation, financial literacy, and product development. These camps often combine teamwork, design thinking, and presentation skills.</p>
@@ -2213,18 +2265,44 @@ nav{
             <h3 class="article-facts-heading" id="article-quick-facts-heading">Everything you need to know</h3>
           </div>
           <div class="article-facts-grid">
-            <div class="article-facts-card">
-              <h3>Program essentials</h3>
-              <ul>
-                <li>Ages: 10–16</li>
-                <li>Format: Summer day program</li>
-                <li>Duration: 4 weeks</li>
-                <li>When: July &amp; August, Weekdays 9-5pm, Instruction periods 9:30-3:30pm</li>
-                <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
-                <li>Cost: $1,100 per student</li>
-                <li>Materials: Included (including student project inputs)</li>
-                <li>Experience: None required</li>
-                <li>Why: Build a real product and potentially earn money</li>
+            <div class="article-facts-card article-program-details-card">
+              <h3>Program Details</h3>
+              <ul class="article-program-details" aria-label="Program details">
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F4CD;</span>
+                  <span>
+                    <span class="article-program-label">Location</span>
+                    <span class="article-program-value">UTSU Student Commons<br />230 College Street, Toronto</span>
+                  </span>
+                </li>
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F4C5;</span>
+                  <span>
+                    <span class="article-program-label">Dates</span>
+                    <span class="article-program-value">July 6th&ndash;10th<br />August 10th&ndash;14th</span>
+                  </span>
+                </li>
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F465;</span>
+                  <span>
+                    <span class="article-program-label">Program Size</span>
+                    <span class="article-program-value">Limited to 30 participants</span>
+                  </span>
+                </li>
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F9E0;</span>
+                  <span>
+                    <span class="article-program-label">Who It&rsquo;s For</span>
+                    <span class="article-program-value">Computer-literate students</span>
+                  </span>
+                </li>
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F4B0;</span>
+                  <span>
+                    <span class="article-program-label">Tuition</span>
+                    <span class="article-program-value">$200 + HST</span>
+                  </span>
+                </li>
               </ul>
             </div>
             <div class="article-facts-card">

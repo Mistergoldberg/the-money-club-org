@@ -1,0 +1,95 @@
+.menu-panel .learning-menu-tree{
+  border-top: 1px solid var(--line);
+  width: 100%;
+  display: grid;
+  justify-items: stretch;
+}
+
+.menu-panel .learning-menu-tree summary{
+  cursor: pointer;
+  width: 100%;
+  max-width: none;
+  padding: 6px 0;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0;
+  list-style: none;
+}
+
+.menu-panel .learning-menu-tree summary::-webkit-details-marker{
+  display: none;
+}
+
+.menu-panel .learning-menu-list{
+  display: grid;
+  gap: 8px;
+  justify-items: stretch;
+  width: 100%;
+  padding: 8px 0 16px;
+}
+
+.menu-panel .learning-menu-list a{
+  display: block;
+  width: 100%;
+  max-width: none;
+  padding: 6px 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: left;
+  text-decoration: none;
+}
+
+.menu-panel .learning-menu-list a:hover,
+.menu-panel .learning-menu-list a:focus-visible{
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.menu-panel.is-open .learning-menu-tree{
+  justify-items: stretch !important;
+}
+
+.menu-panel.is-open .learning-menu-tree summary,
+.menu-panel.is-open .learning-menu-list a{
+  width: 100% !important;
+  max-width: none !important;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: left !important;
+  text-transform: none;
+}
+
+@media (max-width: 768px){
+  .menu-panel.is-open .learning-menu-tree{
+    border-top: 1px solid var(--line);
+  }
+
+  .menu-panel.is-open .learning-menu-tree summary,
+  .menu-panel.is-open .learning-menu-list a{
+    padding: 14px 0 !important;
+    font-size: clamp(20px, 4.8vw, 26px);
+    line-height: 1.15;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+  }
+
+  .menu-panel.is-open .learning-menu-list{
+    gap: 0;
+    padding: 0;
+  }
+}

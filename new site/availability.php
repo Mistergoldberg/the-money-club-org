@@ -14,16 +14,16 @@ function get_data_dir() {
 }
 
 $defaults = [
-    'session1' => 30,
-    'session2' => 30
+    'jul_6_11' => 30,
+    'aug_10_14' => 30
 ];
 
 $path = get_data_dir() . '/availability.json';
 $fp = fopen($path, 'c+');
 if (!$fp) {
     echo json_encode([
-        'session1' => $defaults['session1'],
-        'session2' => $defaults['session2'],
+        'jul_6_11' => $defaults['jul_6_11'],
+        'aug_10_14' => $defaults['aug_10_14'],
         'capacity' => 30
     ]);
     exit;
@@ -51,8 +51,8 @@ flock($fp, LOCK_UN);
 fclose($fp);
 
 $response = [
-    'session1' => (int)$data['session1'],
-    'session2' => (int)$data['session2'],
+    'jul_6_11' => (int)$data['jul_6_11'],
+    'aug_10_14' => (int)$data['aug_10_14'],
     'capacity' => 30
 ];
 

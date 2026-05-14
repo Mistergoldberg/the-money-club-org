@@ -24,7 +24,10 @@ $allowed_returns = [
     'reserve-a-spot.html',
     'curriculum-details.html',
     'executive-director-letter.html',
-    'who-runs-it.html'
+    'who-runs-it.html',
+    'learn/index.html',
+    'learn/financial-literacy-for-young-entrepreneurs/index.html',
+    'learn/financial-literacy-for-young-entrepreneurs/worksheet.html'
 ];
 
 $return_to = tmc_resolve_return_target($_POST['return-to'] ?? 'index.html', $allowed_returns, 'index.html');
@@ -79,10 +82,12 @@ if ($student_age !== '') {
 }
 
 $session_options = [
-    '' => 'Either session',
-    'july' => 'July session',
-    'august' => 'August session',
-    'either' => 'Either session'
+    '' => 'July 6th-10th or August 10th-14th',
+    'jul_6_11' => 'July 6th-10th',
+    'aug_10_14' => 'August 10th-14th',
+    'july' => 'July 6th-10th',
+    'august' => 'August 10th-14th',
+    'either' => 'July 6th-10th or August 10th-14th'
 ];
 
 if (!array_key_exists($interested_session, $session_options)) {

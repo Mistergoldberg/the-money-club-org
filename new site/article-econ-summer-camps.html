@@ -1644,6 +1644,39 @@ nav{
     .article-facts-card li{
       margin: 0;
     }
+    .article-program-details{
+      display: grid;
+      gap: 0;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .article-program-detail{
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee7dd;
+    }
+    .article-program-detail:last-child{
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+    .article-program-icon{
+      font-size: clamp(24px, 2.4vw, 32px);
+      line-height: 1;
+    }
+    .article-program-label{
+      display: block;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .article-program-value{
+      color: var(--muted);
+      line-height: 1.25;
+      margin-top: 2px;
+    }
     .article-facts-media{
       border: 1px solid #d9d2c6;
       border-radius: 22px;
@@ -1887,6 +1920,7 @@ nav{
     }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
+  <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1910,22 +1944,40 @@ nav{
         <span></span>
       </div>
       
-      <div class="menu-panel" id="mobile-menu" aria-hidden="true">
+            <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
-        <a href="curriculum-details.html">Curriculum</a>
-        <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
-        <a href="article-best-summer-camps.html">Camp Guides</a>
-                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+          <a href="/curriculum-details.html">Curriculum</a>
+          <a href="/how-it-works.html">Build &amp; Sell</a>
+          <a href="/open-book-hook.html">Open Book Financials</a>
+          <a href="/who-runs-it.html">Who Runs It</a>
+          <a href="/article-best-summer-camps.html">Camp Guides</a>
+          <details class="learning-menu-tree">
+            <summary>Learning Catalogue</summary>
+            <div class="learning-menu-list">
+              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
+              <a href="/learn/index.html">Design Thinking</a>
+              <a href="/learn/index.html">Market Research</a>
+              <a href="/learn/index.html">Sourcing</a>
+              <a href="/learn/index.html">Control Brand</a>
+              <a href="/learn/index.html">Business Model</a>
+              <a href="/learn/index.html">Go-To-Market</a>
+              <a href="/learn/index.html">Creative Fundamentals</a>
+              <a href="/learn/index.html">Marketing</a>
+              <a href="/learn/index.html">Market Watch</a>
+              <a href="/learn/index.html">AI Tools</a>
+            </div>
+          </details>
+          <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
         </div>
-
       </div>
+
 
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
+        <a href="open-book-hook.html">Open Book Financials</a>
+        <a href="who-runs-it.html">Who Runs It</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -2082,18 +2134,44 @@ nav{
             <h3 class="article-facts-heading" id="article-quick-facts-heading">Everything you need to know</h3>
           </div>
           <div class="article-facts-grid">
-            <div class="article-facts-card">
-              <h3>Program essentials</h3>
-              <ul>
-                <li>Ages: 10–16</li>
-                <li>Format: Summer day program</li>
-                <li>Duration: 4 weeks</li>
-                <li>When: July &amp; August, Weekdays 9-5pm, Instruction periods 9:30-3:30pm</li>
-                <li>Location: UTSU Student Commons, 230 College Street, Toronto, ON M5T 1R2</li>
-                <li>Cost: $1,100 per student</li>
-                <li>Materials: Included (including student project inputs)</li>
-                <li>Experience: None required</li>
-                <li>Why: Build a real product and potentially earn money</li>
+            <div class="article-facts-card article-program-details-card">
+              <h3>Program Details</h3>
+              <ul class="article-program-details" aria-label="Program details">
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F4CD;</span>
+                  <span>
+                    <span class="article-program-label">Location</span>
+                    <span class="article-program-value">UTSU Student Commons<br />230 College Street, Toronto</span>
+                  </span>
+                </li>
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F4C5;</span>
+                  <span>
+                    <span class="article-program-label">Dates</span>
+                    <span class="article-program-value">July 6th&ndash;10th<br />August 10th&ndash;14th</span>
+                  </span>
+                </li>
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F465;</span>
+                  <span>
+                    <span class="article-program-label">Program Size</span>
+                    <span class="article-program-value">Limited to 30 participants</span>
+                  </span>
+                </li>
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F9E0;</span>
+                  <span>
+                    <span class="article-program-label">Who It&rsquo;s For</span>
+                    <span class="article-program-value">Computer-literate students</span>
+                  </span>
+                </li>
+                <li class="article-program-detail">
+                  <span class="article-program-icon" aria-hidden="true">&#x1F4B0;</span>
+                  <span>
+                    <span class="article-program-label">Tuition</span>
+                    <span class="article-program-value">$200 + HST</span>
+                  </span>
+                </li>
               </ul>
             </div>
             <div class="article-facts-card">

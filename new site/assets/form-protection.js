@@ -101,7 +101,11 @@
   }
 
   function defaultReturnForPage() {
-    var path = (window.location.pathname || '').split('/').pop();
+    var path = window.location.pathname || '/index.html';
+    path = path.replace(/^\/+/, '');
+    if (!path || path.slice(-1) === '/') {
+      path += 'index.html';
+    }
     return path || 'index.html';
   }
 
@@ -120,11 +124,11 @@
         ensureHiddenInput(form, '_csrf', token);
       }
 
-      if ((actionName === 'apply-contact.php' || actionName === 'apply-our-mission.php' || actionName === 'apply-instructor.php' || actionName === 'start-parent-approval.php') && !form.querySelector('input[name="return-to"]')) {
+      if ((actionName === 'apply-interest.php' || actionName === 'apply-contact.php' || actionName === 'apply-our-mission.php' || actionName === 'apply-instructor.php' || actionName === 'start-parent-approval.php') && !form.querySelector('input[name="return-to"]')) {
         ensureHiddenInput(form, 'return-to', defaultReturnForPage());
       }
 
-      if ((actionName === 'apply-contact.php' || actionName === 'apply-our-mission.php' || actionName === 'apply-instructor.php' || actionName === 'start-parent-approval.php') && !form.querySelector('input[name="return-error"]')) {
+      if ((actionName === 'apply-interest.php' || actionName === 'apply-contact.php' || actionName === 'apply-our-mission.php' || actionName === 'apply-instructor.php' || actionName === 'start-parent-approval.php') && !form.querySelector('input[name="return-error"]')) {
         ensureHiddenInput(form, 'return-error', defaultReturnForPage());
       }
     });

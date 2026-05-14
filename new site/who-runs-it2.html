@@ -88,8 +88,6 @@
       --plum: #6e4a88;
       --purple: #8c62a7;
       --gold: #f0b43a;
-      --rose: #cf6679;
-      --slate: #5b6c7a;
       --ink: #1a1a1a;
 
       --font-body: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -146,9 +144,9 @@
 
     h1, h2, h3{
       margin: 0;
-    
+
       font-size: var(--size-lg);
-    
+
       font-family: var(--font-body);
       text-transform: none;
       letter-spacing: 0;
@@ -156,13 +154,13 @@
       font-weight: 700;
     }
     h1{ font-size: calc(var(--size-hero) * 1.2);
-    
+
       font-family: var(--font-display);
       text-transform: uppercase;
       letter-spacing: var(--tracking-display);
       line-height: 1.2;
     }
-    h2{ font-size: var(--size-xl); 
+    h2{ font-size: var(--size-xl);
       font-family: var(--font-display);
       text-transform: uppercase;
       letter-spacing: var(--tracking-display);
@@ -276,11 +274,6 @@
       color: #ffffff;
       box-shadow: 0 10px 20px rgba(240,180,58,0.25);
     }
-    .btn.teal{
-      background: var(--teal);
-      color: #ffffff;
-      box-shadow: 0 10px 20px rgba(30,138,149,0.25);
-    }
     .btn.ghost{
       background: transparent;
       border-color: #ffffff;
@@ -290,11 +283,6 @@
       background: var(--purple);
       color: #ffffff;
       box-shadow: 0 10px 20px rgba(140,98,167,0.25);
-    }
-    .btn.plum{
-      background: var(--plum);
-      color: #ffffff;
-      box-shadow: 0 10px 20px rgba(110,74,136,0.25);
     }
     .btn.outline{
       background: transparent;
@@ -328,7 +316,7 @@
       gap: 6px;
       align-content:center;
       justify-items:start;
-    
+
       cursor: pointer;
     }
     .menu-btn span{
@@ -448,7 +436,6 @@ nav{
     }
     .hero-title{
       color: var(--teal);
-      font-size: calc(var(--size-hero) * 1.2);
       line-height: 0.85;
       letter-spacing: normal;
       text-align: left;
@@ -456,7 +443,7 @@ nav{
     .hero-sub{
       font-family: var(--font-body);
       font-weight: 700;
-      font-size: var(--size-body);
+      font-size: inherit;
       color: var(--ink);
       margin: 6px auto 0;
       line-height: 1.2;
@@ -557,15 +544,7 @@ nav{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(24px, 5vw, 48px);
-      align-items:start;
-    }
-    .system-title-row{
-      margin-bottom: clamp(16px, 2.5vw, 28px);
-    }
-    @media (min-width: 981px){
-      .system-title-row h2{
-        white-space: nowrap;
-      }
+      align-items:center;
     }
     .system-art{
       border-radius: var(--radius-lg);
@@ -583,8 +562,8 @@ nav{
       display:grid;
       gap: 16px;
     }
-    .system-copy .lede{
-      max-width: none;
+    .system-copy .section-title{
+      margin-bottom: 0;
     }
 
     .roles-grid{
@@ -655,21 +634,6 @@ nav{
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
-    .mission-section{
-      background: #f3efe7;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .kickstart-cta-section{
-      background: var(--paper);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-    .launch-note-section{
-      background: #edf3f6;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
     .funding-grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -724,527 +688,6 @@ nav{
     .architect-body{
       display:grid;
       gap: 12px;
-    }
-    .mission-body{
-      display: grid;
-      gap: 12px;
-      width: 100%;
-      max-width: none;
-      margin: 0;
-    }
-    .mission-questions{
-      list-style: none;
-      padding-left: 0;
-      display: grid;
-      gap: 6px;
-      margin: 0;
-    }
-    .mission-signoff{
-      display: grid;
-      gap: 0;
-      margin-top: 6px;
-      font-weight: 600;
-    }
-    .kickstart-cta-card{
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--line);
-      background: #ffffff;
-      padding: clamp(18px, 3vw, 28px);
-      display: grid;
-      gap: 14px;
-      box-shadow: 0 18px 30px rgba(0,0,0,0.08);
-      width: 100%;
-      max-width: none;
-    }
-    .kickstart-cta-card p{
-      margin: 0;
-    }
-    .kickstart-cta-grid{
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .kickstart-cta-grid .btn{
-      width: 100%;
-      min-height: 62px;
-      border-radius: 16px;
-      justify-content: center;
-      padding: 14px 16px;
-      font-size: clamp(22px, 2.5vw, 30px);
-      line-height: 0.95;
-    }
-    .kickstart-cta-grid .btn.secondary{
-      background: var(--gold);
-      box-shadow: 0 10px 20px rgba(240,180,58,0.25);
-    }
-    .kickstart-cta-grid .btn.primary{
-      background: var(--teal);
-      box-shadow: 0 10px 20px rgba(30,138,149,0.25);
-    }
-    .kickstart-cta-grid .btn.plum{
-      background: var(--plum);
-      box-shadow: 0 10px 20px rgba(110,74,136,0.25);
-    }
-    .kickstart-cta-grid .btn.purple{
-      background: var(--purple);
-      box-shadow: 0 10px 20px rgba(140,98,167,0.25);
-    }
-    .kickstart-cta-footnote{
-      font-size: clamp(18px, 1.9vw, 22px);
-      color: var(--muted);
-      text-align: center;
-    }
-    .launch-note-layout{
-      display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.9fr);
-      gap: clamp(18px, 3.2vw, 34px);
-      align-items: start;
-    }
-    .launch-note-copy{
-      display: grid;
-      gap: 12px;
-    }
-    .launch-note-copy--intro{ grid-column: 1; grid-row: 1; }
-    .launch-note-copy--mid{ grid-column: 1; grid-row: 2; }
-    .launch-kickstarter-card{
-      grid-column: 2;
-      grid-row: 1 / span 2;
-      align-self: start;
-    }
-    .launch-note-copy p{
-      margin: 0;
-    }
-    .launch-note-list{
-      list-style: none;
-      margin: 0;
-      padding-left: 0;
-      display: grid;
-      gap: 6px;
-    }
-    .openbook-pie-card{
-      border-radius: 22px;
-      border: 1px solid var(--line);
-      background: #ffffff;
-      padding: clamp(18px, 2.1vw, 24px);
-      display: grid;
-      gap: 14px;
-      width: 100%;
-      box-shadow: 0 14px 28px rgba(17,17,17,0.08);
-      font-family: var(--font-body);
-      font-size: clamp(18px, 1.3vw, 21px);
-      line-height: 1.32;
-    }
-    .openbook-subheading{
-      margin: 0;
-      text-align: center;
-      font-size: clamp(34px, 2.7vw, 44px);
-      line-height: 1.02;
-      font-family: var(--font-body);
-      text-transform: none;
-      letter-spacing: 0;
-      font-weight: 700;
-    }
-    .openbook-subtitle{
-      display: block;
-      font-size: clamp(17px, 1.2vw, 20px);
-      font-weight: 500;
-      color: var(--muted);
-      text-transform: none;
-      letter-spacing: 0;
-      margin-top: 4px;
-      line-height: 1.25;
-    }
-    .openbook-helper{
-      margin: 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: clamp(17px, 1.15vw, 19px);
-      line-height: 1.25;
-    }
-    .openbook-pie{
-      width: min(320px, 100%);
-      aspect-ratio: 1 / 1;
-      border-radius: 50%;
-      margin: 0 auto 8px;
-      background:
-        conic-gradient(
-          var(--purple) 0% 50.4%,
-          var(--gold) 50.4% 82.7%,
-          var(--rose) 82.7% 90.6%,
-          var(--teal) 90.6% 95.5%,
-          var(--ink) 95.5% 99.6%,
-          var(--slate) 99.6% 100%
-        );
-      position: relative;
-      display: grid;
-      place-items: center;
-    }
-    .openbook-pie.kickstarter-pie{
-      background:
-        conic-gradient(
-          var(--purple) 0% 24.6%,
-          rgba(30,138,149,0.28) 24.6% 100%
-        );
-    }
-    .openbook-pie::after{
-      content: "";
-      position: absolute;
-      inset: 18%;
-      background: #ffffff;
-      border-radius: 50%;
-      box-shadow: inset 0 0 0 1px var(--line);
-    }
-    .openbook-pie-center{
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      display: grid;
-      gap: 4px;
-    }
-    .openbook-pie-center .label{
-      font-size: clamp(15px, 1.05vw, 17px);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      font-weight: 700;
-    }
-    .openbook-pie-center .value{
-      font-family: var(--font-display);
-      font-size: clamp(32px, 3.1vw, 42px);
-      letter-spacing: var(--tracking-display);
-      color: var(--ink);
-      line-height: 0.95;
-    }
-    .openbook-legend{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 8px;
-      font-size: clamp(18px, 1.25vw, 20px);
-    }
-    .openbook-legend li{
-      display: grid;
-      grid-template-columns: 14px minmax(0, 1fr) minmax(0, 90px);
-      gap: 12px;
-      align-items: center;
-      text-align: left;
-      margin: 0;
-    }
-    .legend-dot{
-      width: 14px;
-      height: 14px;
-      border-radius: 999px;
-      display: inline-block;
-    }
-    .openbook-legend .legend-label{
-      color: var(--ink);
-      font-weight: 600;
-      display: inline-flex;
-      align-items: baseline;
-      gap: 8px;
-      min-width: 0;
-      line-height: 1.24;
-    }
-    .openbook-legend .legend-amount{
-      color: var(--muted);
-      font-size: 0.86em;
-      font-weight: 600;
-      white-space: nowrap;
-    }
-    .openbook-legend .legend-value{
-      font-weight: 700;
-      text-align: right;
-      justify-self: end;
-      font-variant-numeric: tabular-nums;
-      font-size: 1.04em;
-    }
-    body.info-session-open{
-      overflow: hidden;
-    }
-    .info-session-overlay{
-      position: fixed;
-      inset: 0;
-      z-index: 1400;
-      display: none;
-      align-items: center;
-      justify-items: center;
-      background: rgba(12, 12, 12, 0.62);
-      padding: clamp(14px, 3vw, 24px);
-    }
-    .info-session-overlay.is-open{
-      display: grid;
-    }
-    .info-session-modal{
-      width: min(760px, 100%);
-      max-height: min(90vh, 920px);
-      overflow: auto;
-      background: #f4f4f2;
-      border: 1px solid #d7d1c7;
-      border-radius: 20px;
-      box-shadow: 0 18px 42px rgba(0,0,0,0.26);
-      padding: clamp(18px, 3vw, 28px);
-      display: grid;
-      gap: 12px;
-    }
-    .info-session-close{
-      justify-self: end;
-      width: 38px;
-      height: 38px;
-      border: 4px solid #0a63ce;
-      border-radius: 999px;
-      background: #f4f4f2;
-      color: var(--ink);
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 1;
-      cursor: pointer;
-    }
-    .info-session-title{
-      margin: 0;
-      font-size: clamp(24px, 3.4vw, 34px);
-      line-height: 1.1;
-      font-family: var(--font-body);
-      text-transform: none;
-      letter-spacing: 0;
-      font-weight: 700;
-      color: var(--ink);
-      text-align: center;
-    }
-    .info-session-meta{
-      margin: 0;
-      font-size: clamp(18px, 2.1vw, 24px);
-      line-height: 1.2;
-      color: var(--ink);
-      font-weight: 600;
-      text-align: center;
-    }
-    .info-session-helper{
-      margin: 0;
-      color: var(--muted);
-      text-align: center;
-    }
-    .info-session-form{
-      display: grid;
-      gap: 16px;
-    }
-    .info-session-row{
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-    .info-session-field{
-      display: grid;
-      gap: 8px;
-    }
-    .info-session-field label{
-      color: #1c1e22;
-      font-weight: 700;
-    }
-    .info-session-field input{
-      border-radius: 24px;
-      border: 1px solid #c8bfb1;
-      background: #f2f1ee;
-      color: #1c1e22;
-      padding: 14px 16px;
-      min-height: 52px;
-      font: inherit;
-    }
-    .info-session-field input:focus{
-      outline: none;
-      border-color: #8c62a7;
-      box-shadow: 0 0 0 2px rgba(140,98,167,0.15);
-      background: #f5f4f2;
-    }
-    .info-session-submit{
-      width: 100%;
-      justify-content: center;
-      min-height: 62px;
-      border-radius: 16px;
-      font-size: clamp(24px, 3vw, 34px);
-      line-height: 0.9;
-    }
-    #reserve.section-banner{
-      margin-top: var(--space-5);
-      background: var(--purple);
-      color: #ffffff;
-      width: min(760px, calc(100% - 36px));
-      margin-left: auto;
-      margin-right: auto;
-      padding: 18px 20px;
-      border-radius: 20px 20px 0 0;
-    }
-    #reserve .wrap{
-      max-width: none;
-      margin: 0 auto;
-      padding: 0;
-    }
-    #reserve h2{
-      margin: 0;
-      color: #ffffff;
-      text-align: center;
-      font-size: clamp(32px, 4vw, 46px);
-      line-height: 0.88;
-    }
-    .reservation-steps .wrap{
-      width: min(760px, calc(100% - 36px));
-      max-width: none;
-      margin: 0 auto;
-      padding: 16px 0 0;
-    }
-    .reservation-row{
-      display: grid;
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-    .reservation-card{
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      background: #ffffff;
-      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
-      padding: 20px;
-      display: grid;
-      gap: 12px;
-      max-width: none;
-      width: 100%;
-      margin: 0 auto;
-    }
-    .form-success{
-      display: none;
-      border: 1px solid var(--line);
-      border-left: 6px solid var(--teal);
-      border-radius: 14px;
-      background: #f6fbfc;
-      color: var(--ink);
-      padding: 14px 16px;
-      font-weight: 600;
-    }
-    .form-success.is-visible{
-      display: block;
-    }
-    .form-loading{
-      display: none;
-      align-items: center;
-      gap: 10px;
-      color: var(--muted);
-      font-weight: 600;
-      border: 1px dashed #cdd3da;
-      border-radius: 12px;
-      padding: 10px 12px;
-      background: #f9fafb;
-    }
-    .form-loading.is-visible{
-      display: inline-flex;
-    }
-    .spinner{
-      width: 16px;
-      height: 16px;
-      border-radius: 999px;
-      border: 2px solid #cbd5e1;
-      border-top-color: var(--teal);
-      animation: tmc-spin 0.8s linear infinite;
-    }
-    .loading-text{
-      line-height: 1;
-    }
-    @keyframes tmc-spin{
-      to { transform: rotate(360deg); }
-    }
-    .reservation-card.is-processing .interest-submit{
-      opacity: 0.72;
-      cursor: wait;
-      pointer-events: none;
-    }
-    .form-grid{
-      display: grid;
-      gap: 16px;
-      max-width: none;
-    }
-    .field-row{
-      display: grid;
-      gap: 16px;
-    }
-    .field-row.two-col{
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-    .field{
-      display: grid;
-      gap: 6px;
-    }
-    .field label{
-      font-weight: 600;
-      color: var(--ink);
-    }
-    .field input{
-      font: inherit;
-      padding: 14px 16px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
-      background: #f4f4f2;
-      color: var(--ink);
-      min-height: 56px;
-    }
-    .field input:focus{
-      outline: none;
-      border-color: #8c62a7;
-      box-shadow: 0 0 0 2px rgba(140,98,167,0.15);
-      background: #f8f8f6;
-    }
-    .field-error{
-      display: none;
-      color: #b00020;
-      font-size: 14px;
-    }
-    .field.is-invalid .field-error{
-      display: block;
-    }
-    .field.is-invalid input{
-      border-color: #b00020;
-    }
-    .interest-subhead{
-      margin: 0;
-      font-size: clamp(24px, 3.1vw, 32px);
-      line-height: 1.15;
-      font-weight: 700;
-      color: var(--ink);
-      text-align: center;
-    }
-    .interest-helper{
-      margin: 0;
-      color: var(--muted);
-      text-align: center;
-    }
-    .interest-submit-wrap{
-      display: grid;
-      gap: 8px;
-      margin-top: 4px;
-    }
-    .interest-submit{
-      width: 100%;
-      justify-content: center;
-      min-height: 84px;
-      border-radius: 16px;
-      font-size: clamp(22px, 3vw, 34px);
-      line-height: 0.95;
-      border: 0;
-    }
-    .interest-trust-line{
-      display: block;
-      margin: 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: clamp(14px, 1.4vw, 16px);
-      line-height: 1.25;
-    }
-    .interest-register-link{
-      display: block;
-      text-align: center;
-      color: #1a5cff;
-      text-decoration: underline;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 3px;
-      font-weight: 700;
-      line-height: 1.25;
     }
     .ops-body{
       display:grid;
@@ -1398,7 +841,7 @@ nav{
     @media (max-width: 1100px){
       .system-grid{ grid-template-columns: 1fr; }
     }
-    
+
     .btn.cta-standard{
       width: 100%;
       font-family: var(--font-display);
@@ -1494,17 +937,6 @@ nav{
         background: transparent;
         padding: 0;
       }
-      .field-row.two-col{
-        grid-template-columns: 1fr;
-      }
-      .interest-submit{
-        min-height: 72px;
-        font-size: clamp(24px, 6.2vw, 30px);
-      }
-      .reservation-card{
-        padding: 18px;
-        border-radius: 18px;
-      }
       .facts-grid .facts-card:last-child{
         display: none;
       }
@@ -1519,34 +951,6 @@ nav{
         max-width: 140px;
         width: 140px;
         margin: 0 auto;
-      }
-      .launch-note-layout{
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-      .launch-note-copy--intro{ grid-column: 1; grid-row: 1; }
-      .launch-kickstarter-card{ grid-column: 1; grid-row: 2; }
-      .launch-note-copy--mid{ grid-column: 1; grid-row: 3; }
-      .openbook-pie-card{
-        padding: 16px;
-      }
-      .openbook-pie{
-        width: min(290px, 100%);
-      }
-      .openbook-legend{
-        font-size: clamp(17px, 4.2vw, 20px);
-      }
-      .kickstart-cta-grid{
-        grid-template-columns: 1fr;
-      }
-      .kickstart-cta-card{
-        border: 0;
-        box-shadow: none;
-        background: transparent;
-        padding: 0;
-      }
-      .info-session-row{
-        grid-template-columns: 1fr;
       }
 
       /* Mobile standards */
@@ -1687,7 +1091,7 @@ nav{
         transition: none !important;
       }
     }
-  
+
     @media (max-width: 640px){
       :root{
         --lh-body: 1.38;
@@ -1756,7 +1160,7 @@ nav{
     }
     @media (max-width: 980px){
       #choose-your-adventure{
-        display: none;
+        display: block;
       }
       #choose-your-adventure .adventure-grid{
         grid-template-columns: 1fr;
@@ -1775,7 +1179,6 @@ nav{
 
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
-  <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1799,40 +1202,27 @@ nav{
         <span></span>
       </div>
 
-            <div class="menu-panel" id="mobile-menu" aria-hidden="true">
+
+      <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
-          <a href="/curriculum-details.html">Curriculum</a>
-          <a href="/how-it-works.html">Build &amp; Sell</a>
-          <a href="/open-book-hook.html">Open Book Financials</a>
-          <a href="/who-runs-it.html">Who Runs It</a>
-          <a href="/article-best-summer-camps.html">Camp Guides</a>
-          <details class="learning-menu-tree">
-            <summary>Learning Catalogue</summary>
-            <div class="learning-menu-list">
-              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
-              <a href="/learn/index.html">Design Thinking</a>
-              <a href="/learn/index.html">Market Research</a>
-              <a href="/learn/index.html">Sourcing</a>
-              <a href="/learn/index.html">Control Brand</a>
-              <a href="/learn/index.html">Business Model</a>
-              <a href="/learn/index.html">Go-To-Market</a>
-              <a href="/learn/index.html">Creative Fundamentals</a>
-              <a href="/learn/index.html">Marketing</a>
-              <a href="/learn/index.html">Market Watch</a>
-              <a href="/learn/index.html">AI Tools</a>
-            </div>
-          </details>
-          <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
+        <a href="curriculum-details.html">Curriculum</a>
+        <a href="how-it-works.html">Build & Sell</a>
+        <a href="pricing.html">Open-Book Financials</a>
+        <a href="who-runs-it.html">Who Runs It</a>
+        <a href="article-best-summer-camps.html">Camp Guides</a>
+        <a href="faq.html">FAQ</a>
+                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
         </div>
-      </div>
 
+      </div>
 
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="open-book-hook.html">Open Book Financials</a>
+        <a href="pricing.html">Open-Book Financials</a>
         <a href="who-runs-it.html">Who Runs It</a>
+        <a href="faq.html">FAQ</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1855,6 +1245,28 @@ nav{
       </div>
     </section>
 
+    <section class="section system">
+      <div class="wrap">
+        <div class="system-grid">
+          <div class="system-copy">
+            <div class="section-title">
+              <div class="eyebrow">The flywheel</div>
+              <h2>A system that sustains itself</h2>
+              <p class="lede">The Money Club.Org is a closed-loop economic engine — built to create jobs, not just ideas.</p>
+            </div>
+            <p>We activate community-led initiatives using real-world design thinking: identifying problems, stress-testing solutions, and launching projects with real accountability.</p>
+            <p>No grants. No gimmicks. It’s self-funded, radically transparent, and powered by one core mission: 📖 Open-book financial reporting — so every participant sees exactly how money works.</p>
+            <p>This isn’t theory. It’s practice.</p>
+            <p>And it’s how the next generation learns to lead with clarity, confidence, and capital.</p>
+            <p>At its core, The Money Club.Org runs on a simple flywheel — one designed to keep quality high, incentives aligned, and outcomes real.</p>
+          </div>
+          <div class="system-art">
+            <img src="assets/flywheel.jpg" alt="The Money Club.Org flywheel graphic" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section operators">
       <div class="wrap">
         <div class="section-title">
@@ -1863,7 +1275,7 @@ nav{
         </div>
         <div class="stack-card ops-card">
           <div class="ops-body">
-            <p>The Money Club.Org is supported day-to-day by its student leadership team: Sarah Duong and Alex Goldberg. They take on real work&mdash;within a clear structure and under adult oversight&mdash;because operating a system is the fastest way to learn how it works.</p>
+            <p>The Money Club.Org is supported day-to-day by its student leadership team: Sarah Duong and Alex Goldberg (Humberside Collegiate Institute). They take on real work&mdash;within a clear structure and under adult oversight&mdash;because operating a system is the fastest way to learn how it works.</p>
             <p>They help with real tasks such as gathering quotes, building familiarity with the program budget, supporting instructor outreach, and contributing to marketing and enrollment.</p>
             <p>During the summer program, Sarah and Alex support daily operations by helping coordinate schedules and logistics so sessions run smoothly. They work inside real constraints and follow through on execution&mdash;with supervision and final accountability held by program leadership.</p>
             <p>This is intentional. The Money Club.Org teaches how real organizations function: planning, trade-offs, and follow-through. Sarah and Alex represent the model in action&mdash;learning by operating and building practical capability before university.</p>
@@ -1875,6 +1287,43 @@ nav{
             <div class="ops-portrait">
               <img src="assets/alex.png" alt="Portrait of Alex Goldberg" />
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section instructors-mentors">
+      <div class="wrap">
+        <div class="instructors-mobile-hero">
+          <img src="assets/vibe-comding-6.jpg" alt="University of Toronto student mentors guiding classroom work" />
+        </div>
+        <div class="section-title">
+          <div class="eyebrow">Who Your Child Will Be Learning From</div>
+          <h2>University of Toronto Student Mentors</h2>
+        </div>
+        <div class="stack-card instructors-card">
+          <div class="instructors-media">
+            <picture>
+              <source media="(max-width: 980px)" srcset="assets/vibe-comding-6.jpg" />
+              <img src="assets/vibe-coding-2.jpg" alt="University of Toronto student mentors guiding classroom work" />
+            </picture>
+          </div>
+          <div class="instructors-body">
+            <p>At the center of the program is a cohort of paid University of Toronto students.</p>
+            <p>They are selected for their ability to guide students through research, product thinking, AI tools, and real-world problem-solving.</p>
+            <ul>
+              <li>communicate clearly</li>
+              <li>think practically</li>
+              <li>work across business, technology, and problem-solving</li>
+            </ul>
+            <p>These mentors:</p>
+            <ul>
+              <li>lead workshops and small group sessions</li>
+              <li>help students build products, services, and simple apps</li>
+              <li>guide the use of AI tools for research and creation</li>
+              <li>help students test ideas, refine decisions, and improve what they build</li>
+            </ul>
+            <p>They are close enough in age to be relatable&mdash;and experienced enough to guide students with structure and confidence.</p>
           </div>
         </div>
       </div>
@@ -1894,96 +1343,31 @@ nav{
             <p>The Money Club.Org was designed and is overseen by Jared Goldberg &mdash; a product strategist, systems designer, and educator with 15+ years building and operating real-world business platforms.</p>
             <p>Jared has worked across Walmart, Loblaw, and Canadian Tire, and spent over a decade inside China-based manufacturing ecosystems, where cost, quality, incentives, and execution collide in real time. His work sits at the intersection of economics, incentives, design thinking, and human behavior.</p>
             <p>This program reflects how organizations actually function&mdash;constraints, trade-offs, and accountability&mdash;not how they&rsquo;re described in textbooks.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section mission-section">
-      <div class="wrap">
-        <div class="section-title">
-          <div class="eyebrow">OUR MISSION</div>
-          <h2>A LETTER FROM THE EXECUTIVE DIRECTOR</h2>
-        </div>
-        <div class="mission-body">
-          <p>At The Money Club.Org, we believe young people are capable of far more than most institutions ask of them.</p>
-          <p>They do not need more slogans.<br />They need tools.</p>
-          <p>Tools to understand how money moves.<br />How systems behave.<br />How incentives shape outcomes.<br />How local problems become permanent when no one learns how to map them clearly enough to improve them.</p>
-          <p>That is the work we are building toward.</p>
-          <p>The Money Club.Org began with a simple observation: many of the problems communities live with are not caused by a lack of care. They are caused by a lack of design.</p>
-          <p>Good intentions are common.<br />Clear feedback loops are rare.</p>
-          <p>Our view is that young people should not simply inherit these systems. They should learn how to read them, question them, and improve them.</p>
-          <p>That is why The Money Club.Org is being built not just as a program, but as a platform.</p>
-          <p>In its early form, that means a summer program where students learn financial literacy, design thinking, AI, and communication by building, testing, pricing, and improving real ideas.</p>
-          <p>But the larger vision goes further.</p>
-          <p>Over time, we hope to grow The Money Club.Org into a community-rooted charitable platform that helps young people identify local problems, investigate root causes, and build practical projects that deserve real support.</p>
-          <p>Not charity as performance.<br />Not theory without application.</p>
-          <p>A working platform where young people learn to identify friction, understand incentives, test ideas, and build solutions with real-world consequences.</p>
-          <p>We want students to ask better questions:</p>
-          <ul class="mission-questions">
-            <li>Where is value leaking out of a neighborhood?</li>
-            <li>What problems are being tolerated because no one has mapped them clearly?</li>
-            <li>What would happen if local talent, local knowledge, and local effort were better coordinated?</li>
-            <li>What if education moved beyond awareness into design, testing, and action?</li>
-          </ul>
-          <p>These are not abstract exercises.<br />They are the beginning of civic and economic participation.</p>
-          <p>We also want to be direct about where we are now.</p>
-          <p>The Money Club.Org is a nonprofit startup. We are building it in public, refining it as we go, and trying to do that with as much honesty as possible.</p>
-          <p>That means listening carefully, adjusting the model, and being transparent about what it takes to make the program run.</p>
-          <p>We believe competence compounds.<br />Confidence compounds.<br />Dignity compounds.</p>
-          <p>And when young people are trusted with real responsibility, communities become more resilient.</p>
-          <p>Thank you for taking an interest in The Money Club.Org. We are building something ambitious, practical, and deeply local. We hope you will follow the work, support the mission, and help expand what young people in this city believe is possible.</p>
-          <div class="mission-signoff">
-            <p>Jared Goldberg</p>
-            <p>Executive Director</p>
-            <p>The Money Club.Org</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-banner full-bleed purple heading-white" id="reserve">
-      <div class="wrap">
-        <h2 id="join-the-interest-list">Learn How The Money Club.Org Works</h2>
-      </div>
-    </section>
-    <section id="reserve-a-spot" data-cta-location="reserve-a-spot" class="reservation-steps">
-      <div class="wrap">
-        <div class="reservation-row registration-form-container">
-          <div class="reservation-card">
-            <p class="interest-subhead">📝 Get the Program Details</p>
-            <p class="interest-helper">Enter your email and we&rsquo;ll send a clear overview of how The Money Club.Org works, including the one-week schedule, curriculum, location, tuition, and registration steps.</p>
-            <div class="form-success" id="form-success" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
-            <div class="form-loading" role="status" aria-live="polite">
-              <div class="spinner" aria-hidden="true"></div>
-              <div class="loading-text">Processing…</div>
+            <div class="role-links">
+              <a data-cta-label="Learn more about the curriculum" class="btn secondary cta-standard" href="curriculum-details.html">Learn more about the curriculum</a>
             </div>
-
-            <form class="form-grid" action="apply-interest.php" method="post" novalidate>
-              <input type="hidden" name="return-to" value="who-runs-it.html" />
-              <input type="hidden" name="return-error" value="who-runs-it.html" />
-              <div class="field-row two-col">
-                <div class="field">
-                  <label for="parent-name">Parent / Guardian Name</label>
-                  <input id="parent-name" name="parent-name" data-next="parent-email" type="text" autocomplete="name" required />
-                  <small class="field-error">Parent/guardian name is required.</small>
-                </div>
-                <div class="field">
-                  <label for="parent-email">Email Address</label>
-                  <input id="parent-email" name="parent-email" type="email" autocomplete="email" required />
-                  <small class="field-error">Enter a valid email address.</small>
-                </div>
-              </div>
-              <div class="interest-submit-wrap">
-                <button class="btn teal gloss cta-standard interest-submit" type="submit" data-cta-label="Get Program Details">Get Program Details</button>
-                <small class="interest-trust-line">Downtown Toronto • UTSU Student Commons</small>
-                <a class="interest-register-link" href="/reserve-a-spot.html" data-cta-label="Complete registration here">Ready to register now? Complete registration here →</a>
-              </div>
-            </form>
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section" id="choose-your-adventure">
+      <div class="section-banner purple">
+        <div class="wrap">
+          <h2>Learn More</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="adventure-grid">
+          <a class="adventure-link" data-cta-label="Curriculum" href="curriculum-details.html"><h3>Curriculum</h3></a>
+          <a class="adventure-link" data-cta-label="Build &amp; Sell" href="how-it-works.html"><h3>Build &amp; Sell</h3></a>
+          <a class="adventure-link" data-cta-label="Who Runs It" href="who-runs-it.html"><h3>Who Runs It</h3></a>
+          <a class="adventure-link" data-cta-label="FAQs" href="faq.html"><h3>FAQs</h3></a>
+          <a class="adventure-link" data-cta-label="Reserve a Spot" href="reserve-a-spot.html"><h3>Reserve a Spot</h3></a>
+        </div>
+      </div>
+    </section>
+
   </main>
   <script>
     (function(){
@@ -2043,143 +1427,6 @@ nav{
       document.addEventListener('keydown', function(e){
         if (e.key === 'Escape'){
           closeMenu();
-        }
-      });
-    })();
-  </script>
-  <script>
-    (function(){
-      var openLinks = document.querySelectorAll('[data-open-info-session]');
-      var overlay = document.getElementById('info-session-overlay');
-      if (!overlay){ return; }
-      var closeBtn = overlay.querySelector('.info-session-close');
-      var modal = overlay.querySelector('.info-session-modal');
-      var modalInterestForm = overlay.querySelector('form[action="apply-interest.php"]');
-      var modalIsOpen = overlay.classList.contains('is-open');
-      var lockScrollY = 0;
-
-      function lockPageScroll(){
-        lockScrollY = window.pageYOffset || window.scrollY || 0;
-        document.body.style.position = 'fixed';
-        document.body.style.top = '-' + lockScrollY + 'px';
-        document.body.style.left = '0';
-        document.body.style.right = '0';
-        document.body.style.width = '100%';
-      }
-
-      function unlockPageScroll(){
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.left = '';
-        document.body.style.right = '';
-        document.body.style.width = '';
-        window.scrollTo(0, lockScrollY);
-      }
-
-      function openInfoSession(){
-        if (modalIsOpen){ return; }
-        overlay.classList.add('is-open');
-        overlay.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('info-session-open');
-        lockPageScroll();
-        modalIsOpen = true;
-        if (closeBtn){
-          closeBtn.focus();
-        }
-      }
-
-      function closeInfoSession(){
-        if (!modalIsOpen){ return; }
-        overlay.classList.remove('is-open');
-        overlay.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('info-session-open');
-        unlockPageScroll();
-        modalIsOpen = false;
-      }
-
-      openLinks.forEach(function(openLink){
-        openLink.addEventListener('click', function(e){
-          e.preventDefault();
-          openInfoSession();
-        });
-      });
-
-      if (modalInterestForm){
-        modalInterestForm.addEventListener('submit', function(){
-          if (!modalInterestForm.checkValidity()){
-            return;
-          }
-          closeInfoSession();
-        });
-      }
-
-      if (closeBtn){
-        closeBtn.addEventListener('click', function(){
-          closeInfoSession();
-        });
-      }
-
-      overlay.addEventListener('click', function(e){
-        if (modal && !modal.contains(e.target)){
-          closeInfoSession();
-        }
-      });
-
-      document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && overlay.classList.contains('is-open')){
-          closeInfoSession();
-        }
-      });
-    })();
-  </script>
-  <script>
-    (function(){
-      var shareBtn = document.querySelector('[data-share-program]');
-      if (!shareBtn){ return; }
-
-      var shareUrl = 'https://the-money-club.org/reserve-a-spot.html';
-      var originalLabel = shareBtn.textContent;
-
-      function setTempLabel(label){
-        shareBtn.textContent = label;
-        window.setTimeout(function(){
-          shareBtn.textContent = originalLabel;
-        }, 1600);
-      }
-
-      shareBtn.addEventListener('click', async function(event){
-        event.preventDefault();
-        var shareData = {
-          title: 'The Money Club.Org | Summer 2026',
-          text: 'Learn how The Money Club.Org works and review Summer 2026 options.',
-          url: shareUrl
-        };
-
-        try {
-          if (navigator.share){
-            await navigator.share(shareData);
-            return;
-          }
-          if (navigator.clipboard && navigator.clipboard.writeText){
-            await navigator.clipboard.writeText(shareUrl);
-            setTempLabel('Link Copied');
-            return;
-          }
-          window.prompt('Copy this link:', shareUrl);
-        } catch (error){
-          if (error && error.name === 'AbortError'){
-            return;
-          }
-          if (navigator.clipboard && navigator.clipboard.writeText){
-            try {
-              await navigator.clipboard.writeText(shareUrl);
-              setTempLabel('Link Copied');
-            } catch (clipboardError) {
-              window.prompt('Copy this link:', shareUrl);
-            }
-          } else {
-            window.prompt('Copy this link:', shareUrl);
-          }
         }
       });
     })();
@@ -2254,8 +1501,6 @@ nav{
         var pagePath = window.location.pathname || '';
         return {
           event: eventName,
-          form_name: 'site_cta',
-          funnel_step: eventName,
           cta_label: label,
           cta_text: text,
           cta_href: href,
@@ -2284,20 +1529,9 @@ nav{
 
       function trackCta(target){
         window.dataLayer = window.dataLayer || [];
-        var isReserveIntent = isReserveCta(target);
         var payload = buildCtaPayload(target, 'cta_click');
-        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveIntent ? 'reserve_spot' : 'general');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveCta(target) ? 'reserve_spot' : 'general');
         window.dataLayer.push(payload);
-
-        if (isReserveIntent){
-          var normalizedLabel = normalizeText(getLabel(target));
-          var normalizedText = normalizeText(getText(target));
-          if (normalizedLabel === 'reserve a spot' || normalizedText === 'reserve a spot'){
-            var reservePayload = buildCtaPayload(target, 'reserve_spot_click');
-            reservePayload.cta_intent = 'reserve_spot';
-            window.dataLayer.push(reservePayload);
-          }
-        }
       }
 
       document.addEventListener('click', function(event){
@@ -2331,119 +1565,6 @@ nav{
       });
     })();
   </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
 
-    (function(){
-      var interestForm = document.querySelector('#reserve-a-spot form[action="apply-interest.php"]');
-      if (!interestForm){ return; }
-      var card = interestForm.closest('.reservation-card');
-      var success = document.getElementById('form-success');
-      var loader = card ? card.querySelector('.form-loading') : null;
-      var params = new URLSearchParams(window.location.search);
-
-      function updateFieldState(field){
-        if (!field){ return; }
-        var input = field.querySelector('input, select, textarea');
-        if (!input){ return; }
-        field.classList.toggle('is-invalid', !input.checkValidity());
-      }
-
-      interestForm.addEventListener('submit', function(e){
-        var fields = interestForm.querySelectorAll('.field');
-        fields.forEach(function(field){ updateFieldState(field); });
-        if (!interestForm.checkValidity()){
-          e.preventDefault();
-          var firstInvalid = interestForm.querySelector(':invalid');
-          if (firstInvalid){ firstInvalid.focus(); }
-          return;
-        }
-        if (loader){ loader.classList.add('is-visible'); }
-        if (card){ card.classList.add('is-processing'); }
-      });
-
-      interestForm.addEventListener('input', function(e){
-        updateFieldState(e.target.closest('.field'));
-      });
-      interestForm.addEventListener('change', function(e){
-        updateFieldState(e.target.closest('.field'));
-      });
-
-      if (params.get('status') === 'sent'){
-        if (loader){ loader.classList.remove('is-visible'); }
-        if (card){ card.classList.remove('is-processing'); }
-        if (success){
-          success.classList.add('is-visible');
-          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      } else if (params.get('status') === 'error'){
-        if (loader){ loader.classList.remove('is-visible'); }
-        if (card){ card.classList.remove('is-processing'); }
-        var fieldName = params.get('field');
-        var message = params.get('message') || 'Please check the highlighted field.';
-        if (fieldName){
-          var input = interestForm.querySelector('[name="' + fieldName + '"]');
-          if (input){
-            var field = input.closest('.field');
-            if (field){
-              field.classList.add('is-invalid');
-              var errorEl = field.querySelector('.field-error');
-              if (errorEl){ errorEl.textContent = message; }
-              field.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-          }
-        }
-      }
-
-      if (params.has('status') || params.has('field') || params.has('message')){
-        params.delete('status');
-        params.delete('field');
-        params.delete('message');
-        var cleanQuery = params.toString();
-        var cleanUrl = window.location.pathname + (cleanQuery ? ('?' + cleanQuery) : '') + (window.location.hash || '');
-        try {
-          window.history.replaceState({}, document.title, cleanUrl);
-        } catch (e) {}
-      }
-    })();
-
-    (function(){
-      var interestForms = document.querySelectorAll('form[action="apply-interest.php"]');
-      if (!interestForms.length){ return; }
-
-      function hasValidInterestIdentity(form){
-        if (!form){ return false; }
-        var nameInput = form.querySelector('input[name="parent-name"]');
-        var emailInput = form.querySelector('input[name="parent-email"]');
-        if (!nameInput || !emailInput){ return false; }
-        var nameValue = (nameInput.value || '').trim();
-        var emailValue = (emailInput.value || '').trim();
-        return nameValue.length > 0 && emailValue.length > 0 && emailInput.checkValidity();
-      }
-
-      function pushInterestFormSubmit(){
-        window.dataLayer.push({
-          event: 'interest_form_submit',
-          form_name: 'interest_form',
-          form_id: 'interest',
-          funnel_step: 'form_submit',
-          page_path: window.location.pathname || '',
-          page_title: document.title || ''
-        });
-      }
-
-      interestForms.forEach(function(interestForm){
-        interestForm.addEventListener('submit', function(){
-          if (!interestForm.checkValidity() || !hasValidInterestIdentity(interestForm)){
-            return;
-          }
-
-          pushInterestFormSubmit();
-        });
-      });
-    })();
-  </script>
-
-  <script src="assets/form-protection.js?v=2" defer></script>
 </body>
 </html>

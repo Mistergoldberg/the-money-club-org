@@ -59,10 +59,38 @@ function tmc_phone_digits($value) {
 }
 
 function tmc_resolve_return_target($candidate, $allowed_returns, $default_return) {
-    $candidate = basename(trim((string)$candidate));
-    if (in_array($candidate, $allowed_returns, true)) {
-        return $candidate;
+    $candidate = trim((string)$candidate);
+    if ($candidate === '') {
+        return $default_return;
     }
+
+    $candidate = str_replace('\\', '/', $candidate);
+    $parts = parse_url($candidate);
+    if ($parts === false || isset($parts['scheme']) || isset($parts['host'])) {
+        return $default_return;
+    }
+
+    $path = (string)($parts['path'] ?? $candidate);
+    $path = preg_replace('#/+#', '/', $path);
+    $path = ltrim($path, '/');
+
+    if ($path === '') {
+        return $default_return;
+    }
+
+    if (strpos($path, '..') !== false || strpos($path, "\0") !== false) {
+        return $default_return;
+    }
+
+    if (substr($path, -1) === '/') {
+        $path .= 'index.html';
+    }
+
+    $allowed_map = array_fill_keys($allowed_returns, true);
+    if (isset($allowed_map[$path])) {
+        return $path;
+    }
+
     return $default_return;
 }
 

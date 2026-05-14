@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Nonprofit Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="A 4-week Toronto summer camp for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
+  <meta name="description" content="A one-week Toronto summer program for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
   <meta property="og:title" content="AI Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org" />
-  <meta property="og:description" content="A 4-week Toronto summer camp for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
+  <meta property="og:description" content="A one-week Toronto summer program for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
   <meta property="og:url" content="https://the-money-club.org/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="AI Summer Program for Ages 10–16 | Build Products with AI | The Money Club.Org" />
-  <meta name="twitter:description" content="A 4-week Toronto summer camp for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
+  <meta name="twitter:description" content="A one-week Toronto summer program for students ages 10–16 teaching financial literacy, entrepreneurship, design thinking and public speaking. Located at the UTSU Student Commons near the University of Toronto." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/" />
   <script type="application/ld+json">
@@ -34,7 +34,7 @@
           "@type": "WebPage",
           "@id": "https://the-money-club.org/#webpage",
           "url": "https://the-money-club.org/",
-          "name": "Toronto Kids Summer Camp 2026 | July & August | The Money Club.Org",
+          "name": "Toronto Kids Summer Camp 2026 | July 6th-10th and August 10th-14th | The Money Club.Org",
           "description": "Toronto summer camp for ages 10–16 at UTSU Student Commons in downtown Toronto. In-person, project-based program in financial literacy, entrepreneurship, design thinking, and public speaking.",
           "isPartOf": {
             "@id": "https://the-money-club.org/#website"
@@ -68,14 +68,14 @@
         {
           "@type": "Offer",
           "@id": "https://the-money-club.org/#session-1-offer",
-          "price": "1500",
+          "price": "200",
           "priceCurrency": "CAD",
           "url": "https://the-money-club.org/reserve-a-spot.html"
         },
         {
           "@type": "Offer",
           "@id": "https://the-money-club.org/#session-2-offer",
-          "price": "1500",
+          "price": "200",
           "priceCurrency": "CAD",
           "url": "https://the-money-club.org/reserve-a-spot.html"
         },
@@ -193,9 +193,9 @@
           "@type": "EducationEvent",
           "@id": "https://the-money-club.org/#session-1",
           "name": "The Money Club.Org Summer Program Session 1",
-          "description": "In-person 4-week Toronto summer program for students ages 10–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.",
+          "description": "In-person one-week Toronto summer program for students ages 10–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.",
           "startDate": "2026-07-06",
-          "endDate": "2026-07-31",
+          "endDate": "2026-07-10",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
@@ -212,9 +212,9 @@
           "@type": "EducationEvent",
           "@id": "https://the-money-club.org/#session-2",
           "name": "The Money Club.Org Summer Program Session 2",
-          "description": "In-person 4-week Toronto summer program for students ages 10–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.",
-          "startDate": "2026-08-04",
-          "endDate": "2026-08-28",
+          "description": "In-person one-week Toronto summer program for students ages 10–16 focused on financial literacy, entrepreneurship, design thinking, and public speaking.",
+          "startDate": "2026-08-10",
+          "endDate": "2026-08-14",
           "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
           "eventStatus": "https://schema.org/EventScheduled",
           "location": {
@@ -3305,9 +3305,9 @@
       main > #outcomes{ order: 30; }
       main > #who-runs-it{ order: 40; }
       main > #what-is-this{ order: 50; }
-      main > #choose-your-adventure{ order: 60; }
-      main > #reserve.section-banner{ order: 70; }
-      main > #reserve-a-spot{ order: 80; }
+      main > #reserve.section-banner{ order: 60; }
+      main > #reserve-a-spot{ order: 70; }
+      main > #choose-your-adventure{ order: 110; }
 
       .mobile-program-overview,
       .mobile-build-price-sell{
@@ -3807,8 +3807,79 @@
       }
     }
 
+    /* Migrated Built for Learning section from index-04-03.html. */
+    #radical-transparency .radical-grid{
+      display:grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(28px, 4vw, 52px);
+      align-items: center;
+    }
+    #radical-transparency .radical-side{
+      display:grid;
+      gap: 16px;
+      align-items: start;
+      justify-items: center;
+      align-self: center;
+    }
+    #radical-transparency .radical-side .section-image{
+      width: min(100%, 448px);
+      justify-self: center;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    #radical-transparency .radical-side .section-image img{
+      display:block;
+      width:100%;
+      height:auto;
+      aspect-ratio:auto;
+      object-fit:contain;
+      object-position:center;
+    }
+    #radical-transparency .radical-copy{
+      display:grid;
+      gap: 12px;
+      max-width: 46rem;
+      align-self: center;
+    }
+    #radical-transparency .radical-copy p{
+      margin: 0;
+    }
+    #radical-transparency .radical-copy h3{
+      margin: 6px 0 0;
+      font-size: clamp(22px, 3vw, 30px);
+    }
+    @media (max-width: 980px){
+      #radical-transparency .radical-grid{
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+      }
+      #radical-transparency .radical-side{
+        order: 2;
+      }
+      #radical-transparency .radical-copy{
+        order: 1;
+      }
+      #radical-transparency .radical-side .section-image{
+        order: 1;
+        width: 100%;
+      }
+    }
+    @media (max-width: 768px){
+      main > #radical-transparency{
+        order: 30;
+      }
+      #radical-transparency .section-banner{
+        background: var(--gold);
+        color: #ffffff;
+      }
+      #radical-transparency .section-banner h2{
+        color: #ffffff;
+      }
+    }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
+  <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -3832,22 +3903,40 @@
         <span></span>
       </div>
 
-      <div class="menu-panel" id="mobile-menu" aria-hidden="true">
+            <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
-        <a href="curriculum-details.html">Curriculum</a>
-        <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
-        <a href="article-best-summer-camps.html">Camp Guides</a>
-                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+          <a href="/curriculum-details.html">Curriculum</a>
+          <a href="/how-it-works.html">Build &amp; Sell</a>
+          <a href="/open-book-hook.html">Open Book Financials</a>
+          <a href="/who-runs-it.html">Who Runs It</a>
+          <a href="/article-best-summer-camps.html">Camp Guides</a>
+          <details class="learning-menu-tree">
+            <summary>Learning Catalogue</summary>
+            <div class="learning-menu-list">
+              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
+              <a href="/learn/index.html">Design Thinking</a>
+              <a href="/learn/index.html">Market Research</a>
+              <a href="/learn/index.html">Sourcing</a>
+              <a href="/learn/index.html">Control Brand</a>
+              <a href="/learn/index.html">Business Model</a>
+              <a href="/learn/index.html">Go-To-Market</a>
+              <a href="/learn/index.html">Creative Fundamentals</a>
+              <a href="/learn/index.html">Marketing</a>
+              <a href="/learn/index.html">Market Watch</a>
+              <a href="/learn/index.html">AI Tools</a>
+            </div>
+          </details>
+          <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
         </div>
-
       </div>
+
 
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
+        <a href="open-book-hook.html">Open Book Financials</a>
+        <a href="who-runs-it.html">Who Runs It</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -3865,7 +3954,7 @@
               <img class="hero-logo-mobile" src="assets/logo-mb.png" alt="The Money Club.Org logo" />
             </div>
           </div>
-          <div class="hero-sub">A nonprofit teaching financial literacy, design thinking, AI, and public speaking.</div>
+          <div class="hero-sub">A nonprofit teaching design thinking, how to build with AI, and financial literacy.</div>
         </div>
 
         <div class="hero-image banner">
@@ -3907,13 +3996,13 @@
           <div class="program-summary-meta"><span class="program-summary-keep">Program Details</span></div>
           <div class="program-summary-points">
             <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text"><strong>Location</strong><br />UTSU Student Commons<br />230 College Street, Toronto</span></div>
-            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text"><strong>Dates</strong><br />August 10&ndash;14</span></div>
+            <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text"><strong>Dates</strong><br />July 6th&ndash;10th<br />August 10th&ndash;14th</span></div>
             <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text"><strong>Program Size</strong><br />Limited to 30 participants</span></div>
             <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧠</span><span class="program-summary-point-text"><strong>Who It&rsquo;s For</strong><br />Computer-literate students</span></div>
             <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text"><strong>Tuition</strong><br />$200 + HST</span></div>
           </div>
           <div class="program-summary-cta-group">
-            <p class="program-summary-cta-title">📝 Get the Program Details<br />Learn how the one-week sprint works</p>
+            <p class="program-summary-cta-title">Learn how the one-week sprint works</p>
             <div class="program-summary-cta-actions">
               <a class="btn teal gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
             </div>
@@ -3931,30 +4020,31 @@
       <div class="section-content">
         <div class="split">
           <div class="section-copy">
-            <h3>Built for learning &mdash; not profit</h3>
-            <p>Many kids already earn money in small ways&mdash;babysitting, tutoring, selling things.</p>
-            <p>The Money Club.Org takes that instinct further - it&rsquo;s a startup-style program where kids learn how money moves by building real products through guided sprints.</p>
-            <p>Kids receive a $50 build budget to research ideas, create prototypes, test them, and learn what happens when an idea meets the real world.</p>
-            <p>That&rsquo;s how they learn:</p>
+            <p>Many kids already earn money in small ways: babysitting, tutoring, reselling things, or helping out around the neighbourhood.</p>
+            <p>The Money Club.Org takes that instinct further.</p>
+            <p>It is a one-week, startup-style program where students learn how money moves by building real product ideas through guided sprints.</p>
+            <p>Each student receives a $50 build budget, included in tuition, to research ideas, create prototypes, test concepts, and learn what happens when an idea meets the real world.</p>
+            <p>That is how they learn:</p>
             <ul class="bullet-list">
               <li>what makes something valuable</li>
               <li>how pricing works</li>
-              <li>why some ideas hold up&mdash;and others don&rsquo;t</li>
+              <li>how costs and margins add up</li>
+              <li>why some ideas hold up &mdash; and others do not</li>
             </ul>
-            <p>This is financial literacy, design thinking, and AI&mdash;applied in practice.</p>
+            <p>This is financial literacy, design thinking, and AI applied in practice.</p>
           </div>
           <div class="cta-stack cta-stack--hero">
             <div class="program-summary">
               <div class="program-summary-meta"><span class="program-summary-keep">Program Details</span></div>
               <div class="program-summary-points">
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📍</span><span class="program-summary-point-text"><strong>Location</strong><br />UTSU Student Commons<br />230 College Street, Toronto</span></div>
-                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text"><strong>Dates</strong><br />August 10&ndash;14</span></div>
+                <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">📅</span><span class="program-summary-point-text"><strong>Dates</strong><br />July 6th&ndash;10th<br />August 10th&ndash;14th</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">👥</span><span class="program-summary-point-text"><strong>Program Size</strong><br />Limited to 30 participants</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧠</span><span class="program-summary-point-text"><strong>Who It&rsquo;s For</strong><br />Computer-literate students</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text"><strong>Tuition</strong><br />$200 + HST</span></div>
               </div>
               <div class="program-summary-cta-group">
-                <p class="program-summary-cta-title">📝 Get the Program Details<br />Learn how the one-week sprint works</p>
+                <p class="program-summary-cta-title">Learn how the one-week sprint works</p>
                 <div class="program-summary-cta-actions">
                   <a class="btn teal gloss cta-fill" href="#info-session-overlay" data-open-info-session data-cta-label="Get Program Details">Get Program Details</a>
                 </div>
@@ -4021,37 +4111,25 @@
       </div>
 	    </section>
 
-	    <section class="section" id="who-runs-it">
-	      <div class="section-banner teal">
-	        <div class="wrap">
-	          <h2>Who Runs It</h2>
-	        </div>
-	      </div>
-	      <div class="section-content">
-	        <div class="split">
-	          <div class="section-copy">
-	            <div><strong>Everyone deserves a mentor.</strong></div>
-	            <ul class="bullet-list">
-	              <li>How to think about money.</li>
-	              <li>How to spot value.</li>
-	              <li>How to build something people actually want.</li>
-	              <li>How to price it.</li>
-	              <li>How to sell it.</li>
-	              <li>How to recover when the first idea does not work.</li>
-	            </ul>
-	            <p>The Money Club.Org is designed and led by Jared Goldberg — a product strategist and systems designer with 15+ years of experience building real-world business platforms.</p>
-	            <p>The curriculum comes from the work itself: product development, retail, manufacturing, pricing, incentives, design thinking, and human behavior.</p>
-	            <p>Jared has worked across Walmart, Loblaw, Canadian Tire, and China-based manufacturing ecosystems.</p>
-	            <p>This August, he is running The Money Club as a focused one-week sprint: a practical, mentor-led program for students learning how ideas become real.</p>
-	          </div>
-	          <div class="section-media">
-	            <div class="profile-stack" aria-label="Jared Goldberg">
-	              <img class="profile-photo jared" src="assets/Jared-Profile.png" alt="Jared Goldberg" />
-	            </div>
-	          </div>
-	        </div>
-	      </div>
-	    </section>
+    <section class="section" id="radical-transparency">
+      <div class="section-banner teal">
+        <div class="wrap">
+          <h2>Built for Learning — Not Profit</h2>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="radical-grid">
+          <div class="radical-side">
+            <div class="section-image">
+              <img src="assets/flywheel.jpg" alt="Students and instructors collaborating in class" />
+            </div>
+          </div>
+          <div class="radical-copy">
+            <p>The Money Club.Org is a nonprofit with open-book finances. No upsells. No hidden costs. Tuition goes directly into instruction, materials, and the student experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section mobile-kickstart" id="mobile-kickstart">
       <div class="section-banner teal">
@@ -4064,8 +4142,8 @@
           <p>To run this summer, we need to secure <strong>$61,000</strong> in paid parent participation by <strong>June 1</strong>.</p>
           <p><strong>That means either:</strong></p>
           <ul class="radical-list">
-            <li><strong>60 four-week registrations, or</strong></li>
-            <li><strong>120 two-week sprints</strong></li>
+            <li><strong>current parent participation</strong></li>
+            <li><strong>limited to 30 participants</strong></li>
           </ul>
           <p>Founder Jared Goldberg is personally contributing <strong>$15,000</strong> toward the <strong>$61,000</strong> goal to help get the program off the ground.</p>
           <p>If we hit the threshold, we run.</p>
@@ -4100,7 +4178,6 @@
       <div class="info-session-modal" role="dialog" aria-modal="true" aria-labelledby="info-session-title">
         <button class="info-session-close" type="button" aria-label="Close info session form">&times;</button>
         <h2 class="info-session-title" id="info-session-title">Learn How The Money Club.Org Works</h2>
-        <p class="info-session-meta">📝 Get the Program Details</p>
         <p class="info-session-helper">Enter your email and we&rsquo;ll send a clear overview of how The Money Club.Org works, including the one-week schedule, curriculum, location, tuition, and registration steps.</p>
         <form class="info-session-form" action="apply-interest.php" method="post" novalidate>
           <input type="hidden" name="return-to" value="index.html" />
@@ -4159,7 +4236,7 @@
         <div class="adventure-grid">
           <a class="adventure-link" data-cta-label="Curriculum" href="curriculum-details.html"><h3>Curriculum</h3></a>
           <a class="adventure-link" data-cta-label="Build &amp; Sell" href="how-it-works.html"><h3>Build &amp; Sell</h3></a>
-          <a class="adventure-link" data-cta-label="Our Mission" href="who-runs-it.html"><h3>Our Mission</h3></a>
+          <a class="adventure-link" data-cta-label="Who Runs It" href="who-runs-it.html"><h3>Who Runs It</h3></a>
           <a class="adventure-link" data-cta-label="Reserve a Spot" href="reserve-a-spot.html"><h3>Reserve a Spot</h3></a>
         </div>
       </div>
@@ -4174,7 +4251,6 @@
       <div class="wrap">
         <div class="reservation-row registration-form-container">
           <div class="reservation-card">
-            <p class="interest-subhead">📝 Get the Program Details</p>
             <p class="interest-helper">Enter your email and we&rsquo;ll send a clear overview of how The Money Club.Org works, including the one-week schedule, curriculum, location, tuition, and registration steps.</p>
             <div class="form-success" id="form-success" role="status">Thanks — you&apos;re in. We&apos;ll send the virtual call link and session details shortly.</div>
 <div class="form-loading" role="status" aria-live="polite">
@@ -4216,11 +4292,12 @@
       if (!overlay){ return; }
       var closeBtn = overlay.querySelector('.info-session-close');
       var modal = overlay.querySelector('.info-session-modal');
-      var outcomesSection = document.getElementById('outcomes');
+      var outcomesSection = document.getElementById('reserve') || document.getElementById('reserve-a-spot');
       var modalIsOpen = overlay.classList.contains('is-open');
       var autoOpened = false;
       var autoPopupDisabled = false;
       var outcomesObserver = null;
+      var autoPopupTimer = null;
       var lockScrollY = 0;
       var modalInterestForm = overlay.querySelector('form[action="apply-interest.php"]');
       var params = new URLSearchParams(window.location.search);
@@ -4261,6 +4338,10 @@
       function disableAutoPopup(){
         autoPopupDisabled = true;
         autoOpened = true;
+        if (autoPopupTimer){
+          window.clearTimeout(autoPopupTimer);
+          autoPopupTimer = null;
+        }
         if (outcomesObserver){
           outcomesObserver.disconnect();
           outcomesObserver = null;
@@ -4426,11 +4507,24 @@
           return;
         }
         if (rect.top <= viewportH * 0.7){
-          openInfoSession('outcomes_scroll');
+          scheduleAutoPopup();
+        }
+      }
+
+      function scheduleAutoPopup(){
+        if (autoPopupDisabled || autoOpened || modalIsOpen || autoPopupTimer){
+          return;
+        }
+        autoPopupTimer = window.setTimeout(function(){
+          autoPopupTimer = null;
+          if (autoPopupDisabled || autoOpened || modalIsOpen || !outcomesInView()){
+            return;
+          }
+          openInfoSession('learn_how_scroll');
           autoOpened = true;
           disableAutoPopup();
           detachOutcomesFallback();
-        }
+        }, 900);
       }
 
       if (!autoOpened && outcomesSection){
@@ -4442,11 +4536,9 @@
             }
             entries.forEach(function(entry){
               if (!entry.isIntersecting){ return; }
-              openInfoSession('outcomes_scroll');
-              autoOpened = true;
-              disableAutoPopup();
+              scheduleAutoPopup();
             });
-          }, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+          }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
           outcomesObserver.observe(outcomesSection);
         }
         window.addEventListener('scroll', maybeOpenFromOutcomesFallback, { passive: true });
@@ -4697,10 +4789,10 @@
         var sourceText = paymentMeta ? paymentMeta.textContent : '';
         var match = sourceText.match(/\$([0-9][0-9,]*(?:\.[0-9]{2})?)/);
         if (!match){
-          return 1500;
+          return 200;
         }
         var value = parseFloat(match[1].replace(/,/g, ''));
-        return isNaN(value) ? 1500 : value;
+        return isNaN(value) ? 200 : value;
       }
       function fetchAvailability(url){
         return fetch(url, { cache: 'no-store' }).then(function(res){
@@ -5073,6 +5165,6 @@
       });
     })();
   </script>
-  <script src="assets/form-protection.js?v=1" defer></script>
+  <script src="assets/form-protection.js?v=2" defer></script>
 </body>
 </html>

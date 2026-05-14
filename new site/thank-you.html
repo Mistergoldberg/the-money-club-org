@@ -6,15 +6,15 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Thank You | The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="We’ve received your parent approval form for The Money Club.Org." />
-  <meta property="og:title" content="We’ve received your parent approval form" />
-  <meta property="og:description" content="Thank you — we’ve received your parent approval form for The Money Club.Org." />
+  <meta name="description" content="Thank you — we’ve received your form for The Money Club.Org." />
+  <meta property="og:title" content="Thank you — we’ve received your form" />
+  <meta property="og:description" content="Your form has been received by The Money Club.Org." />
   <meta property="og:url" content="https://the-money-club.org/thank-you.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="We’ve received your parent approval form" />
-  <meta name="twitter:description" content="Thank you — we’ve received your parent approval form for The Money Club.Org." />
+  <meta name="twitter:title" content="Thank you — we’ve received your form" />
+  <meta name="twitter:description" content="Your form has been received by The Money Club.Org." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <link rel="canonical" href="https://the-money-club.org/thank-you.html" />
   <script type="application/ld+json">
@@ -923,6 +923,10 @@ nav{
       background: var(--gold);
       color: var(--ink);
     }
+    .content-section.teal .content-banner{
+      background: var(--teal);
+      color: #ffffff;
+    }
     .content-content{
       max-width: var(--max-wide);
       margin: 0 auto;
@@ -1358,7 +1362,7 @@ nav{
       text-align: center;
     }
     .thankyou-card{
-      max-width: 900px;
+      max-width: var(--max-wide);
       margin: 0 auto;
     }
     .thankyou-card .btn{
@@ -1367,6 +1371,7 @@ nav{
     }
     .thankyou-title{
       text-align: center;
+      color: #ffffff;
     }
     .thankyou-card h2{
       font-size: clamp(30px, 4vw, 46px);
@@ -1384,13 +1389,15 @@ nav{
       line-height: var(--lh-body);
     }
     .share-btn{
-      width: min(100%, 320px);
+      width: 100%;
       font-family: var(--font-display);
-      font-size: var(--btn-size-lg);
+      font-size: clamp(22px, 3vw, 40px);
       letter-spacing: var(--tracking-display);
       text-transform: uppercase;
-      border-radius: 16px;
-      padding: 20px 22px;
+      border-radius: 18px;
+      padding: 28px 18px;
+      min-height: 96px;
+      line-height: 0.95;
       margin-top: 8px;
     }
 
@@ -1537,6 +1544,7 @@ nav{
     }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
+  <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -1560,22 +1568,40 @@ nav{
         <span></span>
       </div>
       
-      <div class="menu-panel" id="mobile-menu" aria-hidden="true">
+            <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
-        <a href="curriculum-details.html">Curriculum</a>
-        <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
-        <a href="article-best-summer-camps.html">Camp Guides</a>
-                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+          <a href="/curriculum-details.html">Curriculum</a>
+          <a href="/how-it-works.html">Build &amp; Sell</a>
+          <a href="/open-book-hook.html">Open Book Financials</a>
+          <a href="/who-runs-it.html">Who Runs It</a>
+          <a href="/article-best-summer-camps.html">Camp Guides</a>
+          <details class="learning-menu-tree">
+            <summary>Learning Catalogue</summary>
+            <div class="learning-menu-list">
+              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
+              <a href="/learn/index.html">Design Thinking</a>
+              <a href="/learn/index.html">Market Research</a>
+              <a href="/learn/index.html">Sourcing</a>
+              <a href="/learn/index.html">Control Brand</a>
+              <a href="/learn/index.html">Business Model</a>
+              <a href="/learn/index.html">Go-To-Market</a>
+              <a href="/learn/index.html">Creative Fundamentals</a>
+              <a href="/learn/index.html">Marketing</a>
+              <a href="/learn/index.html">Market Watch</a>
+              <a href="/learn/index.html">AI Tools</a>
+            </div>
+          </details>
+          <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
         </div>
-
       </div>
+
 
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
+        <a href="open-book-hook.html">Open Book Financials</a>
+        <a href="who-runs-it.html">Who Runs It</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -1583,72 +1609,26 @@ nav{
   </header>
 
   <main>
-    <section class="content-section gold">
-      <div class="content-banner gold">
+    <section class="content-section teal">
+      <div class="content-banner teal">
         <div class="wrap">
-          <h2 class="thankyou-title">We’ve received your parent approval form</h2>
+          <h2 class="thankyou-title">Thank you — we’ve received your form.</h2>
         </div>
       </div>
       <div class="content-content">
         <div class="reservation-card thankyou-card">
-          <p>Hi,</p>
-
-          <p>Thank you &mdash; we&rsquo;ve received your parent approval form for The Money Club.Org.</p>
-
-          <p>We&rsquo;re grateful for your interest and excited that your family wants to be part of this.</p>
-
-          <p>I also want to be direct about where things stand.</p>
-
-          <p>The Money Club.Org is a community-first program built for learning, not profit. It is designed to teach financial literacy by example, which is why we operate with open-book financials so families can see how money moves through a real system.</p>
-
-          <p>This is not a traditional camp. It is a startup-style summer program where kids learn how money works by building real products through guided sprints. Each student receives a $50 build budget to help research, build, price, and test ideas in the real world.</p>
-
-          <p>This is the model we are trying to prove:</p>
-          <ul>
-            <li>kids learn financial literacy through radical transparency</li>
-            <li>University of Toronto student mentors get meaningful paid work</li>
-            <li>families help kickstart a local feedback loop of learning, demand, and community value</li>
-          </ul>
-
-          <p>Right now, we are working toward the threshold needed to run the program this summer.</p>
-
-          <p>To launch, we need to secure $61,000 in paid parent participation by June 1. That works out to some mix of:</p>
-          <ul>
-            <li>60 four-week registrations, or</li>
-            <li>120 two-week sprints</li>
-          </ul>
-
-          <p>I am personally contributing $15,000 toward that goal to help get the program off the ground.</p>
-
-          <p>Because we have not yet reached that threshold, we are not sending payment links just yet. Your approval form lets us know your family is seriously interested, and we are holding that in our planning as we work toward launch.</p>
-
-          <p>If we hit the threshold, we will follow up with payment details, final next steps, and program logistics.</p>
-
-          <p>If this opportunity resonates with you, I would be very grateful if you shared it with friends or family who may know a young person who would be a strong fit. At this stage, thoughtful word of mouth can make a real difference.</p>
-
-          <p>Over the coming weeks, we&rsquo;ll continue to share updates, including:</p>
-          <ul>
-            <li>curriculum details</li>
-            <li>what students will be working on</li>
-            <li>mentor introductions</li>
-            <li>and launch progress</li>
-          </ul>
-
-          <p><strong>Location:</strong><br />
-          UTSU Student Commons<br />
-          University of Toronto, downtown Toronto</p>
-
-          <p><strong>Daily schedule:</strong><br />
-          9:00 AM&ndash;5:00 PM<br />
-          Core instruction: 9:30 AM&ndash;3:30 PM</p>
-
-          <p>Thank you again for your interest, your trust, and your willingness to consider something early.</p>
+          <p>Your parent approval form has been received.</p>
+          <p>The Money Club.Org is a nonprofit startup built around a simple belief: young people are capable of far more than most institutions ask of them.</p>
+          <p>This one-week program is our first step toward something larger &mdash; a practical learning platform where students learn financial literacy, design thinking, AI, and communication by building, testing, pricing, and improving real ideas.</p>
+          <p>We&rsquo;ll follow up shortly with next steps, including payment details.</p>
+          <p>In the meantime, you can read the full letter from our Executive Director about the mission behind The Money Club.Org.</p>
+          <p><a class="meeting-link" href="executive-director-letter.html">Read the Mission Letter &rarr;</a></p>
+          <p>Thank you for your interest and your trust.</p>
 
           <p>Warmly,<br />
           Jared Goldberg<br />
+          Executive Director<br />
           The Money Club.Org</p>
-          <p>If this message resonates with you, please share The Money Club.Org with a friend or family who may know a strong fit.</p>
-          <button id="share-button" class="btn purple gloss share-btn" type="button">Share now</button>
         </div>
       </div>
     </section>

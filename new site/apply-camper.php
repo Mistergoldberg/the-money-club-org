@@ -129,20 +129,12 @@ if ($student_name === '') {
 }
 
 $program_options = [
-    'two-week-builder-sprint' => [
-        'label' => '2-Week Builder Sprint',
-        'tuition' => 750,
+    'money-club-program' => [
+        'label' => 'The Money Club.Org Program',
+        'tuition' => 200,
         'sessions' => [
-            'session1' => 'July 6-17, 2026',
-            'session2' => 'August 4-15, 2026'
-        ]
-    ],
-    'four-week-full-program' => [
-        'label' => '4-Week Full Program',
-        'tuition' => 1100,
-        'sessions' => [
-            'session1' => 'July 6-31, 2026',
-            'session2' => 'August 4-28, 2026'
+            'jul_6_11' => 'July 6th-10th, 2026',
+            'aug_10_14' => 'August 10th-14th, 2026'
         ]
     ]
 ];
@@ -152,7 +144,12 @@ if (!array_key_exists($program_track, $program_options)) {
 }
 
 if ($preferred_session === '' && $preferred_month !== '') {
-    $preferred_session = $preferred_month === 'July' ? 'session1' : 'session2';
+    $preferred_session = strtolower($preferred_month) === 'august' ? 'aug_10_14' : 'jul_6_11';
+}
+if ($preferred_session === 'session2' || strpos($preferred_session, 'aug') === 0) {
+    $preferred_session = 'aug_10_14';
+} elseif (preg_match('/^session[0-9]+$/', $preferred_session) || strpos($preferred_session, 'jul') === 0 || strpos($preferred_session, 'tw_') === 0 || strpos($preferred_session, 'fw_') === 0) {
+    $preferred_session = 'jul_6_11';
 }
 
 if (!array_key_exists($preferred_session, $program_options[$program_track]['sessions'])) {
@@ -173,8 +170,8 @@ if ($payment_method === '' || $payment_method !== 'e-Transfer') {
 
 $availability_path = $data_dir . '/availability.json';
 $availability_defaults = [
-    'session1' => 30,
-    'session2' => 30
+    'jul_6_11' => 30,
+    'aug_10_14' => 30
 ];
 
 function update_availability($path, $defaults, $callback) {
@@ -279,13 +276,13 @@ $parent_lines[] = '';
 $parent_lines[] = '📍 Program details';
 $parent_lines[] = '';
 $parent_lines[] = 'UTSU Student Commons';
-$parent_lines[] = 'University of Toronto (downtown)';
-$parent_lines[] = '';
-$parent_lines[] = 'Daily 9–5, with instruction from 9:30am to 3:30pm';
+$parent_lines[] = '230 College Street, Toronto';
 $parent_lines[] = '';
 $parent_lines[] = 'Program selected: ' . $program_label;
 $parent_lines[] = 'Session selected: ' . $session_label;
-$parent_lines[] = 'Program fee: $' . number_format($program_tuition, 2) . ' CAD (+HST)';
+$parent_lines[] = 'Program size: Limited to 30 participants';
+$parent_lines[] = 'Who it\'s for: Computer-literate students';
+$parent_lines[] = 'Program fee: $200 CAD (+HST)';
 $parent_lines[] = '';
 $parent_lines[] = '---';
 $parent_lines[] = '';

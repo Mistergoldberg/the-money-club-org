@@ -69,7 +69,7 @@ if ($valid_age === false) {
     tmc_redirect_with_error($error_return, 'student-age', 'Child\'s age must be between 10 and 16.');
 }
 
-$valid_programs = ['two-week-builder-sprint', 'four-week-full-program'];
+$valid_programs = ['money-club-program'];
 if (!in_array($program_track, $valid_programs, true)) {
     tmc_redirect_with_error($error_return, 'program-track', 'Please select a valid program.');
 }

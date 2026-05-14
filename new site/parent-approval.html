@@ -479,6 +479,7 @@
     }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=5" />
+  <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -500,22 +501,40 @@
         <span></span>
       </div>
 
-      <div class="menu-panel" id="mobile-menu" aria-hidden="true">
+            <div class="menu-panel" id="mobile-menu" aria-hidden="true">
         <button class="menu-close" type="button" aria-label="Close menu">×</button>
         <div class="menu-links">
-        <a href="curriculum-details.html">Curriculum</a>
-        <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
-        <a href="article-best-summer-camps.html">Camp Guides</a>
-                <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="reserve-a-spot.html">Reserve a spot</a>
+          <a href="/curriculum-details.html">Curriculum</a>
+          <a href="/how-it-works.html">Build &amp; Sell</a>
+          <a href="/open-book-hook.html">Open Book Financials</a>
+          <a href="/who-runs-it.html">Who Runs It</a>
+          <a href="/article-best-summer-camps.html">Camp Guides</a>
+          <details class="learning-menu-tree">
+            <summary>Learning Catalogue</summary>
+            <div class="learning-menu-list">
+              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
+              <a href="/learn/index.html">Design Thinking</a>
+              <a href="/learn/index.html">Market Research</a>
+              <a href="/learn/index.html">Sourcing</a>
+              <a href="/learn/index.html">Control Brand</a>
+              <a href="/learn/index.html">Business Model</a>
+              <a href="/learn/index.html">Go-To-Market</a>
+              <a href="/learn/index.html">Creative Fundamentals</a>
+              <a href="/learn/index.html">Marketing</a>
+              <a href="/learn/index.html">Market Watch</a>
+              <a href="/learn/index.html">AI Tools</a>
+            </div>
+          </details>
+          <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
         </div>
-
       </div>
+
 
       <nav aria-label="Primary">
         <a href="curriculum-details.html">Curriculum</a>
         <a href="how-it-works.html">Build & Sell</a>
-        <a href="who-runs-it.html">Our Mission</a>
+        <a href="open-book-hook.html">Open Book Financials</a>
+        <a href="who-runs-it.html">Who Runs It</a>
       </nav>
 
       <a data-cta-label="Reserve a spot" class="btn purple gloss" href="reserve-a-spot.html">Reserve a spot</a>
@@ -531,7 +550,6 @@
 
     <section class="intro wrap">
       <p>Please complete this form so we can confirm your child&rsquo;s participation and collect the information we need for safety, communication, and pickup.</p>
-      <p class="fine-print">After this form, you&rsquo;ll be redirected to the next-steps page with current program updates and launch details.</p>
       <p class="operator-line">Humanoid Community Development Platforms Corporation<br />Operating as The Money Club.Org</p>
       <p class="fine-print">The Money Club.Org is an independent program and is not affiliated with or endorsed by the University of Toronto.</p>
     </section>
@@ -582,12 +600,8 @@
               <label for="session">Session</label>
               <select id="session" name="session" required>
                 <option value="">Select a session</option>
-                <option value="fw_jul_6_31">4-Week Full Program &mdash; July 6&ndash;31</option>
-                <option value="fw_aug_4_28">4-Week Full Program &mdash; Aug 4&ndash;28</option>
-                <option value="tw_jul_6_17">2-Week Builder Sprint &mdash; July 6&ndash;17</option>
-                <option value="tw_jul_20_31">2-Week Builder Sprint &mdash; July 20&ndash;31</option>
-                <option value="tw_aug_4_15">2-Week Builder Sprint &mdash; Aug 4&ndash;15</option>
-                <option value="tw_aug_17_28">2-Week Builder Sprint &mdash; Aug 17&ndash;28</option>
+                <option value="jul_6_11">The Money Club.Org Program &mdash; July 6th&ndash;10th</option>
+                <option value="aug_10_14">The Money Club.Org Program &mdash; August 10th&ndash;14th</option>
               </select>
               <small class="field-error">Please select a session.</small>
             </div>
@@ -797,18 +811,10 @@
 
       function applySessionFilter(programTrack){
         if (!sessionSelect){ return; }
-        var showTwoWeek = programTrack === 'two-week-builder-sprint';
-        var showFourWeek = programTrack === 'four-week-full-program';
-
         Array.prototype.forEach.call(sessionSelect.options, function(option){
           if (!option.value){ return; }
-          var isTwoWeek = option.value.indexOf('tw_') === 0;
-          var isFourWeek = option.value.indexOf('fw_') === 0;
-          var shouldShow = true;
-          if (showTwoWeek){ shouldShow = isTwoWeek; }
-          if (showFourWeek){ shouldShow = isFourWeek; }
-          option.hidden = !shouldShow;
-          option.disabled = !shouldShow;
+          option.hidden = false;
+          option.disabled = false;
         });
 
         var selectedOption = sessionSelect.options[sessionSelect.selectedIndex];
@@ -1099,6 +1105,6 @@
       });
     })();
   </script>
-  <script src="assets/form-protection.js?v=1" defer></script>
+  <script src="assets/form-protection.js?v=2" defer></script>
 </body>
 </html>
