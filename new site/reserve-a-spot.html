@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Reserve a Spot | Summer Camp Registration for Ages 10–16 | The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <meta name="description" content="Reserve a spot for The Money Club.Org Summer 2026. Register for the July 6th-10th or August 10th-14th program for computer-literate students." />
+  <meta name="description" content="Reserve a spot for The Money Club.Org Summer 2026. Register for the August 10th-14th program for computer-literate students." />
   <meta property="og:title" content="Reserve a Spot | Summer Camp Registration for Ages 10–16 | The Money Club.Org" />
-  <meta property="og:description" content="Reserve a spot for The Money Club.Org Summer 2026. Register for the July 6th-10th or August 10th-14th program for computer-literate students." />
+  <meta property="og:description" content="Reserve a spot for The Money Club.Org Summer 2026. Register for the August 10th-14th program for computer-literate students." />
   <meta property="og:url" content="https://the-money-club.org/reserve-a-spot.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Reserve a Spot | Summer Camp Registration for Ages 10–16 | The Money Club.Org" />
-  <meta name="twitter:description" content="Reserve a spot for The Money Club.Org Summer 2026. Register for the July 6th-10th or August 10th-14th program for computer-literate students." />
+  <meta name="twitter:description" content="Reserve a spot for The Money Club.Org Summer 2026. Register for the August 10th-14th program for computer-literate students." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
     <link rel="canonical" href="https://the-money-club.org/reserve-a-spot.html" />
   <script type="application/ld+json">
@@ -25,7 +25,7 @@
           "@id": "https://the-money-club.org/reserve-a-spot.html#webpage",
           "url": "https://the-money-club.org/reserve-a-spot.html",
           "name": "Reserve a Spot | Summer Camp Registration for Ages 10–16 | The Money Club.Org",
-          "description": "Reserve a spot for The Money Club.Org Summer 2026. Register for the July 6th-10th or August 10th-14th program for computer-literate students.",
+          "description": "Reserve a spot for The Money Club.Org Summer 2026. Register for the August 10th-14th program for computer-literate students.",
           "about": [
             {
               "@id": "https://the-money-club.org/#organization"
@@ -2086,7 +2086,7 @@ nav{
     }
 
   </style>
-  <link rel="stylesheet" href="assets/typography.css?v=5" />
+  <link rel="stylesheet" href="assets/typography.css?v=6" />
   <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -2214,26 +2214,9 @@ nav{
               <input type="hidden" name="return-to" value="parent-approval.html" />
               <input type="hidden" name="return-error" value="reserve-a-spot.html" />
               <input type="radio" name="program-track" value="money-club-program" checked hidden />
+              <input type="hidden" name="preferred-session" value="aug_10_14" />
               <div class="step-block">
                 <h2 class="form-step-title">Parent &amp; Student Details</h2>
-              </div>
-              <div class="field">
-                <label>Preferred Session</label>
-                <div class="session-grid gloss-active">
-                  <label class="session-card" data-session-key="session1">
-                    <input type="radio" name="preferred-session" value="jul_6_11" required checked />
-                    <div class="session-card-body">
-                      <div class="session-title" data-session-title data-session-key="session1">July 6th&ndash;10th</div>
-                    </div>
-                  </label>
-                  <label class="session-card" data-session-key="session2">
-                    <input type="radio" name="preferred-session" value="aug_10_14" />
-                    <div class="session-card-body">
-                      <div class="session-title" data-session-title data-session-key="session2">August 10th&ndash;14th</div>
-                    </div>
-                  </label>
-                </div>
-                <small class="field-error">Please select a session.</small>
               </div>
               <div class="field-row three-col">
                 <div class="field">
@@ -2260,7 +2243,7 @@ nav{
                 </div>
                 <div class="field">
                   <label for="student-age">Child’s Age</label>
-                  <input id="student-age" name="student-age" type="number" min="10" max="16" step="1" inputmode="numeric" required />
+                  <input id="student-age" name="student-age" type="number" step="1" inputmode="numeric" required />
                   <small class="field-error">Child’s age is required.</small>
                 </div>
               </div>
@@ -2387,7 +2370,9 @@ nav{
 
       function getSelectedSessionName(){
         var selected = document.querySelector('input[name="preferred-session"]:checked');
-        return selected ? selected.value : '';
+        if (selected){ return selected.value; }
+        var hiddenSession = document.querySelector('input[type="hidden"][name="preferred-session"]');
+        return hiddenSession ? hiddenSession.value : '';
       }
 
       function getProgramConfig(programTrack){
@@ -2395,13 +2380,11 @@ nav{
           'money-club-program': {
             label: 'The Money Club.Org Program',
             tuition: 200,
-            includes: 'Includes the July 6th-10th or August 10th-14th program, materials, and student build work.',
+            includes: 'Includes the August 10th-14th program, materials, and student build work.',
             sessionOrder: {
-              session1: { value: 'jul_6_11', label: 'July 6th-10th' },
-              session2: { value: 'aug_10_14', label: 'August 10th-14th' }
+              session1: { value: 'aug_10_14', label: 'August 10th-14th' }
             },
             sessions: {
-              jul_6_11: 'July 6th-10th',
               aug_10_14: 'August 10th-14th'
             }
           }
@@ -2586,6 +2569,10 @@ nav{
       }
 
       function sessionSelected(){
+        var hiddenSession = document.querySelector('input[type="hidden"][name="preferred-session"]');
+        if (hiddenSession && hiddenSession.value){
+          return true;
+        }
         return Array.prototype.some.call(sessionRadios, function(radio){
           return radio.checked;
         });
@@ -3134,6 +3121,6 @@ nav{
     })();
   </script>
 
-  <script src="assets/form-protection.js?v=2" defer></script>
+  <script src="assets/form-protection.js?v=3" defer></script>
 </body>
 </html>

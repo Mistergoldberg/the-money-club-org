@@ -169,6 +169,24 @@ remove this rule or remove class="hide-registration" from the
   font-weight: 600;
   font-size: 18px;
 }
+.form-processing-status{
+  display: none;
+  margin: 12px 0 0;
+  color: #234;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+}
+.form-processing-status.is-visible{
+  display: block;
+}
+form[aria-busy="true"] button[type="submit"],
+form[aria-busy="true"] input[type="submit"]{
+  cursor: wait;
+  opacity: 0.82;
+}
 @keyframes spin{
   to{ transform: rotate(360deg); }
 }

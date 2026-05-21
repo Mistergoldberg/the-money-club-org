@@ -2,20 +2,20 @@
   border-top: 1px solid var(--line);
   width: 100%;
   display: grid;
-  justify-items: stretch;
+  justify-items: center;
 }
 
 .menu-panel .learning-menu-tree summary{
   cursor: pointer;
-  width: 100%;
-  max-width: none;
-  padding: 6px 0;
+  width: max-content;
+  max-width: min(680px, 92vw);
+  padding: 6px 6px;
   color: var(--text);
   font-family: var(--font-body);
   font-size: clamp(26px, 3.2vw, 40px);
   font-weight: 500;
   line-height: 1.1;
-  text-align: left;
+  text-align: center;
   text-transform: none;
   letter-spacing: 0;
   list-style: none;
@@ -28,16 +28,16 @@
 .menu-panel .learning-menu-list{
   display: grid;
   gap: 8px;
-  justify-items: stretch;
+  justify-items: center;
   width: 100%;
-  padding: 8px 0 16px;
+  padding: 8px 16px 16px;
 }
 
 .menu-panel .learning-menu-list a{
   display: block;
-  width: 100%;
-  max-width: none;
-  padding: 6px 0;
+  width: max-content;
+  max-width: min(680px, 92vw);
+  padding: 6px 6px;
   border-radius: 0;
   background: transparent;
   color: var(--text);
@@ -45,7 +45,7 @@
   font-size: clamp(26px, 3.2vw, 40px);
   font-weight: 500;
   line-height: 1.1;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -57,20 +57,20 @@
 }
 
 .menu-panel.is-open .learning-menu-tree{
-  justify-items: stretch !important;
+  justify-items: center !important;
 }
 
 .menu-panel.is-open .learning-menu-tree summary,
 .menu-panel.is-open .learning-menu-list a{
-  width: 100% !important;
-  max-width: none !important;
+  width: max-content !important;
+  max-width: min(680px, 92vw) !important;
   color: var(--text);
   font-family: var(--font-body);
   font-size: clamp(26px, 3.2vw, 40px);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0;
-  text-align: left !important;
+  text-align: center !important;
   text-transform: none;
 }
 
@@ -90,6 +90,6 @@
 
   .menu-panel.is-open .learning-menu-list{
     gap: 0;
-    padding: 0;
+    padding: 0 16px;
   }
 }

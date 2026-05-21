@@ -100,6 +100,122 @@
     form.appendChild(wrap);
   }
 
+  function ensureProcessingStatus(form, button) {
+    var status = form.querySelector('.form-processing-status');
+    if (status) {
+      return status;
+    }
+
+    status = document.createElement('p');
+    status.className = 'form-processing-status';
+    status.setAttribute('role', 'status');
+    status.setAttribute('aria-live', 'polite');
+    status.textContent = 'Processing your form. Please wait...';
+
+    var target = button && button.parentNode ? button.parentNode : form;
+    if (button && button.parentNode) {
+      button.parentNode.insertBefore(status, button.nextSibling);
+    } else {
+      target.appendChild(status);
+    }
+    return status;
+  }
+
+  function setFormSubmitting(form, actionName) {
+    if (!form || form.dataset.tmcSubmitting === 'true') {
+      return;
+    }
+
+    if (form.checkValidity && !form.checkValidity()) {
+      return;
+    }
+
+    form.dataset.tmcSubmitting = 'true';
+    form.setAttribute('aria-busy', 'true');
+
+    var button = form.querySelector('button[type="submit"], input[type="submit"]');
+    if (button) {
+      if (!button.dataset.tmcDefaultLabel) {
+        button.dataset.tmcDefaultLabel = button.tagName === 'INPUT' ? button.value : button.textContent;
+      }
+      var processingLabel = actionName === 'apply-interest.php' ? 'Sending...' : 'Processing...';
+      if (button.tagName === 'INPUT') {
+        button.value = processingLabel;
+      } else {
+        button.textContent = processingLabel;
+      }
+      button.disabled = true;
+      button.setAttribute('aria-disabled', 'true');
+    }
+
+    var container = form.closest('.reservation-card, .info-session-modal, .confirmation-card, .form-card') || form;
+    container.classList.add('is-processing');
+
+    var loader = container.querySelector('.form-loading') || form.querySelector('.form-loading');
+    if (loader) {
+      loader.classList.add('is-visible');
+      return;
+    }
+
+    ensureProcessingStatus(form, button).classList.add('is-visible');
+  }
+
+  function resetFormSubmitting(form) {
+    if (!form) {
+      return;
+    }
+
+    form.dataset.tmcSubmitting = 'false';
+    form.setAttribute('aria-busy', 'false');
+
+    var button = form.querySelector('button[type="submit"], input[type="submit"]');
+    if (button) {
+      var defaultLabel = button.dataset.tmcDefaultLabel || '';
+      if (defaultLabel) {
+        if (button.tagName === 'INPUT') {
+          button.value = defaultLabel;
+        } else {
+          button.textContent = defaultLabel;
+        }
+      }
+      button.disabled = false;
+      button.setAttribute('aria-disabled', 'false');
+    }
+
+    var container = form.closest('.reservation-card, .info-session-modal, .confirmation-card, .form-card') || form;
+    container.classList.remove('is-processing');
+
+    var loader = container.querySelector('.form-loading') || form.querySelector('.form-loading');
+    if (loader) {
+      loader.classList.remove('is-visible');
+    }
+
+    var status = form.querySelector('.form-processing-status');
+    if (status) {
+      status.classList.remove('is-visible');
+    }
+  }
+
+  function attachSubmitState(form, actionName) {
+    if (form.dataset.tmcSubmitStateAttached === 'true') {
+      return;
+    }
+    form.dataset.tmcSubmitStateAttached = 'true';
+
+    form.addEventListener('submit', function (event) {
+      if (form.dataset.tmcSubmitting === 'true') {
+        event.preventDefault();
+        return;
+      }
+      setFormSubmitting(form, actionName);
+      window.setTimeout(function () {
+        if (event.defaultPrevented) {
+          resetFormSubmitting(form);
+        }
+      }, 0);
+    }, true);
+  }
+
   function defaultReturnForPage() {
     var path = window.location.pathname || '/index.html';
     path = path.replace(/^\/+/, '');
@@ -131,6 +247,8 @@
       if ((actionName === 'apply-interest.php' || actionName === 'apply-contact.php' || actionName === 'apply-our-mission.php' || actionName === 'apply-instructor.php' || actionName === 'start-parent-approval.php') && !form.querySelector('input[name="return-error"]')) {
         ensureHiddenInput(form, 'return-error', defaultReturnForPage());
       }
+
+      attachSubmitState(form, actionName);
     });
   }
 

@@ -20,6 +20,67 @@ function smtp_log_failure($stage, $context = []) {
     error_log(implode(' ', $parts));
 }
 
+function smtp_sanitize_header_value($value) {
+    return trim(str_replace(["\r", "\n"], '', (string)$value));
+}
+
+function smtp_encode_header_value($value) {
+    $value = smtp_sanitize_header_value($value);
+    if ($value === '' || preg_match('/^[\x20-\x7E]*$/', $value) === 1) {
+        return $value;
+    }
+    if (function_exists('mb_encode_mimeheader')) {
+        return mb_encode_mimeheader($value, 'UTF-8', 'B', "\r\n");
+    }
+    return '=?UTF-8?B?' . base64_encode($value) . '?=';
+}
+
+function smtp_send_native_mail($to, $subject, $body, $from_email, $reply_to, $from_name = 'The Money Club.Org', $is_html = false) {
+    if (!function_exists('mail')) {
+        smtp_log_failure('native_mail_unavailable');
+        return false;
+    }
+
+    $recipients = is_array($to) ? $to : preg_split('/\s*[;,]\s*/', (string) $to);
+    $recipients = array_values(array_filter(array_map('smtp_sanitize_header_value', $recipients), function ($recipient) {
+        return filter_var($recipient, FILTER_VALIDATE_EMAIL);
+    }));
+
+    if (!$recipients) {
+        smtp_log_failure('native_mail_no_valid_recipients');
+        return false;
+    }
+
+    $from_email = smtp_sanitize_header_value($from_email);
+    $reply_to = smtp_sanitize_header_value($reply_to);
+    $from_name = smtp_encode_header_value($from_name);
+    $subject = smtp_encode_header_value($subject);
+    $from_header = $from_name !== '' ? $from_name . ' <' . $from_email . '>' : $from_email;
+    $content_type = $is_html ? 'text/html; charset=UTF-8' : 'text/plain; charset=UTF-8';
+    $headers = [
+        'From: ' . $from_header,
+        'Reply-To: ' . $reply_to,
+        'MIME-Version: 1.0',
+        'Content-Type: ' . $content_type,
+    ];
+
+    $to_header = implode(', ', $recipients);
+    $message = preg_replace("/(?<!\r)\n/", "\r\n", (string)$body);
+    $extra_params = filter_var($from_email, FILTER_VALIDATE_EMAIL) ? ('-f' . $from_email) : '';
+    $sent = $extra_params !== ''
+        ? @mail($to_header, $subject, $message, implode("\r\n", $headers), $extra_params)
+        : @mail($to_header, $subject, $message, implode("\r\n", $headers));
+
+    if (!$sent) {
+        smtp_log_failure('native_mail_failed');
+        return false;
+    }
+
+    error_log('[smtp] native_mail_fallback_used recipients=' . implode(',', $recipients));
+    smtp_set_last_error('');
+    return true;
+}
+
 function smtp_load_config() {
     try {
         $config = require __DIR__ . '/smtp-config.php';
@@ -61,7 +122,7 @@ function smtp_load_config() {
     return $config;
 }
 
-function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name = 'The Money Club.Org', $is_html = false) {
+function smtp_send_mail_smtp($to, $subject, $body, $from_email, $reply_to, $from_name = 'The Money Club.Org', $is_html = false) {
     smtp_set_last_error('');
     $config = smtp_load_config();
     if ($config === null) {
@@ -228,13 +289,20 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
         return false;
     }
 
+    $accepted_recipients = [];
     foreach ($recipients as $recipient) {
         $response = $send_cmd('RCPT TO:<' . $recipient . '>');
         if (!$expect_code($response, 250) && !$expect_code($response, 251)) {
             smtp_log_failure('rcpt_to_failed', ['recipient' => $recipient, 'response' => trim($response)]);
-            fclose($socket);
-            return false;
+            continue;
         }
+        $accepted_recipients[] = $recipient;
+    }
+
+    if (!$accepted_recipients) {
+        smtp_log_failure('rcpt_to_all_failed', ['recipients' => implode(',', $recipients)]);
+        fclose($socket);
+        return false;
     }
 
     $response = $send_cmd('DATA');
@@ -245,7 +313,7 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
     }
 
     $from_header = $from_name_header !== '' ? $from_name_header . ' <' . $from_email . '>' : $from_email;
-    $to_header = implode(', ', $recipients);
+    $to_header = implode(', ', $accepted_recipients);
     $content_type = $is_html ? 'text/html; charset=UTF-8' : 'text/plain; charset=UTF-8';
     $headers = [
         'From: ' . $from_header,
@@ -272,4 +340,19 @@ function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name
     fclose($socket);
     smtp_set_last_error('');
     return true;
+}
+
+function smtp_send_mail($to, $subject, $body, $from_email, $reply_to, $from_name = 'The Money Club.Org', $is_html = false) {
+    if (smtp_send_mail_smtp($to, $subject, $body, $from_email, $reply_to, $from_name, $is_html)) {
+        return true;
+    }
+
+    $smtp_error = smtp_get_last_error();
+    if (smtp_send_native_mail($to, $subject, $body, $from_email, $reply_to, $from_name, $is_html)) {
+        return true;
+    }
+
+    $native_error = smtp_get_last_error();
+    smtp_set_last_error(trim($smtp_error . ($native_error !== '' ? ';' . $native_error : ''), ';'));
+    return false;
 }

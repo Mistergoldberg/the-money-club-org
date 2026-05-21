@@ -138,10 +138,10 @@ if ($student_name === '') {
 }
 
 $age_value = filter_var($student_age, FILTER_VALIDATE_INT, [
-    'options' => ['min_range' => 10, 'max_range' => 16]
+    'options' => ['min_range' => 0]
 ]);
 if ($age_value === false) {
-    redirect_with_error($error_return, 'student-age', 'Student age must be between 10 and 16.');
+    redirect_with_error($error_return, 'student-age', 'Please provide a valid student age.');
 }
 
 if ($parent_name === '') {
@@ -161,17 +161,14 @@ $program_options = [
     'money-club-program' => [
         'label' => 'The Money Club.Org Program',
         'sessions' => [
-            'jul_6_11' => 'July 6th-10th, 2026',
             'aug_10_14' => 'August 10th-14th, 2026'
         ]
     ]
 ];
 
 // Backward compatibility if old values are still posted.
-if ($session === 'session2' || strpos($session, 'aug') === 0) {
+if ($session === 'session1' || $session === 'session2' || strpos($session, 'aug') === 0) {
     $session = 'aug_10_14';
-} elseif (preg_match('/^session[0-9]+$/', $session) || strpos($session, 'jul') === 0 || strpos($session, 'tw_') === 0 || strpos($session, 'fw_') === 0) {
-    $session = 'jul_6_11';
 }
 if ($program_track === '') {
     $program_track = 'money-club-program';

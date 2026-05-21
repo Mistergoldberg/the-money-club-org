@@ -1,6 +1,7 @@
 Redirect 301 /curriculum.html /curriculum-details.html
 Redirect 301 /terms.html /program-terms.html
 Redirect 301 /privacy.html /privacy-policy.html
+Redirect 301 /learn/index2.html /learn/
 Redirect 302 /stripe-checkout.php /etransfer.html
 Redirect 302 /stripe-success.php /etransfer.html
 Redirect 302 /thank-you-credit-card.php /etransfer.html

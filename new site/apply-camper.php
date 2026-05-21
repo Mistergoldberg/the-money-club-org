@@ -118,10 +118,10 @@ if ($phone_digits === '' || strlen($phone_digits) < 10 || strlen($phone_digits) 
 }
 
 $age_value = filter_var($student_age, FILTER_VALIDATE_INT, [
-    'options' => ['min_range' => 10, 'max_range' => 16]
+    'options' => ['min_range' => 0]
 ]);
 if ($age_value === false) {
-    redirect_with_error($error_return, 'student-age', 'Child’s age must be between 10 and 16.');
+    redirect_with_error($error_return, 'student-age', 'Please provide a valid child age.');
 }
 
 if ($student_name === '') {
@@ -133,7 +133,6 @@ $program_options = [
         'label' => 'The Money Club.Org Program',
         'tuition' => 200,
         'sessions' => [
-            'jul_6_11' => 'July 6th-10th, 2026',
             'aug_10_14' => 'August 10th-14th, 2026'
         ]
     ]
@@ -143,13 +142,11 @@ if (!array_key_exists($program_track, $program_options)) {
     redirect_with_error($error_return, 'program-track', 'Please select a valid program.');
 }
 
-if ($preferred_session === '' && $preferred_month !== '') {
-    $preferred_session = strtolower($preferred_month) === 'august' ? 'aug_10_14' : 'jul_6_11';
-}
-if ($preferred_session === 'session2' || strpos($preferred_session, 'aug') === 0) {
+if ($preferred_session === '' && strtolower($preferred_month) === 'august') {
     $preferred_session = 'aug_10_14';
-} elseif (preg_match('/^session[0-9]+$/', $preferred_session) || strpos($preferred_session, 'jul') === 0 || strpos($preferred_session, 'tw_') === 0 || strpos($preferred_session, 'fw_') === 0) {
-    $preferred_session = 'jul_6_11';
+}
+if ($preferred_session === 'session1' || $preferred_session === 'session2' || strpos($preferred_session, 'aug') === 0) {
+    $preferred_session = 'aug_10_14';
 }
 
 if (!array_key_exists($preferred_session, $program_options[$program_track]['sessions'])) {
@@ -170,7 +167,6 @@ if ($payment_method === '' || $payment_method !== 'e-Transfer') {
 
 $availability_path = $data_dir . '/availability.json';
 $availability_defaults = [
-    'jul_6_11' => 30,
     'aug_10_14' => 30
 ];
 
@@ -233,7 +229,7 @@ $lines[] = 'Child Name: ' . ($student_name !== '' ? $student_name : '(not provid
 $lines[] = 'Child Age: ' . ($student_age !== '' ? $student_age : '(not provided)');
 $lines[] = 'Program: ' . $program_label;
 $lines[] = 'Session: ' . $session_label;
-$lines[] = 'Program tuition: $' . number_format($program_tuition, 2) . ' CAD (+HST)';
+$lines[] = 'Program tuition: $' . number_format($program_tuition, 2) . ' CAD';
 $lines[] = 'Session spots remaining: ' . (string)$reserve_result['remaining'];
 $lines[] = 'Terms agreed: ' . ($terms_agree !== '' ? 'Yes' : 'No');
 $lines[] = 'Payment method: e-Transfer (pending manual confirmation)';
@@ -242,7 +238,11 @@ $lines[] = 'Notes: ' . ($notes !== '' ? $notes : '(none)');
 $message = implode("\n", $lines);
 
 if (!smtp_send_mail($to, $subject, $message, $from, $parent_email)) {
-    log_debug('smtp_send_mail failed for registration notification.');
+    $smtp_reason = function_exists('smtp_get_last_error') ? smtp_get_last_error() : 'unknown';
+    if ($smtp_reason === '') {
+        $smtp_reason = 'unknown';
+    }
+    log_debug('smtp_send_mail failed for registration notification reason=' . $smtp_reason);
 } else {
     log_debug('smtp_send_mail success session=' . $preferred_session . ' payment=' . $payment_method);
 }
@@ -282,7 +282,7 @@ $parent_lines[] = 'Program selected: ' . $program_label;
 $parent_lines[] = 'Session selected: ' . $session_label;
 $parent_lines[] = 'Program size: Limited to 30 participants';
 $parent_lines[] = 'Who it\'s for: Computer-literate students';
-$parent_lines[] = 'Program fee: $200 CAD (+HST)';
+$parent_lines[] = 'Program fee: $200 CAD';
 $parent_lines[] = '';
 $parent_lines[] = '---';
 $parent_lines[] = '';
@@ -294,7 +294,11 @@ $parent_lines[] = '— The Money Club.Org';
 $parent_message = implode("\n", $parent_lines);
 
 if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
-    log_debug('post-registration parent email failed session=' . $preferred_session);
+    $smtp_reason = function_exists('smtp_get_last_error') ? smtp_get_last_error() : 'unknown';
+    if ($smtp_reason === '') {
+        $smtp_reason = 'unknown';
+    }
+    log_debug('post-registration parent email failed reason=' . $smtp_reason . ' session=' . $preferred_session);
 } else {
     log_debug('post-registration parent email sent session=' . $preferred_session);
 }

@@ -46,7 +46,7 @@
   padding: 14px 16px;
   border: 0;
   border-radius: 14px;
-  font-size: clamp(34px, 4vw, 52px);
+  font-size: clamp(34px, 5vw, 56px);
   line-height: 0.86;
   text-align: left;
 }
@@ -471,7 +471,7 @@
   }
 
   .thankyou-card .worksheet-form h2.article-band-heading{
-    font-size: clamp(36px, 9vw, 56px);
+    font-size: clamp(48.96px, 7.2vw, 80.64px);
     margin-left: -12px;
     margin-right: -12px;
     padding: 14px;

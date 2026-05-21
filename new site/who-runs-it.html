@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Who Runs It | U of T Mentors for The Money Club.Org</title>
+  <title>Who Runs It | The Money Club.Org</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <meta name="description" content="Meet the team behind the Toronto kids summer camp 2026: student operators, instructors, and program leadership." />
-  <meta property="og:title" content="Who Runs It | U of T Mentors for The Money Club.Org" />
+  <meta property="og:title" content="Who Runs It | The Money Club.Org" />
   <meta property="og:description" content="Meet the team behind the Toronto kids summer camp 2026: student operators, instructors, and program leadership." />
   <meta property="og:url" content="https://the-money-club.org/who-runs-it.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/Jared-Profile.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Who Runs It | U of T Mentors for The Money Club.Org" />
+  <meta name="twitter:title" content="Who Runs It | The Money Club.Org" />
   <meta name="twitter:description" content="Meet the team behind the Toronto kids summer camp 2026: student operators, instructors, and program leadership." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Jared-Profile.png" />
   <link rel="canonical" href="https://the-money-club.org/who-runs-it.html" />
@@ -725,6 +725,18 @@ nav{
       display:grid;
       gap: 12px;
     }
+    .architect-body .founder-link{
+      width: fit-content;
+      color: #0f6470;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+    .architect-body .founder-link:hover,
+    .architect-body .founder-link:focus-visible{
+      color: var(--teal);
+    }
     .mission-body{
       display: grid;
       gap: 12px;
@@ -1068,7 +1080,7 @@ nav{
       margin-top: var(--space-5);
       background: var(--purple);
       color: #ffffff;
-      width: min(760px, calc(100% - 36px));
+      width: min(var(--max-wide), calc(100% - 36px));
       margin-left: auto;
       margin-right: auto;
       padding: 18px 20px;
@@ -1087,7 +1099,7 @@ nav{
       line-height: 0.88;
     }
     .reservation-steps .wrap{
-      width: min(760px, calc(100% - 36px));
+      width: min(var(--max-wide), calc(100% - 36px));
       max-width: none;
       margin: 0 auto;
       padding: 16px 0 0;
@@ -1774,7 +1786,7 @@ nav{
     }
 
   </style>
-  <link rel="stylesheet" href="assets/typography.css?v=5" />
+  <link rel="stylesheet" href="assets/typography.css?v=6" />
   <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -1891,9 +1903,15 @@ nav{
             <img src="assets/Jared-Profile.png" alt="Portrait of Jared Goldberg" />
           </div>
           <div class="architect-body">
-            <p>The Money Club.Org was designed and is overseen by Jared Goldberg &mdash; a product strategist, systems designer, and educator with 15+ years building and operating real-world business platforms.</p>
+            <p>The Money Club.Org was designed by Jared Goldberg &mdash; a product strategist, systems designer, and educator with 15+ years building and operating real-world business platforms.</p>
             <p>Jared has worked across Walmart, Loblaw, and Canadian Tire, and spent over a decade inside China-based manufacturing ecosystems, where cost, quality, incentives, and execution collide in real time. His work sits at the intersection of economics, incentives, design thinking, and human behavior.</p>
-            <p>This program reflects how organizations actually function&mdash;constraints, trade-offs, and accountability&mdash;not how they&rsquo;re described in textbooks.</p>
+            <p>This program reflects Jared Goldberg&rsquo;s broader work on systems, incentives, education, AI, media, compounding, and civic infrastructure.</p>
+            <p>The Money Club.Org turns those ideas into something young people can actually use: a live environment where they learn how value is created, measured, tested, explained, and improved.</p>
+            <p>
+              <a class="founder-link" href="https://jaredgoldberg.ca/writing/" rel="noopener">
+                Read The Complete Field Guide to How Systems Actually Work
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -2444,6 +2462,6 @@ nav{
     })();
   </script>
 
-  <script src="assets/form-protection.js?v=2" defer></script>
+  <script src="assets/form-protection.js?v=3" defer></script>
 </body>
 </html>

@@ -73,21 +73,19 @@ if (!tmc_is_valid_email($parent_email)) {
 $age_value = '';
 if ($student_age !== '') {
     $validated_age = filter_var($student_age, FILTER_VALIDATE_INT, [
-        'options' => ['min_range' => 10, 'max_range' => 16]
+        'options' => ['min_range' => 0]
     ]);
     if ($validated_age === false) {
-        tmc_redirect_with_error($error_return, 'student-age', 'Child\'s age must be between 10 and 16.');
+        tmc_redirect_with_error($error_return, 'student-age', 'Please provide a valid child age.');
     }
     $age_value = (string)$validated_age;
 }
 
 $session_options = [
-    '' => 'July 6th-10th or August 10th-14th',
-    'jul_6_11' => 'July 6th-10th',
+    '' => 'August 10th-14th',
     'aug_10_14' => 'August 10th-14th',
-    'july' => 'July 6th-10th',
     'august' => 'August 10th-14th',
-    'either' => 'July 6th-10th or August 10th-14th'
+    'either' => 'August 10th-14th'
 ];
 
 if (!array_key_exists($interested_session, $session_options)) {
@@ -135,51 +133,83 @@ if (!smtp_send_mail($internal_to, $internal_subject, $internal_message, $from, $
     log_interest_event('internal_email_failed reason=' . $smtp_reason . ' source=' . $source_page);
 }
 
-$first_name = '';
-if ($parent_name !== '') {
-    $parts = preg_split('/\s+/', $parent_name);
-    $first_name = $parts ? trim((string)$parts[0]) : '';
-}
+$name_parts = preg_split('/\s+/', trim($parent_name));
+$first_name = $name_parts && isset($name_parts[0]) ? $name_parts[0] : '';
+$greeting = $first_name !== '' ? 'Hello ' . $first_name . ',' : 'Hello,';
 
-$greeting = $first_name !== '' ? 'Hi ' . $first_name . ',' : 'Hi there,';
-$parent_subject = 'You’re in — April 18 Info Session';
-$parent_lines = [];
-$parent_lines[] = $greeting;
-$parent_lines[] = '';
-$parent_lines[] = 'We’ll send the virtual call link and session details shortly.';
-$parent_lines[] = '';
-$parent_lines[] = 'You’re confirmed for the April 18 Info Session.';
-$parent_lines[] = '';
-$parent_lines[] = 'This is a short virtual session (about 30 minutes) where we’ll walk through how The Money Club.Org works and what students actually experience day to day.';
-$parent_lines[] = '';
-$parent_lines[] = 'We’ll cover:';
-$parent_lines[] = 'what students do each day';
-$parent_lines[] = 'how the program is structured';
-$parent_lines[] = 'how instruction and supervision work';
-$parent_lines[] = 'how registration works';
-$parent_lines[] = '';
-$parent_lines[] = 'There will also be time for live Q&A.';
-$parent_lines[] = '';
-$parent_lines[] = 'We’ll send the virtual call link and full session details shortly before the event.';
-$parent_lines[] = '';
-$parent_lines[] = 'If you can’t attend live, we’ll send a recording afterward.';
-$parent_lines[] = '';
-$parent_lines[] = 'Talk soon,';
-$parent_lines[] = 'The Money Club.Org';
+$parent_subject = 'The Money Club.Org | Summer Program';
+$parent_message = <<<EMAIL
+$greeting
 
-if ($interested_session !== '') {
-    $parent_lines[] = '';
-    $parent_lines[] = 'Preferred session: ' . $session_options[$interested_session];
-}
-if ($age_value !== '') {
-    $parent_lines[] = 'Submitted child age: ' . $age_value;
-}
+Thank you for expressing interest in The Money Club.Org.
 
-$parent_message = implode("\n", $parent_lines);
+I’m Jared Goldberg, the founder of the program, and I wanted to personally send you an overview of what we are building, who it is for, and how the program will work.
+
+The Money Club.Org is not a traditional summer camp. It is a practical, project-based learning environment where students learn how value is created, measured, tested, explained, and improved.
+
+I designed the program from my own work as a product strategist, systems designer, and educator with 15+ years building and operating real-world business platforms.
+
+I’ve worked across Walmart, Loblaw, and Canadian Tire, and spent more than a decade inside China-based manufacturing ecosystems, where cost, quality, incentives, pricing, execution, and human behaviour collide in real time.
+
+The Money Club.Org takes those ideas and makes them useful for young people.
+
+Students are not just taught vocabulary. They work through the basic mechanics of how real things get built: money, margins, customer needs, research, AI tools, product ideas, presentation, feedback, and improvement.
+
+Based on current demand, we are now focusing on a founder-led August session that I will teach directly.
+
+August Session Details
+
+Dates: August 10–14
+Location: UTSU Student Commons
+Address: 230 College Street, Toronto
+Tuition: $200
+Program size: Limited to 30 participants
+
+The best fit is a student who is comfortable working independently on a laptop for basic research, writing, and creative work.
+
+The program is practical and project-based. Students will learn financial literacy, design thinking, AI as a research and creative tool, product-building, and communication by working toward a simple idea of their own.
+
+You can review the curriculum details and one-week schedule here:
+https://the-money-club.org/curriculum-details.html
+
+I’ve also started publishing the learning modules here:
+https://the-money-club.org/learn/#core-build-modules
+
+You can read more about the mission behind the program here:
+https://the-money-club.org/executive-director-letter.html
+
+Open-Book Financials
+
+The Money Club.Org is a nonprofit summer program designed around learning, not upselling.
+
+We publish a simple budget breakdown so families can see how tuition supports materials, venue costs, insurance, and program operations.
+
+You can review the Open-Book Financials here:
+https://the-money-club.org/open-book-hook.html
+
+The goal is not to maximize profit. The goal is to run a thoughtful, well-supported program for students in a transparent and responsible way.
+
+Next Steps
+
+If your family is interested in the August session, please complete the parent approval form here:
+https://the-money-club.org/parent-approval.html
+
+Once the form is complete, we will send payment instructions by e-transfer to secure the spot.
+
+I’d also be happy to jump on a quick parent call to walk you through the program and answer questions.
+
+I’m available Tuesday, May 26, between 10:00 AM and 3:00 PM. Alternatively, let me know when is good for you.
+
+Warmly,
+
+Jared Goldberg
+Founder
+The Money Club.Org
+EMAIL;
 
 if (!smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from)) {
     $smtp_reason = function_exists('smtp_get_last_error') ? smtp_get_last_error() : 'unknown';
-    log_interest_event('parent_email_failed reason=' . $smtp_reason . ' source=' . $source_page);
+    log_interest_event('parent_confirmation_email_failed reason=' . $smtp_reason . ' source=' . $source_page);
 }
 
 tmc_redirect_with_status($return_to, 'sent');
