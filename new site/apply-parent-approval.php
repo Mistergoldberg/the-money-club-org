@@ -449,51 +449,66 @@ if ($internal_email_sent) {
 }
 
 $parent_subject = 'Thank you — we received your Money Club parent approval form';
-$mission_letter_link = base_url() . '/executive-director-letter.html';
-$parent_lines = [];
-$parent_lines[] = 'Hi,';
-$parent_lines[] = '';
-$parent_lines[] = 'Thank you — we\'ve received your parent approval form for The Money Club.Org.';
-$parent_lines[] = '';
-$parent_lines[] = 'We\'ll follow up shortly with next steps, including payment details.';
-$parent_lines[] = '';
-$parent_lines[] = 'I also wanted to share a little more about what this program is really trying to build.';
-$parent_lines[] = '';
-$parent_lines[] = 'The Money Club.Org is a nonprofit startup built around a simple belief: young people are capable of far more than most institutions ask of them.';
-$parent_lines[] = '';
-$parent_lines[] = 'They do not just need slogans about financial literacy.';
-$parent_lines[] = 'They need tools.';
-$parent_lines[] = '';
-$parent_lines[] = 'Tools to understand how money moves.';
-$parent_lines[] = 'How systems behave.';
-$parent_lines[] = 'How incentives shape outcomes.';
-$parent_lines[] = 'How ideas are built, tested, priced, improved, and brought into the real world.';
-$parent_lines[] = '';
-$parent_lines[] = 'That is the work we are beginning with this one-week sprint.';
-$parent_lines[] = '';
-$parent_lines[] = 'Students will learn financial literacy, design thinking, AI, and communication by working through real business problems and building practical ideas of their own.';
-$parent_lines[] = '';
-$parent_lines[] = 'But the larger mission goes beyond a summer program.';
-$parent_lines[] = '';
-$parent_lines[] = 'Over time, we hope to grow The Money Club.Org into a community-rooted platform that helps young people identify local problems, investigate root causes, and build practical projects that deserve real support.';
-$parent_lines[] = '';
-$parent_lines[] = 'You can read the full mission letter here:';
-$parent_lines[] = '';
-$parent_lines[] = 'Read the Letter from the Executive Director →';
-$parent_lines[] = $mission_letter_link;
-$parent_lines[] = '';
-$parent_lines[] = 'At this early stage, thoughtful word of mouth makes a real difference. If this opportunity resonates with you, I would be very grateful if you shared The Money Club.Org with another family who may know a young person who would be a strong fit.';
-$parent_lines[] = '';
-$parent_lines[] = 'Thank you again for your interest and your trust.';
-$parent_lines[] = '';
-$parent_lines[] = 'Warmly,';
-$parent_lines[] = 'Jared Goldberg';
-$parent_lines[] = 'Executive Director';
-$parent_lines[] = 'The Money Club.Org';
-$parent_message = implode("\n", $parent_lines);
+$parent_greeting_name = trim(preg_replace('/\s+/', ' ', $parent_name));
+$curriculum_link = base_url() . '/curriculum-details.html';
+$safe_parent_greeting_name = htmlspecialchars($parent_greeting_name, ENT_QUOTES, 'UTF-8');
+$safe_curriculum_link = htmlspecialchars($curriculum_link, ENT_QUOTES, 'UTF-8');
+$greeting = $safe_parent_greeting_name !== '' ? 'Hi ' . $safe_parent_greeting_name . ',' : 'Hi,';
+$parent_message = '<!doctype html>
+<html>
+  <body style="margin:0;padding:0;background:#ffffff;color:#111111;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.55;">
+    <div style="max-width:680px;margin:0 auto;padding:24px;">
+      <p style="margin:0 0 18px;">' . $greeting . '</p>
+
+      <p style="margin:0 0 18px;">Thank you — we&rsquo;ve received your parent approval form for The Money Club.Org.</p>
+
+      <p style="margin:0 0 24px;">Below are the confirmed program details and payment instructions for the August session.</p>
+
+      <p style="margin:0 0 8px;"><strong>Program Details</strong></p>
+      <p style="margin:0 0 24px;">
+        <strong>Dates:</strong> August 10–14<br>
+        <strong>Location:</strong> UTSU Student Commons<br>
+        <strong>Address:</strong> 230 College Street, Toronto<br>
+        <strong>Tuition:</strong> $200<br>
+        <strong>Program size:</strong> Limited to 30 students
+      </p>
+
+      <p style="margin:0 0 8px;"><strong>Daily Schedule</strong></p>
+      <p style="margin:0 0 24px;">
+        <strong>Drop-off:</strong> 9:00 AM<br>
+        <strong>Instruction begins:</strong> 9:30 AM<br>
+        <strong>Lunch:</strong> 12:00–1:00 PM<br>
+        <strong>Pick-up window:</strong> 3:30–5:00 PM
+      </p>
+
+      <p style="margin:0 0 18px;">Students will learn financial literacy, design thinking, AI as a research and creative tool, product-building, and communication through practical, project-based work.</p>
+
+      <p style="margin:0 0 24px;">
+        You can review the curriculum and one-week schedule here:<br>
+        <a href="' . $safe_curriculum_link . '" style="color:#0f6f78;text-decoration:underline;">' . $safe_curriculum_link . '</a>
+      </p>
+
+      <p style="margin:0 0 8px;"><strong>Payment</strong></p>
+      <p style="margin:0 0 18px;">To secure your child&rsquo;s spot, please send the $200 tuition payment by e-transfer to:</p>
+
+      <p style="margin:0 0 18px;"><a href="mailto:info@the-money-club.org" style="color:#0f6f78;text-decoration:underline;">info@the-money-club.org</a></p>
+
+      <p style="margin:0 0 18px;">Please include your child&rsquo;s name in the payment note.</p>
+
+      <p style="margin:0 0 24px;">Once payment is received, I&rsquo;ll send a short confirmation that your child&rsquo;s spot has been secured.</p>
+
+      <p style="margin:0 0 18px;">Thank you again for your interest and your trust.</p>
+
+      <p style="margin:0;">Warmly,<br>
+      Jared Goldberg<br>
+      Executive Director<br>
+      The Money Club.Org</p>
+    </div>
+  </body>
+</html>';
 
 try {
-    $parent_email_sent = smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from);
+    $parent_email_sent = smtp_send_mail([$parent_email], $parent_subject, $parent_message, $from, $from, 'The Money Club.Org', true);
 } catch (Throwable $e) {
     error_log('[apply-parent-approval] Parent confirmation email exception: ' . $e->getMessage());
     $parent_email_sent = false;
