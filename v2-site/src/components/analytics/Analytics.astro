@@ -1,0 +1,12 @@
+---
+export interface Props {
+  enabled?: boolean;
+}
+
+const { enabled = false } = Astro.props;
+---
+
+<meta
+  name="tmc-analytics-status"
+  content={enabled ? "configured" : "disabled-until-event-contract-is-approved"}
+/>

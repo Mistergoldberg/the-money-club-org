@@ -1,0 +1,94 @@
+@import "./tokens.css";
+@import "./reset.css";
+@import "./utilities.css";
+
+html {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+}
+
+body[data-menu-open="true"] {
+  overflow: hidden;
+}
+
+main {
+  min-height: 60vh;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--line-heading);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: var(--text-display);
+}
+
+h2 {
+  font-size: var(--text-heading);
+}
+
+h3 {
+  font-size: var(--text-heading-sm);
+  line-height: 1.1;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+a {
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.12em;
+}
+
+:focus-visible {
+  border-radius: 0.15em;
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+.site-main {
+  padding-block: var(--space-6);
+}
+
+@media (max-width: 47.99rem) {
+  :root {
+    --header-height: 4.25rem;
+  }
+
+  .site-main {
+    padding-block: var(--space-5);
+  }
+}

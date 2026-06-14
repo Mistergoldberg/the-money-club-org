@@ -1,0 +1,58 @@
+---
+import DesktopNavigation from "./DesktopNavigation.astro";
+import MobileNavigation from "./MobileNavigation.astro";
+
+export interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<header class="site-header">
+  <div class="site-header__inner container-wide">
+    <a class="site-header__brand" href="/" aria-label="The Money Club home">
+      <span>The Money Club</span><small>.Org</small>
+    </a>
+
+    <DesktopNavigation currentPath={currentPath} />
+    <MobileNavigation currentPath={currentPath} />
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    z-index: 50;
+    top: 0;
+    min-height: var(--header-height);
+    border-bottom: 1px solid var(--color-border);
+    background: rgb(255 255 255 / 94%);
+    backdrop-filter: blur(0.75rem);
+  }
+
+  .site-header__inner {
+    display: flex;
+    min-height: var(--header-height);
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .site-header__brand {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: baseline;
+    color: var(--color-primary);
+    font-family: var(--font-display);
+    font-size: clamp(1.85rem, 1.5rem + 1vw, 2.6rem);
+    letter-spacing: var(--tracking-display);
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .site-header__brand small {
+    font-size: 0.55em;
+  }
+</style>

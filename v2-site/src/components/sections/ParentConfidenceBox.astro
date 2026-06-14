@@ -1,0 +1,54 @@
+---
+import Card from "../ui/Card.astro";
+
+export interface Props {
+  title?: string;
+  points?: string[];
+}
+
+const {
+  title = "What parents can expect",
+  points = [
+    "Clear program expectations before any commitment.",
+    "Direct explanations of safety, supervision, and next steps.",
+    "Consistent form, payment, and confirmation states.",
+  ],
+} = Astro.props;
+---
+
+<Card as="aside" tone="subtle" padding="large" class="confidence-box">
+  <div class="confidence-box__icon" aria-hidden="true">✓</div>
+  <div class="flow">
+    <h3>{title}</h3>
+    <ul>
+      {points.map((point) => <li>{point}</li>)}
+    </ul>
+  </div>
+</Card>
+
+<style>
+  .confidence-box {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-3);
+    border-left: 0.4rem solid var(--color-success);
+  }
+
+  .confidence-box__icon {
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--color-success);
+    color: var(--color-surface);
+    font-weight: 700;
+  }
+
+  ul {
+    display: grid;
+    gap: var(--space-2);
+    margin: 0;
+    padding-inline-start: 1.2em;
+  }
+</style>

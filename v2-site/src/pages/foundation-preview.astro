@@ -1,0 +1,131 @@
+---
+import FormField from "../components/forms/FormField.astro";
+import ChildFitBox from "../components/sections/ChildFitBox.astro";
+import CtaBlock from "../components/sections/CtaBlock.astro";
+import ParentConfidenceBox from "../components/sections/ParentConfidenceBox.astro";
+import StickyCta from "../components/sections/StickyCta.astro";
+import Button from "../components/ui/Button.astro";
+import Card from "../components/ui/Card.astro";
+import Section from "../components/ui/Section.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Foundation Preview"
+  description="Internal no-index preview of The Money Club V2 shell and primitives."
+  canonicalPath="/foundation-preview"
+  noIndex
+>
+  <Section spacing="spacious" ariaLabelledby="foundation-title">
+    <div class="preview-hero">
+      <p class="preview-eyebrow">Internal foundation preview</p>
+      <h1 id="foundation-title">Shell and primitives only</h1>
+      <p class="measure">
+        This route validates the V2 design tokens, navigation, layout, and shared
+        components. It is not the V2 homepage and contains no final funnel content.
+      </p>
+      <div class="cluster">
+        <Button href="#components" variant="primary">Review components</Button>
+        <Button href="#provisional-cta" variant="outline">Review CTA pattern</Button>
+      </div>
+    </div>
+  </Section>
+
+  <Section id="components" tone="subtle" ariaLabelledby="components-title">
+    <div class="preview-stack">
+      <div class="flow">
+        <p class="preview-eyebrow">UI system</p>
+        <h2 id="components-title">Foundational components</h2>
+      </div>
+
+      <div class="preview-grid">
+        <Card padding="large">
+          <div class="flow">
+            <h3>Button hierarchy</h3>
+            <div class="cluster">
+              <Button variant="primary">Primary</Button>
+              <Button variant="secondary">Secondary</Button>
+              <Button variant="accent">Accent</Button>
+              <Button variant="outline">Outline</Button>
+            </div>
+          </div>
+        </Card>
+
+        <Card padding="large">
+          <div class="flow">
+            <h3>Form field contract</h3>
+            <FormField
+              id="preview-parent-name"
+              label="Parent or guardian name"
+              autocomplete="name"
+              required
+              hint="This preview field does not submit data."
+            />
+            <FormField
+              id="preview-parent-email"
+              label="Email"
+              type="email"
+              autocomplete="email"
+              error="Example of a shared inline error state."
+            />
+          </div>
+        </Card>
+      </div>
+
+      <ParentConfidenceBox />
+      <ChildFitBox />
+    </div>
+  </Section>
+
+  <Section id="provisional-cta" ariaLabelledby="cta-title">
+    <CtaBlock
+      eyebrow="Provisional end-of-page pattern"
+      title="A consistent next step"
+      body="This component establishes the structure and behavior for a shared end-of-page conversion block without selecting final page content."
+      primaryLabel="Parent Approval"
+      primaryHref="/parent-approval"
+      secondaryLabel="Contact"
+      secondaryHref="/contact"
+      tone="secondary"
+      unresolvedReference
+    />
+  </Section>
+
+  <StickyCta
+    context="Foundation preview only"
+    label="Parent Approval"
+    href="/parent-approval"
+  />
+</BaseLayout>
+
+<style>
+  .preview-hero {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .preview-eyebrow {
+    color: var(--color-primary);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .preview-stack {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+
+  @media (max-width: 48rem) {
+    .preview-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
