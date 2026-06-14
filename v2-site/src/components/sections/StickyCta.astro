@@ -5,29 +5,98 @@ export interface Props {
   label: string;
   href: string;
   context?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
 }
 
-const { label, href, context } = Astro.props;
+const { label, href, context, secondaryLabel, secondaryHref } = Astro.props;
 ---
 
-<aside class="sticky-cta" aria-label="Next step">
+<aside
+  class="sticky-cta"
+  aria-label="Next step"
+  aria-hidden="true"
+  data-state="suppressed"
+  data-sticky-cta
+  inert
+>
   <div class="sticky-cta__inner container">
     {context && <p>{context}</p>}
-    <Button href={href} variant="secondary" size="medium">
-      {label}
-    </Button>
+    <div class="sticky-cta__actions">
+      {
+        secondaryLabel && secondaryHref && (
+          <Button href={secondaryHref} variant="outline" size="medium">
+            {secondaryLabel}
+          </Button>
+        )
+      }
+      <Button href={href} variant="secondary" size="medium">
+        {label}
+      </Button>
+    </div>
   </div>
 </aside>
 
+<script>
+  const stickyCta = document.querySelector<HTMLElement>("[data-sticky-cta]");
+  const hero = document.querySelector(".page-hero");
+
+  const setStickyState = (visible: boolean) => {
+    if (!stickyCta) return;
+
+    stickyCta.dataset.state = visible ? "visible" : "suppressed";
+    stickyCta.toggleAttribute("inert", !visible);
+    stickyCta.setAttribute("aria-hidden", visible ? "false" : "true");
+  };
+
+  if (stickyCta && hero) {
+    let frameId = 0;
+
+    const updateStickyState = () => {
+      window.cancelAnimationFrame(frameId);
+      frameId = window.requestAnimationFrame(() => {
+        const headerHeight =
+          document.querySelector(".site-header")?.getBoundingClientRect()
+            .height ?? 0;
+        setStickyState(hero.getBoundingClientRect().bottom <= headerHeight);
+      });
+    };
+
+    updateStickyState();
+    window.addEventListener("scroll", updateStickyState, { passive: true });
+    window.addEventListener("resize", updateStickyState);
+  } else {
+    setStickyState(true);
+  }
+</script>
+
 <style>
   .sticky-cta {
-    position: sticky;
+    position: fixed;
     z-index: 40;
+    right: 0;
     bottom: 0;
+    left: 0;
     border-top: 1px solid var(--color-border);
     background: rgb(255 255 255 / 96%);
     box-shadow: 0 -0.5rem 1.5rem rgb(23 22 20 / 8%);
     backdrop-filter: blur(0.75rem);
+    transition:
+      opacity var(--transition-fast),
+      transform var(--transition-fast),
+      visibility var(--transition-fast);
+  }
+
+  .sticky-cta[data-state="suppressed"] {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  .sticky-cta[data-state="visible"] {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .sticky-cta__inner {
@@ -45,6 +114,16 @@ const { label, href, context } = Astro.props;
     font-weight: 700;
   }
 
+  .sticky-cta__actions {
+    display: flex;
+    gap: var(--space-2);
+    margin-left: auto;
+  }
+
+  :global(.site-footer) {
+    padding-bottom: 5.25rem;
+  }
+
   @media (max-width: 40rem) {
     .sticky-cta__inner {
       justify-content: stretch;
@@ -54,8 +133,27 @@ const { label, href, context } = Astro.props;
       display: none;
     }
 
-    :global(.sticky-cta .button) {
+    .sticky-cta__actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       width: 100%;
+      margin-left: 0;
+    }
+
+    .sticky-cta__actions :global(.button) {
+      min-height: 2.75rem;
+      padding-inline: var(--space-2);
+      font-size: var(--text-xs);
+    }
+
+    :global(.site-footer) {
+      padding-bottom: 4.9rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sticky-cta {
+      transition: none;
     }
   }
 </style>

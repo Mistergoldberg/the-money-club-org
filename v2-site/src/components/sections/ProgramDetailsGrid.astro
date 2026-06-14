@@ -1,0 +1,52 @@
+---
+import type { ProgramDetail } from "../../data/homepage";
+
+interface Props {
+  items: readonly ProgramDetail[];
+}
+
+const { items } = Astro.props;
+---
+
+<dl class="program-details">
+  {items.map((item) => (
+    <div>
+      <dt>{item.label}</dt>
+      <dd>{item.value}</dd>
+    </div>
+  ))}
+</dl>
+
+<style>
+  .program-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: var(--space-2);
+  }
+
+  .program-details div {
+    display: grid;
+    gap: 0.25rem;
+    min-height: 7rem;
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+  }
+
+  dt {
+    color: var(--color-primary);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  dd {
+    align-self: end;
+    color: var(--color-text);
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+  }
+</style>

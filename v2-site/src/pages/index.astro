@@ -1,0 +1,275 @@
+---
+import ChildFitBox from "../components/sections/ChildFitBox.astro";
+import ContentSplit from "../components/sections/ContentSplit.astro";
+import CtaBlock from "../components/sections/CtaBlock.astro";
+import FaqList from "../components/sections/FaqList.astro";
+import FeatureGrid from "../components/sections/FeatureGrid.astro";
+import FounderNote from "../components/sections/FounderNote.astro";
+import BuildCycle from "../components/sections/BuildCycle.astro";
+import PageHero from "../components/sections/PageHero.astro";
+import ParentConfidenceBox from "../components/sections/ParentConfidenceBox.astro";
+import ProgramDetailsBar from "../components/sections/ProgramDetailsBar.astro";
+import ProgramDetailsGrid from "../components/sections/ProgramDetailsGrid.astro";
+import SectionIntro from "../components/sections/SectionIntro.astro";
+import StickyCta from "../components/sections/StickyCta.astro";
+import SystemMap from "../components/sections/SystemMap.astro";
+import Button from "../components/ui/Button.astro";
+import Card from "../components/ui/Card.astro";
+import Section from "../components/ui/Section.astro";
+import { homepageContent as content } from "../data/homepage";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Financial Literacy and Entrepreneurship for Young Builders"
+  description="A hands-on one-week program where students learn how money moves by building, pricing, testing, explaining, and presenting real ideas."
+  canonicalPath="/"
+>
+  <PageHero
+    eyebrow={content.hero.eyebrow}
+    headline={content.hero.headline}
+    body={content.hero.body}
+    primaryLabel={content.hero.primaryCta.label}
+    primaryHref={content.hero.primaryCta.href}
+    secondaryLabel={content.hero.secondaryCta.label}
+    secondaryHref={content.hero.secondaryCta.href}
+  >
+    <SystemMap slot="visual" />
+  </PageHero>
+
+  <ProgramDetailsBar items={content.trustItems} label={content.trustLine} />
+
+  <Section id="problem" spacing="spacious" ariaLabelledby="problem-title">
+    <ContentSplit align="start">
+      <div class="flow">
+        <p class="section-kicker">{content.problem.eyebrow}</p>
+        <h2 id="problem-title">{content.problem.title}</h2>
+      </div>
+      <div class="prose">
+        {content.problem.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <Card slot="aside" tone="accent" padding="large">
+        <p class="statement">{content.problem.statement}</p>
+      </Card>
+    </ContentSplit>
+  </Section>
+
+  <Section
+    id="student-work"
+    tone="subtle"
+    spacing="spacious"
+    ariaLabelledby="student-work-title"
+  >
+    <SectionIntro
+      eyebrow={content.studentWork.eyebrow}
+      title={content.studentWork.title}
+      lead={content.studentWork.lead}
+      headingId="student-work-title"
+    />
+    <p class="section-lead-copy">{content.studentWork.intro}</p>
+    <FeatureGrid items={content.outcomes} />
+  </Section>
+
+  <Section
+    id="why-it-matters"
+    spacing="spacious"
+    ariaLabelledby="why-it-matters-title"
+  >
+    <ContentSplit reverse>
+      <div class="flow">
+        <p class="section-kicker">{content.whyItMatters.eyebrow}</p>
+        <h2 id="why-it-matters-title">{content.whyItMatters.title}</h2>
+      </div>
+      <div class="prose">
+        {content.whyItMatters.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+      <SystemMap slot="aside" />
+    </ContentSplit>
+  </Section>
+
+  <Section
+    id="program-details"
+    tone="subtle"
+    spacing="spacious"
+    ariaLabelledby="program-details-title"
+  >
+    <div class="section-stack">
+      <SectionIntro
+        eyebrow="Program details"
+        title="August 10–14, Toronto"
+        lead="One focused week of workshops, project work, discussion, and presentation at the UTSU Student Commons."
+        headingId="program-details-title"
+      />
+      <ProgramDetailsGrid items={content.programDetails} />
+      <div class="section-actions">
+        <Button href="/parent-approval/" size="large">Complete Parent Approval</Button>
+      </div>
+    </div>
+  </Section>
+
+  <Section id="who-its-for" spacing="spacious" ariaLabelledby="fit-title">
+    <SectionIntro
+      eyebrow="Who it’s for"
+      title="Built for curious students ages 10–16."
+      lead="The program is designed for students who can work independently on a laptop, contribute to group discussion, and take part in creative projects. Most interest so far is from ages 13–15, but readiness matters more than age alone."
+      headingId="fit-title"
+    />
+    <ChildFitBox
+      title="Is this right for my child?"
+      positiveSignals={content.fitSignals}
+    />
+  </Section>
+
+  <Section
+    id="parent-trust"
+    tone="subtle"
+    spacing="spacious"
+    ariaLabelledby="parent-trust-title"
+  >
+    <ContentSplit align="start">
+      <div class="flow">
+        <p class="section-kicker">Parent trust</p>
+        <h2 id="parent-trust-title">Confirmed, insured, and ready to run.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          After speaking with parents and confirming demand, the minimum
+          threshold for the August program has been reached.
+        </p>
+        <p>
+          The venue is confirmed, the program is fully insured, the curriculum
+          is built, and the cohort is intentionally limited.
+        </p>
+        <p>
+          The group is capped at 30 students so the experience can stay
+          personal, active, focused, and well supported.
+        </p>
+      </div>
+      <ParentConfidenceBox
+        slot="aside"
+        title="Parent confidence"
+        points={content.parentConfidence}
+      />
+    </ContentSplit>
+  </Section>
+
+  <Section
+    id="curriculum"
+    spacing="spacious"
+    width="wide"
+    ariaLabelledby="curriculum-title"
+  >
+    <SectionIntro
+      eyebrow={content.curriculum.eyebrow}
+      title={content.curriculum.title}
+      lead={content.curriculum.lead}
+      headingId="curriculum-title"
+    />
+    <BuildCycle steps={content.buildSteps} />
+    <div class="section-actions">
+      <Button href="/curriculum/" variant="outline" size="large">
+        See the Curriculum
+      </Button>
+    </div>
+  </Section>
+
+  <Section
+    id="founder-note"
+    tone="subtle"
+    spacing="spacious"
+    ariaLabelledby="founder-note-heading"
+  >
+    <FounderNote
+      title={content.founderNote.title}
+      paragraphs={content.founderNote.paragraphs}
+      signature={content.founderNote.signature}
+      role={content.founderNote.role}
+      headingId="founder-note-heading"
+    />
+  </Section>
+
+  <Section
+    id="mentor-fellowship"
+    spacing="spacious"
+    ariaLabelledby="mentor-heading"
+  >
+    <CtaBlock
+      eyebrow={content.mentor.eyebrow}
+      title={content.mentor.title}
+      primaryLabel="Learn About the Mentor Fellowship"
+      primaryHref="/mentor-fellowship/"
+      secondaryLabel="See the Chapter Vision"
+      secondaryHref="/chapter-vision/"
+      tone="primary"
+      headingId="mentor-heading"
+    >
+      <div slot="copy" class="flow">
+        <p>{content.mentor.body}</p>
+        <p><strong>{content.mentor.statement}</strong></p>
+      </div>
+    </CtaBlock>
+  </Section>
+
+  <Section
+    id="faq"
+    tone="subtle"
+    spacing="spacious"
+    ariaLabelledby="faq-title"
+  >
+    <SectionIntro
+      eyebrow="Questions from families"
+      title="Frequently asked questions"
+      lead="The practical details parents usually want before completing approval."
+      align="center"
+      headingId="faq-title"
+    />
+    <FaqList items={content.faqs} />
+  </Section>
+
+  <Section
+    id="register"
+    spacing="spacious"
+    ariaLabelledby="final-cta-title"
+  >
+    <CtaBlock
+      eyebrow={content.finalCta.eyebrow}
+      title={content.finalCta.title}
+      primaryLabel="Register for August"
+      primaryHref="/parent-approval/"
+      secondaryLabel="See the Curriculum"
+      secondaryHref="/curriculum/"
+      tone="secondary"
+      headingId="final-cta-title"
+    >
+      <div slot="copy" class="flow">
+        {content.finalCta.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </CtaBlock>
+  </Section>
+
+  <StickyCta
+    context="August 10–14 · Toronto · $200 · Limited to 30 students"
+    label="Register for August"
+    href="/parent-approval/"
+    secondaryLabel="Curriculum"
+    secondaryHref="/curriculum/"
+  />
+</BaseLayout>
+
+<style>
+  .section-kicker {
+    color: var(--color-primary);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .section-lead-copy {
+    max-width: 50rem;
+    margin-top: calc(var(--space-5) * -1 + var(--space-3));
+    margin-bottom: var(--space-5);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+  }
+</style>

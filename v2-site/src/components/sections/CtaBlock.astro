@@ -5,13 +5,14 @@ import Card from "../ui/Card.astro";
 export interface Props {
   eyebrow?: string;
   title: string;
-  body: string;
+  body?: string;
   primaryLabel: string;
   primaryHref: string;
   secondaryLabel?: string;
   secondaryHref?: string;
   tone?: "default" | "primary" | "secondary" | "accent";
   unresolvedReference?: boolean;
+  headingId?: string;
 }
 
 const {
@@ -24,14 +25,15 @@ const {
   secondaryHref,
   tone = "default",
   unresolvedReference = false,
+  headingId,
 } = Astro.props;
 ---
 
 <Card as="aside" tone={tone} padding="large" class="cta-block">
   <div class="cta-block__copy flow">
     {eyebrow && <p class="cta-block__eyebrow">{eyebrow}</p>}
-    <h2>{title}</h2>
-    <p>{body}</p>
+    <h2 id={headingId}>{title}</h2>
+    {Astro.slots.has("copy") ? <slot name="copy" /> : body && <p>{body}</p>}
     {
       unresolvedReference && (
         <p class="cta-block__note">
@@ -48,7 +50,11 @@ const {
     </Button>
     {
       secondaryLabel && secondaryHref && (
-        <Button href={secondaryHref} variant="outline" size="large">
+        <Button
+          href={secondaryHref}
+          variant={tone === "default" ? "outline" : "contrast"}
+          size="large"
+        >
           {secondaryLabel}
         </Button>
       )
@@ -57,7 +63,7 @@ const {
 </Card>
 
 <style>
-  .cta-block {
+  :global(.cta-block) {
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.65fr);
     gap: var(--space-5);
@@ -91,7 +97,7 @@ const {
   }
 
   @media (max-width: 48rem) {
-    .cta-block {
+    :global(.cta-block) {
       grid-template-columns: 1fr;
     }
   }

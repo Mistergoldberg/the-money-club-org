@@ -44,7 +44,12 @@ const mobileRoutes = [
   >
     <div class="mobile-navigation__panel" data-menu-panel>
       <div class="mobile-navigation__top">
-        <a class="mobile-navigation__brand" href="/" aria-label="The Money Club home">
+        <a
+          class="mobile-navigation__brand"
+          href="/"
+          aria-label="The Money Club home"
+          aria-current={currentPath === "/" ? "page" : undefined}
+        >
           <span>The Money Club</span><small>.Org</small>
         </a>
         <button

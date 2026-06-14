@@ -28,9 +28,10 @@ export const siteRoutes: SiteRoute[] = [
     id: "home",
     label: "Home",
     href: "/",
-    description: "The primary introduction to The Money Club.",
+    description:
+      "Hands-on financial literacy and entrepreneurship for young builders.",
     group: "primary",
-    status: "planned",
+    status: "ready",
     showInHeader: true,
     showInFooter: true,
   },

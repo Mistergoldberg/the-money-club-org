@@ -2,7 +2,13 @@
 export interface Props {
   href?: string;
   type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary" | "accent" | "outline" | "text";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "accent"
+    | "outline"
+    | "contrast"
+    | "text";
   size?: "small" | "medium" | "large";
   fullWidth?: boolean;
   disabled?: boolean;
@@ -129,6 +135,16 @@ const classes = [
 
   .button--outline:hover:not(:disabled, [aria-disabled="true"]) {
     background: var(--color-surface-strong);
+  }
+
+  .button--contrast {
+    border-color: currentColor;
+    background: transparent;
+    color: inherit;
+  }
+
+  .button--contrast:hover:not(:disabled, [aria-disabled="true"]) {
+    background: rgb(255 255 255 / 14%);
   }
 
   .button--text {

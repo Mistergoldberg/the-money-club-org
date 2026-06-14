@@ -1,0 +1,102 @@
+---
+import type { FaqItem } from "../../data/homepage";
+
+interface Props {
+  items: readonly FaqItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="faq-list">
+  {items.map((item) => (
+    <details>
+      <summary>
+        <span>{item.question}</span>
+        <span class="faq-list__icon" aria-hidden="true"></span>
+      </summary>
+      <div class="faq-list__answer">
+        <p>{item.answer}</p>
+      </div>
+    </details>
+  ))}
+</div>
+
+<style>
+  .faq-list {
+    max-width: 56rem;
+    margin-inline: auto;
+    border-top: 1px solid var(--color-border);
+  }
+
+  details {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  summary {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    justify-content: space-between;
+    padding-block: var(--space-4);
+    cursor: pointer;
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-bold);
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary:hover {
+    color: var(--color-primary);
+  }
+
+  summary:focus-visible {
+    border-radius: var(--radius-sm);
+    outline: 3px solid rgb(240 180 58 / 0.6);
+    outline-offset: 4px;
+  }
+
+  .faq-list__icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .faq-list__icon::before,
+  .faq-list__icon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1rem;
+    height: 2px;
+    background: currentColor;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  .faq-list__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: transform var(--transition-fast);
+  }
+
+  details[open] .faq-list__icon::after {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  .faq-list__answer {
+    max-width: 48rem;
+    padding: 0 3rem var(--space-4) 0;
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-list__icon::after {
+      transition: none;
+    }
+  }
+</style>

@@ -1,0 +1,53 @@
+---
+interface Props {
+  reverse?: boolean;
+  align?: "start" | "center";
+}
+
+const { reverse = false, align = "center" } = Astro.props;
+---
+
+<div class:list={["content-split", `content-split--${align}`, { "content-split--reverse": reverse }]}>
+  <div class="content-split__main">
+    <slot />
+  </div>
+  <div class="content-split__aside">
+    <slot name="aside" />
+  </div>
+</div>
+
+<style>
+  .content-split {
+    display: grid;
+    gap: var(--space-5);
+  }
+
+  .content-split--start {
+    align-items: start;
+  }
+
+  .content-split--center {
+    align-items: center;
+  }
+
+  .content-split__main,
+  .content-split__aside {
+    min-width: 0;
+  }
+
+  @media (min-width: 56rem) {
+    .content-split {
+      grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.95fr);
+      gap: var(--space-6);
+    }
+
+    .content-split--reverse .content-split__main {
+      grid-column: 2;
+    }
+
+    .content-split--reverse .content-split__aside {
+      grid-column: 1;
+      grid-row: 1;
+    }
+  }
+</style>

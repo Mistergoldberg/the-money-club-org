@@ -1,0 +1,129 @@
+---
+const concepts = ["Price", "Cost", "Value", "Risk", "Margin", "Choice"];
+---
+
+<div
+  class="system-map"
+  role="img"
+  aria-label="Money connects price, cost, value, risk, margin, and choice."
+>
+  <div class="system-map__orbit" aria-hidden="true"></div>
+  <div class="system-map__core" aria-hidden="true">
+    <span>See how</span>
+    <strong>Money<br />moves</strong>
+  </div>
+  <ul class="system-map__concepts" aria-hidden="true">
+    {concepts.map((concept, index) => (
+      <li style={`--index: ${index}`}>{concept}</li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .system-map {
+    position: relative;
+    width: min(100%, 30rem);
+    aspect-ratio: 1;
+    margin-inline: auto;
+  }
+
+  .system-map__orbit {
+    position: absolute;
+    inset: 12%;
+    border: 1px solid rgb(30 138 149 / 0.35);
+    border-radius: var(--radius-pill);
+  }
+
+  .system-map__orbit::before,
+  .system-map__orbit::after {
+    position: absolute;
+    inset: 14%;
+    border: 1px dashed rgb(140 98 167 / 0.35);
+    border-radius: inherit;
+    content: "";
+    transform: rotate(25deg);
+  }
+
+  .system-map__orbit::after {
+    transform: rotate(-25deg);
+  }
+
+  .system-map__core {
+    position: absolute;
+    inset: 30%;
+    display: grid;
+    place-content: center;
+    border: 0.7rem solid rgb(255 255 255 / 0.78);
+    border-radius: var(--radius-pill);
+    background: var(--color-primary);
+    box-shadow: var(--shadow-lg);
+    color: var(--color-text-on-dark);
+    text-align: center;
+  }
+
+  .system-map__core span {
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .system-map__core strong {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: var(--font-weight-regular);
+    line-height: 0.85;
+    text-transform: uppercase;
+  }
+
+  .system-map__concepts {
+    position: absolute;
+    inset: 0;
+    list-style: none;
+  }
+
+  .system-map__concepts li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    min-width: 5.75rem;
+    min-height: 2.75rem;
+    padding: var(--space-1) var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    transform:
+      rotate(calc(var(--index) * 60deg))
+      translateX(clamp(7.5rem, 29vw, 11rem))
+      rotate(calc(var(--index) * -60deg));
+  }
+
+  @media (max-width: 25rem) {
+    .system-map__concepts li {
+      min-width: 4.75rem;
+      font-size: var(--text-xs);
+      transform:
+        rotate(calc(var(--index) * 60deg))
+        translateX(6.8rem)
+        rotate(calc(var(--index) * -60deg));
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .system-map__orbit {
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+
+    @keyframes drift {
+      to {
+        transform: rotate(8deg);
+      }
+    }
+  }
+</style>

@@ -28,6 +28,40 @@
   gap: var(--stack-gap, var(--space-4));
 }
 
+.section-stack {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.prose {
+  display: grid;
+  gap: var(--space-3);
+  max-width: var(--measure-copy);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+}
+
+.prose strong {
+  color: var(--color-text);
+}
+
+.statement {
+  max-width: 24ch;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -38,6 +72,12 @@
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+@media (max-width: 35rem) {
+  .section-actions > .button {
+    width: 100%;
+  }
 }
 
 .skip-link {

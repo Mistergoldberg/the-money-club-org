@@ -3,7 +3,7 @@ import Card from "../ui/Card.astro";
 
 export interface Props {
   title?: string;
-  points?: string[];
+  points?: readonly string[];
 }
 
 const {
@@ -27,7 +27,7 @@ const {
 </Card>
 
 <style>
-  .confidence-box {
+  :global(.confidence-box) {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: var(--space-3);

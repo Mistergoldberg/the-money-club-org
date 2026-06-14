@@ -3,8 +3,8 @@ import Card from "../ui/Card.astro";
 
 export interface Props {
   title?: string;
-  positiveSignals?: string[];
-  discussFirst?: string[];
+  positiveSignals?: readonly string[];
+  discussFirst?: readonly string[];
 }
 
 const {
@@ -14,33 +14,34 @@ const {
     "They are ready to learn through making, testing, and reflection.",
     "They benefit from practical context for money and decision-making.",
   ],
-  discussFirst = [
-    "They need accommodations or support that should be planned in advance.",
-    "You are unsure about the program pace, independence, or group environment.",
-  ],
+  discussFirst = [],
 } = Astro.props;
 ---
 
 <Card as="aside" padding="large" class="fit-box">
   <h3>{title}</h3>
-  <div class="fit-box__grid">
+  <div class:list={["fit-box__grid", { "fit-box__grid--single": discussFirst.length === 0 }]}>
     <div>
       <h4>Good signals</h4>
       <ul>
         {positiveSignals.map((signal) => <li>{signal}</li>)}
       </ul>
     </div>
-    <div>
-      <h4>Talk with us first</h4>
-      <ul>
-        {discussFirst.map((signal) => <li>{signal}</li>)}
-      </ul>
-    </div>
+    {
+      discussFirst.length > 0 && (
+        <div>
+          <h4>Talk with us first</h4>
+          <ul>
+            {discussFirst.map((signal) => <li>{signal}</li>)}
+          </ul>
+        </div>
+      )
+    }
   </div>
 </Card>
 
 <style>
-  .fit-box {
+  :global(.fit-box) {
     display: grid;
     gap: var(--space-4);
   }
@@ -49,6 +50,10 @@ const {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-4);
+  }
+
+  .fit-box__grid--single {
+    grid-template-columns: 1fr;
   }
 
   .fit-box__grid > div {
