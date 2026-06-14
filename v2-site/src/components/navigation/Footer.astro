@@ -1,0 +1,91 @@
+---
+import { footerRoutes } from "../../data/navigation";
+import { programIdentity } from "../../data/program";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner container-wide">
+    <div class="site-footer__brand">
+      <a href="/">{programIdentity.organizationDisplayName}</a>
+      <p>{programIdentity.brandStatement}</p>
+    </div>
+
+    <nav aria-label="Footer navigation">
+      <ul role="list">
+        {
+          footerRoutes
+            .filter((route) => route.id !== "home")
+            .map((route) => (
+              <li>
+                <a href={route.href}>{route.shortLabel ?? route.label}</a>
+              </li>
+            ))
+        }
+      </ul>
+    </nav>
+
+    <p class="site-footer__legal">
+      &copy; {year} {programIdentity.organizationDisplayName}
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  .site-footer__inner {
+    display: grid;
+    grid-template-columns: minmax(16rem, 1.2fr) minmax(16rem, 1fr);
+    gap: var(--space-5);
+    padding-block: var(--space-6);
+  }
+
+  .site-footer__brand {
+    display: grid;
+    gap: var(--space-2);
+    max-width: 38rem;
+  }
+
+  .site-footer__brand > a {
+    width: fit-content;
+    font-family: var(--font-display);
+    font-size: var(--text-heading-sm);
+    letter-spacing: var(--tracking-display);
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2) var(--space-4);
+  }
+
+  nav a {
+    font-weight: 700;
+  }
+
+  .site-footer__legal {
+    grid-column: 1 / -1;
+    padding-block-start: var(--space-3);
+    border-top: 1px solid rgb(255 255 255 / 35%);
+    font-size: var(--text-xs);
+  }
+
+  @media (max-width: 48rem) {
+    .site-footer__inner {
+      grid-template-columns: 1fr;
+    }
+
+    nav ul {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

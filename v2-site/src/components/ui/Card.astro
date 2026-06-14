@@ -1,0 +1,62 @@
+---
+export interface Props {
+  as?: "article" | "div" | "aside";
+  tone?: "default" | "subtle" | "primary" | "secondary" | "accent";
+  padding?: "small" | "medium" | "large";
+  class?: string;
+}
+
+const {
+  as: Tag = "div",
+  tone = "default",
+  padding = "medium",
+  class: className = "",
+} = Astro.props;
+---
+
+<Tag class:list={["card", `card--${tone}`, `card--${padding}`, className]}>
+  <slot />
+</Tag>
+
+<style>
+  .card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card--small {
+    padding: var(--space-3);
+  }
+
+  .card--medium {
+    padding: var(--space-4);
+  }
+
+  .card--large {
+    padding: clamp(var(--space-4), 4vw, var(--space-6));
+  }
+
+  .card--subtle {
+    background: var(--color-surface-subtle);
+  }
+
+  .card--primary {
+    border-color: transparent;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
+  }
+
+  .card--secondary {
+    border-color: transparent;
+    background: var(--color-secondary);
+    color: var(--color-on-secondary);
+  }
+
+  .card--accent {
+    border-color: transparent;
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+</style>

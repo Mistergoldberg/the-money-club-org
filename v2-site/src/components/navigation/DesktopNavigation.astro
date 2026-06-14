@@ -1,0 +1,100 @@
+---
+import {
+  headerRoutes,
+  isCurrentRoute,
+  supportRoutes,
+} from "../../data/navigation";
+import Button from "../ui/Button.astro";
+
+export interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const contactRoute = supportRoutes.find((route) => route.id === "contact");
+---
+
+<div class="desktop-navigation">
+  <nav aria-label="Primary navigation">
+    <ul role="list">
+      {
+        headerRoutes
+          .filter((route) => route.id !== "home")
+          .map((route) => (
+            <li>
+              <a
+                href={route.href}
+                aria-current={isCurrentRoute(currentPath, route.href) ? "page" : undefined}
+              >
+                {route.shortLabel ?? route.label}
+              </a>
+            </li>
+          ))
+      }
+    </ul>
+  </nav>
+
+  {
+    contactRoute && (
+      <Button href={contactRoute.href} variant="secondary" size="small">
+        {contactRoute.label}
+      </Button>
+    )
+  }
+</div>
+
+<style>
+  .desktop-navigation {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--space-4);
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(var(--space-3), 2.2vw, var(--space-5));
+  }
+
+  nav a {
+    position: relative;
+    display: block;
+    padding-block: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0.2rem;
+    left: 0;
+    height: 2px;
+    background: var(--color-primary);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition-fast);
+  }
+
+  nav a:hover::after,
+  nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+
+  @media (max-width: 68rem) {
+    .desktop-navigation {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    nav a::after {
+      transition: none;
+    }
+  }
+</style>
