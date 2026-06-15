@@ -82,7 +82,7 @@ const mobileRoutes = [
         </ul>
       </nav>
 
-      <Button href="/parent-approval" variant="primary" size="large" fullWidth>
+      <Button href="/parent-approval/" variant="primary" size="large" fullWidth>
         Register for August
       </Button>
     </div>
@@ -283,7 +283,10 @@ const mobileRoutes = [
     justify-items: end;
     overflow: hidden;
     background: rgb(23 22 20 / 45%);
+    backdrop-filter: blur(0.2rem);
     opacity: 0;
+    overscroll-behavior: contain;
+    touch-action: none;
     transition: opacity var(--transition-fast);
   }
 
@@ -304,10 +307,15 @@ const mobileRoutes = [
     overflow-y: auto;
     overscroll-behavior: contain;
     background: var(--color-surface);
-    padding: var(--space-3);
+    padding:
+      max(var(--space-3), env(safe-area-inset-top))
+      max(var(--space-3), env(safe-area-inset-right))
+      max(var(--space-3), env(safe-area-inset-bottom))
+      max(var(--space-3), env(safe-area-inset-left));
     box-shadow: -1rem 0 3rem rgb(23 22 20 / 18%);
     transform: translateX(100%);
     transition: transform var(--transition-fast);
+    touch-action: pan-y;
   }
 
   .mobile-navigation__overlay[data-state="open"] .mobile-navigation__panel {

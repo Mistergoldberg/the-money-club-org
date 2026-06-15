@@ -1,0 +1,34 @@
+---
+import type { MediaItem } from "../../data/media";
+import MediaCard from "./MediaCard.astro";
+
+interface Props {
+  items: readonly MediaItem[];
+  columns?: 2 | 3;
+}
+
+const { items, columns = 3 } = Astro.props;
+---
+
+<div class:list={["media-grid", `media-grid--${columns}`]}>
+  {items.map((item) => <MediaCard media={item} />)}
+</div>
+
+<style>
+  .media-grid {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  @media (min-width: 42rem) {
+    .media-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 68rem) {
+    .media-grid--3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

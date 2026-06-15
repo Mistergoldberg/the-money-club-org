@@ -1,0 +1,59 @@
+---
+import type { MediaItem } from "../../data/media";
+import MediaFrame from "./MediaFrame.astro";
+
+interface Props {
+  media: MediaItem;
+  venue: string;
+  address: string;
+}
+
+const { media, venue, address } = Astro.props;
+---
+
+<div class="location-media">
+  <MediaFrame
+    media={media}
+    showCaption={false}
+    sizes="(min-width: 56rem) 46vw, 100vw"
+  />
+  <div class="location-media__label">
+    <span aria-hidden="true">●</span>
+    <p><strong>{venue}</strong><br />{address}</p>
+  </div>
+  {media.caption && <p class="location-media__caption">{media.caption}</p>}
+</div>
+
+<style>
+  .location-media {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .location-media__label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    width: min(92%, 28rem);
+    margin: calc(var(--space-5) * -1) auto 0;
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-md);
+  }
+
+  .location-media__label span {
+    color: var(--color-primary);
+  }
+
+  .location-media__label p {
+    line-height: 1.45;
+  }
+
+  .location-media__caption {
+    padding-inline: var(--space-1);
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    line-height: 1.45;
+  }
+</style>

@@ -1,0 +1,128 @@
+---
+import type { MediaItem } from "../../data/media";
+import MediaFrame from "./MediaFrame.astro";
+
+interface Props {
+  media: MediaItem;
+  eyebrow?: string;
+  steps?: readonly string[];
+}
+
+const { media, eyebrow, steps = [] } = Astro.props;
+---
+
+<div class="hero-media">
+  <MediaFrame
+    media={media}
+    showCaption={false}
+    sizes="(min-width: 64rem) 42vw, 100vw"
+  />
+  {
+    (eyebrow || steps.length > 0) && (
+      <div class="hero-media__process">
+        {eyebrow && <p>{eyebrow}</p>}
+        {
+          steps.length > 0 && (
+            <ol aria-label={eyebrow}>
+              {steps.map((step) => <li>{step}</li>)}
+            </ol>
+          )
+        }
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .hero-media {
+    position: relative;
+    padding-bottom: var(--space-4);
+  }
+
+  .hero-media::before {
+    position: absolute;
+    top: calc(var(--space-3) * -1);
+    right: calc(var(--space-3) * -1);
+    width: 58%;
+    height: 72%;
+    border-radius: var(--radius-lg);
+    background: var(--color-accent);
+    content: "";
+    opacity: 0.35;
+    transform: rotate(2deg);
+  }
+
+  .hero-media :global(.media-frame) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-media :global(.media-frame__image) {
+    min-height: 22rem;
+  }
+
+  .hero-media__process {
+    position: relative;
+    z-index: 2;
+    width: min(92%, 29rem);
+    margin: calc(var(--space-6) * -1) auto 0;
+    padding: var(--space-3);
+    border: 1px solid rgb(255 255 255 / 18%);
+    border-radius: var(--radius-md);
+    background: var(--color-text);
+    color: var(--color-text-on-dark);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hero-media__process p {
+    margin-bottom: var(--space-2);
+    color: var(--color-accent);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    letter-spacing: var(--tracking-display);
+    text-transform: uppercase;
+  }
+
+  li:not(:last-child)::after {
+    color: var(--color-accent);
+    content: "→";
+  }
+
+  @media (max-width: 47.99rem) {
+    .hero-media {
+      padding-bottom: var(--space-3);
+    }
+
+    .hero-media :global(.media-frame__image) {
+      min-height: 0;
+    }
+
+    .hero-media__process {
+      margin-top: calc(var(--space-4) * -1);
+      padding: var(--space-2) var(--space-3);
+    }
+
+    li {
+      font-size: var(--text-lg);
+    }
+  }
+</style>

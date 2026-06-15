@@ -1,0 +1,99 @@
+---
+import type { MediaItem } from "../../data/media";
+import SectionMedia from "./SectionMedia.astro";
+
+interface Props {
+  media: MediaItem;
+  mediaSide?: "start" | "end";
+  align?: "start" | "center";
+}
+
+const {
+  media,
+  mediaSide = "end",
+  align = "center",
+} = Astro.props;
+---
+
+<div
+  class:list={[
+    "media-split",
+    `media-split--media-${mediaSide}`,
+    `media-split--${align}`,
+  ]}
+>
+  <div class="media-split__heading">
+    <slot name="heading" />
+  </div>
+  <div class="media-split__media">
+    {
+      Astro.slots.has("media") ? (
+        <slot name="media" />
+      ) : (
+        <SectionMedia
+          media={media}
+          placement={mediaSide === "start" ? "split-start" : "split-end"}
+          sizes="(min-width: 56rem) 46vw, 100vw"
+        />
+      )
+    }
+  </div>
+  <div class="media-split__body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  .media-split {
+    display: grid;
+    grid-template-areas:
+      "heading"
+      "media"
+      "body";
+    gap: var(--space-4);
+  }
+
+  .media-split__heading {
+    grid-area: heading;
+    min-width: 0;
+  }
+
+  .media-split__media {
+    grid-area: media;
+    min-width: 0;
+  }
+
+  .media-split__body {
+    grid-area: body;
+    min-width: 0;
+  }
+
+  @media (min-width: 56rem) {
+    .media-split {
+      grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.92fr);
+      column-gap: var(--space-6);
+      row-gap: var(--space-4);
+    }
+
+    .media-split--center {
+      align-items: center;
+    }
+
+    .media-split--start {
+      align-items: start;
+    }
+
+    .media-split--media-end {
+      grid-template-areas:
+        "heading media"
+        "body media";
+    }
+
+    .media-split--media-start {
+      grid-template-columns: minmax(22rem, 0.92fr) minmax(0, 1fr);
+      grid-template-areas:
+        "media heading"
+        "media body";
+    }
+  }
+</style>

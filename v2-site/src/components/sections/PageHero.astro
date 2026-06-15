@@ -28,28 +28,9 @@ const {
 
 <section class="page-hero" aria-labelledby="homepage-title">
   <div class="container page-hero__inner">
-    <div class="page-hero__copy">
+    <div class="page-hero__heading">
       {eyebrow && <p class="page-hero__eyebrow">{eyebrow}</p>}
       <h1 id="homepage-title">{headline}</h1>
-      <div class="page-hero__actions">
-        <Button href={primaryHref} size="large">{primaryLabel}</Button>
-        <Button href={secondaryHref} variant="outline" size="large">
-          {secondaryLabel}
-        </Button>
-      </div>
-      <p class="page-hero__body">{body}</p>
-      {
-        proofPoints.length > 0 && (
-          <ul class="page-hero__proofs" role="list">
-            {proofPoints.map((point) => (
-              <li>
-                <span aria-hidden="true">✓</span>
-                {point}
-              </li>
-            ))}
-          </ul>
-        )
-      }
     </div>
     <div
       class:list={[
@@ -59,6 +40,25 @@ const {
     >
       <slot name="visual" />
     </div>
+    <div class="page-hero__actions">
+      <Button href={primaryHref} size="large">{primaryLabel}</Button>
+      <Button href={secondaryHref} variant="outline" size="large">
+        {secondaryLabel}
+      </Button>
+    </div>
+    <p class="page-hero__body">{body}</p>
+    {
+      proofPoints.length > 0 && (
+        <ul class="page-hero__proofs" role="list">
+          {proofPoints.map((point) => (
+            <li>
+              <span aria-hidden="true">✓</span>
+              {point}
+            </li>
+          ))}
+        </ul>
+      )
+    }
   </div>
 </section>
 
@@ -86,11 +86,18 @@ const {
   .page-hero__inner {
     position: relative;
     display: grid;
+    grid-template-areas:
+      "heading"
+      "visual"
+      "actions"
+      "body"
+      "proofs";
     align-items: center;
-    gap: var(--space-5);
+    gap: var(--space-3);
   }
 
-  .page-hero__copy {
+  .page-hero__heading {
+    grid-area: heading;
     display: grid;
     gap: var(--space-3);
     max-width: 48rem;
@@ -111,6 +118,7 @@ const {
   }
 
   .page-hero__body {
+    grid-area: body;
     max-width: 45rem;
     color: var(--color-text-muted);
     font-size: clamp(var(--text-lg), 2vw, var(--text-xl));
@@ -118,6 +126,7 @@ const {
   }
 
   .page-hero__proofs {
+    grid-area: proofs;
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-2) var(--space-4);
@@ -147,6 +156,7 @@ const {
   }
 
   .page-hero__actions {
+    grid-area: actions;
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-3);
@@ -154,12 +164,20 @@ const {
   }
 
   .page-hero__visual {
+    grid-area: visual;
     min-width: 0;
   }
 
   @media (min-width: 64rem) {
     .page-hero__inner {
       grid-template-columns: minmax(0, 1.2fr) minmax(22rem, 0.8fr);
+      grid-template-areas:
+        "heading visual"
+        "actions visual"
+        "body visual"
+        "proofs visual";
+      column-gap: var(--space-6);
+      row-gap: var(--space-3);
     }
   }
 
@@ -174,7 +192,7 @@ const {
     }
 
     .page-hero__actions {
-      margin-block: var(--space-2);
+      margin-block: var(--space-1);
     }
 
     .page-hero__actions :global(.button) {

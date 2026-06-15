@@ -1,0 +1,62 @@
+---
+import type { MediaItem, MediaPlacement } from "../../data/media";
+import MediaFrame from "./MediaFrame.astro";
+
+interface Props {
+  media: MediaItem;
+  placement?: MediaPlacement;
+  showCaption?: boolean;
+  sizes?: string;
+}
+
+const {
+  media,
+  placement = media.placement ?? "inline",
+  showCaption = true,
+  sizes,
+} = Astro.props;
+---
+
+<div class:list={["section-media", `section-media--${placement}`]}>
+  <MediaFrame media={media} showCaption={showCaption} sizes={sizes} />
+</div>
+
+<style>
+  .section-media {
+    position: relative;
+    min-width: 0;
+  }
+
+  .section-media::before {
+    position: absolute;
+    z-index: 0;
+    width: 42%;
+    height: 42%;
+    border-radius: var(--radius-lg);
+    background: rgb(240 180 58 / 18%);
+    content: "";
+  }
+
+  .section-media--split-end::before,
+  .section-media--hero::before,
+  .section-media--location::before {
+    top: calc(var(--space-3) * -1);
+    right: calc(var(--space-3) * -1);
+  }
+
+  .section-media--split-start::before,
+  .section-media--profile::before {
+    bottom: calc(var(--space-3) * -1);
+    left: calc(var(--space-3) * -1);
+    background: rgb(140 98 167 / 14%);
+  }
+
+  .section-media :global(.media-frame) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-media--profile {
+    max-width: 22rem;
+  }
+</style>

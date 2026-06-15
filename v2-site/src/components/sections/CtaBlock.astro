@@ -1,4 +1,6 @@
 ---
+import type { MediaItem } from "../../data/media";
+import MediaFrame from "../media/MediaFrame.astro";
 import Button from "../ui/Button.astro";
 import Card from "../ui/Card.astro";
 
@@ -14,6 +16,7 @@ export interface Props {
   unresolvedReference?: boolean;
   headingId?: string;
   featured?: boolean;
+  media?: MediaItem;
 }
 
 const {
@@ -28,6 +31,7 @@ const {
   unresolvedReference = false,
   headingId,
   featured = false,
+  media,
 } = Astro.props;
 ---
 
@@ -35,11 +39,26 @@ const {
   as="aside"
   tone={tone}
   padding="large"
-  class={`cta-block${featured ? " cta-block--featured" : ""}`}
+  class={`cta-block${featured ? " cta-block--featured" : ""}${media ? " cta-block--with-media" : ""}`}
 >
-  <div class="cta-block__copy flow">
+  <div class="cta-block__heading flow">
     {eyebrow && <p class="cta-block__eyebrow">{eyebrow}</p>}
     <h2 id={headingId}>{title}</h2>
+  </div>
+
+  {
+    media && (
+      <div class="cta-block__media">
+        <MediaFrame
+          media={media}
+          showCaption={false}
+          sizes="(min-width: 48rem) 34vw, 100vw"
+        />
+      </div>
+    )
+  }
+
+  <div class="cta-block__copy flow">
     {Astro.slots.has("copy") ? <slot name="copy" /> : body && <p>{body}</p>}
     {
       unresolvedReference && (
@@ -79,6 +98,21 @@ const {
     overflow: hidden;
   }
 
+  :global(.cta-block:not(.cta-block--with-media)) {
+    grid-template-areas:
+      "heading actions"
+      "copy actions";
+  }
+
+  :global(.cta-block--with-media) {
+    grid-template-columns: minmax(16rem, 0.7fr) minmax(0, 1.3fr);
+    grid-template-areas:
+      "media heading"
+      "media copy"
+      "media actions";
+    align-items: start;
+  }
+
   :global(.cta-block--featured) {
     border: 0;
     box-shadow: var(--shadow-lg);
@@ -105,10 +139,30 @@ const {
     content: "";
   }
 
+  .cta-block__heading,
   .cta-block__copy {
     position: relative;
     z-index: 1;
     --flow-space: var(--space-3);
+  }
+
+  .cta-block__heading {
+    grid-area: heading;
+  }
+
+  .cta-block__copy {
+    grid-area: copy;
+  }
+
+  .cta-block__media {
+    z-index: 1;
+    grid-area: media;
+    min-width: 0;
+  }
+
+  .cta-block__media :global(.media-frame__image) {
+    border-color: rgb(255 255 255 / 18%);
+    box-shadow: none;
   }
 
   .cta-block__eyebrow {
@@ -136,12 +190,26 @@ const {
     position: relative;
     z-index: 1;
     display: grid;
+    grid-area: actions;
     gap: var(--space-3);
   }
 
   @media (max-width: 48rem) {
-    :global(.cta-block) {
+    :global(.cta-block:not(.cta-block--with-media)) {
       grid-template-columns: 1fr;
+      grid-template-areas:
+        "heading"
+        "copy"
+        "actions";
+    }
+
+    :global(.cta-block--with-media) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "heading"
+        "media"
+        "copy"
+        "actions";
     }
 
     :global(.cta-block--featured::before) {

@@ -17,6 +17,11 @@ import Button from "../components/ui/Button.astro";
 import Card from "../components/ui/Card.astro";
 import Section from "../components/ui/Section.astro";
 import { homepageContent as content } from "../data/homepage";
+import { homepageMedia } from "../data/media";
+import HeroMedia from "../components/media/HeroMedia.astro";
+import LocationMedia from "../components/media/LocationMedia.astro";
+import MediaGrid from "../components/media/MediaGrid.astro";
+import MediaSplitSection from "../components/media/MediaSplitSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -34,33 +39,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     secondaryLabel={content.hero.secondaryCta.label}
     secondaryHref={content.hero.secondaryCta.href}
     proofPoints={content.hero.proofPoints}
+    visualOnMobile
   >
-    <SystemMap
+    <HeroMedia
       slot="visual"
-      eyebrow="Not a worksheet"
-      title="A hands-on build loop"
-      centerLabel="Real idea"
-      concepts={["Build", "Price", "Test", "Explain"]}
-      caption="Students leave with something they built, tested, and can defend."
-      tone="dark"
+      media={homepageMedia.hero}
+      eyebrow="A hands-on build loop"
+      steps={["Build", "Price", "Test", "Explain"]}
     />
   </PageHero>
 
   <ProgramDetailsBar items={content.trustItems} label={content.trustLine} />
 
   <Section id="problem" spacing="spacious" ariaLabelledby="problem-title">
-    <ContentSplit align="start">
-      <div class="flow">
+    <MediaSplitSection media={homepageMedia.problem} align="start">
+      <div slot="heading" class="flow">
         <p class="section-kicker">{content.problem.eyebrow}</p>
         <h2 id="problem-title">{content.problem.title}</h2>
       </div>
-      <div class="prose">
+      <div class="prose media-section-body">
         {content.problem.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        <Card tone="accent" padding="large">
+          <p class="statement">{content.problem.statement}</p>
+        </Card>
       </div>
-      <Card slot="aside" tone="accent" padding="large">
-        <p class="statement">{content.problem.statement}</p>
-      </Card>
-    </ContentSplit>
+    </MediaSplitSection>
   </Section>
 
   <Section
@@ -72,10 +75,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <SectionIntro
       eyebrow={content.studentWork.eyebrow}
       title={content.studentWork.title}
-      lead={content.studentWork.lead}
       headingId="student-work-title"
     />
-    <p class="section-lead-copy">{content.studentWork.intro}</p>
+    <MediaGrid items={homepageMedia.studentWork} />
+    <div class="section-lead-stack">
+      <p>{content.studentWork.lead}</p>
+      <p>{content.studentWork.intro}</p>
+    </div>
     <FeatureGrid items={content.outcomes} />
   </Section>
 
@@ -105,31 +111,49 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     spacing="spacious"
     ariaLabelledby="program-details-title"
   >
-    <div class="section-stack">
-      <SectionIntro
-        eyebrow="Program details"
-        title="August 10–14, Toronto"
-        lead="One focused week of workshops, project work, discussion, and presentation at the UTSU Student Commons."
-        headingId="program-details-title"
-      />
-      <ProgramDetailsGrid items={content.programDetails} />
-      <div class="section-actions">
-        <Button href="/parent-approval/" size="large">Register for August</Button>
+    <MediaSplitSection media={homepageMedia.location} align="start">
+      <div slot="heading" class="flow">
+        <p class="section-kicker">Program details</p>
+        <h2 id="program-details-title">August 10–14, Toronto</h2>
       </div>
-    </div>
+      <LocationMedia
+        slot="media"
+        media={homepageMedia.location}
+        venue="UTSU Student Commons"
+        address="230 College Street, Toronto"
+      />
+      <div class="media-section-body">
+        <p class="media-section-lead">
+          One focused week of workshops, project work, discussion, and
+          presentation at the UTSU Student Commons.
+        </p>
+        <ProgramDetailsGrid items={content.programDetails} />
+        <div class="section-actions">
+          <Button href="/parent-approval/" size="large">Register for August</Button>
+        </div>
+      </div>
+    </MediaSplitSection>
   </Section>
 
   <Section id="who-its-for" spacing="spacious" ariaLabelledby="fit-title">
-    <SectionIntro
-      eyebrow="Who it’s for"
-      title="Built for curious students ages 10–16."
-      lead="The program is designed for students who can work independently on a laptop, contribute to group discussion, and take part in creative projects. Most interest so far is from ages 13–15, but readiness matters more than age alone."
-      headingId="fit-title"
-    />
-    <ChildFitBox
-      title="Is this right for my child?"
-      positiveSignals={content.fitSignals}
-    />
+    <MediaSplitSection media={homepageMedia.fit} mediaSide="start" align="start">
+      <div slot="heading" class="flow">
+        <p class="section-kicker">Who it’s for</p>
+        <h2 id="fit-title">Built for curious students ages 10–16.</h2>
+      </div>
+      <div class="media-section-body">
+        <p class="media-section-lead">
+          The program is designed for students who can work independently on a
+          laptop, contribute to group discussion, and take part in creative
+          projects. Most interest so far is from ages 13–15, but readiness
+          matters more than age alone.
+        </p>
+        <ChildFitBox
+          title="Is this right for my child?"
+          positiveSignals={content.fitSignals}
+        />
+      </div>
+    </MediaSplitSection>
   </Section>
 
   <Section
@@ -138,12 +162,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     spacing="spacious"
     ariaLabelledby="parent-trust-title"
   >
-    <ContentSplit align="start">
-      <div class="flow">
+    <MediaSplitSection media={homepageMedia.parentTrust} align="start">
+      <div slot="heading" class="flow">
         <p class="section-kicker">Parent trust</p>
         <h2 id="parent-trust-title">Confirmed, insured, and ready to run.</h2>
       </div>
-      <div class="prose">
+      <div class="media-section-body">
+        <div class="prose">
         <p>
           After speaking with parents and confirming demand, the minimum
           threshold for the August program has been reached.
@@ -156,13 +181,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           The group is capped at 30 students so the experience can stay
           personal, active, focused, and well supported.
         </p>
+        </div>
+        <ParentConfidenceBox
+          title="Parent confidence"
+          points={content.parentConfidence}
+        />
       </div>
-      <ParentConfidenceBox
-        slot="aside"
-        title="Parent confidence"
-        points={content.parentConfidence}
-      />
-    </ContentSplit>
+    </MediaSplitSection>
   </Section>
 
   <Section
@@ -171,12 +196,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     width="wide"
     ariaLabelledby="curriculum-title"
   >
-    <SectionIntro
-      eyebrow={content.curriculum.eyebrow}
-      title={content.curriculum.title}
-      lead={content.curriculum.lead}
-      headingId="curriculum-title"
-    />
+    <MediaSplitSection media={homepageMedia.curriculum} align="center">
+      <div slot="heading" class="flow">
+        <p class="section-kicker">{content.curriculum.eyebrow}</p>
+        <h2 id="curriculum-title">{content.curriculum.title}</h2>
+      </div>
+      <p class="media-section-lead">{content.curriculum.lead}</p>
+    </MediaSplitSection>
     <BuildCycle steps={content.buildSteps} />
     <div class="section-actions">
       <Button href="/curriculum/" variant="outline" size="large">
@@ -198,6 +224,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       role={content.founderNote.role}
       headingId="founder-note-heading"
       initials="JG"
+      media={homepageMedia.founder}
     />
   </Section>
 
@@ -215,6 +242,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       secondaryHref="/chapter-vision/"
       tone="primary"
       headingId="mentor-heading"
+      media={homepageMedia.mentor}
     >
       <div slot="copy" class="flow">
         <p>{content.mentor.body}</p>
@@ -287,5 +315,39 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     margin-bottom: var(--space-5);
     color: var(--color-text-muted);
     line-height: var(--line-height-relaxed);
+  }
+
+  .section-lead-stack,
+  .media-section-body {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .section-lead-stack {
+    max-width: 52rem;
+    margin-block: var(--space-5);
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    line-height: var(--line-height-relaxed);
+  }
+
+  .media-section-lead {
+    color: var(--color-text-muted);
+    font-size: var(--text-lg);
+    line-height: var(--line-height-relaxed);
+  }
+
+  #curriculum :global(.build-cycle) {
+    margin-top: var(--space-6);
+  }
+
+  @media (max-width: 35rem) {
+    .section-lead-stack {
+      margin-block: var(--space-4);
+    }
+
+    #curriculum :global(.build-cycle) {
+      margin-top: var(--space-5);
+    }
   }
 </style>

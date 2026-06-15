@@ -1,4 +1,7 @@
 ---
+import type { MediaItem } from "../../data/media";
+import SectionMedia from "../media/SectionMedia.astro";
+
 interface Props {
   title: string;
   paragraphs: readonly string[];
@@ -6,34 +9,54 @@ interface Props {
   role: string;
   headingId?: string;
   initials?: string;
+  media?: MediaItem;
 }
 
-const { title, paragraphs, signature, role, headingId, initials } = Astro.props;
+const {
+  title,
+  paragraphs,
+  signature,
+  role,
+  headingId,
+  initials,
+  media,
+} = Astro.props;
 ---
 
-<article class="founder-note">
-  <div class="founder-note__content">
-    <div class="founder-note__header">
-      {initials && <span class="founder-note__mark" aria-hidden="true">{initials}</span>}
-      <p class="founder-note__eyebrow">From the founder</p>
-    </div>
-    <h2 id={headingId}>{title}</h2>
-    <div class="founder-note__body">
-      {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-    </div>
-    <footer>
-      <strong>{signature}</strong>
-      <span>{role}</span>
-    </footer>
+<article class:list={["founder-note", { "founder-note--with-media": media }]}>
+  <div class="founder-note__header">
+    {initials && <span class="founder-note__mark" aria-hidden="true">{initials}</span>}
+    <p class="founder-note__eyebrow">From the founder</p>
   </div>
+  <h2 id={headingId}>{title}</h2>
+  {
+    media && (
+      <div class="founder-note__media">
+        <SectionMedia media={media} placement="profile" showCaption={false} />
+      </div>
+    )
+  }
+  <div class="founder-note__body">
+    {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+  <footer>
+    <strong>{signature}</strong>
+    <span>{role}</span>
+  </footer>
 </article>
 
 <style>
   .founder-note {
     position: relative;
     display: grid;
+    grid-template-areas:
+      "header"
+      "title"
+      "media"
+      "body"
+      "footer";
     gap: var(--space-4);
-    max-width: 62rem;
+    max-width: 68rem;
     margin-inline: auto;
     padding: clamp(var(--space-4), 6vw, var(--space-6));
     border: 1px solid var(--color-border);
@@ -57,15 +80,11 @@ const { title, paragraphs, signature, role, headingId, initials } = Astro.props;
     font-size: var(--text-xl);
   }
 
-  .founder-note__content {
-    min-width: 0;
-  }
-
   .founder-note__header {
+    grid-area: header;
     display: flex;
     align-items: center;
     gap: var(--space-3);
-    margin-bottom: var(--space-3);
   }
 
   .founder-note__eyebrow {
@@ -77,21 +96,27 @@ const { title, paragraphs, signature, role, headingId, initials } = Astro.props;
   }
 
   h2 {
+    grid-area: title;
     font-size: var(--text-3xl);
   }
 
+  .founder-note__media {
+    grid-area: media;
+    min-width: 0;
+  }
+
   .founder-note__body {
+    grid-area: body;
     display: grid;
     gap: var(--space-3);
-    margin-top: var(--space-4);
     color: var(--color-text-muted);
     line-height: var(--line-height-relaxed);
   }
 
   footer {
+    grid-area: footer;
     display: grid;
     gap: 0.15rem;
-    margin-top: var(--space-4);
     padding-top: var(--space-3);
     border-top: 1px solid var(--color-border);
   }
@@ -106,6 +131,22 @@ const { title, paragraphs, signature, role, headingId, initials } = Astro.props;
   }
 
   @media (min-width: 48rem) {
+    .founder-note--with-media {
+      grid-template-columns: minmax(14rem, 0.62fr) minmax(0, 1.38fr);
+      grid-template-areas:
+        "media header"
+        "media title"
+        "media body"
+        "media footer";
+      column-gap: var(--space-6);
+      align-items: start;
+    }
+
+    .founder-note__media {
+      position: sticky;
+      top: calc(var(--header-height) + var(--space-4));
+    }
+
     h2 {
       font-size: var(--text-4xl);
     }
