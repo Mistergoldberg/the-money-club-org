@@ -1,5 +1,8 @@
 ---
-import type { FaqItem } from "../../data/homepage";
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
 
 interface Props {
   items: readonly FaqItem[];

@@ -1,0 +1,58 @@
+---
+import SectionGrid from "../layout/SectionGrid.astro";
+import Section from "../ui/Section.astro";
+import SectionIntro from "../sections/SectionIntro.astro";
+
+interface Props {
+  id: string;
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  headingId?: string;
+  tone?: "default" | "subtle";
+}
+
+const {
+  id,
+  eyebrow,
+  title,
+  lead,
+  headingId = `${id}-title`,
+  tone = "default",
+} = Astro.props;
+---
+
+<Section id={id} tone={tone} spacing="spacious" ariaLabelledby={headingId}>
+  <SectionGrid layout="split">
+    <div slot="heading">
+      <SectionIntro
+        eyebrow={eyebrow}
+        title={title}
+        lead={lead}
+        headingId={headingId}
+      />
+    </div>
+    <div class="form-section__form">
+      <slot />
+    </div>
+    {
+      Astro.slots.has("support") && (
+        <div slot="panel" class="form-section__support">
+          <slot name="support" />
+        </div>
+      )
+    }
+  </SectionGrid>
+</Section>
+
+<style>
+  .form-section__form,
+  .form-section__support {
+    min-width: 0;
+  }
+
+  .form-section__form {
+    display: grid;
+    gap: var(--space-4);
+  }
+</style>

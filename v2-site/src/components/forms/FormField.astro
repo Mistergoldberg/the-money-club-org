@@ -8,7 +8,17 @@ export interface Props {
   id: string;
   name?: string;
   label: string;
-  type?: "text" | "email" | "tel" | "number" | "url" | "textarea" | "select";
+  type?:
+    | "text"
+    | "email"
+    | "tel"
+    | "number"
+    | "url"
+    | "date"
+    | "textarea"
+    | "select"
+    | "checkbox"
+    | "radio";
   placeholder?: string;
   autocomplete?: string;
   required?: boolean;
@@ -16,6 +26,7 @@ export interface Props {
   hint?: string;
   error?: string;
   value?: string | number;
+  checked?: boolean;
   rows?: number;
   options?: SelectOption[];
 }
@@ -32,6 +43,7 @@ const {
   hint,
   error,
   value,
+  checked = false,
   rows = 5,
   options = [],
 } = Astro.props;
@@ -41,11 +53,39 @@ const errorId = error ? `${id}-error` : undefined;
 const describedBy = [hintId, errorId].filter(Boolean).join(" ") || undefined;
 ---
 
-<div class:list={["form-field", error && "form-field--invalid"]}>
-  <label for={id}>
-    {label}
-    {required && <span aria-hidden="true"> *</span>}
-  </label>
+<div
+  class:list={[
+    "form-field",
+    (type === "checkbox" || type === "radio") && "form-field--choice",
+    error && "form-field--invalid",
+  ]}
+>
+  {
+    type === "checkbox" || type === "radio" ? (
+      <label class="form-field__choice">
+        <input
+          id={id}
+          name={name}
+          type={type}
+          required={required}
+          disabled={disabled}
+          value={value}
+          checked={checked}
+          aria-invalid={error ? "true" : undefined}
+          aria-describedby={describedBy}
+        />
+        <span>
+          {label}
+          {required && <span aria-hidden="true"> *</span>}
+        </span>
+      </label>
+    ) : (
+      <label for={id}>
+        {label}
+        {required && <span aria-hidden="true"> *</span>}
+      </label>
+    )
+  }
 
   {
     type === "textarea" ? (
@@ -76,7 +116,7 @@ const describedBy = [hintId, errorId].filter(Boolean).join(" ") || undefined;
           </option>
         ))}
       </select>
-    ) : (
+    ) : type === "checkbox" || type === "radio" ? null : (
       <input
         id={id}
         name={name}
@@ -122,6 +162,27 @@ const describedBy = [hintId, errorId].filter(Boolean).join(" ") || undefined;
   textarea {
     min-height: 8rem;
     resize: vertical;
+  }
+
+  .form-field--choice {
+    gap: var(--space-1);
+  }
+
+  .form-field__choice {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--space-2);
+    align-items: start;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .form-field__choice input {
+    width: 1.2rem;
+    min-height: auto;
+    height: 1.2rem;
+    margin-block-start: 0.1rem;
+    accent-color: var(--color-primary);
   }
 
   input:focus-visible,

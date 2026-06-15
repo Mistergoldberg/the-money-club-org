@@ -9,7 +9,7 @@ export interface ProgramPrinciple {
 export interface FunnelStage {
   route: SiteRoute;
   purpose: string;
-  implementation: "planned";
+  implementation: "built" | "planned";
 }
 
 export const programIdentity = {
@@ -54,7 +54,7 @@ export const programFunnel: FunnelStage[] = [
   {
     route: requiredRoute("home"),
     purpose: "Introduce the organization and direct visitors to the right next step.",
-    implementation: "planned",
+    implementation: "built",
   },
   {
     route: requiredRoute("program"),

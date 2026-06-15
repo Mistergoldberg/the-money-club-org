@@ -1,18 +1,17 @@
 ---
-import ChildFitBox from "../components/sections/ChildFitBox.astro";
 import CtaBlock from "../components/sections/CtaBlock.astro";
-import FaqList from "../components/sections/FaqList.astro";
+import FaqSection from "../components/sections/FaqSection.astro";
 import FeatureGrid from "../components/sections/FeatureGrid.astro";
+import FinalCtaSection from "../components/sections/FinalCtaSection.astro";
 import FounderNote from "../components/sections/FounderNote.astro";
 import BuildCycle from "../components/sections/BuildCycle.astro";
+import IntroActionRow from "../components/sections/IntroActionRow.astro";
 import PageHero from "../components/sections/PageHero.astro";
-import ParentConfidenceBox from "../components/sections/ParentConfidenceBox.astro";
 import ProgramDetailsBar from "../components/sections/ProgramDetailsBar.astro";
 import ProgramDetailsGrid from "../components/sections/ProgramDetailsGrid.astro";
 import SectionIntro from "../components/sections/SectionIntro.astro";
 import StickyCta from "../components/sections/StickyCta.astro";
 import SystemMap from "../components/sections/SystemMap.astro";
-import Button from "../components/ui/Button.astro";
 import Section from "../components/ui/Section.astro";
 import { homepageContent as content } from "../data/homepage";
 import { homepageMedia } from "../data/media";
@@ -124,6 +123,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         media={homepageMedia.location}
         venue="UTSU Student Commons"
         address="230 College Street, Toronto"
+        showLocationDetails={false}
+        showCaption={false}
+        actionLabel="Register for August"
+        actionHref="/parent-approval/"
       />
       <div class="media-section-body">
         <p class="media-section-lead">
@@ -131,9 +134,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           presentation at the UTSU Student Commons.
         </p>
         <ProgramDetailsGrid items={content.programDetails} />
-      </div>
-      <div slot="actions" class="section-actions">
-        <Button href="/parent-approval/" size="large">Register for August</Button>
       </div>
     </SectionGrid>
   </Section>
@@ -150,11 +150,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         projects. Most interest so far is from ages 13–15, but readiness
         matters more than age alone.
       </p>
-      <ChildFitBox
-        slot="panel"
-        title="Is this right for my child?"
-        positiveSignals={content.fitSignals}
-      />
     </SectionGrid>
   </Section>
 
@@ -183,11 +178,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           personal, active, focused, and well supported.
         </p>
       </div>
-      <ParentConfidenceBox
-        slot="panel"
-        title="Parent confidence"
-        points={content.parentConfidence}
-      />
     </SectionGrid>
   </Section>
 
@@ -202,13 +192,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <p class="section-kicker">{content.curriculum.eyebrow}</p>
         <h2 id="curriculum-title">{content.curriculum.title}</h2>
       </div>
-      <p class="media-section-lead">{content.curriculum.lead}</p>
+      <IntroActionRow
+        actionHref="/curriculum/"
+        actionLabel="See the Curriculum"
+      >
+        <p class="media-section-lead">{content.curriculum.lead}</p>
+      </IntroActionRow>
       <BuildCycle slot="panel" steps={content.buildSteps} />
-      <div slot="actions" class="section-actions">
-        <Button href="/curriculum/" variant="outline" size="large">
-          See the Curriculum
-        </Button>
-      </div>
     </SectionGrid>
   </Section>
 
@@ -252,46 +242,29 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </CtaBlock>
   </Section>
 
-  <Section
+  <FaqSection
     id="faq"
-    tone="subtle"
-    spacing="spacious"
-    ariaLabelledby="faq-title"
-  >
-    <SectionGrid layout="narrow">
-      <div slot="heading">
-        <SectionIntro
-          eyebrow="Questions from families"
-          title="Frequently asked questions"
-          lead="The practical details parents usually want before completing approval."
-          headingId="faq-title"
-        />
-      </div>
-      <FaqList items={content.faqs} />
-    </SectionGrid>
-  </Section>
+    eyebrow="Questions from families"
+    title="Frequently asked questions"
+    lead="The practical details parents usually want before completing approval."
+    items={content.faqs}
+    headingId="faq-title"
+  />
 
-  <Section
+  <FinalCtaSection
     id="register"
-    spacing="spacious"
-    ariaLabelledby="final-cta-title"
+    eyebrow={content.finalCta.eyebrow}
+    title={content.finalCta.title}
+    primaryLabel="Register for August"
+    primaryHref="/parent-approval/"
+    secondaryLabel="See the Curriculum"
+    secondaryHref="/curriculum/"
+    headingId="final-cta-title"
   >
-    <CtaBlock
-      eyebrow={content.finalCta.eyebrow}
-      title={content.finalCta.title}
-      primaryLabel="Register for August"
-      primaryHref="/parent-approval/"
-      secondaryLabel="See the Curriculum"
-      secondaryHref="/curriculum/"
-      tone="secondary"
-      headingId="final-cta-title"
-      featured
-    >
-      <div slot="copy" class="flow">
-        {content.finalCta.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-      </div>
-    </CtaBlock>
-  </Section>
+    <Fragment slot="copy">
+      {content.finalCta.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </Fragment>
+  </FinalCtaSection>
 
   <StickyCta
     context="August 10–14 · Toronto · $200 · Limited to 30 students"
@@ -303,37 +276,3 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     suppressAfter="#register"
   />
 </BaseLayout>
-
-<style>
-  .section-kicker {
-    color: var(--color-primary);
-    font-size: var(--text-sm);
-    font-weight: var(--font-weight-bold);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .section-lead-stack,
-  .media-section-body {
-    display: grid;
-    gap: var(--space-4);
-  }
-
-  .section-lead-stack {
-    color: var(--color-text-muted);
-    font-size: var(--text-lg);
-    line-height: var(--line-height-relaxed);
-  }
-
-  .media-section-lead {
-    color: var(--color-text-muted);
-    font-size: var(--text-lg);
-    line-height: var(--line-height-relaxed);
-  }
-
-  @media (max-width: 35rem) {
-    .section-lead-stack {
-      gap: var(--space-3);
-    }
-  }
-</style>

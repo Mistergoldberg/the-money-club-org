@@ -1,0 +1,45 @@
+---
+import SectionGrid from "../layout/SectionGrid.astro";
+import Section from "../ui/Section.astro";
+import FaqList from "./FaqList.astro";
+import SectionIntro from "./SectionIntro.astro";
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  items: readonly FaqItem[];
+  headingId?: string;
+  tone?: "default" | "subtle";
+}
+
+const {
+  id = "faq",
+  eyebrow,
+  title,
+  lead,
+  items,
+  headingId = `${id}-title`,
+  tone = "subtle",
+} = Astro.props;
+---
+
+<Section id={id} tone={tone} spacing="spacious" ariaLabelledby={headingId}>
+  <SectionGrid layout="narrow">
+    <div slot="heading">
+      <SectionIntro
+        eyebrow={eyebrow}
+        title={title}
+        lead={lead}
+        headingId={headingId}
+      />
+    </div>
+    <FaqList items={items} />
+  </SectionGrid>
+</Section>

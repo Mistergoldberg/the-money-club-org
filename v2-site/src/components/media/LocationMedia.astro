@@ -1,14 +1,27 @@
 ---
 import type { MediaItem } from "../../data/media";
+import Button from "../ui/Button.astro";
 import MediaFrame from "./MediaFrame.astro";
 
 interface Props {
   media: MediaItem;
   venue: string;
   address: string;
+  actionHref?: string;
+  actionLabel?: string;
+  showCaption?: boolean;
+  showLocationDetails?: boolean;
 }
 
-const { media, venue, address } = Astro.props;
+const {
+  media,
+  venue,
+  address,
+  actionHref,
+  actionLabel,
+  showCaption = true,
+  showLocationDetails = true,
+} = Astro.props;
 ---
 
 <div class="location-media">
@@ -17,11 +30,22 @@ const { media, venue, address } = Astro.props;
     showCaption={false}
     sizes="(min-width: 56rem) 46vw, 100vw"
   />
-  <div class="location-media__label">
-    <span aria-hidden="true">●</span>
-    <p><strong>{venue}</strong><br />{address}</p>
-  </div>
-  {media.caption && <p class="location-media__caption">{media.caption}</p>}
+  {
+    showLocationDetails && (
+      <div class="location-media__label">
+        <span aria-hidden="true">●</span>
+        <p><strong>{venue}</strong><br />{address}</p>
+      </div>
+    )
+  }
+  {showCaption && media.caption && <p class="location-media__caption">{media.caption}</p>}
+  {
+    actionHref && actionLabel && (
+      <div class="location-media__actions">
+        <Button href={actionHref} size="large" fullWidth>{actionLabel}</Button>
+      </div>
+    )
+  }
 </div>
 
 <style>
@@ -55,5 +79,15 @@ const { media, venue, address } = Astro.props;
     color: var(--color-text-muted);
     font-size: var(--text-xs);
     line-height: 1.45;
+  }
+
+  .location-media__actions {
+    width: min(100%, 26rem);
+  }
+
+  @media (max-width: 35rem) {
+    .location-media__actions {
+      width: 100%;
+    }
   }
 </style>

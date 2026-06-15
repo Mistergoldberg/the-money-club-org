@@ -1,0 +1,44 @@
+---
+import Section from "../ui/Section.astro";
+import CtaBlock from "./CtaBlock.astro";
+
+interface Props {
+  id?: string;
+  eyebrow?: string;
+  title: string;
+  primaryLabel: string;
+  primaryHref: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  headingId?: string;
+  tone?: "default" | "primary" | "secondary" | "accent";
+}
+
+const {
+  id = "register",
+  eyebrow,
+  title,
+  primaryLabel,
+  primaryHref,
+  secondaryLabel,
+  secondaryHref,
+  headingId = `${id}-title`,
+  tone = "secondary",
+} = Astro.props;
+---
+
+<Section id={id} spacing="spacious" ariaLabelledby={headingId}>
+  <CtaBlock
+    eyebrow={eyebrow}
+    title={title}
+    primaryLabel={primaryLabel}
+    primaryHref={primaryHref}
+    secondaryLabel={secondaryLabel}
+    secondaryHref={secondaryHref}
+    tone={tone}
+    headingId={headingId}
+    featured
+  >
+    <div slot="copy" class="flow"><slot name="copy" /></div>
+  </CtaBlock>
+</Section>
