@@ -9,6 +9,8 @@ interface Props {
   primaryHref: string;
   secondaryLabel: string;
   secondaryHref: string;
+  proofPoints?: readonly string[];
+  visualOnMobile?: boolean;
 }
 
 const {
@@ -19,6 +21,8 @@ const {
   primaryHref,
   secondaryLabel,
   secondaryHref,
+  proofPoints = [],
+  visualOnMobile = false,
 } = Astro.props;
 ---
 
@@ -27,15 +31,32 @@ const {
     <div class="page-hero__copy">
       {eyebrow && <p class="page-hero__eyebrow">{eyebrow}</p>}
       <h1 id="homepage-title">{headline}</h1>
-      <p class="page-hero__body">{body}</p>
       <div class="page-hero__actions">
         <Button href={primaryHref} size="large">{primaryLabel}</Button>
         <Button href={secondaryHref} variant="outline" size="large">
           {secondaryLabel}
         </Button>
       </div>
+      <p class="page-hero__body">{body}</p>
+      {
+        proofPoints.length > 0 && (
+          <ul class="page-hero__proofs" role="list">
+            {proofPoints.map((point) => (
+              <li>
+                <span aria-hidden="true">✓</span>
+                {point}
+              </li>
+            ))}
+          </ul>
+        )
+      }
     </div>
-    <div class="page-hero__visual">
+    <div
+      class:list={[
+        "page-hero__visual",
+        { "page-hero__visual--hidden-mobile": !visualOnMobile },
+      ]}
+    >
       <slot name="visual" />
     </div>
   </div>
@@ -45,7 +66,7 @@ const {
   .page-hero {
     position: relative;
     overflow: hidden;
-    padding-block: clamp(var(--space-6), 9vw, 7.5rem);
+    padding-block: clamp(var(--space-5), 5vw, 4.5rem);
     background:
       radial-gradient(circle at 82% 18%, rgb(240 180 58 / 0.22), transparent 22rem),
       linear-gradient(145deg, var(--color-surface) 0%, var(--color-surface-subtle) 100%);
@@ -66,12 +87,12 @@ const {
     position: relative;
     display: grid;
     align-items: center;
-    gap: var(--space-6);
+    gap: var(--space-5);
   }
 
   .page-hero__copy {
     display: grid;
-    gap: var(--space-4);
+    gap: var(--space-3);
     max-width: 48rem;
   }
 
@@ -85,7 +106,7 @@ const {
 
   h1 {
     max-width: 15ch;
-    font-size: clamp(3.4rem, 8vw, 6.75rem);
+    font-size: clamp(3.4rem, 6.2vw, 5.75rem);
     line-height: 0.9;
   }
 
@@ -93,7 +114,36 @@ const {
     max-width: 45rem;
     color: var(--color-text-muted);
     font-size: clamp(var(--text-lg), 2vw, var(--text-xl));
-    line-height: var(--line-height-relaxed);
+    line-height: 1.58;
+  }
+
+  .page-hero__proofs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    list-style: none;
+  }
+
+  .page-hero__proofs li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .page-hero__proofs span {
+    display: grid;
+    width: 1.5rem;
+    height: 1.5rem;
+    place-items: center;
+    border-radius: var(--radius-pill);
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+    font-size: var(--text-xs);
   }
 
   .page-hero__actions {
@@ -114,8 +164,27 @@ const {
   }
 
   @media (max-width: 35rem) {
+    .page-hero {
+      padding-block: var(--space-6);
+    }
+
+    .page-hero__proofs {
+      display: grid;
+      gap: var(--space-2);
+    }
+
+    .page-hero__actions {
+      margin-block: var(--space-2);
+    }
+
     .page-hero__actions :global(.button) {
       width: 100%;
+    }
+  }
+
+  @media (max-width: 47.99rem) {
+    .page-hero__visual--hidden-mobile {
+      display: none !important;
     }
   }
 </style>

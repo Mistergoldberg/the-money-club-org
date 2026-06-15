@@ -7,9 +7,19 @@ export interface Props {
   context?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  revealAfter?: string;
+  suppressAfter?: string;
 }
 
-const { label, href, context, secondaryLabel, secondaryHref } = Astro.props;
+const {
+  label,
+  href,
+  context,
+  secondaryLabel,
+  secondaryHref,
+  revealAfter = ".page-hero",
+  suppressAfter,
+} = Astro.props;
 ---
 
 <aside
@@ -18,6 +28,8 @@ const { label, href, context, secondaryLabel, secondaryHref } = Astro.props;
   aria-hidden="true"
   data-state="suppressed"
   data-sticky-cta
+  data-reveal-after={revealAfter}
+  data-suppress-after={suppressAfter}
   inert
 >
   <div class="sticky-cta__inner container">
@@ -39,7 +51,14 @@ const { label, href, context, secondaryLabel, secondaryHref } = Astro.props;
 
 <script>
   const stickyCta = document.querySelector<HTMLElement>("[data-sticky-cta]");
-  const hero = document.querySelector(".page-hero");
+  const revealSelector = stickyCta?.dataset.revealAfter;
+  const suppressSelector = stickyCta?.dataset.suppressAfter;
+  const revealTarget = revealSelector
+    ? document.querySelector(revealSelector)
+    : null;
+  const suppressTarget = suppressSelector
+    ? document.querySelector(suppressSelector)
+    : null;
 
   const setStickyState = (visible: boolean) => {
     if (!stickyCta) return;
@@ -49,7 +68,7 @@ const { label, href, context, secondaryLabel, secondaryHref } = Astro.props;
     stickyCta.setAttribute("aria-hidden", visible ? "false" : "true");
   };
 
-  if (stickyCta && hero) {
+  if (stickyCta && revealTarget) {
     let frameId = 0;
 
     const updateStickyState = () => {
@@ -58,7 +77,14 @@ const { label, href, context, secondaryLabel, secondaryHref } = Astro.props;
         const headerHeight =
           document.querySelector(".site-header")?.getBoundingClientRect()
             .height ?? 0;
-        setStickyState(hero.getBoundingClientRect().bottom <= headerHeight);
+        const revealed =
+          revealTarget.getBoundingClientRect().top <= headerHeight;
+        const suppressed = suppressTarget
+          ? suppressTarget.getBoundingClientRect().top <=
+            Math.min(window.innerHeight * 0.82, window.innerHeight - 80)
+          : false;
+
+        setStickyState(revealed && !suppressed);
       });
     };
 
@@ -99,6 +125,12 @@ const { label, href, context, secondaryLabel, secondaryHref } = Astro.props;
     transform: translateY(0);
   }
 
+  :global(body[data-menu-open="true"]) .sticky-cta {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
   .sticky-cta__inner {
     display: flex;
     min-height: 4.5rem;
@@ -118,10 +150,6 @@ const { label, href, context, secondaryLabel, secondaryHref } = Astro.props;
     display: flex;
     gap: var(--space-2);
     margin-left: auto;
-  }
-
-  :global(.site-footer) {
-    padding-bottom: 5.25rem;
   }
 
   @media (max-width: 40rem) {
@@ -144,10 +172,6 @@ const { label, href, context, secondaryLabel, secondaryHref } = Astro.props;
       min-height: 2.75rem;
       padding-inline: var(--space-2);
       font-size: var(--text-xs);
-    }
-
-    :global(.site-footer) {
-      padding-bottom: 4.9rem;
     }
   }
 

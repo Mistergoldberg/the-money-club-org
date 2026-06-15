@@ -33,8 +33,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     primaryHref={content.hero.primaryCta.href}
     secondaryLabel={content.hero.secondaryCta.label}
     secondaryHref={content.hero.secondaryCta.href}
+    proofPoints={content.hero.proofPoints}
   >
-    <SystemMap slot="visual" />
+    <SystemMap
+      slot="visual"
+      eyebrow="Not a worksheet"
+      title="A hands-on build loop"
+      centerLabel="Real idea"
+      concepts={["Build", "Price", "Test", "Explain"]}
+      caption="Students leave with something they built, tested, and can defend."
+      tone="dark"
+    />
   </PageHero>
 
   <ProgramDetailsBar items={content.trustItems} label={content.trustLine} />
@@ -83,7 +92,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <div class="prose">
         {content.whyItMatters.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
       </div>
-      <SystemMap slot="aside" />
+      <SystemMap
+        slot="aside"
+        caption="Every choice affects the system around it."
+      />
     </ContentSplit>
   </Section>
 
@@ -102,7 +114,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       />
       <ProgramDetailsGrid items={content.programDetails} />
       <div class="section-actions">
-        <Button href="/parent-approval/" size="large">Complete Parent Approval</Button>
+        <Button href="/parent-approval/" size="large">Register for August</Button>
       </div>
     </div>
   </Section>
@@ -185,6 +197,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       signature={content.founderNote.signature}
       role={content.founderNote.role}
       headingId="founder-note-heading"
+      initials="JG"
     />
   </Section>
 
@@ -240,6 +253,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       secondaryHref="/curriculum/"
       tone="secondary"
       headingId="final-cta-title"
+      featured
     >
       <div slot="copy" class="flow">
         {content.finalCta.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
@@ -253,6 +267,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     href="/parent-approval/"
     secondaryLabel="Curriculum"
     secondaryHref="/curriculum/"
+    revealAfter="#parent-trust"
+    suppressAfter="#register"
   />
 </BaseLayout>
 

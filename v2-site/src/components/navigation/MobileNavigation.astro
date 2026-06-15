@@ -40,6 +40,8 @@ const mobileRoutes = [
     aria-label="Navigation menu"
     data-menu-overlay
     data-state="closed"
+    aria-hidden="true"
+    inert
     hidden
   >
     <div class="mobile-navigation__panel" data-menu-panel>
@@ -81,7 +83,7 @@ const mobileRoutes = [
       </nav>
 
       <Button href="/parent-approval" variant="primary" size="large" fullWidth>
-        Parent Approval
+        Register for August
       </Button>
     </div>
   </div>
@@ -120,6 +122,8 @@ const mobileRoutes = [
 
     let isOpen = false;
     let closeTimer: number | undefined;
+    let previousHtmlOverflow = "";
+    let previousBodyPadding = "";
 
     function getFocusableElements(): HTMLElement[] {
       return Array.from(
@@ -135,20 +139,30 @@ const mobileRoutes = [
       window.clearTimeout(closeTimer);
       isOpen = true;
       menuOverlay.hidden = false;
+      menuOverlay.inert = false;
+      menuOverlay.setAttribute("aria-hidden", "false");
       document.body.dataset.menuOpen = "true";
+      previousHtmlOverflow = document.documentElement.style.overflow;
+      previousBodyPadding = document.body.style.paddingRight;
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.paddingRight =
+        scrollbarWidth > 0 ? `${scrollbarWidth}px` : previousBodyPadding;
       menuTrigger.setAttribute("aria-expanded", "true");
       menuTrigger.setAttribute("aria-label", "Close navigation menu");
 
       window.requestAnimationFrame(() => {
         menuOverlay.dataset.state = "open";
-        getFocusableElements()[0]?.focus();
+        menuCloseButton.focus();
       });
     }
 
     function finishClose(): void {
       menuOverlay.hidden = true;
       delete document.body.dataset.menuOpen;
-      menuTrigger.focus();
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.paddingRight = previousBodyPadding;
     }
 
     function closeMenu(): void {
@@ -158,8 +172,11 @@ const mobileRoutes = [
 
       isOpen = false;
       menuOverlay.dataset.state = "closed";
+      menuOverlay.inert = true;
+      menuOverlay.setAttribute("aria-hidden", "true");
       menuTrigger.setAttribute("aria-expanded", "false");
       menuTrigger.setAttribute("aria-label", "Open navigation menu");
+      menuTrigger.focus();
 
       const delay = reducedMotion.matches ? 0 : 180;
       closeTimer = window.setTimeout(finishClose, delay);
@@ -218,6 +235,13 @@ const mobileRoutes = [
 
       trapFocus(event);
     });
+
+    const desktopQuery = window.matchMedia("(min-width: 68.01rem)");
+    desktopQuery.addEventListener("change", (event) => {
+      if (event.matches && isOpen) {
+        closeMenu();
+      }
+    });
   });
 </script>
 
@@ -257,6 +281,7 @@ const mobileRoutes = [
     inset: 0;
     display: grid;
     justify-items: end;
+    overflow: hidden;
     background: rgb(23 22 20 / 45%);
     opacity: 0;
     transition: opacity var(--transition-fast);
@@ -272,11 +297,15 @@ const mobileRoutes = [
 
   .mobile-navigation__panel {
     width: min(100%, 30rem);
-    min-height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    max-height: 100vh;
+    max-height: 100dvh;
     overflow-y: auto;
     overscroll-behavior: contain;
     background: var(--color-surface);
     padding: var(--space-3);
+    box-shadow: -1rem 0 3rem rgb(23 22 20 / 18%);
     transform: translateX(100%);
     transition: transform var(--transition-fast);
   }

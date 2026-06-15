@@ -33,6 +33,11 @@ export const homepageContent = {
       label: "See the Curriculum",
       href: "/curriculum/",
     },
+    proofPoints: [
+      "Build real ideas",
+      "Make real trade-offs",
+      "Present clear thinking",
+    ],
   },
   trustLine:
     "August 10–14 · 9:00 AM–5:00 PM · UTSU Student Commons · 230 College Street · $200 · Limited to 30 students",

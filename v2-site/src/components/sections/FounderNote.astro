@@ -5,15 +5,18 @@ interface Props {
   signature: string;
   role: string;
   headingId?: string;
+  initials?: string;
 }
 
-const { title, paragraphs, signature, role, headingId } = Astro.props;
+const { title, paragraphs, signature, role, headingId, initials } = Astro.props;
 ---
 
 <article class="founder-note">
-  <div class="founder-note__mark" aria-hidden="true">JG</div>
   <div class="founder-note__content">
-    <p class="founder-note__eyebrow">From the founder</p>
+    <div class="founder-note__header">
+      {initials && <span class="founder-note__mark" aria-hidden="true">{initials}</span>}
+      <p class="founder-note__eyebrow">From the founder</p>
+    </div>
     <h2 id={headingId}>{title}</h2>
     <div class="founder-note__body">
       {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
@@ -27,12 +30,14 @@ const { title, paragraphs, signature, role, headingId } = Astro.props;
 
 <style>
   .founder-note {
+    position: relative;
     display: grid;
     gap: var(--space-4);
     max-width: 62rem;
     margin-inline: auto;
     padding: clamp(var(--space-4), 6vw, var(--space-6));
     border: 1px solid var(--color-border);
+    border-top: 0.4rem solid var(--color-secondary);
     border-radius: var(--radius-lg);
     background:
       linear-gradient(135deg, rgb(30 138 149 / 0.06), transparent 45%),
@@ -42,22 +47,28 @@ const { title, paragraphs, signature, role, headingId } = Astro.props;
 
   .founder-note__mark {
     display: grid;
-    width: 5rem;
-    height: 5rem;
+    width: 3.25rem;
+    height: 3.25rem;
     place-items: center;
-    border-radius: var(--radius-pill);
+    border-radius: var(--radius-sm);
     background: var(--color-secondary);
     color: var(--color-text-on-dark);
     font-family: var(--font-display);
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
   }
 
   .founder-note__content {
     min-width: 0;
   }
 
+  .founder-note__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+
   .founder-note__eyebrow {
-    margin-bottom: var(--space-2);
     color: var(--color-secondary);
     font-size: var(--text-sm);
     font-weight: var(--font-weight-bold);
@@ -95,10 +106,6 @@ const { title, paragraphs, signature, role, headingId } = Astro.props;
   }
 
   @media (min-width: 48rem) {
-    .founder-note {
-      grid-template-columns: 7rem minmax(0, 1fr);
-    }
-
     h2 {
       font-size: var(--text-4xl);
     }
