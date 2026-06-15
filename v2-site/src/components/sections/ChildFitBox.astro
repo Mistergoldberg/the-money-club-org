@@ -1,5 +1,5 @@
 ---
-import Card from "../ui/Card.astro";
+import ContentPanel from "../layout/ContentPanel.astro";
 
 export interface Props {
   title?: string;
@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<Card as="aside" padding="large" class="fit-box">
+<ContentPanel tone="subtle" compact class="fit-box">
   <h3>{title}</h3>
   <div class:list={["fit-box__grid", { "fit-box__grid--single": discussFirst.length === 0 }]}>
     <div>
@@ -38,18 +38,18 @@ const {
       )
     }
   </div>
-</Card>
+</ContentPanel>
 
 <style>
   :global(.fit-box) {
     display: grid;
-    gap: var(--space-4);
+    gap: var(--space-3);
   }
 
   .fit-box__grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-4);
+    gap: var(--space-3);
   }
 
   .fit-box__grid--single {
@@ -57,26 +57,49 @@ const {
   }
 
   .fit-box__grid > div {
-    padding: var(--space-3);
-    border-radius: var(--radius-md);
-    background: var(--color-surface-subtle);
+    min-width: 0;
   }
 
   h4 {
     margin: 0 0 var(--space-2);
-    font-size: var(--text-lead);
+    color: var(--color-primary);
+    font-size: var(--text-sm);
+    letter-spacing: 0.08em;
     line-height: 1.2;
+    text-transform: uppercase;
   }
 
   ul {
     display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-2);
     margin: 0;
-    padding-inline-start: 1.2em;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.35rem;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+  }
+
+  li::before {
+    position: absolute;
+    top: 0.55em;
+    left: 0;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+    content: "";
   }
 
   @media (max-width: 42rem) {
-    .fit-box__grid {
+    .fit-box__grid,
+    ul {
       grid-template-columns: 1fr;
     }
   }

@@ -170,13 +170,13 @@ const {
 
   @media (min-width: 64rem) {
     .page-hero__inner {
-      grid-template-columns: minmax(0, 1.2fr) minmax(22rem, 0.8fr);
+      grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-areas:
-        "heading visual"
-        "actions visual"
-        "body visual"
-        "proofs visual";
-      column-gap: var(--space-6);
+        "heading heading heading heading heading heading heading visual visual visual visual visual"
+        "actions actions actions actions actions actions actions visual visual visual visual visual"
+        "body body body body body body body visual visual visual visual visual"
+        "proofs proofs proofs proofs proofs proofs proofs visual visual visual visual visual";
+      column-gap: clamp(var(--space-4), 2.5vw, var(--space-5));
       row-gap: var(--space-3);
     }
   }

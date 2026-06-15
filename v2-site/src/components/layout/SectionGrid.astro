@@ -1,0 +1,163 @@
+---
+import type { MediaItem } from "../../data/media";
+import SectionMedia from "../media/SectionMedia.astro";
+
+interface Props {
+  media?: MediaItem;
+  mediaSide?: "start" | "end";
+  layout?: "split" | "stack" | "narrow";
+  align?: "start" | "center";
+  panelFull?: boolean;
+}
+
+const {
+  media,
+  mediaSide = "end",
+  layout = "split",
+  align = "start",
+  panelFull = false,
+} = Astro.props;
+
+const hasMedia = Boolean(media) || Astro.slots.has("media");
+---
+
+<div
+  class:list={[
+    "section-grid",
+    `section-grid--${layout}`,
+    `section-grid--media-${mediaSide}`,
+    `section-grid--${align}`,
+    { "section-grid--panel-full": panelFull, "section-grid--has-media": hasMedia },
+  ]}
+>
+  <div class="section-grid__heading"><slot name="heading" /></div>
+  {
+    hasMedia && (
+      <div class="section-grid__media">
+        {
+          Astro.slots.has("media") ? (
+            <slot name="media" />
+          ) : media ? (
+            <SectionMedia
+              media={media}
+              placement={mediaSide === "start" ? "split-start" : "split-end"}
+              sizes="(min-width: 64rem) 42vw, 100vw"
+            />
+          ) : null
+        }
+      </div>
+    )
+  }
+  <div class="section-grid__body"><slot /></div>
+  {
+    Astro.slots.has("panel") && (
+      <div class="section-grid__panel"><slot name="panel" /></div>
+    )
+  }
+  {
+    Astro.slots.has("actions") && (
+      <div class="section-grid__actions"><slot name="actions" /></div>
+    )
+  }
+</div>
+
+<style>
+  .section-grid {
+    --section-grid-gap: clamp(var(--space-4), 2.5vw, var(--space-5));
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "heading"
+      "media"
+      "body"
+      "panel"
+      "actions";
+    gap: var(--space-4);
+    align-items: start;
+  }
+
+  .section-grid__heading {
+    grid-area: heading;
+  }
+
+  .section-grid__media {
+    grid-area: media;
+    min-width: 0;
+  }
+
+  .section-grid__body {
+    grid-area: body;
+    min-width: 0;
+  }
+
+  .section-grid__panel {
+    grid-area: panel;
+    min-width: 0;
+  }
+
+  .section-grid__actions {
+    display: flex;
+    grid-area: actions;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+
+  @media (min-width: 56rem) {
+    .section-grid {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      column-gap: var(--section-grid-gap);
+      row-gap: var(--space-4);
+    }
+
+    .section-grid--center {
+      align-items: center;
+    }
+
+    .section-grid--split.section-grid--media-end {
+      grid-template-areas:
+        "heading heading heading heading heading heading heading media media media media media"
+        "body body body body body body body media media media media media"
+        "panel panel panel panel panel panel panel media media media media media"
+        "actions actions actions actions actions actions actions media media media media media";
+    }
+
+    .section-grid--split.section-grid--media-start {
+      grid-template-areas:
+        "media media media media media heading heading heading heading heading heading heading"
+        "media media media media media body body body body body body body"
+        "media media media media media panel panel panel panel panel panel panel"
+        "media media media media media actions actions actions actions actions actions actions";
+    }
+
+    .section-grid--split.section-grid--panel-full {
+      grid-template-areas:
+        "heading heading heading heading heading heading heading media media media media media"
+        "body body body body body body body media media media media media"
+        "panel panel panel panel panel panel panel panel panel panel panel panel"
+        "actions actions actions actions actions actions actions . . . . .";
+    }
+
+    .section-grid--stack {
+      grid-template-areas:
+        "heading heading heading heading heading heading heading heading . . . ."
+        "media media media media media media media media media media media media"
+        "body body body body body body body body . . . ."
+        "panel panel panel panel panel panel panel panel panel panel panel panel"
+        "actions actions actions actions actions actions actions actions . . . .";
+    }
+
+    .section-grid--narrow {
+      grid-template-areas:
+        ". . heading heading heading heading heading heading heading heading . ."
+        ". . body body body body body body body body . ."
+        ". . panel panel panel panel panel panel panel panel . ."
+        ". . actions actions actions actions actions actions actions actions . .";
+    }
+  }
+
+  @media (max-width: 35rem) {
+    .section-grid__actions :global(.button) {
+      width: 100%;
+    }
+  }
+</style>

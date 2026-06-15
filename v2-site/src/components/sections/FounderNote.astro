@@ -56,8 +56,6 @@ const {
       "body"
       "footer";
     gap: var(--space-4);
-    max-width: 68rem;
-    margin-inline: auto;
     padding: clamp(var(--space-4), 6vw, var(--space-6));
     border: 1px solid var(--color-border);
     border-top: 0.4rem solid var(--color-secondary);
@@ -70,14 +68,14 @@ const {
 
   .founder-note__mark {
     display: grid;
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
     place-items: center;
     border-radius: var(--radius-sm);
     background: var(--color-secondary);
     color: var(--color-text-on-dark);
     font-family: var(--font-display);
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
   }
 
   .founder-note__header {
@@ -132,19 +130,18 @@ const {
 
   @media (min-width: 48rem) {
     .founder-note--with-media {
-      grid-template-columns: minmax(14rem, 0.62fr) minmax(0, 1.38fr);
+      grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-areas:
-        "media header"
-        "media title"
-        "media body"
-        "media footer";
-      column-gap: var(--space-6);
+        "media media media media header header header header header header header header"
+        "media media media media title title title title title title title title"
+        "media media media media body body body body body body body body"
+        "media media media media footer footer footer footer footer footer footer footer";
+      column-gap: clamp(var(--space-4), 2.5vw, var(--space-5));
       align-items: start;
     }
 
     .founder-note__media {
-      position: sticky;
-      top: calc(var(--header-height) + var(--space-4));
+      align-self: start;
     }
 
     h2 {

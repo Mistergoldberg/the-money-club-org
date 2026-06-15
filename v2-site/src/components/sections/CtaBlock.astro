@@ -92,25 +92,23 @@ const {
   :global(.cta-block) {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.65fr);
-    gap: var(--space-5);
-    align-items: center;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--space-4) clamp(var(--space-4), 2.5vw, var(--space-5));
+    align-items: start;
     overflow: hidden;
   }
 
   :global(.cta-block:not(.cta-block--with-media)) {
     grid-template-areas:
-      "heading actions"
-      "copy actions";
+      "heading heading heading heading heading heading copy copy copy copy copy copy"
+      "actions actions actions actions actions actions copy copy copy copy copy copy";
   }
 
   :global(.cta-block--with-media) {
-    grid-template-columns: minmax(16rem, 0.7fr) minmax(0, 1.3fr);
     grid-template-areas:
-      "media heading"
-      "media copy"
-      "media actions";
-    align-items: start;
+      "media media media media heading heading heading heading heading heading heading heading"
+      "media media media media copy copy copy copy copy copy copy copy"
+      "media media media media actions actions actions actions actions actions actions actions";
   }
 
   :global(.cta-block--featured) {
@@ -189,18 +187,30 @@ const {
   .cta-block__actions {
     position: relative;
     z-index: 1;
-    display: grid;
+    display: flex;
     grid-area: actions;
+    flex-wrap: wrap;
     gap: var(--space-3);
   }
 
+  .cta-block__actions :global(.button) {
+    flex: 1 1 15rem;
+  }
+
   @media (max-width: 48rem) {
-    :global(.cta-block:not(.cta-block--with-media)) {
+    :global(.cta-block) {
       grid-template-columns: 1fr;
+    }
+
+    :global(.cta-block:not(.cta-block--with-media)) {
       grid-template-areas:
         "heading"
         "copy"
         "actions";
+    }
+
+    .cta-block__actions {
+      display: grid;
     }
 
     :global(.cta-block--with-media) {

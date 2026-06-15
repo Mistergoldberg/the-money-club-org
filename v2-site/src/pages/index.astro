@@ -1,6 +1,5 @@
 ---
 import ChildFitBox from "../components/sections/ChildFitBox.astro";
-import ContentSplit from "../components/sections/ContentSplit.astro";
 import CtaBlock from "../components/sections/CtaBlock.astro";
 import FaqList from "../components/sections/FaqList.astro";
 import FeatureGrid from "../components/sections/FeatureGrid.astro";
@@ -14,14 +13,14 @@ import SectionIntro from "../components/sections/SectionIntro.astro";
 import StickyCta from "../components/sections/StickyCta.astro";
 import SystemMap from "../components/sections/SystemMap.astro";
 import Button from "../components/ui/Button.astro";
-import Card from "../components/ui/Card.astro";
 import Section from "../components/ui/Section.astro";
 import { homepageContent as content } from "../data/homepage";
 import { homepageMedia } from "../data/media";
 import HeroMedia from "../components/media/HeroMedia.astro";
 import LocationMedia from "../components/media/LocationMedia.astro";
 import MediaGrid from "../components/media/MediaGrid.astro";
-import MediaSplitSection from "../components/media/MediaSplitSection.astro";
+import ContentPanel from "../components/layout/ContentPanel.astro";
+import SectionGrid from "../components/layout/SectionGrid.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -51,19 +50,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   <ProgramDetailsBar items={content.trustItems} label={content.trustLine} />
 
-  <Section id="problem" spacing="spacious" ariaLabelledby="problem-title">
-    <MediaSplitSection media={homepageMedia.problem} align="start">
+  <Section id="problem" spacing="default" ariaLabelledby="problem-title">
+    <SectionGrid media={homepageMedia.problem}>
       <div slot="heading" class="flow">
         <p class="section-kicker">{content.problem.eyebrow}</p>
         <h2 id="problem-title">{content.problem.title}</h2>
       </div>
-      <div class="prose media-section-body">
+      <div class="prose">
         {content.problem.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-        <Card tone="accent" padding="large">
-          <p class="statement">{content.problem.statement}</p>
-        </Card>
       </div>
-    </MediaSplitSection>
+      <ContentPanel slot="panel" tone="accent">
+          <p class="statement">{content.problem.statement}</p>
+      </ContentPanel>
+    </SectionGrid>
   </Section>
 
   <Section
@@ -72,17 +71,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     spacing="spacious"
     ariaLabelledby="student-work-title"
   >
-    <SectionIntro
-      eyebrow={content.studentWork.eyebrow}
-      title={content.studentWork.title}
-      headingId="student-work-title"
-    />
-    <MediaGrid items={homepageMedia.studentWork} />
-    <div class="section-lead-stack">
-      <p>{content.studentWork.lead}</p>
-      <p>{content.studentWork.intro}</p>
-    </div>
-    <FeatureGrid items={content.outcomes} />
+    <SectionGrid layout="stack" panelFull>
+      <div slot="heading">
+        <SectionIntro
+          eyebrow={content.studentWork.eyebrow}
+          title={content.studentWork.title}
+          headingId="student-work-title"
+        />
+      </div>
+      <MediaGrid slot="media" items={homepageMedia.studentWork} />
+      <div class="section-lead-stack">
+        <p>{content.studentWork.lead}</p>
+        <p>{content.studentWork.intro}</p>
+      </div>
+      <FeatureGrid slot="panel" items={content.outcomes} />
+    </SectionGrid>
   </Section>
 
   <Section
@@ -90,8 +93,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     spacing="spacious"
     ariaLabelledby="why-it-matters-title"
   >
-    <ContentSplit reverse>
-      <div class="flow">
+    <SectionGrid mediaSide="start">
+      <div slot="heading" class="flow">
         <p class="section-kicker">{content.whyItMatters.eyebrow}</p>
         <h2 id="why-it-matters-title">{content.whyItMatters.title}</h2>
       </div>
@@ -99,10 +102,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         {content.whyItMatters.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
       </div>
       <SystemMap
-        slot="aside"
+        slot="media"
         caption="Every choice affects the system around it."
       />
-    </ContentSplit>
+    </SectionGrid>
   </Section>
 
   <Section
@@ -111,7 +114,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     spacing="spacious"
     ariaLabelledby="program-details-title"
   >
-    <MediaSplitSection media={homepageMedia.location} align="start">
+    <SectionGrid>
       <div slot="heading" class="flow">
         <p class="section-kicker">Program details</p>
         <h2 id="program-details-title">August 10–14, Toronto</h2>
@@ -128,32 +131,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           presentation at the UTSU Student Commons.
         </p>
         <ProgramDetailsGrid items={content.programDetails} />
-        <div class="section-actions">
-          <Button href="/parent-approval/" size="large">Register for August</Button>
-        </div>
       </div>
-    </MediaSplitSection>
+      <div slot="actions" class="section-actions">
+        <Button href="/parent-approval/" size="large">Register for August</Button>
+      </div>
+    </SectionGrid>
   </Section>
 
   <Section id="who-its-for" spacing="spacious" ariaLabelledby="fit-title">
-    <MediaSplitSection media={homepageMedia.fit} mediaSide="start" align="start">
+    <SectionGrid media={homepageMedia.fit} mediaSide="start">
       <div slot="heading" class="flow">
         <p class="section-kicker">Who it’s for</p>
         <h2 id="fit-title">Built for curious students ages 10–16.</h2>
       </div>
-      <div class="media-section-body">
-        <p class="media-section-lead">
-          The program is designed for students who can work independently on a
-          laptop, contribute to group discussion, and take part in creative
-          projects. Most interest so far is from ages 13–15, but readiness
-          matters more than age alone.
-        </p>
-        <ChildFitBox
-          title="Is this right for my child?"
-          positiveSignals={content.fitSignals}
-        />
-      </div>
-    </MediaSplitSection>
+      <p class="media-section-lead">
+        The program is designed for students who can work independently on a
+        laptop, contribute to group discussion, and take part in creative
+        projects. Most interest so far is from ages 13–15, but readiness
+        matters more than age alone.
+      </p>
+      <ChildFitBox
+        slot="panel"
+        title="Is this right for my child?"
+        positiveSignals={content.fitSignals}
+      />
+    </SectionGrid>
   </Section>
 
   <Section
@@ -162,13 +164,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     spacing="spacious"
     ariaLabelledby="parent-trust-title"
   >
-    <MediaSplitSection media={homepageMedia.parentTrust} align="start">
+    <SectionGrid media={homepageMedia.parentTrust}>
       <div slot="heading" class="flow">
         <p class="section-kicker">Parent trust</p>
         <h2 id="parent-trust-title">Confirmed, insured, and ready to run.</h2>
       </div>
-      <div class="media-section-body">
-        <div class="prose">
+      <div class="prose">
         <p>
           After speaking with parents and confirming demand, the minimum
           threshold for the August program has been reached.
@@ -181,13 +182,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           The group is capped at 30 students so the experience can stay
           personal, active, focused, and well supported.
         </p>
-        </div>
-        <ParentConfidenceBox
-          title="Parent confidence"
-          points={content.parentConfidence}
-        />
       </div>
-    </MediaSplitSection>
+      <ParentConfidenceBox
+        slot="panel"
+        title="Parent confidence"
+        points={content.parentConfidence}
+      />
+    </SectionGrid>
   </Section>
 
   <Section
@@ -196,19 +197,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     width="wide"
     ariaLabelledby="curriculum-title"
   >
-    <MediaSplitSection media={homepageMedia.curriculum} align="center">
+    <SectionGrid media={homepageMedia.curriculum} panelFull>
       <div slot="heading" class="flow">
         <p class="section-kicker">{content.curriculum.eyebrow}</p>
         <h2 id="curriculum-title">{content.curriculum.title}</h2>
       </div>
       <p class="media-section-lead">{content.curriculum.lead}</p>
-    </MediaSplitSection>
-    <BuildCycle steps={content.buildSteps} />
-    <div class="section-actions">
-      <Button href="/curriculum/" variant="outline" size="large">
-        See the Curriculum
-      </Button>
-    </div>
+      <BuildCycle slot="panel" steps={content.buildSteps} />
+      <div slot="actions" class="section-actions">
+        <Button href="/curriculum/" variant="outline" size="large">
+          See the Curriculum
+        </Button>
+      </div>
+    </SectionGrid>
   </Section>
 
   <Section
@@ -257,14 +258,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     spacing="spacious"
     ariaLabelledby="faq-title"
   >
-    <SectionIntro
-      eyebrow="Questions from families"
-      title="Frequently asked questions"
-      lead="The practical details parents usually want before completing approval."
-      align="center"
-      headingId="faq-title"
-    />
-    <FaqList items={content.faqs} />
+    <SectionGrid layout="narrow">
+      <div slot="heading">
+        <SectionIntro
+          eyebrow="Questions from families"
+          title="Frequently asked questions"
+          lead="The practical details parents usually want before completing approval."
+          headingId="faq-title"
+        />
+      </div>
+      <FaqList items={content.faqs} />
+    </SectionGrid>
   </Section>
 
   <Section
@@ -309,14 +313,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     text-transform: uppercase;
   }
 
-  .section-lead-copy {
-    max-width: 50rem;
-    margin-top: calc(var(--space-5) * -1 + var(--space-3));
-    margin-bottom: var(--space-5);
-    color: var(--color-text-muted);
-    line-height: var(--line-height-relaxed);
-  }
-
   .section-lead-stack,
   .media-section-body {
     display: grid;
@@ -324,8 +320,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 
   .section-lead-stack {
-    max-width: 52rem;
-    margin-block: var(--space-5);
     color: var(--color-text-muted);
     font-size: var(--text-lg);
     line-height: var(--line-height-relaxed);
@@ -337,17 +331,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     line-height: var(--line-height-relaxed);
   }
 
-  #curriculum :global(.build-cycle) {
-    margin-top: var(--space-6);
-  }
-
   @media (max-width: 35rem) {
     .section-lead-stack {
-      margin-block: var(--space-4);
-    }
-
-    #curriculum :global(.build-cycle) {
-      margin-top: var(--space-5);
+      gap: var(--space-3);
     }
   }
 </style>
