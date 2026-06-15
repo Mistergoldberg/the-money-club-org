@@ -38,7 +38,7 @@
   gap: var(--space-3);
   max-width: var(--measure-copy);
   color: var(--color-text-muted);
-  line-height: var(--line-height-relaxed);
+  line-height: var(--line-copy);
 }
 
 .prose strong {
@@ -62,13 +62,13 @@
 .section-lead-stack {
   color: var(--color-text-muted);
   font-size: var(--text-lg);
-  line-height: var(--line-height-relaxed);
+  line-height: var(--line-lead);
 }
 
 .media-section-lead {
   color: var(--color-text-muted);
   font-size: var(--text-lg);
-  line-height: var(--line-height-relaxed);
+  line-height: var(--line-lead);
 }
 
 .statement {

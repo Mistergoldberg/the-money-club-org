@@ -114,15 +114,15 @@ const {
   h1 {
     max-width: 15ch;
     font-size: clamp(3.4rem, 6.2vw, 5.75rem);
-    line-height: 0.9;
+    line-height: var(--line-heading);
   }
 
   .page-hero__body {
     grid-area: body;
     max-width: 45rem;
     color: var(--color-text-muted);
-    font-size: clamp(var(--text-lg), 2vw, var(--text-xl));
-    line-height: 1.58;
+    font-size: var(--text-lead);
+    line-height: var(--line-lead);
   }
 
   .page-hero__proofs {

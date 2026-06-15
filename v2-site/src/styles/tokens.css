@@ -70,10 +70,14 @@
   --text-heading: clamp(2.5rem, 1.85rem + 2.4vw, 4.25rem);
   --text-display: clamp(3.75rem, 2.4rem + 5vw, 7rem);
 
-  --line-body: 1.5;
+  --line-body: 1.55;
+  --line-copy: 1.55;
+  --line-lead: 1.5;
+  --line-caption: 1.4;
+  --line-title: 1.1;
   --line-heading: 0.95;
-  --line-height-tight: 1.2;
-  --line-height-relaxed: 1.7;
+  --line-height-tight: 1.15;
+  --line-height-relaxed: var(--line-copy);
   --tracking-display: 0.04em;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;

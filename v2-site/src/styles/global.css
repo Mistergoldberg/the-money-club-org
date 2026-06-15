@@ -6,12 +6,14 @@ html {
   background: var(--color-surface);
   color: var(--color-text);
   font-family: var(--font-body);
+  font-synthesis: none;
 }
 
 body {
   background: var(--color-surface);
   color: var(--color-text);
   font-size: var(--text-body);
+  font-weight: var(--font-weight-regular);
   line-height: var(--line-body);
 }
 
@@ -48,7 +50,8 @@ h2 {
 
 h3 {
   font-size: var(--text-heading-sm);
-  line-height: 1.1;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-title);
 }
 
 p,
