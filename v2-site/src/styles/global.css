@@ -84,6 +84,14 @@ a:hover {
 
 .site-main {
   padding-block: 0;
+  padding-bottom: var(--sticky-cta-offset, 0px);
+  transition: padding-bottom var(--transition-fast);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-main {
+    transition: none;
+  }
 }
 
 @media (max-width: 47.99rem) {

@@ -2,7 +2,8 @@
 import {
   headerRoutes,
   isCurrentRoute,
-  supportRoutes,
+  learningModules,
+  primaryCtaRoute,
 } from "../../data/navigation";
 import Button from "../ui/Button.astro";
 
@@ -11,36 +12,53 @@ export interface Props {
 }
 
 const { currentPath } = Astro.props;
-const contactRoute = supportRoutes.find((route) => route.id === "contact");
+const primaryRoutes = headerRoutes.filter((route) => route.id !== "home");
 ---
 
 <div class="desktop-navigation">
   <nav aria-label="Primary navigation">
     <ul role="list">
       {
-        headerRoutes
-          .filter((route) => route.id !== "home")
-          .map((route) => (
+        primaryRoutes.map((route) =>
+          route.id === "learning-catalogue" ? (
+            <li>
+              <details class="nav-dropdown">
+                <summary
+                  aria-current={
+                    isCurrentRoute(currentPath, route.href) ? "page" : undefined
+                  }
+                >
+                  {route.shortLabel ?? route.label}
+                </summary>
+                <ul class="nav-dropdown__panel" role="list">
+                  {learningModules.map((module) => (
+                    <li>
+                      <a href={module.href}>{module.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            </li>
+          ) : (
             <li>
               <a
                 href={route.href}
-                aria-current={isCurrentRoute(currentPath, route.href) ? "page" : undefined}
+                aria-current={
+                  isCurrentRoute(currentPath, route.href) ? "page" : undefined
+                }
               >
                 {route.shortLabel ?? route.label}
               </a>
             </li>
-          ))
+          ),
+        )
       }
     </ul>
   </nav>
 
-  {
-    contactRoute && (
-      <Button href={contactRoute.href} variant="secondary" size="small">
-        {contactRoute.label}
-      </Button>
-    )
-  }
+  <Button href={primaryCtaRoute.href} variant="secondary" size="small">
+    {primaryCtaRoute.label}
+  </Button>
 </div>
 
 <style>
@@ -86,6 +104,69 @@ const contactRoute = supportRoutes.find((route) => route.id === "contact");
     transform: scaleX(1);
   }
 
+  .nav-dropdown {
+    position: relative;
+  }
+
+  .nav-dropdown summary {
+    position: relative;
+    display: block;
+    padding-block: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    list-style: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .nav-dropdown summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .nav-dropdown summary::after {
+    position: absolute;
+    right: 0;
+    bottom: 0.2rem;
+    left: 0;
+    height: 2px;
+    background: var(--color-primary);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition-fast);
+  }
+
+  .nav-dropdown summary:hover::after,
+  .nav-dropdown summary[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+
+  .nav-dropdown__panel {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    min-width: 14rem;
+    margin-block-start: var(--space-2);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-2);
+  }
+
+  .nav-dropdown__panel a {
+    display: block;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+
+  .nav-dropdown__panel a:hover {
+    background: var(--color-surface-strong);
+  }
+
   @media (max-width: 68rem) {
     .desktop-navigation {
       display: none;
@@ -93,7 +174,8 @@ const contactRoute = supportRoutes.find((route) => route.id === "contact");
   }
 
   @media (prefers-reduced-motion: reduce) {
-    nav a::after {
+    nav a::after,
+    .nav-dropdown summary::after {
       transition: none;
     }
   }

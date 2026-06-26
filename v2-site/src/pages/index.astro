@@ -5,7 +5,6 @@ import FeatureGrid from "../components/sections/FeatureGrid.astro";
 import FinalCtaSection from "../components/sections/FinalCtaSection.astro";
 import FounderNote from "../components/sections/FounderNote.astro";
 import BuildCycle from "../components/sections/BuildCycle.astro";
-import IntroActionRow from "../components/sections/IntroActionRow.astro";
 import PageHero from "../components/sections/PageHero.astro";
 import ProgramDetailsBar from "../components/sections/ProgramDetailsBar.astro";
 import ProgramDetailsGrid from "../components/sections/ProgramDetailsGrid.astro";
@@ -13,6 +12,7 @@ import SectionIntro from "../components/sections/SectionIntro.astro";
 import StickyCta from "../components/sections/StickyCta.astro";
 import SystemMap from "../components/sections/SystemMap.astro";
 import Section from "../components/ui/Section.astro";
+import Button from "../components/ui/Button.astro";
 import { homepageContent as content } from "../data/homepage";
 import { homepageMedia } from "../data/media";
 import HeroMedia from "../components/media/HeroMedia.astro";
@@ -113,7 +113,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     spacing="spacious"
     ariaLabelledby="program-details-title"
   >
-    <SectionGrid>
+    <SectionGrid panelFull>
       <div slot="heading" class="flow">
         <p class="section-kicker">Program details</p>
         <h2 id="program-details-title">August 10–14, Toronto</h2>
@@ -125,16 +125,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         address="230 College Street, Toronto"
         showLocationDetails={false}
         showCaption={false}
-        actionLabel="Register for August"
-        actionHref="/parent-approval/"
       />
-      <div class="media-section-body">
+      <div class="flow">
         <p class="media-section-lead">
           One focused week of workshops, project work, discussion, and
           presentation at the UTSU Student Commons.
         </p>
-        <ProgramDetailsGrid items={content.programDetails} />
+        <Button href="/parent-approval/" size="large">Register for August</Button>
       </div>
+      <ProgramDetailsGrid slot="panel" items={content.programDetails} />
     </SectionGrid>
   </Section>
 
@@ -147,8 +146,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <p class="media-section-lead">
         The program is designed for students who can work independently on a
         laptop, contribute to group discussion, and take part in creative
-        projects. Most interest so far is from ages 13–15, but readiness
-        matters more than age alone.
+        projects.
       </p>
     </SectionGrid>
   </Section>
@@ -184,7 +182,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <Section
     id="curriculum"
     spacing="spacious"
-    width="wide"
     ariaLabelledby="curriculum-title"
   >
     <SectionGrid media={homepageMedia.curriculum} panelFull>
@@ -192,12 +189,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <p class="section-kicker">{content.curriculum.eyebrow}</p>
         <h2 id="curriculum-title">{content.curriculum.title}</h2>
       </div>
-      <IntroActionRow
-        actionHref="/curriculum/"
-        actionLabel="See the Curriculum"
-      >
+      <div class="flow">
         <p class="media-section-lead">{content.curriculum.lead}</p>
-      </IntroActionRow>
+        <Button href="/curriculum/" variant="outline" size="large">
+          See the Curriculum
+        </Button>
+      </div>
       <BuildCycle slot="panel" steps={content.buildSteps} />
     </SectionGrid>
   </Section>
@@ -272,7 +269,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     href="/parent-approval/"
     secondaryLabel="Curriculum"
     secondaryHref="/curriculum/"
-    revealAfter="#parent-trust"
+    revealAfter="#why-it-matters"
     suppressAfter="#register"
   />
 </BaseLayout>

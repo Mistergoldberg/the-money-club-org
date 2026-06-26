@@ -133,8 +133,7 @@ export const homepageContent = {
   ],
   curriculum: {
     eyebrow: "Curriculum preview",
-    title:
-      "We do not start with definitions. We start with the world students already live inside.",
+    title: "We start with the world students already live inside.",
     lead:
       "Students follow a practical build cycle that turns financial ideas into decisions they can test, defend, and present.",
   },

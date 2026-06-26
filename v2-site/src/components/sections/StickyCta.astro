@@ -66,6 +66,10 @@ const {
     stickyCta.dataset.state = visible ? "visible" : "suppressed";
     stickyCta.toggleAttribute("inert", !visible);
     stickyCta.setAttribute("aria-hidden", visible ? "false" : "true");
+    document.documentElement.style.setProperty(
+      "--sticky-cta-offset",
+      visible ? `${stickyCta.getBoundingClientRect().height}px` : "0px",
+    );
   };
 
   if (stickyCta && revealTarget) {
@@ -152,7 +156,7 @@ const {
     margin-left: auto;
   }
 
-  @media (max-width: 40rem) {
+  @media (max-width: 56rem) {
     .sticky-cta__inner {
       justify-content: stretch;
     }

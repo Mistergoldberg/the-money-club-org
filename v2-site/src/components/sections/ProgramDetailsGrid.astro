@@ -39,6 +39,17 @@ const { items } = Astro.props;
     min-height: 5.5rem;
   }
 
+  @media (min-width: 56rem) {
+    .program-details {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .program-details div:last-child:nth-child(odd) {
+      grid-column: auto;
+      min-height: 6.5rem;
+    }
+  }
+
   dt {
     color: var(--color-primary);
     font-size: var(--text-xs);

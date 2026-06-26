@@ -89,9 +89,9 @@ const {
     grid-template-areas:
       "heading"
       "visual"
-      "actions"
       "body"
-      "proofs";
+      "proofs"
+      "actions";
     align-items: center;
     gap: var(--space-3);
   }
@@ -113,15 +113,13 @@ const {
 
   h1 {
     max-width: 15ch;
-    font-size: clamp(3.4rem, 6.2vw, 5.75rem);
-    line-height: var(--line-heading);
   }
 
   .page-hero__body {
     grid-area: body;
     max-width: 45rem;
     color: var(--color-text-muted);
-    font-size: var(--text-lead);
+    font-size: var(--text-lg);
     line-height: var(--line-lead);
   }
 
@@ -173,9 +171,9 @@ const {
       grid-template-columns: repeat(12, minmax(0, 1fr));
       grid-template-areas:
         "heading heading heading heading heading heading heading visual visual visual visual visual"
-        "actions actions actions actions actions actions actions visual visual visual visual visual"
         "body body body body body body body visual visual visual visual visual"
-        "proofs proofs proofs proofs proofs proofs proofs visual visual visual visual visual";
+        "proofs proofs proofs proofs proofs proofs proofs visual visual visual visual visual"
+        "actions actions actions actions actions actions actions visual visual visual visual visual";
       column-gap: clamp(var(--space-4), 2.5vw, var(--space-5));
       row-gap: var(--space-3);
     }

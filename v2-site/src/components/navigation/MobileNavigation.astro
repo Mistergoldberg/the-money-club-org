@@ -2,7 +2,8 @@
 import {
   headerRoutes,
   isCurrentRoute,
-  supportRoutes,
+  learningModules,
+  primaryCtaRoute,
 } from "../../data/navigation";
 import Button from "../ui/Button.astro";
 
@@ -12,10 +13,7 @@ export interface Props {
 }
 
 const { currentPath, menuId = "site-mobile-menu" } = Astro.props;
-const mobileRoutes = [
-  ...headerRoutes.filter((route) => route.id !== "home"),
-  ...supportRoutes,
-];
+const mobileRoutes = headerRoutes.filter((route) => route.id !== "home");
 ---
 
 <div class="mobile-navigation" data-mobile-navigation>
@@ -67,23 +65,48 @@ const mobileRoutes = [
       <nav aria-label="Mobile navigation">
         <ul role="list">
           {
-            mobileRoutes.map((route) => (
-              <li>
-                <a
-                  href={route.href}
-                  aria-current={isCurrentRoute(currentPath, route.href) ? "page" : undefined}
-                  data-menu-link
-                >
-                  {route.shortLabel ?? route.label}
-                </a>
-              </li>
-            ))
+            mobileRoutes.map((route) =>
+              route.id === "learning-catalogue" ? (
+                <li>
+                  <details class="mobile-navigation__dropdown">
+                    <summary
+                      aria-current={
+                        isCurrentRoute(currentPath, route.href) ? "page" : undefined
+                      }
+                    >
+                      {route.shortLabel ?? route.label}
+                    </summary>
+                    <ul role="list">
+                      {learningModules.map((module) => (
+                        <li>
+                          <a href={module.href} data-menu-link>
+                            {module.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </li>
+              ) : (
+                <li>
+                  <a
+                    href={route.href}
+                    aria-current={
+                      isCurrentRoute(currentPath, route.href) ? "page" : undefined
+                    }
+                    data-menu-link
+                  >
+                    {route.shortLabel ?? route.label}
+                  </a>
+                </li>
+              ),
+            )
           }
         </ul>
       </nav>
 
-      <Button href="/parent-approval/" variant="primary" size="large" fullWidth>
-        Register for August
+      <Button href={primaryCtaRoute.href} variant="secondary" size="large" fullWidth>
+        {primaryCtaRoute.label}
       </Button>
     </div>
   </div>
@@ -336,7 +359,7 @@ const mobileRoutes = [
     align-items: baseline;
     color: var(--color-primary);
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: var(--text-brand);
     letter-spacing: var(--tracking-display);
     line-height: 1;
     text-decoration: none;
@@ -385,6 +408,42 @@ const mobileRoutes = [
     font-size: var(--text-xs);
     font-weight: 700;
     text-transform: uppercase;
+  }
+
+  .mobile-navigation__dropdown summary {
+    display: flex;
+    min-height: 3.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-block: var(--space-2);
+    font-size: var(--text-lead);
+    font-weight: 700;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .mobile-navigation__dropdown summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-navigation__dropdown summary[aria-current="page"] {
+    color: var(--color-primary);
+  }
+
+  .mobile-navigation__dropdown ul {
+    padding-block-end: var(--space-2);
+    padding-inline-start: var(--space-3);
+  }
+
+  .mobile-navigation__dropdown li + li {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .mobile-navigation__dropdown a {
+    min-height: 3rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
   }
 
   @media (max-width: 68rem) {

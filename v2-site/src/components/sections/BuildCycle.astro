@@ -22,7 +22,9 @@ const { steps } = Astro.props;
 
 <style>
   .build-cycle {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var(--space-2);
     margin: 0;
     padding: 0;
@@ -32,6 +34,7 @@ const { steps } = Astro.props;
   li {
     position: relative;
     display: grid;
+    flex: 0 0 100%;
     grid-template-columns: 3rem minmax(0, 1fr);
     gap: var(--space-3);
     align-items: start;
@@ -79,11 +82,8 @@ const { steps } = Astro.props;
   }
 
   @media (min-width: 42rem) {
-    .build-cycle {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     li {
+      flex-basis: calc((100% - var(--space-2)) / 2);
       grid-template-columns: 2.75rem minmax(0, 1fr);
       min-height: 11.5rem;
     }
@@ -98,11 +98,8 @@ const { steps } = Astro.props;
   }
 
   @media (min-width: 68rem) {
-    .build-cycle {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
     li {
+      flex-basis: calc((100% - 3 * var(--space-2)) / 4);
       min-height: 12rem;
     }
   }

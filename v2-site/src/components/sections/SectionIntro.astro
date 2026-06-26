@@ -37,19 +37,9 @@ const { eyebrow, title, lead, align = "start", headingId } = Astro.props;
     text-transform: uppercase;
   }
 
-  h2 {
-    font-size: var(--text-3xl);
-  }
-
   .section-intro__lead {
     color: var(--color-text-muted);
     font-size: var(--text-lg);
     line-height: var(--line-lead);
-  }
-
-  @media (min-width: 48rem) {
-    h2 {
-      font-size: var(--text-4xl);
-    }
   }
 </style>
