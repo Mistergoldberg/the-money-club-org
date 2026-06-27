@@ -2,6 +2,9 @@
 .vscode/
 Archive.zip
 Marketing\ Images/
+**/.venv/
+**/__pycache__/
+*.pyc
 
 # Local secrets/config
 *.env

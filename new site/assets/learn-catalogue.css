@@ -6,6 +6,7 @@
 
 .learning-catalogue-sidebar{
   font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+  text-align: left;
 }
 
 .learning-catalogue-sidebar h2{
@@ -16,6 +17,7 @@
 .catalogue-toc-link{
   font-size: 20px;
   font-weight: 500;
+  text-align: left;
 }
 
 .catalogue-sublist a,
@@ -30,6 +32,7 @@
   letter-spacing: 0;
   text-transform: none;
   text-decoration: none;
+  text-align: left;
 }
 
 .catalogue-sublist a{
@@ -55,4 +58,64 @@
 .menu-panel .learning-menu-tree.contains-current summary,
 .menu-panel .learning-menu-list a.is-current{
   font-weight: 500;
+}
+
+@media (min-width: 1024px){
+  :root{
+    --learn-catalogue-rail: clamp(260px, 20vw, 320px);
+    --learn-catalogue-gap: clamp(28px, 3.2vw, 52px);
+    --learn-catalogue-main-max: min(1120px, var(--max-wide, 1320px));
+  }
+
+  .learning-catalogue .learning-catalogue-shell,
+  .content-content.learning-page-shell{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: calc(var(--learn-catalogue-rail) + var(--learn-catalogue-gap) + var(--learn-catalogue-main-max) + var(--pad, 34px) + var(--pad, 34px));
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--pad, 34px);
+    padding-right: var(--pad, 34px);
+    display: grid;
+    grid-template-columns: var(--learn-catalogue-rail) minmax(0, 1fr);
+    gap: var(--learn-catalogue-gap);
+    align-items: start;
+    justify-content: start;
+  }
+
+  .learning-catalogue-sidebar{
+    width: 100%;
+    justify-self: start;
+  }
+
+  .learning-catalogue-main,
+  .learning-page-shell > .thankyou-card,
+  .learning-page-shell > .reservation-card,
+  .learning-page-shell > .article-facts-shell{
+    width: 100%;
+    max-width: var(--learn-catalogue-main-max);
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: stretch;
+  }
+
+  .learning-page-shell > .article-facts-shell{
+    grid-column: 2;
+  }
+}
+
+@media (min-width: 1440px){
+  .learning-catalogue .learning-catalogue-shell,
+  .content-content.learning-page-shell{
+    max-width: calc(var(--learn-catalogue-rail) + var(--learn-catalogue-rail) + var(--learn-catalogue-gap) + var(--learn-catalogue-gap) + var(--learn-catalogue-main-max) + var(--pad, 34px) + var(--pad, 34px));
+    grid-template-columns: var(--learn-catalogue-rail) minmax(0, var(--learn-catalogue-main-max)) var(--learn-catalogue-rail);
+    justify-content: center;
+  }
+
+  .learning-catalogue-main,
+  .learning-page-shell > .thankyou-card,
+  .learning-page-shell > .reservation-card,
+  .learning-page-shell > .article-facts-shell{
+    justify-self: center;
+  }
 }
