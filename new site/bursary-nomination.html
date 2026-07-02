@@ -1523,6 +1523,13 @@
     .field label.section-heading{
       font-weight: 700;
     }
+    .field label.form-question{
+      font-family: var(--font-body);
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0;
+      text-transform: none;
+    }
     .field input,
     .field select,
     .field textarea{
@@ -4061,12 +4068,12 @@
 
             <div class="field-row two-col">
               <div class="field">
-                <label for="parent-name">Parent/guardian name</label>
+                <label class="form-question" for="parent-name">Parent/guardian name</label>
                 <input id="parent-name" name="parent-name" data-next="parent-email" type="text" autocomplete="name" required />
                 <small class="field-error">Parent/guardian name is required.</small>
               </div>
               <div class="field">
-                <label for="parent-email">Parent/guardian email</label>
+                <label class="form-question" for="parent-email">Parent/guardian email</label>
                 <input id="parent-email" name="parent-email" data-next="parent-phone" type="email" autocomplete="email" required />
                 <small class="field-error">Enter a valid email address.</small>
               </div>
@@ -4074,24 +4081,24 @@
 
             <div class="field-row three-col">
               <div class="field">
-                <label for="parent-phone">Parent/guardian phone number</label>
+                <label class="form-question" for="parent-phone">Parent/guardian phone number</label>
                 <input id="parent-phone" name="parent-phone" data-next="student-first-name" type="tel" autocomplete="tel" required />
                 <small class="field-error">Enter a valid phone number.</small>
               </div>
               <div class="field">
-                <label for="student-first-name">Student first name</label>
+                <label class="form-question" for="student-first-name">Student first name</label>
                 <input id="student-first-name" name="student-first-name" data-next="student-age" type="text" autocomplete="off" required />
                 <small class="field-error">Student first name is required.</small>
               </div>
               <div class="field">
-                <label for="student-age">Student age</label>
+                <label class="form-question" for="student-age">Student age</label>
                 <input id="student-age" name="student-age" type="number" min="5" max="18" inputmode="numeric" required />
                 <small class="field-error">Enter the student's age.</small>
               </div>
             </div>
 
             <div class="field">
-              <label class="section-heading" id="laptop-access-label">Does the student have access to a laptop for the program?</label>
+              <label class="form-question" id="laptop-access-label">Does the student have access to a laptop for the program?</label>
               <div class="radio-group" role="radiogroup" aria-labelledby="laptop-access-label">
                 <label class="radio-option"><input type="radio" name="laptop-access" value="yes" required /> Yes</label>
                 <label class="radio-option"><input type="radio" name="laptop-access" value="no" required /> No</label>
@@ -4101,30 +4108,30 @@
             </div>
 
             <div class="field">
-              <label for="student-benefit">Why would this student benefit from The Money Club?</label>
+              <label class="form-question" for="student-benefit">Why would this student benefit from The Money Club?</label>
               <textarea id="student-benefit" name="student-benefit" rows="5" required></textarea>
               <small class="field-error">Please share why the student would benefit.</small>
             </div>
 
             <div class="field">
-              <label for="student-curiosity">What is the student curious about building, making, designing, selling, solving, or exploring?</label>
+              <label class="form-question" for="student-curiosity">What is the student curious about building, making, designing, selling, solving, or exploring?</label>
               <textarea id="student-curiosity" name="student-curiosity" rows="5" required></textarea>
               <small class="field-error">Please share what the student is curious about.</small>
             </div>
 
             <div class="field">
-              <label for="learning-style">How would you describe the student&rsquo;s learning style?</label>
+              <label class="form-question" for="learning-style">How would you describe the student&rsquo;s learning style?</label>
               <textarea id="learning-style" name="learning-style" rows="5" required></textarea>
               <small class="field-error">Please describe the student's learning style.</small>
             </div>
 
             <div class="field">
-              <label for="learning-needs">Are there any learning needs, attention needs, accessibility needs, or accommodations we should know about?</label>
+              <label class="form-question" for="learning-needs">Are there any learning needs, attention needs, accessibility needs, or accommodations we should know about?</label>
               <textarea id="learning-needs" name="learning-needs" rows="5"></textarea>
             </div>
 
             <div class="field">
-              <label class="section-heading" id="independent-ready-label">Is the student ready to work independently on a laptop with guidance?</label>
+              <label class="form-question" id="independent-ready-label">Is the student ready to work independently on a laptop with guidance?</label>
               <div class="radio-group" role="radiogroup" aria-labelledby="independent-ready-label">
                 <label class="radio-option"><input type="radio" name="independent-ready" value="yes" required /> Yes</label>
                 <label class="radio-option"><input type="radio" name="independent-ready" value="mostly" required /> Mostly</label>
