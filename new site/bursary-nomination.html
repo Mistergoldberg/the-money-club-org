@@ -3945,6 +3945,164 @@
         color: #ffffff;
       }
     }
+
+    #mobile-program-overview .program-summary,
+    #built-like-a-business .program-summary{
+      width: 100%;
+      max-width: 856px;
+      margin: 0 auto;
+      padding: clamp(34px, 5.2vw, 60px) clamp(28px, 5.5vw, 56px) clamp(36px, 5.4vw, 56px);
+      border: 1px solid #ded8cf;
+      border-radius: 34px;
+      background: #ffffff;
+      box-shadow: 0 22px 44px rgba(17,17,17,0.08);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.22;
+    }
+    #built-like-a-business .split{
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+    #built-like-a-business .split .section-copy{
+      justify-self: center;
+      width: min(100%, var(--content-max));
+    }
+    #built-like-a-business .cta-stack--hero{
+      width: min(100%, 856px);
+      justify-self: center;
+      align-items: stretch;
+    }
+    #mobile-program-overview .program-summary-meta,
+    #built-like-a-business .program-summary-meta{
+      margin: 0;
+      padding-bottom: clamp(22px, 3vw, 34px);
+      border-bottom: 1px solid #ded8cf;
+      color: var(--ink);
+      font-size: clamp(34px, 4vw, 42px);
+      line-height: 1;
+      font-weight: 700;
+      text-align: center;
+    }
+    #mobile-program-overview .program-summary-points,
+    #built-like-a-business .program-summary-points{
+      width: 100%;
+      margin: 0;
+      padding: clamp(26px, 3vw, 34px) 0 clamp(28px, 3.5vw, 40px);
+      border-top: 0;
+      border-bottom: 1px solid #ded8cf;
+      display: grid;
+      gap: clamp(18px, 2.4vw, 28px);
+    }
+    #mobile-program-overview .program-summary-point,
+    #built-like-a-business .program-summary-point{
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr);
+      column-gap: 26px;
+      align-items: start;
+      width: 100%;
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(31px, 3.3vw, 38px);
+      line-height: 1.22;
+    }
+    #mobile-program-overview .program-summary-point-icon,
+    #built-like-a-business .program-summary-point-icon{
+      display: block;
+      width: 52px;
+      padding-top: 4px;
+      font-size: clamp(24px, 2.5vw, 30px);
+      line-height: 1;
+      text-align: left;
+    }
+    #mobile-program-overview .program-summary-point-text,
+    #built-like-a-business .program-summary-point-text{
+      display: block;
+      color: var(--ink);
+      font-weight: 400;
+    }
+    #mobile-program-overview .program-summary-point-text strong,
+    #built-like-a-business .program-summary-point-text strong{
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 1em;
+      line-height: 1.05;
+      font-weight: 700;
+    }
+    #mobile-program-overview .program-summary-cta-group,
+    #built-like-a-business .program-summary-cta-group{
+      margin: 0;
+      padding-top: clamp(24px, 3vw, 28px);
+      border-top: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(24px, 3vw, 32px);
+      text-align: center;
+    }
+    #mobile-program-overview .program-summary-cta-title,
+    #built-like-a-business .program-summary-cta-title{
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(33px, 3.4vw, 40px);
+      line-height: 1.1;
+      font-weight: 700;
+      text-align: center;
+    }
+    #mobile-program-overview .program-summary-cta-actions,
+    #built-like-a-business .program-summary-cta-actions{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    #mobile-program-overview .program-summary-cta-group .cta-fill,
+    #built-like-a-business .program-summary-cta-group .cta-fill{
+      width: 100%;
+      min-height: 120px;
+      padding: 28px 24px;
+      border-radius: 18px;
+      background: var(--teal);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5.3vw, 52px);
+      line-height: 0.95;
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      text-align: center;
+      box-shadow: 0 18px 34px rgba(30,138,149,0.24);
+    }
+    @media (max-width: 640px){
+      #mobile-program-overview .program-summary,
+      #built-like-a-business .program-summary{
+        padding: 30px 24px 34px;
+        border-radius: 28px;
+      }
+      #mobile-program-overview .program-summary-meta,
+      #built-like-a-business .program-summary-meta{
+        font-size: clamp(30px, 8vw, 38px);
+      }
+      #mobile-program-overview .program-summary-point,
+      #built-like-a-business .program-summary-point{
+        grid-template-columns: 40px minmax(0, 1fr);
+        column-gap: 18px;
+        font-size: clamp(25px, 7vw, 34px);
+      }
+      #mobile-program-overview .program-summary-point-icon,
+      #built-like-a-business .program-summary-point-icon{
+        width: 40px;
+        font-size: 25px;
+      }
+      #mobile-program-overview .program-summary-cta-title,
+      #built-like-a-business .program-summary-cta-title{
+        font-size: clamp(28px, 7.5vw, 36px);
+      }
+      #mobile-program-overview .program-summary-cta-group .cta-fill,
+      #built-like-a-business .program-summary-cta-group .cta-fill{
+        min-height: 92px;
+        padding: 22px 18px;
+        font-size: clamp(31px, 9vw, 42px);
+        border-radius: 18px;
+      }
+    }
   </style>
   <link rel="stylesheet" href="assets/typography.css?v=6" />
   <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
@@ -4180,7 +4338,7 @@
           <div class="program-summary-cta-group">
             <p class="program-summary-cta-title">Learn how the one-week sprint works</p>
             <div class="program-summary-cta-actions">
-              <a class="btn teal gloss cta-fill" href="curriculum-details.html" data-cta-label="Learn How The Money Club.Org Works">Learn How The Money Club.Org Works</a>
+              <a class="btn teal gloss cta-fill" href="curriculum-details.html" data-cta-label="Get Program Details">GET PROGRAM DETAILS</a>
             </div>
           </div>
         </div>
@@ -4222,7 +4380,7 @@
               <div class="program-summary-cta-group">
                 <p class="program-summary-cta-title">Learn how the one-week sprint works</p>
                 <div class="program-summary-cta-actions">
-                  <a class="btn teal gloss cta-fill" href="curriculum-details.html" data-cta-label="Learn How The Money Club.Org Works">Learn How The Money Club.Org Works</a>
+                  <a class="btn teal gloss cta-fill" href="curriculum-details.html" data-cta-label="Get Program Details">GET PROGRAM DETAILS</a>
                 </div>
               </div>
             </div>
