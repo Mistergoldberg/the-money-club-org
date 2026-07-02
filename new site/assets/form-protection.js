@@ -3,6 +3,7 @@
 
   var PROTECTED_ACTIONS = {
     'apply-interest.php': true,
+    'apply-bursary-nomination.php': true,
     'apply-contact.php': true,
     'apply-our-mission.php': true,
     'apply-instructor.php': true,
@@ -240,11 +241,11 @@
         ensureHiddenInput(form, '_csrf', token);
       }
 
-      if ((actionName === 'apply-interest.php' || actionName === 'apply-contact.php' || actionName === 'apply-our-mission.php' || actionName === 'apply-instructor.php' || actionName === 'start-parent-approval.php') && !form.querySelector('input[name="return-to"]')) {
+      if ((actionName === 'apply-interest.php' || actionName === 'apply-bursary-nomination.php' || actionName === 'apply-contact.php' || actionName === 'apply-our-mission.php' || actionName === 'apply-instructor.php' || actionName === 'start-parent-approval.php') && !form.querySelector('input[name="return-to"]')) {
         ensureHiddenInput(form, 'return-to', defaultReturnForPage());
       }
 
-      if ((actionName === 'apply-interest.php' || actionName === 'apply-contact.php' || actionName === 'apply-our-mission.php' || actionName === 'apply-instructor.php' || actionName === 'start-parent-approval.php') && !form.querySelector('input[name="return-error"]')) {
+      if ((actionName === 'apply-interest.php' || actionName === 'apply-bursary-nomination.php' || actionName === 'apply-contact.php' || actionName === 'apply-our-mission.php' || actionName === 'apply-instructor.php' || actionName === 'start-parent-approval.php') && !form.querySelector('input[name="return-error"]')) {
         ensureHiddenInput(form, 'return-error', defaultReturnForPage());
       }
 
