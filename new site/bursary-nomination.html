@@ -1836,6 +1836,59 @@
     .form-success.is-visible{
       display: block;
     }
+    .bursary-confirmation-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(0,0,0,0.78);
+    }
+    .bursary-confirmation-overlay.is-visible{
+      display: flex;
+    }
+    .bursary-confirmation-dialog{
+      width: min(680px, 100%);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 18px;
+      background: #050505;
+      color: #ffffff;
+      padding: clamp(22px, 5vw, 38px);
+      display: grid;
+      gap: 18px;
+      box-shadow: 0 32px 90px rgba(0,0,0,0.5);
+    }
+    .bursary-confirmation-dialog p{
+      margin: 0;
+      color: #ffffff;
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.45;
+      font-weight: 700;
+    }
+    .bursary-confirmation-actions{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .bursary-confirmation-close{
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      background: transparent;
+      color: #ffffff;
+      min-height: 48px;
+      padding: 0 18px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .bursary-confirmation-close:hover,
+    .bursary-confirmation-close:focus-visible{
+      background: rgba(255,255,255,0.12);
+      outline: none;
+    }
     .reservation-card h2{
       margin: 0;
       font-size: clamp(24px, 3.4vw, 34px);
@@ -3993,7 +4046,6 @@
             <p>The Money Club.Org is opening 5 Founding Student Bursary seats for our August 10&ndash;14, 2026 session in Toronto. Each seat is valued at $200.</p>
             <p>This one-week program helps students learn financial literacy by building a real product idea using design thinking, AI research assistance, budgeting, pricing, customer thinking, communication, and creative development.</p>
             <p>Bursary seats will be selected based on student fit, curiosity, access need, and readiness to participate.</p>
-            <a class="btn teal gloss cta-standard" href="curriculum-details.html" data-cta-label="Learn How The Money Club.Org Works">Learn How The Money Club.Org Works</a>
           </div>
 
           <h3 class="section-heading">Questions:</h3>
@@ -4121,12 +4173,6 @@
             <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧠</span><span class="program-summary-point-text"><strong>Who It&rsquo;s For</strong><br />Computer-literate students</span></div>
             <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text"><strong>Tuition</strong><br />$200</span></div>
           </div>
-          <div class="program-summary-cta-group">
-            <p class="program-summary-cta-title">Learn how the one-week sprint works</p>
-            <div class="program-summary-cta-actions">
-              <a class="btn teal gloss cta-fill" href="curriculum-details.html" data-cta-label="Learn How The Money Club.Org Works">Learn How The Money Club.Org Works</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -4163,12 +4209,6 @@
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">🧠</span><span class="program-summary-point-text"><strong>Who It&rsquo;s For</strong><br />Computer-literate students</span></div>
                 <div class="program-summary-point"><span class="program-summary-point-icon" aria-hidden="true">💰</span><span class="program-summary-point-text"><strong>Tuition</strong><br />$200</span></div>
               </div>
-              <div class="program-summary-cta-group">
-                <p class="program-summary-cta-title">Learn how the one-week sprint works</p>
-                <div class="program-summary-cta-actions">
-                  <a class="btn teal gloss cta-fill" href="curriculum-details.html" data-cta-label="Learn How The Money Club.Org Works">Learn How The Money Club.Org Works</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -4176,6 +4216,16 @@
     </section>
 
   </main>
+
+  <div class="bursary-confirmation-overlay" id="bursary-confirmation-overlay" role="dialog" aria-modal="true" aria-labelledby="bursary-confirmation-title" aria-hidden="true">
+    <div class="bursary-confirmation-dialog">
+      <p id="bursary-confirmation-title">Thank you for nominating a student for The Money Club Founding Student Bursary. We will review nominations based on fit, curiosity, access need, and readiness for the program. Selected families will be contacted directly.</p>
+      <div class="bursary-confirmation-actions">
+        <a class="btn teal gloss cta-standard" href="curriculum-details.html" data-cta-label="Learn How The Money Club.Org Works">Learn How The Money Club.Org Works</a>
+        <button class="bursary-confirmation-close" type="button" data-close-bursary-confirmation>Close</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     (function(){
@@ -4186,7 +4236,39 @@
       if (!document.getElementById('bursary-nomination')) {
         return;
       }
-      window.alert('Thank you for nominating a student for The Money Club Founding Student Bursary. We will review nominations based on fit, curiosity, access need, and readiness for the program. Selected families will be contacted directly.');
+      var overlay = document.getElementById('bursary-confirmation-overlay');
+      if (!overlay) {
+        return;
+      }
+      var closeBtn = overlay.querySelector('[data-close-bursary-confirmation]');
+      var curriculumLink = overlay.querySelector('a[href="curriculum-details.html"]');
+
+      function closeOverlay(){
+        overlay.classList.remove('is-visible');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      overlay.classList.add('is-visible');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      if (curriculumLink) {
+        curriculumLink.focus();
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeOverlay);
+      }
+      overlay.addEventListener('click', function(event){
+        if (event.target === overlay) {
+          closeOverlay();
+        }
+      });
+      document.addEventListener('keydown', function(event){
+        if (event.key === 'Escape' && overlay.classList.contains('is-visible')) {
+          closeOverlay();
+        }
+      });
     })();
   </script>
 
