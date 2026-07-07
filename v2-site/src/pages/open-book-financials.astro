@@ -1,0 +1,467 @@
+---
+import FinalCtaSection from "../components/sections/FinalCtaSection.astro";
+import SectionMedia from "../components/media/SectionMedia.astro";
+import SectionGrid from "../components/layout/SectionGrid.astro";
+import Section from "../components/ui/Section.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { openBookMedia as media } from "../data/media";
+
+const expenses = [
+  { category: "Venue Rental",      amount: "$2,509", pct: "42%", color: "var(--color-accent)"    },
+  { category: "Program Materials", amount: "$1,500", pct: "25%", color: "var(--color-primary)"   },
+  { category: "Insurance",         amount: "$1,200", pct: "20%", color: "var(--color-text)"      },
+  { category: "Marketing",         amount: "$550",   pct: "9%",  color: "var(--color-secondary)" },
+  { category: "Overhead",          amount: "$264",   pct: "4%",  color: "var(--color-border)"    },
+];
+---
+
+<BaseLayout
+  title="Open Book Financials | The Money Club"
+  description="We share a simple budget breakdown so families can see how tuition supports materials, venue costs, insurance, and program operations."
+  canonicalPath="/open-book-financials/"
+>
+  <!-- All financial data in one section, matching V1's math-section structure -->
+  <Section id="financials" tone="subtle" spacing="spacious" width="wide" ariaLabelledby="financials-title">
+    <h2 id="financials-title" class="visually-hidden">Open-Book Financials</h2>
+
+    <!-- Row 1: intro text + revenue card (mirrors V1's math-layout) -->
+    <div class="math-layout">
+      <div class="math-card">
+        <h3>Where Tuition Goes</h3>
+        <p>
+          The Money Club is a nonprofit summer program designed around learning,
+          not upselling. We share a simple budget breakdown so families can see
+          how tuition supports materials, venue costs, insurance, and program
+          operations.
+        </p>
+        <p>
+          The goal is not to maximize profit. The goal is to run a thoughtful,
+          well-supported program for students in a transparent and responsible way.
+        </p>
+      </div>
+
+      <div class="math-card revenue-card">
+        <h3 class="revenue-card__heading">Revenue In</h3>
+        <ul class="revenue-list">
+          <li>
+            <span>Students</span>
+            <span class="revenue-value">30</span>
+          </li>
+          <li>
+            <span>Tuition per student</span>
+            <span class="revenue-value">$200</span>
+          </li>
+        </ul>
+        <div class="revenue-total">
+          <span class="revenue-total__label">Total revenue</span>
+          <strong class="revenue-total__figure">$6,000</strong>
+        </div>
+        <p class="math-note">
+          This tuition funds everything required to run the program including
+          venue, insurance, and materials.
+        </p>
+      </div>
+    </div>
+
+    <!-- Row 2: budget table + pie chart (mirrors V1's openbook-expenses layout) -->
+    <div class="budget-layout">
+      <div class="budget-table-wrap">
+        <h3>Open-Book Budget Summary</h3>
+        <div class="table-scroll" role="region" aria-label="Budget summary table" tabindex="0">
+          <table class="budget-table">
+            <thead>
+              <tr>
+                <th scope="col">Expense Category</th>
+                <th scope="col">Estimated Cost</th>
+                <th scope="col">% of Budget</th>
+              </tr>
+            </thead>
+            <tbody>
+              {expenses.map((row) => (
+                <tr>
+                  <td>
+                    <span class="dot" style={`background:${row.color}`} aria-hidden="true"></span>
+                    {row.category}
+                  </td>
+                  <td class="num">{row.amount}</td>
+                  <td class="num">{row.pct}</td>
+                </tr>
+              ))}
+              <tr class="total-row">
+                <td><strong>Total Estimated Budget</strong></td>
+                <td class="num"><strong>$6,023*</strong></td>
+                <td class="num"><strong>100%</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="math-note">
+          * Estimated planning budget. Final costs may change — program tuition will not.
+        </p>
+      </div>
+
+      <div class="pie-card">
+        <h3 class="pie-card__heading">Where the Money Goes</h3>
+        <div
+          class="pie"
+          role="img"
+          aria-label="Venue Rental 42%, Program Materials 25%, Insurance 20%, Marketing 9%, Overhead 4%"
+        >
+          <span class="pie__center">
+            <span class="pie__label">Total</span>
+            <strong class="pie__figure">$6,023</strong>
+          </span>
+        </div>
+        <ul class="legend">
+          {expenses.map((row) => (
+            <li>
+              <span class="dot" style={`background:${row.color}`} aria-hidden="true"></span>
+              <span class="legend__label">{row.category}</span>
+              <span class="legend__value">{row.pct}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+  </Section>
+
+  <Section id="mission" spacing="spacious" ariaLabelledby="mission-title">
+    <SectionGrid mediaSide="end">
+      <div slot="heading" class="flow">
+        <p class="section-kicker">Why we built it this way</p>
+        <h2 id="mission-title">Learning connected to the real world.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          We believe young people learn best when they can connect ideas to the
+          real world.
+        </p>
+        <p>
+          Instead of teaching financial literacy as an abstract topic, The Money
+          Club helps students understand how money, work, pricing, products, and
+          decision-making function in practice. Through hands-on projects,
+          students research problems, test ideas, build prototypes, and present
+          their thinking clearly.
+        </p>
+        <p>
+          The goal is simple: help students become more capable, more confident,
+          and more ready to contribute to the world around them.
+        </p>
+      </div>
+      <SectionMedia slot="media" media={media.mission} />
+    </SectionGrid>
+  </Section>
+
+  <FinalCtaSection
+    id="register"
+    eyebrow="August 10–14 · Toronto"
+    title="Help your child see how money moves."
+    primaryLabel="Register for August"
+    primaryHref="/parent-approval/"
+    secondaryLabel="See the curriculum"
+    secondaryHref="/curriculum/"
+    headingId="open-book-final-cta-title"
+  >
+    <Fragment slot="copy">
+      <p>
+        One focused week at the UTSU Student Commons. Limited to 30 students.
+        Tuition is $200.
+      </p>
+    </Fragment>
+  </FinalCtaSection>
+</BaseLayout>
+
+<style>
+  /* ── Shared ── */
+  .math-note {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    line-height: var(--line-copy);
+    margin: 0;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: var(--radius-pill);
+    flex-shrink: 0;
+  }
+
+  /* ── Row 1: intro + revenue ── */
+  .math-layout {
+    display: grid;
+    gap: 1.75rem;
+    align-items: stretch;
+    margin-bottom: var(--space-5);
+  }
+
+  @media (min-width: 56rem) {
+    .math-layout {
+      grid-template-columns: 1.05fr 0.95fr;
+    }
+  }
+
+  .math-card {
+    display: grid;
+    gap: var(--space-2);
+    align-content: start;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .math-card p {
+    color: var(--color-text-muted);
+    line-height: var(--line-copy);
+    margin: 0;
+  }
+
+  .revenue-card__heading {
+    text-align: center;
+  }
+
+  .revenue-list {
+    display: grid;
+    gap: var(--space-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .revenue-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-subtle);
+    font-size: var(--text-body);
+  }
+
+  .revenue-list li > span:first-child {
+    color: var(--color-text-muted);
+  }
+
+  .revenue-value {
+    font-weight: var(--font-weight-bold);
+    font-variant-numeric: tabular-nums;
+    color: var(--color-text);
+  }
+
+  /* Revenue total — large centered display figure matching V1's math-figure style */
+  .revenue-total {
+    display: grid;
+    gap: var(--space-1);
+    padding: var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    text-align: center;
+  }
+
+  .revenue-total__label {
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .revenue-total__figure {
+    font-family: var(--font-display);
+    font-size: clamp(2.125rem, 6vw, 3.5rem);
+    letter-spacing: var(--tracking-display);
+    line-height: var(--line-heading);
+    color: var(--color-text);
+  }
+
+  /* ── Row 2: table + pie ── */
+  .budget-layout {
+    display: grid;
+    gap: var(--space-4);
+    align-items: stretch;
+  }
+
+  @media (min-width: 56rem) {
+    .budget-layout {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+
+  /* H3 font override — Raleway, matching V1's clamp(24px, 2.8vw, 34px) */
+  .math-card h3,
+  .budget-table-wrap h3,
+  .pie-card__heading {
+    font-family: var(--font-body);
+    font-size: clamp(1.5rem, 2.8vw, 2.125rem);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-body);
+    margin: 0;
+  }
+
+  /* Budget table card — heading lives inside the card like V1's openbook-summary */
+  .budget-table-wrap {
+    display: grid;
+    gap: var(--space-2);
+    align-content: start;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+  }
+
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-body);
+  }
+
+  .budget-table th,
+  .budget-table td {
+    padding: var(--space-3);
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .budget-table th {
+    background: var(--color-surface-subtle);
+    color: var(--color-primary);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .budget-table td {
+    color: var(--color-text-muted);
+  }
+
+  .budget-table td:first-child {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--color-text);
+  }
+
+  .budget-table .total-row td {
+    border-bottom: none;
+    color: var(--color-text);
+    background: var(--color-surface-subtle);
+  }
+
+  .num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  /* Pie card */
+  .pie-card {
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+    padding: var(--space-3) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .pie-card__heading {
+    margin: 0;
+    text-align: center;
+  }
+
+  .pie {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: min(360px, 100%);
+    aspect-ratio: 1;
+    margin-inline: auto;
+    border-radius: var(--radius-pill);
+    background: conic-gradient(
+      var(--color-accent)     0%  42%,
+      var(--color-primary)   42%  67%,
+      var(--color-text)      67%  87%,
+      var(--color-secondary) 87%  96%,
+      var(--color-neutral-200) 96% 100%
+    );
+  }
+
+  .pie::after {
+    content: "";
+    position: absolute;
+    inset: 18%;
+    background: var(--color-surface);
+    border-radius: var(--radius-pill);
+    box-shadow: inset 0 0 0 1px var(--color-border);
+  }
+
+  .pie__center {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 0.25rem;
+    text-align: center;
+  }
+
+  .pie__label {
+    color: var(--color-text-muted);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .pie__figure {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 7vw, 3.25rem);
+    letter-spacing: var(--tracking-display);
+    line-height: var(--line-heading);
+    color: var(--color-text);
+  }
+
+  /* Legend */
+  .legend {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .legend li {
+    display: grid;
+    grid-template-columns: 0.75rem minmax(0, 1fr) auto;
+    gap: var(--space-2);
+    align-items: center;
+    font-size: var(--text-body);
+  }
+
+  .legend__label {
+    color: var(--color-text);
+  }
+
+  .legend__value {
+    font-weight: var(--font-weight-semibold);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    color: var(--color-text);
+  }
+</style>

@@ -1,0 +1,226 @@
+---
+import BuildCycle from "../components/sections/BuildCycle.astro";
+import FeatureGrid from "../components/sections/FeatureGrid.astro";
+import FinalCtaSection from "../components/sections/FinalCtaSection.astro";
+import PageHero from "../components/sections/PageHero.astro";
+import SectionIntro from "../components/sections/SectionIntro.astro";
+import SectionMedia from "../components/media/SectionMedia.astro";
+import SectionGrid from "../components/layout/SectionGrid.astro";
+import Section from "../components/ui/Section.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { curriculumContent as content } from "../data/curriculum";
+import { curriculumMedia as media } from "../data/media";
+import { homepageContent } from "../data/homepage";
+---
+
+<BaseLayout
+  title="Curriculum | Financial Literacy, Product Building, and AI"
+  description="One week. 11 modules. A live Maker Market on Friday. Students learn how money moves by building, pricing, testing, and presenting something real."
+  canonicalPath="/curriculum/"
+>
+  <PageHero
+    eyebrow={content.hero.eyebrow}
+    headline={content.hero.headline}
+    body={content.hero.body}
+    primaryLabel={content.hero.primaryCta.label}
+    primaryHref={content.hero.primaryCta.href}
+    secondaryLabel={content.hero.secondaryCta.label}
+    secondaryHref={content.hero.secondaryCta.href}
+    proofPoints={content.hero.proofPoints}
+    visualOnMobile
+  >
+    <SectionMedia slot="visual" media={media.hero} showCaption={false} />
+  </PageHero>
+
+  <Section id="how-it-works" spacing="spacious" ariaLabelledby="how-it-works-title">
+    <SectionGrid mediaSide="end">
+      <div slot="heading" class="flow">
+        <p class="section-kicker">{content.overview.eyebrow}</p>
+        <h2 id="how-it-works-title">{content.overview.title}</h2>
+      </div>
+      <div class="prose">
+        {content.overview.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+      <SectionMedia slot="media" media={media.overview} />
+    </SectionGrid>
+  </Section>
+
+  <Section
+    id="week-schedule"
+    tone="subtle"
+    spacing="spacious"
+    ariaLabelledby="week-schedule-title"
+  >
+    <SectionIntro
+      eyebrow={content.weekSchedule.eyebrow}
+      title={content.weekSchedule.title}
+      headingId="week-schedule-title"
+    />
+    <div class="schedule-scroll" role="region" aria-label="Week schedule" tabindex="0">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            {content.weekSchedule.days.map((d) => (
+              <th scope="col">{d.day}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {content.weekSchedule.days.map((d) => (
+              <td>
+                <ul>
+                  {d.topics.map((topic) => <li>{topic}</li>)}
+                </ul>
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </Section>
+
+  <Section
+    id="build-cycle"
+    spacing="spacious"
+    ariaLabelledby="build-cycle-title"
+  >
+    <SectionGrid panelFull>
+      <div slot="heading" class="flow">
+        <p class="section-kicker">The build cycle</p>
+        <h2 id="build-cycle-title">Seven steps. One complete loop.</h2>
+      </div>
+      <p class="media-section-lead">
+        Every student follows the same seven-step build cycle across the week.
+        Each step builds on the last. By Friday, they have moved from observation
+        to something they can explain and defend.
+      </p>
+      <BuildCycle slot="panel" steps={homepageContent.buildSteps} />
+    </SectionGrid>
+  </Section>
+
+  <Section
+    id="modules"
+    tone="subtle"
+    spacing="spacious"
+    ariaLabelledby="modules-title"
+  >
+    <SectionIntro
+      eyebrow="Core modules"
+      title="What students learn."
+      lead="Eleven modules taught across the week. Each one connects money, markets, building, and judgment."
+      headingId="modules-title"
+    />
+    <FeatureGrid items={content.modules} />
+  </Section>
+
+  <Section
+    id="maker-market"
+    spacing="spacious"
+    ariaLabelledby="maker-market-title"
+  >
+    <SectionGrid mediaSide="start">
+      <div slot="heading" class="flow">
+        <p class="section-kicker">{content.makerMarket.eyebrow}</p>
+        <h2 id="maker-market-title">{content.makerMarket.title}</h2>
+      </div>
+      <div class="prose">
+        {content.makerMarket.paragraphs.map((p) => <p>{p}</p>)}
+        <ul class="maker-market-checklist">
+          {content.makerMarket.mustExplain.map((item) => (
+            <li><span aria-hidden="true">→</span>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <SectionMedia slot="media" media={media.makerMarket} />
+    </SectionGrid>
+  </Section>
+
+  <FinalCtaSection
+    id="register"
+    eyebrow="August 10–14 · Toronto"
+    title="Ready to build?"
+    primaryLabel="Register for August"
+    primaryHref="/parent-approval/"
+    secondaryLabel="Back to home"
+    secondaryHref="/"
+    headingId="curriculum-final-cta-title"
+  >
+    <Fragment slot="copy">
+      <p>
+        One focused week at the UTSU Student Commons. Limited to 30 students.
+        Tuition is $200.
+      </p>
+    </Fragment>
+  </FinalCtaSection>
+</BaseLayout>
+
+<style>
+  /* Week schedule table */
+  .schedule-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+  }
+
+  .schedule-table {
+    width: 100%;
+    min-width: 44rem;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: var(--space-3) var(--space-3);
+    border: 1px solid var(--color-border);
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .schedule-table th {
+    background: var(--color-surface-subtle);
+    color: var(--color-primary);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .schedule-table td ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .schedule-table td li {
+    color: var(--color-text-muted);
+    line-height: var(--line-copy);
+  }
+
+  /* Maker Market checklist */
+  .maker-market-checklist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .maker-market-checklist li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    color: var(--color-text-muted);
+    line-height: var(--line-copy);
+  }
+
+  .maker-market-checklist span {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    flex-shrink: 0;
+  }
+</style>

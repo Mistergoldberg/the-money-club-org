@@ -59,7 +59,7 @@
 
   --text-xs: 0.875rem;
   --text-sm: 1rem;
-  --text-body: clamp(1.0625rem, 1rem + 0.2vw, 1.1875rem);
+  --text-body: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
   --text-lead: clamp(1.25rem, 1.1rem + 0.55vw, 1.625rem);
   --text-lg: clamp(1.125rem, 1.05rem + 0.25vw, 1.3rem);
   --text-xl: clamp(1.4rem, 1.2rem + 0.55vw, 1.75rem);
@@ -74,10 +74,10 @@
   --line-lead: 1.5;
   --line-caption: 1.4;
   --line-title: 1.1;
-  --line-heading: 0.95;
+  --line-heading: 0.79;
   --line-height-tight: 1.15;
   --line-height-relaxed: var(--line-copy);
-  --tracking-display: 0.04em;
+  --tracking-display: 0.017em;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;

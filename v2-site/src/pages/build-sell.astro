@@ -1,0 +1,175 @@
+---
+import BuildCycle from "../components/sections/BuildCycle.astro";
+import FeatureGrid from "../components/sections/FeatureGrid.astro";
+import FinalCtaSection from "../components/sections/FinalCtaSection.astro";
+import PageHero from "../components/sections/PageHero.astro";
+import SectionMedia from "../components/media/SectionMedia.astro";
+import SectionGrid from "../components/layout/SectionGrid.astro";
+import Section from "../components/ui/Section.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { buildSellMedia as media } from "../data/media";
+import type { BuildStep, HomeFeature } from "../data/homepage";
+
+const processSteps: readonly BuildStep[] = [
+  { title: "Notice problems", description: "What could work better? Students learn to observe friction before jumping to solutions." },
+  { title: "Generate ideas", description: "Explore options before choosing one. Quantity first, judgment second." },
+  { title: "Build something simple", description: "Product, service, or app concept. The constraint is that it has to be explainable." },
+  { title: "Test it", description: "Get feedback from real people. Does anyone actually want this?" },
+  { title: "Improve it", description: "Adjust based on what works. Iteration is the skill, not perfection." },
+  { title: "Prove it", description: "Show why someone would choose it, use it, or pay for it." },
+];
+
+const aiTools: readonly HomeFeature[] = [
+  { title: "Market research", description: "Understand customers and study what people already buy and why." },
+  { title: "Opportunity spotting", description: "Analyze patterns, gaps, and underserved problems in a market." },
+  { title: "Business modelling", description: "Model simple pricing, cost, and margin scenarios quickly." },
+  { title: "Media and marketing", description: "Create visual assets, copy, and product positioning." },
+  { title: "Prototyping", description: "Build basic websites and app concepts faster than traditional tools allow." },
+];
+
+const moneySkills: readonly HomeFeature[] = [
+  { title: "Cost, price, and margin", description: "The difference between what something costs to make and what someone will pay for it." },
+  { title: "Pricing and demand", description: "How the price of something changes whether people want it at all." },
+  { title: "Why ideas fail", description: "How to spot early whether the economics of an idea actually work." },
+  { title: "Decisions and outcomes", description: "How the choices students make in their project affect the results they see." },
+];
+---
+
+<BaseLayout
+  title="Build & Sell | The Money Club"
+  description="Students build real products, price them, test them, and sell them at a live Maker Market. One week. Real decisions. Real feedback."
+  canonicalPath="/build-sell/"
+>
+  <PageHero
+    eyebrow="Build & Sell"
+    headline="Build products. Price them. Sell them."
+    body="Students get a project budget and work in teams to build something people might actually pay for. They test it, get feedback, and adjust. The goal is simple: understand what makes something worth paying for."
+    primaryLabel="Register for August"
+    primaryHref="/parent-approval/"
+    secondaryLabel="See the curriculum"
+    secondaryHref="/curriculum/"
+    proofPoints={["Real projects", "Real feedback", "Live Maker Market"]}
+    visualOnMobile
+  >
+    <SectionMedia slot="visual" media={media.hero} showCaption={false} />
+  </PageHero>
+
+  <Section
+    id="the-process"
+    tone="subtle"
+    spacing="spacious"
+    ariaLabelledby="process-title"
+  >
+    <SectionGrid panelFull>
+      <div slot="heading" class="flow">
+        <p class="section-kicker">The process students use</p>
+        <h2 id="process-title">A simple, repeatable loop.</h2>
+      </div>
+      <p class="media-section-lead">
+        Many students already earn money in small ways — babysitting, tutoring,
+        selling online. This program builds on that instinct with a structured
+        process they can repeat on any idea.
+      </p>
+      <BuildCycle slot="panel" steps={processSteps} />
+    </SectionGrid>
+  </Section>
+
+  <Section
+    id="build-with-ai"
+    spacing="spacious"
+    ariaLabelledby="ai-title"
+  >
+    <SectionGrid mediaSide="end">
+      <div slot="heading" class="flow">
+        <p class="section-kicker">Build with AI</p>
+        <h2 id="ai-title">AI is a build tool, not a shortcut.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Students use AI to research faster, prototype more quickly, and test
+          stronger ideas. The goal is not just to use AI — it is to use it to
+          build something that actually works.
+        </p>
+      </div>
+      <SectionMedia slot="media" media={media.ai} />
+    </SectionGrid>
+    <div class="ai-tools-grid">
+      <FeatureGrid items={aiTools} />
+    </div>
+  </Section>
+
+  <Section
+    id="financial-literacy"
+    tone="subtle"
+    spacing="spacious"
+    ariaLabelledby="financial-literacy-title"
+  >
+    <SectionGrid mediaSide="start">
+      <div slot="heading" class="flow">
+        <p class="section-kicker">Financial literacy</p>
+        <h2 id="financial-literacy-title">In most programs, money is explained. Here, it is used.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          Students see the financial outcome of their own decisions, through
+          their own project. The concepts are not abstract — they are the
+          difference between an idea that earns and one that does not.
+        </p>
+      </div>
+      <SectionMedia slot="media" media={media.financialLiteracy} />
+    </SectionGrid>
+    <div class="money-skills-grid">
+      <FeatureGrid items={moneySkills} />
+    </div>
+  </Section>
+
+  <Section
+    id="maker-market"
+    spacing="spacious"
+    ariaLabelledby="maker-market-title"
+  >
+    <SectionGrid mediaSide="end">
+      <div slot="heading" class="flow">
+        <p class="section-kicker">How it ends</p>
+        <h2 id="maker-market-title">The Maker Market.</h2>
+      </div>
+      <div class="prose">
+        <p>
+          The program ends with a live Maker Market. Each team presents what
+          they built — products, services, apps, ideas.
+        </p>
+        <p>
+          Every participant receives virtual cash and decides what to spend it
+          on. That creates one real question. No grades. Just decisions.
+        </p>
+        <p><strong>Why would someone choose this?</strong></p>
+      </div>
+      <SectionMedia slot="media" media={media.makerMarket} />
+    </SectionGrid>
+  </Section>
+
+  <FinalCtaSection
+    id="register"
+    eyebrow="August 10–14 · Toronto"
+    title="Ready to build something real?"
+    primaryLabel="Register for August"
+    primaryHref="/parent-approval/"
+    secondaryLabel="See the curriculum"
+    secondaryHref="/curriculum/"
+    headingId="build-sell-final-cta-title"
+  >
+    <Fragment slot="copy">
+      <p>
+        One focused week at the UTSU Student Commons. Limited to 30 students.
+        Tuition is $200.
+      </p>
+    </Fragment>
+  </FinalCtaSection>
+</BaseLayout>
+
+<style>
+  .ai-tools-grid,
+  .money-skills-grid {
+    margin-top: var(--space-5);
+  }
+</style>
