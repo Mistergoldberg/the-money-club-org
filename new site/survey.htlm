@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="refresh" content="0; url=survey.html" />
+  <link rel="canonical" href="https://the-money-club.org/survey.html" />
+  <title>Redirecting to Student Survey | The Money Club.Org</title>
+  <script>
+    window.location.replace('survey.html');
+  </script>
+</head>
+<body>
+  <p><a href="survey.html">Open Student Survey</a></p>
+</body>
+</html>
