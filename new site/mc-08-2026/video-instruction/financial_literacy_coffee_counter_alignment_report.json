@@ -1,0 +1,24 @@
+{
+  "language": "en",
+  "language_probability": 1,
+  "duration": 572.496,
+  "segments": 155,
+  "model": "small.en",
+  "expected_words": 1506,
+  "recognized_words": 1521,
+  "direct_matches": 1486,
+  "interpolated_words": 20,
+  "match_rate": 0.9867197875166003,
+  "first_word": {
+    "word": "financial",
+    "start": 0.0,
+    "end": 0.52,
+    "matched": true
+  },
+  "last_word": {
+    "word": "demand",
+    "start": 552.6,
+    "end": 552.98,
+    "matched": true
+  }
+}
