@@ -25,9 +25,14 @@ $allowed_returns = [
     'curriculum-details.html',
     'executive-director-letter.html',
     'who-runs-it.html',
+    'learn/',
     'learn/index.html',
     'learn/financial-literacy-for-young-entrepreneurs/index.html',
-    'learn/financial-literacy-for-young-entrepreneurs/worksheet.html'
+    'learn/financial-literacy-for-young-entrepreneurs/worksheet.html',
+    'course-catalogue/',
+    'course-catalogue/index.html',
+    'course-catalogue/financial-literacy-for-young-entrepreneurs/index.html',
+    'course-catalogue/financial-literacy-for-young-entrepreneurs/worksheet.html'
 ];
 
 $return_to = tmc_resolve_return_target($_POST['return-to'] ?? 'index.html', $allowed_returns, 'index.html');

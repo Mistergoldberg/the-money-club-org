@@ -3,7 +3,7 @@
 <head>
   <!--
     Learning Hub pattern:
-    - Use CollectionPage schema with canonical https://the-money-club.org/learn/
+    - Use CollectionPage schema with canonical https://the-money-club.org/course-catalogue/
     - Link only to published curriculum modules and worksheet/template pages.
     - Do not add future lesson URLs until the files exist and sitemap entries are ready.
   -->
@@ -12,24 +12,25 @@
   <title>The Money Club Learning Catalogue | The Money Club</title>
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
   <meta name="description" content="A practical learning catalogue for students building financial literacy, business judgment, venture concepts, and worksheet-based projects." />
+  <meta name="robots" content="noindex,nofollow" />
   <meta property="og:title" content="The Money Club Learning Catalogue" />
   <meta property="og:description" content="A practical learning catalogue for students building financial literacy, business judgment, venture concepts, and worksheet-based projects." />
-  <meta property="og:url" content="https://the-money-club.org/learn/" />
+  <meta property="og:url" content="https://the-money-club.org/course-catalogue/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/kid-presents-larg-class.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Money Club Learning Catalogue" />
   <meta name="twitter:description" content="A practical learning catalogue for students building financial literacy, business judgment, venture concepts, and worksheet-based projects." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/kid-presents-larg-class.jpg" />
-  <link rel="canonical" href="https://the-money-club.org/learn/" />
+  <link rel="canonical" href="https://the-money-club.org/course-catalogue/" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "CollectionPage",
-          "@id": "https://the-money-club.org/learn/#collectionpage",
-          "url": "https://the-money-club.org/learn/",
+          "@id": "https://the-money-club.org/course-catalogue/#collectionpage",
+          "url": "https://the-money-club.org/course-catalogue/",
           "name": "The Money Club Learning Catalogue",
           "description": "A practical learning catalogue for students building financial literacy, business judgment, venture concepts, and worksheet-based projects.",
           "publisher": {
@@ -1711,7 +1712,7 @@ nav{
       main > #choose-your-adventure{ order: 110; }
     }
 
-    /* Learning catalogue prototype: cloned from /learn/ and adapted from the JaredGoldberg.ca archive hierarchy. */
+    /* Learning catalogue prototype: cloned from /course-catalogue/ and adapted from the JaredGoldberg.ca archive hierarchy. */
     .learning-catalogue{
       padding: clamp(28px, 5vw, 58px) 0 clamp(48px, 7vw, 82px);
       color: var(--text);
@@ -2139,7 +2140,7 @@ nav{
   </style>
   <link rel="stylesheet" href="/assets/typography.css?v=6" />
   <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
-  <link rel="stylesheet" href="/assets/learn-catalogue.css?v=2" />
+  <link rel="stylesheet" href="/assets/learn-catalogue.css?v=1" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -2175,17 +2176,17 @@ nav{
           <details class="learning-menu-tree">
             <summary>Learning Catalogue</summary>
             <div class="learning-menu-list">
-              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
-              <a href="/learn/index.html">Design Thinking</a>
-              <a href="/learn/index.html">Market Research</a>
-              <a href="/learn/index.html">Sourcing</a>
-              <a href="/learn/index.html">Control Brand</a>
-              <a href="/learn/index.html">Business Model</a>
-              <a href="/learn/index.html">Go-To-Market</a>
-              <a href="/learn/index.html">Creative Fundamentals</a>
-              <a href="/learn/index.html">Marketing</a>
-              <a href="/learn/index.html">Market Watch</a>
-              <a href="/learn/index.html">AI Tools</a>
+              <a href="/course-catalogue/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
+              <a href="/course-catalogue/">Design Thinking</a>
+              <a href="/course-catalogue/">Market Research</a>
+              <a href="/course-catalogue/">Sourcing</a>
+              <a href="/course-catalogue/">Control Brand</a>
+              <a href="/course-catalogue/">Business Model</a>
+              <a href="/course-catalogue/">Go-To-Market</a>
+              <a href="/course-catalogue/">Creative Fundamentals</a>
+              <a href="/course-catalogue/">Marketing</a>
+              <a href="/course-catalogue/">Market Watch</a>
+              <a href="/course-catalogue/">AI Tools</a>
             </div>
           </details>
           <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
@@ -2210,11 +2211,12 @@ nav{
         <aside class="learning-catalogue-sidebar" aria-label="Learning catalogue table of contents">
           <h2>Learning Catalogue</h2>
           <ul class="catalogue-toc">
+              <li><a class="catalogue-toc-link" href="#core-build-modules">Core Build Modules</a></li>
               <li>
                 <details>
                   <summary>💰 Financial Literacy as Survival Gear</summary>
                   <ul class="catalogue-sublist">
-                    <li><a href="/learn/financial-literacy-for-young-entrepreneurs/">Learning Module</a></li>
+                    <li><a href="/course-catalogue/financial-literacy-for-young-entrepreneurs/">Learning Module</a></li>
                     <li><a href="#financial-literacy-worksheet">Worksheet: Coffee Counter Math Lab</a></li>
                   </ul>
                 </details>
@@ -2317,11 +2319,15 @@ nav{
             <div class="catalogue-eyebrow">Learning Hub</div>
             <h1 id="learning-catalogue-heading">The Money Club Learning Catalogue</h1>
             <p>Most students understand a product before they understand a business. This hub starts with the product, then follows the system underneath it.</p>
-            <p>Start with money. Then find friction. Then test whether demand is real. After that, follow the product through sourcing, positioning, pricing, launch, visuals, distribution, market watching, and AI-supported improvement.</p>
-            <p>The point is not only to learn vocabulary, but to better understand judgment while building.</p>
-            <p>Each module gives students something to inspect, price, test, and explain.</p>
+            <p>Each module gives students something to inspect, price, test, and explain. The point is not vocabulary. The point is better judgment while they build.</p>
           </section>
 
+          <section class="catalogue-section" id="core-build-modules" aria-labelledby="core-build-modules-heading">
+            <h2 class="catalogue-section-title" id="core-build-modules-heading">Core Build Modules</h2>
+            <div class="catalogue-card catalogue-core-card">
+              <p>Start with money. Then find friction. Then test whether demand is real. After that, follow the product through sourcing, positioning, pricing, launch, visuals, distribution, market watching, and AI-supported improvement.</p>
+            </div>
+          </section>
           <section class="catalogue-section" id="financial-literacy" aria-labelledby="financial-literacy-heading">
             <h2 class="catalogue-section-title" id="financial-literacy-heading">💰 Financial Literacy as Survival Gear</h2>
             <div class="catalogue-card">
@@ -2340,8 +2346,8 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> A coffee counter model that shows whether the business is worth the time.</div>
               <div class="catalogue-actions">
-                <a class="btn teal gloss" href="/learn/financial-literacy-for-young-entrepreneurs/">Open published module</a>
-                <a class="btn gold gloss" href="/learn/financial-literacy-for-young-entrepreneurs/worksheet.html">Open worksheet</a>
+                <a class="btn teal gloss" href="/course-catalogue/financial-literacy-for-young-entrepreneurs/">Open published module</a>
+                <a class="btn gold gloss" href="/course-catalogue/financial-literacy-for-young-entrepreneurs/worksheet.html">Open worksheet</a>
               </div>
             </div>
           </section>
@@ -2364,7 +2370,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> A clear problem statement: who is struggling, what is annoying, why it matters, and what a better offer could improve.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/design-thinking-and-human-factor-research/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/design-thinking-and-human-factor-research/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> Find the Friction Lab</span>
               </div>
             </div>
@@ -2388,7 +2394,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> A short demand case that explains why the opportunity may be real and what a small share of the market could be worth.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/market-research-follow-the-money-and-problems/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/market-research-follow-the-money-and-problems/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> Demand Signal Map</span>
               </div>
             </div>
@@ -2412,7 +2418,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> A supplier choice that explains the tradeoff between cost, safety, margin, and risk.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/sourcing-101-where-value-is-actually-made/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/sourcing-101-where-value-is-actually-made/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> Supplier Comparison Lab</span>
               </div>
             </div>
@@ -2436,7 +2442,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> A one-page control brand concept with product, customer, price, margin, and reason to believe.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/control-brand-playbook/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/control-brand-playbook/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> Build a Better Version Lab</span>
               </div>
             </div>
@@ -2460,7 +2466,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> A simple business model students can explain in under two minutes.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/business-model-thinking/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/business-model-thinking/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> One-Page Business Model Lab</span>
               </div>
             </div>
@@ -2484,7 +2490,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> A launch test that can run without wasting time or money.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/go-to-market-launch-without-burning-fuel/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/go-to-market-launch-without-burning-fuel/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> First Launch Test Plan</span>
               </div>
             </div>
@@ -2508,7 +2514,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> A poster, flyer, or product card that makes the offer understandable in five seconds.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/creative-fundamentals-photography-design-and-visual-clarity/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/creative-fundamentals-photography-design-and-visual-clarity/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> Make the Offer Clear Lab</span>
               </div>
             </div>
@@ -2532,7 +2538,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> The top three channels to test first, with a reason for each choice.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/marketing-use-existing-channels-first/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/marketing-use-existing-channels-first/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> Channel Match Lab</span>
               </div>
             </div>
@@ -2556,7 +2562,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> A weekly market watch summary with one recommended action.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/staying-ahead-of-the-game/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/staying-ahead-of-the-game/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> Market Watch Dashboard</span>
               </div>
             </div>
@@ -2580,7 +2586,7 @@ nav{
               </div>
               <div class="catalogue-output"><strong>Final output:</strong> An AI-assisted venture-building log with prompts, outputs, source checks, and human judgment notes.</div>
               <div class="catalogue-actions">
-                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /learn/ai-tools-used-across-the-program/</span>
+                <span class="catalogue-page-note catalogue-required-button"><strong>Required page:</strong> /course-catalogue/ai-tools-used-across-the-program/</span>
                 <span class="catalogue-page-note catalogue-required-button"><strong>Required worksheet:</strong> AI Co-Pilot Lab</span>
               </div>
             </div>

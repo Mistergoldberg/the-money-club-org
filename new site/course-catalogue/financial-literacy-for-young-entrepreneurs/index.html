@@ -2,37 +2,37 @@
 <html lang="en">
 <head>
   <!--
-    Worksheet/template pattern:
-    Use LearningResource schema, link back to the related lesson and /learn/,
-    keep dynamic worksheet styling in /assets/worksheet.css, and avoid one-off inline CSS.
-    Future worksheets should define objective, audience, usage instructions, related lesson,
-    save/print/copy behavior if interactive, and a canonical URL for the actual file path.
+    Learning module template notes:
+    To create the next /course-catalogue/{slug}/ module, duplicate this folder and update:
+    title/meta/canonical/OG URL, Article JSON-LD, H1/dek/meta rows, H2 sections,
+    exercise block, key takeaways, related worksheet link, Learning Hub CTA, and sitemap.xml.
+    Use absolute root-relative asset paths from nested /course-catalogue/{slug}/ pages.
+    Do not link unpublished future modules from the public page.
   -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Coffee Counter Math Lab Worksheet | The Money Club</title>
+  <title>Financial Literacy for Young Entrepreneurs | The Money Club</title>
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
-  <meta name="description" content="A student worksheet for designing a coffee counter and calculating price, cost, gross margin, net profit, hooks, upsells, and repeat demand." />
-  <meta property="og:title" content="Coffee Counter Math Lab Worksheet" />
-  <meta property="og:description" content="A student worksheet for designing a coffee counter and calculating price, cost, margin, profit, hooks, upsells, and repeat demand." />
-  <meta property="og:url" content="https://the-money-club.org/learn/financial-literacy-for-young-entrepreneurs/worksheet.html" />
+  <meta name="description" content="A practical guide to financial literacy for young entrepreneurs, using coffee to teach cost, margin, cash flow, pricing, and repeat demand." />
+  <meta property="og:title" content="Financial Literacy for Young Entrepreneurs" />
+  <meta property="og:description" content="A practical guide for students learning cost, margin, cash flow, pricing, and how business systems work." />
+  <meta property="og:url" content="https://the-money-club.org/course-catalogue/financial-literacy-for-young-entrepreneurs/" />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Coffee Counter Math Lab Worksheet" />
-  <meta name="twitter:description" content="A student worksheet for calculating price, cost, margin, profit, hooks, upsells, and repeat demand." />
+  <meta name="twitter:title" content="Financial Literacy for Young Entrepreneurs" />
+  <meta name="twitter:description" content="A practical guide for students learning cost, margin, cash flow, pricing, and how business systems work." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
-  <link rel="canonical" href="https://the-money-club.org/learn/financial-literacy-for-young-entrepreneurs/worksheet.html" />
+  <link rel="canonical" href="https://the-money-club.org/course-catalogue/financial-literacy-for-young-entrepreneurs/" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LearningResource",
-      "name": "Coffee Counter Math Lab Worksheet",
-      "headline": "Coffee Counter Math Lab Worksheet",
-      "description": "A student worksheet for designing a coffee counter and calculating price, cost, gross margin, net profit, hooks, upsells, and repeat demand.",
+      "@type": "Article",
+      "headline": "Financial Literacy for Young Entrepreneurs",
+      "description": "A practical guide to financial literacy for young entrepreneurs, using coffee to teach cost, margin, cash flow, pricing, and repeat demand.",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://the-money-club.org/learn/financial-literacy-for-young-entrepreneurs/worksheet.html"
+        "@id": "https://the-money-club.org/course-catalogue/financial-literacy-for-young-entrepreneurs/"
       },
       "image": "https://the-money-club.org/assets/Kids-Index.jpg",
       "author": {
@@ -47,13 +47,13 @@
           "url": "https://the-money-club.org/assets/logo-500.png"
         }
       },
-      "url": "https://the-money-club.org/learn/financial-literacy-for-young-entrepreneurs/worksheet.html",
+      "url": "https://the-money-club.org/course-catalogue/financial-literacy-for-young-entrepreneurs/",
       "datePublished": "2026-05-05",
       "dateModified": "2026-05-05",
       "isPartOf": {
         "@type": "CollectionPage",
         "name": "The Money Club Learning Hub",
-        "url": "https://the-money-club.org/learn/"
+        "url": "https://the-money-club.org/course-catalogue/"
       }
     }
   </script>
@@ -109,6 +109,17 @@
     }
 
     *{ box-sizing:border-box; }
+    .sr-only{
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
     html,body{ height:100%; }
     html{ scroll-padding-top: var(--scroll-offset); }
     body{
@@ -343,7 +354,7 @@ nav{
     }
     .btn.gold{
       background: var(--gold);
-      color: #ffffff;
+      color: var(--text);
       box-shadow: 0 10px 20px rgba(240,180,58,0.25);
     }
 
@@ -953,7 +964,7 @@ nav{
     }
     .content-section.gold .content-banner{
       background: var(--gold);
-      color: #fff;
+      color: var(--ink);
     }
     .content-content{
       max-width: var(--max-wide);
@@ -1204,7 +1215,6 @@ nav{
       border-radius: 16px;
       overflow-x: auto;
       background: #ffffff;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.55);
     }
     .table-wrap table{
       width: 100%;
@@ -1436,6 +1446,25 @@ nav{
       color: var(--text);
     }
     .thankyou-card h2.article-band-teal{ background: var(--teal); }
+
+    .learning-page-shell .thankyou-card h1,
+    .learning-page-shell .thankyou-card h2,
+    .learning-page-shell .thankyou-card h3{
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .learning-page-shell .thankyou-card h2.article-band-heading{
+      margin: 34px -20px 18px;
+      padding: 18px 20px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 0.86;
+      border-radius: 0;
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+    }
     .thankyou-card h3{
       margin: 18px 0 6px;
       font-size: clamp(22px, 3vw, 30px);
@@ -1554,7 +1583,7 @@ nav{
       padding: 14px 22px;
       border-radius: 999px;
       background: var(--gold);
-      color: #ffffff;
+      color: var(--text);
       font-family: var(--font-display);
       font-size: clamp(28px, 3.6vw, 38px);
       letter-spacing: var(--tracking-display);
@@ -1562,6 +1591,108 @@ nav{
       line-height: 0.9;
       justify-self: start;
       box-shadow: 0 12px 22px rgba(240,180,58,0.24);
+    }
+    .article-intro-actions{
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 12px;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+    .article-intro-actions .article-read-time,
+    .article-intro-actions .video-lesson-button{
+      width: 100%;
+      min-width: 0;
+      justify-self: auto;
+      padding: 12px 10px;
+      font-size: clamp(18px, 1.35vw, 20px);
+      text-align: center;
+      white-space: nowrap;
+    }
+    .video-lesson-button{
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      background: var(--teal);
+      color: #ffffff;
+      box-shadow: 0 12px 22px rgba(30,138,149,0.24);
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.6vw, 38px);
+      letter-spacing: var(--tracking-display);
+      line-height: 0.9;
+      text-transform: uppercase;
+    }
+    .video-lesson-button:hover,
+    .video-lesson-button:focus-visible{
+      background: #176f78;
+      outline: 3px solid rgba(30,138,149,0.28);
+      outline-offset: 3px;
+    }
+    body.video-overlay-open{
+      overflow: hidden;
+    }
+    .video-lesson-overlay[hidden]{
+      display: none;
+    }
+    .video-lesson-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 5000;
+      display: grid;
+      place-items: center;
+      padding: clamp(12px, 3vw, 36px);
+      background: rgba(0,0,0,0.88);
+    }
+    .video-lesson-dialog{
+      position: relative;
+      width: min(1180px, 100%);
+      height: min(760px, calc(100dvh - clamp(24px, 6vw, 72px)));
+      min-height: 360px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 16px;
+      background: #000000;
+      box-shadow: 0 28px 80px rgba(0,0,0,0.5);
+    }
+    .video-lesson-frame{
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #000000;
+    }
+    .video-lesson-close{
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 50%;
+      padding: 0;
+      background: rgba(0,0,0,0.82);
+      color: #ffffff;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1;
+    }
+    .video-lesson-close:hover,
+    .video-lesson-close:focus-visible{
+      border-color: #ffffff;
+      background: #111111;
+      outline: 3px solid rgba(255,255,255,0.32);
+      outline-offset: 2px;
     }
     .share-btn{
       width: min(100%, 320px);
@@ -1645,6 +1776,10 @@ nav{
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
       gap: 28px;
+      align-items: stretch;
+    }
+    .article-facts-grid--stacked{
+      grid-template-columns: 1fr;
       align-items: stretch;
     }
     .article-facts-card{
@@ -1765,6 +1900,23 @@ nav{
     .learning-page-shell .article-facts-card .btn.gold{
       color: var(--text);
     }
+    .learning-page-shell .article-facts-grid--stacked .article-facts-card{
+      width: 100%;
+    }
+    @media (min-width: 901px){
+      .learning-page-shell .article-facts-grid--stacked .article-facts-card{
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+        align-items: center;
+        gap: clamp(22px, 3vw, 40px);
+      }
+      .learning-page-shell .article-facts-grid--stacked .article-facts-card .btn{
+        align-self: center;
+        margin-top: 0;
+      }
+      .learning-page-shell .article-facts-grid--stacked .article-facts-media{
+        grid-row: span 2;
+      }
+    }
     @media (min-width: 981px){
       .topbar nav{
         flex-wrap: wrap;
@@ -1873,6 +2025,23 @@ nav{
       .article-read-time{
         width: 100%;
         justify-self: stretch;
+      }
+      .article-intro-actions{
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .video-lesson-button{
+        width: 100%;
+      }
+      .video-lesson-overlay{
+        padding: 0;
+      }
+      .video-lesson-dialog{
+        width: 100%;
+        height: 100dvh;
+        min-height: 0;
+        border: 0;
+        border-radius: 0;
       }
       .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
       .hero-title{ font-size: var(--size-hero); }
@@ -2164,7 +2333,6 @@ nav{
   </style>
   <link rel="stylesheet" href="/assets/typography.css?v=6" />
   <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
-  <link rel="stylesheet" href="/assets/worksheet.css?v=3" />
   <link rel="stylesheet" href="/assets/learn-catalogue.css?v=2" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -2200,17 +2368,17 @@ nav{
           <details class="learning-menu-tree">
             <summary>Learning Catalogue</summary>
             <div class="learning-menu-list">
-              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
-              <a href="/learn/index.html">Design Thinking</a>
-              <a href="/learn/index.html">Market Research</a>
-              <a href="/learn/index.html">Sourcing</a>
-              <a href="/learn/index.html">Control Brand</a>
-              <a href="/learn/index.html">Business Model</a>
-              <a href="/learn/index.html">Go-To-Market</a>
-              <a href="/learn/index.html">Creative Fundamentals</a>
-              <a href="/learn/index.html">Marketing</a>
-              <a href="/learn/index.html">Market Watch</a>
-              <a href="/learn/index.html">AI Tools</a>
+              <a href="/course-catalogue/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
+              <a href="/course-catalogue/">Design Thinking</a>
+              <a href="/course-catalogue/">Market Research</a>
+              <a href="/course-catalogue/">Sourcing</a>
+              <a href="/course-catalogue/">Control Brand</a>
+              <a href="/course-catalogue/">Business Model</a>
+              <a href="/course-catalogue/">Go-To-Market</a>
+              <a href="/course-catalogue/">Creative Fundamentals</a>
+              <a href="/course-catalogue/">Marketing</a>
+              <a href="/course-catalogue/">Market Watch</a>
+              <a href="/course-catalogue/">AI Tools</a>
             </div>
           </details>
           <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
@@ -2235,13 +2403,13 @@ nav{
         <aside class="learning-catalogue-sidebar" aria-label="Learning catalogue table of contents">
           <h2>Learning Catalogue</h2>
           <ul class="catalogue-toc">
-            <li><a class="catalogue-toc-link" href="/learn/#core-build-modules">Core Build Modules</a></li>
+            <li><a class="catalogue-toc-link" href="/course-catalogue/#core-build-modules">Core Build Modules</a></li>
             <li>
               <details class="contains-current" open>
                 <summary>💰 Financial Literacy as Survival Gear</summary>
                 <ul class="catalogue-sublist">
-                  <li><a href="/learn/financial-literacy-for-young-entrepreneurs/">Learning Module</a></li>
-                  <li><a class="is-current" aria-current="page" href="/learn/financial-literacy-for-young-entrepreneurs/worksheet.html">Worksheet: Coffee Counter Math Lab</a></li>
+                  <li><a href="/course-catalogue/financial-literacy-for-young-entrepreneurs/">Learning Module</a></li>
+                  <li><a href="/course-catalogue/financial-literacy-for-young-entrepreneurs/worksheet.html">Worksheet: Coffee Counter Math Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2250,7 +2418,7 @@ nav{
                 <summary>🎨 Design Thinking & Human Factor Research</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#design-thinking-worksheet">Worksheet: Find the Friction Lab</a></li>
+                  <li><a href="/course-catalogue/#design-thinking-worksheet">Worksheet: Find the Friction Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2259,7 +2427,7 @@ nav{
                 <summary>📊 Market Research: Follow the Money & Problems</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#market-research-worksheet">Worksheet: Demand Signal Map</a></li>
+                  <li><a href="/course-catalogue/#market-research-worksheet">Worksheet: Demand Signal Map</a></li>
                 </ul>
               </details>
             </li>
@@ -2268,7 +2436,7 @@ nav{
                 <summary>🏭 Sourcing 101: Where Value Is Actually Made</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#sourcing-worksheet">Worksheet: Supplier Comparison Lab</a></li>
+                  <li><a href="/course-catalogue/#sourcing-worksheet">Worksheet: Supplier Comparison Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2277,7 +2445,7 @@ nav{
                 <summary>🏷 Control Brand Playbook</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#control-brand-worksheet">Worksheet: Build a Better Version Lab</a></li>
+                  <li><a href="/course-catalogue/#control-brand-worksheet">Worksheet: Build a Better Version Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2286,7 +2454,7 @@ nav{
                 <summary>📋 Business Model Thinking</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#business-model-worksheet">Worksheet: One-Page Business Model Lab</a></li>
+                  <li><a href="/course-catalogue/#business-model-worksheet">Worksheet: One-Page Business Model Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2295,7 +2463,7 @@ nav{
                 <summary>🚀 Go-To-Market: Launch Without Burning Fuel</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#go-to-market-worksheet">Worksheet: First Launch Test Plan</a></li>
+                  <li><a href="/course-catalogue/#go-to-market-worksheet">Worksheet: First Launch Test Plan</a></li>
                 </ul>
               </details>
             </li>
@@ -2304,7 +2472,7 @@ nav{
                 <summary>📸 Creative Fundamentals: Photography, Design & Visual Clarity</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#creative-fundamentals-worksheet">Worksheet: Make the Offer Clear Lab</a></li>
+                  <li><a href="/course-catalogue/#creative-fundamentals-worksheet">Worksheet: Make the Offer Clear Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2313,7 +2481,7 @@ nav{
                 <summary>📣 Marketing: Use Existing Channels First</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#marketing-worksheet">Worksheet: Channel Match Lab</a></li>
+                  <li><a href="/course-catalogue/#marketing-worksheet">Worksheet: Channel Match Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2322,7 +2490,7 @@ nav{
                 <summary>♟️ Staying Ahead of the Game</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#market-watch-worksheet">Worksheet: Market Watch Dashboard</a></li>
+                  <li><a href="/course-catalogue/#market-watch-worksheet">Worksheet: Market Watch Dashboard</a></li>
                 </ul>
               </details>
             </li>
@@ -2331,7 +2499,7 @@ nav{
                 <summary>💻 AI Tools Used Across the Program</summary>
                 <ul class="catalogue-sublist">
                   <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#ai-tools-worksheet">Worksheet: AI Co-Pilot Lab</a></li>
+                  <li><a href="/course-catalogue/#ai-tools-worksheet">Worksheet: AI Co-Pilot Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2346,371 +2514,169 @@ nav{
               </picture>
             </div>
             <div class="article-intro-summary">
-              <div class="article-intro-label">Student Worksheet</div>
+              <div class="article-intro-label">Learning Module</div>
               <div class="article-intro-body">
                 <div class="article-intro-heading">
-                  <h1 id="article-intro-heading">Coffee Counter Math Lab</h1>
-                  <p>A Money Club worksheet for understanding price, cost, margin, profit, hooks, and repeat demand.</p>
+                  <h1 id="article-intro-heading">Financial Literacy for Young Entrepreneurs</h1>
+                  <p>A practical lesson on cost, margin, cash flow, pricing, hooks, and repeat demand &mdash; using coffee as the grown-up lemonade stand.</p>
                 </div>
                 <div class="article-intro-meta">
                   <div class="article-intro-meta-row">
-                    <div class="article-intro-meta-label">Pairs with</div>
-                    <p><a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy for Young Entrepreneurs</a></p>
+                    <div class="article-intro-meta-label">Best for</div>
+                    <p>Students learning how money moves through a product, service, or venture concept.</p>
                   </div>
                   <div class="article-intro-meta-row">
-                    <div class="article-intro-meta-label">Goal</div>
-                    <p>Design a simple coffee counter and run the business math yourself.</p>
-                  </div>
-                  <div class="article-intro-meta-row">
-                    <div class="article-intro-meta-label">Big question</div>
-                    <p>Does each sale make the system stronger or weaker?</p>
+                    <div class="article-intro-meta-label">Learning Outcomes</div>
+                    <p>Revenue, cost, margin, profit, cash flow, pricing, incentives, upsells, and repeat demand.</p>
                   </div>
                 </div>
-                <div class="article-read-time">Interactive Worksheet</div>
+                <div class="article-intro-actions">
+                  <div class="article-read-time">Read Time: 7 Minutes</div>
+                  <button class="video-lesson-button" id="open-video-lesson" type="button" aria-haspopup="dialog">
+                    Video Lesson
+                  </button>
+                </div>
               </div>
             </div>
           </section>
 
-          <form id="coffee-counter-worksheet" class="worksheet-form" autocomplete="on">
-            <div class="worksheet-learning-layout">
-              <div class="worksheet-flow">
-                <section class="worksheet-intro" aria-labelledby="math-overview-heading">
-                  <h2 class="article-band-heading article-band-teal" id="math-overview-heading">Overview</h2>
-                  <p>Retail price is what comes in.</p>
-                  <p>Cost of Goods Sold, or COGS, is what goes out to make the product.</p>
-                  <p>Gross margin is what is left before operating expenses.</p>
-                  <div class="table-wrap" role="region" aria-label="Coffee gross margin example" tabindex="0">
-                    <table class="math-table worksheet-table math-example-table">
-                      <thead>
-                        <tr>
-                          <th scope="col">Product</th>
-                          <th scope="col">Retail Price</th>
-                          <th scope="col">Cost of Goods Sold</th>
-                          <th scope="col">Gross Margin $</th>
-                          <th scope="col">Gross Margin %</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Coffee</th>
-                          <td>$2.00</td>
-                          <td>$0.75</td>
-                          <td>$1.25</td>
-                          <td>62.5%</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <div class="worksheet-note">
-                    <p>Gross margin is retail price minus COGS.</p>
-                    <p><strong>$2.00 - $0.75 = $1.25</strong></p>
-                    <p>Gross margin percentage is gross margin divided by retail price.</p>
-                    <p><strong>$1.25 / $2.00 = 62.5%</strong></p>
-                    <p>A good target is <strong>40%+ gross margin</strong>.</p>
-                    <p>The goal is to end with about <strong>20% net margin</strong>, money in your pocket after operating expenses.</p>
-                    <p>Below that, the business may not be worth the time.</p>
-                  </div>
-                </section>
+          <h2 class="article-band-heading article-band-teal">Financial Literacy, A Practical Lesson</h2>
+          <p>Every kid understands a lemonade stand.</p>
+          <p>Buy lemons, add sugar and water, set up a table, sell cups, keep the money.</p>
+          <p>It is simple, which is why adults use it whenever they want to explain business to children.</p>
+          <p>But the lemonade stand also hides most of what makes a business interesting. It makes selling look like the whole game. It treats the product as a one-time event. It skips the systems underneath the sale.</p>
+          <p>If you want students to understand how money actually moves, start with coffee.</p>
+          <p>Coffee is the grown-up lemonade stand.</p>
+          <p>It is familiar. It is bought again and again. It can be cheap, premium, fast, social, convenient, customized, bundled, subscribed to, upgraded, and habit-forming. A single cup can teach more about business than a poster full of definitions.</p>
+          <p>That is why coffee is such a useful model for financial literacy for young entrepreneurs. It turns money from an abstract topic into a system students can inspect.</p>
 
-                <section aria-labelledby="math-net-heading">
-                  <h2 class="article-band-heading article-band-purple" id="math-net-heading">Net Margin</h2>
-                  <p>Net profit is the true profit.</p>
-                  <p>It is the money left after you pay for the product and the costs of running the business.</p>
-                  <p>Here is an example for 1,000 coffees sold.</p>
-                  <div class="table-wrap" role="region" aria-label="Coffee net margin example" tabindex="0">
-                    <table class="math-table worksheet-table">
-                      <thead>
-                        <tr>
-                          <th scope="col">Product</th>
-                          <th scope="col">Retail Price</th>
-                          <th scope="col">Units Sold</th>
-                          <th scope="col">Revenue</th>
-                          <th scope="col">Total COGS</th>
-                          <th scope="col">Gross Margin $</th>
-                          <th scope="col">Gross Margin %</th>
-                          <th scope="col">Operating Expenses</th>
-                          <th scope="col">Net Profit</th>
-                          <th scope="col">Net Margin %</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Coffee</th>
-                          <td>$2.00</td>
-                          <td>1,000</td>
-                          <td>$2,000</td>
-                          <td>$750</td>
-                          <td>$1,250</td>
-                          <td>62.5%</td>
-                          <td>$850</td>
-                          <td>$400</td>
-                          <td>20%</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </section>
+          <h2 class="article-band-heading article-band-purple">Start with the cup</h2>
+          <p>A cup of coffee looks simple from the customer side.</p>
+          <p>You order. Someone makes it. You pay. You drink it.</p>
+          <p>But inside that cup are ingredients, labor, rent, equipment, waste, time, brand, habit, convenience, and trust.</p>
+          <p>That makes it a better teaching model than the lemonade stand. Coffee is not only a product. It is a small business system.</p>
+          <p>Students can see the drink. They can imagine the customer. They can understand why someone buys it once, why someone buys it again, and why one coffee shop can charge more than another.</p>
+          <p>The cup gives students a concrete way to talk about money without starting from adult abstractions.</p>
 
-                <section aria-labelledby="design-drink-heading">
-                  <h2 class="article-band-heading article-band-gold" id="design-drink-heading">Design Your Drink</h2>
-                  <p>Now build your own drink. The calculator will follow you and update as your choices change.</p>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="drink-name">What drink are you selling?</label>
-                      <select id="drink-name" name="drink_name">
-                        <option value="">Choose a drink</option>
-                        <option value="Basic coffee" data-base-cost="0.55" data-suggested-price="2.00">Basic coffee</option>
-                        <option value="Iced coffee" data-base-cost="0.70" data-suggested-price="2.75">Iced coffee</option>
-                        <option value="Hot chocolate" data-base-cost="0.80" data-suggested-price="2.50">Hot chocolate</option>
-                        <option value="Iced chocolate milk" data-base-cost="0.85" data-suggested-price="2.75">Iced chocolate milk</option>
-                        <option value="Sweet iced latte" data-base-cost="1.10" data-suggested-price="3.50">Sweet iced latte</option>
-                        <option value="Fruit iced tea" data-base-cost="0.70" data-suggested-price="2.50">Fruit iced tea</option>
-                        <option value="Lemonade" data-base-cost="0.60" data-suggested-price="2.00">Lemonade</option>
-                        <option value="Smoothie" data-base-cost="1.35" data-suggested-price="4.00">Smoothie</option>
-                        <option value="Bubble tea-style drink" data-base-cost="1.45" data-suggested-price="4.50">Bubble tea-style drink</option>
-                        <option value="Other">Other</option>
-                      </select>
-                      <p class="worksheet-help" id="drink-cost-hint">Choose a drink to start with its base COGS.</p>
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="retail-price">Retail price</label>
-                      <input id="retail-price" name="retail_price" type="number" min="0" step="0.25" inputmode="decimal" value="2.00" />
-                      <p class="worksheet-help">This is what the customer pays.</p>
-                    </div>
-                  </div>
-                  <div class="worksheet-field">
-                    <div class="worksheet-question">What goes into the drink?</div>
-                    <div class="checkbox-list addon-grid">
-                      <label><input type="checkbox" name="addons" value="Coffee base" data-cost="0.75" /> Coffee base <span class="addon-cost">$0.75</span></label>
-                      <label><input type="checkbox" name="addons" value="Oat milk" data-cost="0.35" /> Oat milk <span class="addon-cost">$0.35</span></label>
-                      <label><input type="checkbox" name="addons" value="Whipped cream" data-cost="0.25" /> Whipped cream <span class="addon-cost">$0.25</span></label>
-                      <label><input type="checkbox" name="addons" value="Sprinkles" data-cost="0.15" /> Sprinkles <span class="addon-cost">$0.15</span></label>
-                      <label><input type="checkbox" name="addons" value="Flavour syrup" data-cost="0.20" /> Flavour syrup <span class="addon-cost">$0.20</span></label>
-                      <label><input type="checkbox" name="addons" value="Fancy printed cup" data-cost="0.30" /> Fancy printed cup <span class="addon-cost">$0.30</span></label>
-                    </div>
-                  </div>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="custom-cost-label">Other ingredient or packaging</label>
-                      <input id="custom-cost-label" name="custom_cost_label" type="text" placeholder="Example: cookie, reusable cup, topping" />
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="custom-cost">Other cost</label>
-                      <input id="custom-cost" name="custom_cost" type="number" min="0" step="0.05" inputmode="decimal" value="0" />
-                    </div>
-                  </div>
-                  <aside class="worksheet-calculator worksheet-calculator-strip" aria-label="Design Your Drink calculator">
-                    <div>
-                      <h3>Drink Calculator</h3>
-                      <p class="calculator-kicker">Live math for this drink.</p>
-                    </div>
-                    <div class="calculator-stat-grid">
-                      <div class="calculator-stat"><span>Retail</span><strong data-calc="drink-price">$2.00</strong></div>
-                      <div class="calculator-stat"><span>COGS</span><strong data-calc="drink-cogs">$0.00</strong></div>
-                      <div class="calculator-stat"><span>Margin $</span><strong data-calc="drink-gross">$2.00</strong></div>
-                      <div class="calculator-stat"><span>Margin %</span><strong data-calc="drink-gross-percent">100%</strong></div>
-                    </div>
-                  </aside>
-                </section>
+          <h2 class="article-band-heading article-band-teal">The lemonade stand teaches selling</h2>
+          <p>The lemonade stand is still useful.</p>
+          <p>It teaches students that a product must be offered to someone. It introduces price, customer choice, and the feeling of making a sale.</p>
+          <p>But it usually stops too early.</p>
+          <p>Students learn that revenue is the money that comes in. They may subtract the cost of lemons and cups. They may call the leftover amount profit.</p>
+          <p>That is a start, not a business education.</p>
+          <p>A coffee counter asks better questions.</p>
+          <p>What does each cup cost? How much milk gets used? What happens when someone adds syrup? Does the lid cost money? Does the machine need maintenance? How much coffee gets thrown out at the end of the day? What happens if the customer comes back tomorrow?</p>
+          <p>Suddenly the student is not just selling.</p>
+          <p>The student is thinking about a system.</p>
 
-                <section aria-labelledby="customer-offer-heading">
-                  <h2 class="article-band-heading article-band-teal" id="customer-offer-heading">Design the Offer</h2>
-                  <p>A good offer connects the drink, the customer, the moment, and the reason to buy.</p>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="customer">Who is this for?</label>
-                      <select id="customer" name="customer">
-                        <option value="">Choose a customer</option>
-                        <option>Students before school</option>
-                        <option>Parents at drop-off</option>
-                        <option>Kids after sports</option>
-                        <option>People walking to work</option>
-                        <option>Families at a weekend market</option>
-                        <option>Teens studying after school</option>
-                        <option>People who want a cheaper alternative to Starbucks</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="moment">What moment does it serve?</label>
-                      <select id="moment" name="moment">
-                        <option value="">Choose a moment</option>
-                        <option>Morning energy</option>
-                        <option>After-school treat</option>
-                        <option>Hot day refreshment</option>
-                        <option>Study snack</option>
-                        <option>Parent coffee break</option>
-                        <option>Weekend market drink</option>
-                        <option>Sweet reward</option>
-                        <option>Convenient grab-and-go option</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="worth-buying">What makes it worth buying?</label>
-                      <select id="worth-buying" name="worth_buying">
-                        <option value="">Choose a reason</option>
-                        <option>It is cheaper than nearby options</option>
-                        <option>It tastes better than expected</option>
-                        <option>It is fast and easy to grab</option>
-                        <option>It feels like a treat</option>
-                        <option>It is made by students</option>
-                        <option>It comes with a snack bundle</option>
-                        <option>It has a limited-time flavour</option>
-                        <option>It fits a daily routine</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="scenario-other">If you chose Other, add the detail here</label>
-                      <textarea id="scenario-other" name="scenario_other" placeholder="Write your own drink, customer, moment, or reason."></textarea>
-                    </div>
-                  </div>
-                </section>
+          <h2 class="article-band-heading article-band-purple">What financial literacy means in a business</h2>
+          <p>For a young entrepreneur, financial literacy does not mean memorizing adult vocabulary.</p>
+          <p>It means being able to answer practical money questions while building something.</p>
+          <p>What comes in? What gets used up? What has to be paid before the founder can keep anything? What happens if customers love the product but the costs are too high? What happens if the price is too low? What happens if the business runs out of cash before the next sale arrives?</p>
+          <p>Those questions are the beginning of business math for students.</p>
+          <p>Revenue is the money collected from customers. Cost is what gets consumed to create the product or service. Margin is the space between the selling price and the direct cost of delivering the unit. Profit is what remains after the full system gets paid. Cash flow is the timing of money coming in and money going out.</p>
+          <p>These ideas sound technical until students attach them to a real product.</p>
+          <p>A latte makes them concrete. So does a snack box, a tutoring session, a handmade bracelet, a lawn service, a delivery route, or a student-built app.</p>
 
-                <section aria-labelledby="volume-heading">
-                  <h2 class="article-band-heading article-band-purple" id="volume-heading">Test the Business</h2>
-                  <p>Now test what happens if you sell more than one drink. The calculator uses these numbers to show net profit.</p>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="units-sold">Units sold</label>
-                      <input id="units-sold" name="units_sold" type="number" min="1" step="1" inputmode="numeric" value="1000" />
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="operating-expenses">Operating expenses</label>
-                      <input id="operating-expenses" name="operating_expenses" type="number" min="0" step="25" inputmode="decimal" value="850" />
-                      <p class="worksheet-help">Examples: signs, table, equipment, waste, payment fees, transport, labour.</p>
-                    </div>
-                  </div>
-                  <div class="worksheet-field">
-                    <label for="profit-reaction">What does the calculator tell you about the idea?</label>
-                    <textarea id="profit-reaction" name="profit_reaction" placeholder="Explain whether the margin looks strong, weak, or worth testing."></textarea>
-                  </div>
-                  <aside class="worksheet-calculator worksheet-calculator-strip worksheet-calculator-business" aria-label="Test the Business calculator">
-                    <div>
-                      <h3>Business Calculator</h3>
-                      <p class="calculator-kicker">Live math for the whole test.</p>
-                    </div>
-                    <div class="calculator-stat-grid">
-                      <div class="calculator-stat"><span>Retail</span><strong data-calc="price">$2</strong></div>
-                      <div class="calculator-stat"><span>Units</span><strong data-calc="units">1,000</strong></div>
-                      <div class="calculator-stat"><span>Revenue</span><strong data-calc="revenue">$2,000</strong></div>
-                      <div class="calculator-stat"><span>Gross Margin $</span><strong data-calc="total-gross">$1,250</strong></div>
-                      <div class="calculator-stat"><span>Operating Expenses</span><strong data-calc="operating-expenses">$850</strong></div>
-                      <div class="calculator-stat"><span>Net Margin</span><strong data-calc="net-percent">20%</strong></div>
-                    </div>
-                  </aside>
-                </section>
+          <h2 class="article-band-heading article-band-gold">Revenue is not cash</h2>
+          <p>One of the first mistakes student founders make is assuming that a sale means the business is healthy.</p>
+          <p>Revenue is exciting because it is visible. Someone pays. The number goes up. The idea feels validated.</p>
+          <p>But revenue is not the same as cash that can be used freely.</p>
+          <p>A coffee counter may collect five dollars for a drink, but some of that money has already been spoken for. Beans, milk, cups, lids, sleeves, syrup, card fees, rent, wages, cleaning supplies, and wasted inventory all pull money out of the system.</p>
+          <p>Even timing matters.</p>
+          <p>A business might pay suppliers before it collects from customers. It might sell a subscription today and still have to deliver value for weeks. It might look busy and still feel short on cash.</p>
+          <p>When students see this, they stop treating money as a pile.</p>
+          <p>They start treating it as movement.</p>
 
-                <section aria-labelledby="hooks-heading">
-                  <h2 class="article-band-heading article-band-gold" id="hooks-heading">Hooks, Upsells, and Repeat Demand</h2>
-                  <p>A hook gets someone interested. An upsell increases the order. Repeat demand makes the customer come back.</p>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="main-hook">What is your main hook?</label>
-                      <textarea id="main-hook" name="main_hook" placeholder="Example: first drink for $1, faster than Starbucks, seasonal flavour."></textarea>
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="upsell-item">What could the customer add?</label>
-                      <input id="upsell-item" name="upsell_item" type="text" placeholder="Example: cookie, larger size, oat milk, second drink." />
-                    </div>
-                  </div>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="habit">What habit does your drink attach to?</label>
-                      <textarea id="habit" name="habit" placeholder="Morning routine, after-school treat, study break, weekend market."></textarea>
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="buy-again">Why would someone buy it again?</label>
-                      <textarea id="buy-again" name="buy_again"></textarea>
-                    </div>
-                  </div>
-                </section>
+          <h2 class="article-band-heading article-band-teal">Margin is not profit</h2>
+          <p>Margin is one of the most important ideas in youth entrepreneurship education because it helps students understand whether a product can breathe.</p>
+          <p>If a drink sells for five dollars and the ingredients and cup cost two dollars, the gross margin is three dollars.</p>
+          <p>That three dollars is not profit yet.</p>
+          <p>It is the space available to pay for everything else.</p>
+          <p>That distinction matters.</p>
+          <p>A student can have a product with strong demand and weak economics. They can sell a lot and still have very little left. They can make something people like but price it in a way that makes the business harder to run every time it succeeds.</p>
+          <p>This is where unit economics for students becomes powerful.</p>
+          <p>The question is not only, "Can we sell it?"</p>
+          <p>The question is, "Does each sale make the system stronger or weaker?"</p>
 
-                <section aria-labelledby="decision-test-heading">
-                  <h2 class="article-band-heading article-band-teal" id="decision-test-heading">Decision Test</h2>
-                  <p>Use the numbers and the offer to decide whether the business system gets stronger or weaker.</p>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <div class="worksheet-question">Is the gross margin strong enough?</div>
-                      <div class="choice-grid">
-                        <label><input type="radio" name="gross_margin_strong" value="Yes" /> Yes</label>
-                        <label><input type="radio" name="gross_margin_strong" value="No" /> No</label>
-                        <label><input type="radio" name="gross_margin_strong" value="Almost" /> Almost</label>
-                      </div>
-                    </div>
-                    <div class="worksheet-field">
-                      <div class="worksheet-question">Is the net margin strong enough?</div>
-                      <div class="choice-grid">
-                        <label><input type="radio" name="net_margin_strong" value="Yes" /> Yes</label>
-                        <label><input type="radio" name="net_margin_strong" value="No" /> No</label>
-                        <label><input type="radio" name="net_margin_strong" value="Almost" /> Almost</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="worksheet-field">
-                    <label for="one-sentence-offer">Write your offer in one sentence</label>
-                    <p class="worksheet-help">Example: Fresh iced coffee for students after school, cheaper than Starbucks and ready in 30 seconds.</p>
-                    <textarea id="one-sentence-offer" name="one_sentence_offer"></textarea>
-                  </div>
-                  <div class="worksheet-field">
-                    <div class="worksheet-question">What would make the business stronger?</div>
-                    <div class="checkbox-list">
-                      <label><input type="checkbox" name="change_test" value="Raise the price" /> Raise the price</label>
-                      <label><input type="checkbox" name="change_test" value="Reduce the cost" /> Reduce the cost</label>
-                      <label><input type="checkbox" name="change_test" value="Change the drink" /> Change the drink</label>
-                      <label><input type="checkbox" name="change_test" value="Add a snack" /> Add a snack</label>
-                      <label><input type="checkbox" name="change_test" value="Create a bundle" /> Create a bundle</label>
-                      <label><input type="checkbox" name="change_test" value="Improve the hook" /> Improve the hook</label>
-                      <label><input type="checkbox" name="change_test" value="Improve the upsell" /> Improve the upsell</label>
-                      <label><input type="checkbox" name="change_test" value="Find a better customer" /> Find a better customer</label>
-                    </div>
-                  </div>
-                  <div class="worksheet-field">
-                    <label for="system-result-explain">Does each sale make the system stronger or weaker?</label>
-                    <textarea id="system-result-explain" name="system_result_explain"></textarea>
-                  </div>
-                </section>
+          <h2 class="article-band-heading article-band-purple">The core money questions every student founder should ask</h2>
+          <p>A young entrepreneur does not need a spreadsheet with fifty tabs.</p>
+          <p>They need a few disciplined questions they can return to as the idea changes.</p>
+          <ul class="content-list">
+            <li>Who is this for?</li>
+            <li>What problem, want, habit, or moment does it serve?</li>
+            <li>What does one unit cost to deliver?</li>
+            <li>What price feels fair to the customer?</li>
+            <li>What is the margin on one sale?</li>
+            <li>What has to be paid besides the direct cost?</li>
+            <li>How many sales are needed before the idea works?</li>
+            <li>What would make someone buy again?</li>
+          </ul>
+          <p>Those questions connect financial literacy to entrepreneurship curriculum for students because they force the founder to think about both the customer and the economics.</p>
+          <p>Coffee also makes incentives easy to see.</p>
+          <p>The hook might be the first drink, the convenience, the smell, the social ritual, or the morning habit. The upsell might be a larger size, oat milk, a pastry, a reusable cup discount, or a monthly pass. Repeat demand might come from routine, location, consistency, speed, or trust.</p>
+          <p>Students learn that business outcomes are shaped by the design of the offer, not just by how hard someone works.</p>
 
-                <section aria-labelledby="save-work-heading">
-                  <h2 class="article-band-heading article-band-purple" id="save-work-heading">Save Your Work</h2>
-                  <p>Inputs are saved in this browser while you work. Use the buttons below to save, copy a text summary, print, or clear the worksheet.</p>
-                  <div class="worksheet-actions">
-                    <button type="button" id="save-worksheet" class="btn teal gloss" data-cta-label="Save worksheet inputs">Save Inputs</button>
-                    <button type="button" id="copy-worksheet" class="btn gold gloss" data-cta-label="Copy worksheet summary">Copy Summary</button>
-                    <button type="button" id="print-worksheet" class="btn purple gloss" data-cta-label="Print worksheet">Print Worksheet</button>
-                    <button type="reset" id="clear-worksheet" class="btn purple gloss" data-cta-label="Clear worksheet">Clear</button>
-                  </div>
-                  <p id="worksheet-status" class="worksheet-help" aria-live="polite"></p>
-                  <div id="worksheet-summary" class="worksheet-output" aria-live="polite">Your worksheet summary will appear here.</div>
-                </section>
-              </div>
+          <h2 class="article-band-heading article-band-gold">A simple project exercise</h2>
+          <p>One classroom exercise is to ask students to design a small coffee counter on paper.</p>
+          <p>They do not need to brew anything.</p>
+          <p>They need to make the money logic visible.</p>
+          <p>Start with one drink. Give it a customer, a price, and a direct cost. Then ask what else the business has to pay for. Ask what would make the drink worth buying once. Ask what would make someone come back.</p>
+          <p>Students can test different versions.</p>
+          <p>A cheap basic coffee may sell more often but leave less margin. A premium drink may create more margin but reduce volume. A bundle may increase the average order. A loyalty card may reduce margin today but increase repeat demand later.</p>
 
-            </div>
-          </form>
+          <div class="article-facts-card">
+            <h3>Coffee Counter Challenge</h3>
+            <ul>
+              <li>What is the drink?</li>
+              <li>Who is it for?</li>
+              <li>What does each cup cost?</li>
+              <li>What is the selling price?</li>
+              <li>What is the margin?</li>
+              <li>What is the hook?</li>
+              <li>What is the upsell?</li>
+              <li>Why would someone buy it again?</li>
+            </ul>
+          </div>
+
+          <p>This is project-based financial literacy.</p>
+          <p>Students are not being asked to repeat definitions. They are being asked to build a simple business model and explain the choices behind it.</p>
+
+          <h2 class="article-band-heading article-band-teal">What students should leave with</h2>
+          <p>Students should leave with a more honest understanding of money.</p>
+          <p>Money is not just the reward at the end of a business. It is information.</p>
+          <p>It shows what customers value, what a product costs to deliver, where waste hides, whether pricing makes sense, and whether the idea can survive contact with reality.</p>
+          <p>For student founders, money works like a compass.</p>
+          <p>It does not tell them what to care about. It helps them see whether the thing they care about can keep moving.</p>
+          <p>That is the deeper purpose of financial literacy for teens and young entrepreneurs.</p>
+          <p>Not to make every student think like an accountant. Not to turn every project into a startup. The purpose is to help students understand the logic underneath their ideas.</p>
+          <p>When they understand cost, margin, cash flow, pricing, incentives, hooks, upsells, and repeat demand, they become better builders. They can make clearer decisions. They can explain their reasoning. They can see why some ideas feel exciting but do not work yet, and why small changes can make a business stronger.</p>
+          <p>The lemonade stand teaches students that selling is possible.</p>
+          <p>Coffee teaches them that business is a system.</p>
+
         </div>
         <section class="article-facts-shell" aria-labelledby="article-quick-facts-heading">
           <div class="article-facts-intro">
             <div class="article-facts-kicker">Learn by building</div>
             <h3 class="article-facts-heading" id="article-quick-facts-heading">TURN THE LESSON INTO PRACTICE</h3>
           </div>
-          <div class="article-facts-grid">
+          <div class="article-facts-grid article-facts-grid--stacked">
             <div class="article-facts-card">
-              <h3>Read the module</h3>
-              <p>Review the lesson that introduces the coffee counter, gross margin, net margin, hooks, and repeat demand.</p>
-              <a data-cta-label="Read Financial Literacy for Young Entrepreneurs" class="btn teal gloss" href="/learn/financial-literacy-for-young-entrepreneurs/">Read the Module</a>
+              <div class="article-facts-copy">
+                <h3>Use the worksheet</h3>
+                <p>Students can apply the lesson with a Coffee Counter Math Lab that calculates price, COGS, gross margin, net profit, hooks, upsells, and repeat demand.</p>
+              </div>
+              <a data-cta-label="Open Coffee Counter Math Lab worksheet" class="btn teal gloss" href="/course-catalogue/financial-literacy-for-young-entrepreneurs/worksheet.html">Open Worksheet</a>
             </div>
             <div class="article-facts-card">
               <div class="article-facts-media">
                 <img src="/assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
               </div>
               <div class="article-facts-copy">
-                <h3>Explore the hub</h3>
-                <p>Return to the learning hub for student financial literacy and venture-building resources.</p>
+                <h3>Keep learning</h3>
+                <p>Return to the Learning Hub for published modules and worksheet resources.</p>
               </div>
-              <a data-cta-label="Explore the Learning Hub" class="btn gold gloss" href="/learn/">Explore the Hub</a>
+              <a data-cta-label="Explore the Learning Hub" class="btn gold gloss" href="/course-catalogue/">Explore the Hub</a>
             </div>
           </div>
         </section>
@@ -2718,299 +2684,75 @@ nav{
     </section>
 
   </main>
+  <div class="video-lesson-overlay" id="video-lesson-overlay" role="dialog" aria-modal="true" aria-labelledby="video-lesson-title" hidden>
+    <div class="video-lesson-dialog">
+      <h2 id="video-lesson-title" class="sr-only">The Coffee System video lesson</h2>
+      <button class="video-lesson-close" id="close-video-lesson" type="button" aria-label="Close video lesson">&times;</button>
+      <iframe
+        class="video-lesson-frame"
+        id="video-lesson-frame"
+        title="The Coffee System dynamic text video lesson"
+        src="video-lesson.html"
+        allow="autoplay"
+      ></iframe>
+    </div>
+  </div>
   <script>
     (function(){
-      var form = document.getElementById('coffee-counter-worksheet');
-      if (!form){ return; }
+      var openButton = document.getElementById('open-video-lesson');
+      var closeButton = document.getElementById('close-video-lesson');
+      var overlay = document.getElementById('video-lesson-overlay');
+      var frame = document.getElementById('video-lesson-frame');
+      var previousFocus = null;
 
-      var storageKey = 'tmcCoffeeCounterWorksheet';
-      var statusEl = document.getElementById('worksheet-status');
-      var summaryEl = document.getElementById('worksheet-summary');
-      var drinkSelect = document.getElementById('drink-name');
-      var drinkCostHint = document.getElementById('drink-cost-hint');
-      var priceInput = document.getElementById('retail-price');
-      var customCostInput = document.getElementById('custom-cost');
-      var unitsInput = document.getElementById('units-sold');
-      var operatingExpensesInput = document.getElementById('operating-expenses');
-      function money(value){
-        return '$' + Number(value || 0).toLocaleString('en-US', {
-          minimumFractionDigits: 2,
-          maximumFractionDigits: 2
-        });
+      if (!openButton || !closeButton || !overlay || !frame){
+        return;
       }
 
-      function moneyWhole(value){
-        return '$' + Number(value || 0).toLocaleString('en-US', {
-          maximumFractionDigits: 0
-        });
-      }
-
-      function percent(value){
-        return Number(value || 0).toLocaleString('en-US', {
-          maximumFractionDigits: 1
-        }) + '%';
-      }
-
-      function percentWhole(value){
-        return Number(value || 0).toLocaleString('en-US', {
-          maximumFractionDigits: 0
-        }) + '%';
-      }
-
-      function numberFromInput(input){
-        var value = input ? parseFloat(input.value) : 0;
-        return isNaN(value) ? 0 : value;
-      }
-
-      function setCalc(name, value){
-        form.querySelectorAll('[data-calc="' + name + '"]').forEach(function(el){
-          el.textContent = value;
-        });
-      }
-
-      function selectedAddons(){
-        return Array.prototype.slice.call(form.querySelectorAll('input[name="addons"]:checked'));
-      }
-
-      function selectedDrinkOption(){
-        if (!drinkSelect || drinkSelect.selectedIndex < 0){ return null; }
-        return drinkSelect.options[drinkSelect.selectedIndex];
-      }
-
-      function selectedDrinkCost(){
-        var option = selectedDrinkOption();
-        var value = option ? parseFloat(option.getAttribute('data-base-cost') || '0') : 0;
-        return isNaN(value) ? 0 : value;
-      }
-
-      function selectedDrinkPrice(){
-        var option = selectedDrinkOption();
-        var value = option ? parseFloat(option.getAttribute('data-suggested-price') || '') : NaN;
-        return isNaN(value) ? null : value;
-      }
-
-      function updateDrinkCostHint(){
-        if (!drinkCostHint){ return; }
-        var option = selectedDrinkOption();
-        var drinkName = option ? option.value : '';
-        var baseCost = selectedDrinkCost();
-        if (!drinkName){
-          drinkCostHint.textContent = 'Choose a drink to start with its base COGS.';
-          return;
-        }
-        if (drinkName === 'Other'){
-          drinkCostHint.textContent = 'For another drink, add the base cost in Other cost.';
-          return;
-        }
-        drinkCostHint.textContent = drinkName + ' starts with ' + money(baseCost) + ' in base COGS before add-ons.';
-      }
-
-      function addonCost(){
-        return selectedAddons().reduce(function(total, input){
-          var value = parseFloat(input.getAttribute('data-cost') || '0');
-          return total + (isNaN(value) ? 0 : value);
-        }, 0);
-      }
-
-      function getCalculatorState(){
-        var price = numberFromInput(priceInput);
-        var baseCogs = selectedDrinkCost();
-        var customCost = numberFromInput(customCostInput);
-        var cogs = baseCogs + addonCost() + customCost;
-        var units = Math.max(0, numberFromInput(unitsInput));
-        var operatingExpenses = numberFromInput(operatingExpensesInput);
-        var gross = price - cogs;
-        var grossPercent = price > 0 ? (gross / price) * 100 : 0;
-        var revenue = price * units;
-        var totalCogs = cogs * units;
-        var totalGross = revenue - totalCogs;
-        var netProfit = totalGross - operatingExpenses;
-        var netPercent = revenue > 0 ? (netProfit / revenue) * 100 : 0;
-        return {
-          price: price,
-          baseCogs: baseCogs,
-          cogs: cogs,
-          units: units,
-          operatingExpenses: operatingExpenses,
-          gross: gross,
-          grossPercent: grossPercent,
-          revenue: revenue,
-          totalCogs: totalCogs,
-          totalGross: totalGross,
-          netProfit: netProfit,
-          netPercent: netPercent
-        };
-      }
-
-      function updateCalculations(){
-        var state = getCalculatorState();
-        updateDrinkCostHint();
-        setCalc('drink-price', money(state.price));
-        setCalc('drink-cogs', money(state.cogs));
-        setCalc('drink-gross', money(state.gross));
-        setCalc('drink-gross-percent', percent(state.grossPercent));
-        setCalc('price', moneyWhole(state.price));
-        setCalc('cogs', moneyWhole(state.cogs));
-        setCalc('gross', moneyWhole(state.gross));
-        setCalc('gross-percent', percentWhole(state.grossPercent));
-        setCalc('units', Number(state.units || 0).toLocaleString('en-US', { maximumFractionDigits: 0 }));
-        setCalc('revenue', moneyWhole(state.revenue));
-        setCalc('total-gross', moneyWhole(state.totalGross));
-        setCalc('operating-expenses', moneyWhole(state.operatingExpenses));
-        setCalc('net-percent', percentWhole(state.netPercent));
-      }
-
-      function collectData(){
-        var data = {};
-        form.querySelectorAll('input, textarea, select').forEach(function(field){
-          if (!field.name){ return; }
-          if (field.type === 'checkbox'){
-            if (!data[field.name]){ data[field.name] = []; }
-            if (field.checked){ data[field.name].push(field.value); }
-            return;
-          }
-          if (field.type === 'radio'){
-            if (field.checked){ data[field.name] = field.value; }
-            return;
-          }
-          data[field.name] = field.value;
-        });
-        return data;
-      }
-
-      function restoreData(data){
-        if (!data){ return; }
-        form.querySelectorAll('input, textarea, select').forEach(function(field){
-          var value = data[field.name];
-          if (typeof value === 'undefined'){ return; }
-          if (field.type === 'checkbox'){
-            field.checked = Array.isArray(value) && value.indexOf(field.value) !== -1;
-            return;
-          }
-          if (field.type === 'radio'){
-            field.checked = value === field.value;
-            return;
-          }
-          field.value = value;
-        });
-      }
-
-      function buildSummary(){
-        var data = collectData();
-        var state = getCalculatorState();
-        var lines = [
-          'Coffee Counter Math Lab',
-          '',
-          'Drink: ' + (data.drink_name || ''),
-          'Retail price: ' + money(state.price),
-          'Base drink COGS: ' + money(state.baseCogs),
-          'Selected add-ons: ' + ((data.addons || []).join(', ') || 'None'),
-          'COGS per drink: ' + money(state.cogs),
-          'Gross margin: ' + money(state.gross) + ' (' + percent(state.grossPercent) + ')',
-          'Units sold: ' + state.units,
-          'Revenue: ' + money(state.revenue),
-          'Total COGS: ' + money(state.totalCogs),
-          'Operating expenses: ' + money(state.operatingExpenses),
-          'Net profit: ' + money(state.netProfit),
-          'Net margin: ' + percent(state.netPercent),
-          '',
-          'Customer: ' + (data.customer || ''),
-          'Moment: ' + (data.moment || ''),
-          'Worth buying because: ' + (data.worth_buying || ''),
-          'Other scenario detail: ' + (data.scenario_other || ''),
-          '',
-          'Hook: ' + (data.main_hook || ''),
-          'Upsell: ' + (data.upsell_item || ''),
-          'Profit reaction: ' + (data.profit_reaction || ''),
-          'Repeat demand: ' + (data.buy_again || ''),
-          'Offer: ' + (data.one_sentence_offer || ''),
-          'Change test: ' + ((data.change_test || []).join(', ') || 'None selected'),
-          '',
-          data.system_result_explain || ''
-        ];
-        return lines.join('\n');
-      }
-
-      function saveData(message){
-        updateCalculations();
-        localStorage.setItem(storageKey, JSON.stringify(collectData()));
-        if (summaryEl){
-          summaryEl.textContent = buildSummary();
-        }
-        if (statusEl){
-          statusEl.textContent = message || 'Worksheet saved in this browser.';
-        }
-      }
-
-      try {
-        restoreData(JSON.parse(localStorage.getItem(storageKey) || 'null'));
-      } catch (e) {}
-      updateCalculations();
-      if (summaryEl){
-        summaryEl.textContent = buildSummary();
-      }
-
-      form.addEventListener('input', function(){
-        updateCalculations();
+      function openVideoLesson(){
+        previousFocus = document.activeElement;
+        overlay.hidden = false;
+        document.body.classList.add('video-overlay-open');
         try {
-          localStorage.setItem(storageKey, JSON.stringify(collectData()));
-        } catch (e) {}
+          var audio = frame.contentDocument.getElementById('audio');
+          if (audio.ended) {
+            audio.currentTime = 0;
+          }
+          audio.play();
+        } catch (error) {
+          // The player keeps its own Play control as a fallback.
+        }
+        closeButton.focus();
+      }
+
+      function closeVideoLesson(){
+        try {
+          var audio = frame.contentDocument.getElementById('audio');
+          audio.pause();
+          audio.currentTime = 0;
+        } catch (error) {
+          // Closing the overlay should still succeed if the player is unavailable.
+        }
+        overlay.hidden = true;
+        document.body.classList.remove('video-overlay-open');
+        if (previousFocus && typeof previousFocus.focus === 'function'){
+          previousFocus.focus();
+        }
+      }
+
+      openButton.addEventListener('click', openVideoLesson);
+      closeButton.addEventListener('click', closeVideoLesson);
+
+      overlay.addEventListener('click', function(event){
+        if (event.target === overlay){
+          closeVideoLesson();
+        }
       });
 
-      form.addEventListener('change', function(){
-        updateCalculations();
-      });
-
-      if (drinkSelect){
-        drinkSelect.addEventListener('change', function(){
-          var suggestedPrice = selectedDrinkPrice();
-          if (priceInput && suggestedPrice !== null){
-            priceInput.value = suggestedPrice.toFixed(2);
-          }
-          updateCalculations();
-          try {
-            localStorage.setItem(storageKey, JSON.stringify(collectData()));
-          } catch (e) {}
-        });
-      }
-
-      var saveBtn = document.getElementById('save-worksheet');
-      if (saveBtn){
-        saveBtn.addEventListener('click', function(){
-          saveData('Worksheet saved in this browser.');
-        });
-      }
-
-      var copyBtn = document.getElementById('copy-worksheet');
-      if (copyBtn){
-        copyBtn.addEventListener('click', function(){
-          saveData('Worksheet summary ready.');
-          var summary = buildSummary();
-          if (navigator.clipboard && window.isSecureContext){
-            navigator.clipboard.writeText(summary).then(function(){
-              if (statusEl){ statusEl.textContent = 'Worksheet summary copied.'; }
-            });
-          } else {
-            window.prompt('Copy your worksheet summary:', summary);
-          }
-        });
-      }
-
-      var printBtn = document.getElementById('print-worksheet');
-      if (printBtn){
-        printBtn.addEventListener('click', function(){
-          saveData('Worksheet saved before printing.');
-          window.print();
-        });
-      }
-
-      form.addEventListener('reset', function(){
-        localStorage.removeItem(storageKey);
-        setTimeout(function(){
-          updateCalculations();
-          if (summaryEl){ summaryEl.textContent = 'Your worksheet summary will appear here.'; }
-          if (statusEl){ statusEl.textContent = 'Worksheet cleared.'; }
-        }, 0);
+      document.addEventListener('keydown', function(event){
+        if (event.key === 'Escape' && !overlay.hidden){
+          closeVideoLesson();
+        }
       });
     })();
   </script>
@@ -3288,7 +3030,7 @@ nav{
         window.dataLayer = window.dataLayer || [];
         var isReserveIntent = isReserveCta(target);
         var payload = buildCtaPayload(target, 'cta_click');
-        payload.cta_intent = (target.closest('form[action="apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveIntent ? 'reserve_spot' : 'general');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"], form[action="/apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveIntent ? 'reserve_spot' : 'general');
         window.dataLayer.push(payload);
 
         if (isReserveIntent){
@@ -3309,7 +3051,7 @@ nav{
         }
         // Exclude form submit controls from generic CTA tracking
         // These are tracked separately via interest_form_* and registration_form_* events
-        var interestForm = target.closest('form[action="apply-interest.php"]');
+        var interestForm = target.closest('form[action="apply-interest.php"], form[action="/apply-interest.php"]');
         if (interestForm){
           return;
         }
