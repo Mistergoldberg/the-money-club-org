@@ -1647,6 +1647,10 @@ nav{
       gap: 28px;
       align-items: stretch;
     }
+    .article-facts-grid--stacked{
+      grid-template-columns: 1fr;
+      align-items: stretch;
+    }
     .article-facts-card{
       border: 1px solid #d9d2c6;
       border-radius: 28px;
@@ -1753,8 +1757,8 @@ nav{
     .learning-page-shell .article-facts-card .btn{
       font-family: var(--font-body);
       font-size: clamp(18px, 1.6vw, 22px);
-      font-weight: 700;
-      line-height: 1.2;
+      font-weight: 500;
+      line-height: 1.15;
       letter-spacing: 0;
       text-transform: none;
       min-height: 58px;
@@ -1764,6 +1768,23 @@ nav{
 
     .learning-page-shell .article-facts-card .btn.gold{
       color: var(--text);
+    }
+    .learning-page-shell .article-facts-grid--stacked .article-facts-card{
+      width: 100%;
+    }
+    @media (min-width: 901px){
+      .learning-page-shell .article-facts-grid--stacked .article-facts-card{
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+        align-items: center;
+        gap: clamp(22px, 3vw, 40px);
+      }
+      .learning-page-shell .article-facts-grid--stacked .article-facts-card .btn{
+        align-self: center;
+        margin-top: 0;
+      }
+      .learning-page-shell .article-facts-grid--stacked .article-facts-media{
+        grid-row: span 2;
+      }
     }
     @media (min-width: 981px){
       .topbar nav{
@@ -2164,8 +2185,8 @@ nav{
   </style>
   <link rel="stylesheet" href="/assets/typography.css?v=6" />
   <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
-  <link rel="stylesheet" href="/assets/worksheet.css?v=3" />
-  <link rel="stylesheet" href="/assets/learn-catalogue.css?v=2" />
+  <link rel="stylesheet" href="/assets/worksheet.css?v=12" />
+  <link rel="stylesheet" href="/assets/learn-catalogue.css?v=9" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -2201,7 +2222,7 @@ nav{
             <summary>Learning Catalogue</summary>
             <div class="learning-menu-list">
               <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
-              <a href="/learn/">Design Thinking</a>
+              <a href="/learn/design-thinking-and-human-factor-research/">Design Thinking</a>
               <a href="/learn/">Market Research</a>
               <a href="/learn/">Sourcing</a>
               <a href="/learn/">Control Brand</a>
@@ -2249,8 +2270,8 @@ nav{
               <details>
                 <summary>🎨 Design Thinking & Human Factor Research</summary>
                 <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#design-thinking-worksheet">Worksheet: Find the Friction Lab</a></li>
+                  <li><a href="/learn/design-thinking-and-human-factor-research/">Learning Module</a></li>
+                  <li><a href="/learn/design-thinking-and-human-factor-research/worksheet.html">Worksheet: Find the Friction Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2341,7 +2362,7 @@ nav{
           <section class="article-intro-module" aria-labelledby="article-intro-heading">
             <div class="article-intro-media">
               <picture>
-                <source media="(min-width: 769px)" srcset="/assets/Kids-Index.jpg" />
+                <source media="(min-width: 769px)" srcset="/assets/compass-learning-mods.png" />
                 <img src="/assets/kids-campus-1.jpg" alt="Students participating in a Money Club learning session" />
               </picture>
             </div>
@@ -2355,7 +2376,7 @@ nav{
                 <div class="article-intro-meta">
                   <div class="article-intro-meta-row">
                     <div class="article-intro-meta-label">Pairs with</div>
-                    <p><a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy for Young Entrepreneurs</a></p>
+                    <p><a href="/learn/financial-literacy-for-young-entrepreneurs/">The Coffee System</a></p>
                   </div>
                   <div class="article-intro-meta-row">
                     <div class="article-intro-meta-label">Goal</div>
@@ -2379,8 +2400,8 @@ nav{
                   <p>Retail price is what comes in.</p>
                   <p>Cost of Goods Sold, or COGS, is what goes out to make the product.</p>
                   <p>Gross margin is what is left before operating expenses.</p>
-                  <div class="table-wrap" role="region" aria-label="Coffee gross margin example" tabindex="0">
-                    <table class="math-table worksheet-table math-example-table">
+                  <div class="table-wrap financial-table-wrap" role="region" aria-label="Coffee gross margin example" tabindex="0">
+                    <table class="math-table worksheet-table math-example-table financial-table">
                       <thead>
                         <tr>
                           <th scope="col">Product</th>
@@ -2392,11 +2413,11 @@ nav{
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">Coffee</th>
-                          <td>$2.00</td>
-                          <td>$0.75</td>
-                          <td>$1.25</td>
-                          <td>62.5%</td>
+                          <th scope="row" data-label="Product">Coffee</th>
+                          <td data-label="Retail Price">$2.00</td>
+                          <td data-label="Cost of Goods Sold">$0.75</td>
+                          <td data-label="Gross Margin $">$1.25</td>
+                          <td data-label="Gross Margin %">62.5%</td>
                         </tr>
                       </tbody>
                     </table>
@@ -2417,34 +2438,54 @@ nav{
                   <p>Net profit is the true profit.</p>
                   <p>It is the money left after you pay for the product and the costs of running the business.</p>
                   <p>Here is an example for 1,000 coffees sold.</p>
-                  <div class="table-wrap" role="region" aria-label="Coffee net margin example" tabindex="0">
-                    <table class="math-table worksheet-table">
+                  <div class="table-wrap financial-table-wrap" role="region" aria-label="Coffee net margin example" tabindex="0">
+                    <table class="math-table worksheet-table financial-table financial-table-two-col">
                       <thead>
                         <tr>
-                          <th scope="col">Product</th>
-                          <th scope="col">Retail Price</th>
-                          <th scope="col">Units Sold</th>
-                          <th scope="col">Revenue</th>
-                          <th scope="col">Total COGS</th>
-                          <th scope="col">Gross Margin $</th>
-                          <th scope="col">Gross Margin %</th>
-                          <th scope="col">Operating Expenses</th>
-                          <th scope="col">Net Profit</th>
-                          <th scope="col">Net Margin %</th>
+                          <th scope="col">Metric</th>
+                          <th scope="col">Value</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">Coffee</th>
-                          <td>$2.00</td>
-                          <td>1,000</td>
-                          <td>$2,000</td>
-                          <td>$750</td>
-                          <td>$1,250</td>
-                          <td>62.5%</td>
-                          <td>$850</td>
-                          <td>$400</td>
-                          <td>20%</td>
+                          <th scope="row" data-label="Metric">Product</th>
+                          <td data-label="Value">Coffee</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-label="Metric">Retail Price</th>
+                          <td data-label="Value"><strong>$2.00</strong><span class="math-breakdown">per coffee sold</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-label="Metric">Units Sold</th>
+                          <td data-label="Value"><strong>1,000</strong><span class="math-breakdown">coffees sold</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-label="Metric">Revenue</th>
+                          <td data-label="Value"><strong>$2,000</strong><span class="math-breakdown">$2.00 &times; 1,000 coffees</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-label="Metric">Total COGS</th>
+                          <td data-label="Value"><strong>$750</strong><span class="math-breakdown">$0.75 COGS &times; 1,000 coffees</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-label="Metric">Gross Margin $</th>
+                          <td data-label="Value"><strong>$1,250</strong><span class="math-breakdown">$2,000 revenue - $750 COGS</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-label="Metric">Gross Margin %</th>
+                          <td data-label="Value"><strong>62.5%</strong><span class="math-breakdown">$1,250 gross margin / $2,000 revenue</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-label="Metric">Operating Expenses</th>
+                          <td data-label="Value"><strong>$850</strong><span class="math-breakdown">example costs to run the stand</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-label="Metric">Net Profit</th>
+                          <td data-label="Value"><strong>$400</strong><span class="math-breakdown">$1,250 gross margin - $850 operating expenses</span></td>
+                        </tr>
+                        <tr>
+                          <th scope="row" data-label="Metric">Net Margin %</th>
+                          <td data-label="Value"><strong>20%</strong><span class="math-breakdown">$400 net profit / $2,000 revenue</span></td>
                         </tr>
                       </tbody>
                     </table>
@@ -2458,8 +2499,7 @@ nav{
                     <div class="worksheet-field">
                       <label for="drink-name">What drink are you selling?</label>
                       <select id="drink-name" name="drink_name">
-                        <option value="">Choose a drink</option>
-                        <option value="Basic coffee" data-base-cost="0.55" data-suggested-price="2.00">Basic coffee</option>
+                        <option value="Basic coffee" data-base-cost="0.55" data-suggested-price="2.00" selected>Basic coffee</option>
                         <option value="Iced coffee" data-base-cost="0.70" data-suggested-price="2.75">Iced coffee</option>
                         <option value="Hot chocolate" data-base-cost="0.80" data-suggested-price="2.50">Hot chocolate</option>
                         <option value="Iced chocolate milk" data-base-cost="0.85" data-suggested-price="2.75">Iced chocolate milk</option>
@@ -2513,63 +2553,6 @@ nav{
                   </aside>
                 </section>
 
-                <section aria-labelledby="customer-offer-heading">
-                  <h2 class="article-band-heading article-band-teal" id="customer-offer-heading">Design the Offer</h2>
-                  <p>A good offer connects the drink, the customer, the moment, and the reason to buy.</p>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="customer">Who is this for?</label>
-                      <select id="customer" name="customer">
-                        <option value="">Choose a customer</option>
-                        <option>Students before school</option>
-                        <option>Parents at drop-off</option>
-                        <option>Kids after sports</option>
-                        <option>People walking to work</option>
-                        <option>Families at a weekend market</option>
-                        <option>Teens studying after school</option>
-                        <option>People who want a cheaper alternative to Starbucks</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="moment">What moment does it serve?</label>
-                      <select id="moment" name="moment">
-                        <option value="">Choose a moment</option>
-                        <option>Morning energy</option>
-                        <option>After-school treat</option>
-                        <option>Hot day refreshment</option>
-                        <option>Study snack</option>
-                        <option>Parent coffee break</option>
-                        <option>Weekend market drink</option>
-                        <option>Sweet reward</option>
-                        <option>Convenient grab-and-go option</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="worth-buying">What makes it worth buying?</label>
-                      <select id="worth-buying" name="worth_buying">
-                        <option value="">Choose a reason</option>
-                        <option>It is cheaper than nearby options</option>
-                        <option>It tastes better than expected</option>
-                        <option>It is fast and easy to grab</option>
-                        <option>It feels like a treat</option>
-                        <option>It is made by students</option>
-                        <option>It comes with a snack bundle</option>
-                        <option>It has a limited-time flavour</option>
-                        <option>It fits a daily routine</option>
-                        <option>Other</option>
-                      </select>
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="scenario-other">If you chose Other, add the detail here</label>
-                      <textarea id="scenario-other" name="scenario_other" placeholder="Write your own drink, customer, moment, or reason."></textarea>
-                    </div>
-                  </div>
-                </section>
-
                 <section aria-labelledby="volume-heading">
                   <h2 class="article-band-heading article-band-purple" id="volume-heading">Test the Business</h2>
                   <p>Now test what happens if you sell more than one drink. The calculator uses these numbers to show net profit.</p>
@@ -2602,31 +2585,6 @@ nav{
                       <div class="calculator-stat"><span>Net Margin</span><strong data-calc="net-percent">20%</strong></div>
                     </div>
                   </aside>
-                </section>
-
-                <section aria-labelledby="hooks-heading">
-                  <h2 class="article-band-heading article-band-gold" id="hooks-heading">Hooks, Upsells, and Repeat Demand</h2>
-                  <p>A hook gets someone interested. An upsell increases the order. Repeat demand makes the customer come back.</p>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="main-hook">What is your main hook?</label>
-                      <textarea id="main-hook" name="main_hook" placeholder="Example: first drink for $1, faster than Starbucks, seasonal flavour."></textarea>
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="upsell-item">What could the customer add?</label>
-                      <input id="upsell-item" name="upsell_item" type="text" placeholder="Example: cookie, larger size, oat milk, second drink." />
-                    </div>
-                  </div>
-                  <div class="worksheet-two-col">
-                    <div class="worksheet-field">
-                      <label for="habit">What habit does your drink attach to?</label>
-                      <textarea id="habit" name="habit" placeholder="Morning routine, after-school treat, study break, weekend market."></textarea>
-                    </div>
-                    <div class="worksheet-field">
-                      <label for="buy-again">Why would someone buy it again?</label>
-                      <textarea id="buy-again" name="buy_again"></textarea>
-                    </div>
-                  </div>
                 </section>
 
                 <section aria-labelledby="decision-test-heading">
@@ -2674,6 +2632,88 @@ nav{
                   </div>
                 </section>
 
+                <section aria-labelledby="customer-offer-heading">
+                  <h2 class="article-band-heading article-band-teal" id="customer-offer-heading">Design the Offer</h2>
+                  <p>A good offer connects the drink, the customer, the moment, and the reason to buy.</p>
+                  <div class="worksheet-two-col">
+                    <div class="worksheet-field">
+                      <label for="customer">Who is this for?</label>
+                      <select id="customer" name="customer">
+                        <option value="" selected disabled>Choose a reason</option>
+                        <option>Students before school</option>
+                        <option>Parents at drop-off</option>
+                        <option>Kids after sports</option>
+                        <option>People walking to work</option>
+                        <option>Families at a weekend market</option>
+                        <option>Teens studying after school</option>
+                        <option>People who want a cheaper alternative to Starbucks</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                    <div class="worksheet-field">
+                      <label for="moment">What moment does it serve?</label>
+                      <select id="moment" name="moment">
+                        <option value="" selected disabled>Choose a reason</option>
+                        <option>Morning energy</option>
+                        <option>After-school treat</option>
+                        <option>Hot day refreshment</option>
+                        <option>Study snack</option>
+                        <option>Parent coffee break</option>
+                        <option>Weekend market drink</option>
+                        <option>Sweet reward</option>
+                        <option>Convenient grab-and-go option</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="worksheet-two-col">
+                    <div class="worksheet-field">
+                      <label for="worth-buying">What makes it worth buying?</label>
+                      <select id="worth-buying" name="worth_buying">
+                        <option value="" selected disabled>Choose a reason</option>
+                        <option>It is cheaper than nearby options</option>
+                        <option>It tastes better than expected</option>
+                        <option>It is fast and easy to grab</option>
+                        <option>It feels like a treat</option>
+                        <option>It is made by students</option>
+                        <option>It comes with a snack bundle</option>
+                        <option>It has a limited-time flavour</option>
+                        <option>It fits a daily routine</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                    <div class="worksheet-field">
+                      <label for="scenario-other">If you chose Other, add the detail here</label>
+                      <textarea id="scenario-other" name="scenario_other" placeholder="Write your own drink, customer, moment, or reason."></textarea>
+                    </div>
+                  </div>
+                </section>
+
+                <section aria-labelledby="hooks-heading">
+                  <h2 class="article-band-heading article-band-gold" id="hooks-heading">Hooks, Upsells, and Repeat Demand</h2>
+                  <p>A hook gets someone interested. An upsell increases the order. Repeat demand makes the customer come back.</p>
+                  <div class="worksheet-two-col">
+                    <div class="worksheet-field">
+                      <label for="main-hook">What is your main hook?</label>
+                      <textarea id="main-hook" name="main_hook" placeholder="Example: first drink for $1, faster than Starbucks, seasonal flavour."></textarea>
+                    </div>
+                    <div class="worksheet-field">
+                      <label for="upsell-item">What could the customer add?</label>
+                      <input id="upsell-item" name="upsell_item" type="text" placeholder="Example: cookie, larger size, oat milk, second drink." />
+                    </div>
+                  </div>
+                  <div class="worksheet-two-col">
+                    <div class="worksheet-field">
+                      <label for="habit">What habit does your drink attach to?</label>
+                      <textarea id="habit" name="habit" placeholder="Morning routine, after-school treat, study break, weekend market."></textarea>
+                    </div>
+                    <div class="worksheet-field">
+                      <label for="buy-again">Why would someone buy it again?</label>
+                      <textarea id="buy-again" name="buy_again"></textarea>
+                    </div>
+                  </div>
+                </section>
+
                 <section aria-labelledby="save-work-heading">
                   <h2 class="article-band-heading article-band-purple" id="save-work-heading">Save Your Work</h2>
                   <p>Inputs are saved in this browser while you work. Use the buttons below to save, copy a text summary, print, or clear the worksheet.</p>
@@ -2696,19 +2736,14 @@ nav{
             <div class="article-facts-kicker">Learn by building</div>
             <h3 class="article-facts-heading" id="article-quick-facts-heading">TURN THE LESSON INTO PRACTICE</h3>
           </div>
-          <div class="article-facts-grid">
-            <div class="article-facts-card">
-              <h3>Read the module</h3>
-              <p>Review the lesson that introduces the coffee counter, gross margin, net margin, hooks, and repeat demand.</p>
-              <a data-cta-label="Read Financial Literacy for Young Entrepreneurs" class="btn teal gloss" href="/learn/financial-literacy-for-young-entrepreneurs/">Read the Module</a>
-            </div>
+          <div class="article-facts-grid article-facts-grid--stacked">
             <div class="article-facts-card">
               <div class="article-facts-media">
                 <img src="/assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
               </div>
               <div class="article-facts-copy">
-                <h3>Explore the hub</h3>
-                <p>Return to the learning hub for student financial literacy and venture-building resources.</p>
+                <h3>Keep learning</h3>
+                <p>Return to the Learning Hub for published modules and worksheet resources.</p>
               </div>
               <a data-cta-label="Explore the Learning Hub" class="btn gold gloss" href="/learn/">Explore the Hub</a>
             </div>
@@ -2723,7 +2758,7 @@ nav{
       var form = document.getElementById('coffee-counter-worksheet');
       if (!form){ return; }
 
-      var storageKey = 'tmcCoffeeCounterWorksheet';
+      var storageKey = 'tmcCoffeeCounterWorksheetV2';
       var statusEl = document.getElementById('worksheet-status');
       var summaryEl = document.getElementById('worksheet-summary');
       var drinkSelect = document.getElementById('drink-name');

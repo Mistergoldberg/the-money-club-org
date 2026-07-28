@@ -5,9 +5,13 @@
 */
 
 .worksheet-form{
+  --worksheet-grid-gap: clamp(16px, 2.1vw, 28px);
+  --worksheet-row-gap: clamp(16px, 2vw, 24px);
+  --worksheet-measure: 68ch;
   display: grid;
-  gap: clamp(18px, 3vw, 28px);
+  gap: 0;
   counter-reset: worksheet-part;
+  min-width: 0;
 }
 
 .worksheet-form > section{
@@ -26,29 +30,24 @@
 }
 
 .worksheet-form > section::before{
-  content: "Part " counter(worksheet-part);
-  width: max-content;
-  border: 1px solid var(--line, #e5e1da);
-  border-radius: 999px;
-  background: #ffffff;
-  color: var(--muted, #3d3d3d);
-  padding: 7px 13px;
-  font-size: clamp(20px, 1.8vw, 23px);
-  font-weight: 800;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  content: none;
+  display: none;
 }
 
 .thankyou-card .worksheet-form h2.article-band-heading{
   display: block;
-  margin: 0 -16px 2px;
-  padding: 14px 16px;
+  grid-column: 1 / -1;
+  margin: 34px -20px 18px;
+  padding: 18px 20px;
   border: 0;
-  border-radius: 14px;
+  border-radius: 0;
   font-size: clamp(34px, 5vw, 56px);
   line-height: 0.86;
   text-align: left;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  letter-spacing: var(--tracking-display);
+  text-transform: uppercase;
 }
 
 .worksheet-learning-layout{
@@ -58,57 +57,75 @@
   align-items: start;
 }
 
+.learning-page-shell .article-intro-body > .article-read-time{
+  width: 100%;
+  justify-self: stretch;
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text, #111111);
+  text-align: center;
+}
+
 .worksheet-flow{
   display: grid;
-  gap: clamp(18px, 3vw, 28px);
+  gap: 0;
   min-width: 0;
+  counter-reset: worksheet-part;
 }
 
 .worksheet-flow > section{
   counter-increment: worksheet-part;
   display: grid;
-  gap: 16px;
-  border: 1px solid var(--line, #e5e1da);
-  border-radius: 18px;
-  background: #fffdf9;
-  padding: clamp(16px, 2.4vw, 24px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.05);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--worksheet-grid-gap);
+  row-gap: var(--worksheet-row-gap);
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+.worksheet-flow > section > *{
+  grid-column: 1 / -1;
 }
 
 .worksheet-flow > section > p{
-  max-width: 76ch;
+  grid-column: 1 / -1;
+  max-width: none;
+  margin: 0;
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+  font-size: var(--size-body, 23px);
+  font-weight: 400;
+  line-height: var(--lh-body, 1.45);
 }
 
 .worksheet-flow > section::before{
-  content: "Part " counter(worksheet-part);
-  width: max-content;
-  border: 1px solid var(--line, #e5e1da);
-  border-radius: 999px;
-  background: #ffffff;
-  color: var(--muted, #3d3d3d);
-  padding: 7px 13px;
-  font-size: clamp(20px, 1.8vw, 23px);
-  font-weight: 800;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  content: none;
+  display: none;
 }
 
 .worksheet-calculator{
   display: grid;
-  gap: 14px;
-  border: 2px solid var(--teal, #1e8a95);
-  border-radius: 18px;
-  background: #ffffff;
-  padding: 16px;
-  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+  gap: var(--worksheet-grid-gap);
+  border: 0;
+  border-left: 6px solid var(--teal, #1e8a95);
+  border-radius: 0;
+  background: transparent;
+  padding: 0 0 0 clamp(16px, 1.8vw, 24px);
+  box-shadow: none;
 }
 
 .worksheet-calculator-strip{
-  margin-top: 4px;
-  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
+  margin-top: 0;
+  grid-template-columns: minmax(180px, 2fr) minmax(0, 10fr);
   align-items: stretch;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  box-shadow: none;
 }
 
 .worksheet-calculator h2,
@@ -138,7 +155,7 @@
 .calculator-stat-grid{
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: clamp(12px, 1.4vw, 18px);
 }
 
 .worksheet-calculator-business .calculator-stat-grid{
@@ -148,10 +165,10 @@
 .calculator-stat{
   display: grid;
   gap: 3px;
-  border: 1px solid var(--line, #e5e1da);
-  border-radius: 12px;
-  background: #f9f7f3;
-  padding: 10px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .calculator-stat span:first-child{
@@ -163,6 +180,7 @@
 
 .calculator-stat strong{
   color: var(--text, #111111);
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
   font-size: clamp(18px, 2vw, 24px);
   line-height: 1;
 }
@@ -196,14 +214,15 @@
 }
 
 .addon-grid{
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px var(--worksheet-grid-gap);
 }
 
 .addon-cost{
-  display: block;
+  display: inline;
   color: var(--muted, #3d3d3d);
-  font-size: 0.9em;
-  font-weight: 700;
+  font-size: 1em;
+  font-weight: 500;
 }
 
 .math-example-table{
@@ -212,15 +231,17 @@
 
 .worksheet-intro{
   display: grid;
-  gap: 10px;
-  background: #f9f7f3;
+  grid-column: 1 / -1;
+  column-gap: var(--worksheet-grid-gap);
+  row-gap: var(--worksheet-row-gap);
+  background: transparent;
 }
 
 .worksheet-meta-grid,
 .worksheet-two-col{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: var(--worksheet-grid-gap);
 }
 
 .worksheet-two-col{
@@ -230,20 +251,23 @@
 .worksheet-field{
   display: grid;
   align-content: start;
-  gap: 8px;
+  gap: 10px;
   min-width: 0;
-  border: 1px solid var(--line, #e5e1da);
-  border-radius: 14px;
-  background: #ffffff;
-  padding: 14px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
 }
 
 .worksheet-field label,
 .worksheet-question{
   font-weight: 700;
-  font-size: clamp(16px, 1.45vw, 18px);
-  line-height: 1.25;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.2;
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .worksheet-field input,
@@ -255,7 +279,7 @@
   border: 1px solid var(--line, #e5e1da);
   border-radius: 10px;
   padding: 12px;
-  font: inherit;
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
   font-size: clamp(16px, 1.8vw, 20px);
   font-weight: 400;
   background: #ffffff;
@@ -292,16 +316,17 @@
 
 .worksheet-note,
 .worksheet-output{
-  border: 1px solid var(--line, #e5e1da);
-  border-radius: 16px;
-  background: #f9f7f3;
-  padding: 16px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .worksheet-note{
   display: grid;
-  gap: 8px;
-  border-left: 8px solid var(--gold, #f0b43a);
+  gap: var(--worksheet-row-gap);
+  border-left: 6px solid var(--gold, #f0b43a);
+  padding-left: clamp(16px, 1.8vw, 24px);
 }
 
 .worksheet-note p{
@@ -310,13 +335,97 @@
 
 .worksheet-output{
   white-space: pre-wrap;
-  font-size: clamp(15px, 1.6vw, 18px);
-  line-height: 1.45;
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+  font-size: clamp(16px, 1.8vw, 20px);
+  line-height: var(--lh-body, 1.45);
   min-height: 120px;
+}
+
+.financial-table-wrap{
+  --financial-table-border: var(--line, #e5e1da);
+  --financial-table-radius: 16px;
+  --financial-table-bg: #ffffff;
+  --financial-table-header-bg: #f9f7f3;
+  --financial-table-cell-padding: 14px 16px;
+  --financial-table-font: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+  --financial-table-font-size: clamp(16px, 1.8vw, 20px);
+  --financial-table-label-weight: 700;
+  --financial-table-value-weight: 400;
+  margin-top: 0;
+  border: 1px solid var(--financial-table-border);
+  border-radius: var(--financial-table-radius);
+  overflow: hidden;
+  background: var(--financial-table-bg);
+}
+
+.financial-table-wrap .financial-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--financial-table-font);
+  font-size: var(--financial-table-font-size);
+  line-height: 1.2;
+}
+
+.financial-table-wrap .financial-table th,
+.financial-table-wrap .financial-table td{
+  border: 1px solid var(--financial-table-border);
+  padding: var(--financial-table-cell-padding);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.financial-table-wrap .financial-table thead th{
+  background: var(--financial-table-header-bg);
+  font-weight: var(--financial-table-label-weight);
+  white-space: nowrap;
+}
+
+.financial-table-wrap .financial-table tbody th{
+  font-weight: var(--financial-table-label-weight);
+}
+
+.financial-table-wrap .financial-table tbody td{
+  font-weight: var(--financial-table-value-weight);
 }
 
 .worksheet-table{
   min-width: 980px;
+}
+
+.financial-table-two-col{
+  min-width: 0;
+  table-layout: fixed;
+}
+
+.financial-table-wrap .financial-table-two-col th,
+.financial-table-wrap .financial-table-two-col td{
+  text-align: left;
+}
+
+.financial-table-wrap .financial-table-two-col thead th,
+.financial-table-wrap .financial-table-two-col tbody td{
+  width: 50%;
+}
+
+.financial-table-wrap .financial-table-two-col td{
+  display: table-cell;
+}
+
+.financial-table-wrap .financial-table-two-col td strong,
+.financial-table-wrap .financial-table-two-col .math-breakdown{
+  display: block;
+}
+
+.financial-table-wrap .financial-table-two-col .math-breakdown{
+  margin-top: 4px;
+  color: var(--muted, #3d3d3d);
+  font-size: 0.9em;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.worksheet-form .table-wrap{
+  margin-top: 0;
 }
 
 .worksheet-table th,
@@ -348,56 +457,92 @@
 .choice-grid,
 .checkbox-list{
   display: grid;
-  gap: 10px;
+  gap: 14px var(--worksheet-grid-gap);
   align-items: stretch;
 }
 
 .choice-grid{
-  grid-template-columns: repeat(auto-fit, minmax(112px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
 }
 
 .checkbox-list{
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.checkbox-list.addon-grid{
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .choice-grid label,
 .checkbox-list label{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   border: 1px solid var(--line, #e5e1da);
-  border-radius: 12px;
-  padding: 12px 14px;
+  border-radius: 999px;
+  padding: 13px 18px;
   background: #ffffff;
-  font-size: clamp(15px, 1.6vw, 18px);
+  color: var(--text, #111111);
+  font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
+  font-size: clamp(17px, 1.7vw, 21px);
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.15;
   cursor: pointer;
-  min-height: 50px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.035);
-  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+  min-height: 58px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+  transition: border-color 160ms ease, background 160ms ease, box-shadow 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.addon-grid label{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 10px 12px;
+  align-items: center;
+  justify-content: stretch;
+  text-align: left;
 }
 
 .choice-grid input,
 .checkbox-list input{
-  flex: 0 0 auto;
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  accent-color: var(--teal, #1e8a95);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
 }
 
 .choice-grid label:hover,
 .checkbox-list label:hover{
-  border-color: rgba(30,138,149,0.55);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+  border-color: rgba(30,138,149,0.6);
+  color: var(--teal, #1e8a95);
+  box-shadow: 0 10px 22px rgba(30,138,149,0.1);
 }
 
 .choice-grid label:has(input:checked),
 .checkbox-list label:has(input:checked){
   border-color: var(--teal, #1e8a95);
-  background: #edf8f9;
-  box-shadow: 0 8px 18px rgba(30,138,149,0.13);
+  background: var(--teal, #1e8a95);
+  color: #ffffff;
+  box-shadow: 0 14px 26px rgba(30,138,149,0.2);
+}
+
+.choice-grid label:has(input[type="radio"]:checked),
+.checkbox-list label:has(input[type="checkbox"]:checked){
+  border-color: var(--teal, #1e8a95);
+  background-color: var(--teal, #1e8a95);
+  color: #ffffff;
+  box-shadow: 0 14px 26px rgba(30,138,149,0.2);
+}
+
+.checkbox-list label:has(input:checked) .addon-cost{
+  color: #ffffff;
 }
 
 .choice-grid label:has(input:focus-visible),
@@ -409,7 +554,7 @@
 .worksheet-actions{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 12px;
+  gap: 14px;
   align-items: stretch;
 }
 
@@ -421,13 +566,13 @@
   justify-content: center;
   font-family: var(--font-body, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif);
   font-size: clamp(16px, 1.6vw, 18px);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0;
   text-transform: none;
   line-height: 1.15;
   text-align: center;
   padding: 14px 16px;
-  border-radius: 12px;
+  border-radius: 999px;
   white-space: normal;
 }
 
@@ -451,7 +596,56 @@
   padding-left: 12px;
 }
 
+@media (min-width: 981px){
+  .worksheet-flow > section > .table-wrap,
+  .worksheet-flow > section > .worksheet-two-col,
+  .worksheet-flow > section > .worksheet-field,
+  .worksheet-flow > section > .worksheet-calculator,
+  .worksheet-flow > section > .worksheet-note,
+  .worksheet-flow > section > .worksheet-actions,
+  .worksheet-flow > section > .worksheet-output,
+  .worksheet-intro > .table-wrap,
+  .worksheet-intro > .worksheet-note{
+    grid-column: 1 / -1;
+  }
+
+  .worksheet-two-col{
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .worksheet-two-col > .worksheet-field{
+    grid-column: span 6;
+  }
+
+  .worksheet-two-col > .worksheet-field:only-child{
+    grid-column: 1 / -1;
+  }
+
+  .choice-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .checkbox-list:not(.addon-grid){
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .checkbox-list.addon-grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 980px){
+  .worksheet-flow > section{
+    grid-template-columns: 1fr;
+  }
+
+  .worksheet-flow > section > *,
+  .worksheet-flow > section > p,
+  .worksheet-intro > p{
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+
   .worksheet-meta-grid,
   .worksheet-two-col{
     grid-template-columns: 1fr;
@@ -465,27 +659,11 @@
     position: static;
   }
 
-  .worksheet-form > section{
-    padding: 14px;
-    gap: 14px;
-  }
-
-  .thankyou-card .worksheet-form h2.article-band-heading{
-    font-size: clamp(48.96px, 7.2vw, 80.64px);
-    margin-left: -12px;
-    margin-right: -12px;
-    padding: 14px;
-  }
-
-  .worksheet-field{
-    padding: 12px;
-  }
-
   .worksheet-form .table-wrap{
     position: relative;
   }
 
-  .worksheet-form .table-wrap::before{
+  .worksheet-form .table-wrap:not(.financial-table-wrap)::before{
     content: "Scroll table sideways";
     display: block;
     padding: 8px 12px;
@@ -494,6 +672,59 @@
     border-bottom: 1px solid var(--line, #e5e1da);
     font-size: 14px;
     font-weight: 800;
+    text-align: left;
+  }
+
+  .financial-table-wrap{
+    overflow: hidden;
+  }
+
+  .financial-table-wrap .financial-table{
+    min-width: 0;
+  }
+
+  .financial-table-wrap .financial-table thead{
+    display: none;
+  }
+
+  .financial-table-wrap .financial-table,
+  .financial-table-wrap .financial-table tbody,
+  .financial-table-wrap .financial-table tr,
+  .financial-table-wrap .financial-table th,
+  .financial-table-wrap .financial-table td{
+    display: block;
+    width: 100%;
+  }
+
+  .financial-table-wrap .financial-table tr{
+    border-top: 1px solid var(--financial-table-border);
+  }
+
+  .financial-table-wrap .financial-table tr:first-child{
+    border-top: 0;
+  }
+
+  .financial-table-wrap .financial-table th,
+  .financial-table-wrap .financial-table td{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    gap: 12px;
+    align-items: center;
+    border: 0;
+    border-top: 1px solid var(--financial-table-border);
+    padding: var(--financial-table-cell-padding);
+    text-align: right;
+  }
+
+  .financial-table-wrap .financial-table tr > :first-child{
+    border-top: 0;
+  }
+
+  .financial-table-wrap .financial-table th::before,
+  .financial-table-wrap .financial-table td::before{
+    content: attr(data-label);
+    color: var(--text, #111111);
+    font-weight: var(--financial-table-label-weight);
     text-align: left;
   }
 }
