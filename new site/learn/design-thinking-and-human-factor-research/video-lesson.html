@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>design thinking video lesson | the money club org</title>
+  <meta name="description" content="a synchronized audio and text lesson for the money club design thinking module">
+  <meta name="robots" content="noindex">
+  <style>
+    @font-face {
+      font-family: "Raleway";
+      src: url("Raleway-Regular.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    :root {
+      color-scheme: dark;
+      --page-pad: clamp(20px, 5vw, 72px);
+      --control-height: 48px;
+      --muted: rgba(255, 255, 255, 0.66);
+      --line: rgba(255, 255, 255, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      background: #000;
+    }
+
+    body {
+      overflow: hidden;
+      color: #fff;
+      font-family: "Raleway", Arial, Helvetica, sans-serif;
+      font-weight: 400;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .player {
+      position: relative;
+      display: grid;
+      width: 100%;
+      min-height: 100svh;
+      place-items: center;
+      padding:
+        max(var(--page-pad), env(safe-area-inset-top))
+        max(var(--page-pad), env(safe-area-inset-right))
+        max(calc(var(--page-pad) + 76px), env(safe-area-inset-bottom))
+        max(var(--page-pad), env(safe-area-inset-left));
+      isolation: isolate;
+    }
+
+    .word-stage {
+      display: grid;
+      width: min(88vw, 1280px);
+      min-height: clamp(120px, 24vh, 300px);
+      place-items: center;
+      text-align: center;
+    }
+
+    .current-word {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      color: #fff;
+      font-size: clamp(48px, 8vw, 132px);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: 0;
+      text-transform: lowercase;
+      text-wrap: balance;
+      opacity: 1;
+    }
+
+    .current-word[aria-hidden="true"] {
+      opacity: 0;
+    }
+
+    .controls {
+      position: absolute;
+      right: max(var(--page-pad), env(safe-area-inset-right));
+      bottom: max(22px, env(safe-area-inset-bottom));
+      left: max(var(--page-pad), env(safe-area-inset-left));
+      display: grid;
+      grid-template-columns: var(--control-height) minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      max-width: 1120px;
+      margin: 0 auto;
+      transition: opacity 180ms ease;
+    }
+
+    .play-toggle {
+      display: grid;
+      width: var(--control-height);
+      height: var(--control-height);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      padding: 0;
+      place-items: center;
+      background: #111;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .play-toggle:hover,
+    .play-toggle:focus-visible {
+      border-color: #fff;
+      outline: none;
+    }
+
+    .play-toggle span {
+      display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      line-height: 1;
+      transform: translateX(1px);
+    }
+
+    .timeline {
+      width: 100%;
+      height: 26px;
+      margin: 0;
+      accent-color: #fff;
+      cursor: pointer;
+    }
+
+    .time {
+      min-width: 102px;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-variant-numeric: tabular-nums;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .status {
+      position: absolute;
+      top: max(18px, env(safe-area-inset-top));
+      right: var(--page-pad);
+      left: var(--page-pad);
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .status:empty {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --page-pad: 18px;
+        --control-height: 44px;
+      }
+
+      .player {
+        padding-bottom: max(96px, env(safe-area-inset-bottom));
+      }
+
+      .word-stage {
+        width: 92vw;
+      }
+
+      .current-word {
+        font-size: clamp(42px, 14vw, 88px);
+      }
+
+      .controls {
+        grid-template-columns: var(--control-height) minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .time {
+        grid-column: 1 / -1;
+        min-width: 0;
+        text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .controls {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="player" id="player">
+    <p class="status" id="status" role="status">Loading synchronized lesson…</p>
+
+    <div class="word-stage" aria-live="off">
+      <div class="current-word" id="current-word" aria-hidden="true"></div>
+    </div>
+
+    <div class="controls" aria-label="Audio controls">
+      <button class="play-toggle" id="play-toggle" type="button" aria-label="Play">
+        <span aria-hidden="true">▶</span>
+      </button>
+      <input class="timeline" id="timeline" type="range" min="0" max="1000" value="0" step="1" aria-label="Audio position">
+      <output class="time" id="time" for="timeline">0:00 / 0:00</output>
+    </div>
+
+    <audio id="audio" preload="metadata">
+      <source src="design-thinking.mp3" type="audio/mpeg">
+    </audio>
+  </main>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var audio = document.getElementById("audio");
+      var playToggle = document.getElementById("play-toggle");
+      var playIcon = playToggle.querySelector("span");
+      var timeline = document.getElementById("timeline");
+      var timeOutput = document.getElementById("time");
+      var currentWord = document.getElementById("current-word");
+      var status = document.getElementById("status");
+      var cues = [];
+      var activeCueIndex = -1;
+      var isSeeking = false;
+      var animationFrame = 0;
+      var shouldAutoplay = new URLSearchParams(window.location.search).get("autoplay") === "1";
+
+      function parseTime(value) {
+        var parts = value.replace(",", ".").split(":");
+        return Number(parts[0]) * 3600 + Number(parts[1]) * 60 + Number(parts[2]);
+      }
+
+      function parseSrt(source) {
+        return source
+          .trim()
+          .split(/\r?\n\s*\r?\n/)
+          .map(function (block) {
+            var lines = block.split(/\r?\n/);
+            var timing = lines[1] && lines[1].match(
+              /(\d{2}:\d{2}:\d{2},\d{3})\s+-->\s+(\d{2}:\d{2}:\d{2},\d{3})/
+            );
+
+            if (!timing || lines.length < 3) {
+              return null;
+            }
+
+            return {
+              start: parseTime(timing[1]),
+              end: parseTime(timing[2]),
+              text: lines.slice(2).join(" ").trim()
+            };
+          })
+          .filter(Boolean);
+      }
+
+      function findCueIndex(time) {
+        var low = 0;
+        var high = cues.length - 1;
+        var result = -1;
+
+        while (low <= high) {
+          var middle = Math.floor((low + high) / 2);
+          var cue = cues[middle];
+
+          if (time < cue.start) {
+            high = middle - 1;
+          } else {
+            result = middle;
+            low = middle + 1;
+          }
+        }
+
+        return result;
+      }
+
+      function renderWord() {
+        var nextCueIndex = findCueIndex(audio.currentTime);
+
+        if (nextCueIndex === activeCueIndex) {
+          return;
+        }
+
+        activeCueIndex = nextCueIndex;
+
+        if (activeCueIndex === -1) {
+          currentWord.textContent = "";
+          currentWord.setAttribute("aria-hidden", "true");
+          return;
+        }
+
+        currentWord.textContent = cues[activeCueIndex].text;
+        currentWord.removeAttribute("aria-hidden");
+      }
+
+      function formatClock(seconds) {
+        if (!Number.isFinite(seconds)) {
+          return "0:00";
+        }
+
+        var rounded = Math.max(0, Math.floor(seconds));
+        var minutes = Math.floor(rounded / 60);
+        var remainder = rounded % 60;
+        return minutes + ":" + String(remainder).padStart(2, "0");
+      }
+
+      function updateProgress() {
+        if (!isSeeking && Number.isFinite(audio.duration) && audio.duration > 0) {
+          timeline.value = Math.round((audio.currentTime / audio.duration) * 1000);
+        }
+
+        timeOutput.textContent =
+          formatClock(audio.currentTime) + " / " + formatClock(audio.duration);
+        renderWord();
+      }
+
+      function updatePlayState() {
+        var isPlaying = !audio.paused && !audio.ended;
+        playIcon.textContent = isPlaying ? "❚❚" : "▶";
+        playToggle.setAttribute("aria-label", isPlaying ? "Pause" : "Play");
+
+        if (isPlaying && !animationFrame) {
+          animationFrame = requestAnimationFrame(updatePlaybackFrame);
+        } else if (!isPlaying && animationFrame) {
+          cancelAnimationFrame(animationFrame);
+          animationFrame = 0;
+        }
+      }
+
+      function startPlayback() {
+        audio.play().catch(function () {
+          status.textContent = "Press Play to start the lesson.";
+        });
+      }
+
+      function updatePlaybackFrame() {
+        animationFrame = 0;
+        updateProgress();
+        if (!audio.paused && !audio.ended) {
+          animationFrame = requestAnimationFrame(updatePlaybackFrame);
+        }
+      }
+
+      playToggle.addEventListener("click", function () {
+        if (audio.paused || audio.ended) {
+          startPlayback();
+        } else {
+          audio.pause();
+        }
+      });
+
+      timeline.addEventListener("input", function () {
+        isSeeking = true;
+        if (Number.isFinite(audio.duration)) {
+          var previewTime = (Number(timeline.value) / 1000) * audio.duration;
+          timeOutput.textContent =
+            formatClock(previewTime) + " / " + formatClock(audio.duration);
+        }
+      });
+
+      timeline.addEventListener("change", function () {
+        if (Number.isFinite(audio.duration)) {
+          audio.currentTime = (Number(timeline.value) / 1000) * audio.duration;
+        }
+        isSeeking = false;
+        updateProgress();
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.code !== "Space" || event.target === timeline) {
+          return;
+        }
+
+        event.preventDefault();
+        playToggle.click();
+      });
+
+      audio.addEventListener("loadedmetadata", updateProgress);
+      audio.addEventListener("timeupdate", updateProgress);
+      audio.addEventListener("seeked", updateProgress);
+      audio.addEventListener("play", updatePlayState);
+      audio.addEventListener("pause", updatePlayState);
+      audio.addEventListener("ended", updatePlayState);
+
+      fetch("design-thinking_word_aligned.srt?v=1", {
+        cache: "no-store"
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Subtitle file could not be loaded.");
+          }
+          return response.text();
+        })
+        .then(function (source) {
+          cues = parseSrt(source);
+          if (!cues.length) {
+            throw new Error("Subtitle file contains no readable cues.");
+          }
+          status.textContent = "";
+          renderWord();
+          if (shouldAutoplay) {
+            shouldAutoplay = false;
+            startPlayback();
+          }
+        })
+        .catch(function (error) {
+          status.textContent = error.message;
+        });
+    }());
+  </script>
+</body>
+</html>

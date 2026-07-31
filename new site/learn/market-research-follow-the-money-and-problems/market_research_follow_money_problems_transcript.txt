@@ -1,0 +1,153 @@
+market research follow the money and problems
+a shelf is not random
+it is a map of what people buy again
+most students think the next step after a good idea is to build it
+a parent says we always run out of garbage bags
+so the student thinks great i will sell garbage bags
+that is too fast
+a complaint is useful but it is not enough
+before you build you need to understand the category
+what kinds of bags exist
+what sizes sell
+what brands show up again and again
+what prices are normal
+what does walmart carry
+what does amazon carry
+the idea is visible
+the market is less visible
+market research helps you see it
+in the last module you used design thinking to find friction
+friction is where life gets annoying
+people forget things
+run out of things
+overpay for things
+carry bulky things home
+now we add the next question
+is this friction connected to a real market
+to answer that we use artificial intelligence to scan walmart dot c a and amazon
+but ai is not doing the thinking for you
+ai is helping you collect sort and compare information faster
+you are still the researcher
+you are looking for patterns
+product assortment analysis means studying what products a store carries to understand how a category works
+a sku is one specific product listing
+a forty five litre garbage bag from glad is one sku
+a ninety litre recycling bag from great value is another sku
+a ten litre compostable liner is another sku
+when a store has many skus in one size or type that can be a demand signal
+it may mean many customers buy that kind of product
+it may mean suppliers are competing there
+it may mean the retailer believes that shelf space is worth it
+not proof
+a clue
+good market research collects clues before making decisions
+imagine the parent survey shows that families run out of household basics
+garbage bags
+compost liners
+paper towels
+soap
+cleaning supplies
+now students scan walmart dot c a and amazon
+they are not just asking what products exist
+they are asking better questions
+which sizes appear most often
+which brands repeat
+which products are cheap
+which products are expensive
+which products have many reviews
+which products are available in store
+which products are sold in bundles
+this is how a category becomes visible
+the shelf starts to talk
+use the assortment signal map
+start with the parent problem
+then find the product category
+then scan the shelf
+then count the patterns
+then build a hypothesis
+start with the survey
+what did parents say they forget run out of or dislike buying
+name the category
+is this garbage bags laundry supplies bathroom restock pet waste or school supplies
+scan walmart dot c a and amazon
+use ai to collect product names sizes prices brands pack counts and reviews
+sort the skus
+group products by size use case brand and format
+look for clusters
+where are there many products
+ten litre
+twenty five litre
+forty five litre
+ninety litre
+refills
+multipacks
+make an inference
+if a size appears often it may be an important buying pattern
+check the caution
+sku count does not equal sales
+it is a signal not a fact
+write the hypothesis
+this product size may be in demand because many retailers carry it parents mentioned the problem and the need repeats
+that is market research
+not guessing
+reading the evidence
+use garbage bags
+garbage bags are boring
+that is why they are useful
+families do not dream about buying them
+they notice them when the bag rips
+or when the box is empty
+or when the compost liner does not fit
+or when someone has to make another trip to the store
+now the student scans the category
+the pattern may show that forty five litre ninety litre twenty five litre and ten litre bags appear often
+that matters
+it suggests the category has different jobs
+ten litre bags may be for kitchen compost
+twenty five litre bags may be for small bins
+forty five litre bags may be for regular garbage
+ninety litre bags may be for recycling or larger household use
+now the student sees the system
+it is not just sell bags
+it is which household routine
+which bin size
+which problem
+which price
+which customer
+which bundle
+that is a much better starting point
+by the end of this module each student will create a product assortment analysis
+the output should answer
+what product category came from the parent survey
+what products did walmart dot c a and amazon show
+which sizes appeared most often
+which brands appeared most often
+what was the price range
+what complaints or reviews showed friction
+what product would you test locally
+what evidence supports that choice
+the final sentence should be clear
+this opportunity may be real because parents named the problem stores carry many skus in this category and the need repeats in household routines
+not i like this idea
+better
+the evidence points here
+market research teaches you to slow down before building
+that matters in business
+it also matters in life
+most people look at a store and see products
+a market researcher sees patterns
+sizes
+prices
+brands
+reviews
+bundles
+gaps
+repeated needs
+in module one you learned to follow the money
+in module two you learned to find the friction
+in this module you learn to read the shelf
+next you will use that evidence to choose a product and build a simple offer
+because a good business does not start with a guess
+it starts with a signal
+the shelf is not just full of products
+it is full of clues
