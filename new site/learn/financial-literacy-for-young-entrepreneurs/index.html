@@ -1521,7 +1521,8 @@ nav{
       display: grid;
       gap: 8px;
     }
-    .article-intro-heading h1{
+    .article-intro-heading h1,
+    .article-intro-heading h2{
       margin: 0;
       font-size: 2.8rem;
       line-height: 1;
@@ -1599,6 +1600,9 @@ nav{
       align-items: stretch;
       justify-content: flex-start;
     }
+    .article-intro-actions--single{
+      grid-template-columns: 1fr;
+    }
     .article-intro-actions .article-read-time,
     .article-intro-actions .video-lesson-button{
       width: 100%;
@@ -1606,8 +1610,14 @@ nav{
       justify-self: auto;
       padding: 12px 10px;
       font-size: clamp(18px, 1.35vw, 20px);
+      font-family: var(--font-body);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.15;
       text-align: center;
+      text-transform: none;
       white-space: nowrap;
+      text-decoration: none;
     }
     .video-lesson-button{
       appearance: none;
@@ -1888,8 +1898,8 @@ nav{
     .learning-page-shell .article-facts-card .btn{
       font-family: var(--font-body);
       font-size: clamp(18px, 1.6vw, 22px);
-      font-weight: 700;
-      line-height: 1.2;
+      font-weight: 500;
+      line-height: 1.15;
       letter-spacing: 0;
       text-transform: none;
       min-height: 58px;
@@ -2333,7 +2343,7 @@ nav{
   </style>
   <link rel="stylesheet" href="/assets/typography.css?v=6" />
   <link rel="stylesheet" href="/assets/site-menu.css?v=1" />
-  <link rel="stylesheet" href="/assets/learn-catalogue.css?v=2" />
+  <link rel="stylesheet" href="/assets/learn-catalogue.css?v=9" />
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -2368,17 +2378,14 @@ nav{
           <details class="learning-menu-tree">
             <summary>Learning Catalogue</summary>
             <div class="learning-menu-list">
-              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
-              <a href="/learn/">Design Thinking</a>
-              <a href="/learn/">Market Research</a>
-              <a href="/learn/">Sourcing</a>
-              <a href="/learn/">Control Brand</a>
-              <a href="/learn/">Business Model</a>
-              <a href="/learn/">Go-To-Market</a>
-              <a href="/learn/">Creative Fundamentals</a>
-              <a href="/learn/">Marketing</a>
-              <a href="/learn/">Market Watch</a>
-              <a href="/learn/">AI Tools</a>
+              <a class="is-current" href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
+              <a href="/learn/design-thinking-and-human-factor-research/">Design Thinking</a>
+              <a href="/learn/market-research-follow-the-money-and-problems/">Market Research</a>
+              <a href="/learn/control-brand-playbook/">Control Brand</a>
+              <a href="/learn/sourcing-101-where-value-is-actually-made/">Sourcing</a>
+              <a href="/learn/go-to-market-launch-without-burning-fuel/">Go-To-Market</a>
+              <a href="/learn/creative-fundamentals-photography-design-and-visual-clarity/">Creative Fundamentals</a>
+              <a href="/learn/marketing-use-existing-channels-first/">Marketing</a>
             </div>
           </details>
           <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
@@ -2408,7 +2415,7 @@ nav{
               <details class="contains-current" open>
                 <summary>💰 Financial Literacy as Survival Gear</summary>
                 <ul class="catalogue-sublist">
-                  <li><a href="/learn/financial-literacy-for-young-entrepreneurs/">Learning Module</a></li>
+                  <li><a class="is-current" aria-current="page" href="/learn/financial-literacy-for-young-entrepreneurs/">Learning Module</a></li>
                   <li><a href="/learn/financial-literacy-for-young-entrepreneurs/worksheet.html">Worksheet: Coffee Counter Math Lab</a></li>
                 </ul>
               </details>
@@ -2417,8 +2424,8 @@ nav{
               <details>
                 <summary>🎨 Design Thinking & Human Factor Research</summary>
                 <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#design-thinking-worksheet">Worksheet: Find the Friction Lab</a></li>
+                  <li><a href="/learn/design-thinking-and-human-factor-research/">Learning Module</a></li>
+                  <li><a href="/learn/design-thinking-and-human-factor-research/worksheet.html">Worksheet: Find the Friction Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2426,17 +2433,8 @@ nav{
               <details>
                 <summary>📊 Market Research: Follow the Money & Problems</summary>
                 <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#market-research-worksheet">Worksheet: Demand Signal Map</a></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>🏭 Sourcing 101: Where Value Is Actually Made</summary>
-                <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#sourcing-worksheet">Worksheet: Supplier Comparison Lab</a></li>
+                  <li><a href="/learn/market-research-follow-the-money-and-problems/">Learning Module</a></li>
+                  <li><a href="/learn/market-research-follow-the-money-and-problems/worksheet.html">Worksheet: Product Assortment Analysis</a></li>
                 </ul>
               </details>
             </li>
@@ -2444,17 +2442,17 @@ nav{
               <details>
                 <summary>🏷 Control Brand Playbook</summary>
                 <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
+                  <li><a href="/learn/control-brand-playbook/">Learning Module</a></li>
                   <li><a href="/learn/#control-brand-worksheet">Worksheet: Build a Better Version Lab</a></li>
                 </ul>
               </details>
             </li>
             <li>
               <details>
-                <summary>📋 Business Model Thinking</summary>
+                <summary>🏭 Sourcing 101: Where Value Is Actually Made</summary>
                 <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#business-model-worksheet">Worksheet: One-Page Business Model Lab</a></li>
+                  <li><a href="/learn/sourcing-101-where-value-is-actually-made/">Learning Module</a></li>
+                  <li><a href="/learn/#sourcing-worksheet">Worksheet: Supplier Comparison Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2462,7 +2460,7 @@ nav{
               <details>
                 <summary>🚀 Go-To-Market: Launch Without Burning Fuel</summary>
                 <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
+                  <li><a href="/learn/go-to-market-launch-without-burning-fuel/">Learning Module</a></li>
                   <li><a href="/learn/#go-to-market-worksheet">Worksheet: First Launch Test Plan</a></li>
                 </ul>
               </details>
@@ -2471,7 +2469,7 @@ nav{
               <details>
                 <summary>📸 Creative Fundamentals: Photography, Design & Visual Clarity</summary>
                 <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
+                  <li><a href="/learn/creative-fundamentals-photography-design-and-visual-clarity/">Learning Module</a></li>
                   <li><a href="/learn/#creative-fundamentals-worksheet">Worksheet: Make the Offer Clear Lab</a></li>
                 </ul>
               </details>
@@ -2480,26 +2478,8 @@ nav{
               <details>
                 <summary>📣 Marketing: Use Existing Channels First</summary>
                 <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
+                  <li><a href="/learn/marketing-use-existing-channels-first/">Learning Module</a></li>
                   <li><a href="/learn/#marketing-worksheet">Worksheet: Channel Match Lab</a></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>♟️ Staying Ahead of the Game</summary>
-                <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#market-watch-worksheet">Worksheet: Market Watch Dashboard</a></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary>💻 AI Tools Used Across the Program</summary>
-                <ul class="catalogue-sublist">
-                  <li><span>Learning Module</span></li>
-                  <li><a href="/learn/#ai-tools-worksheet">Worksheet: AI Co-Pilot Lab</a></li>
                 </ul>
               </details>
             </li>
@@ -2509,7 +2489,7 @@ nav{
           <section class="article-intro-module" aria-labelledby="article-intro-heading">
             <div class="article-intro-media">
               <picture>
-                <source media="(min-width: 769px)" srcset="/assets/Kids-Index.jpg" />
+                <source media="(min-width: 769px)" srcset="/assets/compass-learning-mods.png" />
                 <img src="/assets/kids-campus-1.jpg" alt="Students participating in a Money Club learning session" />
               </picture>
             </div>
@@ -2517,21 +2497,21 @@ nav{
               <div class="article-intro-label">Learning Module</div>
               <div class="article-intro-body">
                 <div class="article-intro-heading">
-                  <h1 id="article-intro-heading">Financial Literacy for Young Entrepreneurs</h1>
-                  <p>A practical lesson on cost, margin, cash flow, pricing, hooks, and repeat demand &mdash; using coffee as the grown-up lemonade stand.</p>
+                  <h1 id="article-intro-heading">The Coffee System</h1>
+                  <p>Why a cup of coffee teaches more about business than a lemonade stand.</p>
                 </div>
                 <div class="article-intro-meta">
                   <div class="article-intro-meta-row">
                     <div class="article-intro-meta-label">Best for</div>
-                    <p>Students learning how money moves through a product, service, or venture concept.</p>
+                    <p>Students learning to see the system underneath a product, price, and transaction.</p>
                   </div>
                   <div class="article-intro-meta-row">
                     <div class="article-intro-meta-label">Learning Outcomes</div>
-                    <p>Revenue, cost, margin, profit, cash flow, pricing, incentives, upsells, and repeat demand.</p>
+                    <p>Systems, revenue, gross margin, profit, hooks, incentives, habits, and business literacy.</p>
                   </div>
                 </div>
                 <div class="article-intro-actions">
-                  <div class="article-read-time">Read Time: 7 Minutes</div>
+                  <div class="article-read-time">Read Time: 5 Minutes</div>
                   <button class="video-lesson-button" id="open-video-lesson" type="button" aria-haspopup="dialog">
                     Video Lesson
                   </button>
@@ -2540,119 +2520,241 @@ nav{
             </div>
           </section>
 
-          <h2 class="article-band-heading article-band-teal">Financial Literacy, A Practical Lesson</h2>
-          <p>Every kid understands a lemonade stand.</p>
-          <p>Buy lemons, add sugar and water, set up a table, sell cups, keep the money.</p>
-          <p>It is simple, which is why adults use it whenever they want to explain business to children.</p>
-          <p>But the lemonade stand also hides most of what makes a business interesting. It makes selling look like the whole game. It treats the product as a one-time event. It skips the systems underneath the sale.</p>
-          <p>If you want students to understand how money actually moves, start with coffee.</p>
+          <h2 class="article-band-heading article-band-teal">The Coffee System</h2>
+          <p><strong>Why a cup of coffee teaches more about business than a lemonade stand</strong></p>
+          <p>Everybody knows the lemonade stand.</p>
+          <p>Buy lemons.</p>
+          <p>Add sugar.</p>
+          <p>Make a sign.</p>
+          <p>Sell a cup.</p>
+          <p>Somebody gives you a dollar.</p>
+          <p>Business feels simple.</p>
+          <p>That is why adults love using lemonade stands to teach entrepreneurship.</p>
+          <p>But lemonade stands hide something important.</p>
+          <p>They make selling look like the whole game.</p>
+          <p>And selling is not the whole game.</p>
+          <p>If you want to understand how money actually moves, stop looking at lemonade.</p>
+          <p>Look at coffee.</p>
           <p>Coffee is the grown-up lemonade stand.</p>
-          <p>It is familiar. It is bought again and again. It can be cheap, premium, fast, social, convenient, customized, bundled, subscribed to, upgraded, and habit-forming. A single cup can teach more about business than a poster full of definitions.</p>
-          <p>That is why coffee is such a useful model for financial literacy for young entrepreneurs. It turns money from an abstract topic into a system students can inspect.</p>
+          <p>Same basic idea.</p>
+          <p>A drink.</p>
+          <p>A customer.</p>
+          <p>A price.</p>
+          <p>A transaction.</p>
+          <p>But one becomes a summer project.</p>
+          <p>The other becomes a billion-dollar industry.</p>
+          <p>Why?</p>
+          <p>Because coffee is not just a product.</p>
+          <p>Coffee is a system.</p>
+          <p>And systems are where the real lessons live.</p>
+          <p>Imagine you walk into a coffee shop and buy a coffee for two dollars.</p>
+          <p>Simple.</p>
+          <p>You hand over two dollars.</p>
+          <p>The store gives you a coffee.</p>
+          <p>Transaction complete.</p>
+          <p>Except that is not what actually happened.</p>
+          <p>That is only the part you can see.</p>
+          <p>Underneath that coffee is an entire machine working together.</p>
+          <p>Coffee beans.</p>
+          <p>Milk.</p>
+          <p>Sugar.</p>
+          <p>Cups.</p>
+          <p>Lids.</p>
+          <p>Machines.</p>
+          <p>Electricity.</p>
+          <p>Staff.</p>
+          <p>Rent.</p>
+          <p>Cleaning.</p>
+          <p>Delivery trucks.</p>
+          <p>Payment systems.</p>
+          <p>Marketing.</p>
+          <p>Loyalty programs.</p>
+          <p>Apps.</p>
+          <p>Managers.</p>
+          <p>Suppliers.</p>
+          <p>Someone had to decide the price.</p>
+          <p>Someone had to design the menu.</p>
+          <p>Someone had to make sure the store opened on time.</p>
+          <p>Someone had to predict how much coffee people would buy today.</p>
+          <p>The cup is visible.</p>
+          <p>The system is invisible.</p>
+          <p>Most people only see the cup.</p>
+          <p>Business people learn to see the system.</p>
+          <p>And once you start seeing systems, you begin noticing them everywhere.</p>
+          <p>Schools are systems.</p>
+          <p>Hospitals are systems.</p>
+          <p>Airports are systems.</p>
+          <p>Cities are systems.</p>
+          <p>Businesses are systems.</p>
+          <p>The students who learn to see systems early gain an advantage.</p>
+          <p>Because they stop asking:</p>
+          <p>"What product should I make?"</p>
+          <p>And start asking:</p>
+          <p>"What system creates this result?"</p>
+          <p>That question is the beginning of business thinking.</p>
+          <p>And it starts with a cup of coffee.</p>
 
-          <h2 class="article-band-heading article-band-purple">Start with the cup</h2>
-          <p>A cup of coffee looks simple from the customer side.</p>
-          <p>You order. Someone makes it. You pay. You drink it.</p>
-          <p>But inside that cup are ingredients, labor, rent, equipment, waste, time, brand, habit, convenience, and trust.</p>
-          <p>That makes it a better teaching model than the lemonade stand. Coffee is not only a product. It is a small business system.</p>
-          <p>Students can see the drink. They can imagine the customer. They can understand why someone buys it once, why someone buys it again, and why one coffee shop can charge more than another.</p>
-          <p>The cup gives students a concrete way to talk about money without starting from adult abstractions.</p>
+          <h2 class="article-band-heading article-band-purple">Follow the Money</h2>
+          <p><strong>Revenue is not profit</strong></p>
+          <p>Let's follow the money.</p>
+          <p>A customer buys one coffee.</p>
+          <p>Price:</p>
+          <p>Two dollars.</p>
+          <p>The business collects two dollars.</p>
+          <p>That sounds like profit.</p>
+          <p>But it isn't.</p>
+          <p>Not even close.</p>
+          <p>Because before the business can keep anything, it has to pay for the coffee itself.</p>
+          <p>Coffee beans.</p>
+          <p>Milk.</p>
+          <p>Sugar.</p>
+          <p>Cup.</p>
+          <p>Lid.</p>
+          <p>Sleeve.</p>
+          <p>Let's say all of that costs seventy-five cents.</p>
+          <p>Now do the math.</p>
+          <p>Two dollars minus seventy-five cents.</p>
+          <p>One dollar and twenty-five cents remains.</p>
+          <p>That money is called gross margin.</p>
+          <p>Gross margin is breathing room.</p>
+          <p>It is what is left after paying for the product itself.</p>
+          <p>But breathing room is not profit.</p>
+          <p>The business still has bills.</p>
+          <p>Lots of them.</p>
+          <p>Rent.</p>
+          <p>Staff.</p>
+          <p>Equipment.</p>
+          <p>Cleaning.</p>
+          <p>Payment fees.</p>
+          <p>Repairs.</p>
+          <p>Insurance.</p>
+          <p>Marketing.</p>
+          <p>Electricity.</p>
+          <p>Now imagine the store sells one thousand coffees.</p>
+          <p>Revenue:</p>
+          <p>Two thousand dollars.</p>
+          <p>The ingredients cost:</p>
+          <p>Seven hundred and fifty dollars.</p>
+          <p>That leaves:</p>
+          <p>One thousand two hundred and fifty dollars.</p>
+          <p>Sounds pretty good.</p>
+          <p>But now reality arrives.</p>
+          <p>The business still has operating costs.</p>
+          <p>Let's say those costs total eight hundred and fifty dollars.</p>
+          <p>Now subtract again.</p>
+          <p>One thousand two hundred and fifty dollars minus eight hundred and fifty dollars.</p>
+          <p>Four hundred dollars remains.</p>
+          <p>That is profit.</p>
+          <p>The store collected two thousand dollars.</p>
+          <p>But only kept four hundred.</p>
+          <p>Twenty percent.</p>
+          <p>That is a huge lesson.</p>
+          <p>Because most people see revenue.</p>
+          <p>Very few people understand what survives underneath it.</p>
+          <p>This is why business owners ask different questions.</p>
+          <p>Not:</p>
+          <p>"Can we sell it?"</p>
+          <p>But:</p>
+          <p>"Can we sell it in a way that actually works?"</p>
+          <p>Revenue is exciting.</p>
+          <p>Profit is survival.</p>
+          <p>And smart entrepreneurs learn the difference early.</p>
 
-          <h2 class="article-band-heading article-band-teal">The lemonade stand teaches selling</h2>
-          <p>The lemonade stand is still useful.</p>
-          <p>It teaches students that a product must be offered to someone. It introduces price, customer choice, and the feeling of making a sale.</p>
-          <p>But it usually stops too early.</p>
-          <p>Students learn that revenue is the money that comes in. They may subtract the cost of lemons and cups. They may call the leftover amount profit.</p>
-          <p>That is a start, not a business education.</p>
-          <p>A coffee counter asks better questions.</p>
-          <p>What does each cup cost? How much milk gets used? What happens when someone adds syrup? Does the lid cost money? Does the machine need maintenance? How much coffee gets thrown out at the end of the day? What happens if the customer comes back tomorrow?</p>
-          <p>Suddenly the student is not just selling.</p>
-          <p>The student is thinking about a system.</p>
+          <h2 class="article-band-heading article-band-teal">The Hook</h2>
+          <p><strong>The most valuable part of a coffee shop might not be the coffee</strong></p>
+          <p>Here is something strange.</p>
+          <p>Most coffee shops do not really want to sell you only coffee.</p>
+          <p>Think about what happens when you walk inside.</p>
+          <p>There is a muffin.</p>
+          <p>A cookie.</p>
+          <p>A donut.</p>
+          <p>A breakfast sandwich.</p>
+          <p>A cold drink.</p>
+          <p>A snack.</p>
+          <p>A combo meal.</p>
+          <p>A rewards program.</p>
+          <p>A larger size.</p>
+          <p>An upgrade.</p>
+          <p>An extra shot.</p>
+          <p>Why?</p>
+          <p>Because the coffee is often the hook.</p>
+          <p>The coffee gets you through the door.</p>
+          <p>The rest increases the value of the order.</p>
+          <p>That is not an accident.</p>
+          <p>That is design.</p>
+          <p>Business is full of invisible design decisions.</p>
+          <p>The menu is designed.</p>
+          <p>The pricing is designed.</p>
+          <p>The rewards program is designed.</p>
+          <p>The app is designed.</p>
+          <p>Even the smell is designed.</p>
+          <p>Businesses spend enormous amounts of time thinking about behavior.</p>
+          <p>Because behavior creates revenue.</p>
+          <p>People like to believe they make completely independent choices.</p>
+          <p>But businesses are constantly shaping those choices.</p>
+          <p>Not forcing.</p>
+          <p>Influencing.</p>
+          <p>That is why financial literacy is not just math.</p>
+          <p>It is psychology.</p>
+          <p>It is design.</p>
+          <p>It is incentives.</p>
+          <p>It is understanding why people do what they do.</p>
+          <p>The best entrepreneurs are not simply builders.</p>
+          <p>They are observers.</p>
+          <p>They watch behavior carefully.</p>
+          <p>They notice patterns.</p>
+          <p>They ask better questions.</p>
+          <p>Who already spends money on this?</p>
+          <p>What problem are they trying to solve?</p>
+          <p>What brings them in?</p>
+          <p>What makes them come back?</p>
+          <p>Because the most valuable businesses rarely sell a product once.</p>
+          <p>They create a habit.</p>
+          <p>And habits create systems.</p>
+          <p>That is the final lesson.</p>
+          <p>The money is not always in the product.</p>
+          <p>The money is often in the system around the product.</p>
+          <p>And once you understand that, you begin seeing the world differently.</p>
+          <p>You stop seeing coffee.</p>
+          <p>You start seeing economics.</p>
+          <p>You stop seeing stores.</p>
+          <p>You start seeing incentives.</p>
+          <p>You stop seeing products.</p>
+          <p>You start seeing systems.</p>
+          <p>And that is where business literacy begins.</p>
 
-          <h2 class="article-band-heading article-band-purple">What financial literacy means in a business</h2>
-          <p>For a young entrepreneur, financial literacy does not mean memorizing adult vocabulary.</p>
-          <p>It means being able to answer practical money questions while building something.</p>
-          <p>What comes in? What gets used up? What has to be paid before the founder can keep anything? What happens if customers love the product but the costs are too high? What happens if the price is too low? What happens if the business runs out of cash before the next sale arrives?</p>
-          <p>Those questions are the beginning of business math for students.</p>
-          <p>Revenue is the money collected from customers. Cost is what gets consumed to create the product or service. Margin is the space between the selling price and the direct cost of delivering the unit. Profit is what remains after the full system gets paid. Cash flow is the timing of money coming in and money going out.</p>
-          <p>These ideas sound technical until students attach them to a real product.</p>
-          <p>A latte makes them concrete. So does a snack box, a tutoring session, a handmade bracelet, a lawn service, a delivery route, or a student-built app.</p>
-
-          <h2 class="article-band-heading article-band-gold">Revenue is not cash</h2>
-          <p>One of the first mistakes student founders make is assuming that a sale means the business is healthy.</p>
-          <p>Revenue is exciting because it is visible. Someone pays. The number goes up. The idea feels validated.</p>
-          <p>But revenue is not the same as cash that can be used freely.</p>
-          <p>A coffee counter may collect five dollars for a drink, but some of that money has already been spoken for. Beans, milk, cups, lids, sleeves, syrup, card fees, rent, wages, cleaning supplies, and wasted inventory all pull money out of the system.</p>
-          <p>Even timing matters.</p>
-          <p>A business might pay suppliers before it collects from customers. It might sell a subscription today and still have to deliver value for weeks. It might look busy and still feel short on cash.</p>
-          <p>When students see this, they stop treating money as a pile.</p>
-          <p>They start treating it as movement.</p>
-
-          <h2 class="article-band-heading article-band-teal">Margin is not profit</h2>
-          <p>Margin is one of the most important ideas in youth entrepreneurship education because it helps students understand whether a product can breathe.</p>
-          <p>If a drink sells for five dollars and the ingredients and cup cost two dollars, the gross margin is three dollars.</p>
-          <p>That three dollars is not profit yet.</p>
-          <p>It is the space available to pay for everything else.</p>
-          <p>That distinction matters.</p>
-          <p>A student can have a product with strong demand and weak economics. They can sell a lot and still have very little left. They can make something people like but price it in a way that makes the business harder to run every time it succeeds.</p>
-          <p>This is where unit economics for students becomes powerful.</p>
-          <p>The question is not only, "Can we sell it?"</p>
-          <p>The question is, "Does each sale make the system stronger or weaker?"</p>
-
-          <h2 class="article-band-heading article-band-purple">The core money questions every student founder should ask</h2>
-          <p>A young entrepreneur does not need a spreadsheet with fifty tabs.</p>
-          <p>They need a few disciplined questions they can return to as the idea changes.</p>
-          <ul class="content-list">
-            <li>Who is this for?</li>
-            <li>What problem, want, habit, or moment does it serve?</li>
-            <li>What does one unit cost to deliver?</li>
-            <li>What price feels fair to the customer?</li>
-            <li>What is the margin on one sale?</li>
-            <li>What has to be paid besides the direct cost?</li>
-            <li>How many sales are needed before the idea works?</li>
-            <li>What would make someone buy again?</li>
-          </ul>
-          <p>Those questions connect financial literacy to entrepreneurship curriculum for students because they force the founder to think about both the customer and the economics.</p>
-          <p>Coffee also makes incentives easy to see.</p>
-          <p>The hook might be the first drink, the convenience, the smell, the social ritual, or the morning habit. The upsell might be a larger size, oat milk, a pastry, a reusable cup discount, or a monthly pass. Repeat demand might come from routine, location, consistency, speed, or trust.</p>
-          <p>Students learn that business outcomes are shaped by the design of the offer, not just by how hard someone works.</p>
-
-          <h2 class="article-band-heading article-band-gold">A simple project exercise</h2>
-          <p>One classroom exercise is to ask students to design a small coffee counter on paper.</p>
-          <p>They do not need to brew anything.</p>
-          <p>They need to make the money logic visible.</p>
-          <p>Start with one drink. Give it a customer, a price, and a direct cost. Then ask what else the business has to pay for. Ask what would make the drink worth buying once. Ask what would make someone come back.</p>
-          <p>Students can test different versions.</p>
-          <p>A cheap basic coffee may sell more often but leave less margin. A premium drink may create more margin but reduce volume. A bundle may increase the average order. A loyalty card may reduce margin today but increase repeat demand later.</p>
-
-          <div class="article-facts-card">
-            <h3>Coffee Counter Challenge</h3>
-            <ul>
-              <li>What is the drink?</li>
-              <li>Who is it for?</li>
-              <li>What does each cup cost?</li>
-              <li>What is the selling price?</li>
-              <li>What is the margin?</li>
-              <li>What is the hook?</li>
-              <li>What is the upsell?</li>
-              <li>Why would someone buy it again?</li>
-            </ul>
-          </div>
-
-          <p>This is project-based financial literacy.</p>
-          <p>Students are not being asked to repeat definitions. They are being asked to build a simple business model and explain the choices behind it.</p>
-
-          <h2 class="article-band-heading article-band-teal">What students should leave with</h2>
-          <p>Students should leave with a more honest understanding of money.</p>
-          <p>Money is not just the reward at the end of a business. It is information.</p>
-          <p>It shows what customers value, what a product costs to deliver, where waste hides, whether pricing makes sense, and whether the idea can survive contact with reality.</p>
-          <p>For student founders, money works like a compass.</p>
-          <p>It does not tell them what to care about. It helps them see whether the thing they care about can keep moving.</p>
-          <p>That is the deeper purpose of financial literacy for teens and young entrepreneurs.</p>
-          <p>Not to make every student think like an accountant. Not to turn every project into a startup. The purpose is to help students understand the logic underneath their ideas.</p>
-          <p>When they understand cost, margin, cash flow, pricing, incentives, hooks, upsells, and repeat demand, they become better builders. They can make clearer decisions. They can explain their reasoning. They can see why some ideas feel exciting but do not work yet, and why small changes can make a business stronger.</p>
-          <p>The lemonade stand teaches students that selling is possible.</p>
-          <p>Coffee teaches them that business is a system.</p>
+          <section class="article-intro-module article-insights-module" aria-labelledby="article-insights-heading">
+            <div class="article-intro-media">
+              <picture>
+                <source media="(min-width: 769px)" srcset="/assets/compass-learning-mods.png" />
+                <img src="/assets/kids-campus-1.jpg" alt="Students participating in a Money Club learning session" />
+              </picture>
+            </div>
+            <div class="article-intro-summary">
+              <div class="article-intro-label">Lesson Insights</div>
+              <div class="article-intro-body">
+                <div class="article-intro-heading">
+                  <h2 id="article-insights-heading">The Coffee System</h2>
+                  <p>Why a cup of coffee teaches more about business than a lemonade stand.</p>
+                </div>
+                <div class="article-intro-meta">
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Best for</div>
+                    <p>Students learning to see the system underneath a product, price, and transaction.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Learning Outcomes</div>
+                    <p>Systems, revenue, gross margin, profit, hooks, incentives, habits, and business literacy.</p>
+                  </div>
+                </div>
+                <div class="article-intro-actions article-intro-actions--single">
+                  <button class="video-lesson-button" type="button" data-video-lesson-trigger aria-haspopup="dialog">
+                    Watch Video Lesson
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
 
         </div>
         <section class="article-facts-shell" aria-labelledby="article-quick-facts-heading">
@@ -2686,12 +2788,12 @@ nav{
   </main>
   <div class="video-lesson-overlay" id="video-lesson-overlay" role="dialog" aria-modal="true" aria-labelledby="video-lesson-title" hidden>
     <div class="video-lesson-dialog">
-      <h2 id="video-lesson-title" class="sr-only">The Coffee System video lesson</h2>
+      <h2 id="video-lesson-title" class="sr-only">modules 1 2 3 video lesson</h2>
       <button class="video-lesson-close" id="close-video-lesson" type="button" aria-label="Close video lesson">&times;</button>
       <iframe
         class="video-lesson-frame"
         id="video-lesson-frame"
-        title="The Coffee System dynamic text video lesson"
+        title="modules 1 2 3 dynamic text video lesson"
         src="video-lesson.html"
         allow="autoplay"
       ></iframe>
@@ -2699,13 +2801,13 @@ nav{
   </div>
   <script>
     (function(){
-      var openButton = document.getElementById('open-video-lesson');
+      var openButtons = document.querySelectorAll('#open-video-lesson, [data-video-lesson-trigger]');
       var closeButton = document.getElementById('close-video-lesson');
       var overlay = document.getElementById('video-lesson-overlay');
       var frame = document.getElementById('video-lesson-frame');
       var previousFocus = null;
 
-      if (!openButton || !closeButton || !overlay || !frame){
+      if (!openButtons.length || !closeButton || !overlay || !frame){
         return;
       }
 
@@ -2718,7 +2820,10 @@ nav{
           if (audio.ended) {
             audio.currentTime = 0;
           }
-          audio.play();
+          var playPromise = audio.play();
+          if (playPromise && typeof playPromise.catch === 'function'){
+            playPromise.catch(function(){});
+          }
         } catch (error) {
           // The player keeps its own Play control as a fallback.
         }
@@ -2740,7 +2845,9 @@ nav{
         }
       }
 
-      openButton.addEventListener('click', openVideoLesson);
+      openButtons.forEach(function(openButton){
+        openButton.addEventListener('click', openVideoLesson);
+      });
       closeButton.addEventListener('click', closeVideoLesson);
 
       overlay.addEventListener('click', function(event){

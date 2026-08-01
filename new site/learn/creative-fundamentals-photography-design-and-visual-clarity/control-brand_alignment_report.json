@@ -1,0 +1,291 @@
+{
+  "input_filenames": {
+    "mp3": "learn/control-brand-playbook/control-brand-v2.mp3",
+    "transcript": "learn/control-brand-playbook/control-brand_transcript.txt",
+    "transcript_source": "/Users/jaredgoldberg/Downloads/Control Brand Playbook Website.docx",
+    "recognition_source": "/tmp/control_brand_v2_recognized.json",
+    "faster_whisper_model": "Systran/faster-whisper-base.en (local CTranslate2 download)"
+  },
+  "audio_duration": 338.9126875,
+  "expected_words": 888,
+  "output_words": 888,
+  "exact_transcript_preserved": true,
+  "missing_transcript_words": [],
+  "extra_output_words": [],
+  "direct_match_count": 850,
+  "interpolated_word_count": 38,
+  "interpolated_words": [
+    {
+      "index": 14,
+      "word": "the",
+      "start": 5.12,
+      "end": 5.26
+    },
+    {
+      "index": 30,
+      "word": "learned",
+      "start": 10.88,
+      "end": 11.06
+    },
+    {
+      "index": 157,
+      "word": "Coca-Cola,",
+      "start": 56.14,
+      "end": 56.59
+    },
+    {
+      "index": 188,
+      "word": "Coldwater",
+      "start": 71.1,
+      "end": 71.55
+    },
+    {
+      "index": 263,
+      "word": "cold-water",
+      "start": 97.24,
+      "end": 97.69
+    },
+    {
+      "index": 330,
+      "word": "private-label",
+      "start": 125.08,
+      "end": 125.53
+    },
+    {
+      "index": 483,
+      "word": "over-indexed.",
+      "start": 180.87,
+      "end": 181.32
+    },
+    {
+      "index": 487,
+      "word": "“over-indexed”",
+      "start": 183.11,
+      "end": 183.56
+    },
+    {
+      "index": 569,
+      "word": "Level",
+      "start": 212.59,
+      "end": 212.733
+    },
+    {
+      "index": 570,
+      "word": "Brand",
+      "start": 212.733,
+      "end": 212.877
+    },
+    {
+      "index": 571,
+      "word": "Example",
+      "start": 212.877,
+      "end": 213.02
+    },
+    {
+      "index": 572,
+      "word": "Simple",
+      "start": 213.02,
+      "end": 213.163
+    },
+    {
+      "index": 573,
+      "word": "Job",
+      "start": 213.163,
+      "end": 213.307
+    },
+    {
+      "index": 574,
+      "word": "Good",
+      "start": 213.307,
+      "end": 213.45
+    },
+    {
+      "index": 583,
+      "word": "Better",
+      "start": 216.25,
+      "end": 216.7
+    },
+    {
+      "index": 584,
+      "word": "President’s",
+      "start": 216.884,
+      "end": 217.334
+    },
+    {
+      "index": 585,
+      "word": "Choice",
+      "start": 217.518,
+      "end": 217.968
+    },
+    {
+      "index": 586,
+      "word": "Better",
+      "start": 218.152,
+      "end": 218.602
+    },
+    {
+      "index": 587,
+      "word": "quality,",
+      "start": 218.786,
+      "end": 219.236
+    },
+    {
+      "index": 588,
+      "word": "taste,",
+      "start": 219.42,
+      "end": 219.87
+    },
+    {
+      "index": 589,
+      "word": "design,",
+      "start": 220.054,
+      "end": 220.504
+    },
+    {
+      "index": 590,
+      "word": "or",
+      "start": 220.688,
+      "end": 221.138
+    },
+    {
+      "index": 591,
+      "word": "value",
+      "start": 221.322,
+      "end": 221.772
+    },
+    {
+      "index": 592,
+      "word": "Best",
+      "start": 221.956,
+      "end": 222.406
+    },
+    {
+      "index": 704,
+      "word": "large-bin",
+      "start": 265.09,
+      "end": 265.538
+    },
+    {
+      "index": 707,
+      "word": "small-bin",
+      "start": 266.91,
+      "end": 267.36
+    },
+    {
+      "index": 714,
+      "word": "control",
+      "start": 271.15,
+      "end": 271.558
+    },
+    {
+      "index": 715,
+      "word": "brand",
+      "start": 271.66,
+      "end": 272.068
+    },
+    {
+      "index": 725,
+      "word": "Level",
+      "start": 274.83,
+      "end": 275.042
+    },
+    {
+      "index": 726,
+      "word": "Student",
+      "start": 275.042,
+      "end": 275.254
+    },
+    {
+      "index": 727,
+      "word": "Offer",
+      "start": 275.254,
+      "end": 275.466
+    },
+    {
+      "index": 728,
+      "word": "Customer",
+      "start": 275.466,
+      "end": 275.678
+    },
+    {
+      "index": 729,
+      "word": "Promise",
+      "start": 275.678,
+      "end": 275.89
+    },
+    {
+      "index": 756,
+      "word": "labels,",
+      "start": 291.05,
+      "end": 291.51
+    },
+    {
+      "index": 760,
+      "word": "Now",
+      "start": 292.97,
+      "end": 293.42
+    },
+    {
+      "index": 826,
+      "word": "learned",
+      "start": 320.21,
+      "end": 320.35
+    },
+    {
+      "index": 835,
+      "word": "learned",
+      "start": 322.85,
+      "end": 323.01
+    },
+    {
+      "index": 844,
+      "word": "learned",
+      "start": 325.47,
+      "end": 325.61
+    }
+  ],
+  "match_rate": 0.9572,
+  "cue_starts_monotonic": true,
+  "positive_cue_durations": true,
+  "no_cue_extends_past_audio_duration": true,
+  "generated_files": [
+    "learn/control-brand-playbook/control-brand_transcript.txt",
+    "learn/control-brand-playbook/control-brand_word_aligned.srt",
+    "learn/control-brand-playbook/control-brand_word_aligned.ass",
+    "learn/control-brand-playbook/control-brand_word_timings.json",
+    "learn/control-brand-playbook/control-brand_alignment_report.json"
+  ],
+  "player_location": "learn/control-brand-playbook/video-lesson.html",
+  "preview_url": "http://127.0.0.1:5501/learn/control-brand-playbook/",
+  "qa_results": {
+    "alignment": {
+      "expected_words_equals_output_words": true,
+      "exact_transcript_preserved": true,
+      "no_transcript_words_missing": true,
+      "no_extra_words_introduced": true,
+      "cue_starts_monotonic": true,
+      "every_cue_has_positive_duration": true,
+      "no_cue_extends_past_audio_duration": true
+    },
+    "http_200": {
+      "mp3": true,
+      "srt": true,
+      "player": true,
+      "font": true,
+      "lesson_index": true
+    },
+    "player": {
+      "loads_control_brand_v2_mp3": true,
+      "loads_aligned_srt": true,
+      "uses_request_animation_frame_during_playback": true,
+      "short_words_visible_during_playback": true,
+      "desktop_text_contained": true,
+      "mobile_text_contained": true
+    },
+    "overlay": {
+      "opens_in_accessible_overlay": true,
+      "visible_x_close_button": true,
+      "closing_stops_playback": true
+    }
+  }
+}

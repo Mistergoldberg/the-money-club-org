@@ -1,0 +1,1075 @@
+{
+  "input_filenames": {
+    "mp3": "learn/sourcing-101-where-value-is-actually-made/sourcing.mp3",
+    "transcript": "learn/sourcing-101-where-value-is-actually-made/sourcing_transcript.txt",
+    "transcript_source": "/Users/jaredgoldberg/Downloads/Sourcing - Website.docx",
+    "recognition_source": "/tmp/sourcing_recognized.json",
+    "faster_whisper_model": "Systran/faster-whisper-base.en (local CTranslate2 download)"
+  },
+  "audio_duration": 672.6530625,
+  "expected_words": 995,
+  "output_words": 995,
+  "exact_transcript_preserved": true,
+  "missing_transcript_words": [],
+  "extra_output_words": [],
+  "direct_match_count": 828,
+  "interpolated_word_count": 167,
+  "interpolated_words": [
+    {
+      "index": 296,
+      "word": "1,000",
+      "start": 107.12,
+      "end": 107.57
+    },
+    {
+      "index": 381,
+      "word": "Colour.",
+      "start": 143.7,
+      "end": 144.15
+    },
+    {
+      "index": 459,
+      "word": "=",
+      "start": 178.1,
+      "end": 178.5
+    },
+    {
+      "index": 466,
+      "word": "divided",
+      "start": 180.74,
+      "end": 180.876
+    },
+    {
+      "index": 467,
+      "word": "by",
+      "start": 180.876,
+      "end": 181.012
+    },
+    {
+      "index": 468,
+      "word": "selling",
+      "start": 181.012,
+      "end": 181.148
+    },
+    {
+      "index": 469,
+      "word": "price.",
+      "start": 181.148,
+      "end": 181.284
+    },
+    {
+      "index": 470,
+      "word": "If",
+      "start": 181.284,
+      "end": 181.42
+    },
+    {
+      "index": 492,
+      "word": "Maximum",
+      "start": 190.18,
+      "end": 190.63
+    },
+    {
+      "index": 496,
+      "word": "Gross",
+      "start": 196.04,
+      "end": 196.1
+    },
+    {
+      "index": 497,
+      "word": "Profit",
+      "start": 196.1,
+      "end": 196.16
+    },
+    {
+      "index": 498,
+      "word": "Gross",
+      "start": 196.16,
+      "end": 196.22
+    },
+    {
+      "index": 499,
+      "word": "Margin",
+      "start": 196.22,
+      "end": 196.28
+    },
+    {
+      "index": 500,
+      "word": "$10",
+      "start": 196.28,
+      "end": 196.34
+    },
+    {
+      "index": 502,
+      "word": "$4",
+      "start": 196.66,
+      "end": 196.71
+    },
+    {
+      "index": 503,
+      "word": "40%",
+      "start": 196.71,
+      "end": 196.76
+    },
+    {
+      "index": 504,
+      "word": "$20",
+      "start": 196.76,
+      "end": 196.81
+    },
+    {
+      "index": 505,
+      "word": "$12",
+      "start": 196.81,
+      "end": 196.86
+    },
+    {
+      "index": 506,
+      "word": "$8",
+      "start": 196.86,
+      "end": 196.91
+    },
+    {
+      "index": 507,
+      "word": "40%",
+      "start": 196.91,
+      "end": 196.96
+    },
+    {
+      "index": 508,
+      "word": "$30",
+      "start": 196.96,
+      "end": 197.01
+    },
+    {
+      "index": 509,
+      "word": "$18",
+      "start": 197.01,
+      "end": 197.06
+    },
+    {
+      "index": 510,
+      "word": "$12",
+      "start": 197.06,
+      "end": 197.11
+    },
+    {
+      "index": 511,
+      "word": "40%",
+      "start": 197.11,
+      "end": 197.16
+    },
+    {
+      "index": 512,
+      "word": "$50",
+      "start": 197.16,
+      "end": 197.21
+    },
+    {
+      "index": 513,
+      "word": "$30",
+      "start": 197.21,
+      "end": 197.26
+    },
+    {
+      "index": 514,
+      "word": "$20",
+      "start": 197.26,
+      "end": 197.31
+    },
+    {
+      "index": 515,
+      "word": "40%",
+      "start": 197.31,
+      "end": 197.36
+    },
+    {
+      "index": 621,
+      "word": "and",
+      "start": 240.08,
+      "end": 240.5
+    },
+    {
+      "index": 661,
+      "word": "MOQ,",
+      "start": 255.76,
+      "end": 256.21
+    },
+    {
+      "index": 746,
+      "word": "The",
+      "start": 291.48,
+      "end": 291.93
+    },
+    {
+      "index": 748,
+      "word": "table",
+      "start": 292.38,
+      "end": 292.43
+    },
+    {
+      "index": 752,
+      "word": "this:",
+      "start": 293.14,
+      "end": 293.19
+    },
+    {
+      "index": 753,
+      "word": "Supplier",
+      "start": 293.19,
+      "end": 293.24
+    },
+    {
+      "index": 754,
+      "word": "100",
+      "start": 293.24,
+      "end": 293.29
+    },
+    {
+      "index": 755,
+      "word": "Units",
+      "start": 293.29,
+      "end": 293.34
+    },
+    {
+      "index": 756,
+      "word": "500",
+      "start": 293.34,
+      "end": 293.39
+    },
+    {
+      "index": 757,
+      "word": "Units",
+      "start": 293.39,
+      "end": 293.44
+    },
+    {
+      "index": 758,
+      "word": "1,000",
+      "start": 293.44,
+      "end": 293.49
+    },
+    {
+      "index": 759,
+      "word": "Units",
+      "start": 293.49,
+      "end": 293.54
+    },
+    {
+      "index": 760,
+      "word": "Lead",
+      "start": 293.54,
+      "end": 293.59
+    },
+    {
+      "index": 761,
+      "word": "Time",
+      "start": 293.59,
+      "end": 293.64
+    },
+    {
+      "index": 762,
+      "word": "Notes",
+      "start": 293.64,
+      "end": 293.69
+    },
+    {
+      "index": 765,
+      "word": "$12.00",
+      "start": 294.4,
+      "end": 294.45
+    },
+    {
+      "index": 766,
+      "word": "each",
+      "start": 294.45,
+      "end": 294.5
+    },
+    {
+      "index": 767,
+      "word": "$10.50",
+      "start": 294.5,
+      "end": 294.55
+    },
+    {
+      "index": 768,
+      "word": "each",
+      "start": 294.55,
+      "end": 294.6
+    },
+    {
+      "index": 769,
+      "word": "$9.75",
+      "start": 294.6,
+      "end": 294.65
+    },
+    {
+      "index": 770,
+      "word": "each",
+      "start": 294.65,
+      "end": 294.7
+    },
+    {
+      "index": 771,
+      "word": "2",
+      "start": 294.7,
+      "end": 294.75
+    },
+    {
+      "index": 772,
+      "word": "weeks",
+      "start": 294.75,
+      "end": 294.8
+    },
+    {
+      "index": 779,
+      "word": "$10.80",
+      "start": 297.34,
+      "end": 297.39
+    },
+    {
+      "index": 780,
+      "word": "each",
+      "start": 297.39,
+      "end": 297.44
+    },
+    {
+      "index": 781,
+      "word": "$9.40",
+      "start": 297.44,
+      "end": 297.49
+    },
+    {
+      "index": 782,
+      "word": "each",
+      "start": 297.49,
+      "end": 297.54
+    },
+    {
+      "index": 783,
+      "word": "$8.90",
+      "start": 297.54,
+      "end": 297.59
+    },
+    {
+      "index": 784,
+      "word": "each",
+      "start": 297.59,
+      "end": 297.64
+    },
+    {
+      "index": 785,
+      "word": "5",
+      "start": 297.64,
+      "end": 297.69
+    },
+    {
+      "index": 786,
+      "word": "weeks",
+      "start": 297.69,
+      "end": 297.74
+    },
+    {
+      "index": 791,
+      "word": "C",
+      "start": 299.86,
+      "end": 299.9
+    },
+    {
+      "index": 792,
+      "word": "$13.00",
+      "start": 299.9,
+      "end": 299.94
+    },
+    {
+      "index": 793,
+      "word": "each",
+      "start": 299.94,
+      "end": 299.98
+    },
+    {
+      "index": 794,
+      "word": "$11.00",
+      "start": 299.98,
+      "end": 300.02
+    },
+    {
+      "index": 795,
+      "word": "each",
+      "start": 300.02,
+      "end": 300.06
+    },
+    {
+      "index": 796,
+      "word": "$10.00",
+      "start": 300.06,
+      "end": 300.1
+    },
+    {
+      "index": 797,
+      "word": "each",
+      "start": 300.1,
+      "end": 300.14
+    },
+    {
+      "index": 798,
+      "word": "1",
+      "start": 300.14,
+      "end": 300.18
+    },
+    {
+      "index": 799,
+      "word": "week",
+      "start": 300.18,
+      "end": 300.22
+    },
+    {
+      "index": 891,
+      "word": "learned",
+      "start": 330.96,
+      "end": 331.08
+    },
+    {
+      "index": 898,
+      "word": "2,",
+      "start": 332.74,
+      "end": 333.19
+    },
+    {
+      "index": 899,
+      "word": "you",
+      "start": 336.209,
+      "end": 336.659
+    },
+    {
+      "index": 900,
+      "word": "learned",
+      "start": 339.677,
+      "end": 340.127
+    },
+    {
+      "index": 901,
+      "word": "to",
+      "start": 343.146,
+      "end": 343.596
+    },
+    {
+      "index": 902,
+      "word": "find",
+      "start": 346.614,
+      "end": 347.064
+    },
+    {
+      "index": 903,
+      "word": "the",
+      "start": 350.083,
+      "end": 350.533
+    },
+    {
+      "index": 904,
+      "word": "friction.",
+      "start": 353.551,
+      "end": 354.001
+    },
+    {
+      "index": 905,
+      "word": "In",
+      "start": 357.02,
+      "end": 357.47
+    },
+    {
+      "index": 906,
+      "word": "Module",
+      "start": 360.488,
+      "end": 360.938
+    },
+    {
+      "index": 907,
+      "word": "3,",
+      "start": 363.957,
+      "end": 364.407
+    },
+    {
+      "index": 908,
+      "word": "you",
+      "start": 367.425,
+      "end": 367.875
+    },
+    {
+      "index": 909,
+      "word": "learned",
+      "start": 370.894,
+      "end": 371.344
+    },
+    {
+      "index": 910,
+      "word": "to",
+      "start": 374.362,
+      "end": 374.812
+    },
+    {
+      "index": 911,
+      "word": "read",
+      "start": 377.831,
+      "end": 378.281
+    },
+    {
+      "index": 912,
+      "word": "the",
+      "start": 381.299,
+      "end": 381.749
+    },
+    {
+      "index": 913,
+      "word": "shelf.",
+      "start": 384.768,
+      "end": 385.218
+    },
+    {
+      "index": 914,
+      "word": "In",
+      "start": 388.236,
+      "end": 388.686
+    },
+    {
+      "index": 915,
+      "word": "Module",
+      "start": 391.705,
+      "end": 392.155
+    },
+    {
+      "index": 916,
+      "word": "4,",
+      "start": 395.173,
+      "end": 395.623
+    },
+    {
+      "index": 917,
+      "word": "you",
+      "start": 398.642,
+      "end": 399.092
+    },
+    {
+      "index": 918,
+      "word": "learned",
+      "start": 402.11,
+      "end": 402.56
+    },
+    {
+      "index": 919,
+      "word": "how",
+      "start": 405.579,
+      "end": 406.029
+    },
+    {
+      "index": 920,
+      "word": "control",
+      "start": 409.047,
+      "end": 409.497
+    },
+    {
+      "index": 921,
+      "word": "brands",
+      "start": 412.516,
+      "end": 412.966
+    },
+    {
+      "index": 922,
+      "word": "improve",
+      "start": 415.984,
+      "end": 416.434
+    },
+    {
+      "index": 923,
+      "word": "what",
+      "start": 419.453,
+      "end": 419.903
+    },
+    {
+      "index": 924,
+      "word": "already",
+      "start": 422.921,
+      "end": 423.371
+    },
+    {
+      "index": 925,
+      "word": "works.",
+      "start": 426.39,
+      "end": 426.84
+    },
+    {
+      "index": 926,
+      "word": "Now",
+      "start": 429.858,
+      "end": 430.308
+    },
+    {
+      "index": 927,
+      "word": "you",
+      "start": 433.327,
+      "end": 433.777
+    },
+    {
+      "index": 928,
+      "word": "know",
+      "start": 436.795,
+      "end": 437.245
+    },
+    {
+      "index": 929,
+      "word": "where",
+      "start": 440.264,
+      "end": 440.714
+    },
+    {
+      "index": 930,
+      "word": "value",
+      "start": 443.732,
+      "end": 444.182
+    },
+    {
+      "index": 931,
+      "word": "is",
+      "start": 447.201,
+      "end": 447.651
+    },
+    {
+      "index": 932,
+      "word": "actually",
+      "start": 450.669,
+      "end": 451.119
+    },
+    {
+      "index": 933,
+      "word": "made.",
+      "start": 454.138,
+      "end": 454.588
+    },
+    {
+      "index": 934,
+      "word": "Not",
+      "start": 457.606,
+      "end": 458.056
+    },
+    {
+      "index": 935,
+      "word": "in",
+      "start": 461.075,
+      "end": 461.525
+    },
+    {
+      "index": 936,
+      "word": "the",
+      "start": 464.543,
+      "end": 464.993
+    },
+    {
+      "index": 937,
+      "word": "logo.",
+      "start": 468.012,
+      "end": 468.462
+    },
+    {
+      "index": 938,
+      "word": "Not",
+      "start": 471.48,
+      "end": 471.93
+    },
+    {
+      "index": 939,
+      "word": "in",
+      "start": 474.949,
+      "end": 475.399
+    },
+    {
+      "index": 940,
+      "word": "the",
+      "start": 478.417,
+      "end": 478.867
+    },
+    {
+      "index": 941,
+      "word": "idea.",
+      "start": 481.886,
+      "end": 482.336
+    },
+    {
+      "index": 942,
+      "word": "Not",
+      "start": 485.354,
+      "end": 485.804
+    },
+    {
+      "index": 943,
+      "word": "in",
+      "start": 488.823,
+      "end": 489.273
+    },
+    {
+      "index": 944,
+      "word": "the",
+      "start": 492.291,
+      "end": 492.741
+    },
+    {
+      "index": 945,
+      "word": "spreadsheet",
+      "start": 495.76,
+      "end": 496.21
+    },
+    {
+      "index": 946,
+      "word": "alone.",
+      "start": 499.228,
+      "end": 499.678
+    },
+    {
+      "index": 947,
+      "word": "Value",
+      "start": 502.697,
+      "end": 503.147
+    },
+    {
+      "index": 948,
+      "word": "is",
+      "start": 506.165,
+      "end": 506.615
+    },
+    {
+      "index": 949,
+      "word": "made",
+      "start": 509.634,
+      "end": 510.084
+    },
+    {
+      "index": 950,
+      "word": "in",
+      "start": 513.102,
+      "end": 513.552
+    },
+    {
+      "index": 951,
+      "word": "the",
+      "start": 516.571,
+      "end": 517.021
+    },
+    {
+      "index": 952,
+      "word": "kitchen:",
+      "start": 520.039,
+      "end": 520.489
+    },
+    {
+      "index": 953,
+      "word": "the",
+      "start": 523.508,
+      "end": 523.958
+    },
+    {
+      "index": 954,
+      "word": "supplier,",
+      "start": 526.976,
+      "end": 527.426
+    },
+    {
+      "index": 955,
+      "word": "the",
+      "start": 530.445,
+      "end": 530.895
+    },
+    {
+      "index": 956,
+      "word": "spec,",
+      "start": 533.913,
+      "end": 534.363
+    },
+    {
+      "index": 957,
+      "word": "the",
+      "start": 537.382,
+      "end": 537.832
+    },
+    {
+      "index": 958,
+      "word": "cost,",
+      "start": 540.85,
+      "end": 541.3
+    },
+    {
+      "index": 959,
+      "word": "the",
+      "start": 544.319,
+      "end": 544.769
+    },
+    {
+      "index": 960,
+      "word": "quality,",
+      "start": 547.787,
+      "end": 548.237
+    },
+    {
+      "index": 961,
+      "word": "the",
+      "start": 551.256,
+      "end": 551.706
+    },
+    {
+      "index": 962,
+      "word": "packaging,",
+      "start": 554.724,
+      "end": 555.174
+    },
+    {
+      "index": 963,
+      "word": "the",
+      "start": 558.193,
+      "end": 558.643
+    },
+    {
+      "index": 964,
+      "word": "timing,",
+      "start": 561.661,
+      "end": 562.111
+    },
+    {
+      "index": 965,
+      "word": "and",
+      "start": 565.13,
+      "end": 565.58
+    },
+    {
+      "index": 966,
+      "word": "the",
+      "start": 568.598,
+      "end": 569.048
+    },
+    {
+      "index": 967,
+      "word": "margin.",
+      "start": 572.067,
+      "end": 572.517
+    },
+    {
+      "index": 968,
+      "word": "A",
+      "start": 575.535,
+      "end": 575.985
+    },
+    {
+      "index": 969,
+      "word": "good",
+      "start": 579.004,
+      "end": 579.454
+    },
+    {
+      "index": 970,
+      "word": "business",
+      "start": 582.472,
+      "end": 582.922
+    },
+    {
+      "index": 971,
+      "word": "does",
+      "start": 585.941,
+      "end": 586.391
+    },
+    {
+      "index": 972,
+      "word": "not",
+      "start": 589.409,
+      "end": 589.859
+    },
+    {
+      "index": 973,
+      "word": "just",
+      "start": 592.878,
+      "end": 593.328
+    },
+    {
+      "index": 974,
+      "word": "ask,",
+      "start": 596.346,
+      "end": 596.796
+    },
+    {
+      "index": 975,
+      "word": "“Can",
+      "start": 599.815,
+      "end": 600.265
+    },
+    {
+      "index": 976,
+      "word": "we",
+      "start": 603.283,
+      "end": 603.733
+    },
+    {
+      "index": 977,
+      "word": "sell",
+      "start": 606.752,
+      "end": 607.202
+    },
+    {
+      "index": 978,
+      "word": "this?”",
+      "start": 610.22,
+      "end": 610.67
+    },
+    {
+      "index": 979,
+      "word": "It",
+      "start": 613.689,
+      "end": 614.139
+    },
+    {
+      "index": 980,
+      "word": "asks:",
+      "start": 617.157,
+      "end": 617.607
+    },
+    {
+      "index": 981,
+      "word": "Can",
+      "start": 620.626,
+      "end": 621.076
+    },
+    {
+      "index": 982,
+      "word": "we",
+      "start": 624.094,
+      "end": 624.544
+    },
+    {
+      "index": 983,
+      "word": "source",
+      "start": 627.563,
+      "end": 628.013
+    },
+    {
+      "index": 984,
+      "word": "it",
+      "start": 631.031,
+      "end": 631.481
+    },
+    {
+      "index": 985,
+      "word": "well",
+      "start": 634.5,
+      "end": 634.95
+    },
+    {
+      "index": 986,
+      "word": "enough",
+      "start": 637.968,
+      "end": 638.418
+    },
+    {
+      "index": 987,
+      "word": "to",
+      "start": 641.437,
+      "end": 641.887
+    },
+    {
+      "index": 988,
+      "word": "keep",
+      "start": 644.905,
+      "end": 645.355
+    },
+    {
+      "index": 989,
+      "word": "the",
+      "start": 648.374,
+      "end": 648.824
+    },
+    {
+      "index": 990,
+      "word": "promise",
+      "start": 651.842,
+      "end": 652.292
+    },
+    {
+      "index": 991,
+      "word": "and",
+      "start": 655.311,
+      "end": 655.761
+    },
+    {
+      "index": 992,
+      "word": "make",
+      "start": 658.779,
+      "end": 659.229
+    },
+    {
+      "index": 993,
+      "word": "the",
+      "start": 662.248,
+      "end": 662.698
+    },
+    {
+      "index": 994,
+      "word": "math",
+      "start": 665.716,
+      "end": 666.166
+    },
+    {
+      "index": 995,
+      "word": "work?",
+      "start": 669.185,
+      "end": 669.635
+    }
+  ],
+  "match_rate": 0.8322,
+  "cue_starts_monotonic": true,
+  "positive_cue_durations": true,
+  "no_cue_extends_past_audio_duration": true,
+  "alignment_notes": [
+    "Only learn/sourcing-101-where-value-is-actually-made/sourcing.mp3 matched the Sourcing lesson; the only literal control-brand.mp3 found belongs to the Control Brand page.",
+    "Faster Whisper detected a repeated Sourcing opening around 336 seconds and no reliable recognition for the final Word-doc transcript section after the first Module 1 reference; those unmatched transcript words are interpolated and listed."
+  ],
+  "generated_files": [
+    "learn/sourcing-101-where-value-is-actually-made/sourcing_transcript.txt",
+    "learn/sourcing-101-where-value-is-actually-made/sourcing_word_aligned.srt",
+    "learn/sourcing-101-where-value-is-actually-made/sourcing_word_aligned.ass",
+    "learn/sourcing-101-where-value-is-actually-made/sourcing_word_timings.json",
+    "learn/sourcing-101-where-value-is-actually-made/sourcing_alignment_report.json"
+  ],
+  "player_location": "learn/sourcing-101-where-value-is-actually-made/video-lesson.html",
+  "preview_url": "http://127.0.0.1:5501/learn/sourcing-101-where-value-is-actually-made/",
+  "qa_results": {
+    "alignment": {
+      "expected_words_equals_output_words": true,
+      "exact_transcript_preserved": true,
+      "no_transcript_words_missing": true,
+      "no_extra_words_introduced": true,
+      "cue_starts_monotonic": true,
+      "every_cue_has_positive_duration": true,
+      "no_cue_extends_past_audio_duration": true
+    },
+    "http_200": {
+      "mp3": true,
+      "srt": true,
+      "player": true,
+      "font": true,
+      "lesson_index": true
+    },
+    "player": {
+      "uses_request_animation_frame_during_playback": true,
+      "does_not_rely_only_on_timeupdate": true,
+      "supports_play_pause_seeking_elapsed_time": true,
+      "loads_final_mp3": true,
+      "loads_aligned_srt": true,
+      "black_background_centered_white_raleway_text": true,
+      "short_words_visible_during_playback": true,
+      "desktop_text_contained": true,
+      "mobile_text_contained": true
+    },
+    "overlay": {
+      "opens_in_accessible_overlay": true,
+      "visible_x_close_button": true,
+      "escape_closes": true,
+      "backdrop_click_closes": true,
+      "locks_background_scroll_while_open": true,
+      "closing_stops_playback": true
+    }
+  }
+}

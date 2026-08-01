@@ -1,0 +1,5528 @@
+[
+  {
+    "word": "module",
+    "start": 0.0,
+    "end": 0.12,
+    "matched": false
+  },
+  {
+    "word": "1",
+    "start": 0.12,
+    "end": 0.16,
+    "matched": false
+  },
+  {
+    "word": "the",
+    "start": 0.12,
+    "end": 0.24,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 0.24,
+    "end": 0.54,
+    "matched": true
+  },
+  {
+    "word": "system",
+    "start": 0.54,
+    "end": 0.94,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 1.82,
+    "end": 1.86,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 1.86,
+    "end": 2.02,
+    "matched": true
+  },
+  {
+    "word": "cup",
+    "start": 2.02,
+    "end": 2.16,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 2.16,
+    "end": 2.32,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 2.32,
+    "end": 2.64,
+    "matched": true
+  },
+  {
+    "word": "teaches",
+    "start": 2.64,
+    "end": 2.94,
+    "matched": true
+  },
+  {
+    "word": "more",
+    "start": 2.94,
+    "end": 3.2,
+    "matched": true
+  },
+  {
+    "word": "about",
+    "start": 3.2,
+    "end": 3.46,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 3.46,
+    "end": 3.86,
+    "matched": true
+  },
+  {
+    "word": "than",
+    "start": 3.86,
+    "end": 4.12,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 4.12,
+    "end": 4.24,
+    "matched": true
+  },
+  {
+    "word": "lemonade",
+    "start": 4.24,
+    "end": 4.62,
+    "matched": true
+  },
+  {
+    "word": "stand",
+    "start": 4.62,
+    "end": 4.92,
+    "matched": true
+  },
+  {
+    "word": "everybody",
+    "start": 5.76,
+    "end": 5.9,
+    "matched": true
+  },
+  {
+    "word": "knows",
+    "start": 5.9,
+    "end": 6.32,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 6.32,
+    "end": 6.52,
+    "matched": true
+  },
+  {
+    "word": "lemonade",
+    "start": 6.52,
+    "end": 6.86,
+    "matched": true
+  },
+  {
+    "word": "stand",
+    "start": 6.86,
+    "end": 7.12,
+    "matched": true
+  },
+  {
+    "word": "buy",
+    "start": 7.82,
+    "end": 7.86,
+    "matched": true
+  },
+  {
+    "word": "lemons",
+    "start": 7.86,
+    "end": 8.34,
+    "matched": true
+  },
+  {
+    "word": "add",
+    "start": 8.68,
+    "end": 8.88,
+    "matched": true
+  },
+  {
+    "word": "sugar",
+    "start": 8.88,
+    "end": 9.18,
+    "matched": true
+  },
+  {
+    "word": "make",
+    "start": 9.84,
+    "end": 9.96,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 9.96,
+    "end": 10.14,
+    "matched": true
+  },
+  {
+    "word": "sign",
+    "start": 10.14,
+    "end": 10.46,
+    "matched": true
+  },
+  {
+    "word": "sell",
+    "start": 10.94,
+    "end": 11.22,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 11.22,
+    "end": 11.38,
+    "matched": true
+  },
+  {
+    "word": "cup",
+    "start": 11.38,
+    "end": 11.6,
+    "matched": true
+  },
+  {
+    "word": "somebody",
+    "start": 12.22,
+    "end": 12.46,
+    "matched": true
+  },
+  {
+    "word": "gives",
+    "start": 12.46,
+    "end": 12.72,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 12.72,
+    "end": 12.9,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 12.9,
+    "end": 13.0,
+    "matched": true
+  },
+  {
+    "word": "dollar",
+    "start": 13.0,
+    "end": 13.24,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 14.18,
+    "end": 14.38,
+    "matched": true
+  },
+  {
+    "word": "feels",
+    "start": 14.38,
+    "end": 14.7,
+    "matched": true
+  },
+  {
+    "word": "simple",
+    "start": 14.7,
+    "end": 15.16,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 15.78,
+    "end": 15.9,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 15.9,
+    "end": 16.04,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 16.04,
+    "end": 16.24,
+    "matched": true
+  },
+  {
+    "word": "adults",
+    "start": 16.24,
+    "end": 16.6,
+    "matched": true
+  },
+  {
+    "word": "love",
+    "start": 16.6,
+    "end": 17.02,
+    "matched": true
+  },
+  {
+    "word": "using",
+    "start": 17.02,
+    "end": 17.34,
+    "matched": true
+  },
+  {
+    "word": "lemonade",
+    "start": 17.34,
+    "end": 17.82,
+    "matched": true
+  },
+  {
+    "word": "stands",
+    "start": 17.82,
+    "end": 18.08,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 18.08,
+    "end": 18.26,
+    "matched": true
+  },
+  {
+    "word": "teach",
+    "start": 18.26,
+    "end": 18.4,
+    "matched": true
+  },
+  {
+    "word": "entrepreneurship",
+    "start": 18.4,
+    "end": 18.86,
+    "matched": true
+  },
+  {
+    "word": "but",
+    "start": 19.52,
+    "end": 19.64,
+    "matched": true
+  },
+  {
+    "word": "lemonade",
+    "start": 19.64,
+    "end": 20.12,
+    "matched": true
+  },
+  {
+    "word": "stands",
+    "start": 20.12,
+    "end": 20.42,
+    "matched": true
+  },
+  {
+    "word": "hide",
+    "start": 20.42,
+    "end": 20.68,
+    "matched": true
+  },
+  {
+    "word": "something",
+    "start": 20.68,
+    "end": 21.02,
+    "matched": true
+  },
+  {
+    "word": "important",
+    "start": 21.02,
+    "end": 21.46,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 22.08,
+    "end": 22.2,
+    "matched": true
+  },
+  {
+    "word": "make",
+    "start": 22.2,
+    "end": 22.42,
+    "matched": true
+  },
+  {
+    "word": "selling",
+    "start": 22.42,
+    "end": 22.8,
+    "matched": true
+  },
+  {
+    "word": "look",
+    "start": 22.8,
+    "end": 23.04,
+    "matched": true
+  },
+  {
+    "word": "like",
+    "start": 23.04,
+    "end": 23.2,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 23.2,
+    "end": 23.34,
+    "matched": true
+  },
+  {
+    "word": "whole",
+    "start": 23.34,
+    "end": 23.54,
+    "matched": true
+  },
+  {
+    "word": "game",
+    "start": 23.54,
+    "end": 23.86,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 24.34,
+    "end": 24.48,
+    "matched": true
+  },
+  {
+    "word": "selling",
+    "start": 24.48,
+    "end": 24.82,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 24.82,
+    "end": 25.0,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 25.0,
+    "end": 25.16,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 25.16,
+    "end": 25.3,
+    "matched": true
+  },
+  {
+    "word": "whole",
+    "start": 25.3,
+    "end": 25.48,
+    "matched": true
+  },
+  {
+    "word": "game",
+    "start": 25.48,
+    "end": 25.74,
+    "matched": true
+  },
+  {
+    "word": "if",
+    "start": 26.2,
+    "end": 26.3,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 26.3,
+    "end": 26.44,
+    "matched": true
+  },
+  {
+    "word": "want",
+    "start": 26.44,
+    "end": 26.66,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 26.66,
+    "end": 26.82,
+    "matched": true
+  },
+  {
+    "word": "understand",
+    "start": 26.82,
+    "end": 27.38,
+    "matched": true
+  },
+  {
+    "word": "how",
+    "start": 27.38,
+    "end": 27.7,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 27.7,
+    "end": 27.88,
+    "matched": true
+  },
+  {
+    "word": "actually",
+    "start": 27.88,
+    "end": 28.38,
+    "matched": true
+  },
+  {
+    "word": "moves",
+    "start": 28.38,
+    "end": 28.84,
+    "matched": true
+  },
+  {
+    "word": "stop",
+    "start": 29.26,
+    "end": 29.38,
+    "matched": true
+  },
+  {
+    "word": "looking",
+    "start": 29.38,
+    "end": 29.7,
+    "matched": true
+  },
+  {
+    "word": "at",
+    "start": 29.7,
+    "end": 29.86,
+    "matched": true
+  },
+  {
+    "word": "lemonade",
+    "start": 29.86,
+    "end": 30.3,
+    "matched": true
+  },
+  {
+    "word": "look",
+    "start": 30.86,
+    "end": 30.92,
+    "matched": true
+  },
+  {
+    "word": "at",
+    "start": 30.92,
+    "end": 31.1,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 31.1,
+    "end": 31.46,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 32.2,
+    "end": 32.4,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 32.4,
+    "end": 32.58,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 32.58,
+    "end": 32.74,
+    "matched": true
+  },
+  {
+    "word": "grown-up",
+    "start": 32.74,
+    "end": 33.1,
+    "matched": false
+  },
+  {
+    "word": "lemonade",
+    "start": 33.1,
+    "end": 33.56,
+    "matched": true
+  },
+  {
+    "word": "stand",
+    "start": 33.56,
+    "end": 33.86,
+    "matched": true
+  },
+  {
+    "word": "same",
+    "start": 34.52,
+    "end": 34.7,
+    "matched": true
+  },
+  {
+    "word": "basic",
+    "start": 34.7,
+    "end": 35.1,
+    "matched": true
+  },
+  {
+    "word": "idea",
+    "start": 35.1,
+    "end": 35.54,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 36.0,
+    "end": 36.18,
+    "matched": true
+  },
+  {
+    "word": "drink",
+    "start": 36.18,
+    "end": 36.46,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 37.02,
+    "end": 37.14,
+    "matched": true
+  },
+  {
+    "word": "customer",
+    "start": 37.14,
+    "end": 37.56,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 38.18,
+    "end": 38.3,
+    "matched": true
+  },
+  {
+    "word": "price",
+    "start": 38.3,
+    "end": 38.68,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 39.28,
+    "end": 39.38,
+    "matched": true
+  },
+  {
+    "word": "transaction",
+    "start": 39.38,
+    "end": 40.02,
+    "matched": true
+  },
+  {
+    "word": "but",
+    "start": 40.72,
+    "end": 40.92,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 40.92,
+    "end": 41.14,
+    "matched": true
+  },
+  {
+    "word": "becomes",
+    "start": 41.14,
+    "end": 41.56,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 41.56,
+    "end": 41.88,
+    "matched": true
+  },
+  {
+    "word": "summer",
+    "start": 41.88,
+    "end": 42.12,
+    "matched": true
+  },
+  {
+    "word": "project",
+    "start": 42.12,
+    "end": 42.64,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 43.24,
+    "end": 43.42,
+    "matched": true
+  },
+  {
+    "word": "other",
+    "start": 43.42,
+    "end": 43.56,
+    "matched": true
+  },
+  {
+    "word": "becomes",
+    "start": 43.56,
+    "end": 44.0,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 44.0,
+    "end": 44.28,
+    "matched": true
+  },
+  {
+    "word": "billion-dollar",
+    "start": 44.28,
+    "end": 44.86,
+    "matched": false
+  },
+  {
+    "word": "industry",
+    "start": 44.86,
+    "end": 45.4,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 46.06,
+    "end": 46.34,
+    "matched": true
+  },
+  {
+    "word": "because",
+    "start": 46.92,
+    "end": 47.26,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 47.26,
+    "end": 47.7,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 47.7,
+    "end": 47.9,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 47.9,
+    "end": 48.12,
+    "matched": true
+  },
+  {
+    "word": "just",
+    "start": 48.12,
+    "end": 48.32,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 48.32,
+    "end": 48.52,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 48.52,
+    "end": 48.82,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 49.66,
+    "end": 49.74,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 49.74,
+    "end": 49.94,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 49.94,
+    "end": 50.1,
+    "matched": true
+  },
+  {
+    "word": "system",
+    "start": 50.1,
+    "end": 50.48,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 51.04,
+    "end": 51.14,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 51.14,
+    "end": 51.52,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 51.52,
+    "end": 51.78,
+    "matched": true
+  },
+  {
+    "word": "where",
+    "start": 51.78,
+    "end": 51.94,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 51.94,
+    "end": 52.1,
+    "matched": true
+  },
+  {
+    "word": "real",
+    "start": 52.1,
+    "end": 52.36,
+    "matched": true
+  },
+  {
+    "word": "lessons",
+    "start": 52.36,
+    "end": 52.76,
+    "matched": true
+  },
+  {
+    "word": "live",
+    "start": 52.76,
+    "end": 53.12,
+    "matched": true
+  },
+  {
+    "word": "imagine",
+    "start": 53.82,
+    "end": 54.14,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 54.14,
+    "end": 54.46,
+    "matched": true
+  },
+  {
+    "word": "walk",
+    "start": 54.46,
+    "end": 54.66,
+    "matched": true
+  },
+  {
+    "word": "into",
+    "start": 54.66,
+    "end": 54.84,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 54.84,
+    "end": 55.0,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 55.0,
+    "end": 55.26,
+    "matched": true
+  },
+  {
+    "word": "shop",
+    "start": 55.26,
+    "end": 55.52,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 55.52,
+    "end": 55.7,
+    "matched": true
+  },
+  {
+    "word": "buy",
+    "start": 55.7,
+    "end": 55.86,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 55.86,
+    "end": 56.0,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 56.0,
+    "end": 56.22,
+    "matched": true
+  },
+  {
+    "word": "for",
+    "start": 56.22,
+    "end": 56.4,
+    "matched": true
+  },
+  {
+    "word": "two",
+    "start": 56.4,
+    "end": 56.84,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 56.84,
+    "end": 57.28,
+    "matched": false
+  },
+  {
+    "word": "simple",
+    "start": 57.28,
+    "end": 57.84,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 58.5,
+    "end": 58.54,
+    "matched": true
+  },
+  {
+    "word": "hand",
+    "start": 58.52,
+    "end": 58.76,
+    "matched": true
+  },
+  {
+    "word": "over",
+    "start": 58.76,
+    "end": 59.0,
+    "matched": true
+  },
+  {
+    "word": "two",
+    "start": 59.0,
+    "end": 59.46,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 59.46,
+    "end": 59.92,
+    "matched": false
+  },
+  {
+    "word": "the",
+    "start": 59.92,
+    "end": 60.22,
+    "matched": true
+  },
+  {
+    "word": "store",
+    "start": 60.22,
+    "end": 60.5,
+    "matched": true
+  },
+  {
+    "word": "gives",
+    "start": 60.5,
+    "end": 60.72,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 60.72,
+    "end": 60.88,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 60.88,
+    "end": 61.0,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 61.0,
+    "end": 61.38,
+    "matched": true
+  },
+  {
+    "word": "transaction",
+    "start": 62.480000000000004,
+    "end": 62.52,
+    "matched": true
+  },
+  {
+    "word": "complete",
+    "start": 62.52,
+    "end": 63.16,
+    "matched": true
+  },
+  {
+    "word": "except",
+    "start": 63.82,
+    "end": 64.06,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 64.06,
+    "end": 64.24,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 64.24,
+    "end": 64.4,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 64.4,
+    "end": 64.62,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 64.62,
+    "end": 64.78,
+    "matched": true
+  },
+  {
+    "word": "actually",
+    "start": 64.78,
+    "end": 65.1,
+    "matched": true
+  },
+  {
+    "word": "happened",
+    "start": 65.1,
+    "end": 65.44,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 65.96,
+    "end": 66.16,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 66.16,
+    "end": 66.26,
+    "matched": true
+  },
+  {
+    "word": "only",
+    "start": 66.26,
+    "end": 66.46,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 66.46,
+    "end": 66.62,
+    "matched": true
+  },
+  {
+    "word": "part",
+    "start": 66.62,
+    "end": 66.8,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 66.8,
+    "end": 66.96,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 66.96,
+    "end": 67.14,
+    "matched": true
+  },
+  {
+    "word": "see",
+    "start": 67.14,
+    "end": 67.38,
+    "matched": true
+  },
+  {
+    "word": "underneath",
+    "start": 67.98,
+    "end": 68.52,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 68.52,
+    "end": 68.72,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 68.72,
+    "end": 69.12,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 69.12,
+    "end": 69.32,
+    "matched": true
+  },
+  {
+    "word": "an",
+    "start": 69.32,
+    "end": 69.46,
+    "matched": true
+  },
+  {
+    "word": "entire",
+    "start": 69.46,
+    "end": 69.84,
+    "matched": true
+  },
+  {
+    "word": "machine",
+    "start": 69.84,
+    "end": 70.24,
+    "matched": true
+  },
+  {
+    "word": "working",
+    "start": 70.24,
+    "end": 70.52,
+    "matched": true
+  },
+  {
+    "word": "together",
+    "start": 70.52,
+    "end": 70.9,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 71.62,
+    "end": 71.88,
+    "matched": true
+  },
+  {
+    "word": "beans",
+    "start": 71.88,
+    "end": 72.28,
+    "matched": true
+  },
+  {
+    "word": "milk",
+    "start": 72.68,
+    "end": 72.88,
+    "matched": true
+  },
+  {
+    "word": "sugar",
+    "start": 73.36,
+    "end": 73.7,
+    "matched": true
+  },
+  {
+    "word": "cups",
+    "start": 74.24,
+    "end": 74.54,
+    "matched": true
+  },
+  {
+    "word": "lids",
+    "start": 75.22,
+    "end": 75.42,
+    "matched": true
+  },
+  {
+    "word": "machines",
+    "start": 75.84,
+    "end": 76.26,
+    "matched": true
+  },
+  {
+    "word": "electricity",
+    "start": 76.94,
+    "end": 77.4,
+    "matched": true
+  },
+  {
+    "word": "staff",
+    "start": 78.04,
+    "end": 78.4,
+    "matched": true
+  },
+  {
+    "word": "rent",
+    "start": 78.96,
+    "end": 79.2,
+    "matched": true
+  },
+  {
+    "word": "cleaning",
+    "start": 79.78,
+    "end": 80.08,
+    "matched": true
+  },
+  {
+    "word": "delivery",
+    "start": 80.78,
+    "end": 81.04,
+    "matched": true
+  },
+  {
+    "word": "trucks",
+    "start": 81.04,
+    "end": 81.56,
+    "matched": true
+  },
+  {
+    "word": "payment",
+    "start": 82.14,
+    "end": 82.34,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 82.34,
+    "end": 82.94,
+    "matched": true
+  },
+  {
+    "word": "marketing",
+    "start": 83.5,
+    "end": 83.98,
+    "matched": true
+  },
+  {
+    "word": "loyalty",
+    "start": 84.64,
+    "end": 84.94,
+    "matched": true
+  },
+  {
+    "word": "programs",
+    "start": 84.94,
+    "end": 85.68,
+    "matched": true
+  },
+  {
+    "word": "apps",
+    "start": 86.34,
+    "end": 86.54,
+    "matched": true
+  },
+  {
+    "word": "managers",
+    "start": 87.12,
+    "end": 87.62,
+    "matched": true
+  },
+  {
+    "word": "suppliers",
+    "start": 88.32,
+    "end": 88.8,
+    "matched": true
+  },
+  {
+    "word": "someone",
+    "start": 89.8,
+    "end": 90.0,
+    "matched": true
+  },
+  {
+    "word": "had",
+    "start": 90.0,
+    "end": 90.22,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 90.22,
+    "end": 90.36,
+    "matched": true
+  },
+  {
+    "word": "decide",
+    "start": 90.36,
+    "end": 90.68,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 90.68,
+    "end": 90.86,
+    "matched": true
+  },
+  {
+    "word": "price",
+    "start": 90.86,
+    "end": 91.18,
+    "matched": true
+  },
+  {
+    "word": "someone",
+    "start": 91.76,
+    "end": 92.08,
+    "matched": true
+  },
+  {
+    "word": "had",
+    "start": 92.08,
+    "end": 92.32,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 92.32,
+    "end": 92.46,
+    "matched": true
+  },
+  {
+    "word": "design",
+    "start": 92.46,
+    "end": 92.78,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 92.78,
+    "end": 92.94,
+    "matched": true
+  },
+  {
+    "word": "menu",
+    "start": 92.94,
+    "end": 93.24,
+    "matched": true
+  },
+  {
+    "word": "someone",
+    "start": 93.84,
+    "end": 94.14,
+    "matched": true
+  },
+  {
+    "word": "had",
+    "start": 94.14,
+    "end": 94.38,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 94.38,
+    "end": 94.52,
+    "matched": true
+  },
+  {
+    "word": "make",
+    "start": 94.52,
+    "end": 94.68,
+    "matched": true
+  },
+  {
+    "word": "sure",
+    "start": 94.68,
+    "end": 94.86,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 94.86,
+    "end": 95.0,
+    "matched": true
+  },
+  {
+    "word": "store",
+    "start": 95.0,
+    "end": 95.24,
+    "matched": true
+  },
+  {
+    "word": "opened",
+    "start": 95.24,
+    "end": 95.6,
+    "matched": true
+  },
+  {
+    "word": "on",
+    "start": 95.6,
+    "end": 95.82,
+    "matched": true
+  },
+  {
+    "word": "time",
+    "start": 95.82,
+    "end": 96.14,
+    "matched": true
+  },
+  {
+    "word": "someone",
+    "start": 96.68,
+    "end": 97.02,
+    "matched": true
+  },
+  {
+    "word": "had",
+    "start": 97.02,
+    "end": 97.26,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 97.26,
+    "end": 97.42,
+    "matched": true
+  },
+  {
+    "word": "predict",
+    "start": 97.42,
+    "end": 97.74,
+    "matched": true
+  },
+  {
+    "word": "how",
+    "start": 97.74,
+    "end": 97.98,
+    "matched": true
+  },
+  {
+    "word": "much",
+    "start": 97.98,
+    "end": 98.18,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 98.18,
+    "end": 98.54,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 98.54,
+    "end": 98.8,
+    "matched": true
+  },
+  {
+    "word": "would",
+    "start": 98.8,
+    "end": 99.02,
+    "matched": true
+  },
+  {
+    "word": "buy",
+    "start": 99.02,
+    "end": 99.22,
+    "matched": true
+  },
+  {
+    "word": "today",
+    "start": 99.22,
+    "end": 99.5,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 100.08,
+    "end": 100.28,
+    "matched": true
+  },
+  {
+    "word": "cup",
+    "start": 100.28,
+    "end": 100.44,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 100.44,
+    "end": 100.62,
+    "matched": true
+  },
+  {
+    "word": "visible",
+    "start": 100.62,
+    "end": 101.02,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 101.6,
+    "end": 101.72,
+    "matched": true
+  },
+  {
+    "word": "system",
+    "start": 101.72,
+    "end": 102.04,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 102.04,
+    "end": 102.22,
+    "matched": true
+  },
+  {
+    "word": "invisible",
+    "start": 102.22,
+    "end": 102.64,
+    "matched": true
+  },
+  {
+    "word": "most",
+    "start": 103.38,
+    "end": 103.52,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 103.52,
+    "end": 103.76,
+    "matched": true
+  },
+  {
+    "word": "only",
+    "start": 103.76,
+    "end": 103.98,
+    "matched": true
+  },
+  {
+    "word": "see",
+    "start": 103.98,
+    "end": 104.22,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 104.22,
+    "end": 104.38,
+    "matched": true
+  },
+  {
+    "word": "cup",
+    "start": 104.38,
+    "end": 104.58,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 105.72,
+    "end": 105.76,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 105.76,
+    "end": 106.06,
+    "matched": true
+  },
+  {
+    "word": "learn",
+    "start": 106.06,
+    "end": 106.32,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 106.32,
+    "end": 106.48,
+    "matched": true
+  },
+  {
+    "word": "see",
+    "start": 106.48,
+    "end": 106.62,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 106.62,
+    "end": 106.76,
+    "matched": true
+  },
+  {
+    "word": "system",
+    "start": 106.76,
+    "end": 107.08,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 107.58,
+    "end": 107.72,
+    "matched": true
+  },
+  {
+    "word": "once",
+    "start": 107.72,
+    "end": 107.9,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 107.9,
+    "end": 108.06,
+    "matched": true
+  },
+  {
+    "word": "start",
+    "start": 108.06,
+    "end": 108.3,
+    "matched": true
+  },
+  {
+    "word": "seeing",
+    "start": 108.3,
+    "end": 108.54,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 108.54,
+    "end": 109.04,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 109.56,
+    "end": 109.64,
+    "matched": true
+  },
+  {
+    "word": "begin",
+    "start": 109.64,
+    "end": 109.92,
+    "matched": true
+  },
+  {
+    "word": "noticing",
+    "start": 109.92,
+    "end": 110.36,
+    "matched": true
+  },
+  {
+    "word": "them",
+    "start": 110.36,
+    "end": 110.68,
+    "matched": true
+  },
+  {
+    "word": "everywhere",
+    "start": 110.68,
+    "end": 111.1,
+    "matched": true
+  },
+  {
+    "word": "schools",
+    "start": 111.82,
+    "end": 112.0,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 112.0,
+    "end": 112.2,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 112.2,
+    "end": 112.64,
+    "matched": true
+  },
+  {
+    "word": "hospitals",
+    "start": 113.34,
+    "end": 113.7,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 113.7,
+    "end": 113.9,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 113.9,
+    "end": 114.34,
+    "matched": true
+  },
+  {
+    "word": "airports",
+    "start": 115.04,
+    "end": 115.42,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 115.42,
+    "end": 115.6,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 115.6,
+    "end": 116.02,
+    "matched": true
+  },
+  {
+    "word": "cities",
+    "start": 116.86,
+    "end": 116.9,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 116.9,
+    "end": 117.14,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 117.14,
+    "end": 117.58,
+    "matched": true
+  },
+  {
+    "word": "businesses",
+    "start": 118.26,
+    "end": 118.76,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 118.76,
+    "end": 118.9,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 118.9,
+    "end": 119.32,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 120.02,
+    "end": 120.16,
+    "matched": true
+  },
+  {
+    "word": "students",
+    "start": 120.16,
+    "end": 120.5,
+    "matched": true
+  },
+  {
+    "word": "who",
+    "start": 120.5,
+    "end": 120.74,
+    "matched": true
+  },
+  {
+    "word": "learn",
+    "start": 120.74,
+    "end": 120.92,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 120.92,
+    "end": 121.1,
+    "matched": true
+  },
+  {
+    "word": "see",
+    "start": 121.1,
+    "end": 121.3,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 121.3,
+    "end": 121.7,
+    "matched": true
+  },
+  {
+    "word": "early",
+    "start": 121.7,
+    "end": 122.14,
+    "matched": true
+  },
+  {
+    "word": "gain",
+    "start": 122.14,
+    "end": 122.52,
+    "matched": true
+  },
+  {
+    "word": "an",
+    "start": 122.52,
+    "end": 122.72,
+    "matched": true
+  },
+  {
+    "word": "advantage",
+    "start": 122.72,
+    "end": 123.2,
+    "matched": true
+  },
+  {
+    "word": "because",
+    "start": 123.74,
+    "end": 124.06,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 124.06,
+    "end": 124.22,
+    "matched": true
+  },
+  {
+    "word": "stop",
+    "start": 124.22,
+    "end": 124.48,
+    "matched": true
+  },
+  {
+    "word": "asking",
+    "start": 124.48,
+    "end": 124.96,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 125.3,
+    "end": 125.52,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 125.52,
+    "end": 125.86,
+    "matched": true
+  },
+  {
+    "word": "should",
+    "start": 125.86,
+    "end": 126.06,
+    "matched": true
+  },
+  {
+    "word": "i",
+    "start": 126.06,
+    "end": 126.2,
+    "matched": true
+  },
+  {
+    "word": "make",
+    "start": 126.2,
+    "end": 126.46,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 126.88,
+    "end": 127.14,
+    "matched": true
+  },
+  {
+    "word": "start",
+    "start": 127.14,
+    "end": 127.36,
+    "matched": true
+  },
+  {
+    "word": "asking",
+    "start": 127.36,
+    "end": 127.78,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 128.06,
+    "end": 128.32,
+    "matched": true
+  },
+  {
+    "word": "system",
+    "start": 128.32,
+    "end": 128.8,
+    "matched": true
+  },
+  {
+    "word": "creates",
+    "start": 128.8,
+    "end": 129.16,
+    "matched": true
+  },
+  {
+    "word": "this",
+    "start": 129.16,
+    "end": 129.42,
+    "matched": true
+  },
+  {
+    "word": "result",
+    "start": 129.42,
+    "end": 129.82,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 130.58,
+    "end": 130.88,
+    "matched": true
+  },
+  {
+    "word": "question",
+    "start": 130.88,
+    "end": 131.14,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 131.14,
+    "end": 131.42,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 131.42,
+    "end": 131.56,
+    "matched": true
+  },
+  {
+    "word": "beginning",
+    "start": 131.56,
+    "end": 131.78,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 131.78,
+    "end": 131.98,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 131.98,
+    "end": 132.24,
+    "matched": true
+  },
+  {
+    "word": "thinking",
+    "start": 132.24,
+    "end": 132.58,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 133.02,
+    "end": 133.28,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 133.28,
+    "end": 133.38,
+    "matched": true
+  },
+  {
+    "word": "starts",
+    "start": 133.38,
+    "end": 133.68,
+    "matched": true
+  },
+  {
+    "word": "with",
+    "start": 133.68,
+    "end": 133.9,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 133.9,
+    "end": 134.02,
+    "matched": true
+  },
+  {
+    "word": "cup",
+    "start": 134.02,
+    "end": 134.14,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 134.14,
+    "end": 134.3,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 134.3,
+    "end": 134.64,
+    "matched": true
+  },
+  {
+    "word": "module",
+    "start": 135.23,
+    "end": 135.56,
+    "matched": true
+  },
+  {
+    "word": "2",
+    "start": 135.56,
+    "end": 136.2,
+    "matched": false
+  },
+  {
+    "word": "follow",
+    "start": 136.2,
+    "end": 136.34,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 136.34,
+    "end": 136.58,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 136.58,
+    "end": 136.9,
+    "matched": true
+  },
+  {
+    "word": "revenue",
+    "start": 136.9,
+    "end": 137.195,
+    "matched": false
+  },
+  {
+    "word": "is",
+    "start": 137.195,
+    "end": 137.49,
+    "matched": false
+  },
+  {
+    "word": "not",
+    "start": 137.49,
+    "end": 137.78500000000003,
+    "matched": false
+  },
+  {
+    "word": "profit",
+    "start": 137.78500000000003,
+    "end": 138.08,
+    "matched": false
+  },
+  {
+    "word": "let's",
+    "start": 138.08,
+    "end": 138.24,
+    "matched": true
+  },
+  {
+    "word": "follow",
+    "start": 138.24,
+    "end": 138.42,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 138.42,
+    "end": 138.7,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 138.7,
+    "end": 138.96,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 139.34,
+    "end": 139.38,
+    "matched": true
+  },
+  {
+    "word": "customer",
+    "start": 139.38,
+    "end": 139.7,
+    "matched": true
+  },
+  {
+    "word": "buys",
+    "start": 139.7,
+    "end": 140.06,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 140.06,
+    "end": 140.46,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 140.46,
+    "end": 140.92,
+    "matched": true
+  },
+  {
+    "word": "price",
+    "start": 141.52,
+    "end": 141.8,
+    "matched": true
+  },
+  {
+    "word": "two",
+    "start": 141.8,
+    "end": 142.55,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 142.55,
+    "end": 143.3,
+    "matched": false
+  },
+  {
+    "word": "the",
+    "start": 143.3,
+    "end": 143.7,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 143.7,
+    "end": 144.04,
+    "matched": true
+  },
+  {
+    "word": "collects",
+    "start": 144.04,
+    "end": 144.42,
+    "matched": true
+  },
+  {
+    "word": "two",
+    "start": 144.42,
+    "end": 144.89999999999998,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 144.89999999999998,
+    "end": 145.38,
+    "matched": false
+  },
+  {
+    "word": "that",
+    "start": 145.38,
+    "end": 145.72,
+    "matched": true
+  },
+  {
+    "word": "sounds",
+    "start": 145.72,
+    "end": 145.96,
+    "matched": true
+  },
+  {
+    "word": "like",
+    "start": 145.96,
+    "end": 146.18,
+    "matched": true
+  },
+  {
+    "word": "profit",
+    "start": 146.18,
+    "end": 146.56,
+    "matched": true
+  },
+  {
+    "word": "but",
+    "start": 147.1,
+    "end": 147.28,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 147.28,
+    "end": 147.42,
+    "matched": true
+  },
+  {
+    "word": "isn't",
+    "start": 147.42,
+    "end": 147.82,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 148.16,
+    "end": 148.36,
+    "matched": true
+  },
+  {
+    "word": "even",
+    "start": 148.36,
+    "end": 148.56,
+    "matched": true
+  },
+  {
+    "word": "close",
+    "start": 148.56,
+    "end": 148.94,
+    "matched": true
+  },
+  {
+    "word": "because",
+    "start": 149.54,
+    "end": 149.88,
+    "matched": true
+  },
+  {
+    "word": "before",
+    "start": 149.88,
+    "end": 150.28,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 150.28,
+    "end": 150.48,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 150.48,
+    "end": 150.8,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 150.8,
+    "end": 151.04,
+    "matched": true
+  },
+  {
+    "word": "keep",
+    "start": 151.04,
+    "end": 151.32,
+    "matched": true
+  },
+  {
+    "word": "anything",
+    "start": 151.32,
+    "end": 151.76,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 152.14,
+    "end": 152.32,
+    "matched": true
+  },
+  {
+    "word": "has",
+    "start": 152.32,
+    "end": 152.54,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 152.54,
+    "end": 152.72,
+    "matched": true
+  },
+  {
+    "word": "pay",
+    "start": 152.72,
+    "end": 152.9,
+    "matched": true
+  },
+  {
+    "word": "for",
+    "start": 152.9,
+    "end": 153.06,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 153.06,
+    "end": 153.2,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 153.2,
+    "end": 153.5,
+    "matched": true
+  },
+  {
+    "word": "itself",
+    "start": 153.5,
+    "end": 153.88,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 154.64,
+    "end": 154.86,
+    "matched": true
+  },
+  {
+    "word": "beans",
+    "start": 154.86,
+    "end": 155.26,
+    "matched": true
+  },
+  {
+    "word": "milk",
+    "start": 155.84,
+    "end": 156.1,
+    "matched": true
+  },
+  {
+    "word": "sugar",
+    "start": 156.72,
+    "end": 157.0,
+    "matched": true
+  },
+  {
+    "word": "cup",
+    "start": 157.58,
+    "end": 157.84,
+    "matched": true
+  },
+  {
+    "word": "lid",
+    "start": 158.58,
+    "end": 158.68,
+    "matched": true
+  },
+  {
+    "word": "sleeve",
+    "start": 159.44,
+    "end": 159.66,
+    "matched": true
+  },
+  {
+    "word": "let's",
+    "start": 160.64,
+    "end": 160.96,
+    "matched": true
+  },
+  {
+    "word": "say",
+    "start": 160.96,
+    "end": 161.14,
+    "matched": true
+  },
+  {
+    "word": "all",
+    "start": 161.14,
+    "end": 161.48,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 161.48,
+    "end": 161.64,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 161.64,
+    "end": 161.86,
+    "matched": true
+  },
+  {
+    "word": "costs",
+    "start": 161.86,
+    "end": 162.1,
+    "matched": true
+  },
+  {
+    "word": "seventy-five",
+    "start": 162.1,
+    "end": 162.78,
+    "matched": false
+  },
+  {
+    "word": "cents",
+    "start": 162.78,
+    "end": 163.1,
+    "matched": true
+  },
+  {
+    "word": "now",
+    "start": 163.72,
+    "end": 164.04,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 164.04,
+    "end": 164.26,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 164.26,
+    "end": 164.42,
+    "matched": true
+  },
+  {
+    "word": "math",
+    "start": 164.42,
+    "end": 164.78,
+    "matched": true
+  },
+  {
+    "word": "two",
+    "start": 164.78,
+    "end": 165.32,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 165.32,
+    "end": 165.86,
+    "matched": false
+  },
+  {
+    "word": "minus",
+    "start": 165.86,
+    "end": 166.16,
+    "matched": true
+  },
+  {
+    "word": "seventy-five",
+    "start": 166.16,
+    "end": 166.88,
+    "matched": false
+  },
+  {
+    "word": "cents",
+    "start": 166.88,
+    "end": 167.24,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 167.24,
+    "end": 167.644,
+    "matched": false
+  },
+  {
+    "word": "dollar",
+    "start": 167.644,
+    "end": 168.048,
+    "matched": false
+  },
+  {
+    "word": "and",
+    "start": 168.048,
+    "end": 168.452,
+    "matched": false
+  },
+  {
+    "word": "twenty-five",
+    "start": 168.452,
+    "end": 168.856,
+    "matched": false
+  },
+  {
+    "word": "cents",
+    "start": 168.856,
+    "end": 169.26,
+    "matched": false
+  },
+  {
+    "word": "remains",
+    "start": 169.26,
+    "end": 169.86,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 170.68,
+    "end": 170.84,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 170.84,
+    "end": 171.1,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 171.1,
+    "end": 171.3,
+    "matched": true
+  },
+  {
+    "word": "called",
+    "start": 171.3,
+    "end": 171.64,
+    "matched": true
+  },
+  {
+    "word": "gross",
+    "start": 171.64,
+    "end": 172.0,
+    "matched": true
+  },
+  {
+    "word": "margin",
+    "start": 172.0,
+    "end": 172.54,
+    "matched": true
+  },
+  {
+    "word": "gross",
+    "start": 173.34,
+    "end": 173.38,
+    "matched": true
+  },
+  {
+    "word": "margin",
+    "start": 173.38,
+    "end": 173.86,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 173.86,
+    "end": 174.06,
+    "matched": true
+  },
+  {
+    "word": "breathing",
+    "start": 174.06,
+    "end": 174.3,
+    "matched": true
+  },
+  {
+    "word": "room",
+    "start": 174.3,
+    "end": 174.62,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 175.06,
+    "end": 175.22,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 175.22,
+    "end": 175.34,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 175.34,
+    "end": 175.54,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 175.54,
+    "end": 175.68,
+    "matched": true
+  },
+  {
+    "word": "left",
+    "start": 175.68,
+    "end": 176.02,
+    "matched": true
+  },
+  {
+    "word": "after",
+    "start": 176.02,
+    "end": 176.32,
+    "matched": true
+  },
+  {
+    "word": "paying",
+    "start": 176.32,
+    "end": 176.62,
+    "matched": true
+  },
+  {
+    "word": "for",
+    "start": 176.62,
+    "end": 176.84,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 176.84,
+    "end": 176.98,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 176.98,
+    "end": 177.28,
+    "matched": true
+  },
+  {
+    "word": "itself",
+    "start": 177.28,
+    "end": 177.72,
+    "matched": true
+  },
+  {
+    "word": "but",
+    "start": 178.3,
+    "end": 178.5,
+    "matched": true
+  },
+  {
+    "word": "breathing",
+    "start": 178.5,
+    "end": 178.76,
+    "matched": true
+  },
+  {
+    "word": "room",
+    "start": 178.76,
+    "end": 179.0,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 179.0,
+    "end": 179.16,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 179.16,
+    "end": 179.38,
+    "matched": true
+  },
+  {
+    "word": "profit",
+    "start": 179.38,
+    "end": 179.8,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 180.36,
+    "end": 180.52,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 180.52,
+    "end": 180.8,
+    "matched": true
+  },
+  {
+    "word": "still",
+    "start": 180.8,
+    "end": 181.14,
+    "matched": true
+  },
+  {
+    "word": "has",
+    "start": 181.14,
+    "end": 181.42,
+    "matched": true
+  },
+  {
+    "word": "bills",
+    "start": 181.42,
+    "end": 181.72,
+    "matched": true
+  },
+  {
+    "word": "lots",
+    "start": 182.44,
+    "end": 182.6,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 182.6,
+    "end": 182.84,
+    "matched": true
+  },
+  {
+    "word": "them",
+    "start": 182.84,
+    "end": 183.08,
+    "matched": true
+  },
+  {
+    "word": "rent",
+    "start": 183.68,
+    "end": 183.84,
+    "matched": true
+  },
+  {
+    "word": "staff",
+    "start": 184.36,
+    "end": 184.86,
+    "matched": true
+  },
+  {
+    "word": "equipment",
+    "start": 185.52,
+    "end": 185.8,
+    "matched": true
+  },
+  {
+    "word": "cleaning",
+    "start": 186.44,
+    "end": 186.82,
+    "matched": true
+  },
+  {
+    "word": "payment",
+    "start": 187.2,
+    "end": 187.66,
+    "matched": true
+  },
+  {
+    "word": "fees",
+    "start": 187.66,
+    "end": 188.24,
+    "matched": true
+  },
+  {
+    "word": "repairs",
+    "start": 188.88,
+    "end": 189.24,
+    "matched": true
+  },
+  {
+    "word": "insurance",
+    "start": 190.06,
+    "end": 190.54,
+    "matched": true
+  },
+  {
+    "word": "marketing",
+    "start": 191.18,
+    "end": 191.7,
+    "matched": true
+  },
+  {
+    "word": "electricity",
+    "start": 192.28,
+    "end": 192.78,
+    "matched": true
+  },
+  {
+    "word": "now",
+    "start": 193.84,
+    "end": 193.9,
+    "matched": true
+  },
+  {
+    "word": "imagine",
+    "start": 193.9,
+    "end": 194.26,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 194.26,
+    "end": 194.56,
+    "matched": true
+  },
+  {
+    "word": "store",
+    "start": 194.56,
+    "end": 194.78,
+    "matched": true
+  },
+  {
+    "word": "sells",
+    "start": 194.78,
+    "end": 195.14,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 195.14,
+    "end": 195.54,
+    "matched": false
+  },
+  {
+    "word": "thousand",
+    "start": 195.54,
+    "end": 195.94,
+    "matched": false
+  },
+  {
+    "word": "coffees",
+    "start": 195.94,
+    "end": 196.5,
+    "matched": true
+  },
+  {
+    "word": "revenue",
+    "start": 197.36,
+    "end": 197.4,
+    "matched": true
+  },
+  {
+    "word": "two",
+    "start": 197.4,
+    "end": 198.08666666666667,
+    "matched": false
+  },
+  {
+    "word": "thousand",
+    "start": 198.08666666666667,
+    "end": 198.77333333333334,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 198.77333333333334,
+    "end": 199.46,
+    "matched": false
+  },
+  {
+    "word": "the",
+    "start": 199.46,
+    "end": 199.74,
+    "matched": true
+  },
+  {
+    "word": "ingredients",
+    "start": 199.74,
+    "end": 200.22,
+    "matched": true
+  },
+  {
+    "word": "cost",
+    "start": 200.22,
+    "end": 200.68,
+    "matched": true
+  },
+  {
+    "word": "seven",
+    "start": 200.68,
+    "end": 201.132,
+    "matched": false
+  },
+  {
+    "word": "hundred",
+    "start": 201.132,
+    "end": 201.584,
+    "matched": false
+  },
+  {
+    "word": "and",
+    "start": 201.584,
+    "end": 202.036,
+    "matched": false
+  },
+  {
+    "word": "fifty",
+    "start": 202.036,
+    "end": 202.488,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 202.488,
+    "end": 202.94,
+    "matched": false
+  },
+  {
+    "word": "that",
+    "start": 202.94,
+    "end": 203.36,
+    "matched": true
+  },
+  {
+    "word": "leaves",
+    "start": 203.36,
+    "end": 203.74,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 203.74,
+    "end": 204.11714285714285,
+    "matched": false
+  },
+  {
+    "word": "thousand",
+    "start": 204.11714285714285,
+    "end": 204.49428571428572,
+    "matched": false
+  },
+  {
+    "word": "two",
+    "start": 204.49428571428572,
+    "end": 204.87142857142857,
+    "matched": false
+  },
+  {
+    "word": "hundred",
+    "start": 204.87142857142857,
+    "end": 205.24857142857144,
+    "matched": false
+  },
+  {
+    "word": "and",
+    "start": 205.24857142857144,
+    "end": 205.62571428571428,
+    "matched": false
+  },
+  {
+    "word": "fifty",
+    "start": 205.62571428571428,
+    "end": 206.00285714285715,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 206.00285714285715,
+    "end": 206.38,
+    "matched": false
+  },
+  {
+    "word": "sounds",
+    "start": 206.38,
+    "end": 206.76,
+    "matched": true
+  },
+  {
+    "word": "pretty",
+    "start": 206.76,
+    "end": 207.04,
+    "matched": true
+  },
+  {
+    "word": "good",
+    "start": 207.04,
+    "end": 207.34,
+    "matched": true
+  },
+  {
+    "word": "but",
+    "start": 207.8,
+    "end": 208.04,
+    "matched": true
+  },
+  {
+    "word": "now",
+    "start": 208.04,
+    "end": 208.28,
+    "matched": true
+  },
+  {
+    "word": "reality",
+    "start": 208.28,
+    "end": 208.76,
+    "matched": true
+  },
+  {
+    "word": "arrives",
+    "start": 208.76,
+    "end": 209.22,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 209.82,
+    "end": 209.96,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 209.96,
+    "end": 210.26,
+    "matched": true
+  },
+  {
+    "word": "still",
+    "start": 210.26,
+    "end": 210.56,
+    "matched": true
+  },
+  {
+    "word": "has",
+    "start": 210.56,
+    "end": 210.82,
+    "matched": true
+  },
+  {
+    "word": "operating",
+    "start": 210.82,
+    "end": 211.28,
+    "matched": true
+  },
+  {
+    "word": "costs",
+    "start": 211.28,
+    "end": 211.64,
+    "matched": true
+  },
+  {
+    "word": "let's",
+    "start": 212.26,
+    "end": 212.54,
+    "matched": true
+  },
+  {
+    "word": "say",
+    "start": 212.54,
+    "end": 212.7,
+    "matched": true
+  },
+  {
+    "word": "those",
+    "start": 212.7,
+    "end": 212.92,
+    "matched": true
+  },
+  {
+    "word": "costs",
+    "start": 212.92,
+    "end": 213.24,
+    "matched": true
+  },
+  {
+    "word": "total",
+    "start": 213.24,
+    "end": 213.54,
+    "matched": true
+  },
+  {
+    "word": "eight",
+    "start": 213.54,
+    "end": 213.86599999999999,
+    "matched": false
+  },
+  {
+    "word": "hundred",
+    "start": 213.86599999999999,
+    "end": 214.19199999999998,
+    "matched": false
+  },
+  {
+    "word": "and",
+    "start": 214.19199999999998,
+    "end": 214.518,
+    "matched": false
+  },
+  {
+    "word": "fifty",
+    "start": 214.518,
+    "end": 214.844,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 214.844,
+    "end": 215.17,
+    "matched": false
+  },
+  {
+    "word": "now",
+    "start": 215.17,
+    "end": 215.54,
+    "matched": true
+  },
+  {
+    "word": "subtract",
+    "start": 215.54,
+    "end": 216.02,
+    "matched": true
+  },
+  {
+    "word": "again",
+    "start": 216.02,
+    "end": 216.5,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 216.5,
+    "end": 216.82285714285715,
+    "matched": false
+  },
+  {
+    "word": "thousand",
+    "start": 216.82285714285715,
+    "end": 217.1457142857143,
+    "matched": false
+  },
+  {
+    "word": "two",
+    "start": 217.1457142857143,
+    "end": 217.46857142857144,
+    "matched": false
+  },
+  {
+    "word": "hundred",
+    "start": 217.46857142857144,
+    "end": 217.79142857142855,
+    "matched": false
+  },
+  {
+    "word": "and",
+    "start": 217.79142857142855,
+    "end": 218.1142857142857,
+    "matched": false
+  },
+  {
+    "word": "fifty",
+    "start": 218.1142857142857,
+    "end": 218.43714285714285,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 218.43714285714285,
+    "end": 218.76,
+    "matched": false
+  },
+  {
+    "word": "minus",
+    "start": 218.76,
+    "end": 219.66,
+    "matched": true
+  },
+  {
+    "word": "eight",
+    "start": 219.66,
+    "end": 219.9875,
+    "matched": false
+  },
+  {
+    "word": "hundred",
+    "start": 219.9875,
+    "end": 220.315,
+    "matched": false
+  },
+  {
+    "word": "and",
+    "start": 220.315,
+    "end": 220.64249999999998,
+    "matched": false
+  },
+  {
+    "word": "fifty",
+    "start": 220.64249999999998,
+    "end": 220.97,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 220.97,
+    "end": 221.2975,
+    "matched": false
+  },
+  {
+    "word": "four",
+    "start": 221.2975,
+    "end": 221.625,
+    "matched": false
+  },
+  {
+    "word": "hundred",
+    "start": 221.625,
+    "end": 221.9525,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 221.9525,
+    "end": 222.28,
+    "matched": false
+  },
+  {
+    "word": "remains",
+    "start": 222.28,
+    "end": 222.98,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 223.78,
+    "end": 223.82,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 223.82,
+    "end": 223.96,
+    "matched": true
+  },
+  {
+    "word": "profit",
+    "start": 223.96,
+    "end": 224.3,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 224.96,
+    "end": 225.04,
+    "matched": true
+  },
+  {
+    "word": "store",
+    "start": 225.04,
+    "end": 225.26,
+    "matched": true
+  },
+  {
+    "word": "collected",
+    "start": 225.26,
+    "end": 225.58,
+    "matched": true
+  },
+  {
+    "word": "two",
+    "start": 225.58,
+    "end": 226.04666666666668,
+    "matched": false
+  },
+  {
+    "word": "thousand",
+    "start": 226.04666666666668,
+    "end": 226.51333333333332,
+    "matched": false
+  },
+  {
+    "word": "dollars",
+    "start": 226.51333333333332,
+    "end": 226.98,
+    "matched": false
+  },
+  {
+    "word": "but",
+    "start": 226.98,
+    "end": 227.24,
+    "matched": true
+  },
+  {
+    "word": "only",
+    "start": 227.24,
+    "end": 227.46,
+    "matched": true
+  },
+  {
+    "word": "kept",
+    "start": 227.46,
+    "end": 227.68,
+    "matched": true
+  },
+  {
+    "word": "four",
+    "start": 227.68,
+    "end": 228.17000000000002,
+    "matched": false
+  },
+  {
+    "word": "hundred",
+    "start": 228.17000000000002,
+    "end": 228.66,
+    "matched": false
+  },
+  {
+    "word": "twenty",
+    "start": 228.66,
+    "end": 229.14999999999998,
+    "matched": false
+  },
+  {
+    "word": "percent",
+    "start": 229.14999999999998,
+    "end": 229.64,
+    "matched": false
+  },
+  {
+    "word": "that",
+    "start": 229.64,
+    "end": 230.46,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 230.46,
+    "end": 230.6,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 230.6,
+    "end": 230.76,
+    "matched": true
+  },
+  {
+    "word": "huge",
+    "start": 230.76,
+    "end": 230.96,
+    "matched": true
+  },
+  {
+    "word": "lesson",
+    "start": 230.96,
+    "end": 231.4,
+    "matched": true
+  },
+  {
+    "word": "because",
+    "start": 231.94,
+    "end": 232.18,
+    "matched": true
+  },
+  {
+    "word": "most",
+    "start": 232.18,
+    "end": 232.44,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 232.44,
+    "end": 232.72,
+    "matched": true
+  },
+  {
+    "word": "see",
+    "start": 232.72,
+    "end": 232.98,
+    "matched": true
+  },
+  {
+    "word": "revenue",
+    "start": 232.98,
+    "end": 233.36,
+    "matched": true
+  },
+  {
+    "word": "very",
+    "start": 234.1,
+    "end": 234.3,
+    "matched": true
+  },
+  {
+    "word": "few",
+    "start": 234.3,
+    "end": 234.54,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 234.54,
+    "end": 234.84,
+    "matched": true
+  },
+  {
+    "word": "understand",
+    "start": 234.84,
+    "end": 235.32,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 235.32,
+    "end": 235.56,
+    "matched": true
+  },
+  {
+    "word": "survives",
+    "start": 235.56,
+    "end": 236.04,
+    "matched": true
+  },
+  {
+    "word": "underneath",
+    "start": 236.04,
+    "end": 236.52,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 236.52,
+    "end": 236.82,
+    "matched": true
+  },
+  {
+    "word": "this",
+    "start": 237.28,
+    "end": 237.5,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 237.5,
+    "end": 237.64,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 237.64,
+    "end": 237.94,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 237.94,
+    "end": 238.24,
+    "matched": true
+  },
+  {
+    "word": "owners",
+    "start": 238.24,
+    "end": 238.6,
+    "matched": true
+  },
+  {
+    "word": "ask",
+    "start": 238.6,
+    "end": 239.02,
+    "matched": true
+  },
+  {
+    "word": "different",
+    "start": 239.02,
+    "end": 239.4,
+    "matched": true
+  },
+  {
+    "word": "questions",
+    "start": 239.4,
+    "end": 239.8,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 240.6,
+    "end": 240.64,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 240.64,
+    "end": 241.12,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 241.12,
+    "end": 241.3,
+    "matched": true
+  },
+  {
+    "word": "sell",
+    "start": 241.3,
+    "end": 241.52,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 241.52,
+    "end": 241.86,
+    "matched": true
+  },
+  {
+    "word": "but",
+    "start": 242.38,
+    "end": 242.54,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 242.54,
+    "end": 242.98,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 242.98,
+    "end": 243.16,
+    "matched": true
+  },
+  {
+    "word": "sell",
+    "start": 243.16,
+    "end": 243.46,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 243.46,
+    "end": 243.64,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 243.64,
+    "end": 243.78,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 243.78,
+    "end": 243.9,
+    "matched": true
+  },
+  {
+    "word": "way",
+    "start": 243.9,
+    "end": 244.06,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 244.06,
+    "end": 244.26,
+    "matched": true
+  },
+  {
+    "word": "actually",
+    "start": 244.26,
+    "end": 244.7,
+    "matched": true
+  },
+  {
+    "word": "works",
+    "start": 244.7,
+    "end": 245.16,
+    "matched": true
+  },
+  {
+    "word": "revenue",
+    "start": 246.3,
+    "end": 246.34,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 246.34,
+    "end": 246.62,
+    "matched": true
+  },
+  {
+    "word": "exciting",
+    "start": 246.62,
+    "end": 247.12,
+    "matched": true
+  },
+  {
+    "word": "profit",
+    "start": 247.88,
+    "end": 248.06,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 248.06,
+    "end": 248.34,
+    "matched": true
+  },
+  {
+    "word": "survival",
+    "start": 248.34,
+    "end": 248.8,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 249.46,
+    "end": 249.52,
+    "matched": true
+  },
+  {
+    "word": "smart",
+    "start": 249.52,
+    "end": 249.94,
+    "matched": true
+  },
+  {
+    "word": "entrepreneurs",
+    "start": 249.94,
+    "end": 250.52,
+    "matched": true
+  },
+  {
+    "word": "learn",
+    "start": 250.52,
+    "end": 250.92,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 250.92,
+    "end": 251.1,
+    "matched": true
+  },
+  {
+    "word": "difference",
+    "start": 251.1,
+    "end": 251.34,
+    "matched": true
+  },
+  {
+    "word": "early",
+    "start": 251.34,
+    "end": 251.72,
+    "matched": true
+  },
+  {
+    "word": "module",
+    "start": 253.0,
+    "end": 253.04,
+    "matched": true
+  },
+  {
+    "word": "3",
+    "start": 253.04,
+    "end": 254.1,
+    "matched": false
+  },
+  {
+    "word": "the",
+    "start": 254.1,
+    "end": 254.26,
+    "matched": true
+  },
+  {
+    "word": "hook",
+    "start": 254.26,
+    "end": 254.52,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 255.62,
+    "end": 255.66,
+    "matched": true
+  },
+  {
+    "word": "most",
+    "start": 255.66,
+    "end": 255.82,
+    "matched": true
+  },
+  {
+    "word": "valuable",
+    "start": 255.82,
+    "end": 256.2,
+    "matched": true
+  },
+  {
+    "word": "part",
+    "start": 256.2,
+    "end": 256.52,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 256.52,
+    "end": 256.6,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 256.6,
+    "end": 256.72,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 256.72,
+    "end": 257.04,
+    "matched": true
+  },
+  {
+    "word": "shop",
+    "start": 257.04,
+    "end": 257.3,
+    "matched": true
+  },
+  {
+    "word": "might",
+    "start": 257.3,
+    "end": 257.56,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 257.56,
+    "end": 257.82,
+    "matched": true
+  },
+  {
+    "word": "be",
+    "start": 257.82,
+    "end": 258.0,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 258.0,
+    "end": 258.12,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 258.12,
+    "end": 258.44,
+    "matched": true
+  },
+  {
+    "word": "here",
+    "start": 259.18,
+    "end": 259.34,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 259.34,
+    "end": 259.5,
+    "matched": true
+  },
+  {
+    "word": "something",
+    "start": 259.5,
+    "end": 259.82,
+    "matched": true
+  },
+  {
+    "word": "strange",
+    "start": 259.82,
+    "end": 260.3,
+    "matched": true
+  },
+  {
+    "word": "most",
+    "start": 261.04,
+    "end": 261.26,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 261.26,
+    "end": 261.66,
+    "matched": true
+  },
+  {
+    "word": "shops",
+    "start": 261.66,
+    "end": 262.04,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 262.04,
+    "end": 262.28,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 262.28,
+    "end": 262.56,
+    "matched": true
+  },
+  {
+    "word": "really",
+    "start": 262.56,
+    "end": 262.86,
+    "matched": true
+  },
+  {
+    "word": "want",
+    "start": 262.86,
+    "end": 263.04,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 263.04,
+    "end": 263.16,
+    "matched": true
+  },
+  {
+    "word": "sell",
+    "start": 263.16,
+    "end": 263.34,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 263.34,
+    "end": 263.5,
+    "matched": true
+  },
+  {
+    "word": "only",
+    "start": 263.5,
+    "end": 263.7,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 263.7,
+    "end": 264.04,
+    "matched": true
+  },
+  {
+    "word": "think",
+    "start": 264.8,
+    "end": 264.92,
+    "matched": true
+  },
+  {
+    "word": "about",
+    "start": 264.92,
+    "end": 265.14,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 265.14,
+    "end": 265.34,
+    "matched": true
+  },
+  {
+    "word": "happens",
+    "start": 265.34,
+    "end": 265.72,
+    "matched": true
+  },
+  {
+    "word": "when",
+    "start": 265.72,
+    "end": 265.94,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 265.94,
+    "end": 266.0,
+    "matched": true
+  },
+  {
+    "word": "walk",
+    "start": 266.0,
+    "end": 266.26,
+    "matched": true
+  },
+  {
+    "word": "inside",
+    "start": 266.26,
+    "end": 266.68,
+    "matched": true
+  },
+  {
+    "word": "there",
+    "start": 267.36,
+    "end": 267.40000000000003,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 267.38,
+    "end": 267.5,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 267.5,
+    "end": 267.64,
+    "matched": true
+  },
+  {
+    "word": "muffin",
+    "start": 267.64,
+    "end": 268.1,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 268.36,
+    "end": 268.56,
+    "matched": true
+  },
+  {
+    "word": "cookie",
+    "start": 268.56,
+    "end": 268.9,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 269.44,
+    "end": 269.52,
+    "matched": true
+  },
+  {
+    "word": "donut",
+    "start": 269.52,
+    "end": 269.9,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 270.36,
+    "end": 270.52,
+    "matched": true
+  },
+  {
+    "word": "breakfast",
+    "start": 270.52,
+    "end": 270.82,
+    "matched": true
+  },
+  {
+    "word": "sandwich",
+    "start": 270.82,
+    "end": 271.34,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 271.82,
+    "end": 271.96,
+    "matched": true
+  },
+  {
+    "word": "cold",
+    "start": 271.96,
+    "end": 272.2,
+    "matched": true
+  },
+  {
+    "word": "drink",
+    "start": 272.2,
+    "end": 272.54,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 273.08,
+    "end": 273.18,
+    "matched": true
+  },
+  {
+    "word": "snack",
+    "start": 273.18,
+    "end": 273.66,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 274.12,
+    "end": 274.28,
+    "matched": true
+  },
+  {
+    "word": "combo",
+    "start": 274.28,
+    "end": 274.62,
+    "matched": true
+  },
+  {
+    "word": "meal",
+    "start": 274.62,
+    "end": 274.96,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 275.54,
+    "end": 275.68,
+    "matched": true
+  },
+  {
+    "word": "rewards",
+    "start": 275.68,
+    "end": 276.08,
+    "matched": true
+  },
+  {
+    "word": "program",
+    "start": 276.08,
+    "end": 276.62,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 277.18,
+    "end": 277.34,
+    "matched": true
+  },
+  {
+    "word": "larger",
+    "start": 277.34,
+    "end": 277.68,
+    "matched": true
+  },
+  {
+    "word": "size",
+    "start": 277.68,
+    "end": 278.18,
+    "matched": true
+  },
+  {
+    "word": "an",
+    "start": 278.72,
+    "end": 278.92,
+    "matched": true
+  },
+  {
+    "word": "upgrade",
+    "start": 278.92,
+    "end": 279.36,
+    "matched": true
+  },
+  {
+    "word": "an",
+    "start": 279.92,
+    "end": 280.08,
+    "matched": true
+  },
+  {
+    "word": "extra",
+    "start": 280.08,
+    "end": 280.4,
+    "matched": true
+  },
+  {
+    "word": "shot",
+    "start": 280.4,
+    "end": 280.76,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 281.38,
+    "end": 281.66,
+    "matched": true
+  },
+  {
+    "word": "because",
+    "start": 282.16,
+    "end": 282.44,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 282.44,
+    "end": 282.6,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 282.6,
+    "end": 282.96,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 282.96,
+    "end": 283.14,
+    "matched": true
+  },
+  {
+    "word": "often",
+    "start": 283.14,
+    "end": 283.46,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 283.46,
+    "end": 283.64,
+    "matched": true
+  },
+  {
+    "word": "hook",
+    "start": 283.64,
+    "end": 283.9,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 284.4,
+    "end": 284.54,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 284.54,
+    "end": 284.9,
+    "matched": true
+  },
+  {
+    "word": "gets",
+    "start": 284.9,
+    "end": 285.14,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 285.14,
+    "end": 285.36,
+    "matched": true
+  },
+  {
+    "word": "through",
+    "start": 285.36,
+    "end": 285.5,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 285.5,
+    "end": 285.66,
+    "matched": true
+  },
+  {
+    "word": "door",
+    "start": 285.66,
+    "end": 285.9,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 286.4,
+    "end": 286.58,
+    "matched": true
+  },
+  {
+    "word": "rest",
+    "start": 286.58,
+    "end": 286.86,
+    "matched": true
+  },
+  {
+    "word": "increases",
+    "start": 286.86,
+    "end": 287.44,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 287.44,
+    "end": 287.68,
+    "matched": true
+  },
+  {
+    "word": "value",
+    "start": 287.68,
+    "end": 287.94,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 287.94,
+    "end": 288.12,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 288.12,
+    "end": 288.22,
+    "matched": true
+  },
+  {
+    "word": "order",
+    "start": 288.22,
+    "end": 288.48,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 288.96,
+    "end": 289.16,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 289.16,
+    "end": 289.3,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 289.3,
+    "end": 289.52,
+    "matched": true
+  },
+  {
+    "word": "an",
+    "start": 289.52,
+    "end": 289.68,
+    "matched": true
+  },
+  {
+    "word": "accident",
+    "start": 289.68,
+    "end": 290.1,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 290.62,
+    "end": 290.78,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 290.78,
+    "end": 290.96,
+    "matched": true
+  },
+  {
+    "word": "design",
+    "start": 290.96,
+    "end": 291.4,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 292.16,
+    "end": 292.3,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 292.3,
+    "end": 292.62,
+    "matched": true
+  },
+  {
+    "word": "full",
+    "start": 292.62,
+    "end": 292.96,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 292.96,
+    "end": 293.2,
+    "matched": true
+  },
+  {
+    "word": "invisible",
+    "start": 293.2,
+    "end": 293.6,
+    "matched": true
+  },
+  {
+    "word": "design",
+    "start": 293.6,
+    "end": 294.16,
+    "matched": true
+  },
+  {
+    "word": "decisions",
+    "start": 294.16,
+    "end": 294.66,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 295.24,
+    "end": 295.42,
+    "matched": true
+  },
+  {
+    "word": "menu",
+    "start": 295.42,
+    "end": 295.7,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 295.7,
+    "end": 295.92,
+    "matched": true
+  },
+  {
+    "word": "designed",
+    "start": 295.92,
+    "end": 296.34,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 296.94,
+    "end": 297.02,
+    "matched": true
+  },
+  {
+    "word": "pricing",
+    "start": 297.02,
+    "end": 297.4,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 297.4,
+    "end": 297.64,
+    "matched": true
+  },
+  {
+    "word": "designed",
+    "start": 297.64,
+    "end": 298.06,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 298.64,
+    "end": 298.78,
+    "matched": true
+  },
+  {
+    "word": "rewards",
+    "start": 298.78,
+    "end": 299.18,
+    "matched": true
+  },
+  {
+    "word": "program",
+    "start": 299.18,
+    "end": 299.6,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 299.6,
+    "end": 299.84,
+    "matched": true
+  },
+  {
+    "word": "designed",
+    "start": 299.84,
+    "end": 300.26,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 300.84,
+    "end": 300.94,
+    "matched": true
+  },
+  {
+    "word": "app",
+    "start": 300.94,
+    "end": 301.2,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 301.2,
+    "end": 301.36,
+    "matched": true
+  },
+  {
+    "word": "designed",
+    "start": 301.36,
+    "end": 301.8,
+    "matched": true
+  },
+  {
+    "word": "even",
+    "start": 302.5,
+    "end": 302.7,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 302.7,
+    "end": 302.9,
+    "matched": true
+  },
+  {
+    "word": "smell",
+    "start": 302.9,
+    "end": 303.16,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 303.16,
+    "end": 303.36,
+    "matched": true
+  },
+  {
+    "word": "designed",
+    "start": 303.36,
+    "end": 303.8,
+    "matched": true
+  },
+  {
+    "word": "businesses",
+    "start": 304.56,
+    "end": 305.08,
+    "matched": true
+  },
+  {
+    "word": "spend",
+    "start": 305.08,
+    "end": 305.34,
+    "matched": true
+  },
+  {
+    "word": "enormous",
+    "start": 305.34,
+    "end": 305.76,
+    "matched": true
+  },
+  {
+    "word": "amounts",
+    "start": 305.76,
+    "end": 306.14,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 306.14,
+    "end": 306.36,
+    "matched": true
+  },
+  {
+    "word": "time",
+    "start": 306.36,
+    "end": 306.62,
+    "matched": true
+  },
+  {
+    "word": "thinking",
+    "start": 306.62,
+    "end": 307.0,
+    "matched": true
+  },
+  {
+    "word": "about",
+    "start": 307.0,
+    "end": 307.34,
+    "matched": true
+  },
+  {
+    "word": "behavior",
+    "start": 307.34,
+    "end": 307.78,
+    "matched": true
+  },
+  {
+    "word": "because",
+    "start": 308.3,
+    "end": 308.66,
+    "matched": true
+  },
+  {
+    "word": "behavior",
+    "start": 308.66,
+    "end": 309.12,
+    "matched": true
+  },
+  {
+    "word": "creates",
+    "start": 309.12,
+    "end": 309.68,
+    "matched": true
+  },
+  {
+    "word": "revenue",
+    "start": 309.68,
+    "end": 310.12,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 310.72,
+    "end": 311.04,
+    "matched": true
+  },
+  {
+    "word": "like",
+    "start": 311.04,
+    "end": 311.26,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 311.26,
+    "end": 311.42,
+    "matched": true
+  },
+  {
+    "word": "believe",
+    "start": 311.42,
+    "end": 311.72,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 311.72,
+    "end": 311.96,
+    "matched": true
+  },
+  {
+    "word": "make",
+    "start": 311.96,
+    "end": 312.2,
+    "matched": true
+  },
+  {
+    "word": "completely",
+    "start": 312.2,
+    "end": 312.72,
+    "matched": true
+  },
+  {
+    "word": "independent",
+    "start": 312.72,
+    "end": 313.24,
+    "matched": true
+  },
+  {
+    "word": "choices",
+    "start": 313.24,
+    "end": 313.76,
+    "matched": true
+  },
+  {
+    "word": "but",
+    "start": 314.28,
+    "end": 314.52,
+    "matched": true
+  },
+  {
+    "word": "businesses",
+    "start": 314.52,
+    "end": 314.88,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 314.88,
+    "end": 315.26,
+    "matched": true
+  },
+  {
+    "word": "constantly",
+    "start": 315.26,
+    "end": 315.74,
+    "matched": true
+  },
+  {
+    "word": "shaping",
+    "start": 315.74,
+    "end": 316.24,
+    "matched": true
+  },
+  {
+    "word": "those",
+    "start": 316.24,
+    "end": 316.5,
+    "matched": true
+  },
+  {
+    "word": "choices",
+    "start": 316.5,
+    "end": 316.92,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 317.44,
+    "end": 317.76,
+    "matched": true
+  },
+  {
+    "word": "forcing",
+    "start": 317.76,
+    "end": 318.26,
+    "matched": true
+  },
+  {
+    "word": "influencing",
+    "start": 318.26,
+    "end": 319.0,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 319.8,
+    "end": 320.12,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 320.12,
+    "end": 320.26,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 320.26,
+    "end": 320.48,
+    "matched": true
+  },
+  {
+    "word": "financial",
+    "start": 320.48,
+    "end": 321.1,
+    "matched": true
+  },
+  {
+    "word": "literacy",
+    "start": 321.1,
+    "end": 321.56,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 321.56,
+    "end": 321.9,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 321.9,
+    "end": 322.08,
+    "matched": true
+  },
+  {
+    "word": "just",
+    "start": 322.08,
+    "end": 322.32,
+    "matched": true
+  },
+  {
+    "word": "math",
+    "start": 322.32,
+    "end": 322.66,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 323.34,
+    "end": 323.38,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 323.38,
+    "end": 323.56,
+    "matched": true
+  },
+  {
+    "word": "psychology",
+    "start": 323.56,
+    "end": 324.04,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 324.9,
+    "end": 324.96,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 324.96,
+    "end": 325.14,
+    "matched": true
+  },
+  {
+    "word": "design",
+    "start": 325.14,
+    "end": 325.62,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 326.22,
+    "end": 326.4,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 326.4,
+    "end": 326.54,
+    "matched": true
+  },
+  {
+    "word": "incentives",
+    "start": 326.54,
+    "end": 327.12,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 327.82,
+    "end": 327.88,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 327.88,
+    "end": 328.02,
+    "matched": true
+  },
+  {
+    "word": "understanding",
+    "start": 328.02,
+    "end": 328.64,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 328.64,
+    "end": 328.94,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 328.94,
+    "end": 329.18,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 329.18,
+    "end": 329.48,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 329.48,
+    "end": 329.62,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 329.62,
+    "end": 329.76,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 329.76,
+    "end": 330.0,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 330.8,
+    "end": 330.92,
+    "matched": true
+  },
+  {
+    "word": "best",
+    "start": 330.92,
+    "end": 331.16,
+    "matched": true
+  },
+  {
+    "word": "entrepreneurs",
+    "start": 331.16,
+    "end": 331.68,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 331.68,
+    "end": 331.92,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 331.92,
+    "end": 332.08,
+    "matched": true
+  },
+  {
+    "word": "simply",
+    "start": 332.08,
+    "end": 332.44,
+    "matched": true
+  },
+  {
+    "word": "builders",
+    "start": 332.44,
+    "end": 332.84,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 333.46,
+    "end": 333.58,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 333.58,
+    "end": 333.7,
+    "matched": true
+  },
+  {
+    "word": "observers",
+    "start": 333.7,
+    "end": 334.18,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 334.8,
+    "end": 334.98,
+    "matched": true
+  },
+  {
+    "word": "watch",
+    "start": 334.98,
+    "end": 335.24,
+    "matched": true
+  },
+  {
+    "word": "behavior",
+    "start": 335.24,
+    "end": 335.64,
+    "matched": true
+  },
+  {
+    "word": "carefully",
+    "start": 335.64,
+    "end": 336.22,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 336.78,
+    "end": 336.94,
+    "matched": true
+  },
+  {
+    "word": "notice",
+    "start": 336.94,
+    "end": 337.22,
+    "matched": true
+  },
+  {
+    "word": "patterns",
+    "start": 337.22,
+    "end": 337.64,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 338.24,
+    "end": 338.4,
+    "matched": true
+  },
+  {
+    "word": "ask",
+    "start": 338.4,
+    "end": 338.58,
+    "matched": true
+  },
+  {
+    "word": "better",
+    "start": 338.58,
+    "end": 338.82,
+    "matched": true
+  },
+  {
+    "word": "questions",
+    "start": 338.82,
+    "end": 339.26,
+    "matched": true
+  },
+  {
+    "word": "who",
+    "start": 340.02,
+    "end": 340.14,
+    "matched": true
+  },
+  {
+    "word": "already",
+    "start": 340.14,
+    "end": 340.56,
+    "matched": true
+  },
+  {
+    "word": "spends",
+    "start": 340.56,
+    "end": 340.88,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 340.88,
+    "end": 341.16,
+    "matched": true
+  },
+  {
+    "word": "on",
+    "start": 341.16,
+    "end": 341.36,
+    "matched": true
+  },
+  {
+    "word": "this",
+    "start": 341.36,
+    "end": 341.6,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 342.02,
+    "end": 342.32,
+    "matched": true
+  },
+  {
+    "word": "problem",
+    "start": 342.32,
+    "end": 342.68,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 342.68,
+    "end": 342.88,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 342.88,
+    "end": 343.04,
+    "matched": true
+  },
+  {
+    "word": "trying",
+    "start": 343.04,
+    "end": 343.24,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 343.24,
+    "end": 343.4,
+    "matched": true
+  },
+  {
+    "word": "solve",
+    "start": 343.4,
+    "end": 343.68,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 344.24,
+    "end": 344.48,
+    "matched": true
+  },
+  {
+    "word": "brings",
+    "start": 344.48,
+    "end": 344.74,
+    "matched": true
+  },
+  {
+    "word": "them",
+    "start": 344.74,
+    "end": 344.94,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 344.94,
+    "end": 345.22,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 345.64,
+    "end": 345.86,
+    "matched": true
+  },
+  {
+    "word": "makes",
+    "start": 345.86,
+    "end": 346.06,
+    "matched": true
+  },
+  {
+    "word": "them",
+    "start": 346.06,
+    "end": 346.24,
+    "matched": true
+  },
+  {
+    "word": "come",
+    "start": 346.24,
+    "end": 346.44,
+    "matched": true
+  },
+  {
+    "word": "back",
+    "start": 346.44,
+    "end": 346.84,
+    "matched": true
+  },
+  {
+    "word": "because",
+    "start": 347.22,
+    "end": 347.5,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 347.5,
+    "end": 347.68,
+    "matched": true
+  },
+  {
+    "word": "most",
+    "start": 347.68,
+    "end": 347.9,
+    "matched": true
+  },
+  {
+    "word": "valuable",
+    "start": 347.9,
+    "end": 348.26,
+    "matched": true
+  },
+  {
+    "word": "businesses",
+    "start": 348.26,
+    "end": 348.76,
+    "matched": true
+  },
+  {
+    "word": "rarely",
+    "start": 348.76,
+    "end": 349.24,
+    "matched": true
+  },
+  {
+    "word": "sell",
+    "start": 349.24,
+    "end": 349.58,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 349.58,
+    "end": 349.7,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 349.7,
+    "end": 349.94,
+    "matched": true
+  },
+  {
+    "word": "once",
+    "start": 349.94,
+    "end": 350.28,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 350.86,
+    "end": 351.06,
+    "matched": true
+  },
+  {
+    "word": "create",
+    "start": 351.06,
+    "end": 351.34,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 351.34,
+    "end": 351.46,
+    "matched": true
+  },
+  {
+    "word": "habit",
+    "start": 351.46,
+    "end": 351.76,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 352.36,
+    "end": 352.42,
+    "matched": true
+  },
+  {
+    "word": "habits",
+    "start": 352.42,
+    "end": 352.74,
+    "matched": true
+  },
+  {
+    "word": "create",
+    "start": 352.74,
+    "end": 353.08,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 353.08,
+    "end": 353.56,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 354.1,
+    "end": 354.36,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 354.36,
+    "end": 354.48,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 354.48,
+    "end": 354.62,
+    "matched": true
+  },
+  {
+    "word": "final",
+    "start": 354.62,
+    "end": 354.84,
+    "matched": true
+  },
+  {
+    "word": "lesson",
+    "start": 354.84,
+    "end": 355.2,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 355.7,
+    "end": 355.88,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 355.88,
+    "end": 356.08,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 356.08,
+    "end": 356.3,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 356.3,
+    "end": 356.52,
+    "matched": true
+  },
+  {
+    "word": "always",
+    "start": 356.52,
+    "end": 356.82,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 356.82,
+    "end": 356.98,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 356.98,
+    "end": 357.1,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 357.1,
+    "end": 357.42,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 357.96,
+    "end": 358.06,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 358.06,
+    "end": 358.26,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 358.26,
+    "end": 358.46,
+    "matched": true
+  },
+  {
+    "word": "often",
+    "start": 358.46,
+    "end": 358.82,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 358.82,
+    "end": 359.06,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 359.06,
+    "end": 359.2,
+    "matched": true
+  },
+  {
+    "word": "system",
+    "start": 359.2,
+    "end": 359.5,
+    "matched": true
+  },
+  {
+    "word": "around",
+    "start": 359.5,
+    "end": 359.76,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 359.76,
+    "end": 359.94,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 359.94,
+    "end": 360.26,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 360.74,
+    "end": 360.88,
+    "matched": true
+  },
+  {
+    "word": "once",
+    "start": 360.88,
+    "end": 361.06,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 361.06,
+    "end": 361.24,
+    "matched": true
+  },
+  {
+    "word": "understand",
+    "start": 361.24,
+    "end": 361.7,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 361.7,
+    "end": 362.0,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 362.26,
+    "end": 362.42,
+    "matched": true
+  },
+  {
+    "word": "begin",
+    "start": 362.42,
+    "end": 362.74,
+    "matched": true
+  },
+  {
+    "word": "seeing",
+    "start": 362.74,
+    "end": 363.08,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 363.08,
+    "end": 363.26,
+    "matched": true
+  },
+  {
+    "word": "world",
+    "start": 363.26,
+    "end": 363.48,
+    "matched": true
+  },
+  {
+    "word": "differently",
+    "start": 363.48,
+    "end": 363.88,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 364.42,
+    "end": 364.64,
+    "matched": true
+  },
+  {
+    "word": "stop",
+    "start": 364.64,
+    "end": 364.9,
+    "matched": true
+  },
+  {
+    "word": "seeing",
+    "start": 364.9,
+    "end": 365.26,
+    "matched": true
+  },
+  {
+    "word": "coffee",
+    "start": 365.26,
+    "end": 365.7,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 366.14,
+    "end": 366.36,
+    "matched": true
+  },
+  {
+    "word": "start",
+    "start": 366.36,
+    "end": 366.64,
+    "matched": true
+  },
+  {
+    "word": "seeing",
+    "start": 366.64,
+    "end": 367.04,
+    "matched": true
+  },
+  {
+    "word": "economics",
+    "start": 367.04,
+    "end": 367.6,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 368.26,
+    "end": 368.4,
+    "matched": true
+  },
+  {
+    "word": "stop",
+    "start": 368.4,
+    "end": 368.68,
+    "matched": true
+  },
+  {
+    "word": "seeing",
+    "start": 368.68,
+    "end": 369.02,
+    "matched": true
+  },
+  {
+    "word": "stores",
+    "start": 369.02,
+    "end": 369.46,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 370.08,
+    "end": 370.24,
+    "matched": true
+  },
+  {
+    "word": "start",
+    "start": 370.24,
+    "end": 370.5,
+    "matched": true
+  },
+  {
+    "word": "seeing",
+    "start": 370.5,
+    "end": 370.82,
+    "matched": true
+  },
+  {
+    "word": "incentives",
+    "start": 370.82,
+    "end": 371.36,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 371.94,
+    "end": 372.04,
+    "matched": true
+  },
+  {
+    "word": "stop",
+    "start": 372.04,
+    "end": 372.34,
+    "matched": true
+  },
+  {
+    "word": "seeing",
+    "start": 372.34,
+    "end": 372.64,
+    "matched": true
+  },
+  {
+    "word": "products",
+    "start": 372.64,
+    "end": 373.08,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 373.6,
+    "end": 373.7,
+    "matched": true
+  },
+  {
+    "word": "start",
+    "start": 373.7,
+    "end": 373.94,
+    "matched": true
+  },
+  {
+    "word": "seeing",
+    "start": 373.94,
+    "end": 374.3,
+    "matched": true
+  },
+  {
+    "word": "systems",
+    "start": 374.3,
+    "end": 374.78,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 375.22,
+    "end": 375.26000000000005,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 375.26,
+    "end": 375.44,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 375.44,
+    "end": 375.58,
+    "matched": true
+  },
+  {
+    "word": "where",
+    "start": 375.58,
+    "end": 375.78,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 375.78,
+    "end": 376.08,
+    "matched": true
+  },
+  {
+    "word": "literacy",
+    "start": 376.08,
+    "end": 376.48,
+    "matched": true
+  },
+  {
+    "word": "begins",
+    "start": 376.48,
+    "end": 376.88,
+    "matched": true
+  }
+]

@@ -1,0 +1,228 @@
+{
+  "input_filenames": {
+    "mp3": "learn/design-thinking-and-human-factor-research/design-thinking-v2.mp3",
+    "transcript": "learn/design-thinking-and-human-factor-research/design-thinking_transcript.txt",
+    "transcript_source": "/Users/jaredgoldberg/Downloads/Design Thinking Student Module Chapter 2 (2).docx",
+    "recognition_source": "/tmp/design_thinking_v2_recognized.json",
+    "faster_whisper_model": "Systran/faster-whisper-base.en (local CTranslate2 download)"
+  },
+  "audio_duration": 643.970625,
+  "expected_words": 1657,
+  "output_words": 1657,
+  "exact_transcript_preserved": true,
+  "missing_transcript_words": [],
+  "extra_output_words": [],
+  "direct_match_count": 1638,
+  "interpolated_word_count": 19,
+  "interpolated_words": [
+    {
+      "index": 219,
+      "word": "Decision-making.",
+      "start": 85.2,
+      "end": 87.08
+    },
+    {
+      "index": 358,
+      "word": "10:30",
+      "start": 132.52,
+      "end": 133.02
+    },
+    {
+      "index": 361,
+      "word": "Carrying",
+      "start": 133.34,
+      "end": 134.22
+    },
+    {
+      "index": 402,
+      "word": "price-per-unit.",
+      "start": 147.26,
+      "end": 149.02
+    },
+    {
+      "index": 701,
+      "word": "systems",
+      "start": 262.74,
+      "end": 263.12
+    },
+    {
+      "index": 792,
+      "word": "Prototype.",
+      "start": 296.1,
+      "end": 297.45
+    },
+    {
+      "index": 793,
+      "word": "Test.",
+      "start": 297.45,
+      "end": 298.8
+    },
+    {
+      "index": 876,
+      "word": "with",
+      "start": 334.64,
+      "end": 334.967
+    },
+    {
+      "index": 877,
+      "word": "an",
+      "start": 334.967,
+      "end": 335.293
+    },
+    {
+      "index": 878,
+      "word": "interview.",
+      "start": 335.293,
+      "end": 335.62
+    },
+    {
+      "index": 894,
+      "word": "overpays",
+      "start": 340.54,
+      "end": 341.04
+    },
+    {
+      "index": 904,
+      "word": "carrying.",
+      "start": 343.92,
+      "end": 344.9
+    },
+    {
+      "index": 969,
+      "word": "carrying",
+      "start": 369.06,
+      "end": 369.3
+    },
+    {
+      "index": 1124,
+      "word": "Hypotheses",
+      "start": 425.0,
+      "end": 426.28
+    },
+    {
+      "index": 1217,
+      "word": "student-run",
+      "start": 462.72,
+      "end": 463.5
+    },
+    {
+      "index": 1281,
+      "word": "student-run",
+      "start": 490.52,
+      "end": 491.3
+    },
+    {
+      "index": 1412,
+      "word": "Word-of-mouth",
+      "start": 543.26,
+      "end": 544.48
+    },
+    {
+      "index": 1501,
+      "word": "thing",
+      "start": 578.86,
+      "end": 579.22
+    },
+    {
+      "index": 1576,
+      "word": "And",
+      "start": 609.32,
+      "end": 610.34
+    }
+  ],
+  "match_rate": 0.9885334942667471,
+  "srt_display_text_removed_characters": [
+    ".",
+    ",",
+    ":"
+  ],
+  "srt_timestamps_preserved": true,
+  "generated_files": [
+    "learn/design-thinking-and-human-factor-research/design-thinking_transcript.txt",
+    "learn/design-thinking-and-human-factor-research/design-thinking_word_aligned.srt",
+    "learn/design-thinking-and-human-factor-research/design-thinking_word_aligned.ass",
+    "learn/design-thinking-and-human-factor-research/design-thinking_word_timings.json",
+    "learn/design-thinking-and-human-factor-research/design-thinking_alignment_report.json"
+  ],
+  "player_location": "learn/design-thinking-and-human-factor-research/video-lesson.html",
+  "preview_url": "http://127.0.0.1:5501/learn/design-thinking-and-human-factor-research/",
+  "qa_results": {
+    "alignment": {
+      "expected_words_equals_output_words": true,
+      "exact_transcript_preserved": true,
+      "no_transcript_words_missing": true,
+      "no_extra_words_introduced": true,
+      "cue_starts_monotonic": true,
+      "every_cue_has_positive_duration": true,
+      "no_cue_extends_past_audio_duration": true,
+      "srt_cue_text_has_no_period_colon_comma": true
+    },
+    "http_200": {
+      "mp3": true,
+      "srt": true,
+      "player": true,
+      "font": true,
+      "lesson_index": true
+    },
+    "player": {
+      "uses_request_animation_frame_during_playback": true,
+      "does_not_rely_only_on_timeupdate": true,
+      "supports_play_pause_seeking_elapsed_time": true,
+      "loads_final_mp3": true,
+      "loads_aligned_srt": true,
+      "black_background_centered_white_raleway_text": true,
+      "short_words_visible_during_playback": true,
+      "desktop_text_contained": true,
+      "mobile_text_contained": true
+    },
+    "overlay": {
+      "opens_in_accessible_overlay": true,
+      "visible_x_close_button": true,
+      "escape_closes": true,
+      "backdrop_click_closes": true,
+      "locks_background_scroll_while_open": true,
+      "closing_stops_playback": true
+    }
+  },
+  "checksums": {
+    "mp3_sha256": "3c7f7e1871d64eb6345e803eb073184c612a3909f828dc912c4cfe7e41c4dafc",
+    "transcript_sha256": "534dedcf2535ac1f76818ada135344e323b489d75898fbd9703d05e292623c8e",
+    "srt_sha256": "acbb4ebcbec018707be0b7c9071f7fd212ea3cc36b968d39f42c152bb9168bde",
+    "ass_sha256": "f66ce1a65dc6fbb95835de783f8dbd5697db9b8652ba375e81b6e25768afd4e8",
+    "timings_sha256": "6f7989e01f66c17331fffa94768719d440bab3af1d50f5fb8ff5806349e2d7fd"
+  },
+  "audio_duration_ffprobe": 643.9785,
+  "browser_qa_evidence": {
+    "desktop": {
+      "audio_src": "http://127.0.0.1:5501/learn/design-thinking-and-human-factor-research/design-thinking-v2.mp3",
+      "duration": 643.9785,
+      "srt_cue_count": 1657,
+      "short_word": "a",
+      "short_word_visible": true,
+      "longest_cue": "entrepreneurship",
+      "longest_cue_contained": true,
+      "font_family": "Raleway, Arial, Helvetica, sans-serif",
+      "text_color": "rgb(255, 255, 255)",
+      "background": "rgb(0, 0, 0)"
+    },
+    "mobile": {
+      "viewport_width": 390,
+      "longest_cue": "entrepreneurship",
+      "visible": true,
+      "contained": true,
+      "font_size": "54.6px"
+    },
+    "overlay": {
+      "role": "dialog",
+      "aria_modal": "true",
+      "opened": true,
+      "close_button_visible": true,
+      "scroll_locked_on_open": true,
+      "iframe_audio_src": "http://127.0.0.1:5501/learn/design-thinking-and-human-factor-research/design-thinking-v2.mp3",
+      "playback_time_before_close": 0.214639,
+      "x_close_stopped_playback": true,
+      "escape_closed": true,
+      "backdrop_closed": true
+    }
+  }
+}

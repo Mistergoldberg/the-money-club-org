@@ -1,0 +1,197 @@
+Sourcing 101: Where Value Is Actually Made
+A Brand Is The Menu. Sourcing Is The Kitchen.
+In learning module 4 Control Brand Playbook, you learned about control brands.
+A control brand studies what people already buy.
+Then it makes the offer simpler, clearer, better, or cheaper.
+That sounds powerful.
+But there is a hard question hiding underneath:
+Can you actually get the product made, packed, shipped, and sold at a profit?
+That is sourcing.
+Sourcing is where the idea becomes real.
+A brand is what the customer sees.
+Sourcing is what makes the brand possible.
+From Brand Promise to Product Reality
+Imagine a restaurant menu.
+The menu might say:
+Best burger in town.
+Fresh ingredients.
+Great price.
+Ready fast.
+That sounds good.
+But the menu is only a promise.
+The kitchen has to make it true.
+The cook needs ingredients.
+The recipe has to work.
+The portions have to be controlled.
+The burger has to taste the same each time.
+The restaurant has to make money after paying for the food, packaging, staff, rent, and delivery.
+If the kitchen fails, the menu does not matter.
+Business works the same way.
+Your control brand might promise:
+Simple household restock.
+Fair price.
+Good quality.
+No more forgotten garbage bags.
+But now you need to figure out:
+Who supplies the product?
+What exact product are we buying?
+What does it cost per unit?
+How many do we have to order?
+How long does it take to arrive?
+How will it be packaged?
+Will the quality be good enough?
+Can we sell it with enough margin?
+This is why sourcing comes after the problem.
+First, you find friction.
+Then, you prove demand.
+Then, you design the offer.
+Only then do you source.
+Because you do not want to buy 1,000 units of something nobody wants.
+That is not business.
+That is a basement full of boxes.
+The Kitchen Math
+A supplier is the person or company that provides the product.
+For a household bag kit, the supplier might provide:
+Garbage bags.
+Compost liners.
+Recycling bags.
+Boxes.
+Labels.
+Packaging.
+A good operator does not just ask, “How much?”
+They ask for the full product specification.
+A product specification explains exactly what you are buying.
+For garbage bags, that could include:
+Size.
+Thickness.
+Material.
+Pack count.
+Colour.
+Scented or unscented.
+Compostable or regular plastic.
+Box size.
+Label design.
+Strength.
+A weak specification creates weak results.
+If you only say, “I need garbage bags,” the supplier may send something cheap, thin, or wrong.
+If you say, “I need 45L unscented kitchen garbage bags, strong enough for household use, packed 40 per box,” that is much clearer.
+Now comes the math.
+Gross margin is the money left after the product cost.
+The formula is:
+Gross margin = selling price minus true unit cost, divided by selling price.
+If your gross margin target is 40%, your true unit cost cannot be more than 60% of your selling price.
+Selling Price
+Maximum True Unit Cost
+Gross Profit
+Gross Margin
+$10
+$6
+$4
+40%
+$20
+$12
+$8
+40%
+$30
+$18
+$12
+40%
+$50
+$30
+$20
+40%
+The important phrase is true unit cost.
+That does not only mean the product.
+It can include:
+Product cost.
+Packaging.
+Labels.
+Shipping.
+Delivery materials.
+Damaged units.
+Payment fees.
+Anything needed to get the product ready to sell.
+Cheap is not always better.
+A cheap bag that rips is expensive.
+It creates complaints.
+It creates refunds.
+It damages trust.
+It makes people avoid buying again.
+Quality assurance means checking that the product is good enough before customers receive it.
+Operators care about quality because quality protects the brand.
+A control brand is not just trying to be cheaper.
+It is trying to be trusted.
+Three Quotes and Scale
+Never trust one quote.
+One supplier might be too expensive.
+One might be too cheap.
+One might have slow shipping.
+One might have bad packaging.
+One might have a high minimum order quantity.
+A minimum order quantity, or MOQ, is the smallest amount a supplier will sell you.
+A supplier might say:
+Minimum order: 100 units.
+Or 500 units.
+Or 1,000 units.
+That matters because buying more usually lowers the unit cost.
+But buying more also increases risk.
+More cash gets tied up.
+More storage is needed.
+More units must be sold.
+More mistakes become expensive.
+That is why students should ask at least three suppliers for quotes.
+And they should ask each supplier for three quantities:
+100 units.
+500 units.
+1,000 units.
+The quote table might look like this:
+Supplier
+100 Units
+500 Units
+1,000 Units
+Lead Time
+Notes
+Supplier A
+$12.00 each
+$10.50 each
+$9.75 each
+2 weeks
+Good quality, higher price
+Supplier B
+$10.80 each
+$9.40 each
+$8.90 each
+5 weeks
+Cheaper, slower shipping
+Supplier C
+$13.00 each
+$11.00 each
+$10.00 each
+1 week
+Fast, but expensive
+Now the student can think like an operator.
+Supplier B is cheapest.
+But the lead time is five weeks.
+Supplier C is fastest.
+But the cost may crush the margin.
+Supplier A may be the best balance.
+Sourcing is not just finding the lowest price.
+It is choosing the best system.
+The product has to arrive on time.
+The quality has to be good.
+The packaging has to make sense.
+The cost has to protect margin.
+The order size has to match real demand.
+In Module 1, you learned to follow the money.
+In Module 2, you learned to find the friction.
+In Module 3, you learned to read the shelf.
+In Module 4, you learned how control brands improve what already works.
+Now you know where value is actually made.
+Not in the logo.
+Not in the idea.
+Not in the spreadsheet alone.
+Value is made in the kitchen:
+the supplier, the spec, the cost, the quality, the packaging, the timing, and the margin.
+A good business does not just ask, “Can we sell this?”
+It asks:
+Can we source it well enough to keep the promise and make the math work?

@@ -215,7 +215,7 @@
     </div>
 
     <audio id="audio" preload="metadata">
-      <source src="design-thinking.mp3" type="audio/mpeg">
+      <source src="design-thinking-v2.mp3" type="audio/mpeg">
     </audio>
   </main>
 
@@ -392,7 +392,7 @@
       audio.addEventListener("pause", updatePlayState);
       audio.addEventListener("ended", updatePlayState);
 
-      fetch("design-thinking_word_aligned.srt?v=1", {
+      fetch("design-thinking_word_aligned.srt?v=2", {
         cache: "no-store"
       })
         .then(function (response) {

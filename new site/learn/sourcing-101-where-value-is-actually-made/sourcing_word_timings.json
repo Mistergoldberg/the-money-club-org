@@ -1,0 +1,8962 @@
+{
+  "audio": "learn/sourcing-101-where-value-is-actually-made/sourcing.mp3",
+  "transcript": "learn/sourcing-101-where-value-is-actually-made/sourcing_transcript.txt",
+  "audio_duration": 672.6530625,
+  "words": [
+    {
+      "index": 1,
+      "word": "Sourcing",
+      "start": 0.0,
+      "end": 0.48,
+      "duration": 0.48,
+      "source": "matched",
+      "recognized_word": "Sourcing"
+    },
+    {
+      "index": 2,
+      "word": "101:",
+      "start": 0.48,
+      "end": 0.82,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "101,"
+    },
+    {
+      "index": 3,
+      "word": "Where",
+      "start": 1.5,
+      "end": 1.94,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "where"
+    },
+    {
+      "index": 4,
+      "word": "Value",
+      "start": 1.94,
+      "end": 2.18,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "value"
+    },
+    {
+      "index": 5,
+      "word": "Is",
+      "start": 2.18,
+      "end": 2.44,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 6,
+      "word": "Actually",
+      "start": 2.44,
+      "end": 2.72,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "actually"
+    },
+    {
+      "index": 7,
+      "word": "Made",
+      "start": 2.72,
+      "end": 3.06,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "made."
+    },
+    {
+      "index": 8,
+      "word": "A",
+      "start": 3.62,
+      "end": 3.72,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 9,
+      "word": "Brand",
+      "start": 3.72,
+      "end": 3.94,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "brand"
+    },
+    {
+      "index": 10,
+      "word": "Is",
+      "start": 3.94,
+      "end": 4.2,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 11,
+      "word": "The",
+      "start": 4.2,
+      "end": 4.32,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 12,
+      "word": "Menu.",
+      "start": 4.32,
+      "end": 4.58,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "menu."
+    },
+    {
+      "index": 13,
+      "word": "Sourcing",
+      "start": 5.08,
+      "end": 5.46,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "Sourcing"
+    },
+    {
+      "index": 14,
+      "word": "Is",
+      "start": 5.46,
+      "end": 5.9,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 15,
+      "word": "The",
+      "start": 5.9,
+      "end": 6.02,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 16,
+      "word": "Kitchen.",
+      "start": 6.02,
+      "end": 6.24,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "kitchen."
+    },
+    {
+      "index": 17,
+      "word": "In",
+      "start": 7.16,
+      "end": 7.36,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "In"
+    },
+    {
+      "index": 18,
+      "word": "learning",
+      "start": 7.36,
+      "end": 7.58,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "learning"
+    },
+    {
+      "index": 19,
+      "word": "module",
+      "start": 7.58,
+      "end": 7.98,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "module"
+    },
+    {
+      "index": 20,
+      "word": "4",
+      "start": 7.98,
+      "end": 8.54,
+      "duration": 0.56,
+      "source": "matched",
+      "recognized_word": "four,"
+    },
+    {
+      "index": 21,
+      "word": "Control",
+      "start": 8.7,
+      "end": 9.06,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "control"
+    },
+    {
+      "index": 22,
+      "word": "Brand",
+      "start": 9.06,
+      "end": 9.4,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "brand"
+    },
+    {
+      "index": 23,
+      "word": "Playbook,",
+      "start": 9.4,
+      "end": 9.76,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "playbook,"
+    },
+    {
+      "index": 24,
+      "word": "you",
+      "start": 10.36,
+      "end": 10.58,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 25,
+      "word": "learned",
+      "start": 10.58,
+      "end": 10.74,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "learned"
+    },
+    {
+      "index": 26,
+      "word": "about",
+      "start": 10.74,
+      "end": 11.0,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "about"
+    },
+    {
+      "index": 27,
+      "word": "control",
+      "start": 11.0,
+      "end": 11.24,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "control"
+    },
+    {
+      "index": 28,
+      "word": "brands.",
+      "start": 11.24,
+      "end": 11.66,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "brands."
+    },
+    {
+      "index": 29,
+      "word": "A",
+      "start": 12.26,
+      "end": 12.46,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 30,
+      "word": "control",
+      "start": 12.46,
+      "end": 12.6,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "control"
+    },
+    {
+      "index": 31,
+      "word": "brand",
+      "start": 12.6,
+      "end": 13.1,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "brand"
+    },
+    {
+      "index": 32,
+      "word": "studies",
+      "start": 13.1,
+      "end": 13.44,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "studies"
+    },
+    {
+      "index": 33,
+      "word": "what",
+      "start": 13.44,
+      "end": 13.74,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "what"
+    },
+    {
+      "index": 34,
+      "word": "people",
+      "start": 13.74,
+      "end": 13.96,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "people"
+    },
+    {
+      "index": 35,
+      "word": "already",
+      "start": 13.96,
+      "end": 14.28,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "already"
+    },
+    {
+      "index": 36,
+      "word": "buy.",
+      "start": 14.28,
+      "end": 14.6,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "buy."
+    },
+    {
+      "index": 37,
+      "word": "Then",
+      "start": 15.26,
+      "end": 15.46,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "Then"
+    },
+    {
+      "index": 38,
+      "word": "it",
+      "start": 15.46,
+      "end": 15.56,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 39,
+      "word": "makes",
+      "start": 15.56,
+      "end": 15.74,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "makes"
+    },
+    {
+      "index": 40,
+      "word": "the",
+      "start": 15.74,
+      "end": 15.94,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 41,
+      "word": "offer",
+      "start": 15.94,
+      "end": 16.08,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "offer"
+    },
+    {
+      "index": 42,
+      "word": "simpler,",
+      "start": 16.08,
+      "end": 16.58,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "simpler,"
+    },
+    {
+      "index": 43,
+      "word": "clearer,",
+      "start": 16.58,
+      "end": 17.38,
+      "duration": 0.8,
+      "source": "matched",
+      "recognized_word": "clearer,"
+    },
+    {
+      "index": 44,
+      "word": "better,",
+      "start": 18.02,
+      "end": 18.26,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "better,"
+    },
+    {
+      "index": 45,
+      "word": "or",
+      "start": 18.6,
+      "end": 18.76,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "or"
+    },
+    {
+      "index": 46,
+      "word": "cheaper.",
+      "start": 18.76,
+      "end": 18.98,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "cheaper."
+    },
+    {
+      "index": 47,
+      "word": "That",
+      "start": 19.64,
+      "end": 19.84,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "That"
+    },
+    {
+      "index": 48,
+      "word": "sounds",
+      "start": 19.84,
+      "end": 20.02,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "sounds"
+    },
+    {
+      "index": 49,
+      "word": "powerful.",
+      "start": 20.02,
+      "end": 20.46,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "powerful."
+    },
+    {
+      "index": 50,
+      "word": "But",
+      "start": 21.24,
+      "end": 21.54,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "But"
+    },
+    {
+      "index": 51,
+      "word": "there",
+      "start": 21.54,
+      "end": 21.66,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "there"
+    },
+    {
+      "index": 52,
+      "word": "is",
+      "start": 21.66,
+      "end": 21.78,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 53,
+      "word": "a",
+      "start": 21.78,
+      "end": 21.9,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 54,
+      "word": "hard",
+      "start": 21.9,
+      "end": 22.14,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "hard"
+    },
+    {
+      "index": 55,
+      "word": "question",
+      "start": 22.14,
+      "end": 22.56,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "question"
+    },
+    {
+      "index": 56,
+      "word": "hiding",
+      "start": 22.56,
+      "end": 22.86,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "hiding"
+    },
+    {
+      "index": 57,
+      "word": "underneath:",
+      "start": 22.86,
+      "end": 23.32,
+      "duration": 0.46,
+      "source": "matched",
+      "recognized_word": "underneath."
+    },
+    {
+      "index": 58,
+      "word": "Can",
+      "start": 23.98,
+      "end": 24.32,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "Can"
+    },
+    {
+      "index": 59,
+      "word": "you",
+      "start": 24.32,
+      "end": 24.46,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 60,
+      "word": "actually",
+      "start": 24.46,
+      "end": 24.88,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "actually"
+    },
+    {
+      "index": 61,
+      "word": "get",
+      "start": 24.88,
+      "end": 25.14,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "get"
+    },
+    {
+      "index": 62,
+      "word": "the",
+      "start": 25.14,
+      "end": 25.24,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 63,
+      "word": "product",
+      "start": 25.24,
+      "end": 25.52,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 64,
+      "word": "made,",
+      "start": 25.52,
+      "end": 25.82,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "made,"
+    },
+    {
+      "index": 65,
+      "word": "packed,",
+      "start": 26.26,
+      "end": 26.44,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "packed,"
+    },
+    {
+      "index": 66,
+      "word": "shipped,",
+      "start": 27.0,
+      "end": 27.04,
+      "duration": 0.04,
+      "source": "matched",
+      "recognized_word": "shipped,"
+    },
+    {
+      "index": 67,
+      "word": "and",
+      "start": 27.38,
+      "end": 27.46,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "and"
+    },
+    {
+      "index": 68,
+      "word": "sold",
+      "start": 27.46,
+      "end": 27.7,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "sold"
+    },
+    {
+      "index": 69,
+      "word": "at",
+      "start": 27.7,
+      "end": 27.92,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "at"
+    },
+    {
+      "index": 70,
+      "word": "a",
+      "start": 27.92,
+      "end": 27.98,
+      "duration": 0.06,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 71,
+      "word": "profit?",
+      "start": 27.98,
+      "end": 28.22,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "profit?"
+    },
+    {
+      "index": 72,
+      "word": "That",
+      "start": 28.76,
+      "end": 29.28,
+      "duration": 0.52,
+      "source": "matched",
+      "recognized_word": "That"
+    },
+    {
+      "index": 73,
+      "word": "is",
+      "start": 29.28,
+      "end": 29.44,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 74,
+      "word": "sourcing.",
+      "start": 29.44,
+      "end": 29.68,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "sourcing."
+    },
+    {
+      "index": 75,
+      "word": "Sourcing",
+      "start": 30.52,
+      "end": 31.04,
+      "duration": 0.52,
+      "source": "matched",
+      "recognized_word": "Sourcing"
+    },
+    {
+      "index": 76,
+      "word": "is",
+      "start": 31.04,
+      "end": 31.44,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 77,
+      "word": "where",
+      "start": 31.44,
+      "end": 31.62,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "where"
+    },
+    {
+      "index": 78,
+      "word": "the",
+      "start": 31.62,
+      "end": 31.74,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 79,
+      "word": "idea",
+      "start": 31.74,
+      "end": 31.94,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "idea"
+    },
+    {
+      "index": 80,
+      "word": "becomes",
+      "start": 31.94,
+      "end": 32.42,
+      "duration": 0.48,
+      "source": "matched",
+      "recognized_word": "becomes"
+    },
+    {
+      "index": 81,
+      "word": "real.",
+      "start": 32.42,
+      "end": 32.78,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "real."
+    },
+    {
+      "index": 82,
+      "word": "A",
+      "start": 33.42,
+      "end": 33.48,
+      "duration": 0.06,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 83,
+      "word": "brand",
+      "start": 33.48,
+      "end": 33.68,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "brand"
+    },
+    {
+      "index": 84,
+      "word": "is",
+      "start": 33.68,
+      "end": 33.94,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 85,
+      "word": "what",
+      "start": 33.94,
+      "end": 34.06,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "what"
+    },
+    {
+      "index": 86,
+      "word": "the",
+      "start": 34.06,
+      "end": 34.16,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 87,
+      "word": "customer",
+      "start": 34.16,
+      "end": 34.5,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "customer"
+    },
+    {
+      "index": 88,
+      "word": "sees.",
+      "start": 34.5,
+      "end": 34.92,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "sees."
+    },
+    {
+      "index": 89,
+      "word": "Sourcing",
+      "start": 35.48,
+      "end": 35.98,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "Sourcing"
+    },
+    {
+      "index": 90,
+      "word": "is",
+      "start": 35.98,
+      "end": 36.26,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 91,
+      "word": "what",
+      "start": 36.26,
+      "end": 36.42,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "what"
+    },
+    {
+      "index": 92,
+      "word": "makes",
+      "start": 36.42,
+      "end": 36.64,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "makes"
+    },
+    {
+      "index": 93,
+      "word": "the",
+      "start": 36.64,
+      "end": 36.82,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 94,
+      "word": "brand",
+      "start": 36.82,
+      "end": 36.98,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "brand"
+    },
+    {
+      "index": 95,
+      "word": "possible.",
+      "start": 36.98,
+      "end": 37.48,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "possible."
+    },
+    {
+      "index": 96,
+      "word": "From",
+      "start": 38.16,
+      "end": 38.26,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "From"
+    },
+    {
+      "index": 97,
+      "word": "Brand",
+      "start": 38.26,
+      "end": 38.48,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "brand"
+    },
+    {
+      "index": 98,
+      "word": "Promise",
+      "start": 38.48,
+      "end": 38.94,
+      "duration": 0.46,
+      "source": "matched",
+      "recognized_word": "promise"
+    },
+    {
+      "index": 99,
+      "word": "to",
+      "start": 38.94,
+      "end": 39.22,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 100,
+      "word": "Product",
+      "start": 39.22,
+      "end": 39.46,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 101,
+      "word": "Reality",
+      "start": 39.46,
+      "end": 39.78,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "reality."
+    },
+    {
+      "index": 102,
+      "word": "Imagine",
+      "start": 40.52,
+      "end": 40.92,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "Imagine"
+    },
+    {
+      "index": 103,
+      "word": "a",
+      "start": 40.92,
+      "end": 41.1,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 104,
+      "word": "restaurant",
+      "start": 41.1,
+      "end": 41.32,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "restaurant"
+    },
+    {
+      "index": 105,
+      "word": "menu.",
+      "start": 41.32,
+      "end": 41.76,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "menu."
+    },
+    {
+      "index": 106,
+      "word": "The",
+      "start": 42.3,
+      "end": 42.44,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 107,
+      "word": "menu",
+      "start": 42.44,
+      "end": 42.64,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "menu"
+    },
+    {
+      "index": 108,
+      "word": "might",
+      "start": 42.64,
+      "end": 42.9,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 109,
+      "word": "say:",
+      "start": 42.9,
+      "end": 43.16,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "say"
+    },
+    {
+      "index": 110,
+      "word": "Best",
+      "start": 43.16,
+      "end": 43.78,
+      "duration": 0.62,
+      "source": "matched",
+      "recognized_word": "best"
+    },
+    {
+      "index": 111,
+      "word": "burger",
+      "start": 43.78,
+      "end": 44.1,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "burger"
+    },
+    {
+      "index": 112,
+      "word": "in",
+      "start": 44.1,
+      "end": 44.38,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "in"
+    },
+    {
+      "index": 113,
+      "word": "town.",
+      "start": 44.38,
+      "end": 44.62,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "town."
+    },
+    {
+      "index": 114,
+      "word": "Fresh",
+      "start": 45.14,
+      "end": 45.42,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "Fresh"
+    },
+    {
+      "index": 115,
+      "word": "ingredients.",
+      "start": 45.42,
+      "end": 45.68,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "ingredients,"
+    },
+    {
+      "index": 116,
+      "word": "Great",
+      "start": 46.42,
+      "end": 46.56,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "great"
+    },
+    {
+      "index": 117,
+      "word": "price.",
+      "start": 46.56,
+      "end": 46.82,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "price,"
+    },
+    {
+      "index": 118,
+      "word": "Ready",
+      "start": 47.62,
+      "end": 47.68,
+      "duration": 0.06,
+      "source": "matched",
+      "recognized_word": "ready"
+    },
+    {
+      "index": 119,
+      "word": "fast.",
+      "start": 47.68,
+      "end": 48.02,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "fast."
+    },
+    {
+      "index": 120,
+      "word": "That",
+      "start": 48.62,
+      "end": 48.8,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "That"
+    },
+    {
+      "index": 121,
+      "word": "sounds",
+      "start": 48.8,
+      "end": 49.04,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "sounds"
+    },
+    {
+      "index": 122,
+      "word": "good.",
+      "start": 49.04,
+      "end": 49.32,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "good."
+    },
+    {
+      "index": 123,
+      "word": "But",
+      "start": 49.9,
+      "end": 50.08,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "But"
+    },
+    {
+      "index": 124,
+      "word": "the",
+      "start": 50.08,
+      "end": 50.18,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 125,
+      "word": "menu",
+      "start": 50.18,
+      "end": 50.44,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "menu"
+    },
+    {
+      "index": 126,
+      "word": "is",
+      "start": 50.44,
+      "end": 50.66,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 127,
+      "word": "only",
+      "start": 50.66,
+      "end": 50.9,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "only"
+    },
+    {
+      "index": 128,
+      "word": "a",
+      "start": 50.9,
+      "end": 51.0,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 129,
+      "word": "promise.",
+      "start": 51.0,
+      "end": 51.32,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "promise."
+    },
+    {
+      "index": 130,
+      "word": "The",
+      "start": 51.96,
+      "end": 52.04,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 131,
+      "word": "kitchen",
+      "start": 52.04,
+      "end": 52.24,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "kitchen"
+    },
+    {
+      "index": 132,
+      "word": "has",
+      "start": 52.24,
+      "end": 52.54,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "has"
+    },
+    {
+      "index": 133,
+      "word": "to",
+      "start": 52.54,
+      "end": 52.7,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 134,
+      "word": "make",
+      "start": 52.7,
+      "end": 52.84,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "make"
+    },
+    {
+      "index": 135,
+      "word": "it",
+      "start": 52.84,
+      "end": 52.98,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 136,
+      "word": "true.",
+      "start": 52.98,
+      "end": 53.18,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "true."
+    },
+    {
+      "index": 137,
+      "word": "The",
+      "start": 53.88,
+      "end": 53.9,
+      "duration": 0.02,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 138,
+      "word": "cook",
+      "start": 53.9,
+      "end": 54.06,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "cook"
+    },
+    {
+      "index": 139,
+      "word": "needs",
+      "start": 54.06,
+      "end": 54.28,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "needs"
+    },
+    {
+      "index": 140,
+      "word": "ingredients.",
+      "start": 54.28,
+      "end": 54.56,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "ingredients."
+    },
+    {
+      "index": 141,
+      "word": "The",
+      "start": 55.46,
+      "end": 55.54,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 142,
+      "word": "recipe",
+      "start": 55.54,
+      "end": 55.78,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "recipe"
+    },
+    {
+      "index": 143,
+      "word": "has",
+      "start": 55.78,
+      "end": 56.22,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "has"
+    },
+    {
+      "index": 144,
+      "word": "to",
+      "start": 56.22,
+      "end": 56.4,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 145,
+      "word": "work.",
+      "start": 56.4,
+      "end": 56.64,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "work."
+    },
+    {
+      "index": 146,
+      "word": "The",
+      "start": 57.06,
+      "end": 57.32,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 147,
+      "word": "portions",
+      "start": 57.32,
+      "end": 57.54,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "portions"
+    },
+    {
+      "index": 148,
+      "word": "have",
+      "start": 57.54,
+      "end": 57.88,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "have"
+    },
+    {
+      "index": 149,
+      "word": "to",
+      "start": 57.88,
+      "end": 58.04,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 150,
+      "word": "be",
+      "start": 58.04,
+      "end": 58.16,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 151,
+      "word": "controlled.",
+      "start": 58.16,
+      "end": 58.48,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "controlled."
+    },
+    {
+      "index": 152,
+      "word": "The",
+      "start": 59.18,
+      "end": 59.28,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 153,
+      "word": "burger",
+      "start": 59.28,
+      "end": 59.46,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "burger"
+    },
+    {
+      "index": 154,
+      "word": "has",
+      "start": 59.46,
+      "end": 59.74,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "has"
+    },
+    {
+      "index": 155,
+      "word": "to",
+      "start": 59.74,
+      "end": 59.9,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 156,
+      "word": "taste",
+      "start": 59.9,
+      "end": 60.14,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "taste"
+    },
+    {
+      "index": 157,
+      "word": "the",
+      "start": 60.14,
+      "end": 60.28,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 158,
+      "word": "same",
+      "start": 60.28,
+      "end": 60.48,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "same"
+    },
+    {
+      "index": 159,
+      "word": "each",
+      "start": 60.48,
+      "end": 60.64,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "each"
+    },
+    {
+      "index": 160,
+      "word": "time.",
+      "start": 60.64,
+      "end": 60.92,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "time."
+    },
+    {
+      "index": 161,
+      "word": "The",
+      "start": 61.54,
+      "end": 61.68,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 162,
+      "word": "restaurant",
+      "start": 61.68,
+      "end": 61.9,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "restaurant"
+    },
+    {
+      "index": 163,
+      "word": "has",
+      "start": 61.9,
+      "end": 62.24,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "has"
+    },
+    {
+      "index": 164,
+      "word": "to",
+      "start": 62.24,
+      "end": 62.42,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 165,
+      "word": "make",
+      "start": 62.42,
+      "end": 62.56,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "make"
+    },
+    {
+      "index": 166,
+      "word": "money",
+      "start": 62.56,
+      "end": 62.76,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "money"
+    },
+    {
+      "index": 167,
+      "word": "after",
+      "start": 62.76,
+      "end": 63.04,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "after"
+    },
+    {
+      "index": 168,
+      "word": "paying",
+      "start": 63.04,
+      "end": 63.3,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "paying"
+    },
+    {
+      "index": 169,
+      "word": "for",
+      "start": 63.3,
+      "end": 63.5,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "for"
+    },
+    {
+      "index": 170,
+      "word": "the",
+      "start": 63.5,
+      "end": 63.6,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 171,
+      "word": "food,",
+      "start": 63.6,
+      "end": 63.88,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "food,"
+    },
+    {
+      "index": 172,
+      "word": "packaging,",
+      "start": 64.22,
+      "end": 64.62,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "packaging,"
+    },
+    {
+      "index": 173,
+      "word": "staff,",
+      "start": 65.1,
+      "end": 65.44,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "staff,"
+    },
+    {
+      "index": 174,
+      "word": "rent,",
+      "start": 65.9,
+      "end": 66.12,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "rent,"
+    },
+    {
+      "index": 175,
+      "word": "and",
+      "start": 66.46,
+      "end": 66.56,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "and"
+    },
+    {
+      "index": 176,
+      "word": "delivery.",
+      "start": 66.56,
+      "end": 66.82,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "delivery."
+    },
+    {
+      "index": 177,
+      "word": "If",
+      "start": 67.64,
+      "end": 67.84,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "If"
+    },
+    {
+      "index": 178,
+      "word": "the",
+      "start": 67.84,
+      "end": 67.94,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 179,
+      "word": "kitchen",
+      "start": 67.94,
+      "end": 68.2,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "kitchen"
+    },
+    {
+      "index": 180,
+      "word": "fails,",
+      "start": 68.2,
+      "end": 68.54,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "fails,"
+    },
+    {
+      "index": 181,
+      "word": "the",
+      "start": 68.8,
+      "end": 68.86,
+      "duration": 0.06,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 182,
+      "word": "menu",
+      "start": 68.86,
+      "end": 69.04,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "menu"
+    },
+    {
+      "index": 183,
+      "word": "does",
+      "start": 69.04,
+      "end": 69.24,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "does"
+    },
+    {
+      "index": 184,
+      "word": "not",
+      "start": 69.24,
+      "end": 69.42,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "not"
+    },
+    {
+      "index": 185,
+      "word": "matter.",
+      "start": 69.42,
+      "end": 69.76,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "matter."
+    },
+    {
+      "index": 186,
+      "word": "Business",
+      "start": 70.2,
+      "end": 70.56,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "Business"
+    },
+    {
+      "index": 187,
+      "word": "works",
+      "start": 70.56,
+      "end": 70.82,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "works"
+    },
+    {
+      "index": 188,
+      "word": "the",
+      "start": 70.82,
+      "end": 71.02,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 189,
+      "word": "same",
+      "start": 71.02,
+      "end": 71.22,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "same"
+    },
+    {
+      "index": 190,
+      "word": "way.",
+      "start": 71.22,
+      "end": 71.46,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "way."
+    },
+    {
+      "index": 191,
+      "word": "Your",
+      "start": 72.34,
+      "end": 72.52,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "Your"
+    },
+    {
+      "index": 192,
+      "word": "control",
+      "start": 72.52,
+      "end": 72.86,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "control"
+    },
+    {
+      "index": 193,
+      "word": "brand",
+      "start": 72.86,
+      "end": 73.2,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "brand"
+    },
+    {
+      "index": 194,
+      "word": "might",
+      "start": 73.2,
+      "end": 73.48,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 195,
+      "word": "promise:",
+      "start": 73.48,
+      "end": 73.88,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "promise"
+    },
+    {
+      "index": 196,
+      "word": "Simple",
+      "start": 73.88,
+      "end": 74.64,
+      "duration": 0.76,
+      "source": "matched",
+      "recognized_word": "simple"
+    },
+    {
+      "index": 197,
+      "word": "household",
+      "start": 74.64,
+      "end": 75.04,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "household"
+    },
+    {
+      "index": 198,
+      "word": "restock.",
+      "start": 75.04,
+      "end": 75.84,
+      "duration": 0.8,
+      "source": "matched",
+      "recognized_word": "restock,"
+    },
+    {
+      "index": 199,
+      "word": "Fair",
+      "start": 76.14,
+      "end": 76.56,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "fair"
+    },
+    {
+      "index": 200,
+      "word": "price.",
+      "start": 76.56,
+      "end": 76.92,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "price,"
+    },
+    {
+      "index": 201,
+      "word": "Good",
+      "start": 77.42,
+      "end": 77.52,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "good"
+    },
+    {
+      "index": 202,
+      "word": "quality.",
+      "start": 77.52,
+      "end": 77.94,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "quality,"
+    },
+    {
+      "index": 203,
+      "word": "No",
+      "start": 78.56,
+      "end": 78.74,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "no"
+    },
+    {
+      "index": 204,
+      "word": "more",
+      "start": 78.74,
+      "end": 78.96,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "more"
+    },
+    {
+      "index": 205,
+      "word": "forgotten",
+      "start": 78.96,
+      "end": 79.2,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "forgotten"
+    },
+    {
+      "index": 206,
+      "word": "garbage",
+      "start": 79.2,
+      "end": 79.52,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "garbage"
+    },
+    {
+      "index": 207,
+      "word": "bags.",
+      "start": 79.52,
+      "end": 79.9,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "bags."
+    },
+    {
+      "index": 208,
+      "word": "But",
+      "start": 80.64,
+      "end": 80.92,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "But"
+    },
+    {
+      "index": 209,
+      "word": "now",
+      "start": 80.92,
+      "end": 81.1,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "now"
+    },
+    {
+      "index": 210,
+      "word": "you",
+      "start": 81.1,
+      "end": 81.28,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 211,
+      "word": "need",
+      "start": 81.28,
+      "end": 81.4,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "need"
+    },
+    {
+      "index": 212,
+      "word": "to",
+      "start": 81.4,
+      "end": 81.52,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 213,
+      "word": "figure",
+      "start": 81.52,
+      "end": 81.68,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "figure"
+    },
+    {
+      "index": 214,
+      "word": "out:",
+      "start": 81.68,
+      "end": 81.98,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "out"
+    },
+    {
+      "index": 215,
+      "word": "Who",
+      "start": 81.98,
+      "end": 82.34,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "who"
+    },
+    {
+      "index": 216,
+      "word": "supplies",
+      "start": 82.34,
+      "end": 82.58,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "supplies"
+    },
+    {
+      "index": 217,
+      "word": "the",
+      "start": 82.58,
+      "end": 82.92,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 218,
+      "word": "product?",
+      "start": 82.92,
+      "end": 83.14,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "product."
+    },
+    {
+      "index": 219,
+      "word": "What",
+      "start": 83.74,
+      "end": 83.98,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "What"
+    },
+    {
+      "index": 220,
+      "word": "exact",
+      "start": 83.98,
+      "end": 84.14,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "exact"
+    },
+    {
+      "index": 221,
+      "word": "product",
+      "start": 84.14,
+      "end": 84.58,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 222,
+      "word": "are",
+      "start": 84.58,
+      "end": 84.8,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "are"
+    },
+    {
+      "index": 223,
+      "word": "we",
+      "start": 84.8,
+      "end": 84.92,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "we"
+    },
+    {
+      "index": 224,
+      "word": "buying?",
+      "start": 84.92,
+      "end": 85.14,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "buying?"
+    },
+    {
+      "index": 225,
+      "word": "What",
+      "start": 85.7,
+      "end": 85.92,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "What"
+    },
+    {
+      "index": 226,
+      "word": "does",
+      "start": 85.92,
+      "end": 86.06,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "does"
+    },
+    {
+      "index": 227,
+      "word": "it",
+      "start": 86.06,
+      "end": 86.2,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 228,
+      "word": "cost",
+      "start": 86.2,
+      "end": 86.38,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "cost"
+    },
+    {
+      "index": 229,
+      "word": "per",
+      "start": 86.38,
+      "end": 86.68,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "per"
+    },
+    {
+      "index": 230,
+      "word": "unit?",
+      "start": 86.68,
+      "end": 86.96,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "unit?"
+    },
+    {
+      "index": 231,
+      "word": "How",
+      "start": 87.5,
+      "end": 87.66,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "How"
+    },
+    {
+      "index": 232,
+      "word": "many",
+      "start": 87.66,
+      "end": 87.82,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "many"
+    },
+    {
+      "index": 233,
+      "word": "do",
+      "start": 87.82,
+      "end": 88.04,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "do"
+    },
+    {
+      "index": 234,
+      "word": "we",
+      "start": 88.04,
+      "end": 88.14,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "we"
+    },
+    {
+      "index": 235,
+      "word": "have",
+      "start": 88.14,
+      "end": 88.3,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "have"
+    },
+    {
+      "index": 236,
+      "word": "to",
+      "start": 88.3,
+      "end": 88.4,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 237,
+      "word": "order?",
+      "start": 88.4,
+      "end": 88.62,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "order?"
+    },
+    {
+      "index": 238,
+      "word": "How",
+      "start": 89.14,
+      "end": 89.34,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "How"
+    },
+    {
+      "index": 239,
+      "word": "long",
+      "start": 89.34,
+      "end": 89.54,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "long"
+    },
+    {
+      "index": 240,
+      "word": "does",
+      "start": 89.54,
+      "end": 89.76,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "does"
+    },
+    {
+      "index": 241,
+      "word": "it",
+      "start": 89.76,
+      "end": 89.88,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 242,
+      "word": "take",
+      "start": 89.88,
+      "end": 90.06,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "take"
+    },
+    {
+      "index": 243,
+      "word": "to",
+      "start": 90.06,
+      "end": 90.22,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 244,
+      "word": "arrive?",
+      "start": 90.22,
+      "end": 90.46,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "arrive?"
+    },
+    {
+      "index": 245,
+      "word": "How",
+      "start": 91.1,
+      "end": 91.3,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "How"
+    },
+    {
+      "index": 246,
+      "word": "will",
+      "start": 91.3,
+      "end": 91.44,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "will"
+    },
+    {
+      "index": 247,
+      "word": "it",
+      "start": 91.44,
+      "end": 91.54,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 248,
+      "word": "be",
+      "start": 91.54,
+      "end": 91.64,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 249,
+      "word": "packaged?",
+      "start": 91.64,
+      "end": 92.02,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "packaged?"
+    },
+    {
+      "index": 250,
+      "word": "Will",
+      "start": 92.78,
+      "end": 92.92,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "Will"
+    },
+    {
+      "index": 251,
+      "word": "the",
+      "start": 92.92,
+      "end": 93.02,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 252,
+      "word": "quality",
+      "start": 93.02,
+      "end": 93.26,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "quality"
+    },
+    {
+      "index": 253,
+      "word": "be",
+      "start": 93.26,
+      "end": 93.6,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 254,
+      "word": "good",
+      "start": 93.6,
+      "end": 93.8,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "good"
+    },
+    {
+      "index": 255,
+      "word": "enough?",
+      "start": 93.8,
+      "end": 94.04,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "enough?"
+    },
+    {
+      "index": 256,
+      "word": "Can",
+      "start": 94.56,
+      "end": 94.76,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "Can"
+    },
+    {
+      "index": 257,
+      "word": "we",
+      "start": 94.76,
+      "end": 94.88,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "we"
+    },
+    {
+      "index": 258,
+      "word": "sell",
+      "start": 94.88,
+      "end": 95.1,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "sell"
+    },
+    {
+      "index": 259,
+      "word": "it",
+      "start": 95.1,
+      "end": 95.24,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 260,
+      "word": "with",
+      "start": 95.24,
+      "end": 95.36,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "with"
+    },
+    {
+      "index": 261,
+      "word": "enough",
+      "start": 95.36,
+      "end": 95.58,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "enough"
+    },
+    {
+      "index": 262,
+      "word": "margin?",
+      "start": 95.58,
+      "end": 95.92,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "margin?"
+    },
+    {
+      "index": 263,
+      "word": "This",
+      "start": 96.7,
+      "end": 96.96,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "This"
+    },
+    {
+      "index": 264,
+      "word": "is",
+      "start": 96.96,
+      "end": 97.08,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 265,
+      "word": "why",
+      "start": 97.08,
+      "end": 97.28,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "why"
+    },
+    {
+      "index": 266,
+      "word": "sourcing",
+      "start": 97.28,
+      "end": 97.7,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "sourcing"
+    },
+    {
+      "index": 267,
+      "word": "comes",
+      "start": 97.7,
+      "end": 98.02,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "comes"
+    },
+    {
+      "index": 268,
+      "word": "after",
+      "start": 98.02,
+      "end": 98.38,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "after"
+    },
+    {
+      "index": 269,
+      "word": "the",
+      "start": 98.38,
+      "end": 98.5,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 270,
+      "word": "problem.",
+      "start": 98.5,
+      "end": 98.76,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "problem."
+    },
+    {
+      "index": 271,
+      "word": "First,",
+      "start": 99.46,
+      "end": 99.76,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "First,"
+    },
+    {
+      "index": 272,
+      "word": "you",
+      "start": 99.86,
+      "end": 100.0,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 273,
+      "word": "find",
+      "start": 100.0,
+      "end": 100.18,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "find"
+    },
+    {
+      "index": 274,
+      "word": "friction.",
+      "start": 100.18,
+      "end": 100.44,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "friction."
+    },
+    {
+      "index": 275,
+      "word": "Then,",
+      "start": 101.24,
+      "end": 101.38,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "Then"
+    },
+    {
+      "index": 276,
+      "word": "you",
+      "start": 101.38,
+      "end": 101.52,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 277,
+      "word": "prove",
+      "start": 101.52,
+      "end": 101.72,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "prove"
+    },
+    {
+      "index": 278,
+      "word": "demand.",
+      "start": 101.72,
+      "end": 101.98,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "demand."
+    },
+    {
+      "index": 279,
+      "word": "Then,",
+      "start": 102.78,
+      "end": 102.94,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "Then"
+    },
+    {
+      "index": 280,
+      "word": "you",
+      "start": 102.94,
+      "end": 103.06,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 281,
+      "word": "design",
+      "start": 103.06,
+      "end": 103.34,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "design"
+    },
+    {
+      "index": 282,
+      "word": "the",
+      "start": 103.34,
+      "end": 103.58,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 283,
+      "word": "offer.",
+      "start": 103.58,
+      "end": 103.84,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "offer."
+    },
+    {
+      "index": 284,
+      "word": "Only",
+      "start": 104.34,
+      "end": 104.46,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "Only"
+    },
+    {
+      "index": 285,
+      "word": "then",
+      "start": 104.46,
+      "end": 104.72,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "then"
+    },
+    {
+      "index": 286,
+      "word": "do",
+      "start": 104.72,
+      "end": 104.86,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "do"
+    },
+    {
+      "index": 287,
+      "word": "you",
+      "start": 104.86,
+      "end": 104.94,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 288,
+      "word": "source.",
+      "start": 104.94,
+      "end": 105.16,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "source."
+    },
+    {
+      "index": 289,
+      "word": "Because",
+      "start": 105.78,
+      "end": 106.1,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "Because"
+    },
+    {
+      "index": 290,
+      "word": "you",
+      "start": 106.1,
+      "end": 106.26,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 291,
+      "word": "do",
+      "start": 106.26,
+      "end": 106.42,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "do"
+    },
+    {
+      "index": 292,
+      "word": "not",
+      "start": 106.42,
+      "end": 106.62,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "not"
+    },
+    {
+      "index": 293,
+      "word": "want",
+      "start": 106.62,
+      "end": 106.82,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "want"
+    },
+    {
+      "index": 294,
+      "word": "to",
+      "start": 106.82,
+      "end": 106.96,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 295,
+      "word": "buy",
+      "start": 106.96,
+      "end": 107.12,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "buy"
+    },
+    {
+      "index": 296,
+      "word": "1,000",
+      "start": 107.12,
+      "end": 107.57,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 297,
+      "word": "units",
+      "start": 107.96,
+      "end": 108.2,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "units"
+    },
+    {
+      "index": 298,
+      "word": "of",
+      "start": 108.2,
+      "end": 108.44,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "of"
+    },
+    {
+      "index": 299,
+      "word": "something",
+      "start": 108.44,
+      "end": 108.78,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "something"
+    },
+    {
+      "index": 300,
+      "word": "nobody",
+      "start": 108.78,
+      "end": 109.08,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "nobody"
+    },
+    {
+      "index": 301,
+      "word": "wants.",
+      "start": 109.08,
+      "end": 109.48,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "wants."
+    },
+    {
+      "index": 302,
+      "word": "That",
+      "start": 110.04,
+      "end": 110.36,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "That"
+    },
+    {
+      "index": 303,
+      "word": "is",
+      "start": 110.36,
+      "end": 110.48,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 304,
+      "word": "not",
+      "start": 110.48,
+      "end": 110.66,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "not"
+    },
+    {
+      "index": 305,
+      "word": "business.",
+      "start": 110.66,
+      "end": 110.96,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "business."
+    },
+    {
+      "index": 306,
+      "word": "That",
+      "start": 111.6,
+      "end": 111.82,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "That"
+    },
+    {
+      "index": 307,
+      "word": "is",
+      "start": 111.82,
+      "end": 111.92,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 308,
+      "word": "a",
+      "start": 111.92,
+      "end": 112.02,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 309,
+      "word": "basement",
+      "start": 112.02,
+      "end": 112.28,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "basement"
+    },
+    {
+      "index": 310,
+      "word": "full",
+      "start": 112.28,
+      "end": 112.54,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "full"
+    },
+    {
+      "index": 311,
+      "word": "of",
+      "start": 112.54,
+      "end": 112.66,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "of"
+    },
+    {
+      "index": 312,
+      "word": "boxes.",
+      "start": 112.66,
+      "end": 113.0,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "boxes."
+    },
+    {
+      "index": 313,
+      "word": "The",
+      "start": 113.42,
+      "end": 113.76,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 314,
+      "word": "Kitchen",
+      "start": 113.76,
+      "end": 113.98,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "kitchen"
+    },
+    {
+      "index": 315,
+      "word": "Math",
+      "start": 113.98,
+      "end": 114.3,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "math."
+    },
+    {
+      "index": 316,
+      "word": "A",
+      "start": 114.98,
+      "end": 115.06,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 317,
+      "word": "supplier",
+      "start": 115.06,
+      "end": 115.44,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 318,
+      "word": "is",
+      "start": 115.44,
+      "end": 115.84,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 319,
+      "word": "the",
+      "start": 115.84,
+      "end": 115.94,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 320,
+      "word": "person",
+      "start": 115.94,
+      "end": 116.26,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "person"
+    },
+    {
+      "index": 321,
+      "word": "or",
+      "start": 116.26,
+      "end": 116.42,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "or"
+    },
+    {
+      "index": 322,
+      "word": "company",
+      "start": 116.42,
+      "end": 116.76,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "company"
+    },
+    {
+      "index": 323,
+      "word": "that",
+      "start": 116.76,
+      "end": 117.2,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "that"
+    },
+    {
+      "index": 324,
+      "word": "provides",
+      "start": 117.2,
+      "end": 117.46,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "provides"
+    },
+    {
+      "index": 325,
+      "word": "the",
+      "start": 117.46,
+      "end": 117.72,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 326,
+      "word": "product.",
+      "start": 117.72,
+      "end": 117.98,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "product."
+    },
+    {
+      "index": 327,
+      "word": "For",
+      "start": 118.6,
+      "end": 118.78,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "For"
+    },
+    {
+      "index": 328,
+      "word": "a",
+      "start": 118.78,
+      "end": 118.88,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 329,
+      "word": "household",
+      "start": 118.88,
+      "end": 119.2,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "household"
+    },
+    {
+      "index": 330,
+      "word": "bag",
+      "start": 119.2,
+      "end": 119.64,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "bag"
+    },
+    {
+      "index": 331,
+      "word": "kit,",
+      "start": 119.64,
+      "end": 119.98,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "kit,"
+    },
+    {
+      "index": 332,
+      "word": "the",
+      "start": 120.22,
+      "end": 120.3,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 333,
+      "word": "supplier",
+      "start": 120.3,
+      "end": 120.64,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 334,
+      "word": "might",
+      "start": 120.64,
+      "end": 121.0,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 335,
+      "word": "provide:",
+      "start": 121.0,
+      "end": 121.3,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "provide"
+    },
+    {
+      "index": 336,
+      "word": "Garbage",
+      "start": 121.8,
+      "end": 122.14,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "garbage"
+    },
+    {
+      "index": 337,
+      "word": "bags.",
+      "start": 122.14,
+      "end": 122.68,
+      "duration": 0.54,
+      "source": "matched",
+      "recognized_word": "bags,"
+    },
+    {
+      "index": 338,
+      "word": "Compost",
+      "start": 123.3,
+      "end": 123.66,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "compost"
+    },
+    {
+      "index": 339,
+      "word": "liners.",
+      "start": 123.66,
+      "end": 124.36,
+      "duration": 0.7,
+      "source": "matched",
+      "recognized_word": "liners,"
+    },
+    {
+      "index": 340,
+      "word": "Recycling",
+      "start": 124.74,
+      "end": 125.1,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "recycling"
+    },
+    {
+      "index": 341,
+      "word": "bags.",
+      "start": 125.1,
+      "end": 125.62,
+      "duration": 0.52,
+      "source": "matched",
+      "recognized_word": "bags,"
+    },
+    {
+      "index": 342,
+      "word": "Boxes.",
+      "start": 126.22,
+      "end": 126.74,
+      "duration": 0.52,
+      "source": "matched",
+      "recognized_word": "boxes,"
+    },
+    {
+      "index": 343,
+      "word": "Labels.",
+      "start": 127.24,
+      "end": 127.58,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "labels,"
+    },
+    {
+      "index": 344,
+      "word": "Packaging.",
+      "start": 128.24,
+      "end": 128.62,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "packaging."
+    },
+    {
+      "index": 345,
+      "word": "A",
+      "start": 129.7,
+      "end": 129.8,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 346,
+      "word": "good",
+      "start": 129.8,
+      "end": 129.96,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "good"
+    },
+    {
+      "index": 347,
+      "word": "operator",
+      "start": 129.96,
+      "end": 130.32,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "operator"
+    },
+    {
+      "index": 348,
+      "word": "does",
+      "start": 130.32,
+      "end": 130.66,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "does"
+    },
+    {
+      "index": 349,
+      "word": "not",
+      "start": 130.66,
+      "end": 130.92,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "not"
+    },
+    {
+      "index": 350,
+      "word": "just",
+      "start": 130.92,
+      "end": 131.18,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "just"
+    },
+    {
+      "index": 351,
+      "word": "ask,",
+      "start": 131.18,
+      "end": 131.5,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "ask"
+    },
+    {
+      "index": 352,
+      "word": "“How",
+      "start": 131.5,
+      "end": 131.96,
+      "duration": 0.46,
+      "source": "matched",
+      "recognized_word": "how"
+    },
+    {
+      "index": 353,
+      "word": "much?”",
+      "start": 131.96,
+      "end": 132.22,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "much."
+    },
+    {
+      "index": 354,
+      "word": "They",
+      "start": 132.88,
+      "end": 133.1,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "They"
+    },
+    {
+      "index": 355,
+      "word": "ask",
+      "start": 133.1,
+      "end": 133.3,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "ask"
+    },
+    {
+      "index": 356,
+      "word": "for",
+      "start": 133.3,
+      "end": 133.48,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "for"
+    },
+    {
+      "index": 357,
+      "word": "the",
+      "start": 133.48,
+      "end": 133.58,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 358,
+      "word": "full",
+      "start": 133.58,
+      "end": 133.78,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "full"
+    },
+    {
+      "index": 359,
+      "word": "product",
+      "start": 133.78,
+      "end": 134.04,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 360,
+      "word": "specification.",
+      "start": 134.04,
+      "end": 134.54,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "specification."
+    },
+    {
+      "index": 361,
+      "word": "A",
+      "start": 135.52,
+      "end": 135.62,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 362,
+      "word": "product",
+      "start": 135.62,
+      "end": 135.84,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 363,
+      "word": "specification",
+      "start": 135.84,
+      "end": 136.3,
+      "duration": 0.46,
+      "source": "matched",
+      "recognized_word": "specification"
+    },
+    {
+      "index": 364,
+      "word": "explains",
+      "start": 136.3,
+      "end": 137.02,
+      "duration": 0.72,
+      "source": "matched",
+      "recognized_word": "explains"
+    },
+    {
+      "index": 365,
+      "word": "exactly",
+      "start": 137.02,
+      "end": 137.32,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "exactly"
+    },
+    {
+      "index": 366,
+      "word": "what",
+      "start": 137.32,
+      "end": 137.76,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "what"
+    },
+    {
+      "index": 367,
+      "word": "you",
+      "start": 137.76,
+      "end": 137.88,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 368,
+      "word": "are",
+      "start": 137.88,
+      "end": 137.96,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "are"
+    },
+    {
+      "index": 369,
+      "word": "buying.",
+      "start": 137.96,
+      "end": 138.22,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "buying."
+    },
+    {
+      "index": 370,
+      "word": "For",
+      "start": 138.82,
+      "end": 138.98,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "For"
+    },
+    {
+      "index": 371,
+      "word": "garbage",
+      "start": 138.98,
+      "end": 139.16,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "garbage"
+    },
+    {
+      "index": 372,
+      "word": "bags,",
+      "start": 139.16,
+      "end": 139.6,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "bags"
+    },
+    {
+      "index": 373,
+      "word": "that",
+      "start": 139.6,
+      "end": 139.92,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "that"
+    },
+    {
+      "index": 374,
+      "word": "could",
+      "start": 139.92,
+      "end": 140.08,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "could"
+    },
+    {
+      "index": 375,
+      "word": "include:",
+      "start": 140.08,
+      "end": 140.42,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "include"
+    },
+    {
+      "index": 376,
+      "word": "Size.",
+      "start": 140.86,
+      "end": 141.18,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "size,"
+    },
+    {
+      "index": 377,
+      "word": "Thickness.",
+      "start": 141.18,
+      "end": 141.74,
+      "duration": 0.56,
+      "source": "matched",
+      "recognized_word": "thickness,"
+    },
+    {
+      "index": 378,
+      "word": "Material.",
+      "start": 141.74,
+      "end": 142.56,
+      "duration": 0.82,
+      "source": "matched",
+      "recognized_word": "material,"
+    },
+    {
+      "index": 379,
+      "word": "Pack",
+      "start": 143.08,
+      "end": 143.36,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "pack"
+    },
+    {
+      "index": 380,
+      "word": "count.",
+      "start": 143.36,
+      "end": 143.7,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "count,"
+    },
+    {
+      "index": 381,
+      "word": "Colour.",
+      "start": 143.7,
+      "end": 144.15,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 382,
+      "word": "Scented",
+      "start": 144.96,
+      "end": 145.48,
+      "duration": 0.52,
+      "source": "matched",
+      "recognized_word": "scented"
+    },
+    {
+      "index": 383,
+      "word": "or",
+      "start": 145.48,
+      "end": 145.64,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "or"
+    },
+    {
+      "index": 384,
+      "word": "unscented.",
+      "start": 145.64,
+      "end": 146.18,
+      "duration": 0.54,
+      "source": "matched",
+      "recognized_word": "unscented,"
+    },
+    {
+      "index": 385,
+      "word": "Compostable",
+      "start": 146.6,
+      "end": 147.32,
+      "duration": 0.72,
+      "source": "matched",
+      "recognized_word": "compostable"
+    },
+    {
+      "index": 386,
+      "word": "or",
+      "start": 147.32,
+      "end": 147.5,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "or"
+    },
+    {
+      "index": 387,
+      "word": "regular",
+      "start": 147.5,
+      "end": 147.78,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "regular"
+    },
+    {
+      "index": 388,
+      "word": "plastic.",
+      "start": 147.78,
+      "end": 148.12,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "plastic,"
+    },
+    {
+      "index": 389,
+      "word": "Box",
+      "start": 148.8,
+      "end": 149.08,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "box"
+    },
+    {
+      "index": 390,
+      "word": "size.",
+      "start": 149.08,
+      "end": 149.46,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "size,"
+    },
+    {
+      "index": 391,
+      "word": "Label",
+      "start": 149.46,
+      "end": 149.9,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "label"
+    },
+    {
+      "index": 392,
+      "word": "design.",
+      "start": 149.9,
+      "end": 150.14,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "design,"
+    },
+    {
+      "index": 393,
+      "word": "Strength.",
+      "start": 150.78,
+      "end": 151.06,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "strength."
+    },
+    {
+      "index": 394,
+      "word": "A",
+      "start": 151.9,
+      "end": 151.94,
+      "duration": 0.04,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 395,
+      "word": "weak",
+      "start": 151.94,
+      "end": 152.08,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "weak"
+    },
+    {
+      "index": 396,
+      "word": "specification",
+      "start": 152.08,
+      "end": 152.52,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "specification"
+    },
+    {
+      "index": 397,
+      "word": "creates",
+      "start": 152.52,
+      "end": 153.28,
+      "duration": 0.76,
+      "source": "matched",
+      "recognized_word": "creates"
+    },
+    {
+      "index": 398,
+      "word": "weak",
+      "start": 153.28,
+      "end": 153.52,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "weak"
+    },
+    {
+      "index": 399,
+      "word": "results.",
+      "start": 153.52,
+      "end": 153.82,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "results."
+    },
+    {
+      "index": 400,
+      "word": "If",
+      "start": 154.52,
+      "end": 154.68,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "If"
+    },
+    {
+      "index": 401,
+      "word": "you",
+      "start": 154.68,
+      "end": 154.78,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 402,
+      "word": "only",
+      "start": 154.78,
+      "end": 154.94,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "only"
+    },
+    {
+      "index": 403,
+      "word": "say,",
+      "start": 154.94,
+      "end": 155.26,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "say,"
+    },
+    {
+      "index": 404,
+      "word": "“I",
+      "start": 155.54,
+      "end": 155.74,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "I"
+    },
+    {
+      "index": 405,
+      "word": "need",
+      "start": 155.74,
+      "end": 155.88,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "need"
+    },
+    {
+      "index": 406,
+      "word": "garbage",
+      "start": 155.88,
+      "end": 156.08,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "garbage"
+    },
+    {
+      "index": 407,
+      "word": "bags,”",
+      "start": 156.08,
+      "end": 156.48,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "bags,"
+    },
+    {
+      "index": 408,
+      "word": "the",
+      "start": 157.14,
+      "end": 157.28,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 409,
+      "word": "supplier",
+      "start": 157.28,
+      "end": 157.6,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 410,
+      "word": "may",
+      "start": 157.6,
+      "end": 157.96,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "may"
+    },
+    {
+      "index": 411,
+      "word": "send",
+      "start": 157.96,
+      "end": 158.22,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "send"
+    },
+    {
+      "index": 412,
+      "word": "something",
+      "start": 158.22,
+      "end": 158.56,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "something"
+    },
+    {
+      "index": 413,
+      "word": "cheap,",
+      "start": 158.56,
+      "end": 158.84,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "cheap,"
+    },
+    {
+      "index": 414,
+      "word": "thin,",
+      "start": 159.38,
+      "end": 159.42,
+      "duration": 0.04,
+      "source": "matched",
+      "recognized_word": "thin"
+    },
+    {
+      "index": 415,
+      "word": "or",
+      "start": 159.42,
+      "end": 159.82,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "or"
+    },
+    {
+      "index": 416,
+      "word": "wrong.",
+      "start": 159.82,
+      "end": 160.06,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "wrong."
+    },
+    {
+      "index": 417,
+      "word": "If",
+      "start": 160.62,
+      "end": 160.9,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "If"
+    },
+    {
+      "index": 418,
+      "word": "you",
+      "start": 160.9,
+      "end": 161.0,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 419,
+      "word": "say,",
+      "start": 161.0,
+      "end": 161.2,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "say,"
+    },
+    {
+      "index": 420,
+      "word": "“I",
+      "start": 161.48,
+      "end": 161.8,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "I"
+    },
+    {
+      "index": 421,
+      "word": "need",
+      "start": 161.8,
+      "end": 161.92,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "need"
+    },
+    {
+      "index": 422,
+      "word": "45L",
+      "start": 161.92,
+      "end": 162.24,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "45"
+    },
+    {
+      "index": 423,
+      "word": "unscented",
+      "start": 162.76,
+      "end": 163.64,
+      "duration": 0.88,
+      "source": "matched",
+      "recognized_word": "unscented"
+    },
+    {
+      "index": 424,
+      "word": "kitchen",
+      "start": 163.64,
+      "end": 163.82,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "kitchen"
+    },
+    {
+      "index": 425,
+      "word": "garbage",
+      "start": 163.82,
+      "end": 164.16,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "garbage"
+    },
+    {
+      "index": 426,
+      "word": "bags,",
+      "start": 164.16,
+      "end": 164.56,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "bags,"
+    },
+    {
+      "index": 427,
+      "word": "strong",
+      "start": 165.0,
+      "end": 165.42,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "strong"
+    },
+    {
+      "index": 428,
+      "word": "enough",
+      "start": 165.42,
+      "end": 165.66,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "enough"
+    },
+    {
+      "index": 429,
+      "word": "for",
+      "start": 165.66,
+      "end": 165.88,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "for"
+    },
+    {
+      "index": 430,
+      "word": "household",
+      "start": 165.88,
+      "end": 166.08,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "household"
+    },
+    {
+      "index": 431,
+      "word": "use,",
+      "start": 166.08,
+      "end": 166.62,
+      "duration": 0.54,
+      "source": "matched",
+      "recognized_word": "use,"
+    },
+    {
+      "index": 432,
+      "word": "packed",
+      "start": 167.02,
+      "end": 167.24,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "packed"
+    },
+    {
+      "index": 433,
+      "word": "40",
+      "start": 167.24,
+      "end": 167.64,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "40"
+    },
+    {
+      "index": 434,
+      "word": "per",
+      "start": 167.64,
+      "end": 167.84,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "per"
+    },
+    {
+      "index": 435,
+      "word": "box,”",
+      "start": 167.84,
+      "end": 168.06,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "box,"
+    },
+    {
+      "index": 436,
+      "word": "that",
+      "start": 168.64,
+      "end": 168.94,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "that"
+    },
+    {
+      "index": 437,
+      "word": "is",
+      "start": 168.94,
+      "end": 169.1,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 438,
+      "word": "much",
+      "start": 169.1,
+      "end": 169.34,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "much"
+    },
+    {
+      "index": 439,
+      "word": "clearer.",
+      "start": 169.34,
+      "end": 169.72,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "clearer."
+    },
+    {
+      "index": 440,
+      "word": "Now",
+      "start": 170.6,
+      "end": 170.82,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "Now"
+    },
+    {
+      "index": 441,
+      "word": "comes",
+      "start": 170.82,
+      "end": 171.14,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "comes"
+    },
+    {
+      "index": 442,
+      "word": "the",
+      "start": 171.14,
+      "end": 171.28,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 443,
+      "word": "math.",
+      "start": 171.28,
+      "end": 171.56,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "math."
+    },
+    {
+      "index": 444,
+      "word": "Gross",
+      "start": 172.2,
+      "end": 172.54,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "Gross"
+    },
+    {
+      "index": 445,
+      "word": "margin",
+      "start": 172.54,
+      "end": 173.02,
+      "duration": 0.48,
+      "source": "matched",
+      "recognized_word": "margin"
+    },
+    {
+      "index": 446,
+      "word": "is",
+      "start": 173.02,
+      "end": 173.46,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 447,
+      "word": "the",
+      "start": 173.46,
+      "end": 173.58,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 448,
+      "word": "money",
+      "start": 173.58,
+      "end": 173.76,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "money"
+    },
+    {
+      "index": 449,
+      "word": "left",
+      "start": 173.76,
+      "end": 174.06,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "left"
+    },
+    {
+      "index": 450,
+      "word": "after",
+      "start": 174.06,
+      "end": 174.56,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "after"
+    },
+    {
+      "index": 451,
+      "word": "the",
+      "start": 174.56,
+      "end": 174.7,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 452,
+      "word": "product",
+      "start": 174.7,
+      "end": 174.96,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 453,
+      "word": "cost.",
+      "start": 174.96,
+      "end": 175.26,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "cost."
+    },
+    {
+      "index": 454,
+      "word": "The",
+      "start": 175.88,
+      "end": 176.1,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 455,
+      "word": "formula",
+      "start": 176.1,
+      "end": 176.42,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "formula"
+    },
+    {
+      "index": 456,
+      "word": "is:",
+      "start": 176.42,
+      "end": 176.88,
+      "duration": 0.46,
+      "source": "matched",
+      "recognized_word": "is,"
+    },
+    {
+      "index": 457,
+      "word": "Gross",
+      "start": 177.28,
+      "end": 177.56,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "gross"
+    },
+    {
+      "index": 458,
+      "word": "margin",
+      "start": 177.56,
+      "end": 178.1,
+      "duration": 0.54,
+      "source": "matched",
+      "recognized_word": "margin"
+    },
+    {
+      "index": 459,
+      "word": "=",
+      "start": 178.1,
+      "end": 178.5,
+      "duration": 0.4,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 460,
+      "word": "selling",
+      "start": 178.5,
+      "end": 178.88,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "selling"
+    },
+    {
+      "index": 461,
+      "word": "price",
+      "start": 178.88,
+      "end": 179.26,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "price"
+    },
+    {
+      "index": 462,
+      "word": "minus",
+      "start": 179.26,
+      "end": 179.82,
+      "duration": 0.56,
+      "source": "matched",
+      "recognized_word": "minus"
+    },
+    {
+      "index": 463,
+      "word": "true",
+      "start": 179.82,
+      "end": 180.16,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "true"
+    },
+    {
+      "index": 464,
+      "word": "unit",
+      "start": 180.16,
+      "end": 180.42,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "unit"
+    },
+    {
+      "index": 465,
+      "word": "cost,",
+      "start": 180.42,
+      "end": 180.74,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "cost."
+    },
+    {
+      "index": 466,
+      "word": "divided",
+      "start": 180.74,
+      "end": 180.876,
+      "duration": 0.136,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 467,
+      "word": "by",
+      "start": 180.876,
+      "end": 181.012,
+      "duration": 0.136,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 468,
+      "word": "selling",
+      "start": 181.012,
+      "end": 181.148,
+      "duration": 0.136,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 469,
+      "word": "price.",
+      "start": 181.148,
+      "end": 181.284,
+      "duration": 0.136,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 470,
+      "word": "If",
+      "start": 181.284,
+      "end": 181.42,
+      "duration": 0.136,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 471,
+      "word": "your",
+      "start": 181.42,
+      "end": 181.68,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "Your"
+    },
+    {
+      "index": 472,
+      "word": "gross",
+      "start": 181.68,
+      "end": 181.92,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "gross"
+    },
+    {
+      "index": 473,
+      "word": "margin",
+      "start": 181.92,
+      "end": 182.36,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "margin"
+    },
+    {
+      "index": 474,
+      "word": "target",
+      "start": 182.36,
+      "end": 182.58,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "target"
+    },
+    {
+      "index": 475,
+      "word": "is",
+      "start": 182.58,
+      "end": 182.86,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 476,
+      "word": "40%,",
+      "start": 182.86,
+      "end": 183.46,
+      "duration": 0.6,
+      "source": "matched",
+      "recognized_word": "40%,"
+    },
+    {
+      "index": 477,
+      "word": "your",
+      "start": 184.08,
+      "end": 184.24,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "your"
+    },
+    {
+      "index": 478,
+      "word": "true",
+      "start": 184.24,
+      "end": 184.48,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "true"
+    },
+    {
+      "index": 479,
+      "word": "unit",
+      "start": 184.48,
+      "end": 184.82,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "unit"
+    },
+    {
+      "index": 480,
+      "word": "cost",
+      "start": 184.82,
+      "end": 185.16,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "cost"
+    },
+    {
+      "index": 481,
+      "word": "cannot",
+      "start": 185.16,
+      "end": 185.46,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "cannot"
+    },
+    {
+      "index": 482,
+      "word": "be",
+      "start": 185.46,
+      "end": 185.74,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 483,
+      "word": "more",
+      "start": 185.74,
+      "end": 185.92,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "more"
+    },
+    {
+      "index": 484,
+      "word": "than",
+      "start": 185.92,
+      "end": 186.08,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "than"
+    },
+    {
+      "index": 485,
+      "word": "60%",
+      "start": 186.08,
+      "end": 186.46,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "60"
+    },
+    {
+      "index": 486,
+      "word": "of",
+      "start": 187.0,
+      "end": 187.16,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "of"
+    },
+    {
+      "index": 487,
+      "word": "your",
+      "start": 187.16,
+      "end": 187.24,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "your"
+    },
+    {
+      "index": 488,
+      "word": "selling",
+      "start": 187.24,
+      "end": 187.52,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "selling"
+    },
+    {
+      "index": 489,
+      "word": "price.",
+      "start": 187.52,
+      "end": 187.82,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "price."
+    },
+    {
+      "index": 490,
+      "word": "Selling",
+      "start": 189.68,
+      "end": 189.92,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "selling"
+    },
+    {
+      "index": 491,
+      "word": "Price",
+      "start": 189.92,
+      "end": 190.18,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "price"
+    },
+    {
+      "index": 492,
+      "word": "Maximum",
+      "start": 190.18,
+      "end": 190.63,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 493,
+      "word": "True",
+      "start": 195.12,
+      "end": 195.38,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "true"
+    },
+    {
+      "index": 494,
+      "word": "Unit",
+      "start": 195.38,
+      "end": 195.76,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "unit"
+    },
+    {
+      "index": 495,
+      "word": "Cost",
+      "start": 195.76,
+      "end": 196.04,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "cost"
+    },
+    {
+      "index": 496,
+      "word": "Gross",
+      "start": 196.04,
+      "end": 196.1,
+      "duration": 0.06,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 497,
+      "word": "Profit",
+      "start": 196.1,
+      "end": 196.16,
+      "duration": 0.06,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 498,
+      "word": "Gross",
+      "start": 196.16,
+      "end": 196.22,
+      "duration": 0.06,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 499,
+      "word": "Margin",
+      "start": 196.22,
+      "end": 196.28,
+      "duration": 0.06,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 500,
+      "word": "$10",
+      "start": 196.28,
+      "end": 196.34,
+      "duration": 0.06,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 501,
+      "word": "$6",
+      "start": 196.34,
+      "end": 196.66,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "$6."
+    },
+    {
+      "index": 502,
+      "word": "$4",
+      "start": 196.66,
+      "end": 196.71,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 503,
+      "word": "40%",
+      "start": 196.71,
+      "end": 196.76,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 504,
+      "word": "$20",
+      "start": 196.76,
+      "end": 196.81,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 505,
+      "word": "$12",
+      "start": 196.81,
+      "end": 196.86,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 506,
+      "word": "$8",
+      "start": 196.86,
+      "end": 196.91,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 507,
+      "word": "40%",
+      "start": 196.91,
+      "end": 196.96,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 508,
+      "word": "$30",
+      "start": 196.96,
+      "end": 197.01,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 509,
+      "word": "$18",
+      "start": 197.01,
+      "end": 197.06,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 510,
+      "word": "$12",
+      "start": 197.06,
+      "end": 197.11,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 511,
+      "word": "40%",
+      "start": 197.11,
+      "end": 197.16,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 512,
+      "word": "$50",
+      "start": 197.16,
+      "end": 197.21,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 513,
+      "word": "$30",
+      "start": 197.21,
+      "end": 197.26,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 514,
+      "word": "$20",
+      "start": 197.26,
+      "end": 197.31,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 515,
+      "word": "40%",
+      "start": 197.31,
+      "end": 197.36,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 516,
+      "word": "The",
+      "start": 197.311,
+      "end": 197.62,
+      "duration": 0.309,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 517,
+      "word": "important",
+      "start": 197.62,
+      "end": 197.92,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "important"
+    },
+    {
+      "index": 518,
+      "word": "phrase",
+      "start": 197.92,
+      "end": 198.48,
+      "duration": 0.56,
+      "source": "matched",
+      "recognized_word": "phrase"
+    },
+    {
+      "index": 519,
+      "word": "is",
+      "start": 198.48,
+      "end": 198.76,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 520,
+      "word": "true",
+      "start": 198.76,
+      "end": 199.02,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "true"
+    },
+    {
+      "index": 521,
+      "word": "unit",
+      "start": 199.02,
+      "end": 199.34,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "unit"
+    },
+    {
+      "index": 522,
+      "word": "cost.",
+      "start": 199.34,
+      "end": 199.64,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "cost."
+    },
+    {
+      "index": 523,
+      "word": "That",
+      "start": 200.28,
+      "end": 200.52,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "That"
+    },
+    {
+      "index": 524,
+      "word": "does",
+      "start": 200.52,
+      "end": 200.68,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "does"
+    },
+    {
+      "index": 525,
+      "word": "not",
+      "start": 200.68,
+      "end": 200.9,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "not"
+    },
+    {
+      "index": 526,
+      "word": "only",
+      "start": 200.9,
+      "end": 201.1,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "only"
+    },
+    {
+      "index": 527,
+      "word": "mean",
+      "start": 201.1,
+      "end": 201.36,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "mean"
+    },
+    {
+      "index": 528,
+      "word": "the",
+      "start": 201.36,
+      "end": 201.52,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 529,
+      "word": "product.",
+      "start": 201.52,
+      "end": 201.78,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "product,"
+    },
+    {
+      "index": 530,
+      "word": "It",
+      "start": 202.4,
+      "end": 202.62,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 531,
+      "word": "can",
+      "start": 202.62,
+      "end": 202.78,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "can"
+    },
+    {
+      "index": 532,
+      "word": "include:",
+      "start": 202.78,
+      "end": 203.2,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "include"
+    },
+    {
+      "index": 533,
+      "word": "Product",
+      "start": 203.2,
+      "end": 203.54,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 534,
+      "word": "cost.",
+      "start": 203.54,
+      "end": 203.98,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "cost,"
+    },
+    {
+      "index": 535,
+      "word": "Packaging.",
+      "start": 204.44,
+      "end": 204.98,
+      "duration": 0.54,
+      "source": "matched",
+      "recognized_word": "packaging,"
+    },
+    {
+      "index": 536,
+      "word": "Labels.",
+      "start": 205.58,
+      "end": 205.88,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "labels,"
+    },
+    {
+      "index": 537,
+      "word": "Shipping.",
+      "start": 206.52,
+      "end": 206.96,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "shipping,"
+    },
+    {
+      "index": 538,
+      "word": "Delivery",
+      "start": 207.54,
+      "end": 207.94,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "delivery"
+    },
+    {
+      "index": 539,
+      "word": "materials.",
+      "start": 207.94,
+      "end": 208.66,
+      "duration": 0.72,
+      "source": "matched",
+      "recognized_word": "materials,"
+    },
+    {
+      "index": 540,
+      "word": "Damaged",
+      "start": 209.2,
+      "end": 209.44,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "damaged"
+    },
+    {
+      "index": 541,
+      "word": "units.",
+      "start": 209.44,
+      "end": 209.98,
+      "duration": 0.54,
+      "source": "matched",
+      "recognized_word": "units,"
+    },
+    {
+      "index": 542,
+      "word": "Payment",
+      "start": 210.48,
+      "end": 210.86,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "payment"
+    },
+    {
+      "index": 543,
+      "word": "fees.",
+      "start": 210.86,
+      "end": 211.16,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "fees,"
+    },
+    {
+      "index": 544,
+      "word": "Anything",
+      "start": 211.9,
+      "end": 212.22,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "anything"
+    },
+    {
+      "index": 545,
+      "word": "needed",
+      "start": 212.22,
+      "end": 212.6,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "needed"
+    },
+    {
+      "index": 546,
+      "word": "to",
+      "start": 212.6,
+      "end": 212.8,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 547,
+      "word": "get",
+      "start": 212.8,
+      "end": 212.92,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "get"
+    },
+    {
+      "index": 548,
+      "word": "the",
+      "start": 212.92,
+      "end": 213.04,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 549,
+      "word": "product",
+      "start": 213.04,
+      "end": 213.26,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 550,
+      "word": "ready",
+      "start": 213.26,
+      "end": 213.48,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "ready"
+    },
+    {
+      "index": 551,
+      "word": "to",
+      "start": 213.48,
+      "end": 213.7,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 552,
+      "word": "sell.",
+      "start": 213.7,
+      "end": 213.94,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "sell."
+    },
+    {
+      "index": 553,
+      "word": "Cheap",
+      "start": 214.6,
+      "end": 214.88,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "Cheap"
+    },
+    {
+      "index": 554,
+      "word": "is",
+      "start": 214.88,
+      "end": 215.1,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 555,
+      "word": "not",
+      "start": 215.1,
+      "end": 215.3,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "not"
+    },
+    {
+      "index": 556,
+      "word": "always",
+      "start": 215.3,
+      "end": 215.6,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "always"
+    },
+    {
+      "index": 557,
+      "word": "better.",
+      "start": 215.6,
+      "end": 215.88,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "better."
+    },
+    {
+      "index": 558,
+      "word": "A",
+      "start": 216.5,
+      "end": 216.56,
+      "duration": 0.06,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 559,
+      "word": "cheap",
+      "start": 216.56,
+      "end": 216.76,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "cheap"
+    },
+    {
+      "index": 560,
+      "word": "bag",
+      "start": 216.76,
+      "end": 217.1,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "bag"
+    },
+    {
+      "index": 561,
+      "word": "that",
+      "start": 217.1,
+      "end": 217.36,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "that"
+    },
+    {
+      "index": 562,
+      "word": "rips",
+      "start": 217.36,
+      "end": 217.68,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "rips"
+    },
+    {
+      "index": 563,
+      "word": "is",
+      "start": 217.68,
+      "end": 217.86,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 564,
+      "word": "expensive.",
+      "start": 217.86,
+      "end": 218.18,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "expensive."
+    },
+    {
+      "index": 565,
+      "word": "It",
+      "start": 218.94,
+      "end": 219.08,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "It"
+    },
+    {
+      "index": 566,
+      "word": "creates",
+      "start": 219.08,
+      "end": 219.36,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "creates"
+    },
+    {
+      "index": 567,
+      "word": "complaints.",
+      "start": 219.36,
+      "end": 219.7,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "complaints,"
+    },
+    {
+      "index": 568,
+      "word": "It",
+      "start": 220.62,
+      "end": 220.7,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 569,
+      "word": "creates",
+      "start": 220.7,
+      "end": 221.0,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "creates"
+    },
+    {
+      "index": 570,
+      "word": "refunds.",
+      "start": 221.0,
+      "end": 221.28,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "refunds,"
+    },
+    {
+      "index": 571,
+      "word": "It",
+      "start": 222.22,
+      "end": 222.3,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 572,
+      "word": "damages",
+      "start": 222.3,
+      "end": 222.64,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "damages"
+    },
+    {
+      "index": 573,
+      "word": "trust.",
+      "start": 222.64,
+      "end": 222.98,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "trust,"
+    },
+    {
+      "index": 574,
+      "word": "It",
+      "start": 223.72,
+      "end": 223.9,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 575,
+      "word": "makes",
+      "start": 223.9,
+      "end": 224.06,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "makes"
+    },
+    {
+      "index": 576,
+      "word": "people",
+      "start": 224.06,
+      "end": 224.38,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "people"
+    },
+    {
+      "index": 577,
+      "word": "avoid",
+      "start": 224.38,
+      "end": 224.62,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "avoid"
+    },
+    {
+      "index": 578,
+      "word": "buying",
+      "start": 224.62,
+      "end": 224.96,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "buying"
+    },
+    {
+      "index": 579,
+      "word": "again.",
+      "start": 224.96,
+      "end": 225.32,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "again."
+    },
+    {
+      "index": 580,
+      "word": "Quality",
+      "start": 225.88,
+      "end": 226.44,
+      "duration": 0.56,
+      "source": "matched",
+      "recognized_word": "Quality"
+    },
+    {
+      "index": 581,
+      "word": "assurance",
+      "start": 226.44,
+      "end": 226.82,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "assurance"
+    },
+    {
+      "index": 582,
+      "word": "means",
+      "start": 226.82,
+      "end": 227.3,
+      "duration": 0.48,
+      "source": "matched",
+      "recognized_word": "means"
+    },
+    {
+      "index": 583,
+      "word": "checking",
+      "start": 227.3,
+      "end": 227.68,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "checking"
+    },
+    {
+      "index": 584,
+      "word": "that",
+      "start": 227.68,
+      "end": 227.96,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "that"
+    },
+    {
+      "index": 585,
+      "word": "the",
+      "start": 227.96,
+      "end": 228.04,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 586,
+      "word": "product",
+      "start": 228.04,
+      "end": 228.34,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 587,
+      "word": "is",
+      "start": 228.34,
+      "end": 228.54,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 588,
+      "word": "good",
+      "start": 228.54,
+      "end": 228.72,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "good"
+    },
+    {
+      "index": 589,
+      "word": "enough",
+      "start": 228.72,
+      "end": 228.94,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "enough"
+    },
+    {
+      "index": 590,
+      "word": "before",
+      "start": 228.94,
+      "end": 229.2,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "before"
+    },
+    {
+      "index": 591,
+      "word": "customers",
+      "start": 229.2,
+      "end": 229.64,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "customers"
+    },
+    {
+      "index": 592,
+      "word": "receive",
+      "start": 229.64,
+      "end": 230.12,
+      "duration": 0.48,
+      "source": "matched",
+      "recognized_word": "receive"
+    },
+    {
+      "index": 593,
+      "word": "it.",
+      "start": 230.12,
+      "end": 230.34,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "it."
+    },
+    {
+      "index": 594,
+      "word": "Operators",
+      "start": 231.1,
+      "end": 231.66,
+      "duration": 0.56,
+      "source": "matched",
+      "recognized_word": "Operators"
+    },
+    {
+      "index": 595,
+      "word": "care",
+      "start": 231.66,
+      "end": 231.86,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "care"
+    },
+    {
+      "index": 596,
+      "word": "about",
+      "start": 231.86,
+      "end": 232.1,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "about"
+    },
+    {
+      "index": 597,
+      "word": "quality",
+      "start": 232.1,
+      "end": 232.4,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "quality"
+    },
+    {
+      "index": 598,
+      "word": "because",
+      "start": 232.4,
+      "end": 232.88,
+      "duration": 0.48,
+      "source": "matched",
+      "recognized_word": "because"
+    },
+    {
+      "index": 599,
+      "word": "quality",
+      "start": 232.88,
+      "end": 233.24,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "quality"
+    },
+    {
+      "index": 600,
+      "word": "protects",
+      "start": 233.24,
+      "end": 233.6,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "protects"
+    },
+    {
+      "index": 601,
+      "word": "the",
+      "start": 233.6,
+      "end": 233.84,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 602,
+      "word": "brand.",
+      "start": 233.84,
+      "end": 234.04,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "brand."
+    },
+    {
+      "index": 603,
+      "word": "A",
+      "start": 234.76,
+      "end": 234.82,
+      "duration": 0.06,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 604,
+      "word": "control",
+      "start": 234.82,
+      "end": 235.02,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "control"
+    },
+    {
+      "index": 605,
+      "word": "brand",
+      "start": 235.02,
+      "end": 235.46,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "brand"
+    },
+    {
+      "index": 606,
+      "word": "is",
+      "start": 235.46,
+      "end": 235.7,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 607,
+      "word": "not",
+      "start": 235.7,
+      "end": 235.9,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "not"
+    },
+    {
+      "index": 608,
+      "word": "just",
+      "start": 235.9,
+      "end": 236.08,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "just"
+    },
+    {
+      "index": 609,
+      "word": "trying",
+      "start": 236.08,
+      "end": 236.32,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "trying"
+    },
+    {
+      "index": 610,
+      "word": "to",
+      "start": 236.32,
+      "end": 236.48,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 611,
+      "word": "be",
+      "start": 236.48,
+      "end": 236.62,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 612,
+      "word": "cheaper.",
+      "start": 236.62,
+      "end": 236.82,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "cheaper,"
+    },
+    {
+      "index": 613,
+      "word": "It",
+      "start": 237.46,
+      "end": 237.58,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 614,
+      "word": "is",
+      "start": 237.58,
+      "end": 237.68,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 615,
+      "word": "trying",
+      "start": 237.68,
+      "end": 237.92,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "trying"
+    },
+    {
+      "index": 616,
+      "word": "to",
+      "start": 237.92,
+      "end": 238.14,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 617,
+      "word": "be",
+      "start": 238.14,
+      "end": 238.26,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 618,
+      "word": "trusted.",
+      "start": 238.26,
+      "end": 238.52,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "trusted."
+    },
+    {
+      "index": 619,
+      "word": "Three",
+      "start": 239.48,
+      "end": 239.76,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "Three"
+    },
+    {
+      "index": 620,
+      "word": "Quotes",
+      "start": 239.76,
+      "end": 240.08,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "quotes"
+    },
+    {
+      "index": 621,
+      "word": "and",
+      "start": 240.08,
+      "end": 240.5,
+      "duration": 0.42,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 622,
+      "word": "Scale",
+      "start": 240.5,
+      "end": 240.78,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "scale,"
+    },
+    {
+      "index": 623,
+      "word": "Never",
+      "start": 241.54,
+      "end": 241.82,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "never"
+    },
+    {
+      "index": 624,
+      "word": "trust",
+      "start": 241.82,
+      "end": 242.1,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "trust"
+    },
+    {
+      "index": 625,
+      "word": "one",
+      "start": 242.1,
+      "end": 242.36,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "one"
+    },
+    {
+      "index": 626,
+      "word": "quote.",
+      "start": 242.36,
+      "end": 242.68,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "quote."
+    },
+    {
+      "index": 627,
+      "word": "One",
+      "start": 243.28,
+      "end": 243.48,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "One"
+    },
+    {
+      "index": 628,
+      "word": "supplier",
+      "start": 243.48,
+      "end": 243.78,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 629,
+      "word": "might",
+      "start": 243.78,
+      "end": 244.28,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 630,
+      "word": "be",
+      "start": 244.28,
+      "end": 244.46,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 631,
+      "word": "too",
+      "start": 244.46,
+      "end": 244.62,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "too"
+    },
+    {
+      "index": 632,
+      "word": "expensive.",
+      "start": 244.62,
+      "end": 244.94,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "expensive,"
+    },
+    {
+      "index": 633,
+      "word": "One",
+      "start": 245.7,
+      "end": 246.0,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "one"
+    },
+    {
+      "index": 634,
+      "word": "might",
+      "start": 246.0,
+      "end": 246.2,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 635,
+      "word": "be",
+      "start": 246.2,
+      "end": 246.36,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 636,
+      "word": "too",
+      "start": 246.36,
+      "end": 246.54,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "too"
+    },
+    {
+      "index": 637,
+      "word": "cheap.",
+      "start": 246.54,
+      "end": 246.72,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "cheap,"
+    },
+    {
+      "index": 638,
+      "word": "One",
+      "start": 247.38,
+      "end": 247.72,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "one"
+    },
+    {
+      "index": 639,
+      "word": "might",
+      "start": 247.72,
+      "end": 247.96,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 640,
+      "word": "have",
+      "start": 247.96,
+      "end": 248.12,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "have"
+    },
+    {
+      "index": 641,
+      "word": "slow",
+      "start": 248.12,
+      "end": 248.36,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "slow"
+    },
+    {
+      "index": 642,
+      "word": "shipping.",
+      "start": 248.36,
+      "end": 248.66,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "shipping,"
+    },
+    {
+      "index": 643,
+      "word": "One",
+      "start": 249.3,
+      "end": 249.64,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "one"
+    },
+    {
+      "index": 644,
+      "word": "might",
+      "start": 249.64,
+      "end": 249.86,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 645,
+      "word": "have",
+      "start": 249.86,
+      "end": 250.04,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "have"
+    },
+    {
+      "index": 646,
+      "word": "bad",
+      "start": 250.04,
+      "end": 250.28,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "bad"
+    },
+    {
+      "index": 647,
+      "word": "packaging.",
+      "start": 250.28,
+      "end": 250.66,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "packaging,"
+    },
+    {
+      "index": 648,
+      "word": "One",
+      "start": 251.36,
+      "end": 251.7,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "one"
+    },
+    {
+      "index": 649,
+      "word": "might",
+      "start": 251.7,
+      "end": 251.92,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 650,
+      "word": "have",
+      "start": 251.92,
+      "end": 252.08,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "have"
+    },
+    {
+      "index": 651,
+      "word": "a",
+      "start": 252.08,
+      "end": 252.2,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 652,
+      "word": "high",
+      "start": 252.2,
+      "end": 252.4,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "high"
+    },
+    {
+      "index": 653,
+      "word": "minimum",
+      "start": 252.4,
+      "end": 252.68,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "minimum"
+    },
+    {
+      "index": 654,
+      "word": "order",
+      "start": 252.68,
+      "end": 253.04,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "order"
+    },
+    {
+      "index": 655,
+      "word": "quantity.",
+      "start": 253.04,
+      "end": 253.36,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "quantity,"
+    },
+    {
+      "index": 656,
+      "word": "A",
+      "start": 253.36,
+      "end": 253.52,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 657,
+      "word": "minimum",
+      "start": 253.52,
+      "end": 254.5,
+      "duration": 0.98,
+      "source": "matched",
+      "recognized_word": "minimum"
+    },
+    {
+      "index": 658,
+      "word": "order",
+      "start": 254.5,
+      "end": 254.86,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "order"
+    },
+    {
+      "index": 659,
+      "word": "quantity,",
+      "start": 254.86,
+      "end": 255.26,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "quantity"
+    },
+    {
+      "index": 660,
+      "word": "or",
+      "start": 255.26,
+      "end": 255.76,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "or"
+    },
+    {
+      "index": 661,
+      "word": "MOQ,",
+      "start": 255.76,
+      "end": 256.21,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 662,
+      "word": "is",
+      "start": 256.66,
+      "end": 256.88,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 663,
+      "word": "the",
+      "start": 256.88,
+      "end": 257.0,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 664,
+      "word": "smallest",
+      "start": 257.0,
+      "end": 257.34,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "smallest"
+    },
+    {
+      "index": 665,
+      "word": "amount",
+      "start": 257.34,
+      "end": 257.72,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "amount"
+    },
+    {
+      "index": 666,
+      "word": "a",
+      "start": 257.72,
+      "end": 257.88,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 667,
+      "word": "supplier",
+      "start": 257.88,
+      "end": 258.16,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 668,
+      "word": "will",
+      "start": 258.16,
+      "end": 258.44,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "will"
+    },
+    {
+      "index": 669,
+      "word": "sell",
+      "start": 258.44,
+      "end": 258.62,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "sell"
+    },
+    {
+      "index": 670,
+      "word": "you.",
+      "start": 258.62,
+      "end": 258.82,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "you."
+    },
+    {
+      "index": 671,
+      "word": "A",
+      "start": 259.26,
+      "end": 259.38,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 672,
+      "word": "supplier",
+      "start": 259.38,
+      "end": 259.7,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 673,
+      "word": "might",
+      "start": 259.7,
+      "end": 260.04,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 674,
+      "word": "say:",
+      "start": 260.04,
+      "end": 260.32,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "say"
+    },
+    {
+      "index": 675,
+      "word": "Minimum",
+      "start": 260.32,
+      "end": 260.92,
+      "duration": 0.6,
+      "source": "matched",
+      "recognized_word": "minimum"
+    },
+    {
+      "index": 676,
+      "word": "order:",
+      "start": 260.92,
+      "end": 261.38,
+      "duration": 0.46,
+      "source": "matched",
+      "recognized_word": "order"
+    },
+    {
+      "index": 677,
+      "word": "100",
+      "start": 261.38,
+      "end": 262.1,
+      "duration": 0.72,
+      "source": "matched",
+      "recognized_word": "100"
+    },
+    {
+      "index": 678,
+      "word": "units.",
+      "start": 262.1,
+      "end": 262.68,
+      "duration": 0.58,
+      "source": "matched",
+      "recognized_word": "units"
+    },
+    {
+      "index": 679,
+      "word": "Or",
+      "start": 262.68,
+      "end": 263.42,
+      "duration": 0.74,
+      "source": "matched",
+      "recognized_word": "or"
+    },
+    {
+      "index": 680,
+      "word": "500",
+      "start": 263.42,
+      "end": 263.7,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "500"
+    },
+    {
+      "index": 681,
+      "word": "units.",
+      "start": 263.7,
+      "end": 264.2,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "units"
+    },
+    {
+      "index": 682,
+      "word": "Or",
+      "start": 264.64,
+      "end": 264.92,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "or"
+    },
+    {
+      "index": 683,
+      "word": "1,000",
+      "start": 264.92,
+      "end": 265.2,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "1000"
+    },
+    {
+      "index": 684,
+      "word": "units.",
+      "start": 265.2,
+      "end": 265.78,
+      "duration": 0.58,
+      "source": "matched",
+      "recognized_word": "units."
+    },
+    {
+      "index": 685,
+      "word": "That",
+      "start": 266.24,
+      "end": 266.56,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "That"
+    },
+    {
+      "index": 686,
+      "word": "matters",
+      "start": 266.56,
+      "end": 266.88,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "matters"
+    },
+    {
+      "index": 687,
+      "word": "because",
+      "start": 266.88,
+      "end": 267.2,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "because"
+    },
+    {
+      "index": 688,
+      "word": "buying",
+      "start": 267.2,
+      "end": 267.54,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "buying"
+    },
+    {
+      "index": 689,
+      "word": "more",
+      "start": 267.54,
+      "end": 267.84,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "more"
+    },
+    {
+      "index": 690,
+      "word": "usually",
+      "start": 267.84,
+      "end": 268.26,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "usually"
+    },
+    {
+      "index": 691,
+      "word": "lowers",
+      "start": 268.26,
+      "end": 268.64,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "lowers"
+    },
+    {
+      "index": 692,
+      "word": "the",
+      "start": 268.64,
+      "end": 268.84,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 693,
+      "word": "unit",
+      "start": 268.84,
+      "end": 268.98,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "unit"
+    },
+    {
+      "index": 694,
+      "word": "cost.",
+      "start": 268.98,
+      "end": 269.26,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "cost,"
+    },
+    {
+      "index": 695,
+      "word": "But",
+      "start": 269.9,
+      "end": 270.04,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "but"
+    },
+    {
+      "index": 696,
+      "word": "buying",
+      "start": 270.04,
+      "end": 270.32,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "buying"
+    },
+    {
+      "index": 697,
+      "word": "more",
+      "start": 270.32,
+      "end": 270.54,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "more"
+    },
+    {
+      "index": 698,
+      "word": "also",
+      "start": 270.54,
+      "end": 270.76,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "also"
+    },
+    {
+      "index": 699,
+      "word": "increases",
+      "start": 270.76,
+      "end": 271.16,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "increases"
+    },
+    {
+      "index": 700,
+      "word": "risk.",
+      "start": 271.16,
+      "end": 271.64,
+      "duration": 0.48,
+      "source": "matched",
+      "recognized_word": "risk,"
+    },
+    {
+      "index": 701,
+      "word": "More",
+      "start": 272.1,
+      "end": 272.32,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "more"
+    },
+    {
+      "index": 702,
+      "word": "cash",
+      "start": 272.32,
+      "end": 272.56,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "cash"
+    },
+    {
+      "index": 703,
+      "word": "gets",
+      "start": 272.56,
+      "end": 272.88,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "gets"
+    },
+    {
+      "index": 704,
+      "word": "tied",
+      "start": 272.88,
+      "end": 273.14,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "tied"
+    },
+    {
+      "index": 705,
+      "word": "up.",
+      "start": 273.14,
+      "end": 273.38,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "up,"
+    },
+    {
+      "index": 706,
+      "word": "More",
+      "start": 273.78,
+      "end": 274.06,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "more"
+    },
+    {
+      "index": 707,
+      "word": "storage",
+      "start": 274.06,
+      "end": 274.28,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "storage"
+    },
+    {
+      "index": 708,
+      "word": "is",
+      "start": 274.28,
+      "end": 274.54,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 709,
+      "word": "needed.",
+      "start": 274.54,
+      "end": 274.76,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "needed,"
+    },
+    {
+      "index": 710,
+      "word": "More",
+      "start": 275.16,
+      "end": 275.38,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "more"
+    },
+    {
+      "index": 711,
+      "word": "units",
+      "start": 275.38,
+      "end": 275.72,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "units"
+    },
+    {
+      "index": 712,
+      "word": "must",
+      "start": 275.72,
+      "end": 275.94,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "must"
+    },
+    {
+      "index": 713,
+      "word": "be",
+      "start": 275.94,
+      "end": 276.14,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 714,
+      "word": "sold.",
+      "start": 276.14,
+      "end": 276.38,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "sold,"
+    },
+    {
+      "index": 715,
+      "word": "More",
+      "start": 276.9,
+      "end": 277.2,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "more"
+    },
+    {
+      "index": 716,
+      "word": "mistakes",
+      "start": 277.2,
+      "end": 277.46,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "mistakes"
+    },
+    {
+      "index": 717,
+      "word": "become",
+      "start": 277.46,
+      "end": 277.88,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "become"
+    },
+    {
+      "index": 718,
+      "word": "expensive.",
+      "start": 277.88,
+      "end": 278.16,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "expensive."
+    },
+    {
+      "index": 719,
+      "word": "That",
+      "start": 278.78,
+      "end": 279.2,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "That"
+    },
+    {
+      "index": 720,
+      "word": "is",
+      "start": 279.2,
+      "end": 279.28,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 721,
+      "word": "why",
+      "start": 279.28,
+      "end": 279.48,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "why"
+    },
+    {
+      "index": 722,
+      "word": "students",
+      "start": 279.48,
+      "end": 279.84,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "students"
+    },
+    {
+      "index": 723,
+      "word": "should",
+      "start": 279.84,
+      "end": 280.1,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "should"
+    },
+    {
+      "index": 724,
+      "word": "ask",
+      "start": 280.1,
+      "end": 280.36,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "ask"
+    },
+    {
+      "index": 725,
+      "word": "at",
+      "start": 280.36,
+      "end": 280.54,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "at"
+    },
+    {
+      "index": 726,
+      "word": "least",
+      "start": 280.54,
+      "end": 280.7,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "least"
+    },
+    {
+      "index": 727,
+      "word": "three",
+      "start": 280.7,
+      "end": 281.02,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "three"
+    },
+    {
+      "index": 728,
+      "word": "suppliers",
+      "start": 281.02,
+      "end": 281.48,
+      "duration": 0.46,
+      "source": "matched",
+      "recognized_word": "suppliers"
+    },
+    {
+      "index": 729,
+      "word": "for",
+      "start": 281.48,
+      "end": 281.68,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "for"
+    },
+    {
+      "index": 730,
+      "word": "quotes.",
+      "start": 281.68,
+      "end": 281.96,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "quotes"
+    },
+    {
+      "index": 731,
+      "word": "And",
+      "start": 282.46,
+      "end": 282.72,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "and"
+    },
+    {
+      "index": 732,
+      "word": "they",
+      "start": 282.72,
+      "end": 282.86,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "they"
+    },
+    {
+      "index": 733,
+      "word": "should",
+      "start": 282.86,
+      "end": 283.06,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "should"
+    },
+    {
+      "index": 734,
+      "word": "ask",
+      "start": 283.06,
+      "end": 283.3,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "ask"
+    },
+    {
+      "index": 735,
+      "word": "each",
+      "start": 283.3,
+      "end": 283.48,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "each"
+    },
+    {
+      "index": 736,
+      "word": "supplier",
+      "start": 283.48,
+      "end": 283.86,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 737,
+      "word": "for",
+      "start": 283.86,
+      "end": 284.12,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "for"
+    },
+    {
+      "index": 738,
+      "word": "three",
+      "start": 284.12,
+      "end": 284.34,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "three"
+    },
+    {
+      "index": 739,
+      "word": "quantities:",
+      "start": 285.36,
+      "end": 285.86,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "quantities"
+    },
+    {
+      "index": 740,
+      "word": "100",
+      "start": 287.76,
+      "end": 288.1,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "100"
+    },
+    {
+      "index": 741,
+      "word": "units.",
+      "start": 288.1,
+      "end": 288.64,
+      "duration": 0.54,
+      "source": "matched",
+      "recognized_word": "units,"
+    },
+    {
+      "index": 742,
+      "word": "500",
+      "start": 289.04,
+      "end": 289.5,
+      "duration": 0.46,
+      "source": "matched",
+      "recognized_word": "500"
+    },
+    {
+      "index": 743,
+      "word": "units.",
+      "start": 289.5,
+      "end": 290.06,
+      "duration": 0.56,
+      "source": "matched",
+      "recognized_word": "units,"
+    },
+    {
+      "index": 744,
+      "word": "1,000",
+      "start": 290.48,
+      "end": 290.84,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "1000"
+    },
+    {
+      "index": 745,
+      "word": "units.",
+      "start": 290.84,
+      "end": 291.48,
+      "duration": 0.64,
+      "source": "matched",
+      "recognized_word": "units."
+    },
+    {
+      "index": 746,
+      "word": "The",
+      "start": 291.48,
+      "end": 291.93,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 747,
+      "word": "quote",
+      "start": 292.22,
+      "end": 292.38,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "quote"
+    },
+    {
+      "index": 748,
+      "word": "table",
+      "start": 292.38,
+      "end": 292.43,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 749,
+      "word": "might",
+      "start": 292.381,
+      "end": 292.62,
+      "duration": 0.239,
+      "source": "matched",
+      "recognized_word": "might"
+    },
+    {
+      "index": 750,
+      "word": "look",
+      "start": 292.62,
+      "end": 292.88,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "look"
+    },
+    {
+      "index": 751,
+      "word": "like",
+      "start": 292.88,
+      "end": 293.14,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "like"
+    },
+    {
+      "index": 752,
+      "word": "this:",
+      "start": 293.14,
+      "end": 293.19,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 753,
+      "word": "Supplier",
+      "start": 293.19,
+      "end": 293.24,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 754,
+      "word": "100",
+      "start": 293.24,
+      "end": 293.29,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 755,
+      "word": "Units",
+      "start": 293.29,
+      "end": 293.34,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 756,
+      "word": "500",
+      "start": 293.34,
+      "end": 293.39,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 757,
+      "word": "Units",
+      "start": 293.39,
+      "end": 293.44,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 758,
+      "word": "1,000",
+      "start": 293.44,
+      "end": 293.49,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 759,
+      "word": "Units",
+      "start": 293.49,
+      "end": 293.54,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 760,
+      "word": "Lead",
+      "start": 293.54,
+      "end": 293.59,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 761,
+      "word": "Time",
+      "start": 293.59,
+      "end": 293.64,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 762,
+      "word": "Notes",
+      "start": 293.64,
+      "end": 293.69,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 763,
+      "word": "Supplier",
+      "start": 293.641,
+      "end": 293.86,
+      "duration": 0.219,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 764,
+      "word": "A",
+      "start": 293.86,
+      "end": 294.4,
+      "duration": 0.54,
+      "source": "matched",
+      "recognized_word": "a"
+    },
+    {
+      "index": 765,
+      "word": "$12.00",
+      "start": 294.4,
+      "end": 294.45,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 766,
+      "word": "each",
+      "start": 294.45,
+      "end": 294.5,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 767,
+      "word": "$10.50",
+      "start": 294.5,
+      "end": 294.55,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 768,
+      "word": "each",
+      "start": 294.55,
+      "end": 294.6,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 769,
+      "word": "$9.75",
+      "start": 294.6,
+      "end": 294.65,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 770,
+      "word": "each",
+      "start": 294.65,
+      "end": 294.7,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 771,
+      "word": "2",
+      "start": 294.7,
+      "end": 294.75,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 772,
+      "word": "weeks",
+      "start": 294.75,
+      "end": 294.8,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 773,
+      "word": "Good",
+      "start": 294.751,
+      "end": 294.786,
+      "duration": 0.035,
+      "source": "matched",
+      "recognized_word": "good"
+    },
+    {
+      "index": 774,
+      "word": "quality,",
+      "start": 294.752,
+      "end": 294.96,
+      "duration": 0.208,
+      "source": "matched",
+      "recognized_word": "quality,"
+    },
+    {
+      "index": 775,
+      "word": "higher",
+      "start": 295.36,
+      "end": 295.62,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "higher"
+    },
+    {
+      "index": 776,
+      "word": "price",
+      "start": 295.62,
+      "end": 295.88,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "price"
+    },
+    {
+      "index": 777,
+      "word": "Supplier",
+      "start": 295.88,
+      "end": 296.5,
+      "duration": 0.62,
+      "source": "matched",
+      "recognized_word": "supplier,"
+    },
+    {
+      "index": 778,
+      "word": "B",
+      "start": 297.04,
+      "end": 297.34,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "B"
+    },
+    {
+      "index": 779,
+      "word": "$10.80",
+      "start": 297.34,
+      "end": 297.39,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 780,
+      "word": "each",
+      "start": 297.39,
+      "end": 297.44,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 781,
+      "word": "$9.40",
+      "start": 297.44,
+      "end": 297.49,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 782,
+      "word": "each",
+      "start": 297.49,
+      "end": 297.54,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 783,
+      "word": "$8.90",
+      "start": 297.54,
+      "end": 297.59,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 784,
+      "word": "each",
+      "start": 297.59,
+      "end": 297.64,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 785,
+      "word": "5",
+      "start": 297.64,
+      "end": 297.69,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 786,
+      "word": "weeks",
+      "start": 297.69,
+      "end": 297.74,
+      "duration": 0.05,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 787,
+      "word": "Cheaper,",
+      "start": 297.691,
+      "end": 297.726,
+      "duration": 0.035,
+      "source": "matched",
+      "recognized_word": "cheaper,"
+    },
+    {
+      "index": 788,
+      "word": "slower",
+      "start": 298.22,
+      "end": 298.34,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "slower"
+    },
+    {
+      "index": 789,
+      "word": "shipping",
+      "start": 298.34,
+      "end": 298.72,
+      "duration": 0.38,
+      "source": "matched",
+      "recognized_word": "shipping,"
+    },
+    {
+      "index": 790,
+      "word": "Supplier",
+      "start": 299.36,
+      "end": 299.86,
+      "duration": 0.5,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 791,
+      "word": "C",
+      "start": 299.86,
+      "end": 299.9,
+      "duration": 0.04,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 792,
+      "word": "$13.00",
+      "start": 299.9,
+      "end": 299.94,
+      "duration": 0.04,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 793,
+      "word": "each",
+      "start": 299.94,
+      "end": 299.98,
+      "duration": 0.04,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 794,
+      "word": "$11.00",
+      "start": 299.98,
+      "end": 300.02,
+      "duration": 0.04,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 795,
+      "word": "each",
+      "start": 300.02,
+      "end": 300.06,
+      "duration": 0.04,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 796,
+      "word": "$10.00",
+      "start": 300.06,
+      "end": 300.1,
+      "duration": 0.04,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 797,
+      "word": "each",
+      "start": 300.1,
+      "end": 300.14,
+      "duration": 0.04,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 798,
+      "word": "1",
+      "start": 300.14,
+      "end": 300.18,
+      "duration": 0.04,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 799,
+      "word": "week",
+      "start": 300.18,
+      "end": 300.22,
+      "duration": 0.04,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 800,
+      "word": "Fast,",
+      "start": 300.22,
+      "end": 300.54,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "fast"
+    },
+    {
+      "index": 801,
+      "word": "but",
+      "start": 300.54,
+      "end": 300.88,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "but"
+    },
+    {
+      "index": 802,
+      "word": "expensive",
+      "start": 300.88,
+      "end": 301.1,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "expensive."
+    },
+    {
+      "index": 803,
+      "word": "Now",
+      "start": 302.06,
+      "end": 302.28,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "Now"
+    },
+    {
+      "index": 804,
+      "word": "the",
+      "start": 302.28,
+      "end": 302.42,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 805,
+      "word": "student",
+      "start": 302.42,
+      "end": 302.7,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "student"
+    },
+    {
+      "index": 806,
+      "word": "can",
+      "start": 302.7,
+      "end": 302.9,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "can"
+    },
+    {
+      "index": 807,
+      "word": "think",
+      "start": 302.9,
+      "end": 303.08,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "think"
+    },
+    {
+      "index": 808,
+      "word": "like",
+      "start": 303.08,
+      "end": 303.28,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "like"
+    },
+    {
+      "index": 809,
+      "word": "an",
+      "start": 303.28,
+      "end": 303.4,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "an"
+    },
+    {
+      "index": 810,
+      "word": "operator.",
+      "start": 303.4,
+      "end": 303.68,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "operator,"
+    },
+    {
+      "index": 811,
+      "word": "Supplier",
+      "start": 304.26,
+      "end": 304.5,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 812,
+      "word": "B",
+      "start": 304.5,
+      "end": 305.08,
+      "duration": 0.58,
+      "source": "matched",
+      "recognized_word": "B"
+    },
+    {
+      "index": 813,
+      "word": "is",
+      "start": 305.08,
+      "end": 305.26,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 814,
+      "word": "cheapest.",
+      "start": 305.26,
+      "end": 305.44,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "cheapest,"
+    },
+    {
+      "index": 815,
+      "word": "But",
+      "start": 306.26,
+      "end": 306.36,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "but"
+    },
+    {
+      "index": 816,
+      "word": "the",
+      "start": 306.36,
+      "end": 306.48,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 817,
+      "word": "lead",
+      "start": 306.48,
+      "end": 306.64,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "lead"
+    },
+    {
+      "index": 818,
+      "word": "time",
+      "start": 306.64,
+      "end": 306.9,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "time"
+    },
+    {
+      "index": 819,
+      "word": "is",
+      "start": 306.9,
+      "end": 307.12,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 820,
+      "word": "five",
+      "start": 307.12,
+      "end": 307.34,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "five"
+    },
+    {
+      "index": 821,
+      "word": "weeks.",
+      "start": 307.34,
+      "end": 307.6,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "weeks."
+    },
+    {
+      "index": 822,
+      "word": "Supplier",
+      "start": 308.34,
+      "end": 308.62,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "Supplier"
+    },
+    {
+      "index": 823,
+      "word": "C",
+      "start": 308.62,
+      "end": 308.92,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "C"
+    },
+    {
+      "index": 824,
+      "word": "is",
+      "start": 308.92,
+      "end": 309.16,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 825,
+      "word": "fastest.",
+      "start": 309.16,
+      "end": 309.42,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "fastest,"
+    },
+    {
+      "index": 826,
+      "word": "But",
+      "start": 310.1,
+      "end": 310.34,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "but"
+    },
+    {
+      "index": 827,
+      "word": "the",
+      "start": 310.34,
+      "end": 310.46,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 828,
+      "word": "cost",
+      "start": 310.46,
+      "end": 310.72,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "cost"
+    },
+    {
+      "index": 829,
+      "word": "may",
+      "start": 310.72,
+      "end": 311.0,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "may"
+    },
+    {
+      "index": 830,
+      "word": "crush",
+      "start": 311.0,
+      "end": 311.2,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "crush"
+    },
+    {
+      "index": 831,
+      "word": "the",
+      "start": 311.2,
+      "end": 311.44,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 832,
+      "word": "margin.",
+      "start": 311.44,
+      "end": 311.64,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "margin"
+    },
+    {
+      "index": 833,
+      "word": "Supplier",
+      "start": 312.2,
+      "end": 312.68,
+      "duration": 0.48,
+      "source": "matched",
+      "recognized_word": "supplier"
+    },
+    {
+      "index": 834,
+      "word": "A",
+      "start": 312.68,
+      "end": 313.1,
+      "duration": 0.42,
+      "source": "matched",
+      "recognized_word": "A"
+    },
+    {
+      "index": 835,
+      "word": "may",
+      "start": 313.1,
+      "end": 313.46,
+      "duration": 0.36,
+      "source": "matched",
+      "recognized_word": "may"
+    },
+    {
+      "index": 836,
+      "word": "be",
+      "start": 313.46,
+      "end": 313.6,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 837,
+      "word": "the",
+      "start": 313.6,
+      "end": 313.72,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 838,
+      "word": "best",
+      "start": 313.72,
+      "end": 313.9,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "best"
+    },
+    {
+      "index": 839,
+      "word": "balance.",
+      "start": 313.9,
+      "end": 314.2,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "balance."
+    },
+    {
+      "index": 840,
+      "word": "Sourcing",
+      "start": 314.7,
+      "end": 315.16,
+      "duration": 0.46,
+      "source": "matched",
+      "recognized_word": "Sourcing"
+    },
+    {
+      "index": 841,
+      "word": "is",
+      "start": 315.16,
+      "end": 315.46,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 842,
+      "word": "not",
+      "start": 315.46,
+      "end": 315.68,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "not"
+    },
+    {
+      "index": 843,
+      "word": "just",
+      "start": 315.68,
+      "end": 315.86,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "just"
+    },
+    {
+      "index": 844,
+      "word": "finding",
+      "start": 315.86,
+      "end": 316.12,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "finding"
+    },
+    {
+      "index": 845,
+      "word": "the",
+      "start": 316.12,
+      "end": 316.34,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 846,
+      "word": "lowest",
+      "start": 316.34,
+      "end": 316.58,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "lowest"
+    },
+    {
+      "index": 847,
+      "word": "price.",
+      "start": 316.58,
+      "end": 316.88,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "price,"
+    },
+    {
+      "index": 848,
+      "word": "It",
+      "start": 317.64,
+      "end": 317.76,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "it"
+    },
+    {
+      "index": 849,
+      "word": "is",
+      "start": 317.76,
+      "end": 317.88,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "is"
+    },
+    {
+      "index": 850,
+      "word": "choosing",
+      "start": 317.88,
+      "end": 318.12,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "choosing"
+    },
+    {
+      "index": 851,
+      "word": "the",
+      "start": 318.12,
+      "end": 318.44,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 852,
+      "word": "best",
+      "start": 318.44,
+      "end": 318.6,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "best"
+    },
+    {
+      "index": 853,
+      "word": "system.",
+      "start": 318.6,
+      "end": 318.9,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "system."
+    },
+    {
+      "index": 854,
+      "word": "The",
+      "start": 319.56,
+      "end": 319.72,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "The"
+    },
+    {
+      "index": 855,
+      "word": "product",
+      "start": 319.72,
+      "end": 320.0,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "product"
+    },
+    {
+      "index": 856,
+      "word": "has",
+      "start": 320.0,
+      "end": 320.22,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "has"
+    },
+    {
+      "index": 857,
+      "word": "to",
+      "start": 320.22,
+      "end": 320.38,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 858,
+      "word": "arrive",
+      "start": 320.38,
+      "end": 320.6,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "arrive"
+    },
+    {
+      "index": 859,
+      "word": "on",
+      "start": 320.6,
+      "end": 320.86,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "on"
+    },
+    {
+      "index": 860,
+      "word": "time.",
+      "start": 320.86,
+      "end": 321.14,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "time,"
+    },
+    {
+      "index": 861,
+      "word": "The",
+      "start": 321.7,
+      "end": 321.86,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 862,
+      "word": "quality",
+      "start": 321.86,
+      "end": 322.08,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "quality"
+    },
+    {
+      "index": 863,
+      "word": "has",
+      "start": 322.08,
+      "end": 322.36,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "has"
+    },
+    {
+      "index": 864,
+      "word": "to",
+      "start": 322.36,
+      "end": 322.52,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 865,
+      "word": "be",
+      "start": 322.52,
+      "end": 322.62,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "be"
+    },
+    {
+      "index": 866,
+      "word": "good.",
+      "start": 322.62,
+      "end": 322.84,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "good,"
+    },
+    {
+      "index": 867,
+      "word": "The",
+      "start": 323.44,
+      "end": 323.54,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 868,
+      "word": "packaging",
+      "start": 323.54,
+      "end": 323.88,
+      "duration": 0.34,
+      "source": "matched",
+      "recognized_word": "packaging"
+    },
+    {
+      "index": 869,
+      "word": "has",
+      "start": 323.88,
+      "end": 324.28,
+      "duration": 0.4,
+      "source": "matched",
+      "recognized_word": "has"
+    },
+    {
+      "index": 870,
+      "word": "to",
+      "start": 324.28,
+      "end": 324.44,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 871,
+      "word": "make",
+      "start": 324.44,
+      "end": 324.6,
+      "duration": 0.16,
+      "source": "matched",
+      "recognized_word": "make"
+    },
+    {
+      "index": 872,
+      "word": "sense.",
+      "start": 324.6,
+      "end": 324.86,
+      "duration": 0.26,
+      "source": "matched",
+      "recognized_word": "sense,"
+    },
+    {
+      "index": 873,
+      "word": "The",
+      "start": 325.54,
+      "end": 325.64,
+      "duration": 0.1,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 874,
+      "word": "cost",
+      "start": 325.64,
+      "end": 325.88,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "cost"
+    },
+    {
+      "index": 875,
+      "word": "has",
+      "start": 325.88,
+      "end": 326.18,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "has"
+    },
+    {
+      "index": 876,
+      "word": "to",
+      "start": 326.18,
+      "end": 326.32,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 877,
+      "word": "protect",
+      "start": 326.32,
+      "end": 326.56,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "protect"
+    },
+    {
+      "index": 878,
+      "word": "margin.",
+      "start": 326.56,
+      "end": 326.84,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "margin,"
+    },
+    {
+      "index": 879,
+      "word": "The",
+      "start": 327.5,
+      "end": 327.62,
+      "duration": 0.12,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 880,
+      "word": "order",
+      "start": 327.62,
+      "end": 327.84,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "order"
+    },
+    {
+      "index": 881,
+      "word": "size",
+      "start": 327.84,
+      "end": 328.16,
+      "duration": 0.32,
+      "source": "matched",
+      "recognized_word": "size"
+    },
+    {
+      "index": 882,
+      "word": "has",
+      "start": 328.16,
+      "end": 328.46,
+      "duration": 0.3,
+      "source": "matched",
+      "recognized_word": "has"
+    },
+    {
+      "index": 883,
+      "word": "to",
+      "start": 328.46,
+      "end": 328.6,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 884,
+      "word": "match",
+      "start": 328.6,
+      "end": 328.8,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "match"
+    },
+    {
+      "index": 885,
+      "word": "real",
+      "start": 328.8,
+      "end": 329.04,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "real"
+    },
+    {
+      "index": 886,
+      "word": "demand.",
+      "start": 329.04,
+      "end": 329.32,
+      "duration": 0.28,
+      "source": "matched",
+      "recognized_word": "demand."
+    },
+    {
+      "index": 887,
+      "word": "In",
+      "start": 330.02,
+      "end": 330.08,
+      "duration": 0.06,
+      "source": "matched",
+      "recognized_word": "In"
+    },
+    {
+      "index": 888,
+      "word": "Module",
+      "start": 330.08,
+      "end": 330.26,
+      "duration": 0.18,
+      "source": "matched",
+      "recognized_word": "module"
+    },
+    {
+      "index": 889,
+      "word": "1,",
+      "start": 330.26,
+      "end": 330.7,
+      "duration": 0.44,
+      "source": "matched",
+      "recognized_word": "one,"
+    },
+    {
+      "index": 890,
+      "word": "you",
+      "start": 330.88,
+      "end": 330.96,
+      "duration": 0.08,
+      "source": "matched",
+      "recognized_word": "you"
+    },
+    {
+      "index": 891,
+      "word": "learned",
+      "start": 330.96,
+      "end": 331.08,
+      "duration": 0.12,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 892,
+      "word": "to",
+      "start": 331.08,
+      "end": 331.28,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "to"
+    },
+    {
+      "index": 893,
+      "word": "follow",
+      "start": 331.28,
+      "end": 331.5,
+      "duration": 0.22,
+      "source": "matched",
+      "recognized_word": "follow"
+    },
+    {
+      "index": 894,
+      "word": "the",
+      "start": 331.5,
+      "end": 331.64,
+      "duration": 0.14,
+      "source": "matched",
+      "recognized_word": "the"
+    },
+    {
+      "index": 895,
+      "word": "money.",
+      "start": 331.64,
+      "end": 331.84,
+      "duration": 0.2,
+      "source": "matched",
+      "recognized_word": "money"
+    },
+    {
+      "index": 896,
+      "word": "In",
+      "start": 331.84,
+      "end": 332.5,
+      "duration": 0.66,
+      "source": "matched",
+      "recognized_word": "in"
+    },
+    {
+      "index": 897,
+      "word": "Module",
+      "start": 332.5,
+      "end": 332.74,
+      "duration": 0.24,
+      "source": "matched",
+      "recognized_word": "module."
+    },
+    {
+      "index": 898,
+      "word": "2,",
+      "start": 332.74,
+      "end": 333.19,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 899,
+      "word": "you",
+      "start": 336.209,
+      "end": 336.659,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 900,
+      "word": "learned",
+      "start": 339.677,
+      "end": 340.127,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 901,
+      "word": "to",
+      "start": 343.146,
+      "end": 343.596,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 902,
+      "word": "find",
+      "start": 346.614,
+      "end": 347.064,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 903,
+      "word": "the",
+      "start": 350.083,
+      "end": 350.533,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 904,
+      "word": "friction.",
+      "start": 353.551,
+      "end": 354.001,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 905,
+      "word": "In",
+      "start": 357.02,
+      "end": 357.47,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 906,
+      "word": "Module",
+      "start": 360.488,
+      "end": 360.938,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 907,
+      "word": "3,",
+      "start": 363.957,
+      "end": 364.407,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 908,
+      "word": "you",
+      "start": 367.425,
+      "end": 367.875,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 909,
+      "word": "learned",
+      "start": 370.894,
+      "end": 371.344,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 910,
+      "word": "to",
+      "start": 374.362,
+      "end": 374.812,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 911,
+      "word": "read",
+      "start": 377.831,
+      "end": 378.281,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 912,
+      "word": "the",
+      "start": 381.299,
+      "end": 381.749,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 913,
+      "word": "shelf.",
+      "start": 384.768,
+      "end": 385.218,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 914,
+      "word": "In",
+      "start": 388.236,
+      "end": 388.686,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 915,
+      "word": "Module",
+      "start": 391.705,
+      "end": 392.155,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 916,
+      "word": "4,",
+      "start": 395.173,
+      "end": 395.623,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 917,
+      "word": "you",
+      "start": 398.642,
+      "end": 399.092,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 918,
+      "word": "learned",
+      "start": 402.11,
+      "end": 402.56,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 919,
+      "word": "how",
+      "start": 405.579,
+      "end": 406.029,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 920,
+      "word": "control",
+      "start": 409.047,
+      "end": 409.497,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 921,
+      "word": "brands",
+      "start": 412.516,
+      "end": 412.966,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 922,
+      "word": "improve",
+      "start": 415.984,
+      "end": 416.434,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 923,
+      "word": "what",
+      "start": 419.453,
+      "end": 419.903,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 924,
+      "word": "already",
+      "start": 422.921,
+      "end": 423.371,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 925,
+      "word": "works.",
+      "start": 426.39,
+      "end": 426.84,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 926,
+      "word": "Now",
+      "start": 429.858,
+      "end": 430.308,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 927,
+      "word": "you",
+      "start": 433.327,
+      "end": 433.777,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 928,
+      "word": "know",
+      "start": 436.795,
+      "end": 437.245,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 929,
+      "word": "where",
+      "start": 440.264,
+      "end": 440.714,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 930,
+      "word": "value",
+      "start": 443.732,
+      "end": 444.182,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 931,
+      "word": "is",
+      "start": 447.201,
+      "end": 447.651,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 932,
+      "word": "actually",
+      "start": 450.669,
+      "end": 451.119,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 933,
+      "word": "made.",
+      "start": 454.138,
+      "end": 454.588,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 934,
+      "word": "Not",
+      "start": 457.606,
+      "end": 458.056,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 935,
+      "word": "in",
+      "start": 461.075,
+      "end": 461.525,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 936,
+      "word": "the",
+      "start": 464.543,
+      "end": 464.993,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 937,
+      "word": "logo.",
+      "start": 468.012,
+      "end": 468.462,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 938,
+      "word": "Not",
+      "start": 471.48,
+      "end": 471.93,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 939,
+      "word": "in",
+      "start": 474.949,
+      "end": 475.399,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 940,
+      "word": "the",
+      "start": 478.417,
+      "end": 478.867,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 941,
+      "word": "idea.",
+      "start": 481.886,
+      "end": 482.336,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 942,
+      "word": "Not",
+      "start": 485.354,
+      "end": 485.804,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 943,
+      "word": "in",
+      "start": 488.823,
+      "end": 489.273,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 944,
+      "word": "the",
+      "start": 492.291,
+      "end": 492.741,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 945,
+      "word": "spreadsheet",
+      "start": 495.76,
+      "end": 496.21,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 946,
+      "word": "alone.",
+      "start": 499.228,
+      "end": 499.678,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 947,
+      "word": "Value",
+      "start": 502.697,
+      "end": 503.147,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 948,
+      "word": "is",
+      "start": 506.165,
+      "end": 506.615,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 949,
+      "word": "made",
+      "start": 509.634,
+      "end": 510.084,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 950,
+      "word": "in",
+      "start": 513.102,
+      "end": 513.552,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 951,
+      "word": "the",
+      "start": 516.571,
+      "end": 517.021,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 952,
+      "word": "kitchen:",
+      "start": 520.039,
+      "end": 520.489,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 953,
+      "word": "the",
+      "start": 523.508,
+      "end": 523.958,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 954,
+      "word": "supplier,",
+      "start": 526.976,
+      "end": 527.426,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 955,
+      "word": "the",
+      "start": 530.445,
+      "end": 530.895,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 956,
+      "word": "spec,",
+      "start": 533.913,
+      "end": 534.363,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 957,
+      "word": "the",
+      "start": 537.382,
+      "end": 537.832,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 958,
+      "word": "cost,",
+      "start": 540.85,
+      "end": 541.3,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 959,
+      "word": "the",
+      "start": 544.319,
+      "end": 544.769,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 960,
+      "word": "quality,",
+      "start": 547.787,
+      "end": 548.237,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 961,
+      "word": "the",
+      "start": 551.256,
+      "end": 551.706,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 962,
+      "word": "packaging,",
+      "start": 554.724,
+      "end": 555.174,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 963,
+      "word": "the",
+      "start": 558.193,
+      "end": 558.643,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 964,
+      "word": "timing,",
+      "start": 561.661,
+      "end": 562.111,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 965,
+      "word": "and",
+      "start": 565.13,
+      "end": 565.58,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 966,
+      "word": "the",
+      "start": 568.598,
+      "end": 569.048,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 967,
+      "word": "margin.",
+      "start": 572.067,
+      "end": 572.517,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 968,
+      "word": "A",
+      "start": 575.535,
+      "end": 575.985,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 969,
+      "word": "good",
+      "start": 579.004,
+      "end": 579.454,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 970,
+      "word": "business",
+      "start": 582.472,
+      "end": 582.922,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 971,
+      "word": "does",
+      "start": 585.941,
+      "end": 586.391,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 972,
+      "word": "not",
+      "start": 589.409,
+      "end": 589.859,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 973,
+      "word": "just",
+      "start": 592.878,
+      "end": 593.328,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 974,
+      "word": "ask,",
+      "start": 596.346,
+      "end": 596.796,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 975,
+      "word": "“Can",
+      "start": 599.815,
+      "end": 600.265,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 976,
+      "word": "we",
+      "start": 603.283,
+      "end": 603.733,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 977,
+      "word": "sell",
+      "start": 606.752,
+      "end": 607.202,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 978,
+      "word": "this?”",
+      "start": 610.22,
+      "end": 610.67,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 979,
+      "word": "It",
+      "start": 613.689,
+      "end": 614.139,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 980,
+      "word": "asks:",
+      "start": 617.157,
+      "end": 617.607,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 981,
+      "word": "Can",
+      "start": 620.626,
+      "end": 621.076,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 982,
+      "word": "we",
+      "start": 624.094,
+      "end": 624.544,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 983,
+      "word": "source",
+      "start": 627.563,
+      "end": 628.013,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 984,
+      "word": "it",
+      "start": 631.031,
+      "end": 631.481,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 985,
+      "word": "well",
+      "start": 634.5,
+      "end": 634.95,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 986,
+      "word": "enough",
+      "start": 637.968,
+      "end": 638.418,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 987,
+      "word": "to",
+      "start": 641.437,
+      "end": 641.887,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 988,
+      "word": "keep",
+      "start": 644.905,
+      "end": 645.355,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 989,
+      "word": "the",
+      "start": 648.374,
+      "end": 648.824,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 990,
+      "word": "promise",
+      "start": 651.842,
+      "end": 652.292,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 991,
+      "word": "and",
+      "start": 655.311,
+      "end": 655.761,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 992,
+      "word": "make",
+      "start": 658.779,
+      "end": 659.229,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 993,
+      "word": "the",
+      "start": 662.248,
+      "end": 662.698,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 994,
+      "word": "math",
+      "start": 665.716,
+      "end": 666.166,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    },
+    {
+      "index": 995,
+      "word": "work?",
+      "start": 669.185,
+      "end": 669.635,
+      "duration": 0.45,
+      "source": "interpolated",
+      "recognized_word": null
+    }
+  ]
+}

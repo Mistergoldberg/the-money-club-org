@@ -1,0 +1,962 @@
+{
+  "language": "en",
+  "language_probability": 1,
+  "duration": 903.810625,
+  "segments": 369,
+  "model": "small.en",
+  "audio": "channels.mp3",
+  "audio_sha256": "9645b38a1fe57e9372a13bce863caac2f4aa969158a8fd057792c727365ffc79",
+  "source": "channels_transcript.txt",
+  "source_sha256": "cc5d5914f4acc86389881f26de40fe9999a21f0384432222aaf07753ce4dc851",
+  "expected_words": 2333,
+  "output_words": 2333,
+  "recognized_words": 2340,
+  "direct_matches": 2178,
+  "interpolated_words": 155,
+  "match_rate": 0.9335619374196313,
+  "exact_transcript_preserved": true,
+  "interpolated_details": [
+    {
+      "word": "7,",
+      "start": 9.3,
+      "end": 10.22,
+      "matched": false
+    },
+    {
+      "word": "&",
+      "start": 13.34,
+      "end": 13.62,
+      "matched": false
+    },
+    {
+      "word": "five-second",
+      "start": 15.46,
+      "end": 15.92,
+      "matched": false
+    },
+    {
+      "word": "Empty-Street",
+      "start": 77.36,
+      "end": 77.96,
+      "matched": false
+    },
+    {
+      "word": "centre",
+      "start": 127.46,
+      "end": 128.44,
+      "matched": false
+    },
+    {
+      "word": "neighbourhood",
+      "start": 129.9,
+      "end": 130.16,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 152.46,
+      "end": 152.68,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 153.64,
+      "end": 153.8,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 155.96,
+      "end": 156.1,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 157.34,
+      "end": 157.88,
+      "matched": false
+    },
+    {
+      "word": "pre-orders",
+      "start": 158.2,
+      "end": 159.42,
+      "matched": false
+    },
+    {
+      "word": "pre-order.",
+      "start": 169.26,
+      "end": 170.2,
+      "matched": false
+    },
+    {
+      "word": "pre-orders,",
+      "start": 274.48,
+      "end": 275.34,
+      "matched": false
+    },
+    {
+      "word": "pop-up.",
+      "start": 276.14,
+      "end": 277.26,
+      "matched": false
+    },
+    {
+      "word": "Neighbourhood",
+      "start": 320.64,
+      "end": 321.08,
+      "matched": false
+    },
+    {
+      "word": "neighbourhood",
+      "start": 336.84,
+      "end": 337.14,
+      "matched": false
+    },
+    {
+      "word": "neighbourhood",
+      "start": 400.32,
+      "end": 400.6,
+      "matched": false
+    },
+    {
+      "word": "pop-up.",
+      "start": 436.44,
+      "end": 437.82,
+      "matched": false
+    },
+    {
+      "word": "noticeboard",
+      "start": 467.84,
+      "end": 468.58,
+      "matched": false
+    },
+    {
+      "word": "neighbourhood",
+      "start": 535.2,
+      "end": 535.98,
+      "matched": false
+    },
+    {
+      "word": "neighbourhood",
+      "start": 568.0,
+      "end": 568.32,
+      "matched": false
+    },
+    {
+      "word": "Question",
+      "start": 610.08,
+      "end": 610.216,
+      "matched": false
+    },
+    {
+      "word": "What",
+      "start": 610.216,
+      "end": 610.352,
+      "matched": false
+    },
+    {
+      "word": "You",
+      "start": 610.352,
+      "end": 610.488,
+      "matched": false
+    },
+    {
+      "word": "Are",
+      "start": 610.488,
+      "end": 610.624,
+      "matched": false
+    },
+    {
+      "word": "Testing",
+      "start": 610.624,
+      "end": 610.76,
+      "matched": false
+    },
+    {
+      "word": "Money,",
+      "start": 616.76,
+      "end": 619.8,
+      "matched": false
+    },
+    {
+      "word": "fees,",
+      "start": 620.16,
+      "end": 621.1,
+      "matched": false
+    },
+    {
+      "word": "or",
+      "start": 621.6,
+      "end": 621.8133333333334,
+      "matched": false
+    },
+    {
+      "word": "shared",
+      "start": 621.8133333333334,
+      "end": 622.0266666666666,
+      "matched": false
+    },
+    {
+      "word": "revenue",
+      "start": 622.0266666666666,
+      "end": 622.24,
+      "matched": false
+    },
+    {
+      "word": "it",
+      "start": 623.32,
+      "end": 623.72,
+      "matched": false
+    },
+    {
+      "word": "it",
+      "start": 628.38,
+      "end": 628.74,
+      "matched": false
+    },
+    {
+      "word": "damaged",
+      "start": 650.54,
+      "end": 650.82,
+      "matched": false
+    },
+    {
+      "word": "Fit",
+      "start": 671.34,
+      "end": 672.34,
+      "matched": false
+    },
+    {
+      "word": "Speed",
+      "start": 673.98,
+      "end": 674.88,
+      "matched": false
+    },
+    {
+      "word": "Conversion",
+      "start": 675.2,
+      "end": 675.9200000000001,
+      "matched": false
+    },
+    {
+      "word": "Path",
+      "start": 675.9200000000001,
+      "end": 676.64,
+      "matched": false
+    },
+    {
+      "word": "Overall",
+      "start": 676.64,
+      "end": 677.36,
+      "matched": false
+    },
+    {
+      "word": "High",
+      "start": 679.24,
+      "end": 679.28,
+      "matched": false
+    },
+    {
+      "word": "High",
+      "start": 679.28,
+      "end": 679.3199999999999,
+      "matched": false
+    },
+    {
+      "word": "Fast",
+      "start": 679.3199999999999,
+      "end": 679.3599999999999,
+      "matched": false
+    },
+    {
+      "word": "Low",
+      "start": 679.3599999999999,
+      "end": 679.3999999999999,
+      "matched": false
+    },
+    {
+      "word": "Message",
+      "start": 679.3999999999999,
+      "end": 679.4399999999998,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 679.4399999999998,
+      "end": 679.4799999999998,
+      "matched": false
+    },
+    {
+      "word": "order",
+      "start": 679.4799999999998,
+      "end": 679.5199999999998,
+      "matched": false
+    },
+    {
+      "word": "form",
+      "start": 679.5199999999998,
+      "end": 679.5599999999997,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 679.5599999999997,
+      "end": 679.5999999999997,
+      "matched": false
+    },
+    {
+      "word": "pre-order",
+      "start": 679.5999999999997,
+      "end": 679.6399999999996,
+      "matched": false
+    },
+    {
+      "word": "1",
+      "start": 679.6399999999996,
+      "end": 679.6799999999996,
+      "matched": false
+    },
+    {
+      "word": "School",
+      "start": 679.6799999999996,
+      "end": 679.7199999999996,
+      "matched": false
+    },
+    {
+      "word": "newsletter",
+      "start": 679.7199999999996,
+      "end": 679.7599999999995,
+      "matched": false
+    },
+    {
+      "word": "High",
+      "start": 679.7599999999995,
+      "end": 679.7999999999995,
+      "matched": false
+    },
+    {
+      "word": "High",
+      "start": 679.7999999999995,
+      "end": 679.8399999999995,
+      "matched": false
+    },
+    {
+      "word": "Medium",
+      "start": 679.8399999999995,
+      "end": 679.8799999999994,
+      "matched": false
+    },
+    {
+      "word": "Low",
+      "start": 679.8799999999994,
+      "end": 679.9199999999994,
+      "matched": false
+    },
+    {
+      "word": "Email",
+      "start": 679.9199999999994,
+      "end": 679.9599999999994,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 679.9599999999994,
+      "end": 679.9999999999993,
+      "matched": false
+    },
+    {
+      "word": "QR",
+      "start": 679.9999999999993,
+      "end": 680.0399999999993,
+      "matched": false
+    },
+    {
+      "word": "code",
+      "start": 680.0399999999993,
+      "end": 680.0799999999992,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 680.0799999999992,
+      "end": 680.1199999999992,
+      "matched": false
+    },
+    {
+      "word": "product",
+      "start": 680.1199999999992,
+      "end": 680.1599999999992,
+      "matched": false
+    },
+    {
+      "word": "page",
+      "start": 680.1599999999992,
+      "end": 680.1999999999991,
+      "matched": false
+    },
+    {
+      "word": "2",
+      "start": 680.1999999999991,
+      "end": 680.2399999999991,
+      "matched": false
+    },
+    {
+      "word": "Local",
+      "start": 680.2399999999991,
+      "end": 680.2799999999991,
+      "matched": false
+    },
+    {
+      "word": "business",
+      "start": 680.2799999999991,
+      "end": 680.319999999999,
+      "matched": false
+    },
+    {
+      "word": "poster",
+      "start": 680.319999999999,
+      "end": 680.359999999999,
+      "matched": false
+    },
+    {
+      "word": "Medium",
+      "start": 680.359999999999,
+      "end": 680.399999999999,
+      "matched": false
+    },
+    {
+      "word": "Medium",
+      "start": 680.399999999999,
+      "end": 680.4399999999989,
+      "matched": false
+    },
+    {
+      "word": "Fast",
+      "start": 680.4399999999989,
+      "end": 680.4799999999989,
+      "matched": false
+    },
+    {
+      "word": "Low",
+      "start": 680.4799999999989,
+      "end": 680.5199999999988,
+      "matched": false
+    },
+    {
+      "word": "Poster",
+      "start": 680.5199999999988,
+      "end": 680.5599999999988,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 680.5599999999988,
+      "end": 680.5999999999988,
+      "matched": false
+    },
+    {
+      "word": "QR",
+      "start": 680.5999999999988,
+      "end": 680.6399999999987,
+      "matched": false
+    },
+    {
+      "word": "code",
+      "start": 680.6399999999987,
+      "end": 680.6799999999987,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 680.6799999999987,
+      "end": 680.7199999999987,
+      "matched": false
+    },
+    {
+      "word": "order",
+      "start": 680.7199999999987,
+      "end": 680.7599999999986,
+      "matched": false
+    },
+    {
+      "word": "form",
+      "start": 680.7599999999986,
+      "end": 680.7999999999986,
+      "matched": false
+    },
+    {
+      "word": "3",
+      "start": 680.7999999999986,
+      "end": 680.8399999999986,
+      "matched": false
+    },
+    {
+      "word": "General",
+      "start": 680.8399999999986,
+      "end": 680.8799999999985,
+      "matched": false
+    },
+    {
+      "word": "social",
+      "start": 680.8799999999985,
+      "end": 680.9199999999985,
+      "matched": false
+    },
+    {
+      "word": "post",
+      "start": 680.9199999999985,
+      "end": 680.9599999999984,
+      "matched": false
+    },
+    {
+      "word": "Low",
+      "start": 680.9599999999984,
+      "end": 680.9999999999984,
+      "matched": false
+    },
+    {
+      "word": "Low",
+      "start": 680.9999999999984,
+      "end": 681.0399999999984,
+      "matched": false
+    },
+    {
+      "word": "Fast",
+      "start": 681.0399999999984,
+      "end": 681.0799999999983,
+      "matched": false
+    },
+    {
+      "word": "Low",
+      "start": 681.0799999999983,
+      "end": 681.1199999999983,
+      "matched": false
+    },
+    {
+      "word": "Post",
+      "start": 681.1199999999983,
+      "end": 681.1599999999983,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 681.1599999999983,
+      "end": 681.1999999999982,
+      "matched": false
+    },
+    {
+      "word": "link",
+      "start": 681.1999999999982,
+      "end": 681.2399999999982,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 681.2399999999982,
+      "end": 681.2799999999982,
+      "matched": false
+    },
+    {
+      "word": "product",
+      "start": 681.2799999999982,
+      "end": 681.3199999999981,
+      "matched": false
+    },
+    {
+      "word": "page",
+      "start": 681.3199999999981,
+      "end": 681.3599999999981,
+      "matched": false
+    },
+    {
+      "word": "4",
+      "start": 681.3599999999981,
+      "end": 681.399999999998,
+      "matched": false
+    },
+    {
+      "word": "Large",
+      "start": 681.399999999998,
+      "end": 681.439999999998,
+      "matched": false
+    },
+    {
+      "word": "influencer",
+      "start": 681.439999999998,
+      "end": 681.479999999998,
+      "matched": false
+    },
+    {
+      "word": "Unclear",
+      "start": 681.479999999998,
+      "end": 681.5199999999979,
+      "matched": false
+    },
+    {
+      "word": "Medium",
+      "start": 681.5199999999979,
+      "end": 681.5599999999979,
+      "matched": false
+    },
+    {
+      "word": "Slow",
+      "start": 681.5599999999979,
+      "end": 681.5999999999979,
+      "matched": false
+    },
+    {
+      "word": "High",
+      "start": 681.5999999999979,
+      "end": 681.6399999999978,
+      "matched": false
+    },
+    {
+      "word": "Post",
+      "start": 681.6399999999978,
+      "end": 681.6799999999978,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 681.6799999999978,
+      "end": 681.7199999999978,
+      "matched": false
+    },
+    {
+      "word": "link",
+      "start": 681.7199999999978,
+      "end": 681.7599999999977,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 681.7599999999977,
+      "end": 681.7999999999977,
+      "matched": false
+    },
+    {
+      "word": "order",
+      "start": 681.7999999999977,
+      "end": 681.8399999999976,
+      "matched": false
+    },
+    {
+      "word": "page",
+      "start": 681.8399999999976,
+      "end": 681.8799999999976,
+      "matched": false
+    },
+    {
+      "word": "5",
+      "start": 681.8799999999976,
+      "end": 681.9199999999976,
+      "matched": false
+    },
+    {
+      "word": "dog-walking",
+      "start": 684.22,
+      "end": 684.88,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 685.2,
+      "end": 685.4,
+      "matched": false
+    },
+    {
+      "word": "plant-watering",
+      "start": 693.58,
+      "end": 694.18,
+      "matched": false
+    },
+    {
+      "word": "neighbourhood",
+      "start": 695.2,
+      "end": 695.56,
+      "matched": false
+    },
+    {
+      "word": "=",
+      "start": 718.12,
+      "end": 718.58,
+      "matched": false
+    },
+    {
+      "word": "\u00f7",
+      "start": 719.84,
+      "end": 720.8,
+      "matched": false
+    },
+    {
+      "word": "\u00f7",
+      "start": 727.04,
+      "end": 727.56,
+      "matched": false
+    },
+    {
+      "word": "3",
+      "start": 727.56,
+      "end": 728.08,
+      "matched": false
+    },
+    {
+      "word": "=",
+      "start": 728.08,
+      "end": 728.6,
+      "matched": false
+    },
+    {
+      "word": "ten",
+      "start": 733.76,
+      "end": 734.0,
+      "matched": false
+    },
+    {
+      "word": "\u00f7",
+      "start": 735.78,
+      "end": 736.6,
+      "matched": false
+    },
+    {
+      "word": "=",
+      "start": 736.88,
+      "end": 737.24,
+      "matched": false
+    },
+    {
+      "word": "Channel",
+      "start": 773.62,
+      "end": 773.72,
+      "matched": false
+    },
+    {
+      "word": "Test",
+      "start": 773.72,
+      "end": 773.8199999999999,
+      "matched": false
+    },
+    {
+      "word": "Small",
+      "start": 773.8199999999999,
+      "end": 773.92,
+      "matched": false
+    },
+    {
+      "word": "First",
+      "start": 773.92,
+      "end": 774.02,
+      "matched": false
+    },
+    {
+      "word": "Move",
+      "start": 774.02,
+      "end": 774.12,
+      "matched": false
+    },
+    {
+      "word": "What",
+      "start": 774.12,
+      "end": 774.22,
+      "matched": false
+    },
+    {
+      "word": "to",
+      "start": 774.22,
+      "end": 774.3199999999999,
+      "matched": false
+    },
+    {
+      "word": "Measure",
+      "start": 774.3199999999999,
+      "end": 774.42,
+      "matched": false
+    },
+    {
+      "word": "with",
+      "start": 777.56,
+      "end": 778.0799999999999,
+      "matched": false
+    },
+    {
+      "word": "permission",
+      "start": 778.0799999999999,
+      "end": 778.6,
+      "matched": false
+    },
+    {
+      "word": "pre-orders",
+      "start": 781.28,
+      "end": 781.3199999999999,
+      "matched": false
+    },
+    {
+      "word": "Local",
+      "start": 781.3199999999999,
+      "end": 781.3599999999999,
+      "matched": false
+    },
+    {
+      "word": "poster",
+      "start": 781.3599999999999,
+      "end": 781.3999999999999,
+      "matched": false
+    },
+    {
+      "word": "Display",
+      "start": 781.3999999999999,
+      "end": 781.4399999999998,
+      "matched": false
+    },
+    {
+      "word": "one",
+      "start": 781.4399999999998,
+      "end": 781.4799999999998,
+      "matched": false
+    },
+    {
+      "word": "poster",
+      "start": 781.4799999999998,
+      "end": 781.5199999999998,
+      "matched": false
+    },
+    {
+      "word": "for",
+      "start": 781.5199999999998,
+      "end": 781.5599999999997,
+      "matched": false
+    },
+    {
+      "word": "one",
+      "start": 781.5599999999997,
+      "end": 781.5999999999997,
+      "matched": false
+    },
+    {
+      "word": "week",
+      "start": 781.5999999999997,
+      "end": 781.6399999999996,
+      "matched": false
+    },
+    {
+      "word": "QR",
+      "start": 781.6399999999996,
+      "end": 781.6799999999996,
+      "matched": false
+    },
+    {
+      "word": "scans",
+      "start": 781.6799999999996,
+      "end": 781.7199999999996,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 781.7199999999996,
+      "end": 781.7599999999995,
+      "matched": false
+    },
+    {
+      "word": "Community",
+      "start": 781.7999999999995,
+      "end": 781.84,
+      "matched": false
+    },
+    {
+      "word": "group",
+      "start": 781.84,
+      "end": 781.96,
+      "matched": false
+    },
+    {
+      "word": "Make",
+      "start": 781.96,
+      "end": 782.08,
+      "matched": false
+    },
+    {
+      "word": "one",
+      "start": 782.08,
+      "end": 782.2,
+      "matched": false
+    },
+    {
+      "word": "approved",
+      "start": 782.2,
+      "end": 782.32,
+      "matched": false
+    },
+    {
+      "word": "post",
+      "start": 782.32,
+      "end": 782.4399999999999,
+      "matched": false
+    },
+    {
+      "word": "Views,",
+      "start": 782.4399999999999,
+      "end": 782.56,
+      "matched": false
+    },
+    {
+      "word": "comments,",
+      "start": 782.56,
+      "end": 782.68,
+      "matched": false
+    },
+    {
+      "word": "messages,",
+      "start": 782.68,
+      "end": 782.8,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 782.8,
+      "end": 782.92,
+      "matched": false
+    },
+    {
+      "word": "sales",
+      "start": 782.92,
+      "end": 783.04,
+      "matched": false
+    },
+    {
+      "word": "pre-orders",
+      "start": 800.38,
+      "end": 801.58,
+      "matched": false
+    },
+    {
+      "word": "ranked",
+      "start": 852.92,
+      "end": 853.18,
+      "matched": false
+    },
+    {
+      "word": "7,",
+      "start": 867.74,
+      "end": 868.7,
+      "matched": false
+    },
+    {
+      "word": "learned",
+      "start": 868.74,
+      "end": 868.94,
+      "matched": false
+    }
+  ],
+  "first_word": {
+    "word": "Marketing:",
+    "start": 0.0,
+    "end": 0.54,
+    "matched": true
+  },
+  "last_word": {
+    "word": "walk.",
+    "start": 900.1,
+    "end": 900.46,
+    "matched": true
+  }
+}

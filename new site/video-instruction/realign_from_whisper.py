@@ -18,6 +18,7 @@ TIMING_RE = re.compile(
     r"(?P<start>\d{2}:\d{2}:\d{2},\d{3})\s+-->\s+"
     r"(?P<end>\d{2}:\d{2}:\d{2},\d{3})"
 )
+MIN_CUE_DURATION = 0.04
 
 
 def normalize_word(value: str) -> str:
@@ -164,6 +165,33 @@ def interpolate_words(
     return result
 
 
+def repair_cue_boundaries(
+    words: list[dict], duration: float, minimum_duration: float = MIN_CUE_DURATION
+) -> list[dict]:
+    """Keep one-word cues readable when Whisper collapses adjacent boundaries."""
+    if not words:
+        return words
+
+    latest_start = max(0.0, duration - minimum_duration)
+    for index, item in enumerate(words):
+        start = max(0.0, min(float(item["start"]), latest_start))
+        if index:
+            start = max(start, words[index - 1]["start"] + minimum_duration)
+        item["start"] = min(start, latest_start)
+
+    for index, item in enumerate(words):
+        start = float(item["start"])
+        next_start = (
+            float(words[index + 1]["start"]) if index + 1 < len(words) else duration
+        )
+        end = max(float(item["end"]), start + minimum_duration)
+        if next_start > start:
+            end = min(end, next_start)
+        item["end"] = max(start + minimum_duration, min(end, duration))
+
+    return words
+
+
 def format_srt_time(seconds: float) -> str:
     milliseconds = max(0, round(seconds * 1000))
     hours, remainder = divmod(milliseconds, 3_600_000)
@@ -265,6 +293,7 @@ def main() -> None:
     recognized, info = transcribe_words(args.audio, args.model)
     matches = build_matches(expected, recognized)
     aligned = interpolate_words(expected, recognized, matches, info["duration"])
+    aligned = repair_cue_boundaries(aligned, info["duration"])
     validate_alignment(expected, aligned, info["duration"])
 
     write_srt(args.output_srt, aligned)

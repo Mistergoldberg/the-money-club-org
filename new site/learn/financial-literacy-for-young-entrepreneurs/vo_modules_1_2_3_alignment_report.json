@@ -1,0 +1,459 @@
+{
+  "language": "en",
+  "language_probability": 1,
+  "duration": 380.186125,
+  "segments": 57,
+  "model": "small.en",
+  "audio": "vo_modules_1_2_3.mp3",
+  "audio_sha256": "37335b789d2e6c32c599763ef2051412ced575c927631f683e829312b3331764",
+  "source": "vo_modules_1_2_3_transcript.txt",
+  "source_sha256": "5172421d1cfceaa20f628ae06917a4e8a4d14222ce8e2bf1f73104e36b48658a",
+  "expected_words": 921,
+  "output_words": 921,
+  "recognized_words": 881,
+  "direct_matches": 850,
+  "interpolated_words": 71,
+  "match_rate": 0.9229098805646037,
+  "exact_transcript_preserved": true,
+  "interpolated_details": [
+    {
+      "word": "module",
+      "start": 0.0,
+      "end": 0.12,
+      "matched": false
+    },
+    {
+      "word": "1",
+      "start": 0.12,
+      "end": 0.16,
+      "matched": false
+    },
+    {
+      "word": "grown-up",
+      "start": 32.74,
+      "end": 33.1,
+      "matched": false
+    },
+    {
+      "word": "billion-dollar",
+      "start": 44.28,
+      "end": 44.86,
+      "matched": false
+    },
+    {
+      "word": "two",
+      "start": 56.4,
+      "end": 56.84,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 56.84,
+      "end": 57.28,
+      "matched": false
+    },
+    {
+      "word": "two",
+      "start": 59.0,
+      "end": 59.46,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 59.46,
+      "end": 59.92,
+      "matched": false
+    },
+    {
+      "word": "2",
+      "start": 135.56,
+      "end": 136.2,
+      "matched": false
+    },
+    {
+      "word": "revenue",
+      "start": 136.9,
+      "end": 137.195,
+      "matched": false
+    },
+    {
+      "word": "is",
+      "start": 137.195,
+      "end": 137.49,
+      "matched": false
+    },
+    {
+      "word": "not",
+      "start": 137.49,
+      "end": 137.78500000000003,
+      "matched": false
+    },
+    {
+      "word": "profit",
+      "start": 137.78500000000003,
+      "end": 138.08,
+      "matched": false
+    },
+    {
+      "word": "two",
+      "start": 141.8,
+      "end": 142.55,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 142.55,
+      "end": 143.3,
+      "matched": false
+    },
+    {
+      "word": "two",
+      "start": 144.42,
+      "end": 144.89999999999998,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 144.89999999999998,
+      "end": 145.38,
+      "matched": false
+    },
+    {
+      "word": "seventy-five",
+      "start": 162.1,
+      "end": 162.78,
+      "matched": false
+    },
+    {
+      "word": "two",
+      "start": 164.78,
+      "end": 165.32,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 165.32,
+      "end": 165.86,
+      "matched": false
+    },
+    {
+      "word": "seventy-five",
+      "start": 166.16,
+      "end": 166.88,
+      "matched": false
+    },
+    {
+      "word": "one",
+      "start": 167.24,
+      "end": 167.644,
+      "matched": false
+    },
+    {
+      "word": "dollar",
+      "start": 167.644,
+      "end": 168.048,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 168.048,
+      "end": 168.452,
+      "matched": false
+    },
+    {
+      "word": "twenty-five",
+      "start": 168.452,
+      "end": 168.856,
+      "matched": false
+    },
+    {
+      "word": "cents",
+      "start": 168.856,
+      "end": 169.26,
+      "matched": false
+    },
+    {
+      "word": "one",
+      "start": 195.14,
+      "end": 195.54,
+      "matched": false
+    },
+    {
+      "word": "thousand",
+      "start": 195.54,
+      "end": 195.94,
+      "matched": false
+    },
+    {
+      "word": "two",
+      "start": 197.4,
+      "end": 198.08666666666667,
+      "matched": false
+    },
+    {
+      "word": "thousand",
+      "start": 198.08666666666667,
+      "end": 198.77333333333334,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 198.77333333333334,
+      "end": 199.46,
+      "matched": false
+    },
+    {
+      "word": "seven",
+      "start": 200.68,
+      "end": 201.132,
+      "matched": false
+    },
+    {
+      "word": "hundred",
+      "start": 201.132,
+      "end": 201.584,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 201.584,
+      "end": 202.036,
+      "matched": false
+    },
+    {
+      "word": "fifty",
+      "start": 202.036,
+      "end": 202.488,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 202.488,
+      "end": 202.94,
+      "matched": false
+    },
+    {
+      "word": "one",
+      "start": 203.74,
+      "end": 204.11714285714285,
+      "matched": false
+    },
+    {
+      "word": "thousand",
+      "start": 204.11714285714285,
+      "end": 204.49428571428572,
+      "matched": false
+    },
+    {
+      "word": "two",
+      "start": 204.49428571428572,
+      "end": 204.87142857142857,
+      "matched": false
+    },
+    {
+      "word": "hundred",
+      "start": 204.87142857142857,
+      "end": 205.24857142857144,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 205.24857142857144,
+      "end": 205.62571428571428,
+      "matched": false
+    },
+    {
+      "word": "fifty",
+      "start": 205.62571428571428,
+      "end": 206.00285714285715,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 206.00285714285715,
+      "end": 206.38,
+      "matched": false
+    },
+    {
+      "word": "eight",
+      "start": 213.54,
+      "end": 213.86599999999999,
+      "matched": false
+    },
+    {
+      "word": "hundred",
+      "start": 213.86599999999999,
+      "end": 214.19199999999998,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 214.19199999999998,
+      "end": 214.518,
+      "matched": false
+    },
+    {
+      "word": "fifty",
+      "start": 214.518,
+      "end": 214.844,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 214.844,
+      "end": 215.17,
+      "matched": false
+    },
+    {
+      "word": "one",
+      "start": 216.5,
+      "end": 216.82285714285715,
+      "matched": false
+    },
+    {
+      "word": "thousand",
+      "start": 216.82285714285715,
+      "end": 217.1457142857143,
+      "matched": false
+    },
+    {
+      "word": "two",
+      "start": 217.1457142857143,
+      "end": 217.46857142857144,
+      "matched": false
+    },
+    {
+      "word": "hundred",
+      "start": 217.46857142857144,
+      "end": 217.79142857142855,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 217.79142857142855,
+      "end": 218.1142857142857,
+      "matched": false
+    },
+    {
+      "word": "fifty",
+      "start": 218.1142857142857,
+      "end": 218.43714285714285,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 218.43714285714285,
+      "end": 218.76,
+      "matched": false
+    },
+    {
+      "word": "eight",
+      "start": 219.66,
+      "end": 219.9875,
+      "matched": false
+    },
+    {
+      "word": "hundred",
+      "start": 219.9875,
+      "end": 220.315,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 220.315,
+      "end": 220.64249999999998,
+      "matched": false
+    },
+    {
+      "word": "fifty",
+      "start": 220.64249999999998,
+      "end": 220.97,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 220.97,
+      "end": 221.2975,
+      "matched": false
+    },
+    {
+      "word": "four",
+      "start": 221.2975,
+      "end": 221.625,
+      "matched": false
+    },
+    {
+      "word": "hundred",
+      "start": 221.625,
+      "end": 221.9525,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 221.9525,
+      "end": 222.28,
+      "matched": false
+    },
+    {
+      "word": "two",
+      "start": 225.58,
+      "end": 226.04666666666668,
+      "matched": false
+    },
+    {
+      "word": "thousand",
+      "start": 226.04666666666668,
+      "end": 226.51333333333332,
+      "matched": false
+    },
+    {
+      "word": "dollars",
+      "start": 226.51333333333332,
+      "end": 226.98,
+      "matched": false
+    },
+    {
+      "word": "four",
+      "start": 227.68,
+      "end": 228.17000000000002,
+      "matched": false
+    },
+    {
+      "word": "hundred",
+      "start": 228.17000000000002,
+      "end": 228.66,
+      "matched": false
+    },
+    {
+      "word": "twenty",
+      "start": 228.66,
+      "end": 229.14999999999998,
+      "matched": false
+    },
+    {
+      "word": "percent",
+      "start": 229.14999999999998,
+      "end": 229.64,
+      "matched": false
+    },
+    {
+      "word": "3",
+      "start": 253.04,
+      "end": 254.1,
+      "matched": false
+    }
+  ],
+  "first_word": {
+    "word": "module",
+    "start": 0.0,
+    "end": 0.12,
+    "matched": false
+  },
+  "last_word": {
+    "word": "begins",
+    "start": 376.48,
+    "end": 376.88,
+    "matched": true
+  },
+  "timing_repair": "enforced positive durations after interpolation; transcript words unchanged"
+}

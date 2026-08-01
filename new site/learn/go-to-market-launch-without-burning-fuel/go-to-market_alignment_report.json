@@ -1,0 +1,254 @@
+{
+  "language": "en",
+  "language_probability": 1,
+  "duration": 372.1665625,
+  "segments": 61,
+  "model": "small.en",
+  "audio": "go-to-market.mp3",
+  "audio_sha256": "20bd1a51bdf1ff7b9daf3a988af2ee095afa247e9f09902cba41f40d83f20549",
+  "source": "go-to-market_transcript.txt",
+  "source_sha256": "6a3496beecc8b7932c01655bd2e5c5ec638d9184fd38adff40877c4dfad1d9e9",
+  "expected_words": 953,
+  "output_words": 953,
+  "recognized_words": 992,
+  "direct_matches": 916,
+  "interpolated_words": 37,
+  "match_rate": 0.9611752360965372,
+  "exact_transcript_preserved": true,
+  "interpolated_details": [
+    {
+      "word": "Go-To-Market:",
+      "start": 0.0,
+      "end": 1.08,
+      "matched": false
+    },
+    {
+      "word": "Pop-Up",
+      "start": 5.1,
+      "end": 5.46,
+      "matched": false
+    },
+    {
+      "word": "1,000",
+      "start": 22.44,
+      "end": 23.04,
+      "matched": false
+    },
+    {
+      "word": "pop-up",
+      "start": 34.88,
+      "end": 35.34,
+      "matched": false
+    },
+    {
+      "word": "demand.",
+      "start": 93.26,
+      "end": 94.3,
+      "matched": false
+    },
+    {
+      "word": "Test",
+      "start": 99.24,
+      "end": 99.36,
+      "matched": false
+    },
+    {
+      "word": "What",
+      "start": 99.36,
+      "end": 99.47999999999999,
+      "matched": false
+    },
+    {
+      "word": "It",
+      "start": 99.47999999999999,
+      "end": 99.6,
+      "matched": false
+    },
+    {
+      "word": "Proves",
+      "start": 99.6,
+      "end": 99.64,
+      "matched": false
+    },
+    {
+      "word": "pre-order?",
+      "start": 111.92,
+      "end": 112.8,
+      "matched": false
+    },
+    {
+      "word": "pre-order",
+      "start": 122.74,
+      "end": 123.24,
+      "matched": false
+    },
+    {
+      "word": "That",
+      "start": 125.9,
+      "end": 126.51,
+      "matched": false
+    },
+    {
+      "word": "is",
+      "start": 126.51,
+      "end": 127.12,
+      "matched": false
+    },
+    {
+      "word": "Pop-Up",
+      "start": 133.66,
+      "end": 134.06,
+      "matched": false
+    },
+    {
+      "word": "pop-up",
+      "start": 135.34,
+      "end": 135.74,
+      "matched": false
+    },
+    {
+      "word": "Neighbours.",
+      "start": 142.8,
+      "end": 144.52,
+      "matched": false
+    },
+    {
+      "word": "pre-order",
+      "start": 162.54,
+      "end": 163.04,
+      "matched": false
+    },
+    {
+      "word": "pop-up",
+      "start": 164.16,
+      "end": 164.52,
+      "matched": false
+    },
+    {
+      "word": "pop-up",
+      "start": 180.12,
+      "end": 180.52,
+      "matched": false
+    },
+    {
+      "word": "student-run",
+      "start": 225.4,
+      "end": 225.88,
+      "matched": false
+    },
+    {
+      "word": "pop-up",
+      "start": 232.5,
+      "end": 232.98,
+      "matched": false
+    },
+    {
+      "word": "pop-up,",
+      "start": 238.28,
+      "end": 238.96,
+      "matched": false
+    },
+    {
+      "word": "Signal",
+      "start": 248.92,
+      "end": 249.105,
+      "matched": false
+    },
+    {
+      "word": "What",
+      "start": 249.105,
+      "end": 249.29,
+      "matched": false
+    },
+    {
+      "word": "It",
+      "start": 249.29,
+      "end": 249.475,
+      "matched": false
+    },
+    {
+      "word": "Means",
+      "start": 249.475,
+      "end": 249.66,
+      "matched": false
+    },
+    {
+      "word": "pre-order",
+      "start": 264.82,
+      "end": 266.44,
+      "matched": false
+    },
+    {
+      "word": "pre-ordered.",
+      "start": 290.02,
+      "end": 291.12,
+      "matched": false
+    },
+    {
+      "word": "1,",
+      "start": 329.98,
+      "end": 330.82,
+      "matched": false
+    },
+    {
+      "word": "learned",
+      "start": 330.98,
+      "end": 331.16,
+      "matched": false
+    },
+    {
+      "word": "2,",
+      "start": 332.96,
+      "end": 333.84,
+      "matched": false
+    },
+    {
+      "word": "learned",
+      "start": 333.9,
+      "end": 334.08,
+      "matched": false
+    },
+    {
+      "word": "3,",
+      "start": 335.92,
+      "end": 336.78,
+      "matched": false
+    },
+    {
+      "word": "learned",
+      "start": 336.94,
+      "end": 337.14,
+      "matched": false
+    },
+    {
+      "word": "4,",
+      "start": 339.18,
+      "end": 339.64,
+      "matched": false
+    },
+    {
+      "word": "5,",
+      "start": 343.5,
+      "end": 344.18,
+      "matched": false
+    },
+    {
+      "word": "pop-up",
+      "start": 364.88,
+      "end": 365.3,
+      "matched": false
+    }
+  ],
+  "first_word": {
+    "word": "Go-To-Market:",
+    "start": 0.0,
+    "end": 1.08,
+    "matched": false
+  },
+  "last_word": {
+    "word": "see.",
+    "start": 369.16,
+    "end": 369.44,
+    "matched": true
+  }
+}

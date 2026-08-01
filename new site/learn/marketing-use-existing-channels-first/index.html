@@ -1,0 +1,3405 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    Learning module template notes:
+    To create the next /learn/{slug}/ module, duplicate this folder and update:
+    title/meta/canonical/OG URL, Article JSON-LD, H1/dek/meta rows, H2 sections,
+    exercise block, key takeaways, related worksheet link, Learning Hub CTA, and sitemap.xml.
+    Use absolute root-relative asset paths from nested /learn/{slug}/ pages.
+    Do not link unpublished future modules from the public page.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marketing: Use Existing Channels First | The Money Club</title>
+  <link rel="icon" type="image/png" href="../../assets/favicon.png" />
+  <meta name="description" content="Marketing works better when students put the offer where the right customers already gather." />
+  <meta property="og:title" content="Marketing: Use Existing Channels First" />
+  <meta property="og:description" content="Marketing works better when students put the offer where the right customers already gather." />
+  <meta property="og:url" content="https://the-money-club.org/learn/marketing-use-existing-channels-first/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Marketing: Use Existing Channels First" />
+  <meta name="twitter:description" content="Marketing works better when students put the offer where the right customers already gather." />
+  <meta name="twitter:image" content="https://the-money-club.org/assets/Kids-Index.jpg" />
+  <link rel="canonical" href="https://the-money-club.org/learn/marketing-use-existing-channels-first/" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Marketing: Use Existing Channels First",
+      "description": "Marketing works better when students put the offer where the right customers already gather.",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://the-money-club.org/learn/marketing-use-existing-channels-first/"
+      },
+      "image": "https://the-money-club.org/assets/Kids-Index.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "The Money Club.Org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Money Club.Org",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://the-money-club.org/assets/logo-500.png"
+        }
+      },
+      "url": "https://the-money-club.org/learn/marketing-use-existing-channels-first/",
+      "datePublished": "2026-08-01",
+      "dateModified": "2026-08-01",
+      "isPartOf": {
+        "@type": "CollectionPage",
+        "name": "The Money Club Learning Hub",
+        "url": "https://the-money-club.org/learn/"
+      }
+    }
+  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #3d3d3d;
+      --line: #e5e1da;
+      --teal: #1e8a95;
+      --purple: #8c62a7;
+      --gold: #f0b43a;
+      --ink: #1a1a1a;
+
+      --font-body: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      --font-display: "Bebas Neue", sans-serif;
+      --tracking-display: 0.04em;
+      --lh-body: 1.45;
+      --lh-heading: 1.05;
+
+      --size-body: 23px;
+      --size-sm: clamp(14px, 1.2vw, 16px);
+      --size-lg: clamp(24px, 2.8vw, 34px);
+      --size-xl: clamp(38px, 6.2vw, 77px);
+      --size-hero: clamp(52px, 9vw, 110px);
+      --size-headline: clamp(34px, 5.2vw, 64px);
+
+      --max: 1200px;
+      --max-wide: 1320px;
+      --content-max: 72ch;
+      --pad: clamp(18px, 3.5vw, 34px);
+
+      --space-1: 6px;
+      --space-2: 10px;
+      --space-3: 16px;
+      --space-4: 24px;
+      --space-5: 36px;
+      --space-6: 56px;
+
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 22px;
+
+      --btn-size: clamp(16px, 1.6vw, 18px);
+      --btn-size-lg: clamp(31px, 5vw, 62px);
+
+      --topbar-height: 72px;
+      --scroll-offset: calc(var(--topbar-height) + var(--space-3));
+    }
+
+    *{ box-sizing:border-box; }
+    .sr-only{
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    html,body{ height:100%; }
+    html{ scroll-padding-top: var(--scroll-offset); }
+    body{
+      margin:0;
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      font-size: var(--size-body);
+      line-height: var(--lh-body);
+      padding-top: var(--topbar-height);
+    }
+
+    a{ color: inherit; text-decoration: none; }
+
+    h1, h2, h3{
+      margin: 0;
+
+      font-size: var(--size-lg);
+
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+      font-weight: 700;
+    }
+    h1{
+      font-size: calc(var(--size-hero) * 1.2);
+
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: 1.2;
+    }
+    h2{
+      font-size: var(--size-xl);
+
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: var(--lh-heading);
+    }
+    h3{
+      font-size: var(--size-lg);
+    }
+
+    .wrap{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 0 var(--pad);
+    }
+    .measure{
+      max-width: var(--content-max);
+    }
+
+    a:not(.btn):not(.cta-large):hover,
+    a:not(.btn):not(.cta-large):focus-visible{
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+
+    /* Top bar */
+    .topbar{
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+    }
+    .topbar .inner{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: var(--topbar-height);
+      padding: 10px var(--pad);
+      max-width: var(--max-wide);
+      margin: 0 auto;
+    }
+    .menu-btn{
+      width: 36px;
+      height: 28px;
+      display:grid;
+      gap: 6px;
+      align-content:center;
+      justify-items:start;
+
+      cursor: pointer;
+    }
+    .menu-btn span{
+      display:block;
+      width: 26px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--purple);
+    }
+
+    .menu-panel{
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.98);
+      border: 0;
+      padding: calc(var(--topbar-height) + 18px) var(--pad) 24px;
+      display: none;
+      z-index: 1200;
+      overflow-y: auto;
+    }
+    .menu-panel.is-open{
+      display: grid;
+      gap: 8px;
+      align-content: start;
+      justify-items: center;
+      text-align: center;
+    }
+    .menu-panel a{
+      padding: 6px 6px;
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 500;
+      line-height: 1.1;
+      font-size: clamp(26px, 3.2vw, 40px);
+    }
+    .menu-links{
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      align-content: start;
+      width: 100%;
+    }
+    .menu-panel .menu-cta{
+      text-transform: none;
+      letter-spacing: 0;
+      font-family: var(--font-body);
+      width: min(320px, 100%);
+      justify-content: center;
+      margin-top: 6px;
+      font-size: clamp(24px, 5.8vw, 31px);
+      line-height: 1.15;
+      font-weight: 500;
+      border-radius: 16px;
+      padding: 16px 26px;
+      min-height: 62px;
+      justify-self: center;
+    }
+
+    .menu-panel .btn{
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+nav{
+      display:flex;
+      gap: 0;
+      flex-wrap: nowrap;
+      align-items:center;
+      color: var(--ink);
+      font-size: 23px;
+      flex: 1;
+      justify-content: space-between;
+      margin-right: clamp(16px, 2vw, 30px);
+    }
+
+    .topbar nav a{
+      font-family: var(--font-body);
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    nav a.nav-hiring,
+    .menu-panel a.nav-hiring{
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-family: var(--font-display);
+      font-size: var(--btn-size);
+      border: 1px solid transparent;
+      white-space: normal;
+      text-align: center;
+      line-height: 0.9;
+      color: #ffffff;
+      transition: none;
+    }
+    .btn:hover,
+    .btn:focus-visible{
+      box-shadow: none;
+      filter: none;
+    }
+    .btn:active{
+      box-shadow: none;
+    }
+
+    .btn.gloss{
+      position: relative;
+      overflow: hidden;
+      transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+    }
+    .btn.gloss::after{
+      content: "";
+      position: absolute;
+      inset: -40% -20%;
+      background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.65) 50%, transparent 65%);
+      transform: translateX(-140%);
+      opacity: 0.7;
+      pointer-events: none;
+      animation: gloss-sweep 2.8s ease-in-out infinite;
+    }
+    .btn.gloss:hover,
+    .btn.gloss:focus-visible{
+      box-shadow: 0 14px 26px rgba(0,0,0,0.12);
+      filter: brightness(1.02);
+    }
+    .btn.gloss:active{
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+    .btn.purple{
+      background: var(--purple);
+      color: #ffffff;
+      box-shadow: 0 10px 20px rgba(140,98,167,0.25);
+    }
+    .btn.gold{
+      background: var(--gold);
+      color: var(--text);
+      box-shadow: 0 10px 20px rgba(240,180,58,0.25);
+    }
+
+    /* Banner */
+    .section-banner{
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .section-banner.gold{
+      background: var(--gold);
+      color: var(--ink);
+    }
+    .section-banner h2,
+    .content-banner h2,
+    .curriculum-banner h2,
+    .deploy-banner h2,
+    .math-banner h2,
+    .openbook-banner h2,
+    .quickfacts-banner h2,
+    .reserve-banner h2,
+    .teachers-banner h2,
+    .why-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .section-banner h2 span{
+      display: block;
+    }
+
+    /* Below hero */
+    .headline{
+      margin: 16px auto 0;
+      font-size: var(--size-headline);
+      line-height: 1.05;
+      position: relative;
+      display: block;
+      padding: 6px 14px;
+      background: linear-gradient(110deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.95) 50%, rgba(255,255,255,0.2) 100%);
+      background-size: 220% 100%;
+      animation: headline-glow 3.5s ease-in-out infinite;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    @keyframes headline-glow{
+      0%{ background-position: 0% 50%; }
+      50%{ background-position: 100% 50%; }
+      100%{ background-position: 0% 50%; }
+    }
+    .subhead{
+      font-size: var(--size-headline);
+      color: var(--muted);
+      line-height: inherit;
+      font-family: var(--font-display);
+      margin-top: 0.15rem;
+      max-width: var(--content-max);
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .below{
+      margin-top: 10px;
+      display:grid;
+      grid-template-columns: minmax(0, 1fr) minmax(440px, 560px);
+      gap: 18px;
+      align-items:start;
+    }
+    .trust{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--ink);
+      font-size: inherit;
+      line-height: inherit;
+    }
+    .trust li{ margin: 6px 0; }
+
+    .cta-stack{
+      display:grid;
+      gap: 14px;
+      width: min(100%, 520px);
+      align-items: stretch;
+      justify-self: end;
+    }
+    .cta-stack .btn{
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      padding: 22px 22px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+    .btn.purple.block{ border-radius: 16px; }
+    .btn.gold.block{ border-radius: 16px; }
+
+    .why-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .why-banner{
+      background: var(--teal);
+      color: #ffffff;
+      padding: 26px 0;
+    }
+    .why-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .why-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 20px var(--pad) 10px;
+    }
+    .why-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items:start;
+    }
+    .why-copy{
+      font-size: inherit;
+      line-height: inherit;
+      color: var(--ink);
+      max-width: var(--content-max);
+    }
+    .why-copy .lead{
+      font-size: inherit;
+      line-height: inherit;
+      margin-bottom: 18px;
+    }
+    .why-list{
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 18px;
+    }
+    .why-list li{
+      padding-left: 16px;
+      position: relative;
+      margin: 8px 0;
+    }
+    .why-list li::before{
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .why-media{
+      display:grid;
+      gap: 14px;
+    }
+    .why-illustration{
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow-y: auto;
+      background: #f2ede6;
+    }
+    .why-illustration img{
+      display:block;
+      width: 100%;
+      height: auto;
+    }
+    .cta-large{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width: 100%;
+      padding: 18px 20px;
+      background: var(--gold);
+      color: var(--ink);
+      border-radius: 16px;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      line-height: 0.9;
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      box-shadow: 0 12px 22px rgba(240,180,58,0.25);
+      transition: none;
+    }
+    .cta-large:hover,
+    .cta-large:focus-visible{
+      box-shadow: 0 12px 22px rgba(240,180,58,0.25);
+      filter: none;
+    }
+    .cta-large:active{
+      box-shadow: 0 12px 22px rgba(240,180,58,0.25);
+    }
+    .topbar .btn:not(.menu-cta){
+      font-family: var(--font-body);
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .topbar .btn::after{
+      content: "";
+      position: absolute;
+      inset: -40% -20%;
+      background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.65) 50%, transparent 65%);
+      transform: translateX(-140%);
+      opacity: 0.7;
+      pointer-events: none;
+      animation: gloss-sweep 2.8s ease-in-out infinite;
+    }
+    .topbar .btn:hover,
+    .topbar .btn:focus-visible{
+      box-shadow: 0 14px 26px rgba(0,0,0,0.12);
+      filter: brightness(1.02);
+    }
+    .topbar .btn:active{
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
+
+    @keyframes gloss-sweep{
+      0%{ transform: translateX(-140%); }
+      100%{ transform: translateX(140%); }
+    }
+
+    .curriculum-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .curriculum-banner{
+      background: var(--purple);
+      color: #ffffff;
+      padding: 26px 0;
+    }
+    .curriculum-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .curriculum-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 20px var(--pad) 10px;
+    }
+    .curriculum-grid{
+      display:grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 20px;
+      align-items:start;
+    }
+    .curriculum-copy{
+      max-width: var(--content-max);
+    }
+    .curriculum-media{
+      display:grid;
+      gap: 14px;
+    }
+    .curriculum-photo{
+      border-radius: 18px;
+      overflow-y: auto;
+      border: 1px solid var(--line);
+    }
+    .curriculum-photo img{
+      display:block;
+      width: 100%;
+      height: auto;
+    }
+    .btn.teal{
+      background: var(--teal);
+      color: #ffffff;
+      box-shadow: 0 12px 22px rgba(30,138,149,0.25);
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      border-radius: 16px;
+    }
+
+    .openbook-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .openbook-banner{
+      background: var(--gold);
+      color: var(--ink);
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .openbook-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .openbook-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 20px var(--pad) 10px;
+    }
+    .openbook-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+    .openbook-table{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: inherit;
+      margin: 10px 0 18px;
+    }
+    .openbook-intro p{
+      margin: 0 0 10px;
+    }
+    .openbook-intro p:last-child{
+      margin-bottom: 0;
+    }
+    .openbook-table th,
+    .openbook-table td{
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .openbook-table th{
+      font-weight: 700;
+      background: #ffffff;
+    }
+    .openbook-table td:last-child,
+    .openbook-table th:last-child{
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .openbook-card{
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      overflow-y: auto;
+      background: #ffffff;
+      padding: 14px;
+    }
+    .openbook-card img{
+      display:block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .openbook-side{
+      display:flex;
+      flex-direction: column;
+      gap: 18px;
+      height: 100%;
+    }
+    .openbook-pie-card{
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 16px;
+    }
+    .openbook-subheading{
+      margin: 0 0 10px;
+      text-align: center;
+    }
+    .openbook-pie{
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      background:
+        conic-gradient(
+          var(--purple) 0% 35%,
+          var(--teal) 35% 40%,
+          var(--gold) 40% 80%,
+          var(--ink) 80% 100%
+        );
+    }
+    .openbook-legend{
+      display:grid;
+      gap: 6px;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .openbook-legend li{
+      display:flex;
+      align-items:center;
+      gap: 8px;
+    }
+    .legend-dot{
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display:inline-block;
+    }
+    .openbook-photo{
+      margin-top: auto;
+      flex: 1;
+      display:flex;
+    }
+    .openbook-heading{
+      margin: 0 0 8px;
+    }
+    .openbook-center{
+      text-align: center;
+    }
+    .openbook-columns{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .openbook-copy{
+      display:flex;
+      flex-direction: column;
+      height: 100%;
+      max-width: var(--content-max);
+    }
+    .openbook-box{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #ffffff;
+    }
+    .openbook-box h3{
+      margin: 0 0 8px;
+    }
+    .openbook-box ul{
+      margin: 0;
+      padding-left: 18px;
+    }
+    .openbook-box li{ margin: 6px 0; }
+    .openbook-cta{
+      margin-top: auto;
+      padding-top: 16px;
+    }
+    .openbook-cta .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      border-radius: 16px;
+      padding: 26px 24px;
+    }
+
+    .teachers-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .teachers-banner{
+      background: var(--teal);
+      color: #ffffff;
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .teachers-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .teachers-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 10px;
+    }
+    .teachers-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items:start;
+    }
+    .teachers-item{
+      display:grid;
+      gap: 12px;
+      align-content:start;
+    }
+    .teachers-copy h3{
+      margin-bottom: 10px;
+    }
+    .teachers-copy{
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: var(--content-max);
+    }
+    .teachers-list{
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+    .teachers-list li{ margin: 6px 0; }
+    .teachers-cta{
+      display:flex;
+      gap: 10px;
+      width: 100%;
+      max-width: 420px;
+    }
+    .teachers-cta .btn{
+      padding: 10px 16px;
+      border-radius: 12px;
+      width: 100%;
+    }
+    .teachers-card{
+      border-radius: 18px;
+      padding: 22px;
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.2vw, 40px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      min-height: 0;
+      height: 100%;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+    }
+    .teachers-card.purple{ background: var(--purple); }
+    .teachers-card.teal{ background: var(--teal); }
+
+    .quickfacts-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .quickfacts-banner{
+      background: var(--purple);
+      color: #ffffff;
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .quickfacts-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .quickfacts-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 10px;
+      display:grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 20px;
+      align-items: stretch;
+    }
+    .quickfacts-content > div:first-child{
+      max-width: var(--content-max);
+    }
+    .quickfacts-list{
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+    .quickfacts-list li{ margin: 6px 0; }
+    .quickfacts-card{
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      padding: 20px;
+      display:grid;
+      gap: 12px;
+      align-content:center;
+      justify-items:center;
+      text-align: center;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+      height: 100%;
+    }
+    .quickfacts-card .btn{
+      width: 100%;
+      max-width: 420px;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+    }
+
+    .reserve-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .reserve-banner{
+      background: var(--gold);
+      color: var(--ink);
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .reserve-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .reserve-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 10px;
+      display:grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 20px;
+      align-items:start;
+    }
+    .reserve-copy{
+      display:grid;
+      gap: 10px;
+      max-width: var(--content-max);
+    }
+    .reserve-cta{
+      display:grid;
+      gap: 12px;
+      justify-items: start;
+      justify-self: start;
+      width: 100%;
+      max-width: 520px;
+    }
+    .reserve-cta .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      border-radius: 16px;
+      padding: 22px 22px;
+    }
+
+    .content-section{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .content-banner{
+      background: var(--gold);
+      color: var(--ink);
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .content-banner h2{ font-size: clamp(34px, 5vw, 56px); line-height: 0.8; }
+    .content-section.purple .content-banner{
+      background: var(--purple);
+      color: #ffffff;
+    }
+    .content-section.gold .content-banner{
+      background: var(--gold);
+      color: var(--ink);
+    }
+    .content-content{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 10px;
+    }
+    .content-copy{
+      max-width: var(--content-max);
+      display:grid;
+      gap: 12px;
+    }
+    .content-copy p{
+      margin: 0;
+    }
+    .content-list{
+      margin: 0;
+      padding-left: 20px;
+    }
+    .content-list li{
+      margin: 6px 0;
+    }
+    .form-grid{
+      display:grid;
+      gap: 16px;
+      max-width: var(--content-max);
+    }
+    .field-row{
+      display:grid;
+      gap: 16px;
+    }
+    .field-row.three-col{
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .field-row.two-col{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .field{
+      display:grid;
+      gap: 6px;
+    }
+    .field label{
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .field input,
+    .field select,
+    .field textarea{
+      font: inherit;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--ink);
+    }
+    .field small{
+      color: var(--muted);
+    }
+    .field-error{
+      display: none;
+      color: #b00020;
+      font-size: 14px;
+    }
+    .field.is-invalid .field-error{
+      display: block;
+    }
+    .field.is-invalid input,
+    .field.is-invalid select,
+    .field.is-invalid textarea{
+      border-color: #b00020;
+    }
+    .radio-group{
+      display:grid;
+      gap: 8px;
+    }
+    .radio-option{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 600;
+    }
+    .session-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .session-card{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      background: #f6f4ef;
+      display: grid;
+      gap: 10px;
+      cursor: pointer;
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+      position: relative;
+      min-height: 140px;
+      overflow: hidden;
+    }
+    .session-card::after{
+      content: "";
+      position: absolute;
+      inset: -40% -20%;
+      background: linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.65) 50%, transparent 65%);
+      transform: translateX(-140%);
+      opacity: 0.7;
+      pointer-events: none;
+      animation: gloss-sweep 2.8s ease-in-out infinite;
+    }
+    .session-card:hover{
+      border-color: var(--teal);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.08);
+    }
+    .session-card input{
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .session-card-body{
+      display: grid;
+      gap: 6px;
+      text-align: center;
+    }
+    .session-title{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .session-availability{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .session-card:has(input:checked){
+      border-color: var(--gold);
+      box-shadow: 0 12px 24px rgba(240,180,58,0.25);
+      background: var(--gold);
+    }
+    .session-card:has(input:checked) .session-title,
+    .session-card:has(input:checked) .session-availability{
+      color: #ffffff;
+    }
+    .session-card.is-full{
+      opacity: 0.6;
+    }
+    .availability-note{
+      color: var(--muted);
+    }
+    .meeting-link{
+      color: #1a5cff;
+      font-weight: 600;
+    }
+    .meeting-link:hover,
+    .meeting-link:focus-visible{
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    .reservation-steps{
+      margin-top: var(--space-6);
+      scroll-margin-top: var(--scroll-offset);
+    }
+    .reservation-row{
+      display:grid;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .reservation-row.two-col{
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .reservation-card{
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #ffffff;
+      padding: 20px;
+      display:grid;
+      gap: 12px;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
+    }
+
+
+    .form-success{
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--teal);
+      background: #f6fbfc;
+      padding: 14px 16px;
+      border-radius: 14px;
+      color: var(--ink);
+      font-weight: 600;
+      display: none;
+    }
+    .form-success.is-visible{
+      display: block;
+    }
+    .reservation-card p{
+      margin: 0;
+    }
+    .reservation-card p + p{
+      margin-top: 8px;
+    }
+    .reservation-card p + .content-list,
+    .reservation-card .content-list + p{
+      margin-top: 8px;
+    }
+    .reservation-card h2{
+      margin: 0;
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .reservation-card h2:not(:first-child){
+      margin-top: 16px;
+    }
+    .tight-stack{
+      display:grid;
+      gap: 6px;
+    }
+    .tight-stack p,
+    .tight-stack .content-list{
+      margin: 0;
+    }
+    .tight-stack p + p,
+    .tight-stack p + .content-list,
+    .tight-stack .content-list + p{
+      margin-top: 0;
+    }
+    .schedule-block{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #ffffff;
+      display: grid;
+      gap: 6px;
+    }
+    .schedule-block h3{
+      margin: 0;
+      font-size: clamp(20px, 2.6vw, 26px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .schedule-block p{
+      margin: 0;
+    }
+    .table-wrap{
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow-x: auto;
+      background: #ffffff;
+    }
+    .table-wrap table{
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+    }
+    .table-wrap th,
+    .table-wrap td{
+      border: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+      font-size: clamp(16px, 1.8vw, 20px);
+    }
+    .table-wrap th{
+      background: #f9f7f3;
+    }
+    .math-table th,
+    .math-table td{
+      text-align: center;
+    }
+    .pricing-grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .pricing-actions{
+      display:grid;
+      gap: 12px;
+      align-content: start;
+    }
+    .pricing-action-card{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px;
+      background: #ffffff;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .pricing-details{
+      margin-top: 16px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .pricing-detail-card{
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      background: #ffffff;
+      display: grid;
+      gap: 8px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.08);
+    }
+    .pricing-detail-card h3{
+      margin: 0;
+      font-size: clamp(22px, 3vw, 30px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .location-layout{
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: start;
+    }
+    .location-text{
+      flex: 1;
+      min-width: 0;
+    }
+    .pricing-action-card .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      border-radius: 14px;
+    }
+    .confirmation-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .confirmation-card{
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #ffffff;
+      padding: 16px;
+      display:grid;
+      gap: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+    }
+    .confirmation-grid h2{
+      margin-top: 0;
+    }
+    .reservation-card .form-grid{
+      max-width: 100%;
+    }
+    .reservation-cta{
+      display:flex;
+      justify-content:center;
+      margin-top: 18px;
+    }
+    .reservation-cta .btn{
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      padding: 22px 22px;
+      text-transform: uppercase;
+      border-radius: 16px;
+      width: min(100%, 520px);
+      box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+    }
+    .cta-block{
+      display:grid;
+      gap: 12px;
+      width: min(100%, 520px);
+    }
+    .cta-block .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 22px 24px;
+      border-radius: 22px;
+      box-shadow: 0 12px 22px rgba(0,0,0,0.12);
+    }
+
+    footer.site-footer{
+      margin-top: var(--space-6);
+      border-top: 1px solid var(--line);
+      background: var(--teal);
+    }
+    .site-footer .inner{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+      padding: 24px var(--pad) 36px;
+      display:grid;
+      gap: 8px;
+      align-items:center;
+      text-align: center;
+    }
+    .site-footer .footer-logo{
+      width: 96px;
+      height: 96px;
+      margin: 0 auto;
+    }
+    .site-footer .footer-title{
+      font-family: var(--font-display);
+      font-size: var(--size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+    .site-footer .footer-tagline{
+      margin: 0 auto;
+      color: #ffffff;
+      font-size: var(--size-body);
+      line-height: var(--lh-body);
+    }
+    @media (min-width: 981px){
+      .site-footer .footer-tagline{
+        width: 100%;
+        max-width: none;
+      }
+    }
+    .btn.outline{
+      background: transparent;
+      border-color: #ffffff;
+      color: #ffffff;
+    }
+
+    .btn.cta-standard{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3vw, 40px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 28px 18px;
+      border-radius: 18px;
+      min-height: 96px;
+      white-space: normal;
+      line-height: 0.95;
+      text-align: center;
+    }
+    .thankyou-card{
+      max-width: var(--max-wide);
+      margin: 0 auto;
+    }
+    .thankyou-card .btn{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .thankyou-title{
+      text-align: center;
+      font-size: clamp(34px, 5vw, 56px);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: 0.8;
+    }
+    .thankyou-card h2{
+      font-size: clamp(30px, 4vw, 46px);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: var(--lh-heading);
+    }
+    .thankyou-card h2.article-band-heading{
+      display: block;
+      margin: 32px calc(50% - 50vw) 18px;
+      padding: 22px max(var(--pad), calc((100vw - var(--max-wide)) / 2 + var(--pad)));
+      color: #ffffff;
+      text-align: left;
+      line-height: 0.82;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .thankyou-card h2.article-band-heading:first-of-type{
+      margin-top: 24px;
+    }
+    .thankyou-card h2.article-band-purple{ background: var(--purple); }
+    .thankyou-card h2.article-band-gold{
+      background: var(--gold);
+      color: var(--text);
+    }
+    .thankyou-card h2.article-band-teal{ background: var(--teal); }
+
+    .learning-page-shell .thankyou-card h1,
+    .learning-page-shell .thankyou-card h2,
+    .learning-page-shell .thankyou-card h3{
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .learning-page-shell .thankyou-card h2.article-band-heading{
+      margin: 34px -20px 18px;
+      padding: 18px 20px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 0.86;
+      border-radius: 0;
+      font-family: "Bebas Neue", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+    }
+    .thankyou-card h3{
+      margin: 18px 0 6px;
+      font-size: clamp(22px, 3vw, 30px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+    }
+    .article-intro-module{
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 1.18fr);
+      gap: 0;
+      margin: 22px 0 26px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
+    }
+    .article-intro-media{
+      min-height: 100%;
+      background: #efe9df;
+    }
+    .article-intro-media img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      aspect-ratio: 5 / 4;
+    }
+    .article-intro-summary{
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      background: #fffdf8;
+    }
+    .article-intro-label{
+      background: var(--purple);
+      color: #ffffff;
+      padding: 18px 26px 16px;
+      font-family: var(--font-display);
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+    }
+    .article-intro-body{
+      display: grid;
+      gap: 18px;
+      padding: 0 26px 26px;
+    }
+    .article-intro-heading{
+      display: grid;
+      gap: 8px;
+    }
+    .article-intro-heading h1,
+    .article-intro-heading h2{
+      margin: 0;
+      font-size: 2.8rem;
+      line-height: 1;
+      letter-spacing: 0;
+      font-family: var(--font-body);
+      font-weight: 700;
+      text-transform: none;
+    }
+    .article-intro-heading h3{
+      margin: 0;
+      font-size: var(--size-lg);
+      line-height: var(--lh-body);
+      letter-spacing: 0;
+      font-family: var(--font-body);
+      font-weight: 700;
+      text-transform: none;
+    }
+    .article-intro-heading p{
+      margin: 0;
+      color: var(--muted);
+    }
+    .article-intro-meta{
+      display: grid;
+      gap: 0;
+      border-top: 2px solid rgba(140,98,167,0.24);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-intro-meta-row{
+      display: grid;
+      grid-template-columns: 148px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .article-intro-meta-row:first-child{
+      border-top: 0;
+    }
+    .article-intro-meta-label{
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .article-intro-meta-row p{
+      margin: 0;
+    }
+    .article-intro-links{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+    .article-intro-links a{
+      font-weight: 600;
+    }
+    .article-read-time{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--text);
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.6vw, 38px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      line-height: 0.9;
+      justify-self: start;
+      box-shadow: 0 12px 22px rgba(240,180,58,0.24);
+    }
+    .article-intro-actions{
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+      gap: 12px;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+    .article-intro-actions--single{
+      grid-template-columns: 1fr;
+    }
+    .article-intro-actions .article-read-time,
+    .article-intro-actions .video-lesson-button{
+      width: 100%;
+      min-width: 0;
+      justify-self: auto;
+      padding: 12px 10px;
+      font-size: clamp(18px, 1.35vw, 20px);
+      font-family: var(--font-body);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.15;
+      text-align: center;
+      text-transform: none;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .video-lesson-button{
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      background: var(--teal);
+      color: #ffffff;
+      box-shadow: 0 12px 22px rgba(30,138,149,0.24);
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.6vw, 38px);
+      letter-spacing: var(--tracking-display);
+      line-height: 0.9;
+      text-transform: uppercase;
+    }
+    .video-lesson-button:hover,
+    .video-lesson-button:focus-visible{
+      background: #176f78;
+      outline: 3px solid rgba(30,138,149,0.28);
+      outline-offset: 3px;
+    }
+    body.video-overlay-open{
+      overflow: hidden;
+    }
+    .video-lesson-overlay[hidden]{
+      display: none;
+    }
+    .video-lesson-overlay{
+      position: fixed;
+      inset: 0;
+      z-index: 5000;
+      display: grid;
+      place-items: center;
+      padding: clamp(12px, 3vw, 36px);
+      background: rgba(0,0,0,0.88);
+    }
+    .video-lesson-dialog{
+      position: relative;
+      width: min(1180px, 100%);
+      height: min(760px, calc(100dvh - clamp(24px, 6vw, 72px)));
+      min-height: 360px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 16px;
+      background: #000000;
+      box-shadow: 0 28px 80px rgba(0,0,0,0.5);
+    }
+    .video-lesson-frame{
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #000000;
+    }
+    .video-lesson-close{
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 50%;
+      padding: 0;
+      background: rgba(0,0,0,0.82);
+      color: #ffffff;
+      cursor: pointer;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1;
+    }
+    .video-lesson-close:hover,
+    .video-lesson-close:focus-visible{
+      border-color: #ffffff;
+      background: #111111;
+      outline: 3px solid rgba(255,255,255,0.32);
+      outline-offset: 2px;
+    }
+    .share-btn{
+      width: min(100%, 320px);
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-top: 8px;
+    }
+    .extra-section{
+      margin-top: var(--space-6);
+    }
+    .extra-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .extra-card{
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #ffffff;
+      padding: 20px;
+      display:grid;
+      gap: 12px;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.06);
+    }
+    .extra-card img{
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+    }
+    .extra-card h3{
+      margin: 0;
+      font-size: clamp(26px, 3.4vw, 40px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+    .extra-card p,
+    .extra-card ul{
+      margin: 0;
+      line-height: 1.3;
+    }
+    .extra-card p + p,
+    .extra-card p + ul,
+    .extra-card ul + p{
+      margin-top: 8px;
+    }
+    .extra-card ul{
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+    .extra-card li{
+      margin: 0;
+    }
+    .extra-card .btn{
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: var(--btn-size-lg);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 20px 24px;
+      border-radius: 16px;
+      text-align: center;
+    }
+    .article-program-section{
+      background: #efebe2;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .article-program-section .content-content{
+      padding-top: 34px;
+      padding-bottom: 40px;
+    }
+    .article-facts-grid{
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+    .article-facts-grid--stacked{
+      grid-template-columns: 1fr;
+      align-items: stretch;
+    }
+    .article-facts-card{
+      border: 1px solid #d9d2c6;
+      border-radius: 28px;
+      background: #ffffff;
+      padding: clamp(24px, 3vw, 36px);
+      display: grid;
+      gap: 14px;
+      align-content: start;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.05);
+    }
+    .article-facts-card h3{
+      margin: 0;
+      font-size: clamp(22px, 3vw, 30px);
+      font-family: var(--font-body);
+      text-transform: none;
+      letter-spacing: 0;
+      line-height: var(--lh-body);
+      font-weight: 700;
+    }
+    .article-facts-card ul{
+      margin: 0;
+      padding-left: 1.15em;
+      display: grid;
+      gap: 12px;
+      line-height: 1.35;
+    }
+    .article-facts-card li{
+      margin: 0;
+    }
+    .article-facts-media{
+      border: 1px solid #d9d2c6;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    .article-facts-media img{
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      display: block;
+    }
+    .article-facts-copy{
+      display: grid;
+      gap: 12px;
+    }
+    .article-facts-shell{
+      display: grid;
+      gap: 20px;
+      max-width: var(--max-wide);
+      margin: 24px auto 0;
+    }
+    .article-facts-intro{
+      display: grid;
+      gap: 8px;
+    }
+    .article-facts-kicker{
+      font-size: var(--size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .article-facts-shell .article-facts-heading{
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-display);
+      line-height: 0.8;
+    }
+    .article-facts-copy p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .article-facts-card .btn{
+      width: 100%;
+      margin-top: 6px;
+      font-family: var(--font-display);
+      font-size: clamp(30px, 2.6vw, 44px);
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+      padding: 24px 22px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 14px 26px rgba(240,180,58,0.22);
+      line-height: 0.9;
+      min-height: 88px;
+    }
+
+    .learning-page-shell > .article-facts-shell{
+      min-width: 0;
+      width: 100%;
+    }
+
+    .learning-page-shell .article-facts-shell .article-facts-heading{
+      font-family: "Bebas Neue", sans-serif;
+      font-size: clamp(36px, 4vw, 58px);
+      line-height: 0.9;
+      letter-spacing: var(--tracking-display);
+      text-transform: uppercase;
+    }
+
+    .learning-page-shell .article-facts-card .btn{
+      font-family: var(--font-body);
+      font-size: clamp(18px, 1.6vw, 22px);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: 0;
+      text-transform: none;
+      min-height: 58px;
+      padding: 15px 22px;
+      white-space: normal;
+    }
+
+    .learning-page-shell .article-facts-card .btn.gold{
+      color: var(--text);
+    }
+    .learning-page-shell .article-facts-grid--stacked .article-facts-card{
+      width: 100%;
+    }
+    @media (min-width: 901px){
+      .learning-page-shell .article-facts-grid--stacked .article-facts-card{
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+        align-items: center;
+        gap: clamp(22px, 3vw, 40px);
+      }
+      .learning-page-shell .article-facts-grid--stacked .article-facts-card .btn{
+        align-self: center;
+        margin-top: 0;
+      }
+      .learning-page-shell .article-facts-grid--stacked .article-facts-media{
+        grid-row: span 2;
+      }
+    }
+    @media (min-width: 981px){
+      .topbar nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-right: 0;
+      }
+    }
+    @media (min-width: 981px){
+      .menu-btn{ display:none; }
+    }
+
+    @media (max-width: 900px){
+      .extra-grid{ grid-template-columns: 1fr; }
+      .article-facts-grid{ grid-template-columns: 1fr; }
+    }
+
+
+    @media (max-width: 980px){
+      :root{
+        --btn-size: 35.04px;
+        --btn-size-lg: 35.04px;
+      }
+      .section-banner h2,
+      .content-banner h2,
+      .curriculum-banner h2,
+      .deploy-banner h2,
+      .math-banner h2,
+      .openbook-banner h2,
+      .quickfacts-banner h2,
+      .reserve-banner h2,
+      .teachers-banner h2,
+      .why-banner h2{
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+
+      .btn.cta-standard{
+        font-size: 35.04px;
+      }
+      nav{ display:none; }
+      .below{ grid-template-columns: 1fr; }
+      .cta-stack{ width: min(100%, 360px); }
+      .why-grid{ grid-template-columns: 1fr; }
+      .curriculum-grid{ grid-template-columns: 1fr; }
+      .openbook-grid{ grid-template-columns: 1fr; }
+      .openbook-columns{ grid-template-columns: 1fr; }
+      .openbook-cta-row{ grid-template-columns: 1fr; }
+      .math-layout{ grid-template-columns: 1fr; }
+      .teachers-grid{ grid-template-columns: 1fr; }
+      .quickfacts-content{ grid-template-columns: 1fr; }
+      .reserve-content{ grid-template-columns: 1fr; }
+      .reservation-row.two-col{ grid-template-columns: 1fr; }
+      .session-grid{ grid-template-columns: 1fr; }
+      .field-row.three-col,
+      .field-row.two-col{
+        grid-template-columns: 1fr;
+      }
+      .pricing-grid{ grid-template-columns: 1fr; }
+      .pricing-details{ grid-template-columns: 1fr; }
+      .confirmation-grid{ grid-template-columns: 1fr; }
+      .pricing-grid{ display: contents; }
+      .tight-stack{ order: 1; }
+      .pricing-details{ order: 2; }
+      .pricing-actions{ order: 3; }
+
+      /* Mobile standards */
+      .hero-logo{ display: none !important; }
+      .hero-title{ display: none !important; }
+      .hero-logo-mobile{ display: block !important; margin: 0 auto; }
+
+      .hero-title{ font-size: 60px !important; line-height: 0.9 !important; letter-spacing: -0.02em !important; }
+      .hero-title .org{ font-size: 28px !important; }
+
+      body{ font-size: 23px; }
+      h1, h2, h3{ font-size: 26.5px; line-height: 1.2; }
+      .thankyou-card h2.article-band-heading{
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding-left: var(--pad);
+        padding-right: var(--pad);
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-shell .article-facts-heading{
+        font-size: clamp(48.96px, 7.2vw, 80.64px);
+        line-height: 0.8;
+      }
+      .article-facts-card .btn{
+        font-size: clamp(24px, 7vw, 34px);
+        min-height: 82px;
+        padding: 22px 20px;
+      }
+      .article-intro-module{
+        grid-template-columns: 1fr;
+      }
+      .article-intro-media img{
+        aspect-ratio: 4 / 3;
+      }
+      .article-intro-body{
+        padding: 0 22px 22px;
+      }
+      .article-intro-meta-row{
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .article-read-time{
+        width: 100%;
+        justify-self: stretch;
+      }
+      .article-intro-actions{
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .video-lesson-button{
+        width: 100%;
+      }
+      .video-lesson-overlay{
+        padding: 0;
+      }
+      .video-lesson-dialog{
+        width: 100%;
+        height: 100dvh;
+        min-height: 0;
+        border: 0;
+        border-radius: 0;
+      }
+      .subhead, .lede{ font-size: 23px; line-height: var(--lh-body); }
+      .hero-title{ font-size: var(--size-hero); }
+      .hero-sub{ font-size: inherit; line-height: 1.05; }
+      .btn{
+        font-family: var(--font-display);
+        font-size: 35.04px;
+        line-height: 0.9;
+        text-transform: uppercase;
+        letter-spacing: var(--tracking-display);
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      .topbar .btn:not(.menu-cta){
+        font-family: var(--font-body);
+        font-size: 26.5px;
+        margin-left: 0;
+        margin-right: 0;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+      .hero-top{
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+      }
+      .hero-logo{
+        width: clamp(122px, 27.2vw, 162px);
+        height: clamp(122px, 27.2vw, 162px);
+      }
+      .hero-title-block,
+      .hero-title,
+      .hero-sub{
+        text-align: center;
+      }
+      .hero-image,
+      .hero-image.banner{
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .hero-image img,
+      .hero-media img,
+      .openbook-visual img,
+      .openbook-card img,
+      .openbook-photo img,
+      .curriculum-photo img,
+      .role-media img,
+      .system-art img,
+      .why-illustration img,
+      .facts-card img{
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+      footer.site-footer .inner{ text-align: center; }
+      footer.site-footer .footer-logo{ width: 72px; height: 72px; }
+      footer.site-footer .footer-title,
+      footer.site-footer .footer-tagline{ font-size: 23px; }
+      footer.site-footer .footer-tagline{ line-height: 1.1; }
+    }
+
+    @media (max-width: 640px){
+      :root{
+        --lh-body: 1.38;
+      }
+
+      .topbar .btn:not(.menu-cta){
+        font-size: 14px;
+        padding: 10px 12px;
+        min-height: 40px;
+      }
+    }
+
+
+    /* Learning catalogue navigation shared by module and worksheet pages. */
+    .learning-page-shell{
+      display: block;
+    }
+
+    .learning-catalogue-sidebar{
+      display: none;
+      position: sticky;
+      top: calc(var(--topbar-height) + 18px);
+      max-height: calc(100vh - var(--topbar-height) - 34px);
+      overflow: auto;
+      padding: 14px;
+      border: 1px solid rgba(0,0,0,0.045);
+      border-radius: 0;
+      background: rgba(241,244,249,0.58);
+      box-shadow: none;
+    }
+
+    .learning-catalogue-sidebar h2{
+      margin: 0 0 10px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .catalogue-toc,
+    .catalogue-sublist{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .catalogue-toc{
+      display: grid;
+      gap: 6px;
+    }
+
+    .catalogue-toc details{
+      border: 1px solid rgba(0,0,0,0.035);
+      border-radius: 0;
+      background: rgba(255,255,255,0.74);
+      overflow: hidden;
+      padding: 6px 8px;
+    }
+
+    .catalogue-toc summary{
+      cursor: pointer;
+      padding: 8px 10px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+      list-style: none;
+    }
+
+    .catalogue-toc summary::-webkit-details-marker,
+    .menu-panel .learning-menu-tree summary::-webkit-details-marker{
+      display: none;
+    }
+
+    .catalogue-sublist{
+      display: grid;
+      gap: 4px;
+      margin: 8px 0 6px 8px;
+      padding: 0;
+    }
+
+    .catalogue-sublist a,
+    .catalogue-toc-link{
+      display: block;
+      border-radius: 0;
+      padding: 6px 10px;
+      color: var(--text);
+      background: #f7f8fb;
+      font-family: var(--font-body);
+      font-size: 17.6px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0;
+      text-transform: none;
+      text-decoration: none;
+    }
+
+    .catalogue-toc-link{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid rgba(0,0,0,0.035);
+      background: rgba(255,255,255,0.74);
+      font-size: 20px;
+      padding: 8px 10px;
+    }
+
+    .catalogue-sublist a:hover,
+    .catalogue-toc-link:hover,
+    .catalogue-sublist a:focus-visible,
+    .catalogue-toc-link:focus-visible{
+      color: var(--teal-dark);
+      background: #e9efff;
+      text-decoration: none;
+    }
+
+    .catalogue-sublist a.is-current,
+    .catalogue-toc-link.is-current{
+      background: #dbe8ff;
+      color: #0f3675;
+      box-shadow: inset 3px 0 0 rgba(30,138,149,0.8);
+    }
+
+    .catalogue-toc details.contains-current > summary{
+      color: #0f3675;
+    }
+
+    .menu-panel .learning-menu-tree{
+      border-top: 1px solid var(--line);
+      width: 100%;
+      display: grid;
+      justify-items: center;
+    }
+
+    .menu-panel .learning-menu-tree summary{
+      cursor: pointer;
+      width: max-content;
+      max-width: min(680px, 92vw);
+      padding: 6px 6px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 500;
+      line-height: 1.1;
+      text-align: center;
+      text-transform: none;
+      letter-spacing: 0;
+      list-style: none;
+    }
+
+    .menu-panel .learning-menu-tree.contains-current summary{
+      color: #0f3675;
+      font-weight: 700;
+    }
+
+    .menu-panel .learning-menu-list{
+      display: grid;
+      gap: 8px;
+      justify-items: center;
+      width: 100%;
+      padding: 8px 16px 16px;
+    }
+
+    .menu-panel .learning-menu-list a{
+      display: block;
+      width: max-content;
+      max-width: min(680px, 92vw);
+      padding: 6px 6px;
+      border-radius: 0;
+      background: transparent;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: clamp(26px, 3.2vw, 40px);
+      font-weight: 500;
+      line-height: 1.1;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .menu-panel .learning-menu-list a.is-current{
+      color: #0f3675;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+    }
+
+    .learning-page-shell > .reservation-card{
+      min-width: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 1024px){
+      .content-content.learning-page-shell{
+        padding-left: var(--pad);
+        padding-right: var(--pad);
+      }
+
+      .learning-page-shell{
+        display: grid;
+        grid-template-columns: clamp(240px, 22vw, 300px) minmax(0, min(920px, calc(100% - clamp(240px, 22vw, 300px) - clamp(24px, 4vw, 48px))));
+        gap: clamp(24px, 4vw, 48px);
+        align-items: start;
+        justify-content: start;
+      }
+
+      .learning-catalogue-sidebar{
+        display: block;
+      }
+
+      .learning-page-shell > .article-facts-shell{
+        grid-column: 2;
+      }
+    }
+
+    @media (max-width: 1023px){
+      .article-intro-heading h1{
+        font-size: 2.4rem;
+      }
+    }
+
+  </style>
+  <link rel="stylesheet" href="../../assets/typography.css?v=6" />
+  <link rel="stylesheet" href="../../assets/site-menu.css?v=1" />
+  <link rel="stylesheet" href="../../assets/learn-catalogue.css?v=9" />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T243W4XM');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T243W4XM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="topbar">
+    <div class="inner">
+      <div class="menu-btn" aria-label="Menu" role="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+            <div class="menu-panel" id="mobile-menu" aria-hidden="true">
+        <button class="menu-close" type="button" aria-label="Close menu">×</button>
+        <div class="menu-links">
+          <a href="/curriculum-details.html">Curriculum</a>
+          <a href="/how-it-works.html">Build &amp; Sell</a>
+          <a href="/open-book-hook.html">Open Book Financials</a>
+          <a href="/who-runs-it.html">Who Runs It</a>
+          <a href="/article-best-summer-camps.html">Camp Guides</a>
+          <details class="learning-menu-tree">
+            <summary>Learning Catalogue</summary>
+            <div class="learning-menu-list">
+              <a href="/learn/financial-literacy-for-young-entrepreneurs/">Financial Literacy</a>
+              <a href="/learn/design-thinking-and-human-factor-research/">Design Thinking</a>
+              <a href="/learn/market-research-follow-the-money-and-problems/">Market Research</a>
+              <a href="/learn/control-brand-playbook/">Control Brand</a>
+              <a href="/learn/sourcing-101-where-value-is-actually-made/">Sourcing</a>
+              <a href="/learn/go-to-market-launch-without-burning-fuel/">Go-To-Market</a>
+              <a href="/learn/creative-fundamentals-photography-design-and-visual-clarity/">Creative Fundamentals</a>
+              <a class="is-current" href="/learn/marketing-use-existing-channels-first/">Marketing</a>
+            </div>
+          </details>
+          <a data-cta-label="Reserve a spot" class="btn purple gloss menu-cta" href="/reserve-a-spot.html">Reserve a spot</a>
+        </div>
+      </div>
+
+
+      <nav aria-label="Primary">
+        <a href="/curriculum-details.html">Curriculum</a>
+        <a href="/how-it-works.html">Build & Sell</a>
+        <a href="/open-book-hook.html">Open Book Financials</a>
+        <a href="/who-runs-it.html">Who Runs It</a>
+      </nav>
+
+      <a data-cta-label="Reserve a spot" class="btn purple gloss" href="/reserve-a-spot.html">Reserve a spot</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="content-section purple">
+      <div class="content-content learning-page-shell">
+        <aside class="learning-catalogue-sidebar" aria-label="Learning catalogue table of contents">
+          <h2>Learning Catalogue</h2>
+          <ul class="catalogue-toc">
+            <li><a class="catalogue-toc-link" href="/learn/#core-build-modules">Core Build Modules</a></li>
+            <li>
+              <details>
+                <summary>💰 Financial Literacy as Survival Gear</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/financial-literacy-for-young-entrepreneurs/">Learning Module</a></li>
+                  <li><a href="/learn/financial-literacy-for-young-entrepreneurs/worksheet.html">Worksheet: Coffee Counter Math Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🎨 Design Thinking & Human Factor Research</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/design-thinking-and-human-factor-research/">Learning Module</a></li>
+                  <li><a href="/learn/design-thinking-and-human-factor-research/worksheet.html">Worksheet: Find the Friction Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📊 Market Research: Follow the Money & Problems</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/market-research-follow-the-money-and-problems/">Learning Module</a></li>
+                  <li><a href="/learn/market-research-follow-the-money-and-problems/worksheet.html">Worksheet: Product Assortment Analysis</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🏷 Control Brand Playbook</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/control-brand-playbook/">Learning Module</a></li>
+                  <li><a href="/learn/#control-brand-worksheet">Worksheet: Build a Better Version Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🏭 Sourcing 101: Where Value Is Actually Made</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/sourcing-101-where-value-is-actually-made/">Learning Module</a></li>
+                  <li><a href="/learn/#sourcing-worksheet">Worksheet: Supplier Comparison Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>🚀 Go-To-Market: Launch Without Burning Fuel</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/go-to-market-launch-without-burning-fuel/">Learning Module</a></li>
+                  <li><a href="/learn/#go-to-market-worksheet">Worksheet: First Launch Test Plan</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>📸 Creative Fundamentals: Photography, Design & Visual Clarity</summary>
+                <ul class="catalogue-sublist">
+                  <li><a href="/learn/creative-fundamentals-photography-design-and-visual-clarity/">Learning Module</a></li>
+                  <li><a href="/learn/#creative-fundamentals-worksheet">Worksheet: Make the Offer Clear Lab</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details class="contains-current" open>
+                <summary>📣 Marketing: Use Existing Channels First</summary>
+                <ul class="catalogue-sublist">
+                  <li><a class="is-current" aria-current="page" href="/learn/marketing-use-existing-channels-first/">Learning Module</a></li>
+                  <li><a href="/learn/#marketing-worksheet">Worksheet: Channel Match Lab</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </aside>
+        <div class="reservation-card thankyou-card">
+          <section class="article-intro-module" aria-labelledby="article-intro-heading">
+            <div class="article-intro-media">
+              <picture>
+                <source media="(min-width: 769px)" srcset="../../assets/compass-learning-mods.png" />
+                <img src="../../assets/kids-campus-1.jpg" alt="Students participating in a Money Club learning session" />
+              </picture>
+            </div>
+            <div class="article-intro-summary">
+              <div class="article-intro-label">Learning Module</div>
+              <div class="article-intro-body">
+                <div class="article-intro-heading">
+                  <h1 id="article-intro-heading">Marketing:<br>Use Existing Channels First</h1>
+                  <p>Put the lemonade stand where people walk.</p>
+                </div>
+                <div class="article-intro-meta">
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Best for</div>
+                    <p>Students learning how to choose channels, test conversion paths, and market through existing audiences before building their own.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Learning Outcomes</div>
+                    <p>Students learn how channel fit, conversion paths, trust, buying intent, cost per customer, and small channel tests help them choose where to put an offer.</p>
+                  </div>
+                </div>
+                <div class="article-intro-actions">
+                  <div class="article-read-time">Read Time: 5 Minutes</div>
+                  <button class="video-lesson-button" id="open-video-lesson" type="button" aria-haspopup="dialog">
+                    Video Lesson
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <h2 class="article-band-heading article-band-teal">Location Location Location</h2>
+          <p><strong>Put the lemonade stand where people walk.</strong></p>
+          <p>In module 7, Creative Fundamentals: Photography, Design &amp; Visual Clarity, you built a five-second storefront.</p>
+          <p>You created a clear product photograph.</p>
+          <p>You wrote a strong headline.</p>
+          <p>You explained the offer.</p>
+          <p>You showed the price.</p>
+          <p>You added a call to action and a reason to trust you.</p>
+          <p>Now the lemonade stand looks ready.</p>
+          <p>But there is still one problem.</p>
+          <p>What if you put it on an empty street?</p>
+          <p>The product could be useful.</p>
+          <p>The poster could be clear.</p>
+          <p>The price could be fair.</p>
+          <p>The lemonade could be cold.</p>
+          <p>But if nobody walks past, nobody buys.</p>
+          <p>That is why distribution matters.</p>
+          <p>Distribution is how an offer reaches the people who might buy it.</p>
+          <p>Marketing is not only about making messages.</p>
+          <p>It is also about deciding where those messages should appear.</p>
+          <p>You do not always need to build an audience from scratch.</p>
+          <p>Customers already gather in marketplaces, schools, community groups, local businesses, parent networks, email lists, retail stores, and social platforms.</p>
+          <p>The operator’s job is to find the right crowd, earn permission, and put the offer where people already walk.</p>
+
+          <h2 class="article-band-heading article-band-purple">The Empty-Street Problem</h2>
+          <p>Imagine two lemonade stands.</p>
+          <p>The first stand has a beautiful sign.</p>
+          <p>The table is clean.</p>
+          <p>The cups are lined up.</p>
+          <p>The price is easy to see.</p>
+          <p>But the stand is at the end of a quiet street.</p>
+          <p>Only three people walk past all day.</p>
+          <p>The second stand has a simple sign.</p>
+          <p>It is placed beside a busy park on a hot afternoon.</p>
+          <p>Families are already walking past.</p>
+          <p>Children are already thirsty.</p>
+          <p>People can see the lemonade, understand the price, and buy it immediately.</p>
+          <p>Which stand has the better marketing?</p>
+          <p>Probably the second one.</p>
+          <p>The sign still matters.</p>
+          <p>The product still matters.</p>
+          <p>The price still matters.</p>
+          <p>But location changes the opportunity.</p>
+          <p>A marketing channel is a place or system that carries your offer to potential customers.</p>
+          <p>A channel could be physical:</p>
+          <ul class="content-list">
+            <li>A school bulletin board</li>
+            <li>A community centre</li>
+            <li>A local store</li>
+            <li>A neighbourhood event</li>
+            <li>A flyer delivered to nearby homes</li>
+          </ul>
+          <p>A channel could also be digital:</p>
+          <ul class="content-list">
+            <li>An online marketplace</li>
+            <li>A parent email list</li>
+            <li>A community group</li>
+            <li>A social platform</li>
+            <li>An influencer’s account</li>
+            <li>A local business newsletter</li>
+          </ul>
+          <p>The channel is not just where people see the message.</p>
+          <p>It is the route that takes someone from seeing the offer to buying it.</p>
+          <p>For example:</p>
+          <p>School newsletter → parent reads the offer → parent scans the QR code → parent visits the order page → parent pre-orders</p>
+          <p>That is a conversion path.</p>
+          <p>A conversion happens when someone takes the action you wanted.</p>
+          <p>They might click.</p>
+          <p>They might reply.</p>
+          <p>They might sign up.</p>
+          <p>They might place a pre-order.</p>
+          <p>They might buy.</p>
+          <p>The best channel is not always the one with the largest audience.</p>
+          <p>A social platform might reach thousands of people.</p>
+          <p>But most of them may live far away or have no need for your product.</p>
+          <p>A school newsletter might reach only 300 families.</p>
+          <p>But those families may live nearby, trust the school, and fit the offer.</p>
+          <p>The smaller channel could produce more customers.</p>
+          <p>That is channel fit.</p>
+          <p>Channel fit means the people, message, offer, and buying path belong together.</p>
+          <p>Ask:</p>
+          <p>Are the right people already here?</p>
+          <p>Does our offer make sense in this place?</p>
+          <p>Can someone move easily from seeing it to buying it?</p>
+          <p>For a local household restock kit, one million random views may be less useful than 100 nearby families.</p>
+          <p>Attention only matters when it reaches someone who might act.</p>
+
+          <h2 class="article-band-heading article-band-teal">Find the Existing Foot Traffic</h2>
+          <p>Different channels contain different people.</p>
+          <p>They also provide different amounts of trust, speed, reach, and cost.</p>
+          <p>The goal is not to use every channel.</p>
+          <p>The goal is to understand what each one can do.</p>
+          <p><strong>Marketplaces</strong></p>
+          <p>Marketplaces contain people who are already looking at products.</p>
+          <p>They might be searching by category, price, location, or need.</p>
+          <p>This creates buying intent.</p>
+          <p>Buying intent means the person may already be interested in making a purchase.</p>
+          <p>The advantage is that the marketplace has already gathered the shoppers.</p>
+          <p>The disadvantage is that many sellers may be competing for the same customer.</p>
+          <p>The marketplace may also charge fees, control how products appear, or make it difficult for a new seller to stand out.</p>
+          <p><strong>Retailers</strong></p>
+          <p>Retailers already have customers, shelves, checkout systems, and physical traffic.</p>
+          <p>A local retailer might agree to display a student product, accept pre-orders, or host a small pop-up.</p>
+          <p>The retailer can add trust because customers already know the store.</p>
+          <p>But the retailer may expect part of the selling price.</p>
+          <p>It may also have rules about packaging, insurance, inventory, returns, or product quality.</p>
+          <p>Access to a retailer’s audience usually comes with conditions.</p>
+          <p><strong>Schools</strong></p>
+          <p>Schools contain students, parents, teachers, and families connected to a specific community.</p>
+          <p>A school newsletter, event, bulletin board, or parent council can provide focused local reach.</p>
+          <p>Schools may also provide trust.</p>
+          <p>But students must get permission before using school communication channels.</p>
+          <p>A school email list belongs to the school.</p>
+          <p>It is not a free advertising list.</p>
+          <p>The message also needs to fit the school’s purpose and rules.</p>
+          <p><strong>Community Groups</strong></p>
+          <p>Neighbourhood associations, recreation groups, cultural organizations, religious communities, sports teams, and local online groups bring people together around a shared place or interest.</p>
+          <p>These groups may be useful because members already have something in common.</p>
+          <p>A neighbourhood group could be a strong fit for a locally delivered household product.</p>
+          <p>But community groups are built on relationships.</p>
+          <p>A student should ask permission, explain the program honestly, and avoid posting the same sales message repeatedly.</p>
+          <p>Trust can open a channel.</p>
+          <p>Spam can close it.</p>
+          <p><strong>Social Platforms</strong></p>
+          <p>Social platforms provide attention.</p>
+          <p>A photograph, short video, post, or demonstration can spread quickly.</p>
+          <p>They are useful for showing how a product works, telling the founder’s story, or sharing the results of a test.</p>
+          <p>But attention is not the same as demand.</p>
+          <p>Likes do not always become orders.</p>
+          <p>Followers do not always live nearby.</p>
+          <p>A large number of views can feel exciting while producing no customers.</p>
+          <p>Measure actions, not applause.</p>
+          <p><strong>Partnerships</strong></p>
+          <p>A partnership happens when two people or organizations help each other reach a shared goal.</p>
+          <p>A student selling a bicycle care kit might partner with a local bike shop.</p>
+          <p>A student selling a plant starter kit might partner with a garden club.</p>
+          <p>A household restock business might partner with a neighbourhood organization or delivery service.</p>
+          <p>A useful partnership can combine:</p>
+          <ul class="content-list">
+            <li>An audience</li>
+            <li>A physical location</li>
+            <li>Trust</li>
+            <li>Expertise</li>
+            <li>Delivery</li>
+            <li>Promotion</li>
+            <li>Shared costs</li>
+          </ul>
+          <p>The partnership should create value for both sides.</p>
+          <p>Do not only ask:</p>
+          <p>“What can this partner do for us?”</p>
+          <p>Also ask:</p>
+          <p>“What can we do for them?”</p>
+          <p><strong>Local Businesses</strong></p>
+          <p>Local businesses already have customers walking through their doors.</p>
+          <p>A café might display a flyer.</p>
+          <p>A shop might host a product card.</p>
+          <p>A community business might include the offer in its newsletter or let students run a weekend pop-up.</p>
+          <p>The strongest approach is specific and respectful:</p>
+          <p>“We are running a student business test for local families. Could we display this flyer for one week and track how many orders come through its QR code?”</p>
+          <p>That is easier to evaluate than:</p>
+          <p>“Can you help market our business?”</p>
+          <p><strong>Flyers and Posters</strong></p>
+          <p>Flyers and posters place a message in a specific physical location.</p>
+          <p>They can work well when the product is local and the location matches the customer.</p>
+          <p>A household kit poster near a community noticeboard may make sense.</p>
+          <p>The same poster placed somewhere with no family traffic may not.</p>
+          <p>Each flyer or poster should include:</p>
+          <ul class="content-list">
+            <li>A clear offer</li>
+            <li>A visible price</li>
+            <li>A simple call to action</li>
+            <li>A QR code or contact method</li>
+            <li>An honest trust signal</li>
+            <li>A way to identify where the response came from</li>
+          </ul>
+          <p>A different QR code or order code for each location can help measure which poster worked.</p>
+          <p><strong>Email Lists</strong></p>
+          <p>Email can reach people directly.</p>
+          <p>It can explain the offer, show the product, provide the price, and link to an order page.</p>
+          <p>But access matters.</p>
+          <p>Students should use lists they have permission to contact.</p>
+          <p>They should not collect, copy, or use private email addresses without consent.</p>
+          <p>A strong email is relevant, clear, and easy to act on.</p>
+          <p>It does not need to tell the entire business story.</p>
+          <p><strong>Parent Networks</strong></p>
+          <p>Parent networks may be one of the strongest first channels for a student business.</p>
+          <p>Parents know other parents.</p>
+          <p>They participate in schools, teams, clubs, neighbourhood groups, and community activities.</p>
+          <p>The trust already exists.</p>
+          <p>That makes it easier to run a small test and get useful feedback.</p>
+          <p>But students should not treat relationships as guaranteed sales.</p>
+          <p>The offer still needs to solve a problem.</p>
+          <p>The price still needs to make sense.</p>
+          <p>The customer still gets to say no.</p>
+          <p><strong>Influencers</strong></p>
+          <p>An influencer has an audience that pays attention to what they share.</p>
+          <p>The influencer does not need to be famous.</p>
+          <p>A local coach, teacher, organizer, student leader, parent, or neighbourhood creator might have a small but relevant audience.</p>
+          <p>This is sometimes more useful than a large general audience.</p>
+          <p>The important questions are:</p>
+          <p>Does the audience match the customer?</p>
+          <p>Does the influencer actually trust the offer?</p>
+          <p>Will the promotion feel honest?</p>
+          <p>What will the influencer expect in return?</p>
+          <p>An endorsement should never pretend to be independent if someone was paid or given a free product.</p>
+          <p>Trust depends on honesty.</p>
+
+          <h2 class="article-band-heading article-band-gold">Choose the First Three Corners</h2>
+          <p>You do not need to place the lemonade stand on every corner.</p>
+          <p>Start by comparing the possibilities.</p>
+          <p>The Channel Match Lab helps you decide where to test first.</p>
+          <p>For every possible channel, ask seven questions.</p>
+          <div class="table-wrap" role="region" aria-label="Channel match lab questions" tabindex="0">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Question</th>
+                  <th scope="col">What You Are Testing</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Who is already there?</th>
+                  <td>Whether the audience matches the customer</td>
+                </tr>
+                <tr>
+                  <th scope="row">What does the channel cost?</th>
+                  <td>Money, time, fees, materials, or shared revenue</td>
+                </tr>
+                <tr>
+                  <th scope="row">How much trust does it provide?</th>
+                  <td>Whether people know and believe the channel</td>
+                </tr>
+                <tr>
+                  <th scope="row">How fast can it be tested?</th>
+                  <td>How quickly you can collect evidence</td>
+                </tr>
+                <tr>
+                  <th scope="row">What message fits the channel?</th>
+                  <td>Whether the offer can be communicated naturally</td>
+                </tr>
+                <tr>
+                  <th scope="row">What is the conversion path?</th>
+                  <td>How someone moves from seeing to buying</td>
+                </tr>
+                <tr>
+                  <th scope="row">What could go wrong?</th>
+                  <td>Rules, low response, bad fit, fees, or damaged trust</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Then score each channel.</p>
+          <p>A simple comparison might look like this:</p>
+          <div class="table-wrap" role="region" aria-label="Channel comparison scorecard" tabindex="0">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Channel</th>
+                  <th scope="col">Customer Fit</th>
+                  <th scope="col">Trust</th>
+                  <th scope="col">Test Speed</th>
+                  <th scope="col">Cost</th>
+                  <th scope="col">Conversion Path</th>
+                  <th scope="col">Overall Rank</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Parent network</th>
+                  <td>High</td>
+                  <td>High</td>
+                  <td>Fast</td>
+                  <td>Low</td>
+                  <td>Message → order form → pre-order</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th scope="row">School newsletter</th>
+                  <td>High</td>
+                  <td>High</td>
+                  <td>Medium</td>
+                  <td>Low</td>
+                  <td>Email → QR code → product page</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th scope="row">Local business poster</th>
+                  <td>Medium</td>
+                  <td>Medium</td>
+                  <td>Fast</td>
+                  <td>Low</td>
+                  <td>Poster → QR code → order form</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <th scope="row">General social post</th>
+                  <td>Low</td>
+                  <td>Low</td>
+                  <td>Fast</td>
+                  <td>Low</td>
+                  <td>Post → link → product page</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <th scope="row">Large influencer</th>
+                  <td>Unclear</td>
+                  <td>Medium</td>
+                  <td>Slow</td>
+                  <td>High</td>
+                  <td>Post → link → order page</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>The exact ranking will change for each business.</p>
+          <p>A pet waste kit may fit dog-walking groups and pet stores.</p>
+          <p>A bicycle care kit may fit cycling clubs and bike shops.</p>
+          <p>A tutoring offer may fit schools and parent networks.</p>
+          <p>A plant-watering service may fit neighbourhood groups and condominium boards.</p>
+          <p>There is no universal best channel.</p>
+          <p>There is only a better or worse match for a particular offer.</p>
+          <p><strong>Calculate the Cost per Customer</strong></p>
+          <p>A channel can feel inexpensive while still producing expensive customers.</p>
+          <p>Cost per customer tells you how much you spent to gain each new customer.</p>
+          <p>The basic formula is:</p>
+          <p>Cost per customer = total channel cost ÷ number of new customers</p>
+          <p>If you spend $30 printing flyers and gain three customers:</p>
+          <p>$30 ÷ 3 = $10 per customer</p>
+          <p>If you spend $20 on a community event table and gain ten customers:</p>
+          <p>$20 ÷ 10 = $2 per customer</p>
+          <p>The second channel produced customers at a lower cost.</p>
+          <p>But do not look at cost alone.</p>
+          <p>Ask whether those customers were profitable.</p>
+          <p>If the business earns only $4 in gross profit from each sale, spending $10 to acquire a customer does not work unless that customer buys again.</p>
+          <p>You should also track the time required.</p>
+          <p>A free channel that takes 12 hours to manage may not truly be free.</p>
+
+          <h2 class="article-band-heading article-band-purple">Run Small Channel Tests</h2>
+          <p>Do not commit the full marketing budget immediately.</p>
+          <p>Run a small test in each of the top three channels.</p>
+          <p>For example:</p>
+          <div class="table-wrap" role="region" aria-label="Small channel tests" tabindex="0">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Channel Test</th>
+                  <th scope="col">Small First Move</th>
+                  <th scope="col">What to Measure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Parent network</th>
+                  <td>Send the offer to 20 families with permission</td>
+                  <td>Replies, questions, clicks, and pre-orders</td>
+                </tr>
+                <tr>
+                  <th scope="row">Local poster</th>
+                  <td>Display one poster for one week</td>
+                  <td>QR scans and orders</td>
+                </tr>
+                <tr>
+                  <th scope="row">Community group</th>
+                  <td>Make one approved post</td>
+                  <td>Views, comments, messages, and sales</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Give each test a clear time period.</p>
+          <p>Use the same offer when possible.</p>
+          <p>Track where every response came from.</p>
+          <p>Then compare the results.</p>
+          <p>A simple channel scorecard could include:</p>
+          <ul class="content-list">
+            <li>Number of people reached</li>
+            <li>Number of clicks or QR scans</li>
+            <li>Number of questions</li>
+            <li>Number of pre-orders</li>
+            <li>Number of purchases</li>
+            <li>Total channel cost</li>
+            <li>Cost per customer</li>
+            <li>Customer feedback</li>
+            <li>Problems or risks discovered</li>
+          </ul>
+          <p>This produces evidence.</p>
+          <p>One channel may create many views but no orders.</p>
+          <p>Another may reach fewer people but produce five customers.</p>
+          <p>The second channel has stronger traction.</p>
+          <p>Students then decide:</p>
+          <p>Continue: The channel reaches the right people and produces customers at a workable cost.</p>
+          <p>Change: The channel has potential, but the message, offer, location, or conversion path needs improvement.</p>
+          <p>Stop: The channel produces weak results, costs too much, or reaches the wrong audience.</p>
+          <p>Stopping a weak channel protects the marketing budget.</p>
+          <p>It allows more time and money to move toward the channels that work.</p>
+          <p>That is the final output of the Channel Match Lab:</p>
+          <ul class="content-list">
+            <li>A ranked list of possible channels</li>
+            <li>The top three channels to test first</li>
+            <li>A small test for each channel</li>
+            <li>A clear conversion path</li>
+            <li>A measurement plan</li>
+            <li>A decision to continue, change, or stop</li>
+          </ul>
+          <p>In Module 7, you learned to make the offer understandable in five seconds.</p>
+          <p>Now you know where to put it.</p>
+          <p>The photograph earns attention.</p>
+          <p>The headline explains the benefit.</p>
+          <p>The channel supplies the audience, context, and trust.</p>
+          <p>The conversion path turns attention into action.</p>
+          <p>The measurement tells you whether the channel worked.</p>
+          <p>Do not build your lemonade stand and hope a crowd appears.</p>
+          <p>Find the crowd.</p>
+          <p>Earn permission.</p>
+          <p>Test the corner.</p>
+          <p>Measure what happens.</p>
+          <p>Then put more effort where people actually stop and buy.</p>
+          <p>Put the lemonade stand where people walk.</p>
+
+          <section class="article-intro-module article-insights-module" aria-labelledby="article-insights-heading">
+            <div class="article-intro-media">
+              <picture>
+                <source media="(min-width: 769px)" srcset="../../assets/compass-learning-mods.png" />
+                <img src="../../assets/kids-campus-1.jpg" alt="Students participating in a Money Club learning session" />
+              </picture>
+            </div>
+            <div class="article-intro-summary">
+              <div class="article-intro-label">Lesson Insights</div>
+              <div class="article-intro-body">
+                <div class="article-intro-heading">
+                  <h2 id="article-insights-heading">Marketing:<br>Use Existing Channels First</h2>
+                  <p>Find the crowd. Earn permission. Test the corner. Measure what happens.</p>
+                </div>
+                <div class="article-intro-meta">
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Best for</div>
+                    <p>Students learning how to choose channels, test conversion paths, and market through existing audiences before building their own.</p>
+                  </div>
+                  <div class="article-intro-meta-row">
+                    <div class="article-intro-meta-label">Learning Outcomes</div>
+                    <p>Students learn how channel fit, conversion paths, trust, buying intent, cost per customer, and small channel tests help them choose where to put an offer.</p>
+                  </div>
+                </div>
+                <div class="article-intro-actions article-intro-actions--single">
+                  <button class="video-lesson-button" type="button" data-video-lesson-trigger aria-haspopup="dialog">
+                    Watch Video Lesson
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+        <section class="article-facts-shell" aria-labelledby="article-quick-facts-heading">
+          <div class="article-facts-intro">
+            <div class="article-facts-kicker">Learn by building</div>
+            <h3 class="article-facts-heading" id="article-quick-facts-heading">TURN THE LESSON INTO PRACTICE</h3>
+          </div>
+          <div class="article-facts-grid article-facts-grid--stacked">
+            <div class="article-facts-card">
+              <div class="article-facts-copy">
+                <h3>Use the worksheet</h3>
+                <p>Students can apply the lesson with a Channel Match Lab that ranks possible marketing channels, maps the conversion path, and defines the first small test.</p>
+              </div>
+              <a data-cta-label="Open Channel Match Lab worksheet" class="btn teal gloss" href="/learn/#marketing-worksheet">Open Worksheet</a>
+            </div>
+            <div class="article-facts-card">
+              <div class="article-facts-media">
+                <img src="../../assets/banner-cb-kids.jpg" alt="Students collaborating during a Money Club session" />
+              </div>
+              <div class="article-facts-copy">
+                <h3>Keep learning</h3>
+                <p>Return to the Learning Hub for published modules and worksheet resources.</p>
+              </div>
+              <a data-cta-label="Explore the Learning Hub" class="btn gold gloss" href="/learn/">Explore the Hub</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+  </main>
+  <div class="video-lesson-overlay" id="video-lesson-overlay" role="dialog" aria-modal="true" aria-labelledby="video-lesson-title" hidden>
+    <div class="video-lesson-dialog">
+      <h2 id="video-lesson-title" class="sr-only">Marketing: Use Existing Channels First video lesson</h2>
+      <button class="video-lesson-close" id="close-video-lesson" type="button" aria-label="Close video lesson">&times;</button>
+      <iframe
+        class="video-lesson-frame"
+        id="video-lesson-frame"
+        title="Marketing: Use Existing Channels First dynamic text video lesson"
+        src="video-lesson.html"
+        allow="autoplay"
+      ></iframe>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var openButtons = document.querySelectorAll('#open-video-lesson, [data-video-lesson-trigger]');
+      var closeButton = document.getElementById('close-video-lesson');
+      var overlay = document.getElementById('video-lesson-overlay');
+      var frame = document.getElementById('video-lesson-frame');
+      var previousFocus = null;
+
+      if (!openButtons.length || !closeButton || !overlay || !frame){
+        return;
+      }
+
+      function openVideoLesson(){
+        previousFocus = document.activeElement;
+        overlay.hidden = false;
+        document.body.classList.add('video-overlay-open');
+        try {
+          var audio = frame.contentDocument.getElementById('audio');
+          if (audio.ended) {
+            audio.currentTime = 0;
+          }
+          var playPromise = audio.play();
+          if (playPromise && typeof playPromise.catch === 'function'){
+            playPromise.catch(function(){});
+          }
+        } catch (error) {
+          // The player keeps its own Play control as a fallback.
+        }
+        closeButton.focus();
+      }
+
+      function closeVideoLesson(){
+        try {
+          var audio = frame.contentDocument.getElementById('audio');
+          audio.pause();
+          audio.currentTime = 0;
+        } catch (error) {
+          // Closing the overlay should still succeed if the player is unavailable.
+        }
+        overlay.hidden = true;
+        document.body.classList.remove('video-overlay-open');
+        if (previousFocus && typeof previousFocus.focus === 'function'){
+          previousFocus.focus();
+        }
+      }
+
+      openButtons.forEach(function(openButton){
+        openButton.addEventListener('click', openVideoLesson);
+      });
+      closeButton.addEventListener('click', closeVideoLesson);
+
+      overlay.addEventListener('click', function(event){
+        if (event.target === overlay){
+          closeVideoLesson();
+        }
+      });
+
+      document.addEventListener('keydown', function(event){
+        if (event.key === 'Escape' && !overlay.hidden){
+          closeVideoLesson();
+        }
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      var menuBtn = document.querySelector('.menu-btn');
+      var menuPanel = document.querySelector('.menu-panel');
+      var menuClose = document.querySelector('.menu-close');
+      if (!menuBtn || !menuPanel){ return; }
+
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-controls', 'mobile-menu');
+      menuBtn.setAttribute('tabindex', '0');
+
+      function closeMenu(){
+        menuPanel.classList.remove('is-open');
+        menuPanel.setAttribute('aria-hidden', 'true');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+
+      function openMenu(){
+        menuPanel.classList.add('is-open');
+        menuPanel.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+      }
+
+      function toggleMenu(){
+        if (menuPanel.classList.contains('is-open')){
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+
+      menuBtn.addEventListener('click', function(e){
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      menuBtn.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          toggleMenu();
+        }
+      });
+
+      if (menuClose){
+        menuClose.addEventListener('click', function(){
+          closeMenu();
+        });
+      }
+
+      document.addEventListener('click', function(e){
+        if (!menuPanel.contains(e.target) && !menuBtn.contains(e.target)){
+          closeMenu();
+        }
+      });
+
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape'){
+          closeMenu();
+        }
+      });
+
+      function updateFieldState(field){
+        if (!field){ return; }
+        var radios = field.querySelectorAll('input[type="radio"]');
+        var checkbox = field.querySelector('input[type="checkbox"]');
+        var input = field.querySelector('input, select, textarea');
+        var valid = true;
+        if (radios.length){
+          valid = Array.prototype.some.call(radios, function(radio){
+            return radio.checked;
+          });
+        } else if (checkbox){
+          valid = !checkbox.required || checkbox.checked;
+        } else if (input){
+          valid = input.checkValidity();
+        }
+        field.classList.toggle('is-invalid', !valid);
+      }
+
+      var forms = document.querySelectorAll('.form-grid');
+      forms.forEach(function(form){
+        form.addEventListener('submit', function(e){
+          var fields = form.querySelectorAll('.field');
+          fields.forEach(function(field){
+            updateFieldState(field);
+          });
+          if (!form.checkValidity()){
+            e.preventDefault();
+            var firstInvalid = form.querySelector(':invalid');
+            if (firstInvalid){
+              firstInvalid.focus();
+            }
+          }
+        });
+
+        form.addEventListener('input', function(e){
+          updateFieldState(e.target.closest('.field'));
+        });
+
+        form.addEventListener('change', function(e){
+          updateFieldState(e.target.closest('.field'));
+        });
+      });
+
+      var params = new URLSearchParams(window.location.search);
+      var success = document.getElementById('form-success');
+      if (success && params.get('status') === 'sent') {
+        success.classList.add('is-visible');
+      }
+    })();
+  </script>
+  <script>
+    (function(){
+      var shareBtn = document.getElementById('share-button');
+      if (!shareBtn){ return; }
+
+      var shareData = {
+        title: 'The Money Club.Org',
+        text: 'The Money Club.Org exists to teach youth financial literacy and strengthen our local community.',
+        url: 'https://the-money-club.org/'
+      };
+
+      function copyLink(){
+        if (navigator.clipboard && window.isSecureContext){
+          navigator.clipboard.writeText(shareData.url).then(function(){
+            var original = shareBtn.textContent;
+            shareBtn.textContent = 'Link copied';
+            setTimeout(function(){ shareBtn.textContent = original; }, 2000);
+          });
+          return;
+        }
+        window.prompt('Copy this link:', shareData.url);
+      }
+
+      shareBtn.addEventListener('click', function(){
+        if (navigator.share){
+          navigator.share(shareData).catch(function(){});
+          return;
+        }
+        copyLink();
+      });
+    })();
+  </script>
+  <script>
+    (function(){
+      var spotEls = document.querySelectorAll('.session-availability');
+      if (!spotEls.length){ return; }
+
+      function updateSpots(data){
+        spotEls.forEach(function(el){
+          var key = el.getAttribute('data-session');
+          if (!key || typeof data[key] !== 'number'){ return; }
+          var count = data[key];
+          var capacity = typeof data.capacity === 'number' ? data.capacity : 30;
+          el.textContent = count + ' of ' + capacity + ' Spots Available';
+          var row = el.closest('.session-card');
+          if (row){
+            row.classList.toggle('is-full', count <= 0);
+            var input = row.querySelector('input[type="radio"]');
+            if (input){
+              input.disabled = count <= 0;
+            }
+          }
+        });
+      }
+
+      fetch('availability.php', { cache: 'no-store' })
+        .then(function(res){ return res.json(); })
+        .then(updateSpots)
+        .catch(function(){});
+    })();
+  </script>
+  <script>
+    (function(){
+      function normalizeText(value){
+        return (value || '')
+          .toLowerCase()
+          .replace(/&/g, ' and ')
+          .replace(/[^a-z0-9]+/g, ' ')
+          .trim();
+      }
+
+      function getLabel(el){
+        if (!el){
+          return '';
+        }
+        var explicitLabel = el.getAttribute('data-cta-label');
+        if (explicitLabel){
+          return explicitLabel;
+        }
+        var text = el.textContent || '';
+        return text.trim().replace(/\s+/g, ' ');
+      }
+
+      function getText(el){
+        if (!el){
+          return '';
+        }
+        var text = el.textContent || '';
+        return text.trim().replace(/\s+/g, ' ');
+      }
+
+      function getLocation(el){
+        if (!el){
+          return '';
+        }
+        var container = el.closest('[data-cta-location], section[id], header, footer, nav, form');
+        if (!container){
+          return '';
+        }
+        return (
+          container.getAttribute('data-cta-location') ||
+          container.id ||
+          container.getAttribute('aria-label') ||
+          container.tagName.toLowerCase()
+        );
+      }
+
+      function isReserveCopy(value){
+        var normalized = normalizeText(value);
+        return normalized.indexOf('reserve a spot') !== -1 || normalized.indexOf('reserve spot') !== -1;
+      }
+
+      function isReserveHref(href){
+        if (!href){
+          return false;
+        }
+        var normalizedHref = href.toLowerCase();
+        return normalizedHref === '#reserve' ||
+          normalizedHref === '#reserve-a-spot' ||
+          normalizedHref.indexOf('#reserve-a-spot') !== -1 ||
+          normalizedHref.indexOf('#reserve') !== -1 ||
+          normalizedHref.indexOf('reserve-a-spot.html') !== -1;
+      }
+
+      function buildCtaPayload(target, eventName){
+        var label = getLabel(target);
+        var text = getText(target);
+        var href = target.getAttribute('href') || '';
+        var pagePath = window.location.pathname || '';
+        return {
+          event: eventName,
+          form_name: 'site_cta',
+          funnel_step: eventName,
+          cta_label: label,
+          cta_text: text,
+          cta_href: href,
+          cta_url: href,
+          cta_type: target.tagName.toLowerCase() === 'a' ? 'link' : (target.type || 'button'),
+          cta_location: getLocation(target),
+          cta_page: pagePath,
+          page_path: pagePath,
+          page_title: document.title || ''
+        };
+      }
+
+      function isReserveCta(target){
+        if (!target){
+          return false;
+        }
+        var explicitLabel = target.getAttribute('data-cta-label') || '';
+        var label = getLabel(target);
+        var text = getText(target);
+        var href = target.getAttribute('href') || '';
+        return isReserveCopy(explicitLabel) ||
+          isReserveCopy(label) ||
+          isReserveCopy(text) ||
+          isReserveHref(href);
+      }
+
+      function trackCta(target){
+        window.dataLayer = window.dataLayer || [];
+        var isReserveIntent = isReserveCta(target);
+        var payload = buildCtaPayload(target, 'cta_click');
+        payload.cta_intent = (target.closest('form[action="apply-interest.php"], form[action="/apply-interest.php"]') || target.hasAttribute('data-open-info-session')) ? 'interest_form' : (isReserveIntent ? 'reserve_spot' : 'general');
+        window.dataLayer.push(payload);
+
+        if (isReserveIntent){
+          var normalizedLabel = normalizeText(getLabel(target));
+          var normalizedText = normalizeText(getText(target));
+          if (normalizedLabel === 'reserve a spot' || normalizedText === 'reserve a spot'){
+            var reservePayload = buildCtaPayload(target, 'reserve_spot_click');
+            reservePayload.cta_intent = 'reserve_spot';
+            window.dataLayer.push(reservePayload);
+          }
+        }
+      }
+
+      document.addEventListener('click', function(event){
+        var target = event.target.closest('a, button');
+        if (!target){
+          return;
+        }
+        // Exclude form submit controls from generic CTA tracking
+        // These are tracked separately via interest_form_* and registration_form_* events
+        var interestForm = target.closest('form[action="apply-interest.php"], form[action="/apply-interest.php"]');
+        if (interestForm){
+          return;
+        }
+        var submitForm = target.closest('form');
+        var isSubmitControl = !!submitForm && (
+          target.matches('button[type="submit"], input[type="submit"]') ||
+          (target.tagName === 'BUTTON' && (!target.type || target.type.toLowerCase() === 'submit'))
+        );
+        if (isSubmitControl){
+          return;
+        }
+        if (!(
+          target.classList.contains('btn') ||
+          target.classList.contains('cta-large') ||
+          target.classList.contains('cta-standard') ||
+          target.hasAttribute('data-cta-label')
+        )){
+          return;
+        }
+        trackCta(target);
+      });
+    })();
+  </script>
+
+</body>
+</html>

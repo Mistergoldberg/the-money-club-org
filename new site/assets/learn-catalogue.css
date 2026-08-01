@@ -64,6 +64,8 @@
   :root{
     --learn-catalogue-rail: clamp(260px, 20vw, 320px);
     --learn-catalogue-gap: clamp(28px, 3.2vw, 52px);
+    --learn-catalogue-main-grow: 25px;
+    --learn-catalogue-active-gap: max(0px, calc(var(--learn-catalogue-gap) - var(--learn-catalogue-main-grow)));
     --learn-catalogue-main-max: min(1120px, var(--max-wide, 1320px));
   }
 
@@ -71,14 +73,14 @@
   .content-content.learning-page-shell{
     box-sizing: border-box;
     width: 100%;
-    max-width: calc(var(--learn-catalogue-rail) + var(--learn-catalogue-gap) + var(--learn-catalogue-main-max) + var(--pad, 34px) + var(--pad, 34px));
+    max-width: calc(var(--learn-catalogue-rail) + var(--learn-catalogue-active-gap) + var(--learn-catalogue-main-max) + var(--pad, 34px) + var(--pad, 34px));
     margin-left: auto;
     margin-right: auto;
     padding-left: var(--pad, 34px);
-    padding-right: var(--pad, 34px);
+    padding-right: 0;
     display: grid;
     grid-template-columns: var(--learn-catalogue-rail) minmax(0, 1fr);
-    gap: var(--learn-catalogue-gap);
+    gap: var(--learn-catalogue-active-gap);
     align-items: start;
     justify-content: start;
   }
@@ -104,18 +106,25 @@
   }
 }
 
-@media (min-width: 1440px){
+@media (min-width: 1320px){
   .learning-catalogue .learning-catalogue-shell,
   .content-content.learning-page-shell{
-    max-width: calc(var(--learn-catalogue-rail) + var(--learn-catalogue-rail) + var(--learn-catalogue-gap) + var(--learn-catalogue-gap) + var(--learn-catalogue-main-max) + var(--pad, 34px) + var(--pad, 34px));
-    grid-template-columns: var(--learn-catalogue-rail) minmax(0, var(--learn-catalogue-main-max)) var(--learn-catalogue-rail);
-    justify-content: center;
+    width: min(
+      calc(var(--max-wide, 1320px) + var(--learn-catalogue-main-grow)),
+      calc(100% - max(0px, calc((100% - var(--max-wide, 1320px)) / 2)))
+    );
+    max-width: none;
+    margin-left: max(0px, calc((100% - var(--max-wide, 1320px)) / 2));
+    margin-right: 0;
+    padding-right: 0;
+    grid-template-columns: var(--learn-catalogue-rail) minmax(0, 1fr);
+    justify-content: start;
   }
 
   .learning-catalogue-main,
   .learning-page-shell > .thankyou-card,
   .learning-page-shell > .reservation-card,
   .learning-page-shell > .article-facts-shell{
-    justify-self: center;
+    justify-self: stretch;
   }
 }
