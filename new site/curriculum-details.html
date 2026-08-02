@@ -1068,6 +1068,32 @@ nav{
       margin: 0;
       color: var(--muted);
     }
+    .lesson-module-cta{
+      margin-top: 16px;
+      width: 100%;
+    }
+    .lesson-module-cta .info-session-trigger-btn{
+      display: block;
+      width: 100%;
+      border-radius: 14px;
+      border: 2px solid var(--purple);
+      background: #ffffff;
+      color: var(--purple);
+      font-family: var(--font-body);
+      font-size: clamp(18px, 2.1vw, 24px);
+      font-weight: 700;
+      line-height: 1.2;
+      padding: 14px 16px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 120ms ease, transform 120ms ease;
+    }
+    .lesson-module-cta .info-session-trigger-btn:hover,
+    .lesson-module-cta .info-session-trigger-btn:focus-visible{
+      background: #f3ebfb;
+      transform: translateY(-1px);
+    }
     .section-banner{
       padding: 26px 0;
       border-top: 1px solid var(--line);
@@ -1233,6 +1259,17 @@ nav{
     }
     .schedule-details .wrap{
       max-width: none;
+    }
+    .reservation-steps.schedule-details{
+      font-size: var(--size-body);
+      line-height: var(--lh-body);
+    }
+    .reservation-steps.schedule-details .reservation-card h2,
+    .reservation-steps.schedule-details .table-wrap th,
+    .reservation-steps.schedule-details .table-wrap td{
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
     }
     .form-success{
       border: 1px solid var(--line);
@@ -1455,6 +1492,14 @@ nav{
         font-size: 35.04px;
       }
       .reservation-steps{ font-size: 19px; }
+      .schedule-details{
+        font-size: var(--size-body);
+        line-height: var(--lh-body);
+      }
+      .schedule-details .reservation-card h2{
+        font-size: inherit;
+        line-height: inherit;
+      }
       .reservation-steps .form-grid{ gap: 16px; }
       .reservation-steps .field{ gap: 6px; }
       .reservation-steps .field label{ font-size: 18px; font-weight: 600; line-height: 1.15; }
@@ -1476,7 +1521,19 @@ nav{
         border-radius: 0;
         background: transparent;
         box-shadow: none;
-        padding: 0;
+        padding: 18px 0;
+      }
+      .lesson-plans-list{
+        gap: 0;
+      }
+      .lesson-plans-list .deploy-item + .deploy-item{
+        border-top: 1px solid var(--line);
+      }
+      .lesson-plans-list .deploy-item:first-child{
+        padding-top: 0;
+      }
+      .lesson-plans-list .deploy-item:last-child{
+        padding-bottom: 0;
       }
       nav{ display:none; }
       .below{ grid-template-columns: 1fr; }
@@ -1521,10 +1578,60 @@ nav{
         border: 0;
         border-radius: 0;
         background: transparent;
+        overflow: visible;
       }
       .schedule-details .table-wrap:focus,
       .schedule-details .table-wrap:focus-visible{
         outline: none;
+      }
+      .schedule-details .table-wrap table,
+      .schedule-details .table-wrap thead,
+      .schedule-details .table-wrap tbody,
+      .schedule-details .table-wrap tr,
+      .schedule-details .table-wrap th,
+      .schedule-details .table-wrap td{
+        display: block;
+      }
+      .schedule-details .table-wrap table{
+        min-width: 0;
+        width: 100%;
+        border-collapse: separate;
+      }
+      .schedule-details .table-wrap thead{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+      }
+      .schedule-details .table-wrap tbody,
+      .schedule-details .table-wrap tr{
+        width: 100%;
+      }
+      .schedule-details .table-wrap tr{
+        display: grid;
+        gap: 12px;
+      }
+      .schedule-details .table-wrap td{
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: #ffffff;
+        padding: 14px;
+        font-size: inherit;
+        font-family: inherit;
+        line-height: inherit;
+      }
+      .schedule-details .table-wrap td::before{
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 6px;
+        color: var(--ink);
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: 700;
+        line-height: inherit;
       }
 
       /* Mobile standards */
@@ -1810,7 +1917,7 @@ nav{
             <li>how AI can support research, planning, and execution</li>
             <li>how to ask the most important question in business:</li>
           </ul>
-          <div class="deploy-title">🛠 Why would someone choose this?</div>
+          <div class="deploy-title">🛠 Build. Price. Sell.</div>
           <p class="deploy-copy">By the end of the week, students will have moved from idea to testable concept &mdash; with a clearer understanding of how value is created, priced, communicated, and improved.</p>
         </div>
 
@@ -1837,28 +1944,23 @@ nav{
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
+                        <td data-label="Monday">
                           💰 Financial Literacy as Survival Gear<br />
-                          🏭 Sourcing 101: Where Value Is Actually Made<br />
-                          🗂️ Control Brand Playbook
+                          🎨 Design Thinking &amp; Human Factor Research
                         </td>
-                        <td>
+                        <td data-label="Tuesday">
                           📊 Market Research: Follow the Money &amp; Problems<br />
-                          🎨 Design Thinking &amp; Human Factor Research<br />
-                          📋 Cambridge Business Model Canvas
+                          🏷 Control Brand Playbook
                         </td>
-                        <td>
-                          🚀 Go-To-Market: Blast Off Without Burning Fuel<br />
+                        <td data-label="Wednesday">
+                          🏭 Sourcing 101: Where Value Is Actually Made<br />
+                          🚀 Go-To-Market: Launch Without Burning Fuel
+                        </td>
+                        <td data-label="Thursday">
                           📸 Creative Fundamentals: Photography, Design &amp; Visual Clarity<br />
-                          📣 Marketing: Ride Existing Channels Before Building Your Own
+                          📣 Marketing: Use Existing Channels First
                         </td>
-                        <td>
-                          🛠️ Build Workshops:<br />
-                          ✨ Market Research and Sourcing with AI<br />
-                          📸 Flash Photography<br />
-                          🏗️ Website Design with Vibe Coding
-                        </td>
-                        <td>
+                        <td data-label="Friday">
                           🎙️ Guest Speaker<br />
                           🎤 The Maker Market Event
                         </td>
@@ -1881,76 +1983,58 @@ nav{
           <li class="deploy-item">
             <div class="deploy-title">💰 Financial Literacy as Survival Gear</div>
             <p class="deploy-copy">Students learn how money actually moves through a business: gross margin, profit, fixed and variable costs, break-even points, and cash flow. They begin to see why many businesses fail because the economics do not work.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">🏭 Sourcing 101: Where Value Is Actually Made</div>
-            <p class="deploy-copy">Students learn how products are sourced, priced, bundled, and scaled. They are introduced to suppliers, minimum order quantities, lead times, logistics, and pricing leverage.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">📊 Market Research: Follow the Money &amp; Problems</div>
-            <p class="deploy-copy">Students learn to look for signals, not just opinions. They study demand by looking at existing spending, substitutes, complaints, inefficiencies, and what people already pay for.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">🏷 Control Brand Playbook</div>
-            <p class="deploy-copy">Students learn how operators create value by studying what already works, improving the offer, and controlling margin. This introduces the logic behind positioning, private label, and pricing power.</p>
+            <div class="lesson-module-cta">
+              <a class="info-session-trigger-btn" href="/learn/financial-literacy-for-young-entrepreneurs/" data-cta-label="Launch Learning Module">Launch Learning Module</a>
+            </div>
           </li>
           <li class="deploy-item">
             <div class="deploy-title">🎨 Design Thinking &amp; Human Factor Research</div>
             <p class="deploy-copy">Students learn to observe behavior, identify friction, and translate real problems into ideas people might actually use.</p>
+            <div class="lesson-module-cta">
+              <a class="info-session-trigger-btn" href="/learn/design-thinking-and-human-factor-research/" data-cta-label="Launch Learning Module">Launch Learning Module</a>
+            </div>
           </li>
           <li class="deploy-item">
-            <div class="deploy-title">📋 Business Model Thinking</div>
-            <p class="deploy-copy">Students connect the problem, customer, value proposition, revenue model, cost structure, and path to execution so the idea works as a system, not just a concept.</p>
+            <div class="deploy-title">📊 Market Research: Follow the Money &amp; Problems</div>
+            <p class="deploy-copy">Students learn to look for signals, not just opinions. They study demand by looking at existing spending, substitutes, complaints, inefficiencies, and what people already pay for.</p>
+            <div class="lesson-module-cta">
+              <a class="info-session-trigger-btn" href="/learn/market-research-follow-the-money-and-problems/" data-cta-label="Launch Learning Module">Launch Learning Module</a>
+            </div>
+          </li>
+          <li class="deploy-item">
+            <div class="deploy-title">🏷 Control Brand Playbook</div>
+            <p class="deploy-copy">Students learn how operators create value by studying what already works, improving the offer, and controlling margin. This introduces the logic behind positioning, private label, and pricing power.</p>
+            <div class="lesson-module-cta">
+              <a class="info-session-trigger-btn" href="/learn/control-brand-playbook/" data-cta-label="Launch Learning Module">Launch Learning Module</a>
+            </div>
+          </li>
+          <li class="deploy-item">
+            <div class="deploy-title">🏭 Sourcing 101: Where Value Is Actually Made</div>
+            <p class="deploy-copy">Students learn how products are sourced, priced, bundled, and scaled. They are introduced to suppliers, minimum order quantities, lead times, logistics, and pricing leverage.</p>
+            <div class="lesson-module-cta">
+              <a class="info-session-trigger-btn" href="/learn/sourcing-101-where-value-is-actually-made/" data-cta-label="Launch Learning Module">Launch Learning Module</a>
+            </div>
           </li>
           <li class="deploy-item">
             <div class="deploy-title">🚀 Go-To-Market: Launch Without Burning Fuel</div>
             <p class="deploy-copy">Students learn to test quickly, learn early, and avoid overbuilding. The focus is on feedback, traction, and learning before polish.</p>
+            <div class="lesson-module-cta">
+              <a class="info-session-trigger-btn" href="/learn/go-to-market-launch-without-burning-fuel/" data-cta-label="Launch Learning Module">Launch Learning Module</a>
+            </div>
           </li>
           <li class="deploy-item">
             <div class="deploy-title">📸 Creative Fundamentals: Photography, Design &amp; Visual Clarity</div>
             <p class="deploy-copy">Students learn how design, messaging, and visual clarity affect trust, demand, and perceived value.</p>
+            <div class="lesson-module-cta">
+              <a class="info-session-trigger-btn" href="/learn/creative-fundamentals-photography-design-and-visual-clarity/" data-cta-label="Launch Learning Module">Launch Learning Module</a>
+            </div>
           </li>
           <li class="deploy-item">
             <div class="deploy-title">📣 Marketing: Use Existing Channels First</div>
             <p class="deploy-copy">Students learn how marketplaces, retailers, social platforms, and partnerships can help test ideas faster than building everything from scratch.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">🕵️‍♂️ Staying Ahead of the Game</div>
-            <p class="deploy-copy">Students learn that research is ongoing. They monitor competitors, pricing, customer behavior, and shifts in the market over time.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">💻 AI Tools Used Across the Program</div>
-            <p class="deploy-copy">AI is part of the program because it is part of how real products and ideas are now developed.</p>
-            <p class="deploy-copy">Students use AI to:</p>
-            <ul class="deploy-bullets">
-              <li>research markets and understand customers</li>
-              <li>spot patterns and opportunities</li>
-              <li>compare products and pricing</li>
-              <li>model simple business cases</li>
-              <li>create media and marketing assets</li>
-              <li>prototype websites and app concepts</li>
-            </ul>
-            <p class="deploy-copy">The goal is not just to use AI. It is to use it well &mdash; as a tool for better thinking, faster iteration, and more informed decisions.</p>
-          </li>
-          <li class="deploy-item">
-            <div class="deploy-title">🎤 The Maker Market</div>
-            <p class="deploy-copy">The program ends with a live Maker Market.</p>
-            <p class="deploy-copy">Each team presents what they built: products, services, apps, and ideas.</p>
-            <p class="deploy-copy">Every participant receives virtual cash and decides what to spend it on.</p>
-            <p class="deploy-copy">That creates one real question:</p>
-            <p class="deploy-copy">Why would someone choose this?</p>
-            <p class="deploy-copy">There are no grades in that moment. Just judgment, value, and decision-making.</p>
-            <p class="deploy-copy">Students have to explain:</p>
-            <ul class="deploy-bullets">
-              <li>what they made</li>
-              <li>who it is for</li>
-              <li>how it works</li>
-              <li>what it costs</li>
-              <li>how it is priced</li>
-              <li>why somebody would want it</li>
-            </ul>
-            <p class="deploy-copy">It is a simple format, but it teaches something important:</p>
-            <p class="deploy-copy">An idea is only as strong as the choices it can earn.</p>
+            <div class="lesson-module-cta">
+              <a class="info-session-trigger-btn" href="/learn/marketing-use-existing-channels-first/" data-cta-label="Launch Learning Module">Launch Learning Module</a>
+            </div>
           </li>
         </ul>
       </div>
