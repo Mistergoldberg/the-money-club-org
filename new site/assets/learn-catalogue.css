@@ -128,3 +128,14 @@
     justify-self: stretch;
   }
 }
+
+@media (max-width: 980px){
+  .learning-page-shell .thankyou-card h2.article-band-heading{
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding-left: var(--pad, 18px);
+    padding-right: var(--pad, 18px);
+    font-size: var(--size-section-heading, clamp(48.96px, 7.2vw, 80.64px));
+    line-height: var(--lh-heading, 0.8);
+  }
+}
