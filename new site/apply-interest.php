@@ -201,9 +201,7 @@ https://the-money-club.org/parent-approval.html
 
 Once the form is complete, we will send payment instructions by e-transfer to secure the spot.
 
-I’d also be happy to jump on a quick parent call to walk you through the program and answer questions.
-
-I’m available Tuesday, May 26, between 10:00 AM and 3:00 PM. Alternatively, let me know when is good for you.
+I’d also be happy to jump on a quick parent call to walk you through the program and answer questions. Simply respond to this email with your availability and phone number.
 
 Warmly,
 
