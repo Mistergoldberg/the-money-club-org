@@ -1,0 +1,962 @@
+{
+  "language": "en",
+  "language_probability": 1,
+  "duration": 326.739625,
+  "segments": 119,
+  "model": "small.en",
+  "audio": "market-research.mp3",
+  "audio_sha256": "f5dfdaa16c7a13005257301c7e44b1b37c4fe3621417b3886025c9729dcc40fa",
+  "source": "market_research_follow_money_problems_transcript.txt",
+  "source_sha256": "984bc3567bd44d48c63e0e48c74041b4ae0fa309beb5c4dc4c80c754498f5dec",
+  "expected_words": 1003,
+  "output_words": 1003,
+  "recognized_words": 884,
+  "direct_matches": 848,
+  "interpolated_words": 155,
+  "match_rate": 0.8454636091724825,
+  "exact_transcript_preserved": true,
+  "interpolated_details": [
+    {
+      "word": "2,",
+      "start": 7.6,
+      "end": 8.56,
+      "matched": false
+    },
+    {
+      "word": "45L",
+      "start": 68.0,
+      "end": 68.68,
+      "matched": false
+    },
+    {
+      "word": "10L",
+      "start": 71.62,
+      "end": 72.04,
+      "matched": false
+    },
+    {
+      "word": "Walmart.ca",
+      "start": 119.14,
+      "end": 120.42,
+      "matched": false
+    },
+    {
+      "word": "a",
+      "start": 136.62,
+      "end": 137.205,
+      "matched": false
+    },
+    {
+      "word": "SKU?",
+      "start": 137.205,
+      "end": 137.79000000000002,
+      "matched": false
+    },
+    {
+      "word": "A",
+      "start": 137.79000000000002,
+      "end": 138.375,
+      "matched": false
+    },
+    {
+      "word": "SKU",
+      "start": 138.375,
+      "end": 138.96,
+      "matched": false
+    },
+    {
+      "word": "45L",
+      "start": 141.28,
+      "end": 142.08,
+      "matched": false
+    },
+    {
+      "word": "90L",
+      "start": 144.78,
+      "end": 145.44,
+      "matched": false
+    },
+    {
+      "word": "10L",
+      "start": 148.78,
+      "end": 149.34,
+      "matched": false
+    },
+    {
+      "word": "Size",
+      "start": 182.28,
+      "end": 182.32,
+      "matched": false
+    },
+    {
+      "word": "Compostable",
+      "start": 182.32,
+      "end": 182.35999999999999,
+      "matched": false
+    },
+    {
+      "word": "Garbage",
+      "start": 182.35999999999999,
+      "end": 182.39999999999998,
+      "matched": false
+    },
+    {
+      "word": "Recycling",
+      "start": 182.39999999999998,
+      "end": 182.43999999999997,
+      "matched": false
+    },
+    {
+      "word": "Total",
+      "start": 182.43999999999997,
+      "end": 182.47999999999996,
+      "matched": false
+    },
+    {
+      "word": "SKUs",
+      "start": 182.47999999999996,
+      "end": 182.51999999999995,
+      "matched": false
+    },
+    {
+      "word": "What",
+      "start": 182.51999999999995,
+      "end": 182.55999999999995,
+      "matched": false
+    },
+    {
+      "word": "This",
+      "start": 182.55999999999995,
+      "end": 182.59999999999994,
+      "matched": false
+    },
+    {
+      "word": "Tells",
+      "start": 182.59999999999994,
+      "end": 182.63999999999993,
+      "matched": false
+    },
+    {
+      "word": "Us",
+      "start": 182.63999999999993,
+      "end": 182.67999999999992,
+      "matched": false
+    },
+    {
+      "word": "45L",
+      "start": 182.67999999999992,
+      "end": 182.7199999999999,
+      "matched": false
+    },
+    {
+      "word": "0",
+      "start": 182.7199999999999,
+      "end": 182.7599999999999,
+      "matched": false
+    },
+    {
+      "word": "12",
+      "start": 182.7599999999999,
+      "end": 182.7999999999999,
+      "matched": false
+    },
+    {
+      "word": "1",
+      "start": 182.7999999999999,
+      "end": 182.8399999999999,
+      "matched": false
+    },
+    {
+      "word": "13",
+      "start": 182.8399999999999,
+      "end": 182.87999999999988,
+      "matched": false
+    },
+    {
+      "word": "Walmart",
+      "start": 182.87999999999988,
+      "end": 182.91999999999987,
+      "matched": false
+    },
+    {
+      "word": "gives",
+      "start": 182.91999999999987,
+      "end": 182.95999999999987,
+      "matched": false
+    },
+    {
+      "word": "this",
+      "start": 182.95999999999987,
+      "end": 182.99999999999986,
+      "matched": false
+    },
+    {
+      "word": "size",
+      "start": 182.99999999999986,
+      "end": 183.03999999999985,
+      "matched": false
+    },
+    {
+      "word": "the",
+      "start": 183.03999999999985,
+      "end": 183.07999999999984,
+      "matched": false
+    },
+    {
+      "word": "most",
+      "start": 183.07999999999984,
+      "end": 183.11999999999983,
+      "matched": false
+    },
+    {
+      "word": "spots.",
+      "start": 183.11999999999983,
+      "end": 183.15999999999983,
+      "matched": false
+    },
+    {
+      "word": "Big",
+      "start": 183.15999999999983,
+      "end": 183.19999999999982,
+      "matched": false
+    },
+    {
+      "word": "demand",
+      "start": 183.19999999999982,
+      "end": 183.2399999999998,
+      "matched": false
+    },
+    {
+      "word": "clue.",
+      "start": 183.2399999999998,
+      "end": 183.2799999999998,
+      "matched": false
+    },
+    {
+      "word": "90L",
+      "start": 183.2799999999998,
+      "end": 183.3199999999998,
+      "matched": false
+    },
+    {
+      "word": "0",
+      "start": 183.3199999999998,
+      "end": 183.3599999999998,
+      "matched": false
+    },
+    {
+      "word": "8",
+      "start": 183.3599999999998,
+      "end": 183.39999999999978,
+      "matched": false
+    },
+    {
+      "word": "3",
+      "start": 183.39999999999978,
+      "end": 183.43999999999977,
+      "matched": false
+    },
+    {
+      "word": "11",
+      "start": 183.43999999999977,
+      "end": 183.47999999999976,
+      "matched": false
+    },
+    {
+      "word": "Large",
+      "start": 183.47999999999976,
+      "end": 183.51999999999975,
+      "matched": false
+    },
+    {
+      "word": "bags",
+      "start": 183.51999999999975,
+      "end": 183.55999999999975,
+      "matched": false
+    },
+    {
+      "word": "matter",
+      "start": 183.55999999999975,
+      "end": 183.59999999999974,
+      "matched": false
+    },
+    {
+      "word": "for",
+      "start": 183.59999999999974,
+      "end": 183.63999999999973,
+      "matched": false
+    },
+    {
+      "word": "recycling",
+      "start": 183.63999999999973,
+      "end": 183.67999999999972,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 183.67999999999972,
+      "end": 183.71999999999971,
+      "matched": false
+    },
+    {
+      "word": "bigger",
+      "start": 183.71999999999971,
+      "end": 183.7599999999997,
+      "matched": false
+    },
+    {
+      "word": "household",
+      "start": 183.7599999999997,
+      "end": 183.7999999999997,
+      "matched": false
+    },
+    {
+      "word": "jobs.",
+      "start": 183.7999999999997,
+      "end": 183.8399999999997,
+      "matched": false
+    },
+    {
+      "word": "25L",
+      "start": 183.8399999999997,
+      "end": 183.87999999999968,
+      "matched": false
+    },
+    {
+      "word": "0",
+      "start": 183.87999999999968,
+      "end": 183.91999999999967,
+      "matched": false
+    },
+    {
+      "word": "9",
+      "start": 183.91999999999967,
+      "end": 183.95999999999967,
+      "matched": false
+    },
+    {
+      "word": "0",
+      "start": 183.95999999999967,
+      "end": 183.99999999999966,
+      "matched": false
+    },
+    {
+      "word": "9",
+      "start": 183.99999999999966,
+      "end": 184.03999999999965,
+      "matched": false
+    },
+    {
+      "word": "Small",
+      "start": 184.03999999999965,
+      "end": 184.07999999999964,
+      "matched": false
+    },
+    {
+      "word": "and",
+      "start": 184.07999999999964,
+      "end": 184.11999999999964,
+      "matched": false
+    },
+    {
+      "word": "medium",
+      "start": 184.11999999999964,
+      "end": 184.15999999999963,
+      "matched": false
+    },
+    {
+      "word": "garbage",
+      "start": 184.15999999999963,
+      "end": 184.19999999999962,
+      "matched": false
+    },
+    {
+      "word": "is",
+      "start": 184.19999999999962,
+      "end": 184.2399999999996,
+      "matched": false
+    },
+    {
+      "word": "a",
+      "start": 184.2399999999996,
+      "end": 184.2799999999996,
+      "matched": false
+    },
+    {
+      "word": "real",
+      "start": 184.2799999999996,
+      "end": 184.3199999999996,
+      "matched": false
+    },
+    {
+      "word": "routine.",
+      "start": 184.3199999999996,
+      "end": 184.3599999999996,
+      "matched": false
+    },
+    {
+      "word": "10L",
+      "start": 184.3599999999996,
+      "end": 184.39999999999958,
+      "matched": false
+    },
+    {
+      "word": "8",
+      "start": 184.39999999999958,
+      "end": 184.43999999999957,
+      "matched": false
+    },
+    {
+      "word": "0",
+      "start": 184.43999999999957,
+      "end": 184.47999999999956,
+      "matched": false
+    },
+    {
+      "word": "0",
+      "start": 184.47999999999956,
+      "end": 184.51999999999956,
+      "matched": false
+    },
+    {
+      "word": "8",
+      "start": 184.51999999999956,
+      "end": 184.55999999999955,
+      "matched": false
+    },
+    {
+      "word": "Compost",
+      "start": 184.55999999999955,
+      "end": 184.59999999999954,
+      "matched": false
+    },
+    {
+      "word": "liners",
+      "start": 184.59999999999954,
+      "end": 184.63999999999953,
+      "matched": false
+    },
+    {
+      "word": "are",
+      "start": 184.63999999999953,
+      "end": 184.67999999999952,
+      "matched": false
+    },
+    {
+      "word": "a",
+      "start": 184.67999999999952,
+      "end": 184.71999999999952,
+      "matched": false
+    },
+    {
+      "word": "strong",
+      "start": 184.71999999999952,
+      "end": 184.7599999999995,
+      "matched": false
+    },
+    {
+      "word": "repeated",
+      "start": 184.7599999999995,
+      "end": 184.7999999999995,
+      "matched": false
+    },
+    {
+      "word": "need.",
+      "start": 184.7999999999995,
+      "end": 184.8399999999995,
+      "matched": false
+    },
+    {
+      "word": "75L",
+      "start": 184.8399999999995,
+      "end": 184.87999999999948,
+      "matched": false
+    },
+    {
+      "word": "0",
+      "start": 184.87999999999948,
+      "end": 184.91999999999948,
+      "matched": false
+    },
+    {
+      "word": "4",
+      "start": 184.91999999999948,
+      "end": 184.95999999999947,
+      "matched": false
+    },
+    {
+      "word": "2",
+      "start": 184.95999999999947,
+      "end": 184.99999999999946,
+      "matched": false
+    },
+    {
+      "word": "6",
+      "start": 184.99999999999946,
+      "end": 185.03999999999945,
+      "matched": false
+    },
+    {
+      "word": "Another",
+      "start": 185.03999999999945,
+      "end": 185.07999999999944,
+      "matched": false
+    },
+    {
+      "word": "larger",
+      "start": 185.07999999999944,
+      "end": 185.11999999999944,
+      "matched": false
+    },
+    {
+      "word": "household-use",
+      "start": 185.11999999999944,
+      "end": 185.15999999999943,
+      "matched": false
+    },
+    {
+      "word": "size.",
+      "start": 185.15999999999943,
+      "end": 185.19999999999942,
+      "matched": false
+    },
+    {
+      "word": "135L",
+      "start": 185.19999999999942,
+      "end": 185.2399999999994,
+      "matched": false
+    },
+    {
+      "word": "0",
+      "start": 185.2399999999994,
+      "end": 185.2799999999994,
+      "matched": false
+    },
+    {
+      "word": "5",
+      "start": 185.2799999999994,
+      "end": 185.3199999999994,
+      "matched": false
+    },
+    {
+      "word": "0",
+      "start": 185.3199999999994,
+      "end": 185.3599999999994,
+      "matched": false
+    },
+    {
+      "word": "5",
+      "start": 185.3599999999994,
+      "end": 185.39999999999938,
+      "matched": false
+    },
+    {
+      "word": "Big",
+      "start": 185.39999999999938,
+      "end": 185.43999999999937,
+      "matched": false
+    },
+    {
+      "word": "garbage",
+      "start": 185.43999999999937,
+      "end": 185.47999999999936,
+      "matched": false
+    },
+    {
+      "word": "bags",
+      "start": 185.47999999999936,
+      "end": 185.51999999999936,
+      "matched": false
+    },
+    {
+      "word": "have",
+      "start": 185.51999999999936,
+      "end": 185.55999999999935,
+      "matched": false
+    },
+    {
+      "word": "a",
+      "start": 185.55999999999935,
+      "end": 185.59999999999934,
+      "matched": false
+    },
+    {
+      "word": "smaller",
+      "start": 185.59999999999934,
+      "end": 185.63999999999933,
+      "matched": false
+    },
+    {
+      "word": "but",
+      "start": 185.63999999999933,
+      "end": 185.67999999999932,
+      "matched": false
+    },
+    {
+      "word": "visible",
+      "start": 185.67999999999932,
+      "end": 185.71999999999932,
+      "matched": false
+    },
+    {
+      "word": "lane.",
+      "start": 185.71999999999932,
+      "end": 185.7599999999993,
+      "matched": false
+    },
+    {
+      "word": "Total",
+      "start": 185.7599999999993,
+      "end": 185.7999999999993,
+      "matched": false
+    },
+    {
+      "word": "10",
+      "start": 185.7999999999993,
+      "end": 185.8399999999993,
+      "matched": false
+    },
+    {
+      "word": "49",
+      "start": 185.8399999999993,
+      "end": 185.87999999999928,
+      "matched": false
+    },
+    {
+      "word": "7",
+      "start": 185.87999999999928,
+      "end": 185.91999999999928,
+      "matched": false
+    },
+    {
+      "word": "67",
+      "start": 185.91999999999928,
+      "end": 185.95999999999927,
+      "matched": false
+    },
+    {
+      "word": "Garbage",
+      "start": 185.95999999999927,
+      "end": 185.99999999999926,
+      "matched": false
+    },
+    {
+      "word": "dominates",
+      "start": 185.99999999999926,
+      "end": 186.03999999999925,
+      "matched": false
+    },
+    {
+      "word": "the",
+      "start": 186.03999999999925,
+      "end": 186.07999999999925,
+      "matched": false
+    },
+    {
+      "word": "shelf.",
+      "start": 186.07999999999925,
+      "end": 186.11999999999924,
+      "matched": false
+    },
+    {
+      "word": "This",
+      "start": 186.11999999999924,
+      "end": 186.15999999999923,
+      "matched": false
+    },
+    {
+      "word": "table",
+      "start": 186.15999999999923,
+      "end": 186.19999999999922,
+      "matched": false
+    },
+    {
+      "word": "tells",
+      "start": 186.19999999999922,
+      "end": 186.2399999999992,
+      "matched": false
+    },
+    {
+      "word": "a",
+      "start": 186.2399999999992,
+      "end": 186.2799999999992,
+      "matched": false
+    },
+    {
+      "word": "story.",
+      "start": 186.2799999999992,
+      "end": 186.3199999999992,
+      "matched": false
+    },
+    {
+      "word": "45L",
+      "start": 186.3199999999992,
+      "end": 186.3599999999992,
+      "matched": false
+    },
+    {
+      "word": "90L",
+      "start": 188.18,
+      "end": 189.44,
+      "matched": false
+    },
+    {
+      "word": "10L",
+      "start": 194.18,
+      "end": 195.4,
+      "matched": false
+    },
+    {
+      "word": "third-party",
+      "start": 228.66,
+      "end": 229.08,
+      "matched": false
+    },
+    {
+      "word": "Parent",
+      "start": 236.5,
+      "end": 237.34,
+      "matched": false
+    },
+    {
+      "word": "45L",
+      "start": 263.48,
+      "end": 264.18,
+      "matched": false
+    },
+    {
+      "word": "10L",
+      "start": 266.32,
+      "end": 266.8,
+      "matched": false
+    },
+    {
+      "word": "better-margin",
+      "start": 308.44,
+      "end": 309.3,
+      "matched": false
+    },
+    {
+      "word": "1,",
+      "start": 317.24,
+      "end": 318.18,
+      "matched": false
+    },
+    {
+      "word": "learned",
+      "start": 318.22,
+      "end": 318.42,
+      "matched": false
+    },
+    {
+      "word": "2,",
+      "start": 320.84,
+      "end": 321.76,
+      "matched": false
+    },
+    {
+      "word": "learned",
+      "start": 321.8,
+      "end": 322.0,
+      "matched": false
+    },
+    {
+      "word": "3,",
+      "start": 324.7,
+      "end": 325.38,
+      "matched": false
+    },
+    {
+      "word": "learned",
+      "start": 325.42,
+      "end": 325.62,
+      "matched": false
+    },
+    {
+      "word": "is",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "a",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "scoreboard.",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "Next,",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "you",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "learn",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "how",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "to",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "turn",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "that",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "scoreboard",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "into",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "an",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "offer.",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "Because",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "a",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "good",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "business",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "does",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "not",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "start",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "with",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "a",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "guess.",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "It",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "starts",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "with",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "a",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    },
+    {
+      "word": "signal.",
+      "start": 326.69962499999997,
+      "end": 326.739625,
+      "matched": false
+    }
+  ],
+  "first_word": {
+    "word": "Market",
+    "start": 0.0,
+    "end": 0.38,
+    "matched": true
+  },
+  "last_word": {
+    "word": "signal.",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  }
+}

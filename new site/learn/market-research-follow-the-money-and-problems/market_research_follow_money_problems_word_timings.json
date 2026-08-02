@@ -1,0 +1,6020 @@
+[
+  {
+    "word": "Market",
+    "start": 0.0,
+    "end": 0.38,
+    "matched": true
+  },
+  {
+    "word": "Research:",
+    "start": 0.38,
+    "end": 0.84,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 1.26,
+    "end": 1.3,
+    "matched": true
+  },
+  {
+    "word": "Shelf",
+    "start": 1.3,
+    "end": 1.6,
+    "matched": true
+  },
+  {
+    "word": "Is",
+    "start": 1.6,
+    "end": 1.88,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 1.88,
+    "end": 2.02,
+    "matched": true
+  },
+  {
+    "word": "Scoreboard",
+    "start": 2.02,
+    "end": 2.46,
+    "matched": true
+  },
+  {
+    "word": "Demand",
+    "start": 3.42,
+    "end": 3.62,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 3.62,
+    "end": 3.8,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 3.8,
+    "end": 3.98,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 3.98,
+    "end": 4.14,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 4.14,
+    "end": 4.34,
+    "matched": true
+  },
+  {
+    "word": "say.",
+    "start": 4.34,
+    "end": 4.7,
+    "matched": true
+  },
+  {
+    "word": "Demand",
+    "start": 5.18,
+    "end": 5.46,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 5.46,
+    "end": 5.66,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 5.66,
+    "end": 5.8,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 5.8,
+    "end": 6.02,
+    "matched": true
+  },
+  {
+    "word": "already",
+    "start": 6.02,
+    "end": 6.34,
+    "matched": true
+  },
+  {
+    "word": "do.",
+    "start": 6.34,
+    "end": 6.66,
+    "matched": true
+  },
+  {
+    "word": "In",
+    "start": 7.22,
+    "end": 7.34,
+    "matched": true
+  },
+  {
+    "word": "Module",
+    "start": 7.34,
+    "end": 7.6,
+    "matched": true
+  },
+  {
+    "word": "2,",
+    "start": 7.6,
+    "end": 8.56,
+    "matched": false
+  },
+  {
+    "word": "you",
+    "start": 8.56,
+    "end": 8.6,
+    "matched": true
+  },
+  {
+    "word": "learned",
+    "start": 8.6,
+    "end": 8.8,
+    "matched": true
+  },
+  {
+    "word": "how",
+    "start": 8.8,
+    "end": 8.98,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 8.98,
+    "end": 9.08,
+    "matched": true
+  },
+  {
+    "word": "find",
+    "start": 9.08,
+    "end": 9.3,
+    "matched": true
+  },
+  {
+    "word": "friction.",
+    "start": 9.3,
+    "end": 9.64,
+    "matched": true
+  },
+  {
+    "word": "Friction",
+    "start": 10.4,
+    "end": 10.62,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 10.62,
+    "end": 10.84,
+    "matched": true
+  },
+  {
+    "word": "when",
+    "start": 10.84,
+    "end": 11.02,
+    "matched": true
+  },
+  {
+    "word": "life",
+    "start": 11.02,
+    "end": 11.26,
+    "matched": true
+  },
+  {
+    "word": "gets",
+    "start": 11.26,
+    "end": 11.5,
+    "matched": true
+  },
+  {
+    "word": "annoying.",
+    "start": 11.5,
+    "end": 11.86,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 12.38,
+    "end": 12.56,
+    "matched": true
+  },
+  {
+    "word": "parent",
+    "start": 12.56,
+    "end": 12.84,
+    "matched": true
+  },
+  {
+    "word": "runs",
+    "start": 12.84,
+    "end": 13.1,
+    "matched": true
+  },
+  {
+    "word": "out",
+    "start": 13.1,
+    "end": 13.28,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 13.28,
+    "end": 13.42,
+    "matched": true
+  },
+  {
+    "word": "garbage",
+    "start": 13.42,
+    "end": 13.66,
+    "matched": true
+  },
+  {
+    "word": "bags.",
+    "start": 13.66,
+    "end": 14.1,
+    "matched": true
+  },
+  {
+    "word": "Someone",
+    "start": 14.74,
+    "end": 14.96,
+    "matched": true
+  },
+  {
+    "word": "forgets",
+    "start": 14.96,
+    "end": 15.38,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 15.38,
+    "end": 15.52,
+    "matched": true
+  },
+  {
+    "word": "buy",
+    "start": 15.52,
+    "end": 15.68,
+    "matched": true
+  },
+  {
+    "word": "compost",
+    "start": 15.68,
+    "end": 16.16,
+    "matched": true
+  },
+  {
+    "word": "liners.",
+    "start": 16.16,
+    "end": 16.58,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 17.08,
+    "end": 17.26,
+    "matched": true
+  },
+  {
+    "word": "recycling",
+    "start": 17.26,
+    "end": 17.74,
+    "matched": true
+  },
+  {
+    "word": "bag",
+    "start": 17.74,
+    "end": 18.08,
+    "matched": true
+  },
+  {
+    "word": "rips.",
+    "start": 18.08,
+    "end": 18.54,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 19.06,
+    "end": 19.24,
+    "matched": true
+  },
+  {
+    "word": "bathroom",
+    "start": 19.24,
+    "end": 19.58,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 19.58,
+    "end": 19.76,
+    "matched": true
+  },
+  {
+    "word": "out",
+    "start": 19.76,
+    "end": 19.9,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 19.9,
+    "end": 20.02,
+    "matched": true
+  },
+  {
+    "word": "soap",
+    "start": 20.02,
+    "end": 20.2,
+    "matched": true
+  },
+  {
+    "word": "again.",
+    "start": 20.2,
+    "end": 20.46,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 20.92,
+    "end": 21.08,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 21.08,
+    "end": 21.24,
+    "matched": true
+  },
+  {
+    "word": "useful.",
+    "start": 21.24,
+    "end": 21.62,
+    "matched": true
+  },
+  {
+    "word": "But",
+    "start": 21.98,
+    "end": 22.28,
+    "matched": true
+  },
+  {
+    "word": "friction",
+    "start": 22.28,
+    "end": 22.66,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 22.66,
+    "end": 22.82,
+    "matched": true
+  },
+  {
+    "word": "only",
+    "start": 22.82,
+    "end": 23.02,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 23.02,
+    "end": 23.18,
+    "matched": true
+  },
+  {
+    "word": "first",
+    "start": 23.18,
+    "end": 23.36,
+    "matched": true
+  },
+  {
+    "word": "clue.",
+    "start": 23.36,
+    "end": 23.68,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 24.24,
+    "end": 24.34,
+    "matched": true
+  },
+  {
+    "word": "next",
+    "start": 24.34,
+    "end": 24.58,
+    "matched": true
+  },
+  {
+    "word": "question",
+    "start": 24.58,
+    "end": 24.94,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 24.94,
+    "end": 25.16,
+    "matched": true
+  },
+  {
+    "word": "bigger:",
+    "start": 25.16,
+    "end": 25.46,
+    "matched": true
+  },
+  {
+    "word": "Is",
+    "start": 26.0,
+    "end": 26.1,
+    "matched": true
+  },
+  {
+    "word": "this",
+    "start": 26.1,
+    "end": 26.32,
+    "matched": true
+  },
+  {
+    "word": "problem",
+    "start": 26.32,
+    "end": 26.74,
+    "matched": true
+  },
+  {
+    "word": "connected",
+    "start": 26.74,
+    "end": 27.14,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 27.14,
+    "end": 27.42,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 27.42,
+    "end": 27.54,
+    "matched": true
+  },
+  {
+    "word": "real",
+    "start": 27.54,
+    "end": 27.72,
+    "matched": true
+  },
+  {
+    "word": "market?",
+    "start": 27.72,
+    "end": 28.12,
+    "matched": true
+  },
+  {
+    "word": "Because",
+    "start": 28.12,
+    "end": 28.86,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 28.86,
+    "end": 29.14,
+    "matched": true
+  },
+  {
+    "word": "every",
+    "start": 29.14,
+    "end": 29.54,
+    "matched": true
+  },
+  {
+    "word": "annoying",
+    "start": 29.54,
+    "end": 29.92,
+    "matched": true
+  },
+  {
+    "word": "problem",
+    "start": 29.92,
+    "end": 30.3,
+    "matched": true
+  },
+  {
+    "word": "becomes",
+    "start": 30.3,
+    "end": 30.62,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 30.62,
+    "end": 30.84,
+    "matched": true
+  },
+  {
+    "word": "business.",
+    "start": 30.84,
+    "end": 31.14,
+    "matched": true
+  },
+  {
+    "word": "Some",
+    "start": 31.94,
+    "end": 31.98,
+    "matched": true
+  },
+  {
+    "word": "problems",
+    "start": 31.98,
+    "end": 32.32,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 32.32,
+    "end": 32.48,
+    "matched": true
+  },
+  {
+    "word": "too",
+    "start": 32.48,
+    "end": 32.64,
+    "matched": true
+  },
+  {
+    "word": "small.",
+    "start": 32.64,
+    "end": 33.02,
+    "matched": true
+  },
+  {
+    "word": "Some",
+    "start": 33.52,
+    "end": 33.72,
+    "matched": true
+  },
+  {
+    "word": "happen",
+    "start": 33.72,
+    "end": 33.98,
+    "matched": true
+  },
+  {
+    "word": "only",
+    "start": 33.98,
+    "end": 34.2,
+    "matched": true
+  },
+  {
+    "word": "once.",
+    "start": 34.2,
+    "end": 34.56,
+    "matched": true
+  },
+  {
+    "word": "Some",
+    "start": 35.24,
+    "end": 35.36,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 35.36,
+    "end": 35.64,
+    "matched": true
+  },
+  {
+    "word": "complain,",
+    "start": 35.64,
+    "end": 36.08,
+    "matched": true
+  },
+  {
+    "word": "but",
+    "start": 36.5,
+    "end": 36.66,
+    "matched": true
+  },
+  {
+    "word": "never",
+    "start": 36.66,
+    "end": 36.92,
+    "matched": true
+  },
+  {
+    "word": "spend",
+    "start": 36.92,
+    "end": 37.18,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 37.18,
+    "end": 37.38,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 37.38,
+    "end": 37.56,
+    "matched": true
+  },
+  {
+    "word": "fix",
+    "start": 37.56,
+    "end": 37.72,
+    "matched": true
+  },
+  {
+    "word": "them.",
+    "start": 37.72,
+    "end": 38.0,
+    "matched": true
+  },
+  {
+    "word": "So",
+    "start": 38.54,
+    "end": 38.62,
+    "matched": true
+  },
+  {
+    "word": "before",
+    "start": 38.62,
+    "end": 38.94,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 38.94,
+    "end": 39.18,
+    "matched": true
+  },
+  {
+    "word": "build,",
+    "start": 39.18,
+    "end": 39.48,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 39.8,
+    "end": 39.92,
+    "matched": true
+  },
+  {
+    "word": "research.",
+    "start": 39.92,
+    "end": 40.36,
+    "matched": true
+  },
+  {
+    "word": "Not",
+    "start": 40.9,
+    "end": 41.14,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 41.14,
+    "end": 41.32,
+    "matched": true
+  },
+  {
+    "word": "make",
+    "start": 41.32,
+    "end": 41.46,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 41.46,
+    "end": 41.62,
+    "matched": true
+  },
+  {
+    "word": "idea",
+    "start": 41.62,
+    "end": 41.96,
+    "matched": true
+  },
+  {
+    "word": "sound",
+    "start": 41.96,
+    "end": 42.22,
+    "matched": true
+  },
+  {
+    "word": "smart.",
+    "start": 42.22,
+    "end": 42.6,
+    "matched": true
+  },
+  {
+    "word": "To",
+    "start": 43.1,
+    "end": 43.28,
+    "matched": true
+  },
+  {
+    "word": "find",
+    "start": 43.28,
+    "end": 43.52,
+    "matched": true
+  },
+  {
+    "word": "evidence.",
+    "start": 43.52,
+    "end": 43.94,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 44.58,
+    "end": 44.68,
+    "matched": true
+  },
+  {
+    "word": "Shelf",
+    "start": 44.68,
+    "end": 45.02,
+    "matched": true
+  },
+  {
+    "word": "Is",
+    "start": 45.02,
+    "end": 45.26,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 45.26,
+    "end": 45.42,
+    "matched": true
+  },
+  {
+    "word": "Scoreboard",
+    "start": 45.42,
+    "end": 45.88,
+    "matched": true
+  },
+  {
+    "word": "Imagine",
+    "start": 46.94,
+    "end": 47.26,
+    "matched": true
+  },
+  {
+    "word": "walking",
+    "start": 47.26,
+    "end": 47.74,
+    "matched": true
+  },
+  {
+    "word": "into",
+    "start": 47.74,
+    "end": 48.04,
+    "matched": true
+  },
+  {
+    "word": "Walmart.",
+    "start": 48.04,
+    "end": 48.4,
+    "matched": true
+  },
+  {
+    "word": "Most",
+    "start": 49.0,
+    "end": 49.18,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 49.18,
+    "end": 49.4,
+    "matched": true
+  },
+  {
+    "word": "see",
+    "start": 49.4,
+    "end": 49.7,
+    "matched": true
+  },
+  {
+    "word": "shelves.",
+    "start": 49.7,
+    "end": 50.04,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 50.58,
+    "end": 50.8,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 50.8,
+    "end": 51.14,
+    "matched": true
+  },
+  {
+    "word": "builder",
+    "start": 51.14,
+    "end": 51.42,
+    "matched": true
+  },
+  {
+    "word": "sees",
+    "start": 51.42,
+    "end": 51.7,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 51.7,
+    "end": 51.88,
+    "matched": true
+  },
+  {
+    "word": "scoreboard.",
+    "start": 51.88,
+    "end": 52.28,
+    "matched": true
+  },
+  {
+    "word": "Every",
+    "start": 52.98,
+    "end": 53.24,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 53.24,
+    "end": 53.62,
+    "matched": true
+  },
+  {
+    "word": "on",
+    "start": 53.62,
+    "end": 53.84,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 53.84,
+    "end": 54.0,
+    "matched": true
+  },
+  {
+    "word": "shelf",
+    "start": 54.0,
+    "end": 54.22,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 54.22,
+    "end": 54.42,
+    "matched": true
+  },
+  {
+    "word": "there",
+    "start": 54.42,
+    "end": 54.6,
+    "matched": true
+  },
+  {
+    "word": "for",
+    "start": 54.6,
+    "end": 54.8,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 54.8,
+    "end": 54.96,
+    "matched": true
+  },
+  {
+    "word": "reason.",
+    "start": 54.96,
+    "end": 55.26,
+    "matched": true
+  },
+  {
+    "word": "Walmart",
+    "start": 56.04,
+    "end": 56.52,
+    "matched": true
+  },
+  {
+    "word": "does",
+    "start": 56.52,
+    "end": 56.78,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 56.78,
+    "end": 57.12,
+    "matched": true
+  },
+  {
+    "word": "give",
+    "start": 57.12,
+    "end": 57.34,
+    "matched": true
+  },
+  {
+    "word": "space",
+    "start": 57.34,
+    "end": 57.64,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 57.64,
+    "end": 57.84,
+    "matched": true
+  },
+  {
+    "word": "random",
+    "start": 57.84,
+    "end": 58.06,
+    "matched": true
+  },
+  {
+    "word": "things",
+    "start": 58.06,
+    "end": 58.36,
+    "matched": true
+  },
+  {
+    "word": "for",
+    "start": 58.36,
+    "end": 58.58,
+    "matched": true
+  },
+  {
+    "word": "fun.",
+    "start": 58.58,
+    "end": 58.86,
+    "matched": true
+  },
+  {
+    "word": "If",
+    "start": 59.5,
+    "end": 59.58,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 59.58,
+    "end": 59.72,
+    "matched": true
+  },
+  {
+    "word": "store",
+    "start": 59.72,
+    "end": 59.92,
+    "matched": true
+  },
+  {
+    "word": "carries",
+    "start": 59.92,
+    "end": 60.3,
+    "matched": true
+  },
+  {
+    "word": "many",
+    "start": 60.3,
+    "end": 60.64,
+    "matched": true
+  },
+  {
+    "word": "versions",
+    "start": 60.64,
+    "end": 61.08,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 61.08,
+    "end": 61.28,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 61.28,
+    "end": 61.42,
+    "matched": true
+  },
+  {
+    "word": "same",
+    "start": 61.42,
+    "end": 61.64,
+    "matched": true
+  },
+  {
+    "word": "size,",
+    "start": 61.64,
+    "end": 62.02,
+    "matched": true
+  },
+  {
+    "word": "type,",
+    "start": 62.08,
+    "end": 62.38,
+    "matched": true
+  },
+  {
+    "word": "or",
+    "start": 62.54,
+    "end": 62.6,
+    "matched": true
+  },
+  {
+    "word": "format,",
+    "start": 62.6,
+    "end": 63.02,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 63.34,
+    "end": 63.42,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 63.42,
+    "end": 63.54,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 63.54,
+    "end": 63.68,
+    "matched": true
+  },
+  {
+    "word": "clue.",
+    "start": 63.68,
+    "end": 63.94,
+    "matched": true
+  },
+  {
+    "word": "It",
+    "start": 64.56,
+    "end": 64.7,
+    "matched": true
+  },
+  {
+    "word": "usually",
+    "start": 64.7,
+    "end": 65.0,
+    "matched": true
+  },
+  {
+    "word": "means",
+    "start": 65.0,
+    "end": 65.36,
+    "matched": true
+  },
+  {
+    "word": "customers",
+    "start": 65.36,
+    "end": 65.82,
+    "matched": true
+  },
+  {
+    "word": "keep",
+    "start": 65.82,
+    "end": 66.1,
+    "matched": true
+  },
+  {
+    "word": "buying",
+    "start": 66.1,
+    "end": 66.4,
+    "matched": true
+  },
+  {
+    "word": "it.",
+    "start": 66.4,
+    "end": 66.64,
+    "matched": true
+  },
+  {
+    "word": "If",
+    "start": 67.14,
+    "end": 67.22,
+    "matched": true
+  },
+  {
+    "word": "there",
+    "start": 67.22,
+    "end": 67.36,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 67.36,
+    "end": 67.54,
+    "matched": true
+  },
+  {
+    "word": "lots",
+    "start": 67.54,
+    "end": 67.74,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 67.74,
+    "end": 68.0,
+    "matched": true
+  },
+  {
+    "word": "45L",
+    "start": 68.0,
+    "end": 68.68,
+    "matched": false
+  },
+  {
+    "word": "garbage",
+    "start": 68.68,
+    "end": 69.08,
+    "matched": true
+  },
+  {
+    "word": "bags,",
+    "start": 69.08,
+    "end": 69.48,
+    "matched": true
+  },
+  {
+    "word": "pay",
+    "start": 69.66,
+    "end": 69.76,
+    "matched": true
+  },
+  {
+    "word": "attention.",
+    "start": 69.76,
+    "end": 70.14,
+    "matched": true
+  },
+  {
+    "word": "If",
+    "start": 70.74,
+    "end": 70.9,
+    "matched": true
+  },
+  {
+    "word": "there",
+    "start": 70.9,
+    "end": 71.04,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 71.04,
+    "end": 71.22,
+    "matched": true
+  },
+  {
+    "word": "lots",
+    "start": 71.22,
+    "end": 71.42,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 71.42,
+    "end": 71.62,
+    "matched": true
+  },
+  {
+    "word": "10L",
+    "start": 71.62,
+    "end": 72.04,
+    "matched": false
+  },
+  {
+    "word": "compost",
+    "start": 72.04,
+    "end": 72.56,
+    "matched": true
+  },
+  {
+    "word": "liners,",
+    "start": 72.56,
+    "end": 73.02,
+    "matched": true
+  },
+  {
+    "word": "pay",
+    "start": 73.14,
+    "end": 73.24,
+    "matched": true
+  },
+  {
+    "word": "attention.",
+    "start": 73.24,
+    "end": 73.66,
+    "matched": true
+  },
+  {
+    "word": "If",
+    "start": 74.22,
+    "end": 74.42,
+    "matched": true
+  },
+  {
+    "word": "there",
+    "start": 74.42,
+    "end": 74.58,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 74.58,
+    "end": 74.76,
+    "matched": true
+  },
+  {
+    "word": "only",
+    "start": 74.76,
+    "end": 75.06,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 75.06,
+    "end": 75.36,
+    "matched": true
+  },
+  {
+    "word": "or",
+    "start": 75.36,
+    "end": 75.5,
+    "matched": true
+  },
+  {
+    "word": "two",
+    "start": 75.5,
+    "end": 75.7,
+    "matched": true
+  },
+  {
+    "word": "versions",
+    "start": 75.7,
+    "end": 76.06,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 76.06,
+    "end": 76.26,
+    "matched": true
+  },
+  {
+    "word": "something,",
+    "start": 76.26,
+    "end": 76.6,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 76.82,
+    "end": 77.04,
+    "matched": true
+  },
+  {
+    "word": "may",
+    "start": 77.04,
+    "end": 77.2,
+    "matched": true
+  },
+  {
+    "word": "still",
+    "start": 77.2,
+    "end": 77.46,
+    "matched": true
+  },
+  {
+    "word": "matter,",
+    "start": 77.46,
+    "end": 77.74,
+    "matched": true
+  },
+  {
+    "word": "but",
+    "start": 78.2,
+    "end": 78.42,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 78.42,
+    "end": 78.58,
+    "matched": true
+  },
+  {
+    "word": "signal",
+    "start": 78.58,
+    "end": 78.84,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 78.84,
+    "end": 79.12,
+    "matched": true
+  },
+  {
+    "word": "weaker.",
+    "start": 79.12,
+    "end": 79.42,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 80.02,
+    "end": 80.22,
+    "matched": true
+  },
+  {
+    "word": "shelf",
+    "start": 80.22,
+    "end": 80.46,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 80.46,
+    "end": 80.68,
+    "matched": true
+  },
+  {
+    "word": "telling",
+    "start": 80.68,
+    "end": 80.9,
+    "matched": true
+  },
+  {
+    "word": "us",
+    "start": 80.9,
+    "end": 81.16,
+    "matched": true
+  },
+  {
+    "word": "where",
+    "start": 81.16,
+    "end": 81.34,
+    "matched": true
+  },
+  {
+    "word": "demand",
+    "start": 81.34,
+    "end": 81.68,
+    "matched": true
+  },
+  {
+    "word": "may",
+    "start": 81.68,
+    "end": 81.88,
+    "matched": true
+  },
+  {
+    "word": "already",
+    "start": 81.88,
+    "end": 82.26,
+    "matched": true
+  },
+  {
+    "word": "exist.",
+    "start": 82.26,
+    "end": 82.66,
+    "matched": true
+  },
+  {
+    "word": "It",
+    "start": 83.2,
+    "end": 83.4,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 83.4,
+    "end": 83.52,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 83.52,
+    "end": 83.82,
+    "matched": true
+  },
+  {
+    "word": "proof.",
+    "start": 83.82,
+    "end": 84.14,
+    "matched": true
+  },
+  {
+    "word": "But",
+    "start": 84.14,
+    "end": 84.86,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 84.86,
+    "end": 85.02,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 85.02,
+    "end": 85.16,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 85.16,
+    "end": 85.34,
+    "matched": true
+  },
+  {
+    "word": "strong",
+    "start": 85.34,
+    "end": 85.58,
+    "matched": true
+  },
+  {
+    "word": "clue.",
+    "start": 85.58,
+    "end": 85.92,
+    "matched": true
+  },
+  {
+    "word": "From",
+    "start": 86.52,
+    "end": 86.66,
+    "matched": true
+  },
+  {
+    "word": "Parent",
+    "start": 86.66,
+    "end": 86.94,
+    "matched": true
+  },
+  {
+    "word": "Survey",
+    "start": 86.94,
+    "end": 87.34,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 87.34,
+    "end": 87.74,
+    "matched": true
+  },
+  {
+    "word": "Market",
+    "start": 87.74,
+    "end": 87.96,
+    "matched": true
+  },
+  {
+    "word": "Scan",
+    "start": 87.96,
+    "end": 88.36,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 89.06,
+    "end": 89.18,
+    "matched": true
+  },
+  {
+    "word": "parent",
+    "start": 89.18,
+    "end": 89.46,
+    "matched": true
+  },
+  {
+    "word": "survey",
+    "start": 89.46,
+    "end": 89.84,
+    "matched": true
+  },
+  {
+    "word": "gives",
+    "start": 89.84,
+    "end": 90.08,
+    "matched": true
+  },
+  {
+    "word": "us",
+    "start": 90.08,
+    "end": 90.3,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 90.3,
+    "end": 90.44,
+    "matched": true
+  },
+  {
+    "word": "first",
+    "start": 90.44,
+    "end": 90.64,
+    "matched": true
+  },
+  {
+    "word": "clue.",
+    "start": 90.64,
+    "end": 90.96,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 91.56,
+    "end": 91.60000000000001,
+    "matched": true
+  },
+  {
+    "word": "parent",
+    "start": 91.60000000000001,
+    "end": 91.9,
+    "matched": true
+  },
+  {
+    "word": "might",
+    "start": 91.9,
+    "end": 92.14,
+    "matched": true
+  },
+  {
+    "word": "say:",
+    "start": 92.14,
+    "end": 92.5,
+    "matched": true
+  },
+  {
+    "word": "\u201cWe",
+    "start": 93.0,
+    "end": 93.06,
+    "matched": true
+  },
+  {
+    "word": "always",
+    "start": 93.06,
+    "end": 93.3,
+    "matched": true
+  },
+  {
+    "word": "run",
+    "start": 93.3,
+    "end": 93.52,
+    "matched": true
+  },
+  {
+    "word": "out",
+    "start": 93.52,
+    "end": 93.66,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 93.66,
+    "end": 93.82,
+    "matched": true
+  },
+  {
+    "word": "garbage",
+    "start": 93.82,
+    "end": 94.04,
+    "matched": true
+  },
+  {
+    "word": "bags.\u201d",
+    "start": 94.04,
+    "end": 94.5,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 95.02,
+    "end": 95.26,
+    "matched": true
+  },
+  {
+    "word": "sounds",
+    "start": 95.26,
+    "end": 95.5,
+    "matched": true
+  },
+  {
+    "word": "like",
+    "start": 95.5,
+    "end": 95.7,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 95.7,
+    "end": 95.82,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 95.82,
+    "end": 96.08,
+    "matched": true
+  },
+  {
+    "word": "idea.",
+    "start": 96.08,
+    "end": 96.46,
+    "matched": true
+  },
+  {
+    "word": "But",
+    "start": 96.9,
+    "end": 97.12,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 97.12,
+    "end": 97.24,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 97.24,
+    "end": 97.4,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 97.4,
+    "end": 97.6,
+    "matched": true
+  },
+  {
+    "word": "jump",
+    "start": 97.6,
+    "end": 97.84,
+    "matched": true
+  },
+  {
+    "word": "straight",
+    "start": 97.84,
+    "end": 98.12,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 98.12,
+    "end": 98.34,
+    "matched": true
+  },
+  {
+    "word": "selling",
+    "start": 98.34,
+    "end": 98.58,
+    "matched": true
+  },
+  {
+    "word": "bags.",
+    "start": 98.58,
+    "end": 98.98,
+    "matched": true
+  },
+  {
+    "word": "We",
+    "start": 99.48,
+    "end": 99.68,
+    "matched": true
+  },
+  {
+    "word": "slow",
+    "start": 99.68,
+    "end": 99.9,
+    "matched": true
+  },
+  {
+    "word": "down.",
+    "start": 99.9,
+    "end": 100.2,
+    "matched": true
+  },
+  {
+    "word": "We",
+    "start": 100.64,
+    "end": 100.84,
+    "matched": true
+  },
+  {
+    "word": "ask:",
+    "start": 100.84,
+    "end": 101.16,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 101.5,
+    "end": 101.6,
+    "matched": true
+  },
+  {
+    "word": "kind",
+    "start": 101.6,
+    "end": 101.86,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 101.86,
+    "end": 102.02,
+    "matched": true
+  },
+  {
+    "word": "bags?",
+    "start": 102.02,
+    "end": 102.36,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 102.84,
+    "end": 103.08,
+    "matched": true
+  },
+  {
+    "word": "size?",
+    "start": 103.08,
+    "end": 103.56,
+    "matched": true
+  },
+  {
+    "word": "For",
+    "start": 104.04,
+    "end": 104.26,
+    "matched": true
+  },
+  {
+    "word": "which",
+    "start": 104.26,
+    "end": 104.48,
+    "matched": true
+  },
+  {
+    "word": "bin?",
+    "start": 104.48,
+    "end": 104.72,
+    "matched": true
+  },
+  {
+    "word": "Garbage,",
+    "start": 105.56,
+    "end": 105.88,
+    "matched": true
+  },
+  {
+    "word": "compost,",
+    "start": 106.06,
+    "end": 106.46,
+    "matched": true
+  },
+  {
+    "word": "recycling,",
+    "start": 106.76,
+    "end": 107.12,
+    "matched": true
+  },
+  {
+    "word": "or",
+    "start": 107.56,
+    "end": 107.66,
+    "matched": true
+  },
+  {
+    "word": "yard",
+    "start": 107.66,
+    "end": 107.92,
+    "matched": true
+  },
+  {
+    "word": "waste?",
+    "start": 107.92,
+    "end": 108.14,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 108.8,
+    "end": 109.02,
+    "matched": true
+  },
+  {
+    "word": "brands",
+    "start": 109.02,
+    "end": 109.36,
+    "matched": true
+  },
+  {
+    "word": "already",
+    "start": 109.36,
+    "end": 109.66,
+    "matched": true
+  },
+  {
+    "word": "exist?",
+    "start": 109.66,
+    "end": 110.06,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 110.68,
+    "end": 110.84,
+    "matched": true
+  },
+  {
+    "word": "prices",
+    "start": 110.84,
+    "end": 111.22,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 111.22,
+    "end": 111.42,
+    "matched": true
+  },
+  {
+    "word": "normal?",
+    "start": 111.42,
+    "end": 111.68,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 112.22,
+    "end": 112.44,
+    "matched": true
+  },
+  {
+    "word": "does",
+    "start": 112.44,
+    "end": 112.62,
+    "matched": true
+  },
+  {
+    "word": "Walmart",
+    "start": 112.62,
+    "end": 113.0,
+    "matched": true
+  },
+  {
+    "word": "carry?",
+    "start": 113.0,
+    "end": 113.38,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 113.38,
+    "end": 114.12,
+    "matched": true
+  },
+  {
+    "word": "does",
+    "start": 114.12,
+    "end": 114.3,
+    "matched": true
+  },
+  {
+    "word": "Amazon",
+    "start": 114.3,
+    "end": 114.76,
+    "matched": true
+  },
+  {
+    "word": "carry?",
+    "start": 114.76,
+    "end": 115.08,
+    "matched": true
+  },
+  {
+    "word": "This",
+    "start": 115.88,
+    "end": 115.94,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 115.94,
+    "end": 116.08,
+    "matched": true
+  },
+  {
+    "word": "where",
+    "start": 116.08,
+    "end": 116.3,
+    "matched": true
+  },
+  {
+    "word": "artificial",
+    "start": 116.3,
+    "end": 116.76,
+    "matched": true
+  },
+  {
+    "word": "intelligence",
+    "start": 116.76,
+    "end": 117.4,
+    "matched": true
+  },
+  {
+    "word": "helps.",
+    "start": 117.4,
+    "end": 117.82,
+    "matched": true
+  },
+  {
+    "word": "AI",
+    "start": 118.53999999999999,
+    "end": 118.58,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 118.58,
+    "end": 118.84,
+    "matched": true
+  },
+  {
+    "word": "scan",
+    "start": 118.84,
+    "end": 119.14,
+    "matched": true
+  },
+  {
+    "word": "Walmart.ca",
+    "start": 119.14,
+    "end": 120.42,
+    "matched": false
+  },
+  {
+    "word": "and",
+    "start": 120.42,
+    "end": 121.0,
+    "matched": true
+  },
+  {
+    "word": "Amazon",
+    "start": 121.0,
+    "end": 121.38,
+    "matched": true
+  },
+  {
+    "word": "faster",
+    "start": 121.38,
+    "end": 121.72,
+    "matched": true
+  },
+  {
+    "word": "than",
+    "start": 121.72,
+    "end": 121.98,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 121.98,
+    "end": 122.14,
+    "matched": true
+  },
+  {
+    "word": "can.",
+    "start": 122.14,
+    "end": 122.4,
+    "matched": true
+  },
+  {
+    "word": "It",
+    "start": 122.86,
+    "end": 123.02,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 123.02,
+    "end": 123.18,
+    "matched": true
+  },
+  {
+    "word": "collect",
+    "start": 123.18,
+    "end": 123.52,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 123.52,
+    "end": 123.86,
+    "matched": true
+  },
+  {
+    "word": "names,",
+    "start": 123.86,
+    "end": 124.28,
+    "matched": true
+  },
+  {
+    "word": "sizes,",
+    "start": 124.48,
+    "end": 124.84,
+    "matched": true
+  },
+  {
+    "word": "brands,",
+    "start": 125.38,
+    "end": 125.66,
+    "matched": true
+  },
+  {
+    "word": "pack",
+    "start": 126.02,
+    "end": 126.08,
+    "matched": true
+  },
+  {
+    "word": "counts,",
+    "start": 126.08,
+    "end": 126.52,
+    "matched": true
+  },
+  {
+    "word": "prices,",
+    "start": 126.82,
+    "end": 127.24,
+    "matched": true
+  },
+  {
+    "word": "reviews,",
+    "start": 127.78,
+    "end": 128.12,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 128.3,
+    "end": 128.38,
+    "matched": true
+  },
+  {
+    "word": "availability.",
+    "start": 128.38,
+    "end": 128.86,
+    "matched": true
+  },
+  {
+    "word": "But",
+    "start": 129.64,
+    "end": 129.78,
+    "matched": true
+  },
+  {
+    "word": "AI",
+    "start": 129.78,
+    "end": 130.1,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 130.1,
+    "end": 130.38,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 130.38,
+    "end": 130.6,
+    "matched": true
+  },
+  {
+    "word": "doing",
+    "start": 130.6,
+    "end": 130.82,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 130.82,
+    "end": 131.02,
+    "matched": true
+  },
+  {
+    "word": "thinking.",
+    "start": 131.02,
+    "end": 131.3,
+    "matched": true
+  },
+  {
+    "word": "You",
+    "start": 131.82,
+    "end": 132.04,
+    "matched": true
+  },
+  {
+    "word": "are.",
+    "start": 132.04,
+    "end": 132.34,
+    "matched": true
+  },
+  {
+    "word": "AI",
+    "start": 132.94,
+    "end": 133.26,
+    "matched": true
+  },
+  {
+    "word": "gathers",
+    "start": 133.26,
+    "end": 133.64,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 133.64,
+    "end": 133.88,
+    "matched": true
+  },
+  {
+    "word": "pieces.",
+    "start": 133.88,
+    "end": 134.22,
+    "matched": true
+  },
+  {
+    "word": "You",
+    "start": 134.78,
+    "end": 134.92,
+    "matched": true
+  },
+  {
+    "word": "look",
+    "start": 134.92,
+    "end": 135.04,
+    "matched": true
+  },
+  {
+    "word": "for",
+    "start": 135.04,
+    "end": 135.2,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 135.2,
+    "end": 135.32,
+    "matched": true
+  },
+  {
+    "word": "pattern.",
+    "start": 135.32,
+    "end": 135.62,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 136.34,
+    "end": 136.44,
+    "matched": true
+  },
+  {
+    "word": "Is",
+    "start": 136.44,
+    "end": 136.62,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 136.62,
+    "end": 137.205,
+    "matched": false
+  },
+  {
+    "word": "SKU?",
+    "start": 137.205,
+    "end": 137.79000000000002,
+    "matched": false
+  },
+  {
+    "word": "A",
+    "start": 137.79000000000002,
+    "end": 138.375,
+    "matched": false
+  },
+  {
+    "word": "SKU",
+    "start": 138.375,
+    "end": 138.96,
+    "matched": false
+  },
+  {
+    "word": "is",
+    "start": 138.96,
+    "end": 139.16,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 139.16,
+    "end": 139.48,
+    "matched": true
+  },
+  {
+    "word": "specific",
+    "start": 139.48,
+    "end": 139.88,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 139.88,
+    "end": 140.28,
+    "matched": true
+  },
+  {
+    "word": "listing.",
+    "start": 140.28,
+    "end": 140.66,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 140.66,
+    "end": 141.28,
+    "matched": true
+  },
+  {
+    "word": "45L",
+    "start": 141.28,
+    "end": 142.08,
+    "matched": false
+  },
+  {
+    "word": "Glad",
+    "start": 142.08,
+    "end": 142.44,
+    "matched": true
+  },
+  {
+    "word": "garbage",
+    "start": 142.44,
+    "end": 142.82,
+    "matched": true
+  },
+  {
+    "word": "bag",
+    "start": 142.82,
+    "end": 143.1,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 143.1,
+    "end": 143.3,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 143.3,
+    "end": 143.52,
+    "matched": true
+  },
+  {
+    "word": "SKU.",
+    "start": 143.52,
+    "end": 144.18,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 144.7,
+    "end": 144.78,
+    "matched": true
+  },
+  {
+    "word": "90L",
+    "start": 144.78,
+    "end": 145.44,
+    "matched": false
+  },
+  {
+    "word": "Great",
+    "start": 145.44,
+    "end": 145.74,
+    "matched": true
+  },
+  {
+    "word": "Value",
+    "start": 145.74,
+    "end": 146.08,
+    "matched": true
+  },
+  {
+    "word": "recycling",
+    "start": 146.08,
+    "end": 146.5,
+    "matched": true
+  },
+  {
+    "word": "bag",
+    "start": 146.5,
+    "end": 146.92,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 146.92,
+    "end": 147.1,
+    "matched": true
+  },
+  {
+    "word": "another",
+    "start": 147.1,
+    "end": 147.4,
+    "matched": true
+  },
+  {
+    "word": "SKU.",
+    "start": 147.4,
+    "end": 148.14,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 148.62,
+    "end": 148.78,
+    "matched": true
+  },
+  {
+    "word": "10L",
+    "start": 148.78,
+    "end": 149.34,
+    "matched": false
+  },
+  {
+    "word": "compostable",
+    "start": 149.34,
+    "end": 150.06,
+    "matched": true
+  },
+  {
+    "word": "kitchen",
+    "start": 150.06,
+    "end": 150.3,
+    "matched": true
+  },
+  {
+    "word": "liner",
+    "start": 150.3,
+    "end": 150.6,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 150.6,
+    "end": 150.86,
+    "matched": true
+  },
+  {
+    "word": "another",
+    "start": 150.86,
+    "end": 151.2,
+    "matched": true
+  },
+  {
+    "word": "SKU.",
+    "start": 151.2,
+    "end": 151.94,
+    "matched": true
+  },
+  {
+    "word": "When",
+    "start": 152.62,
+    "end": 152.74,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 152.74,
+    "end": 152.9,
+    "matched": true
+  },
+  {
+    "word": "count",
+    "start": 152.9,
+    "end": 153.14,
+    "matched": true
+  },
+  {
+    "word": "SKUs,",
+    "start": 153.14,
+    "end": 153.9,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 154.22,
+    "end": 154.42,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 154.42,
+    "end": 154.52,
+    "matched": true
+  },
+  {
+    "word": "counting",
+    "start": 154.52,
+    "end": 154.78,
+    "matched": true
+  },
+  {
+    "word": "how",
+    "start": 154.78,
+    "end": 155.02,
+    "matched": true
+  },
+  {
+    "word": "many",
+    "start": 155.02,
+    "end": 155.28,
+    "matched": true
+  },
+  {
+    "word": "different",
+    "start": 155.28,
+    "end": 155.62,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 155.62,
+    "end": 155.92,
+    "matched": true
+  },
+  {
+    "word": "options",
+    "start": 155.92,
+    "end": 156.34,
+    "matched": true
+  },
+  {
+    "word": "exist",
+    "start": 156.34,
+    "end": 156.68,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 156.68,
+    "end": 156.86,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 156.86,
+    "end": 156.98,
+    "matched": true
+  },
+  {
+    "word": "category.",
+    "start": 156.98,
+    "end": 157.4,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 157.9,
+    "end": 158.14,
+    "matched": true
+  },
+  {
+    "word": "helps",
+    "start": 158.14,
+    "end": 158.38,
+    "matched": true
+  },
+  {
+    "word": "us",
+    "start": 158.38,
+    "end": 158.58,
+    "matched": true
+  },
+  {
+    "word": "see",
+    "start": 158.58,
+    "end": 158.76,
+    "matched": true
+  },
+  {
+    "word": "where",
+    "start": 158.76,
+    "end": 158.9,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 158.9,
+    "end": 159.04,
+    "matched": true
+  },
+  {
+    "word": "shelf",
+    "start": 159.04,
+    "end": 159.22,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 159.22,
+    "end": 159.4,
+    "matched": true
+  },
+  {
+    "word": "crowded.",
+    "start": 159.4,
+    "end": 159.7,
+    "matched": true
+  },
+  {
+    "word": "And",
+    "start": 160.28,
+    "end": 160.44,
+    "matched": true
+  },
+  {
+    "word": "when",
+    "start": 160.44,
+    "end": 160.58,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 160.58,
+    "end": 160.82,
+    "matched": true
+  },
+  {
+    "word": "area",
+    "start": 160.82,
+    "end": 161.08,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 161.08,
+    "end": 161.26,
+    "matched": true
+  },
+  {
+    "word": "crowded,",
+    "start": 161.26,
+    "end": 161.56,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 161.88,
+    "end": 162.08,
+    "matched": true
+  },
+  {
+    "word": "ask",
+    "start": 162.08,
+    "end": 162.26,
+    "matched": true
+  },
+  {
+    "word": "why.",
+    "start": 162.26,
+    "end": 162.6,
+    "matched": true
+  },
+  {
+    "word": "Maybe",
+    "start": 163.22,
+    "end": 163.42,
+    "matched": true
+  },
+  {
+    "word": "families",
+    "start": 163.42,
+    "end": 163.82,
+    "matched": true
+  },
+  {
+    "word": "buy",
+    "start": 163.82,
+    "end": 164.04,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 164.04,
+    "end": 164.2,
+    "matched": true
+  },
+  {
+    "word": "size",
+    "start": 164.2,
+    "end": 164.48,
+    "matched": true
+  },
+  {
+    "word": "often.",
+    "start": 164.48,
+    "end": 164.86,
+    "matched": true
+  },
+  {
+    "word": "Maybe",
+    "start": 165.4,
+    "end": 165.56,
+    "matched": true
+  },
+  {
+    "word": "many",
+    "start": 165.56,
+    "end": 165.82,
+    "matched": true
+  },
+  {
+    "word": "brands",
+    "start": 165.82,
+    "end": 166.16,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 166.16,
+    "end": 166.3,
+    "matched": true
+  },
+  {
+    "word": "competing",
+    "start": 166.3,
+    "end": 166.62,
+    "matched": true
+  },
+  {
+    "word": "there.",
+    "start": 166.62,
+    "end": 166.98,
+    "matched": true
+  },
+  {
+    "word": "Maybe",
+    "start": 167.5,
+    "end": 167.7,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 167.7,
+    "end": 167.92,
+    "matched": true
+  },
+  {
+    "word": "retailer",
+    "start": 167.92,
+    "end": 168.34,
+    "matched": true
+  },
+  {
+    "word": "knows",
+    "start": 168.34,
+    "end": 168.6,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 168.6,
+    "end": 168.86,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 168.86,
+    "end": 169.12,
+    "matched": true
+  },
+  {
+    "word": "moves.",
+    "start": 169.12,
+    "end": 169.48,
+    "matched": true
+  },
+  {
+    "word": "In",
+    "start": 169.48,
+    "end": 170.2,
+    "matched": true
+  },
+  {
+    "word": "kid",
+    "start": 170.2,
+    "end": 170.46,
+    "matched": true
+  },
+  {
+    "word": "language:",
+    "start": 170.46,
+    "end": 170.88,
+    "matched": true
+  },
+  {
+    "word": "If",
+    "start": 171.4,
+    "end": 171.48,
+    "matched": true
+  },
+  {
+    "word": "Walmart",
+    "start": 171.48,
+    "end": 171.92,
+    "matched": true
+  },
+  {
+    "word": "gives",
+    "start": 171.92,
+    "end": 172.2,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 172.2,
+    "end": 172.5,
+    "matched": true
+  },
+  {
+    "word": "size",
+    "start": 172.5,
+    "end": 172.76,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 172.76,
+    "end": 172.9,
+    "matched": true
+  },
+  {
+    "word": "lot",
+    "start": 172.9,
+    "end": 173.04,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 173.04,
+    "end": 173.14,
+    "matched": true
+  },
+  {
+    "word": "spots,",
+    "start": 173.14,
+    "end": 173.44,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 173.64,
+    "end": 173.72,
+    "matched": true
+  },
+  {
+    "word": "shelf",
+    "start": 173.72,
+    "end": 173.92,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 173.92,
+    "end": 174.12,
+    "matched": true
+  },
+  {
+    "word": "saying,",
+    "start": 174.12,
+    "end": 174.4,
+    "matched": true
+  },
+  {
+    "word": "\u201cLook",
+    "start": 174.98,
+    "end": 175.02,
+    "matched": true
+  },
+  {
+    "word": "here.",
+    "start": 175.02,
+    "end": 175.4,
+    "matched": true
+  },
+  {
+    "word": "This",
+    "start": 175.92,
+    "end": 176.0,
+    "matched": true
+  },
+  {
+    "word": "probably",
+    "start": 176.0,
+    "end": 176.28,
+    "matched": true
+  },
+  {
+    "word": "matters.\u201d",
+    "start": 176.28,
+    "end": 176.76,
+    "matched": true
+  },
+  {
+    "word": "Walmart",
+    "start": 178.14000000000001,
+    "end": 178.18,
+    "matched": true
+  },
+  {
+    "word": "Garbage",
+    "start": 178.18,
+    "end": 178.46,
+    "matched": true
+  },
+  {
+    "word": "Bag",
+    "start": 178.46,
+    "end": 178.82,
+    "matched": true
+  },
+  {
+    "word": "Assortment",
+    "start": 178.82,
+    "end": 179.22,
+    "matched": true
+  },
+  {
+    "word": "Here",
+    "start": 180.16,
+    "end": 180.3,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 180.3,
+    "end": 180.44,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 180.44,
+    "end": 180.58,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 180.58,
+    "end": 180.7,
+    "matched": true
+  },
+  {
+    "word": "garbage",
+    "start": 180.7,
+    "end": 181.0,
+    "matched": true
+  },
+  {
+    "word": "bag",
+    "start": 181.0,
+    "end": 181.24,
+    "matched": true
+  },
+  {
+    "word": "shelf",
+    "start": 181.24,
+    "end": 181.52,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 181.52,
+    "end": 181.74,
+    "matched": true
+  },
+  {
+    "word": "teach",
+    "start": 181.74,
+    "end": 181.94,
+    "matched": true
+  },
+  {
+    "word": "us.",
+    "start": 181.94,
+    "end": 182.28,
+    "matched": true
+  },
+  {
+    "word": "Size",
+    "start": 182.28,
+    "end": 182.32,
+    "matched": false
+  },
+  {
+    "word": "Compostable",
+    "start": 182.32,
+    "end": 182.35999999999999,
+    "matched": false
+  },
+  {
+    "word": "Garbage",
+    "start": 182.35999999999999,
+    "end": 182.39999999999998,
+    "matched": false
+  },
+  {
+    "word": "Recycling",
+    "start": 182.39999999999998,
+    "end": 182.43999999999997,
+    "matched": false
+  },
+  {
+    "word": "Total",
+    "start": 182.43999999999997,
+    "end": 182.47999999999996,
+    "matched": false
+  },
+  {
+    "word": "SKUs",
+    "start": 182.47999999999996,
+    "end": 182.51999999999995,
+    "matched": false
+  },
+  {
+    "word": "What",
+    "start": 182.51999999999995,
+    "end": 182.55999999999995,
+    "matched": false
+  },
+  {
+    "word": "This",
+    "start": 182.55999999999995,
+    "end": 182.59999999999994,
+    "matched": false
+  },
+  {
+    "word": "Tells",
+    "start": 182.59999999999994,
+    "end": 182.63999999999993,
+    "matched": false
+  },
+  {
+    "word": "Us",
+    "start": 182.63999999999993,
+    "end": 182.67999999999992,
+    "matched": false
+  },
+  {
+    "word": "45L",
+    "start": 182.67999999999992,
+    "end": 182.7199999999999,
+    "matched": false
+  },
+  {
+    "word": "0",
+    "start": 182.7199999999999,
+    "end": 182.7599999999999,
+    "matched": false
+  },
+  {
+    "word": "12",
+    "start": 182.7599999999999,
+    "end": 182.7999999999999,
+    "matched": false
+  },
+  {
+    "word": "1",
+    "start": 182.7999999999999,
+    "end": 182.8399999999999,
+    "matched": false
+  },
+  {
+    "word": "13",
+    "start": 182.8399999999999,
+    "end": 182.87999999999988,
+    "matched": false
+  },
+  {
+    "word": "Walmart",
+    "start": 182.87999999999988,
+    "end": 182.91999999999987,
+    "matched": false
+  },
+  {
+    "word": "gives",
+    "start": 182.91999999999987,
+    "end": 182.95999999999987,
+    "matched": false
+  },
+  {
+    "word": "this",
+    "start": 182.95999999999987,
+    "end": 182.99999999999986,
+    "matched": false
+  },
+  {
+    "word": "size",
+    "start": 182.99999999999986,
+    "end": 183.03999999999985,
+    "matched": false
+  },
+  {
+    "word": "the",
+    "start": 183.03999999999985,
+    "end": 183.07999999999984,
+    "matched": false
+  },
+  {
+    "word": "most",
+    "start": 183.07999999999984,
+    "end": 183.11999999999983,
+    "matched": false
+  },
+  {
+    "word": "spots.",
+    "start": 183.11999999999983,
+    "end": 183.15999999999983,
+    "matched": false
+  },
+  {
+    "word": "Big",
+    "start": 183.15999999999983,
+    "end": 183.19999999999982,
+    "matched": false
+  },
+  {
+    "word": "demand",
+    "start": 183.19999999999982,
+    "end": 183.2399999999998,
+    "matched": false
+  },
+  {
+    "word": "clue.",
+    "start": 183.2399999999998,
+    "end": 183.2799999999998,
+    "matched": false
+  },
+  {
+    "word": "90L",
+    "start": 183.2799999999998,
+    "end": 183.3199999999998,
+    "matched": false
+  },
+  {
+    "word": "0",
+    "start": 183.3199999999998,
+    "end": 183.3599999999998,
+    "matched": false
+  },
+  {
+    "word": "8",
+    "start": 183.3599999999998,
+    "end": 183.39999999999978,
+    "matched": false
+  },
+  {
+    "word": "3",
+    "start": 183.39999999999978,
+    "end": 183.43999999999977,
+    "matched": false
+  },
+  {
+    "word": "11",
+    "start": 183.43999999999977,
+    "end": 183.47999999999976,
+    "matched": false
+  },
+  {
+    "word": "Large",
+    "start": 183.47999999999976,
+    "end": 183.51999999999975,
+    "matched": false
+  },
+  {
+    "word": "bags",
+    "start": 183.51999999999975,
+    "end": 183.55999999999975,
+    "matched": false
+  },
+  {
+    "word": "matter",
+    "start": 183.55999999999975,
+    "end": 183.59999999999974,
+    "matched": false
+  },
+  {
+    "word": "for",
+    "start": 183.59999999999974,
+    "end": 183.63999999999973,
+    "matched": false
+  },
+  {
+    "word": "recycling",
+    "start": 183.63999999999973,
+    "end": 183.67999999999972,
+    "matched": false
+  },
+  {
+    "word": "and",
+    "start": 183.67999999999972,
+    "end": 183.71999999999971,
+    "matched": false
+  },
+  {
+    "word": "bigger",
+    "start": 183.71999999999971,
+    "end": 183.7599999999997,
+    "matched": false
+  },
+  {
+    "word": "household",
+    "start": 183.7599999999997,
+    "end": 183.7999999999997,
+    "matched": false
+  },
+  {
+    "word": "jobs.",
+    "start": 183.7999999999997,
+    "end": 183.8399999999997,
+    "matched": false
+  },
+  {
+    "word": "25L",
+    "start": 183.8399999999997,
+    "end": 183.87999999999968,
+    "matched": false
+  },
+  {
+    "word": "0",
+    "start": 183.87999999999968,
+    "end": 183.91999999999967,
+    "matched": false
+  },
+  {
+    "word": "9",
+    "start": 183.91999999999967,
+    "end": 183.95999999999967,
+    "matched": false
+  },
+  {
+    "word": "0",
+    "start": 183.95999999999967,
+    "end": 183.99999999999966,
+    "matched": false
+  },
+  {
+    "word": "9",
+    "start": 183.99999999999966,
+    "end": 184.03999999999965,
+    "matched": false
+  },
+  {
+    "word": "Small",
+    "start": 184.03999999999965,
+    "end": 184.07999999999964,
+    "matched": false
+  },
+  {
+    "word": "and",
+    "start": 184.07999999999964,
+    "end": 184.11999999999964,
+    "matched": false
+  },
+  {
+    "word": "medium",
+    "start": 184.11999999999964,
+    "end": 184.15999999999963,
+    "matched": false
+  },
+  {
+    "word": "garbage",
+    "start": 184.15999999999963,
+    "end": 184.19999999999962,
+    "matched": false
+  },
+  {
+    "word": "is",
+    "start": 184.19999999999962,
+    "end": 184.2399999999996,
+    "matched": false
+  },
+  {
+    "word": "a",
+    "start": 184.2399999999996,
+    "end": 184.2799999999996,
+    "matched": false
+  },
+  {
+    "word": "real",
+    "start": 184.2799999999996,
+    "end": 184.3199999999996,
+    "matched": false
+  },
+  {
+    "word": "routine.",
+    "start": 184.3199999999996,
+    "end": 184.3599999999996,
+    "matched": false
+  },
+  {
+    "word": "10L",
+    "start": 184.3599999999996,
+    "end": 184.39999999999958,
+    "matched": false
+  },
+  {
+    "word": "8",
+    "start": 184.39999999999958,
+    "end": 184.43999999999957,
+    "matched": false
+  },
+  {
+    "word": "0",
+    "start": 184.43999999999957,
+    "end": 184.47999999999956,
+    "matched": false
+  },
+  {
+    "word": "0",
+    "start": 184.47999999999956,
+    "end": 184.51999999999956,
+    "matched": false
+  },
+  {
+    "word": "8",
+    "start": 184.51999999999956,
+    "end": 184.55999999999955,
+    "matched": false
+  },
+  {
+    "word": "Compost",
+    "start": 184.55999999999955,
+    "end": 184.59999999999954,
+    "matched": false
+  },
+  {
+    "word": "liners",
+    "start": 184.59999999999954,
+    "end": 184.63999999999953,
+    "matched": false
+  },
+  {
+    "word": "are",
+    "start": 184.63999999999953,
+    "end": 184.67999999999952,
+    "matched": false
+  },
+  {
+    "word": "a",
+    "start": 184.67999999999952,
+    "end": 184.71999999999952,
+    "matched": false
+  },
+  {
+    "word": "strong",
+    "start": 184.71999999999952,
+    "end": 184.7599999999995,
+    "matched": false
+  },
+  {
+    "word": "repeated",
+    "start": 184.7599999999995,
+    "end": 184.7999999999995,
+    "matched": false
+  },
+  {
+    "word": "need.",
+    "start": 184.7999999999995,
+    "end": 184.8399999999995,
+    "matched": false
+  },
+  {
+    "word": "75L",
+    "start": 184.8399999999995,
+    "end": 184.87999999999948,
+    "matched": false
+  },
+  {
+    "word": "0",
+    "start": 184.87999999999948,
+    "end": 184.91999999999948,
+    "matched": false
+  },
+  {
+    "word": "4",
+    "start": 184.91999999999948,
+    "end": 184.95999999999947,
+    "matched": false
+  },
+  {
+    "word": "2",
+    "start": 184.95999999999947,
+    "end": 184.99999999999946,
+    "matched": false
+  },
+  {
+    "word": "6",
+    "start": 184.99999999999946,
+    "end": 185.03999999999945,
+    "matched": false
+  },
+  {
+    "word": "Another",
+    "start": 185.03999999999945,
+    "end": 185.07999999999944,
+    "matched": false
+  },
+  {
+    "word": "larger",
+    "start": 185.07999999999944,
+    "end": 185.11999999999944,
+    "matched": false
+  },
+  {
+    "word": "household-use",
+    "start": 185.11999999999944,
+    "end": 185.15999999999943,
+    "matched": false
+  },
+  {
+    "word": "size.",
+    "start": 185.15999999999943,
+    "end": 185.19999999999942,
+    "matched": false
+  },
+  {
+    "word": "135L",
+    "start": 185.19999999999942,
+    "end": 185.2399999999994,
+    "matched": false
+  },
+  {
+    "word": "0",
+    "start": 185.2399999999994,
+    "end": 185.2799999999994,
+    "matched": false
+  },
+  {
+    "word": "5",
+    "start": 185.2799999999994,
+    "end": 185.3199999999994,
+    "matched": false
+  },
+  {
+    "word": "0",
+    "start": 185.3199999999994,
+    "end": 185.3599999999994,
+    "matched": false
+  },
+  {
+    "word": "5",
+    "start": 185.3599999999994,
+    "end": 185.39999999999938,
+    "matched": false
+  },
+  {
+    "word": "Big",
+    "start": 185.39999999999938,
+    "end": 185.43999999999937,
+    "matched": false
+  },
+  {
+    "word": "garbage",
+    "start": 185.43999999999937,
+    "end": 185.47999999999936,
+    "matched": false
+  },
+  {
+    "word": "bags",
+    "start": 185.47999999999936,
+    "end": 185.51999999999936,
+    "matched": false
+  },
+  {
+    "word": "have",
+    "start": 185.51999999999936,
+    "end": 185.55999999999935,
+    "matched": false
+  },
+  {
+    "word": "a",
+    "start": 185.55999999999935,
+    "end": 185.59999999999934,
+    "matched": false
+  },
+  {
+    "word": "smaller",
+    "start": 185.59999999999934,
+    "end": 185.63999999999933,
+    "matched": false
+  },
+  {
+    "word": "but",
+    "start": 185.63999999999933,
+    "end": 185.67999999999932,
+    "matched": false
+  },
+  {
+    "word": "visible",
+    "start": 185.67999999999932,
+    "end": 185.71999999999932,
+    "matched": false
+  },
+  {
+    "word": "lane.",
+    "start": 185.71999999999932,
+    "end": 185.7599999999993,
+    "matched": false
+  },
+  {
+    "word": "Total",
+    "start": 185.7599999999993,
+    "end": 185.7999999999993,
+    "matched": false
+  },
+  {
+    "word": "10",
+    "start": 185.7999999999993,
+    "end": 185.8399999999993,
+    "matched": false
+  },
+  {
+    "word": "49",
+    "start": 185.8399999999993,
+    "end": 185.87999999999928,
+    "matched": false
+  },
+  {
+    "word": "7",
+    "start": 185.87999999999928,
+    "end": 185.91999999999928,
+    "matched": false
+  },
+  {
+    "word": "67",
+    "start": 185.91999999999928,
+    "end": 185.95999999999927,
+    "matched": false
+  },
+  {
+    "word": "Garbage",
+    "start": 185.95999999999927,
+    "end": 185.99999999999926,
+    "matched": false
+  },
+  {
+    "word": "dominates",
+    "start": 185.99999999999926,
+    "end": 186.03999999999925,
+    "matched": false
+  },
+  {
+    "word": "the",
+    "start": 186.03999999999925,
+    "end": 186.07999999999925,
+    "matched": false
+  },
+  {
+    "word": "shelf.",
+    "start": 186.07999999999925,
+    "end": 186.11999999999924,
+    "matched": false
+  },
+  {
+    "word": "This",
+    "start": 186.11999999999924,
+    "end": 186.15999999999923,
+    "matched": false
+  },
+  {
+    "word": "table",
+    "start": 186.15999999999923,
+    "end": 186.19999999999922,
+    "matched": false
+  },
+  {
+    "word": "tells",
+    "start": 186.19999999999922,
+    "end": 186.2399999999992,
+    "matched": false
+  },
+  {
+    "word": "a",
+    "start": 186.2399999999992,
+    "end": 186.2799999999992,
+    "matched": false
+  },
+  {
+    "word": "story.",
+    "start": 186.2799999999992,
+    "end": 186.3199999999992,
+    "matched": false
+  },
+  {
+    "word": "45L",
+    "start": 186.3199999999992,
+    "end": 186.3599999999992,
+    "matched": false
+  },
+  {
+    "word": "bags",
+    "start": 186.3599999999992,
+    "end": 186.39999999999918,
+    "matched": true
+  },
+  {
+    "word": "show",
+    "start": 186.39999999999918,
+    "end": 186.43999999999917,
+    "matched": true
+  },
+  {
+    "word": "up",
+    "start": 186.43999999999917,
+    "end": 186.47999999999917,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 186.47999999999917,
+    "end": 186.51999999999916,
+    "matched": true
+  },
+  {
+    "word": "most.",
+    "start": 186.51999999999916,
+    "end": 186.55999999999915,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 186.55999999999915,
+    "end": 186.59999999999914,
+    "matched": true
+  },
+  {
+    "word": "probably",
+    "start": 186.59999999999914,
+    "end": 186.63999999999913,
+    "matched": true
+  },
+  {
+    "word": "means",
+    "start": 186.63999999999913,
+    "end": 186.67999999999913,
+    "matched": true
+  },
+  {
+    "word": "regular",
+    "start": 186.67999999999913,
+    "end": 186.71999999999912,
+    "matched": true
+  },
+  {
+    "word": "household",
+    "start": 186.71999999999912,
+    "end": 186.82,
+    "matched": true
+  },
+  {
+    "word": "garbage",
+    "start": 186.82,
+    "end": 187.24,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 187.24,
+    "end": 187.42,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 187.42,
+    "end": 187.54,
+    "matched": true
+  },
+  {
+    "word": "major",
+    "start": 187.54,
+    "end": 187.78,
+    "matched": true
+  },
+  {
+    "word": "routine.",
+    "start": 187.78,
+    "end": 188.18,
+    "matched": true
+  },
+  {
+    "word": "90L",
+    "start": 188.18,
+    "end": 189.44,
+    "matched": false
+  },
+  {
+    "word": "bags",
+    "start": 189.44,
+    "end": 189.88,
+    "matched": true
+  },
+  {
+    "word": "also",
+    "start": 189.88,
+    "end": 190.12,
+    "matched": true
+  },
+  {
+    "word": "show",
+    "start": 190.12,
+    "end": 190.38,
+    "matched": true
+  },
+  {
+    "word": "up",
+    "start": 190.38,
+    "end": 190.52,
+    "matched": true
+  },
+  {
+    "word": "often.",
+    "start": 190.52,
+    "end": 190.86,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 191.34,
+    "end": 191.56,
+    "matched": true
+  },
+  {
+    "word": "points",
+    "start": 191.56,
+    "end": 191.8,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 191.8,
+    "end": 191.98,
+    "matched": true
+  },
+  {
+    "word": "bigger",
+    "start": 191.98,
+    "end": 192.14,
+    "matched": true
+  },
+  {
+    "word": "jobs,",
+    "start": 192.14,
+    "end": 192.56,
+    "matched": true
+  },
+  {
+    "word": "like",
+    "start": 192.56,
+    "end": 192.8,
+    "matched": true
+  },
+  {
+    "word": "recycling",
+    "start": 192.8,
+    "end": 193.28,
+    "matched": true
+  },
+  {
+    "word": "or",
+    "start": 193.28,
+    "end": 193.64,
+    "matched": true
+  },
+  {
+    "word": "larger",
+    "start": 193.64,
+    "end": 193.94,
+    "matched": true
+  },
+  {
+    "word": "bins.",
+    "start": 193.94,
+    "end": 194.18,
+    "matched": true
+  },
+  {
+    "word": "10L",
+    "start": 194.18,
+    "end": 195.4,
+    "matched": false
+  },
+  {
+    "word": "bags",
+    "start": 195.4,
+    "end": 195.8,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 195.8,
+    "end": 195.96,
+    "matched": true
+  },
+  {
+    "word": "mostly",
+    "start": 195.96,
+    "end": 196.28,
+    "matched": true
+  },
+  {
+    "word": "compostable.",
+    "start": 196.28,
+    "end": 196.96,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 196.96,
+    "end": 197.62,
+    "matched": true
+  },
+  {
+    "word": "tells",
+    "start": 197.62,
+    "end": 197.84,
+    "matched": true
+  },
+  {
+    "word": "us",
+    "start": 197.84,
+    "end": 198.1,
+    "matched": true
+  },
+  {
+    "word": "kitchen",
+    "start": 198.1,
+    "end": 198.34,
+    "matched": true
+  },
+  {
+    "word": "compost",
+    "start": 198.34,
+    "end": 198.88,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 198.88,
+    "end": 199.16,
+    "matched": true
+  },
+  {
+    "word": "its",
+    "start": 199.16,
+    "end": 199.28,
+    "matched": true
+  },
+  {
+    "word": "own",
+    "start": 199.28,
+    "end": 199.46,
+    "matched": true
+  },
+  {
+    "word": "routine.",
+    "start": 199.46,
+    "end": 199.86,
+    "matched": true
+  },
+  {
+    "word": "This",
+    "start": 200.64,
+    "end": 200.68,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 200.68,
+    "end": 200.84,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 200.84,
+    "end": 201.02,
+    "matched": true
+  },
+  {
+    "word": "shift:",
+    "start": 201.02,
+    "end": 201.3,
+    "matched": true
+  },
+  {
+    "word": "We",
+    "start": 201.96,
+    "end": 202.0,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 202.0,
+    "end": 202.12,
+    "matched": true
+  },
+  {
+    "word": "no",
+    "start": 202.12,
+    "end": 202.3,
+    "matched": true
+  },
+  {
+    "word": "longer",
+    "start": 202.3,
+    "end": 202.56,
+    "matched": true
+  },
+  {
+    "word": "saying,",
+    "start": 202.56,
+    "end": 202.94,
+    "matched": true
+  },
+  {
+    "word": "\u201cGarbage",
+    "start": 202.94,
+    "end": 203.6,
+    "matched": true
+  },
+  {
+    "word": "bags",
+    "start": 203.6,
+    "end": 204.02,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 204.02,
+    "end": 204.22,
+    "matched": true
+  },
+  {
+    "word": "boring.\u201d",
+    "start": 204.22,
+    "end": 204.52,
+    "matched": true
+  },
+  {
+    "word": "We",
+    "start": 205.18,
+    "end": 205.28,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 205.28,
+    "end": 205.38,
+    "matched": true
+  },
+  {
+    "word": "saying:",
+    "start": 205.38,
+    "end": 205.7,
+    "matched": true
+  },
+  {
+    "word": "There",
+    "start": 205.7,
+    "end": 206.12,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 206.12,
+    "end": 206.26,
+    "matched": true
+  },
+  {
+    "word": "different",
+    "start": 206.26,
+    "end": 206.54,
+    "matched": true
+  },
+  {
+    "word": "jobs",
+    "start": 206.54,
+    "end": 206.84,
+    "matched": true
+  },
+  {
+    "word": "inside",
+    "start": 206.84,
+    "end": 207.2,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 207.2,
+    "end": 207.38,
+    "matched": true
+  },
+  {
+    "word": "category.",
+    "start": 207.38,
+    "end": 207.82,
+    "matched": true
+  },
+  {
+    "word": "Different",
+    "start": 208.54,
+    "end": 208.76,
+    "matched": true
+  },
+  {
+    "word": "sizes",
+    "start": 208.76,
+    "end": 209.18,
+    "matched": true
+  },
+  {
+    "word": "solve",
+    "start": 209.18,
+    "end": 209.5,
+    "matched": true
+  },
+  {
+    "word": "different",
+    "start": 209.5,
+    "end": 209.84,
+    "matched": true
+  },
+  {
+    "word": "problems.",
+    "start": 209.84,
+    "end": 210.34,
+    "matched": true
+  },
+  {
+    "word": "Different",
+    "start": 210.92,
+    "end": 211.16,
+    "matched": true
+  },
+  {
+    "word": "households",
+    "start": 211.16,
+    "end": 211.66,
+    "matched": true
+  },
+  {
+    "word": "may",
+    "start": 211.66,
+    "end": 211.96,
+    "matched": true
+  },
+  {
+    "word": "need",
+    "start": 211.96,
+    "end": 212.16,
+    "matched": true
+  },
+  {
+    "word": "different",
+    "start": 212.16,
+    "end": 212.46,
+    "matched": true
+  },
+  {
+    "word": "bundles.",
+    "start": 212.46,
+    "end": 212.84,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 213.42,
+    "end": 213.54,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 213.54,
+    "end": 213.68,
+    "matched": true
+  },
+  {
+    "word": "market",
+    "start": 213.68,
+    "end": 213.96,
+    "matched": true
+  },
+  {
+    "word": "research.",
+    "start": 213.96,
+    "end": 214.44,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 215.0,
+    "end": 215.16,
+    "matched": true
+  },
+  {
+    "word": "Caution",
+    "start": 215.16,
+    "end": 215.52,
+    "matched": true
+  },
+  {
+    "word": "SKU",
+    "start": 215.52,
+    "end": 216.3,
+    "matched": true
+  },
+  {
+    "word": "count",
+    "start": 216.3,
+    "end": 216.6,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 216.6,
+    "end": 216.84,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 216.84,
+    "end": 217.04,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 217.04,
+    "end": 217.2,
+    "matched": true
+  },
+  {
+    "word": "same",
+    "start": 217.2,
+    "end": 217.4,
+    "matched": true
+  },
+  {
+    "word": "as",
+    "start": 217.4,
+    "end": 217.58,
+    "matched": true
+  },
+  {
+    "word": "sales.",
+    "start": 217.58,
+    "end": 217.8,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 218.4,
+    "end": 218.58,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 218.58,
+    "end": 218.8,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 218.8,
+    "end": 219.04,
+    "matched": true
+  },
+  {
+    "word": "have",
+    "start": 219.04,
+    "end": 219.26,
+    "matched": true
+  },
+  {
+    "word": "many",
+    "start": 219.26,
+    "end": 219.52,
+    "matched": true
+  },
+  {
+    "word": "SKUs",
+    "start": 219.52,
+    "end": 220.16,
+    "matched": true
+  },
+  {
+    "word": "because",
+    "start": 220.16,
+    "end": 220.54,
+    "matched": true
+  },
+  {
+    "word": "demand",
+    "start": 220.54,
+    "end": 220.86,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 220.86,
+    "end": 221.06,
+    "matched": true
+  },
+  {
+    "word": "high.",
+    "start": 221.06,
+    "end": 221.36,
+    "matched": true
+  },
+  {
+    "word": "But",
+    "start": 221.88,
+    "end": 222.08,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 222.08,
+    "end": 222.18,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 222.18,
+    "end": 222.32,
+    "matched": true
+  },
+  {
+    "word": "also",
+    "start": 222.32,
+    "end": 222.58,
+    "matched": true
+  },
+  {
+    "word": "have",
+    "start": 222.58,
+    "end": 222.84,
+    "matched": true
+  },
+  {
+    "word": "many",
+    "start": 222.84,
+    "end": 223.1,
+    "matched": true
+  },
+  {
+    "word": "SKUs",
+    "start": 223.1,
+    "end": 223.74,
+    "matched": true
+  },
+  {
+    "word": "because",
+    "start": 223.74,
+    "end": 224.08,
+    "matched": true
+  },
+  {
+    "word": "suppliers",
+    "start": 224.08,
+    "end": 224.52,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 224.52,
+    "end": 224.74,
+    "matched": true
+  },
+  {
+    "word": "competing,",
+    "start": 224.74,
+    "end": 225.18,
+    "matched": true
+  },
+  {
+    "word": "brands",
+    "start": 225.18,
+    "end": 225.92,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 225.92,
+    "end": 226.14,
+    "matched": true
+  },
+  {
+    "word": "copying",
+    "start": 226.14,
+    "end": 226.44,
+    "matched": true
+  },
+  {
+    "word": "each",
+    "start": 226.44,
+    "end": 226.68,
+    "matched": true
+  },
+  {
+    "word": "other,",
+    "start": 226.68,
+    "end": 226.94,
+    "matched": true
+  },
+  {
+    "word": "or",
+    "start": 227.46,
+    "end": 227.5,
+    "matched": true
+  },
+  {
+    "word": "Amazon",
+    "start": 227.5,
+    "end": 228.0,
+    "matched": true
+  },
+  {
+    "word": "has",
+    "start": 228.0,
+    "end": 228.24,
+    "matched": true
+  },
+  {
+    "word": "lots",
+    "start": 228.24,
+    "end": 228.46,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 228.46,
+    "end": 228.66,
+    "matched": true
+  },
+  {
+    "word": "third-party",
+    "start": 228.66,
+    "end": 229.08,
+    "matched": false
+  },
+  {
+    "word": "sellers.",
+    "start": 229.08,
+    "end": 229.42,
+    "matched": true
+  },
+  {
+    "word": "So",
+    "start": 230.18,
+    "end": 230.22,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 230.22,
+    "end": 230.36,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 230.36,
+    "end": 230.5,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 230.5,
+    "end": 230.68,
+    "matched": true
+  },
+  {
+    "word": "say:",
+    "start": 230.68,
+    "end": 231.04,
+    "matched": true
+  },
+  {
+    "word": "\u201cThis",
+    "start": 231.42,
+    "end": 231.6,
+    "matched": true
+  },
+  {
+    "word": "proves",
+    "start": 231.6,
+    "end": 231.86,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 231.86,
+    "end": 232.14,
+    "matched": true
+  },
+  {
+    "word": "buy",
+    "start": 232.14,
+    "end": 232.42,
+    "matched": true
+  },
+  {
+    "word": "it.\u201d",
+    "start": 232.42,
+    "end": 232.66,
+    "matched": true
+  },
+  {
+    "word": "We",
+    "start": 233.12,
+    "end": 233.24,
+    "matched": true
+  },
+  {
+    "word": "say:",
+    "start": 233.24,
+    "end": 233.44,
+    "matched": true
+  },
+  {
+    "word": "\u201cThis",
+    "start": 233.44,
+    "end": 233.64,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 233.64,
+    "end": 233.82,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 233.82,
+    "end": 233.98,
+    "matched": true
+  },
+  {
+    "word": "demand",
+    "start": 233.98,
+    "end": 234.3,
+    "matched": true
+  },
+  {
+    "word": "signal.\u201d",
+    "start": 234.3,
+    "end": 234.74,
+    "matched": true
+  },
+  {
+    "word": "Then",
+    "start": 235.38,
+    "end": 235.52,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 235.52,
+    "end": 235.64,
+    "matched": true
+  },
+  {
+    "word": "look",
+    "start": 235.64,
+    "end": 235.78,
+    "matched": true
+  },
+  {
+    "word": "for",
+    "start": 235.78,
+    "end": 235.94,
+    "matched": true
+  },
+  {
+    "word": "more",
+    "start": 235.94,
+    "end": 236.1,
+    "matched": true
+  },
+  {
+    "word": "evidence.",
+    "start": 236.1,
+    "end": 236.5,
+    "matched": true
+  },
+  {
+    "word": "Parent",
+    "start": 236.5,
+    "end": 237.34,
+    "matched": false
+  },
+  {
+    "word": "survey",
+    "start": 237.34,
+    "end": 237.66,
+    "matched": true
+  },
+  {
+    "word": "answers.",
+    "start": 237.66,
+    "end": 238.22,
+    "matched": true
+  },
+  {
+    "word": "Product",
+    "start": 238.74,
+    "end": 239.02,
+    "matched": true
+  },
+  {
+    "word": "reviews.",
+    "start": 239.02,
+    "end": 239.56,
+    "matched": true
+  },
+  {
+    "word": "Price",
+    "start": 240.18,
+    "end": 240.38,
+    "matched": true
+  },
+  {
+    "word": "ranges.",
+    "start": 240.38,
+    "end": 240.88,
+    "matched": true
+  },
+  {
+    "word": "Local",
+    "start": 241.48,
+    "end": 241.74,
+    "matched": true
+  },
+  {
+    "word": "availability.",
+    "start": 241.74,
+    "end": 242.3,
+    "matched": true
+  },
+  {
+    "word": "Repeat",
+    "start": 243.04,
+    "end": 243.34,
+    "matched": true
+  },
+  {
+    "word": "purchase.",
+    "start": 243.34,
+    "end": 243.82,
+    "matched": true
+  },
+  {
+    "word": "Willingness",
+    "start": 244.46,
+    "end": 244.78,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 244.78,
+    "end": 245.14,
+    "matched": true
+  },
+  {
+    "word": "buy.",
+    "start": 245.14,
+    "end": 245.4,
+    "matched": true
+  },
+  {
+    "word": "Good",
+    "start": 246.24,
+    "end": 246.4,
+    "matched": true
+  },
+  {
+    "word": "researchers",
+    "start": 246.4,
+    "end": 246.92,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 246.92,
+    "end": 247.2,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 247.2,
+    "end": 247.4,
+    "matched": true
+  },
+  {
+    "word": "fall",
+    "start": 247.4,
+    "end": 247.64,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 247.64,
+    "end": 247.76,
+    "matched": true
+  },
+  {
+    "word": "love",
+    "start": 247.76,
+    "end": 247.9,
+    "matched": true
+  },
+  {
+    "word": "with",
+    "start": 247.9,
+    "end": 248.06,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 248.06,
+    "end": 248.28,
+    "matched": true
+  },
+  {
+    "word": "clue.",
+    "start": 248.28,
+    "end": 248.58,
+    "matched": true
+  },
+  {
+    "word": "They",
+    "start": 249.12,
+    "end": 249.32,
+    "matched": true
+  },
+  {
+    "word": "collect",
+    "start": 249.32,
+    "end": 249.6,
+    "matched": true
+  },
+  {
+    "word": "clues",
+    "start": 249.6,
+    "end": 249.98,
+    "matched": true
+  },
+  {
+    "word": "until",
+    "start": 249.98,
+    "end": 250.3,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 250.3,
+    "end": 250.46,
+    "matched": true
+  },
+  {
+    "word": "pattern",
+    "start": 250.46,
+    "end": 250.72,
+    "matched": true
+  },
+  {
+    "word": "gets",
+    "start": 250.72,
+    "end": 250.92,
+    "matched": true
+  },
+  {
+    "word": "stronger.",
+    "start": 250.92,
+    "end": 251.36,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 252.2,
+    "end": 252.4,
+    "matched": true
+  },
+  {
+    "word": "Better",
+    "start": 252.4,
+    "end": 252.64,
+    "matched": true
+  },
+  {
+    "word": "Question",
+    "start": 252.64,
+    "end": 253.06,
+    "matched": true
+  },
+  {
+    "word": "At",
+    "start": 253.06,
+    "end": 253.74,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 253.74,
+    "end": 254.18,
+    "matched": true
+  },
+  {
+    "word": "start,",
+    "start": 254.18,
+    "end": 254.56,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 254.8,
+    "end": 254.86,
+    "matched": true
+  },
+  {
+    "word": "question",
+    "start": 254.86,
+    "end": 255.2,
+    "matched": true
+  },
+  {
+    "word": "was:",
+    "start": 255.2,
+    "end": 255.6,
+    "matched": true
+  },
+  {
+    "word": "Can",
+    "start": 256.08,
+    "end": 256.14,
+    "matched": true
+  },
+  {
+    "word": "I",
+    "start": 256.14,
+    "end": 256.28,
+    "matched": true
+  },
+  {
+    "word": "sell",
+    "start": 256.28,
+    "end": 256.52,
+    "matched": true
+  },
+  {
+    "word": "garbage",
+    "start": 256.52,
+    "end": 256.84,
+    "matched": true
+  },
+  {
+    "word": "bags?",
+    "start": 256.84,
+    "end": 257.26,
+    "matched": true
+  },
+  {
+    "word": "Now",
+    "start": 257.84,
+    "end": 257.96,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 257.96,
+    "end": 258.12,
+    "matched": true
+  },
+  {
+    "word": "question",
+    "start": 258.12,
+    "end": 258.46,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 258.46,
+    "end": 258.64,
+    "matched": true
+  },
+  {
+    "word": "better:",
+    "start": 258.64,
+    "end": 258.88,
+    "matched": true
+  },
+  {
+    "word": "Which",
+    "start": 259.46,
+    "end": 259.54,
+    "matched": true
+  },
+  {
+    "word": "household",
+    "start": 259.54,
+    "end": 260.04,
+    "matched": true
+  },
+  {
+    "word": "routine",
+    "start": 260.04,
+    "end": 260.5,
+    "matched": true
+  },
+  {
+    "word": "has",
+    "start": 260.5,
+    "end": 260.78,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 260.78,
+    "end": 260.96,
+    "matched": true
+  },
+  {
+    "word": "strongest",
+    "start": 260.96,
+    "end": 261.24,
+    "matched": true
+  },
+  {
+    "word": "signal?",
+    "start": 261.24,
+    "end": 261.68,
+    "matched": true
+  },
+  {
+    "word": "Maybe",
+    "start": 262.64,
+    "end": 262.78,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 262.78,
+    "end": 262.98,
+    "matched": true
+  },
+  {
+    "word": "answer",
+    "start": 262.98,
+    "end": 263.22,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 263.22,
+    "end": 263.48,
+    "matched": true
+  },
+  {
+    "word": "45L",
+    "start": 263.48,
+    "end": 264.18,
+    "matched": false
+  },
+  {
+    "word": "kitchen",
+    "start": 264.18,
+    "end": 264.52,
+    "matched": true
+  },
+  {
+    "word": "garbage",
+    "start": 264.52,
+    "end": 264.88,
+    "matched": true
+  },
+  {
+    "word": "bags.",
+    "start": 264.88,
+    "end": 265.34,
+    "matched": true
+  },
+  {
+    "word": "Maybe",
+    "start": 265.9,
+    "end": 266.04,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 266.04,
+    "end": 266.18,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 266.18,
+    "end": 266.32,
+    "matched": true
+  },
+  {
+    "word": "10L",
+    "start": 266.32,
+    "end": 266.8,
+    "matched": false
+  },
+  {
+    "word": "compost",
+    "start": 266.8,
+    "end": 267.34,
+    "matched": true
+  },
+  {
+    "word": "liners.",
+    "start": 267.34,
+    "end": 267.84,
+    "matched": true
+  },
+  {
+    "word": "Maybe",
+    "start": 268.46,
+    "end": 268.6,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 268.6,
+    "end": 268.76,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 268.76,
+    "end": 268.88,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 268.88,
+    "end": 269.02,
+    "matched": true
+  },
+  {
+    "word": "bundle:",
+    "start": 269.02,
+    "end": 269.28,
+    "matched": true
+  },
+  {
+    "word": "garbage",
+    "start": 270.12,
+    "end": 270.38,
+    "matched": true
+  },
+  {
+    "word": "plus",
+    "start": 270.38,
+    "end": 270.64,
+    "matched": true
+  },
+  {
+    "word": "compost",
+    "start": 270.64,
+    "end": 271.22,
+    "matched": true
+  },
+  {
+    "word": "plus",
+    "start": 271.22,
+    "end": 271.94,
+    "matched": true
+  },
+  {
+    "word": "recycling.",
+    "start": 271.94,
+    "end": 272.46,
+    "matched": true
+  },
+  {
+    "word": "Maybe",
+    "start": 273.36,
+    "end": 273.58,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 273.58,
+    "end": 273.76,
+    "matched": true
+  },
+  {
+    "word": "real",
+    "start": 273.76,
+    "end": 274.0,
+    "matched": true
+  },
+  {
+    "word": "problem",
+    "start": 274.0,
+    "end": 274.3,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 274.3,
+    "end": 274.52,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 274.52,
+    "end": 274.7,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 274.7,
+    "end": 274.86,
+    "matched": true
+  },
+  {
+    "word": "bag.",
+    "start": 274.86,
+    "end": 275.12,
+    "matched": true
+  },
+  {
+    "word": "Maybe",
+    "start": 275.92,
+    "end": 276.1,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 276.1,
+    "end": 276.32,
+    "matched": true
+  },
+  {
+    "word": "real",
+    "start": 276.32,
+    "end": 276.54,
+    "matched": true
+  },
+  {
+    "word": "problem",
+    "start": 276.54,
+    "end": 276.88,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 276.88,
+    "end": 277.06,
+    "matched": true
+  },
+  {
+    "word": "running",
+    "start": 277.06,
+    "end": 277.28,
+    "matched": true
+  },
+  {
+    "word": "out,",
+    "start": 277.28,
+    "end": 277.64,
+    "matched": true
+  },
+  {
+    "word": "choosing",
+    "start": 278.04,
+    "end": 278.32,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 278.32,
+    "end": 278.62,
+    "matched": true
+  },
+  {
+    "word": "wrong",
+    "start": 278.62,
+    "end": 278.78,
+    "matched": true
+  },
+  {
+    "word": "size,",
+    "start": 278.78,
+    "end": 279.18,
+    "matched": true
+  },
+  {
+    "word": "or",
+    "start": 279.18,
+    "end": 279.46,
+    "matched": true
+  },
+  {
+    "word": "forgetting",
+    "start": 279.46,
+    "end": 279.88,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 279.88,
+    "end": 280.12,
+    "matched": true
+  },
+  {
+    "word": "restock.",
+    "start": 280.12,
+    "end": 280.58,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 281.12,
+    "end": 281.36,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 281.36,
+    "end": 281.46,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 281.46,
+    "end": 281.64,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 281.64,
+    "end": 281.78,
+    "matched": true
+  },
+  {
+    "word": "shelf",
+    "start": 281.78,
+    "end": 281.96,
+    "matched": true
+  },
+  {
+    "word": "matters.",
+    "start": 281.96,
+    "end": 282.32,
+    "matched": true
+  },
+  {
+    "word": "It",
+    "start": 282.32,
+    "end": 283.02,
+    "matched": true
+  },
+  {
+    "word": "shows",
+    "start": 283.02,
+    "end": 283.32,
+    "matched": true
+  },
+  {
+    "word": "us",
+    "start": 283.32,
+    "end": 283.54,
+    "matched": true
+  },
+  {
+    "word": "where",
+    "start": 283.54,
+    "end": 283.7,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 283.7,
+    "end": 283.82,
+    "matched": true
+  },
+  {
+    "word": "market",
+    "start": 283.82,
+    "end": 284.1,
+    "matched": true
+  },
+  {
+    "word": "already",
+    "start": 284.1,
+    "end": 284.4,
+    "matched": true
+  },
+  {
+    "word": "exists.",
+    "start": 284.4,
+    "end": 284.86,
+    "matched": true
+  },
+  {
+    "word": "Then",
+    "start": 285.38,
+    "end": 285.58,
+    "matched": true
+  },
+  {
+    "word": "we",
+    "start": 285.58,
+    "end": 285.7,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 285.7,
+    "end": 285.86,
+    "matched": true
+  },
+  {
+    "word": "design",
+    "start": 285.86,
+    "end": 286.2,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 286.2,
+    "end": 286.36,
+    "matched": true
+  },
+  {
+    "word": "smarter",
+    "start": 286.36,
+    "end": 286.6,
+    "matched": true
+  },
+  {
+    "word": "offer.",
+    "start": 286.6,
+    "end": 287.16,
+    "matched": true
+  },
+  {
+    "word": "Bridge",
+    "start": 288.08,
+    "end": 288.12,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 288.12,
+    "end": 288.48,
+    "matched": true
+  },
+  {
+    "word": "Control",
+    "start": 288.48,
+    "end": 288.92,
+    "matched": true
+  },
+  {
+    "word": "Brand",
+    "start": 288.92,
+    "end": 289.42,
+    "matched": true
+  },
+  {
+    "word": "This",
+    "start": 290.26,
+    "end": 290.46,
+    "matched": true
+  },
+  {
+    "word": "chapter",
+    "start": 290.46,
+    "end": 290.82,
+    "matched": true
+  },
+  {
+    "word": "teaches",
+    "start": 290.82,
+    "end": 291.2,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 291.2,
+    "end": 291.5,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 291.5,
+    "end": 291.68,
+    "matched": true
+  },
+  {
+    "word": "read",
+    "start": 291.68,
+    "end": 291.9,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 291.9,
+    "end": 292.08,
+    "matched": true
+  },
+  {
+    "word": "shelf.",
+    "start": 292.08,
+    "end": 292.36,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 292.96,
+    "end": 293.06,
+    "matched": true
+  },
+  {
+    "word": "next",
+    "start": 293.06,
+    "end": 293.3,
+    "matched": true
+  },
+  {
+    "word": "chapter",
+    "start": 293.3,
+    "end": 293.66,
+    "matched": true
+  },
+  {
+    "word": "teaches",
+    "start": 293.66,
+    "end": 293.92,
+    "matched": true
+  },
+  {
+    "word": "you",
+    "start": 293.92,
+    "end": 294.2,
+    "matched": true
+  },
+  {
+    "word": "how",
+    "start": 294.2,
+    "end": 294.4,
+    "matched": true
+  },
+  {
+    "word": "operators",
+    "start": 294.4,
+    "end": 294.94,
+    "matched": true
+  },
+  {
+    "word": "use",
+    "start": 294.94,
+    "end": 295.26,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 295.26,
+    "end": 295.48,
+    "matched": true
+  },
+  {
+    "word": "knowledge.",
+    "start": 295.48,
+    "end": 295.84,
+    "matched": true
+  },
+  {
+    "word": "Big",
+    "start": 296.52,
+    "end": 296.66,
+    "matched": true
+  },
+  {
+    "word": "national",
+    "start": 296.66,
+    "end": 297.06,
+    "matched": true
+  },
+  {
+    "word": "brands",
+    "start": 297.06,
+    "end": 297.48,
+    "matched": true
+  },
+  {
+    "word": "spend",
+    "start": 297.48,
+    "end": 297.76,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 297.76,
+    "end": 298.02,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 298.02,
+    "end": 298.2,
+    "matched": true
+  },
+  {
+    "word": "invent",
+    "start": 298.2,
+    "end": 298.44,
+    "matched": true
+  },
+  {
+    "word": "products,",
+    "start": 298.44,
+    "end": 298.96,
+    "matched": true
+  },
+  {
+    "word": "advertise",
+    "start": 299.48,
+    "end": 299.8,
+    "matched": true
+  },
+  {
+    "word": "them,",
+    "start": 299.8,
+    "end": 300.16,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 300.4,
+    "end": 300.64,
+    "matched": true
+  },
+  {
+    "word": "teach",
+    "start": 300.64,
+    "end": 300.84,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 300.84,
+    "end": 301.2,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 301.2,
+    "end": 301.48,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 301.48,
+    "end": 301.64,
+    "matched": true
+  },
+  {
+    "word": "should",
+    "start": 301.64,
+    "end": 301.84,
+    "matched": true
+  },
+  {
+    "word": "care.",
+    "start": 301.84,
+    "end": 302.12,
+    "matched": true
+  },
+  {
+    "word": "Control",
+    "start": 303.12,
+    "end": 303.16,
+    "matched": true
+  },
+  {
+    "word": "brands",
+    "start": 303.16,
+    "end": 303.48,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 303.48,
+    "end": 303.74,
+    "matched": true
+  },
+  {
+    "word": "something",
+    "start": 303.74,
+    "end": 304.04,
+    "matched": true
+  },
+  {
+    "word": "different.",
+    "start": 304.04,
+    "end": 304.48,
+    "matched": true
+  },
+  {
+    "word": "They",
+    "start": 304.94,
+    "end": 305.16,
+    "matched": true
+  },
+  {
+    "word": "study",
+    "start": 305.16,
+    "end": 305.42,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 305.42,
+    "end": 305.58,
+    "matched": true
+  },
+  {
+    "word": "already",
+    "start": 305.58,
+    "end": 305.8,
+    "matched": true
+  },
+  {
+    "word": "sells.",
+    "start": 305.8,
+    "end": 306.22,
+    "matched": true
+  },
+  {
+    "word": "Then",
+    "start": 306.68,
+    "end": 306.92,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 306.92,
+    "end": 307.06,
+    "matched": true
+  },
+  {
+    "word": "build",
+    "start": 307.06,
+    "end": 307.26,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 307.26,
+    "end": 307.42,
+    "matched": true
+  },
+  {
+    "word": "clearer,",
+    "start": 307.42,
+    "end": 307.74,
+    "matched": true
+  },
+  {
+    "word": "simpler,",
+    "start": 308.02,
+    "end": 308.44,
+    "matched": true
+  },
+  {
+    "word": "better-margin",
+    "start": 308.44,
+    "end": 309.3,
+    "matched": false
+  },
+  {
+    "word": "version.",
+    "start": 309.3,
+    "end": 309.68,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 310.4,
+    "end": 310.72,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 310.72,
+    "end": 310.84,
+    "matched": true
+  },
+  {
+    "word": "why",
+    "start": 310.84,
+    "end": 311.02,
+    "matched": true
+  },
+  {
+    "word": "this",
+    "start": 311.02,
+    "end": 311.18,
+    "matched": true
+  },
+  {
+    "word": "research",
+    "start": 311.18,
+    "end": 311.58,
+    "matched": true
+  },
+  {
+    "word": "matters.",
+    "start": 311.58,
+    "end": 312.0,
+    "matched": true
+  },
+  {
+    "word": "You",
+    "start": 312.32,
+    "end": 312.74,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 312.74,
+    "end": 312.86,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 312.86,
+    "end": 313.1,
+    "matched": true
+  },
+  {
+    "word": "just",
+    "start": 313.1,
+    "end": 313.34,
+    "matched": true
+  },
+  {
+    "word": "collecting",
+    "start": 313.34,
+    "end": 313.68,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 313.68,
+    "end": 314.06,
+    "matched": true
+  },
+  {
+    "word": "data.",
+    "start": 314.06,
+    "end": 314.38,
+    "matched": true
+  },
+  {
+    "word": "You",
+    "start": 314.98,
+    "end": 315.06,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 315.06,
+    "end": 315.18,
+    "matched": true
+  },
+  {
+    "word": "learning",
+    "start": 315.18,
+    "end": 315.5,
+    "matched": true
+  },
+  {
+    "word": "how",
+    "start": 315.5,
+    "end": 315.7,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 315.7,
+    "end": 315.82,
+    "matched": true
+  },
+  {
+    "word": "see",
+    "start": 315.82,
+    "end": 315.96,
+    "matched": true
+  },
+  {
+    "word": "demand.",
+    "start": 315.96,
+    "end": 316.3,
+    "matched": true
+  },
+  {
+    "word": "In",
+    "start": 316.96,
+    "end": 317.02,
+    "matched": true
+  },
+  {
+    "word": "Module",
+    "start": 317.02,
+    "end": 317.24,
+    "matched": true
+  },
+  {
+    "word": "1,",
+    "start": 317.24,
+    "end": 318.18,
+    "matched": false
+  },
+  {
+    "word": "you",
+    "start": 318.18,
+    "end": 318.22,
+    "matched": true
+  },
+  {
+    "word": "learned",
+    "start": 318.22,
+    "end": 318.42,
+    "matched": false
+  },
+  {
+    "word": "that",
+    "start": 318.42,
+    "end": 318.62,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 318.62,
+    "end": 318.9,
+    "matched": true
+  },
+  {
+    "word": "moves",
+    "start": 318.9,
+    "end": 319.18,
+    "matched": true
+  },
+  {
+    "word": "through",
+    "start": 319.18,
+    "end": 319.42,
+    "matched": true
+  },
+  {
+    "word": "systems.",
+    "start": 319.42,
+    "end": 319.86,
+    "matched": true
+  },
+  {
+    "word": "In",
+    "start": 320.46,
+    "end": 320.54,
+    "matched": true
+  },
+  {
+    "word": "Module",
+    "start": 320.54,
+    "end": 320.84,
+    "matched": true
+  },
+  {
+    "word": "2,",
+    "start": 320.84,
+    "end": 321.76,
+    "matched": false
+  },
+  {
+    "word": "you",
+    "start": 321.76,
+    "end": 321.8,
+    "matched": true
+  },
+  {
+    "word": "learned",
+    "start": 321.8,
+    "end": 322.0,
+    "matched": false
+  },
+  {
+    "word": "that",
+    "start": 322.0,
+    "end": 322.22,
+    "matched": true
+  },
+  {
+    "word": "friction",
+    "start": 322.22,
+    "end": 322.62,
+    "matched": true
+  },
+  {
+    "word": "reveals",
+    "start": 322.62,
+    "end": 323.0,
+    "matched": true
+  },
+  {
+    "word": "problems.",
+    "start": 323.0,
+    "end": 323.54,
+    "matched": true
+  },
+  {
+    "word": "In",
+    "start": 324.28,
+    "end": 324.38,
+    "matched": true
+  },
+  {
+    "word": "Module",
+    "start": 324.38,
+    "end": 324.7,
+    "matched": true
+  },
+  {
+    "word": "3,",
+    "start": 324.7,
+    "end": 325.38,
+    "matched": false
+  },
+  {
+    "word": "you",
+    "start": 325.38,
+    "end": 325.42,
+    "matched": true
+  },
+  {
+    "word": "learned",
+    "start": 325.42,
+    "end": 325.62,
+    "matched": false
+  },
+  {
+    "word": "that",
+    "start": 325.62,
+    "end": 325.82,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 325.82,
+    "end": 325.94,
+    "matched": true
+  },
+  {
+    "word": "shelf",
+    "start": 325.94,
+    "end": 326.69962499999997,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "a",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "scoreboard.",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "Next,",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "you",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "learn",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "how",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "to",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "turn",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "that",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "scoreboard",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "into",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "an",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "offer.",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "Because",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "a",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "good",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "business",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "does",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "not",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "start",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "with",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "a",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "guess.",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "It",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "starts",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "with",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "a",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  },
+  {
+    "word": "signal.",
+    "start": 326.69962499999997,
+    "end": 326.739625,
+    "matched": false
+  }
+]
