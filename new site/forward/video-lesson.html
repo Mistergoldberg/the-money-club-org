@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>the coffee system | the money club org</title>
-  <meta name="description" content="a synchronized audio and text lesson for the coffee system">
+  <title>Forward Curriculum | the money club org</title>
+  <meta name="description" content="a synchronized audio and text lesson for the forward curriculum page">
   <meta name="robots" content="noindex">
   <style>
     @font-face {
@@ -77,7 +77,7 @@
       font-weight: 400;
       line-height: 1.05;
       letter-spacing: 0;
-      text-transform: lowercase;
+      text-transform: none;
       text-wrap: balance;
       opacity: 1;
     }
@@ -215,7 +215,7 @@
     </div>
 
     <audio id="audio" preload="metadata">
-      <source src="ElevenLabs_2026-06-09T02_51_21_Brian%20-%20Deep%2C%20Resonant%20and%20Comforting_pre_sp105_s76_sb85_se49_b_m2.mp3" type="audio/mpeg">
+      <source src="forward.mp3" type="audio/mpeg">
     </audio>
   </main>
 
@@ -392,7 +392,7 @@
       audio.addEventListener("pause", updatePlayState);
       audio.addEventListener("ended", updatePlayState);
 
-      fetch("coffee_system_word_aligned.srt?v=2", {
+      fetch("forward_word_aligned.srt?v=2", {
         cache: "no-store"
       })
         .then(function (response) {

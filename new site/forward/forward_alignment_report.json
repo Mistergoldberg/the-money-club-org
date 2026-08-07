@@ -1,0 +1,110 @@
+{
+  "language": "en",
+  "language_probability": 1,
+  "duration": 203.546125,
+  "segments": 86,
+  "model": "small.en",
+  "audio": "forward.mp3",
+  "audio_sha256": "f255ff66960ba329711e246dc87ff0c610fbb736fd93bbf1bc6baa4edd3f491c",
+  "source": "forward_transcript.txt",
+  "source_sha256": "46f3bb3b2ad59266e8921a2c5727dd3d9b770a85637fddab8336dca761f4716c",
+  "expected_words": 518,
+  "output_words": 518,
+  "recognized_words": 527,
+  "direct_matches": 505,
+  "interpolated_words": 13,
+  "match_rate": 0.974903474903475,
+  "exact_transcript_preserved": true,
+  "interpolated_details": [
+    {
+      "word": "behaviour",
+      "start": 38.76,
+      "end": 39.68,
+      "matched": false
+    },
+    {
+      "word": "licences",
+      "start": 78.1,
+      "end": 78.52,
+      "matched": false
+    },
+    {
+      "word": "it\u2014and",
+      "start": 126.02,
+      "end": 126.7,
+      "matched": false
+    },
+    {
+      "word": "Three",
+      "start": 137.68,
+      "end": 138.4,
+      "matched": false
+    },
+    {
+      "word": "percent",
+      "start": 138.4,
+      "end": 139.12,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 167.28,
+      "end": 167.46,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 167.86,
+      "end": 168.54,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 168.96,
+      "end": 169.46,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 169.86,
+      "end": 170.12,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 170.42,
+      "end": 171.08,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 171.54,
+      "end": 171.82,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 172.2,
+      "end": 172.66,
+      "matched": false
+    },
+    {
+      "word": "\u2192",
+      "start": 172.86,
+      "end": 173.04,
+      "matched": false
+    }
+  ],
+  "first_word": {
+    "word": "One",
+    "start": 0.0,
+    "end": 0.24,
+    "matched": true
+  },
+  "last_word": {
+    "word": "used.",
+    "start": 199.18,
+    "end": 199.56,
+    "matched": true
+  }
+}

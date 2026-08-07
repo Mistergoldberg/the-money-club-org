@@ -1,0 +1,3110 @@
+[
+  {
+    "word": "One",
+    "start": 0.0,
+    "end": 0.24,
+    "matched": true
+  },
+  {
+    "word": "Idea.",
+    "start": 0.24,
+    "end": 0.68,
+    "matched": true
+  },
+  {
+    "word": "Four",
+    "start": 1.08,
+    "end": 1.42,
+    "matched": true
+  },
+  {
+    "word": "Passes.",
+    "start": 1.42,
+    "end": 1.92,
+    "matched": true
+  },
+  {
+    "word": "Five",
+    "start": 2.62,
+    "end": 2.82,
+    "matched": true
+  },
+  {
+    "word": "days",
+    "start": 2.82,
+    "end": 3.14,
+    "matched": true
+  },
+  {
+    "word": "leaves",
+    "start": 3.14,
+    "end": 3.44,
+    "matched": true
+  },
+  {
+    "word": "no",
+    "start": 3.44,
+    "end": 3.84,
+    "matched": true
+  },
+  {
+    "word": "room",
+    "start": 3.84,
+    "end": 4.06,
+    "matched": true
+  },
+  {
+    "word": "for",
+    "start": 4.06,
+    "end": 4.3,
+    "matched": true
+  },
+  {
+    "word": "theory",
+    "start": 4.3,
+    "end": 4.48,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 4.48,
+    "end": 4.68,
+    "matched": true
+  },
+  {
+    "word": "wander.",
+    "start": 4.68,
+    "end": 4.9,
+    "matched": true
+  },
+  {
+    "word": "Every",
+    "start": 5.7,
+    "end": 5.92,
+    "matched": true
+  },
+  {
+    "word": "concept",
+    "start": 5.92,
+    "end": 6.42,
+    "matched": true
+  },
+  {
+    "word": "must",
+    "start": 6.42,
+    "end": 6.64,
+    "matched": true
+  },
+  {
+    "word": "lead",
+    "start": 6.64,
+    "end": 6.86,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 6.86,
+    "end": 7.0,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 7.0,
+    "end": 7.1,
+    "matched": true
+  },
+  {
+    "word": "decision,",
+    "start": 7.1,
+    "end": 7.52,
+    "matched": true
+  },
+  {
+    "word": "an",
+    "start": 7.98,
+    "end": 8.18,
+    "matched": true
+  },
+  {
+    "word": "offer",
+    "start": 8.18,
+    "end": 8.44,
+    "matched": true
+  },
+  {
+    "word": "or",
+    "start": 8.64,
+    "end": 8.88,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 8.88,
+    "end": 9.02,
+    "matched": true
+  },
+  {
+    "word": "test.",
+    "start": 9.02,
+    "end": 9.3,
+    "matched": true
+  },
+  {
+    "word": "Students",
+    "start": 10.24,
+    "end": 10.28,
+    "matched": true
+  },
+  {
+    "word": "will:",
+    "start": 10.28,
+    "end": 10.58,
+    "matched": true
+  },
+  {
+    "word": "Read",
+    "start": 10.58,
+    "end": 11.3,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 11.3,
+    "end": 11.46,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 11.46,
+    "end": 11.62,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 11.62,
+    "end": 11.74,
+    "matched": true
+  },
+  {
+    "word": "tightly",
+    "start": 11.74,
+    "end": 12.02,
+    "matched": true
+  },
+  {
+    "word": "edited",
+    "start": 12.02,
+    "end": 12.34,
+    "matched": true
+  },
+  {
+    "word": "module.",
+    "start": 12.34,
+    "end": 12.84,
+    "matched": true
+  },
+  {
+    "word": "Follow",
+    "start": 13.4,
+    "end": 13.7,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 13.7,
+    "end": 13.88,
+    "matched": true
+  },
+  {
+    "word": "through",
+    "start": 13.88,
+    "end": 14.04,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 14.04,
+    "end": 14.2,
+    "matched": true
+  },
+  {
+    "word": "Dynamic",
+    "start": 14.2,
+    "end": 14.58,
+    "matched": true
+  },
+  {
+    "word": "Reader.",
+    "start": 14.58,
+    "end": 14.92,
+    "matched": true
+  },
+  {
+    "word": "Hear",
+    "start": 15.44,
+    "end": 15.64,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 15.64,
+    "end": 15.82,
+    "matched": true
+  },
+  {
+    "word": "taught",
+    "start": 15.82,
+    "end": 16.02,
+    "matched": true
+  },
+  {
+    "word": "live,",
+    "start": 16.02,
+    "end": 16.42,
+    "matched": true
+  },
+  {
+    "word": "with",
+    "start": 16.42,
+    "end": 17.02,
+    "matched": true
+  },
+  {
+    "word": "examples",
+    "start": 17.02,
+    "end": 17.42,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 17.42,
+    "end": 17.7,
+    "matched": true
+  },
+  {
+    "word": "questions.",
+    "start": 17.7,
+    "end": 18.1,
+    "matched": true
+  },
+  {
+    "word": "Use",
+    "start": 18.7,
+    "end": 18.9,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 18.9,
+    "end": 19.06,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 19.06,
+    "end": 19.18,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 19.18,
+    "end": 19.32,
+    "matched": true
+  },
+  {
+    "word": "workshop,",
+    "start": 19.32,
+    "end": 19.72,
+    "matched": true
+  },
+  {
+    "word": "decision",
+    "start": 20.34,
+    "end": 20.64,
+    "matched": true
+  },
+  {
+    "word": "or",
+    "start": 20.64,
+    "end": 20.88,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 20.88,
+    "end": 21.18,
+    "matched": true
+  },
+  {
+    "word": "build.",
+    "start": 21.18,
+    "end": 21.48,
+    "matched": true
+  },
+  {
+    "word": "Read",
+    "start": 22.04,
+    "end": 22.32,
+    "matched": true
+  },
+  {
+    "word": "it.",
+    "start": 22.32,
+    "end": 22.54,
+    "matched": true
+  },
+  {
+    "word": "Follow",
+    "start": 22.82,
+    "end": 23.1,
+    "matched": true
+  },
+  {
+    "word": "it.",
+    "start": 23.1,
+    "end": 23.4,
+    "matched": true
+  },
+  {
+    "word": "Hear",
+    "start": 23.54,
+    "end": 23.74,
+    "matched": true
+  },
+  {
+    "word": "it.",
+    "start": 23.74,
+    "end": 24.12,
+    "matched": true
+  },
+  {
+    "word": "Use",
+    "start": 24.18,
+    "end": 24.4,
+    "matched": true
+  },
+  {
+    "word": "it.",
+    "start": 24.4,
+    "end": 24.66,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 25.28,
+    "end": 25.5,
+    "matched": true
+  },
+  {
+    "word": "ideas",
+    "start": 25.5,
+    "end": 25.86,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 25.86,
+    "end": 26.06,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 26.06,
+    "end": 26.24,
+    "matched": true
+  },
+  {
+    "word": "simplified.",
+    "start": 26.24,
+    "end": 26.78,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 27.14,
+    "end": 27.28,
+    "matched": true
+  },
+  {
+    "word": "path",
+    "start": 27.28,
+    "end": 27.48,
+    "matched": true
+  },
+  {
+    "word": "into",
+    "start": 27.48,
+    "end": 27.72,
+    "matched": true
+  },
+  {
+    "word": "them",
+    "start": 27.72,
+    "end": 27.96,
+    "matched": true
+  },
+  {
+    "word": "is.",
+    "start": 27.96,
+    "end": 28.26,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 28.84,
+    "end": 29.16,
+    "matched": true
+  },
+  {
+    "word": "Curriculum",
+    "start": 29.16,
+    "end": 29.56,
+    "matched": true
+  },
+  {
+    "word": "Built",
+    "start": 29.56,
+    "end": 30.0,
+    "matched": true
+  },
+  {
+    "word": "as",
+    "start": 30.0,
+    "end": 30.2,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 30.2,
+    "end": 30.34,
+    "matched": true
+  },
+  {
+    "word": "System",
+    "start": 30.34,
+    "end": 30.68,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 31.44,
+    "end": 31.54,
+    "matched": true
+  },
+  {
+    "word": "curriculum",
+    "start": 31.54,
+    "end": 31.96,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 31.96,
+    "end": 32.28,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 32.28,
+    "end": 32.42,
+    "matched": true
+  },
+  {
+    "word": "connected",
+    "start": 32.42,
+    "end": 32.76,
+    "matched": true
+  },
+  {
+    "word": "system,",
+    "start": 32.76,
+    "end": 33.3,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 33.64,
+    "end": 33.9,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 33.9,
+    "end": 34.04,
+    "matched": true
+  },
+  {
+    "word": "stack",
+    "start": 34.04,
+    "end": 34.24,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 34.24,
+    "end": 34.42,
+    "matched": true
+  },
+  {
+    "word": "subjects.",
+    "start": 34.42,
+    "end": 34.8,
+    "matched": true
+  },
+  {
+    "word": "My",
+    "start": 35.7,
+    "end": 35.88,
+    "matched": true
+  },
+  {
+    "word": "work",
+    "start": 35.88,
+    "end": 36.08,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 36.08,
+    "end": 36.24,
+    "matched": true
+  },
+  {
+    "word": "retail",
+    "start": 36.24,
+    "end": 36.6,
+    "matched": true
+  },
+  {
+    "word": "taught",
+    "start": 36.6,
+    "end": 36.92,
+    "matched": true
+  },
+  {
+    "word": "me",
+    "start": 36.92,
+    "end": 37.1,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 37.1,
+    "end": 37.24,
+    "matched": true
+  },
+  {
+    "word": "information",
+    "start": 37.24,
+    "end": 37.8,
+    "matched": true
+  },
+  {
+    "word": "rarely",
+    "start": 37.8,
+    "end": 38.26,
+    "matched": true
+  },
+  {
+    "word": "changes",
+    "start": 38.26,
+    "end": 38.76,
+    "matched": true
+  },
+  {
+    "word": "behaviour",
+    "start": 38.76,
+    "end": 39.68,
+    "matched": false
+  },
+  {
+    "word": "until",
+    "start": 39.68,
+    "end": 40.0,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 40.0,
+    "end": 40.18,
+    "matched": true
+  },
+  {
+    "word": "next",
+    "start": 40.18,
+    "end": 40.42,
+    "matched": true
+  },
+  {
+    "word": "useful",
+    "start": 40.42,
+    "end": 40.76,
+    "matched": true
+  },
+  {
+    "word": "action",
+    "start": 40.76,
+    "end": 41.06,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 41.06,
+    "end": 41.26,
+    "matched": true
+  },
+  {
+    "word": "clear.",
+    "start": 41.26,
+    "end": 41.56,
+    "matched": true
+  },
+  {
+    "word": "Here,",
+    "start": 42.16,
+    "end": 42.58,
+    "matched": true
+  },
+  {
+    "word": "every",
+    "start": 42.88,
+    "end": 43.18,
+    "matched": true
+  },
+  {
+    "word": "lesson",
+    "start": 43.18,
+    "end": 43.54,
+    "matched": true
+  },
+  {
+    "word": "creates",
+    "start": 43.54,
+    "end": 43.96,
+    "matched": true
+  },
+  {
+    "word": "something",
+    "start": 43.96,
+    "end": 44.36,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 44.36,
+    "end": 44.6,
+    "matched": true
+  },
+  {
+    "word": "next",
+    "start": 44.6,
+    "end": 44.82,
+    "matched": true
+  },
+  {
+    "word": "lesson",
+    "start": 44.82,
+    "end": 45.14,
+    "matched": true
+  },
+  {
+    "word": "needs.",
+    "start": 45.14,
+    "end": 45.52,
+    "matched": true
+  },
+  {
+    "word": "Support",
+    "start": 46.84,
+    "end": 46.88,
+    "matched": true
+  },
+  {
+    "word": "Close",
+    "start": 46.88,
+    "end": 47.3,
+    "matched": true
+  },
+  {
+    "word": "Enough",
+    "start": 47.3,
+    "end": 47.6,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 47.6,
+    "end": 47.84,
+    "matched": true
+  },
+  {
+    "word": "Matter",
+    "start": 47.84,
+    "end": 48.14,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 48.82,
+    "end": 49.04,
+    "matched": true
+  },
+  {
+    "word": "groups",
+    "start": 49.04,
+    "end": 49.22,
+    "matched": true
+  },
+  {
+    "word": "draw",
+    "start": 49.22,
+    "end": 49.6,
+    "matched": true
+  },
+  {
+    "word": "on",
+    "start": 49.6,
+    "end": 49.8,
+    "matched": true
+  },
+  {
+    "word": "Lev",
+    "start": 49.8,
+    "end": 49.96,
+    "matched": true
+  },
+  {
+    "word": "Vygotsky\u2019s",
+    "start": 49.96,
+    "end": 50.66,
+    "matched": true
+  },
+  {
+    "word": "zone",
+    "start": 50.66,
+    "end": 50.92,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 50.92,
+    "end": 51.1,
+    "matched": true
+  },
+  {
+    "word": "proximal",
+    "start": 51.1,
+    "end": 51.54,
+    "matched": true
+  },
+  {
+    "word": "development:",
+    "start": 51.54,
+    "end": 52.04,
+    "matched": true
+  },
+  {
+    "word": "students",
+    "start": 52.74,
+    "end": 52.98,
+    "matched": true
+  },
+  {
+    "word": "tackle",
+    "start": 52.98,
+    "end": 53.34,
+    "matched": true
+  },
+  {
+    "word": "work",
+    "start": 53.34,
+    "end": 53.66,
+    "matched": true
+  },
+  {
+    "word": "just",
+    "start": 53.66,
+    "end": 53.92,
+    "matched": true
+  },
+  {
+    "word": "beyond",
+    "start": 53.92,
+    "end": 54.26,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 54.26,
+    "end": 54.46,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 54.46,
+    "end": 54.6,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 54.6,
+    "end": 54.78,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 54.78,
+    "end": 54.92,
+    "matched": true
+  },
+  {
+    "word": "alone,",
+    "start": 54.92,
+    "end": 55.28,
+    "matched": true
+  },
+  {
+    "word": "with",
+    "start": 55.28,
+    "end": 55.9,
+    "matched": true
+  },
+  {
+    "word": "useful",
+    "start": 55.9,
+    "end": 56.3,
+    "matched": true
+  },
+  {
+    "word": "support",
+    "start": 56.3,
+    "end": 56.78,
+    "matched": true
+  },
+  {
+    "word": "nearby.",
+    "start": 56.78,
+    "end": 57.1,
+    "matched": true
+  },
+  {
+    "word": "Each",
+    "start": 57.82,
+    "end": 58.14,
+    "matched": true
+  },
+  {
+    "word": "student",
+    "start": 58.14,
+    "end": 58.52,
+    "matched": true
+  },
+  {
+    "word": "completed",
+    "start": 58.52,
+    "end": 59.0,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 59.0,
+    "end": 59.22,
+    "matched": true
+  },
+  {
+    "word": "survey",
+    "start": 59.22,
+    "end": 59.52,
+    "matched": true
+  },
+  {
+    "word": "about",
+    "start": 59.52,
+    "end": 59.8,
+    "matched": true
+  },
+  {
+    "word": "age",
+    "start": 59.8,
+    "end": 60.06,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 60.06,
+    "end": 60.22,
+    "matched": true
+  },
+  {
+    "word": "interests.",
+    "start": 60.22,
+    "end": 60.56,
+    "matched": true
+  },
+  {
+    "word": "I",
+    "start": 61.36,
+    "end": 61.4,
+    "matched": true
+  },
+  {
+    "word": "will",
+    "start": 61.4,
+    "end": 61.52,
+    "matched": true
+  },
+  {
+    "word": "use",
+    "start": 61.52,
+    "end": 61.74,
+    "matched": true
+  },
+  {
+    "word": "those",
+    "start": 61.74,
+    "end": 61.98,
+    "matched": true
+  },
+  {
+    "word": "answers",
+    "start": 61.98,
+    "end": 62.36,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 62.36,
+    "end": 62.6,
+    "matched": true
+  },
+  {
+    "word": "form",
+    "start": 62.6,
+    "end": 62.84,
+    "matched": true
+  },
+  {
+    "word": "working",
+    "start": 62.84,
+    "end": 63.14,
+    "matched": true
+  },
+  {
+    "word": "groups",
+    "start": 63.14,
+    "end": 63.4,
+    "matched": true
+  },
+  {
+    "word": "where",
+    "start": 63.4,
+    "end": 63.62,
+    "matched": true
+  },
+  {
+    "word": "younger",
+    "start": 63.62,
+    "end": 63.88,
+    "matched": true
+  },
+  {
+    "word": "students",
+    "start": 63.88,
+    "end": 64.24,
+    "matched": true
+  },
+  {
+    "word": "have",
+    "start": 64.24,
+    "end": 64.52,
+    "matched": true
+  },
+  {
+    "word": "reachable",
+    "start": 64.52,
+    "end": 64.96,
+    "matched": true
+  },
+  {
+    "word": "peers",
+    "start": 64.96,
+    "end": 65.24,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 65.66,
+    "end": 65.98,
+    "matched": true
+  },
+  {
+    "word": "older",
+    "start": 65.98,
+    "end": 66.22,
+    "matched": true
+  },
+  {
+    "word": "students",
+    "start": 66.22,
+    "end": 66.62,
+    "matched": true
+  },
+  {
+    "word": "have",
+    "start": 66.62,
+    "end": 66.82,
+    "matched": true
+  },
+  {
+    "word": "responsibility",
+    "start": 66.82,
+    "end": 67.48,
+    "matched": true
+  },
+  {
+    "word": "without",
+    "start": 67.48,
+    "end": 67.9,
+    "matched": true
+  },
+  {
+    "word": "becoming",
+    "start": 67.9,
+    "end": 68.34,
+    "matched": true
+  },
+  {
+    "word": "substitute",
+    "start": 68.34,
+    "end": 68.78,
+    "matched": true
+  },
+  {
+    "word": "teachers.",
+    "start": 68.78,
+    "end": 69.28,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 70.02,
+    "end": 70.14,
+    "matched": true
+  },
+  {
+    "word": "aim",
+    "start": 70.14,
+    "end": 70.26,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 70.26,
+    "end": 70.44,
+    "matched": true
+  },
+  {
+    "word": "simple:",
+    "start": 70.44,
+    "end": 70.76,
+    "matched": true
+  },
+  {
+    "word": "no",
+    "start": 71.3,
+    "end": 71.56,
+    "matched": true
+  },
+  {
+    "word": "student",
+    "start": 71.56,
+    "end": 71.86,
+    "matched": true
+  },
+  {
+    "word": "should",
+    "start": 71.86,
+    "end": 72.1,
+    "matched": true
+  },
+  {
+    "word": "feel",
+    "start": 72.1,
+    "end": 72.32,
+    "matched": true
+  },
+  {
+    "word": "stranded.",
+    "start": 72.32,
+    "end": 72.72,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 73.28,
+    "end": 73.44,
+    "matched": true
+  },
+  {
+    "word": "Research",
+    "start": 73.44,
+    "end": 73.84,
+    "matched": true
+  },
+  {
+    "word": "Is",
+    "start": 73.84,
+    "end": 74.06,
+    "matched": true
+  },
+  {
+    "word": "Ready.",
+    "start": 74.06,
+    "end": 74.32,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 74.94,
+    "end": 75.06,
+    "matched": true
+  },
+  {
+    "word": "Decisions",
+    "start": 75.06,
+    "end": 75.46,
+    "matched": true
+  },
+  {
+    "word": "Are",
+    "start": 75.46,
+    "end": 75.78,
+    "matched": true
+  },
+  {
+    "word": "Theirs.",
+    "start": 75.78,
+    "end": 76.04,
+    "matched": true
+  },
+  {
+    "word": "When",
+    "start": 76.68,
+    "end": 76.84,
+    "matched": true
+  },
+  {
+    "word": "dedicated",
+    "start": 76.84,
+    "end": 77.3,
+    "matched": true
+  },
+  {
+    "word": "student",
+    "start": 77.3,
+    "end": 77.72,
+    "matched": true
+  },
+  {
+    "word": "AI",
+    "start": 77.72,
+    "end": 78.1,
+    "matched": true
+  },
+  {
+    "word": "licences",
+    "start": 78.1,
+    "end": 78.52,
+    "matched": false
+  },
+  {
+    "word": "were",
+    "start": 78.52,
+    "end": 78.88,
+    "matched": true
+  },
+  {
+    "word": "unavailable,",
+    "start": 78.88,
+    "end": 79.32,
+    "matched": true
+  },
+  {
+    "word": "I",
+    "start": 79.66,
+    "end": 80.0,
+    "matched": true
+  },
+  {
+    "word": "prepared",
+    "start": 80.0,
+    "end": 80.34,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 80.34,
+    "end": 80.56,
+    "matched": true
+  },
+  {
+    "word": "foundational",
+    "start": 80.56,
+    "end": 81.1,
+    "matched": true
+  },
+  {
+    "word": "market",
+    "start": 81.1,
+    "end": 81.58,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 81.58,
+    "end": 81.86,
+    "matched": true
+  },
+  {
+    "word": "product",
+    "start": 81.86,
+    "end": 82.18,
+    "matched": true
+  },
+  {
+    "word": "research",
+    "start": 82.18,
+    "end": 82.56,
+    "matched": true
+  },
+  {
+    "word": "before",
+    "start": 82.56,
+    "end": 82.88,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 82.88,
+    "end": 83.06,
+    "matched": true
+  },
+  {
+    "word": "program.",
+    "start": 83.06,
+    "end": 83.4,
+    "matched": true
+  },
+  {
+    "word": "Search",
+    "start": 84.42,
+    "end": 84.52,
+    "matched": true
+  },
+  {
+    "word": "can",
+    "start": 84.52,
+    "end": 84.82,
+    "matched": true
+  },
+  {
+    "word": "consume",
+    "start": 84.82,
+    "end": 85.26,
+    "matched": true
+  },
+  {
+    "word": "hours.",
+    "start": 85.26,
+    "end": 85.7,
+    "matched": true
+  },
+  {
+    "word": "Judgment",
+    "start": 86.24000000000001,
+    "end": 86.54,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 86.54,
+    "end": 86.98,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 86.98,
+    "end": 87.14,
+    "matched": true
+  },
+  {
+    "word": "lesson.",
+    "start": 87.14,
+    "end": 87.44,
+    "matched": true
+  },
+  {
+    "word": "Students",
+    "start": 88.39999999999999,
+    "end": 88.44,
+    "matched": true
+  },
+  {
+    "word": "will",
+    "start": 88.44,
+    "end": 88.7,
+    "matched": true
+  },
+  {
+    "word": "begin",
+    "start": 88.7,
+    "end": 88.94,
+    "matched": true
+  },
+  {
+    "word": "with",
+    "start": 88.94,
+    "end": 89.14,
+    "matched": true
+  },
+  {
+    "word": "evidence,",
+    "start": 89.14,
+    "end": 89.5,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 89.68,
+    "end": 89.78,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 89.78,
+    "end": 89.92,
+    "matched": true
+  },
+  {
+    "word": "blank",
+    "start": 89.92,
+    "end": 90.06,
+    "matched": true
+  },
+  {
+    "word": "screen.",
+    "start": 90.06,
+    "end": 90.38,
+    "matched": true
+  },
+  {
+    "word": "They",
+    "start": 91.04,
+    "end": 91.08000000000001,
+    "matched": true
+  },
+  {
+    "word": "will",
+    "start": 91.08000000000001,
+    "end": 91.26,
+    "matched": true
+  },
+  {
+    "word": "question",
+    "start": 91.26,
+    "end": 91.58,
+    "matched": true
+  },
+  {
+    "word": "it,",
+    "start": 91.58,
+    "end": 91.82,
+    "matched": true
+  },
+  {
+    "word": "compare",
+    "start": 91.98,
+    "end": 92.28,
+    "matched": true
+  },
+  {
+    "word": "it,",
+    "start": 92.28,
+    "end": 92.56,
+    "matched": true
+  },
+  {
+    "word": "calculate",
+    "start": 92.82,
+    "end": 93.12,
+    "matched": true
+  },
+  {
+    "word": "with",
+    "start": 93.12,
+    "end": 93.4,
+    "matched": true
+  },
+  {
+    "word": "it,",
+    "start": 93.4,
+    "end": 93.64,
+    "matched": true
+  },
+  {
+    "word": "validate",
+    "start": 93.88,
+    "end": 94.32,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 94.32,
+    "end": 94.58,
+    "matched": true
+  },
+  {
+    "word": "with",
+    "start": 94.58,
+    "end": 94.68,
+    "matched": true
+  },
+  {
+    "word": "their",
+    "start": 94.68,
+    "end": 94.84,
+    "matched": true
+  },
+  {
+    "word": "families",
+    "start": 94.84,
+    "end": 95.2,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 95.2,
+    "end": 95.44,
+    "matched": true
+  },
+  {
+    "word": "decide",
+    "start": 95.44,
+    "end": 95.76,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 95.76,
+    "end": 95.92,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 95.92,
+    "end": 96.06,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 96.06,
+    "end": 96.2,
+    "matched": true
+  },
+  {
+    "word": "next.",
+    "start": 96.2,
+    "end": 96.46,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 97.06,
+    "end": 97.18,
+    "matched": true
+  },
+  {
+    "word": "preparation",
+    "start": 97.18,
+    "end": 97.64,
+    "matched": true
+  },
+  {
+    "word": "removes",
+    "start": 97.64,
+    "end": 98.24,
+    "matched": true
+  },
+  {
+    "word": "delay.",
+    "start": 98.24,
+    "end": 98.62,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 99.22,
+    "end": 99.34,
+    "matched": true
+  },
+  {
+    "word": "students",
+    "start": 99.34,
+    "end": 99.68,
+    "matched": true
+  },
+  {
+    "word": "keep",
+    "start": 99.68,
+    "end": 99.92,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 99.92,
+    "end": 100.1,
+    "matched": true
+  },
+  {
+    "word": "thinking.",
+    "start": 100.1,
+    "end": 100.4,
+    "matched": true
+  },
+  {
+    "word": "Start",
+    "start": 101.16,
+    "end": 101.34,
+    "matched": true
+  },
+  {
+    "word": "Where",
+    "start": 101.34,
+    "end": 101.6,
+    "matched": true
+  },
+  {
+    "word": "Money",
+    "start": 101.6,
+    "end": 101.92,
+    "matched": true
+  },
+  {
+    "word": "Already",
+    "start": 101.92,
+    "end": 102.26,
+    "matched": true
+  },
+  {
+    "word": "Moves",
+    "start": 102.26,
+    "end": 102.7,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 103.28,
+    "end": 103.52,
+    "matched": true
+  },
+  {
+    "word": "household",
+    "start": 103.52,
+    "end": 103.92,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 103.92,
+    "end": 104.12,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 104.12,
+    "end": 104.26,
+    "matched": true
+  },
+  {
+    "word": "small",
+    "start": 104.26,
+    "end": 104.54,
+    "matched": true
+  },
+  {
+    "word": "operating",
+    "start": 104.54,
+    "end": 104.92,
+    "matched": true
+  },
+  {
+    "word": "system.",
+    "start": 104.92,
+    "end": 105.38,
+    "matched": true
+  },
+  {
+    "word": "Families",
+    "start": 106.3,
+    "end": 106.34,
+    "matched": true
+  },
+  {
+    "word": "manage",
+    "start": 106.34,
+    "end": 106.66,
+    "matched": true
+  },
+  {
+    "word": "supplies,",
+    "start": 106.66,
+    "end": 107.24,
+    "matched": true
+  },
+  {
+    "word": "compare",
+    "start": 107.74,
+    "end": 108.04,
+    "matched": true
+  },
+  {
+    "word": "prices",
+    "start": 108.04,
+    "end": 108.56,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 108.56,
+    "end": 108.94,
+    "matched": true
+  },
+  {
+    "word": "replace",
+    "start": 108.94,
+    "end": 109.26,
+    "matched": true
+  },
+  {
+    "word": "what",
+    "start": 109.26,
+    "end": 109.48,
+    "matched": true
+  },
+  {
+    "word": "runs",
+    "start": 109.48,
+    "end": 109.72,
+    "matched": true
+  },
+  {
+    "word": "out.",
+    "start": 109.72,
+    "end": 110.02,
+    "matched": true
+  },
+  {
+    "word": "That",
+    "start": 110.52,
+    "end": 110.78,
+    "matched": true
+  },
+  {
+    "word": "makes",
+    "start": 110.78,
+    "end": 111.0,
+    "matched": true
+  },
+  {
+    "word": "household",
+    "start": 111.0,
+    "end": 111.42,
+    "matched": true
+  },
+  {
+    "word": "essentials",
+    "start": 111.42,
+    "end": 111.86,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 111.86,
+    "end": 112.28,
+    "matched": true
+  },
+  {
+    "word": "practical",
+    "start": 112.28,
+    "end": 112.6,
+    "matched": true
+  },
+  {
+    "word": "place",
+    "start": 112.6,
+    "end": 112.9,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 112.9,
+    "end": 113.08,
+    "matched": true
+  },
+  {
+    "word": "begin.",
+    "start": 113.08,
+    "end": 113.34,
+    "matched": true
+  },
+  {
+    "word": "Garbage",
+    "start": 114.02,
+    "end": 114.6,
+    "matched": true
+  },
+  {
+    "word": "bags,",
+    "start": 114.6,
+    "end": 114.96,
+    "matched": true
+  },
+  {
+    "word": "soap,",
+    "start": 115.26,
+    "end": 115.64,
+    "matched": true
+  },
+  {
+    "word": "paper",
+    "start": 116.08,
+    "end": 116.28,
+    "matched": true
+  },
+  {
+    "word": "products",
+    "start": 116.28,
+    "end": 116.68,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 116.68,
+    "end": 116.9,
+    "matched": true
+  },
+  {
+    "word": "laundry",
+    "start": 116.9,
+    "end": 117.2,
+    "matched": true
+  },
+  {
+    "word": "supplies",
+    "start": 117.2,
+    "end": 117.64,
+    "matched": true
+  },
+  {
+    "word": "are",
+    "start": 117.64,
+    "end": 117.92,
+    "matched": true
+  },
+  {
+    "word": "familiar,",
+    "start": 117.92,
+    "end": 118.38,
+    "matched": true
+  },
+  {
+    "word": "repeat",
+    "start": 118.86,
+    "end": 119.26,
+    "matched": true
+  },
+  {
+    "word": "purchases.",
+    "start": 119.26,
+    "end": 119.82,
+    "matched": true
+  },
+  {
+    "word": "Their",
+    "start": 120.38,
+    "end": 120.6,
+    "matched": true
+  },
+  {
+    "word": "ordinariness",
+    "start": 120.6,
+    "end": 121.28,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 121.28,
+    "end": 121.48,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 121.48,
+    "end": 121.62,
+    "matched": true
+  },
+  {
+    "word": "point.",
+    "start": 121.62,
+    "end": 121.86,
+    "matched": true
+  },
+  {
+    "word": "Students",
+    "start": 122.82,
+    "end": 123.06,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 123.06,
+    "end": 123.3,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 123.3,
+    "end": 123.48,
+    "matched": true
+  },
+  {
+    "word": "need",
+    "start": 123.48,
+    "end": 123.72,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 123.72,
+    "end": 123.86,
+    "matched": true
+  },
+  {
+    "word": "invent",
+    "start": 123.86,
+    "end": 124.14,
+    "matched": true
+  },
+  {
+    "word": "demand.",
+    "start": 124.14,
+    "end": 124.48,
+    "matched": true
+  },
+  {
+    "word": "They",
+    "start": 125.02,
+    "end": 125.2,
+    "matched": true
+  },
+  {
+    "word": "need",
+    "start": 125.2,
+    "end": 125.38,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 125.38,
+    "end": 125.52,
+    "matched": true
+  },
+  {
+    "word": "understand",
+    "start": 125.52,
+    "end": 126.02,
+    "matched": true
+  },
+  {
+    "word": "it\u2014and",
+    "start": 126.02,
+    "end": 126.7,
+    "matched": false
+  },
+  {
+    "word": "find",
+    "start": 126.7,
+    "end": 126.88,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 126.88,
+    "end": 127.04,
+    "matched": true
+  },
+  {
+    "word": "better",
+    "start": 127.04,
+    "end": 127.2,
+    "matched": true
+  },
+  {
+    "word": "way",
+    "start": 127.2,
+    "end": 127.38,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 127.38,
+    "end": 127.52,
+    "matched": true
+  },
+  {
+    "word": "serve",
+    "start": 127.52,
+    "end": 127.74,
+    "matched": true
+  },
+  {
+    "word": "it.",
+    "start": 127.74,
+    "end": 128.0,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 128.56,
+    "end": 128.68,
+    "matched": true
+  },
+  {
+    "word": "Real",
+    "start": 128.68,
+    "end": 128.96,
+    "matched": true
+  },
+  {
+    "word": "Question.",
+    "start": 128.96,
+    "end": 129.48,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 129.8,
+    "end": 129.9,
+    "matched": true
+  },
+  {
+    "word": "Real",
+    "start": 129.9,
+    "end": 130.14,
+    "matched": true
+  },
+  {
+    "word": "Test.",
+    "start": 130.14,
+    "end": 130.52,
+    "matched": true
+  },
+  {
+    "word": "Students",
+    "start": 131.4,
+    "end": 131.72,
+    "matched": true
+  },
+  {
+    "word": "will",
+    "start": 131.72,
+    "end": 131.96,
+    "matched": true
+  },
+  {
+    "word": "test",
+    "start": 131.96,
+    "end": 132.18,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 132.18,
+    "end": 132.5,
+    "matched": true
+  },
+  {
+    "word": "hypothesis:",
+    "start": 132.5,
+    "end": 133.08,
+    "matched": true
+  },
+  {
+    "word": "Can",
+    "start": 133.84,
+    "end": 133.96,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 133.96,
+    "end": 134.08,
+    "matched": true
+  },
+  {
+    "word": "student",
+    "start": 134.08,
+    "end": 134.36,
+    "matched": true
+  },
+  {
+    "word": "earn",
+    "start": 134.36,
+    "end": 134.66,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 134.66,
+    "end": 134.86,
+    "matched": true
+  },
+  {
+    "word": "business",
+    "start": 134.86,
+    "end": 135.16,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 135.16,
+    "end": 135.4,
+    "matched": true
+  },
+  {
+    "word": "3%",
+    "start": 135.4,
+    "end": 135.68,
+    "matched": true
+  },
+  {
+    "word": "of",
+    "start": 136.02,
+    "end": 136.16,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 136.16,
+    "end": 136.28,
+    "matched": true
+  },
+  {
+    "word": "households",
+    "start": 136.28,
+    "end": 136.64,
+    "matched": true
+  },
+  {
+    "word": "in",
+    "start": 136.64,
+    "end": 136.94,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 136.94,
+    "end": 137.06,
+    "matched": true
+  },
+  {
+    "word": "local",
+    "start": 137.06,
+    "end": 137.22,
+    "matched": true
+  },
+  {
+    "word": "community?",
+    "start": 137.22,
+    "end": 137.68,
+    "matched": true
+  },
+  {
+    "word": "Three",
+    "start": 137.68,
+    "end": 138.4,
+    "matched": false
+  },
+  {
+    "word": "percent",
+    "start": 138.4,
+    "end": 139.12,
+    "matched": false
+  },
+  {
+    "word": "sounds",
+    "start": 139.12,
+    "end": 139.36,
+    "matched": true
+  },
+  {
+    "word": "small.",
+    "start": 139.36,
+    "end": 139.8,
+    "matched": true
+  },
+  {
+    "word": "In",
+    "start": 140.11999999999998,
+    "end": 140.42,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 140.42,
+    "end": 140.56,
+    "matched": true
+  },
+  {
+    "word": "real",
+    "start": 140.56,
+    "end": 140.82,
+    "matched": true
+  },
+  {
+    "word": "community,",
+    "start": 140.82,
+    "end": 141.28,
+    "matched": true
+  },
+  {
+    "word": "it",
+    "start": 141.62,
+    "end": 141.66,
+    "matched": true
+  },
+  {
+    "word": "raises",
+    "start": 141.66,
+    "end": 141.94,
+    "matched": true
+  },
+  {
+    "word": "serious",
+    "start": 141.94,
+    "end": 142.36,
+    "matched": true
+  },
+  {
+    "word": "questions:",
+    "start": 142.36,
+    "end": 142.86,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 143.6,
+    "end": 143.64,
+    "matched": true
+  },
+  {
+    "word": "do",
+    "start": 143.64,
+    "end": 143.76,
+    "matched": true
+  },
+  {
+    "word": "people",
+    "start": 143.76,
+    "end": 143.96,
+    "matched": true
+  },
+  {
+    "word": "buy?",
+    "start": 143.96,
+    "end": 144.32,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 144.9,
+    "end": 145.08,
+    "matched": true
+  },
+  {
+    "word": "frustrates",
+    "start": 145.08,
+    "end": 145.66,
+    "matched": true
+  },
+  {
+    "word": "them?",
+    "start": 145.66,
+    "end": 145.88,
+    "matched": true
+  },
+  {
+    "word": "What",
+    "start": 146.4,
+    "end": 146.56,
+    "matched": true
+  },
+  {
+    "word": "would",
+    "start": 146.56,
+    "end": 146.74,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 146.74,
+    "end": 146.86,
+    "matched": true
+  },
+  {
+    "word": "pay?",
+    "start": 146.86,
+    "end": 147.12,
+    "matched": true
+  },
+  {
+    "word": "Can",
+    "start": 147.76,
+    "end": 147.86,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 147.86,
+    "end": 148.02,
+    "matched": true
+  },
+  {
+    "word": "offer",
+    "start": 148.02,
+    "end": 148.38,
+    "matched": true
+  },
+  {
+    "word": "make",
+    "start": 148.38,
+    "end": 148.66,
+    "matched": true
+  },
+  {
+    "word": "money?",
+    "start": 148.66,
+    "end": 148.98,
+    "matched": true
+  },
+  {
+    "word": "Why",
+    "start": 149.54,
+    "end": 149.84,
+    "matched": true
+  },
+  {
+    "word": "would",
+    "start": 149.84,
+    "end": 150.04,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 150.04,
+    "end": 150.2,
+    "matched": true
+  },
+  {
+    "word": "trust",
+    "start": 150.2,
+    "end": 150.44,
+    "matched": true
+  },
+  {
+    "word": "it?",
+    "start": 150.44,
+    "end": 150.74,
+    "matched": true
+  },
+  {
+    "word": "Revenue",
+    "start": 151.56,
+    "end": 151.74,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 151.74,
+    "end": 152.06,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 152.06,
+    "end": 152.22,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 152.22,
+    "end": 152.38,
+    "matched": true
+  },
+  {
+    "word": "lesson.",
+    "start": 152.38,
+    "end": 152.7,
+    "matched": true
+  },
+  {
+    "word": "It",
+    "start": 153.16,
+    "end": 153.26,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 153.26,
+    "end": 153.42,
+    "matched": true
+  },
+  {
+    "word": "evidence",
+    "start": 153.42,
+    "end": 153.88,
+    "matched": true
+  },
+  {
+    "word": "that",
+    "start": 153.88,
+    "end": 154.14,
+    "matched": true
+  },
+  {
+    "word": "an",
+    "start": 154.14,
+    "end": 154.28,
+    "matched": true
+  },
+  {
+    "word": "offer",
+    "start": 154.28,
+    "end": 154.54,
+    "matched": true
+  },
+  {
+    "word": "created",
+    "start": 154.54,
+    "end": 154.96,
+    "matched": true
+  },
+  {
+    "word": "value",
+    "start": 154.96,
+    "end": 155.26,
+    "matched": true
+  },
+  {
+    "word": "for",
+    "start": 155.26,
+    "end": 155.5,
+    "matched": true
+  },
+  {
+    "word": "someone",
+    "start": 155.5,
+    "end": 155.78,
+    "matched": true
+  },
+  {
+    "word": "else.",
+    "start": 155.78,
+    "end": 156.1,
+    "matched": true
+  },
+  {
+    "word": "A",
+    "start": 156.78,
+    "end": 156.82,
+    "matched": true
+  },
+  {
+    "word": "\u201cno\u201d",
+    "start": 156.82,
+    "end": 157.04,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 157.04,
+    "end": 157.28,
+    "matched": true
+  },
+  {
+    "word": "evidence",
+    "start": 157.28,
+    "end": 157.58,
+    "matched": true
+  },
+  {
+    "word": "too.",
+    "start": 157.58,
+    "end": 157.92,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 158.46,
+    "end": 158.6,
+    "matched": true
+  },
+  {
+    "word": "product,",
+    "start": 158.6,
+    "end": 158.98,
+    "matched": true
+  },
+  {
+    "word": "price,",
+    "start": 159.3,
+    "end": 159.68,
+    "matched": true
+  },
+  {
+    "word": "message",
+    "start": 160.1,
+    "end": 160.4,
+    "matched": true
+  },
+  {
+    "word": "or",
+    "start": 160.4,
+    "end": 160.62,
+    "matched": true
+  },
+  {
+    "word": "customer",
+    "start": 160.62,
+    "end": 161.02,
+    "matched": true
+  },
+  {
+    "word": "assumption",
+    "start": 161.02,
+    "end": 161.56,
+    "matched": true
+  },
+  {
+    "word": "may",
+    "start": 161.56,
+    "end": 162.02,
+    "matched": true
+  },
+  {
+    "word": "need",
+    "start": 162.02,
+    "end": 162.2,
+    "matched": true
+  },
+  {
+    "word": "work.",
+    "start": 162.2,
+    "end": 162.52,
+    "matched": true
+  },
+  {
+    "word": "One",
+    "start": 163.46,
+    "end": 163.66,
+    "matched": true
+  },
+  {
+    "word": "Connected",
+    "start": 163.66,
+    "end": 163.98,
+    "matched": true
+  },
+  {
+    "word": "Loop",
+    "start": 163.98,
+    "end": 164.3,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 165.1,
+    "end": 165.22,
+    "matched": true
+  },
+  {
+    "word": "subjects",
+    "start": 165.22,
+    "end": 165.52,
+    "matched": true
+  },
+  {
+    "word": "form",
+    "start": 165.52,
+    "end": 165.8,
+    "matched": true
+  },
+  {
+    "word": "one",
+    "start": 165.8,
+    "end": 166.04,
+    "matched": true
+  },
+  {
+    "word": "sequence:",
+    "start": 166.04,
+    "end": 166.46,
+    "matched": true
+  },
+  {
+    "word": "Money",
+    "start": 167.02,
+    "end": 167.28,
+    "matched": true
+  },
+  {
+    "word": "\u2192",
+    "start": 167.28,
+    "end": 167.46,
+    "matched": false
+  },
+  {
+    "word": "Friction",
+    "start": 167.46,
+    "end": 167.86,
+    "matched": true
+  },
+  {
+    "word": "\u2192",
+    "start": 167.86,
+    "end": 168.54,
+    "matched": false
+  },
+  {
+    "word": "Evidence",
+    "start": 168.54,
+    "end": 168.96,
+    "matched": true
+  },
+  {
+    "word": "\u2192",
+    "start": 168.96,
+    "end": 169.46,
+    "matched": false
+  },
+  {
+    "word": "Category",
+    "start": 169.46,
+    "end": 169.86,
+    "matched": true
+  },
+  {
+    "word": "\u2192",
+    "start": 169.86,
+    "end": 170.12,
+    "matched": false
+  },
+  {
+    "word": "Offer",
+    "start": 170.12,
+    "end": 170.42,
+    "matched": true
+  },
+  {
+    "word": "\u2192",
+    "start": 170.42,
+    "end": 171.08,
+    "matched": false
+  },
+  {
+    "word": "Economics",
+    "start": 171.08,
+    "end": 171.54,
+    "matched": true
+  },
+  {
+    "word": "\u2192",
+    "start": 171.54,
+    "end": 171.82,
+    "matched": false
+  },
+  {
+    "word": "Clarity",
+    "start": 171.82,
+    "end": 172.2,
+    "matched": true
+  },
+  {
+    "word": "\u2192",
+    "start": 172.2,
+    "end": 172.66,
+    "matched": false
+  },
+  {
+    "word": "Test",
+    "start": 172.66,
+    "end": 172.86,
+    "matched": true
+  },
+  {
+    "word": "\u2192",
+    "start": 172.86,
+    "end": 173.04,
+    "matched": false
+  },
+  {
+    "word": "Learning",
+    "start": 173.04,
+    "end": 173.28,
+    "matched": true
+  },
+  {
+    "word": "Each",
+    "start": 174.0,
+    "end": 174.16,
+    "matched": true
+  },
+  {
+    "word": "output",
+    "start": 174.16,
+    "end": 174.62,
+    "matched": true
+  },
+  {
+    "word": "feeds",
+    "start": 174.62,
+    "end": 174.92,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 174.92,
+    "end": 175.14,
+    "matched": true
+  },
+  {
+    "word": "next.",
+    "start": 175.14,
+    "end": 175.4,
+    "matched": true
+  },
+  {
+    "word": "Research",
+    "start": 176.1,
+    "end": 176.36,
+    "matched": true
+  },
+  {
+    "word": "informs",
+    "start": 176.36,
+    "end": 176.76,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 176.76,
+    "end": 176.96,
+    "matched": true
+  },
+  {
+    "word": "family",
+    "start": 176.96,
+    "end": 177.2,
+    "matched": true
+  },
+  {
+    "word": "interview.",
+    "start": 177.2,
+    "end": 177.56,
+    "matched": true
+  },
+  {
+    "word": "Feedback",
+    "start": 178.42000000000002,
+    "end": 178.46,
+    "matched": true
+  },
+  {
+    "word": "sharpens",
+    "start": 178.46,
+    "end": 179.04,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 179.04,
+    "end": 179.18,
+    "matched": true
+  },
+  {
+    "word": "offer.",
+    "start": 179.18,
+    "end": 179.48,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 179.92,
+    "end": 180.12,
+    "matched": true
+  },
+  {
+    "word": "money",
+    "start": 180.12,
+    "end": 180.32,
+    "matched": true
+  },
+  {
+    "word": "model",
+    "start": 180.32,
+    "end": 180.58,
+    "matched": true
+  },
+  {
+    "word": "sets",
+    "start": 180.58,
+    "end": 180.82,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 180.82,
+    "end": 181.04,
+    "matched": true
+  },
+  {
+    "word": "boundaries.",
+    "start": 181.04,
+    "end": 181.38,
+    "matched": true
+  },
+  {
+    "word": "The",
+    "start": 181.94,
+    "end": 182.12,
+    "matched": true
+  },
+  {
+    "word": "market",
+    "start": 182.12,
+    "end": 182.38,
+    "matched": true
+  },
+  {
+    "word": "test",
+    "start": 182.38,
+    "end": 182.7,
+    "matched": true
+  },
+  {
+    "word": "produces",
+    "start": 182.7,
+    "end": 183.06,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 183.06,
+    "end": 183.36,
+    "matched": true
+  },
+  {
+    "word": "next",
+    "start": 183.36,
+    "end": 183.52,
+    "matched": true
+  },
+  {
+    "word": "lesson.",
+    "start": 183.52,
+    "end": 183.88,
+    "matched": true
+  },
+  {
+    "word": "Five",
+    "start": 184.48,
+    "end": 184.78,
+    "matched": true
+  },
+  {
+    "word": "days",
+    "start": 184.78,
+    "end": 185.0,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 185.0,
+    "end": 185.22,
+    "matched": true
+  },
+  {
+    "word": "not",
+    "start": 185.22,
+    "end": 185.42,
+    "matched": true
+  },
+  {
+    "word": "enough",
+    "start": 185.42,
+    "end": 185.68,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 185.68,
+    "end": 185.84,
+    "matched": true
+  },
+  {
+    "word": "build",
+    "start": 185.84,
+    "end": 185.98,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 185.98,
+    "end": 186.12,
+    "matched": true
+  },
+  {
+    "word": "perfect",
+    "start": 186.12,
+    "end": 186.36,
+    "matched": true
+  },
+  {
+    "word": "business.",
+    "start": 186.36,
+    "end": 186.72,
+    "matched": true
+  },
+  {
+    "word": "It",
+    "start": 187.24,
+    "end": 187.42,
+    "matched": true
+  },
+  {
+    "word": "is",
+    "start": 187.42,
+    "end": 187.54,
+    "matched": true
+  },
+  {
+    "word": "enough",
+    "start": 187.54,
+    "end": 187.82,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 187.82,
+    "end": 188.0,
+    "matched": true
+  },
+  {
+    "word": "complete",
+    "start": 188.0,
+    "end": 188.36,
+    "matched": true
+  },
+  {
+    "word": "this",
+    "start": 188.36,
+    "end": 188.56,
+    "matched": true
+  },
+  {
+    "word": "loop",
+    "start": 188.56,
+    "end": 188.8,
+    "matched": true
+  },
+  {
+    "word": "once.",
+    "start": 188.8,
+    "end": 189.16,
+    "matched": true
+  },
+  {
+    "word": "By",
+    "start": 189.74,
+    "end": 189.94,
+    "matched": true
+  },
+  {
+    "word": "Friday,",
+    "start": 189.94,
+    "end": 190.3,
+    "matched": true
+  },
+  {
+    "word": "students",
+    "start": 190.44,
+    "end": 190.68,
+    "matched": true
+  },
+  {
+    "word": "will",
+    "start": 190.68,
+    "end": 190.9,
+    "matched": true
+  },
+  {
+    "word": "have",
+    "start": 190.9,
+    "end": 191.02,
+    "matched": true
+  },
+  {
+    "word": "moved",
+    "start": 191.02,
+    "end": 191.22,
+    "matched": true
+  },
+  {
+    "word": "from",
+    "start": 191.22,
+    "end": 191.44,
+    "matched": true
+  },
+  {
+    "word": "observing",
+    "start": 191.44,
+    "end": 191.86,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 191.86,
+    "end": 192.04,
+    "matched": true
+  },
+  {
+    "word": "problem",
+    "start": 192.04,
+    "end": 192.36,
+    "matched": true
+  },
+  {
+    "word": "to",
+    "start": 192.36,
+    "end": 192.76,
+    "matched": true
+  },
+  {
+    "word": "testing",
+    "start": 192.76,
+    "end": 193.14,
+    "matched": true
+  },
+  {
+    "word": "an",
+    "start": 193.14,
+    "end": 193.3,
+    "matched": true
+  },
+  {
+    "word": "offer",
+    "start": 193.3,
+    "end": 193.6,
+    "matched": true
+  },
+  {
+    "word": "and",
+    "start": 193.6,
+    "end": 194.02,
+    "matched": true
+  },
+  {
+    "word": "reading",
+    "start": 194.02,
+    "end": 194.22,
+    "matched": true
+  },
+  {
+    "word": "the",
+    "start": 194.22,
+    "end": 194.4,
+    "matched": true
+  },
+  {
+    "word": "response.",
+    "start": 194.4,
+    "end": 194.78,
+    "matched": true
+  },
+  {
+    "word": "Business",
+    "start": 194.78,
+    "end": 195.74,
+    "matched": true
+  },
+  {
+    "word": "stops",
+    "start": 195.74,
+    "end": 196.24,
+    "matched": true
+  },
+  {
+    "word": "being",
+    "start": 196.24,
+    "end": 196.56,
+    "matched": true
+  },
+  {
+    "word": "abstract.",
+    "start": 196.56,
+    "end": 197.06,
+    "matched": true
+  },
+  {
+    "word": "It",
+    "start": 197.68,
+    "end": 197.8,
+    "matched": true
+  },
+  {
+    "word": "becomes",
+    "start": 197.8,
+    "end": 198.12,
+    "matched": true
+  },
+  {
+    "word": "a",
+    "start": 198.12,
+    "end": 198.34,
+    "matched": true
+  },
+  {
+    "word": "process",
+    "start": 198.34,
+    "end": 198.74,
+    "matched": true
+  },
+  {
+    "word": "they",
+    "start": 198.74,
+    "end": 199.02,
+    "matched": true
+  },
+  {
+    "word": "have",
+    "start": 199.02,
+    "end": 199.18,
+    "matched": true
+  },
+  {
+    "word": "used.",
+    "start": 199.18,
+    "end": 199.56,
+    "matched": true
+  }
+]

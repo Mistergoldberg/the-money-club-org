@@ -215,7 +215,7 @@
     </div>
 
     <audio id="audio" preload="metadata">
-      <source src="channels.mp3" type="audio/mpeg">
+      <source src="channels-2.mp3" type="audio/mpeg">
     </audio>
   </main>
 
@@ -392,7 +392,7 @@
       audio.addEventListener("pause", updatePlayState);
       audio.addEventListener("ended", updatePlayState);
 
-      fetch("channels_word_aligned.srt?v=1", {
+      fetch("channels_word_aligned.srt?v=2", {
         cache: "no-store"
       })
         .then(function (response) {

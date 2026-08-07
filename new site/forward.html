@@ -2,36 +2,35 @@
 <html lang="en">
 <head>
   <!--
-    Learning Hub pattern:
-    - Use CollectionPage schema with canonical https://the-money-club.org/learn/
-    - Link only to published curriculum modules and worksheet/template pages.
-    - Do not add future lesson URLs until the files exist and sitemap entries are ready.
+    Curriculum page pattern:
+    - Cloned from /learn/ so the learning catalogue layout and module links stay consistent.
+    - Keep the curriculum note above the catalogue section and leave module URLs pointed at published lessons.
   -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Money Club Learning Catalogue | The Money Club</title>
+  <title>Curriculum Foreward | The Money Club</title>
   <link rel="icon" type="image/png" href="/assets/favicon.png" />
-  <meta name="description" content="A practical learning catalogue for students building financial literacy, business judgment, venture concepts, and worksheet-based projects." />
-  <meta property="og:title" content="The Money Club Learning Catalogue" />
-  <meta property="og:description" content="A practical learning catalogue for students building financial literacy, business judgment, venture concepts, and worksheet-based projects." />
-  <meta property="og:url" content="https://the-money-club.org/learn/" />
+  <meta name="description" content="The Money Club curriculum system, followed by the complete learning catalogue for the August 10-14, 2026 program." />
+  <meta property="og:title" content="Curriculum | The Money Club" />
+  <meta property="og:description" content="The Money Club curriculum system, followed by the complete learning catalogue for the August 10-14, 2026 program." />
+  <meta property="og:url" content="https://the-money-club.org/forward.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://the-money-club.org/assets/kid-presents-larg-class.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Money Club Learning Catalogue" />
-  <meta name="twitter:description" content="A practical learning catalogue for students building financial literacy, business judgment, venture concepts, and worksheet-based projects." />
+  <meta name="twitter:title" content="Curriculum | The Money Club" />
+  <meta name="twitter:description" content="The Money Club curriculum system, followed by the complete learning catalogue for the August 10-14, 2026 program." />
   <meta name="twitter:image" content="https://the-money-club.org/assets/kid-presents-larg-class.jpg" />
-  <link rel="canonical" href="https://the-money-club.org/learn/" />
+  <link rel="canonical" href="https://the-money-club.org/forward.html" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "CollectionPage",
-          "@id": "https://the-money-club.org/learn/#collectionpage",
-          "url": "https://the-money-club.org/learn/",
-          "name": "The Money Club Learning Catalogue",
-          "description": "A practical learning catalogue for students building financial literacy, business judgment, venture concepts, and worksheet-based projects.",
+          "@type": "WebPage",
+          "@id": "https://the-money-club.org/forward.html#webpage",
+          "url": "https://the-money-club.org/forward.html",
+          "name": "Curriculum",
+          "description": "The Money Club curriculum system, followed by the complete learning catalogue for the August 10-14, 2026 program.",
           "publisher": {
             "@id": "https://the-money-club.org/#organization"
           },
@@ -1868,6 +1867,35 @@ nav{
       margin-bottom: 0;
     }
 
+    .forward-letter{
+      display: grid;
+      gap: 0;
+    }
+
+    .forward-letter ol{
+      max-width: 78ch;
+      margin: 0 0 12px 1.35em;
+      padding: 0;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    .forward-section-heading{
+      margin: 22px 0 8px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: clamp(1.2rem, 1rem + 0.8vw, 1.55rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .forward-letter .forward-section-heading:first-child{
+      margin-top: 0;
+    }
+
     .catalogue-section{
       scroll-margin-top: calc(var(--topbar-height) + 22px);
     }
@@ -2237,19 +2265,74 @@ nav{
         <aside class="learning-catalogue-sidebar" aria-label="Learning catalogue table of contents">
           <h2>Learning Catalogue</h2>
           <ul class="catalogue-toc">
-            <li><a class="catalogue-toc-link" href="/learn/#core-build-modules">Core Build Modules</a></li>
-            <li><a class="catalogue-toc-link" href="/learn/#financial-literacy">💰 Financial Literacy as Survival Gear</a></li>
-            <li><a class="catalogue-toc-link" href="/learn/#design-thinking">🎨 Design Thinking &amp; Human Factor Research</a></li>
-            <li><a class="catalogue-toc-link" href="/learn/#market-research">📊 Market Research: Follow the Money &amp; Problems</a></li>
-            <li><a class="catalogue-toc-link" href="/learn/#control-brand">🏷 Control Brand Playbook</a></li>
-            <li><a class="catalogue-toc-link" href="/learn/#sourcing">🏭 Sourcing 101: Where Value Is Actually Made</a></li>
-            <li><a class="catalogue-toc-link" href="/learn/#go-to-market">🚀 Go-To-Market: Launch Without Burning Fuel</a></li>
-            <li><a class="catalogue-toc-link" href="/learn/#creative-fundamentals">📸 Creative Fundamentals: Photography, Design &amp; Visual Clarity</a></li>
-            <li><a class="catalogue-toc-link" href="/learn/#marketing">📣 Marketing: Use Existing Channels First</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#forward-curriculum">Curriculum</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#core-build-modules">Core Build Modules</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#financial-literacy">💰 Financial Literacy as Survival Gear</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#design-thinking">🎨 Design Thinking &amp; Human Factor Research</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#market-research">📊 Market Research: Follow the Money &amp; Problems</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#control-brand">🏷 Control Brand Playbook</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#sourcing">🏭 Sourcing 101: Where Value Is Actually Made</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#go-to-market">🚀 Go-To-Market: Launch Without Burning Fuel</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#creative-fundamentals">📸 Creative Fundamentals: Photography, Design &amp; Visual Clarity</a></li>
+            <li><a class="catalogue-toc-link" href="/forward.html#marketing">📣 Marketing: Use Existing Channels First</a></li>
           </ul>
         </aside>
 
         <div class="learning-catalogue-main">
+          <section class="catalogue-intro forward-curriculum" id="forward-curriculum" aria-labelledby="forward-heading">
+            <div class="catalogue-eyebrow">Foreward</div>
+            <h1 id="forward-heading">Curriculum</h1>
+            <div class="article-intro-actions">
+              <div class="article-read-time">Read Time: 3 Minutes</div>
+              <button class="video-lesson-button" id="open-video-lesson" type="button" aria-haspopup="dialog" data-cta-label="Video Lesson">
+                Video Lesson
+              </button>
+            </div>
+            <div class="forward-letter">
+              <h2 class="forward-section-heading">One Idea. Four Passes.</h2>
+              <p>Five days leaves no room for theory to wander. Every concept must lead to a decision, an offer or a test.</p>
+              <p>Students will:</p>
+              <ol>
+                <li>Read it in a tightly edited module.</li>
+                <li>Follow it through the Dynamic Reader.</li>
+                <li>Hear it taught live, with examples and questions.</li>
+                <li>Use it in a workshop, decision or business build.</li>
+              </ol>
+              <p>Read it. Follow it. Hear it. Use it.</p>
+              <p>The ideas are not simplified. The path into them is.</p>
+              <h2 class="forward-section-heading">A Curriculum Built as a System</h2>
+              <p>The curriculum is a connected system, not a stack of subjects. My work in retail taught me that information rarely changes behaviour until the next useful action is clear.</p>
+              <p>Here, every lesson creates something the next lesson needs.</p>
+              <h2 class="forward-section-heading">Support Close Enough to Matter</h2>
+              <p>The groups draw on Lev Vygotsky’s zone of proximal development: students tackle work just beyond what they can do alone, with useful support nearby.</p>
+              <p>Each student completed a survey about age and interests. I will use those answers to form working groups where younger students have reachable peers and older students have responsibility without becoming substitute teachers.</p>
+              <p>The aim is simple: no student should feel stranded.</p>
+              <h2 class="forward-section-heading">The Research Is Ready. The Decisions Are Theirs.</h2>
+              <p>When dedicated student AI licences were unavailable, I prepared the foundational market and product research before the program.</p>
+              <p>Search can consume hours. Judgment is the lesson.</p>
+              <p>Students will begin with evidence, not a blank screen. They will question it, compare it, calculate with it, validate it with their families and decide what to do next.</p>
+              <p>The preparation removes delay. The students keep the thinking.</p>
+              <h2 class="forward-section-heading">Start Where Money Already Moves</h2>
+              <p>A household is a small operating system. Families manage supplies, compare prices and replace what runs out.</p>
+              <p>That makes household essentials a practical place to begin. Garbage bags, soap, paper products and laundry supplies are familiar, repeat purchases.</p>
+              <p>Their ordinariness is the point.</p>
+              <p>Students do not need to invent demand. They need to understand it—and find a better way to serve it.</p>
+              <h2 class="forward-section-heading">A Real Question. A Real Test.</h2>
+              <p>Students will test one hypothesis:</p>
+              <p>Can a student earn the business of 3% of the households in a local community?</p>
+              <p>Three percent sounds small. In a real community, it raises serious questions: What do people buy? What frustrates them? What would they pay? Can the offer make money? Why would they trust it?</p>
+              <p>Revenue is not the lesson. It is evidence that an offer created value for someone else.</p>
+              <p>A “no” is evidence too. The product, price, message or customer assumption may need work.</p>
+              <h2 class="forward-section-heading">One Connected Loop</h2>
+              <p>The subjects form one sequence:</p>
+              <p>Money → Friction → Evidence → Category → Offer → Economics → Clarity → Test → Learning</p>
+              <p>Each output feeds the next. Research informs the family interview. Feedback sharpens the offer. The money model sets the boundaries. The market test produces the next lesson.</p>
+              <p>Five days is not enough to build a perfect business. It is enough to complete this loop once.</p>
+              <p>By Friday, students will have moved from observing a problem to testing an offer and reading the response.</p>
+              <p>Business stops being abstract. It becomes a process they have used.</p>
+            </div>
+          </section>
+
           <section class="catalogue-intro" id="core-build-modules" aria-labelledby="learning-catalogue-heading">
             <div class="catalogue-eyebrow">Learning Hub</div>
             <h1 id="learning-catalogue-heading">The Money Club Learning Catalogue</h1>
@@ -2342,6 +2425,83 @@ nav{
       </div>
     </section>
   </main>
+  <div class="video-lesson-overlay" id="video-lesson-overlay" role="dialog" aria-modal="true" aria-labelledby="video-lesson-title" hidden>
+    <div class="video-lesson-dialog">
+      <h2 id="video-lesson-title" class="sr-only">Forward Curriculum video lesson</h2>
+      <button class="video-lesson-close" id="close-video-lesson" type="button" aria-label="Close video lesson">&times;</button>
+      <iframe
+        class="video-lesson-frame"
+        id="video-lesson-frame"
+        title="Forward Curriculum dynamic text video lesson"
+        src="/forward/video-lesson.html"
+        allow="autoplay"
+      ></iframe>
+    </div>
+  </div>
+  <script>
+    (function(){
+      var openButtons = document.querySelectorAll('#open-video-lesson, [data-video-lesson-trigger]');
+      var closeButton = document.getElementById('close-video-lesson');
+      var overlay = document.getElementById('video-lesson-overlay');
+      var frame = document.getElementById('video-lesson-frame');
+      var previousFocus = null;
+
+      if (!openButtons.length || !closeButton || !overlay || !frame){
+        return;
+      }
+
+      function openVideoLesson(){
+        previousFocus = document.activeElement;
+        overlay.hidden = false;
+        document.body.classList.add('video-overlay-open');
+        try {
+          var audio = frame.contentDocument.getElementById('audio');
+          if (audio.ended) {
+            audio.currentTime = 0;
+          }
+          var playPromise = audio.play();
+          if (playPromise && typeof playPromise.catch === 'function'){
+            playPromise.catch(function(){});
+          }
+        } catch (error) {
+          // The player keeps its own Play control as a fallback.
+        }
+        closeButton.focus();
+      }
+
+      function closeVideoLesson(){
+        try {
+          var audio = frame.contentDocument.getElementById('audio');
+          audio.pause();
+          audio.currentTime = 0;
+        } catch (error) {
+          // Closing the overlay should still succeed if the player is unavailable.
+        }
+        overlay.hidden = true;
+        document.body.classList.remove('video-overlay-open');
+        if (previousFocus && typeof previousFocus.focus === 'function'){
+          previousFocus.focus();
+        }
+      }
+
+      openButtons.forEach(function(openButton){
+        openButton.addEventListener('click', openVideoLesson);
+      });
+      closeButton.addEventListener('click', closeVideoLesson);
+
+      overlay.addEventListener('click', function(event){
+        if (event.target === overlay){
+          closeVideoLesson();
+        }
+      });
+
+      document.addEventListener('keydown', function(event){
+        if (event.key === 'Escape' && !overlay.hidden){
+          closeVideoLesson();
+        }
+      });
+    })();
+  </script>
   <script>
     (function(){
       var menuBtn = document.querySelector('.menu-btn');
